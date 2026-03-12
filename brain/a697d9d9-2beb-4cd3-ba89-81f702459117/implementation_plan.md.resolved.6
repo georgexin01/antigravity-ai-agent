@@ -1,0 +1,30 @@
+# Agent Memory Integration Plan
+
+Integrate the `webzler/agentMemory` skill to provide persistent, searchable memory across sessions, allowing the agent to "think wider" and maintain design/logic consistency across all projects.
+
+## Proposed Changes
+
+### [Component] Skills Management
+#### [NEW] [agentMemory](file:///C:/Users/user/.gemini/antigravity/skills/agentMemory)
+- Install the `agentMemory` skill from the `antigravity-awesome-skills` library.
+
+### [Component] Global Configuration
+#### [MODIFY] [antigravity_agent_config_summary.txt](file:///c:/Users/user/Desktop/antigravity/antigravity_agent_config_summary.txt)
+- Add `agentMemory` to the `Integrated Design Execution` list.
+- Add a new rule for **Persistent Memory & Evolution**:
+  - The AI MUST use `agentMemory` to store and query historical preferences, design decisions, and project-specific logic.
+  - This allows the agent to "think wider" by connecting patterns from past conversations to the current task.
+
+### [Component] Design Protocols
+#### [MODIFY] [jin_hong_design_protocols.md](file:///C:/Users/user/.gemini/antigravity/knowledge/tech_stack_mastery/artifacts/jin_hong_design_protocols.md)
+- Update with a section on **Cross-Project Consistency (Memory Powered)**.
+- Define how past "lessons learned" should be retrieved before starting new design phases.
+
+## Verification Plan
+
+### Automated Steps
+- Verify the skill is present in the `skills/` directory.
+- Test the `Use agentMemory` command in a background shell (if applicable).
+
+### Manual Verification
+- Confirm with the user that the agent now "remembers" specific context requested in this session during the next session.

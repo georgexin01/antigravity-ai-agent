@@ -1,0 +1,24 @@
+{
+  "mcpServers": {
+    "StitchMCP": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-remote",
+        "https://stitch.googleapis.com/mcp",
+        "--header",
+        "X-Goog-Api-Key: AQ.Ab8RN6L01erCOAxRC5JHrrXP10JQ78cvt6QQ_lCioSLFDqo4Yw"
+      ]
+    },
+    "gmp-code-assist": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@googlemaps/code-assist-mcp@latest"
+      ],
+      "env": {
+        "SOURCE": "antigravity"
+      }
+    }
+  }
+}

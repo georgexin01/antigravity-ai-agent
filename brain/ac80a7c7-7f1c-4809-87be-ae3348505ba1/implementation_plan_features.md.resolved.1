@@ -1,0 +1,29 @@
+# Advanced Core Features Redesign (Special Edition)
+
+The goal is to transform the "Core Features" section into a high-fidelity, interactive experience that breaks the standard grid layout.
+
+## Proposed Changes
+
+### [Zeta Capital Website]
+
+#### [MODIFY] [index.html](file:///c:/Users/user/Desktop/antigravity/zeta/index.html)
+- Replace the `grid-3` with an `advanced-feature-grid` (Staggered Bento-style).
+- Add "Decorative Glows" (`<div class="glow-point"></div>`) inside feature cards.
+- Add "Floating Icon Wrappers" to allow icons to break the card boundaries.
+- Update feature descriptions to include "Value Subtitles".
+
+#### [MODIFY] [style.css](file:///c:/Users/user/Desktop/antigravity/zeta/css/style.css)
+- Implement `.advanced-feature-grid` (CSS Grid with `grid-template-areas`).
+- Add `.feature-card-special` with `overflow: visible`, `perspective: 1000px`, and `transform-style: preserve-3d`.
+- Define `@keyframes glow-pulse` for background accents.
+- Add magnetic hover effects logic in CSS.
+
+#### [MODIFY] [js/main.js](file:///c:/Users/user/Desktop/antigravity/zeta/js/main.js)
+- Implement a simple "Magnetic Card Tilt" function that responds to mouse movement over the features section.
+
+## Verification Plan
+
+### Manual Verification
+- Verify that cards tilt smoothly on mouse move.
+- Ensure the staggered layout remains readable on mobile.
+- Check that the "glow" effects don't overwhelm the text.

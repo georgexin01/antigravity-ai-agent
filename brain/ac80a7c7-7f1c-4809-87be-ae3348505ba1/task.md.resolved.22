@@ -1,0 +1,64 @@
+# Task Breakdown: Japanese Product Design Analysis
+
+- [x] **Phase 1: Search & Selection**
+  - [x] Review existing knowledge items (Japanese Food App Design)
+  - [x] Search for top-rated Japanese apps/sites in 2024-2025
+  - [x] Select 6 products: Mercari, NAVITIME, Note.com, PayPay, SmartNews, Menu
+- [x] **Phase 2: Deep Analysis**
+  - [x] Analyze UX flow and operational simplicity
+  - [x] Evaluate visual design (minimalism, color, typography, Japanese aesthetics)
+  - [x] Identify technical and ecosystem strengths
+- [x] **Phase 2.5: Testimonial Slider**
+  - [x] Implement Testimonial Slider
+  - [x] Create 6 unique client testimonials
+  - [x] Add dragging and repeating logic (infinite loop)
+  - [x] Localize content for EN and CN versions
+- [x] **Phase 3: Extraction & Classification**
+  - [x] Categorize advantages into UX, Design, and Technical/Eco groups
+  - [x] Filter for reusable and actionable insights
+- [x] **Phase 4: Knowledge Storage & Documentation**
+  - [x] Create structured Knowledge Item for Japanese Design Excellence
+  - [x] Document specific application guidelines for future AI tasks
+- [x] **Phase 5: Final Review & Walkthrough**
+  - [x] Verify content completeness and utility
+  - [x] Create walkthrough of the research findings
+- [x] **Phase 6: Project-Specific Optimization (Jin Hong)**
+  - [x] Integrate Japanese Precision (V5) into Jin Hong Protocols
+- [x] **Phase 7: Language Switcher Consistency**
+  - [x] Move styles to [global.css](file:///c:/Users/user/Desktop/antigravity/jin-hong-me-html-v2/css/global.css)
+  - [x] Move [setLang](file:///c:/Users/user/Desktop/antigravity/jin-hong-me-html-v2/about.html#354-359) to [js/main.js](file:///c:/Users/user/Desktop/antigravity/zeta/js/main.js)
+  - [x] Standardize Header and Footer Across All Pages
+    - [x] Use homepage as main layout
+    - [x] Apply to all EN and CN pages
+    - [x] Ensure 100% aesthetic consistency
+- [x] **Phase 4: Global Deployment & Polish**
+  - [x] Standardize Header/Footer across 10 pages
+  - [x] Implement localized Testimonial Slider
+  - [x] Verify content accuracy (99%) against official site
+  - [x] Conduct final visual audit
+- [x] **Phase 5: Design Polish (Spacing & Padding)**
+  - [x] Audit and unify paddings across all sections
+  - [x] Implement consistent spacing system (spacing tokens)
+  - [x] Adjust component-level padding (cards, panels, containers)
+  - [x] Verify vertical rhythm and layout balance
+- [x] **Phase 6: Official Asset Integration & Stitch Refinement**
+  - [x] Download official images from zetacapital.my
+  - [x] Implement OP Tier Layout using Stitch/AI Studio logic
+  - [x] Replace Unsplash placeholders with real assets
+- [/] **Phase 7: Knowledge-Driven Design Elevation (Zeta v2)**
+  - [/] Audit current CSS against `design-spells` and `japanese_design_library`
+  - [ ] Implement "Magnetic" interactions and "Bento Grid" elements
+  - [ ] Enhance "Service" page detail layouts
+- [/] **Phase 8: Project Change Management (change.log)**
+  - [/] Create `zeta/change.log.md`
+  - [ ] Update [agent_must_read.md](file:///C:/Users/user/.gemini/antigravity/knowledge/tech_stack_mastery/artifacts/agent_must_read.md) with persistent Change Log rule
+- [x] **Phase 9: Footer Contact Info Sync**
+  - [x] Update footer email in all 10 major pages
+- [x] **Phase 10: Zeta Capital Website Reconstruction**
+  - [x] Research and Content Extraction
+  - [x] Implementation Planning & Approval
+  - [x] Project Structure & Design System Setup
+  - [x] Homepage Development
+  - [x] Internal Pages (About, Services, Portfolio, Contact)
+  - [x] Multilingual Support (CN/EN)
+  - [x] Final Polish & Visual Validation

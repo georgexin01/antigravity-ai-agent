@@ -1,0 +1,29 @@
+# Add "Open with Antigravity" to Context Menu
+
+This plan outlines the steps to add a right-click context menu shortcut to open files and folders with Antigravity.
+
+## Proposed Changes
+
+### [Component Name] Registry Modifications
+
+We will add the following registry keys to enable the "Open with Antigravity" option:
+
+#### [NEW] [antigravity_context_menu.reg](file:///C:/Users/user/.gemini/antigravity/scratch/antigravity_context_menu.reg)
+
+A registry file that will:
+1.  Add "Open with Antigravity" to the right-click menu for all files (`HKEY_CLASSES_ROOT\*`).
+2.  Add "Open with Antigravity" to the right-click menu for all folders (`HKEY_CLASSES_ROOT\Directory`).
+3.  Add "Open with Antigravity" to the right-click menu for the background of folders and the desktop (`HKEY_CLASSES_ROOT\Directory\Background`).
+
+**Executable Path:** [C:\Users\user\AppData\Local\Programs\Antigravity\Antigravity.exe](file:///Users/user/AppData/Local/Programs/Antigravity/Antigravity.exe)
+**Icon Path:** [C:\Users\user\AppData\Local\Programs\Antigravity\resources\app\resources\win32\default.ico](file:///Users/user/AppData/Local/Programs/Antigravity/resources/app/resources/win32/default.ico)
+
+## Verification Plan
+
+### Automated Verification
+- Run a PowerShell script to check for the existence of the registry keys and their default values.
+
+### Manual Verification
+1.  Right-click on a file and verify "Open with Antigravity" appears.
+2.  Right-click on a folder and verify "Open with Antigravity" appears.
+3.  Right-click on the desktop background and verify "Open with Antigravity" appears.

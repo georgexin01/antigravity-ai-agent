@@ -1,0 +1,31 @@
+# Walkthrough - Multi-Step Signup Flow
+
+I have implemented the new 3-step Signup process as requested, following the provided mobile design structure while maintaining the Frame 9 premium dark-mode aesthetic.
+
+## Features
+
+### Step 1: Identity & Compliance
+- **Mobile Input:** User enters their mobile number with a country code selector (MY +60, SG +65).
+- **Legals:** Integrated a mandatory Privacy Policy checkbox.
+- **Validation:** "Send OTP" button is enabled only when both fields are valid.
+
+### Step 2: OTP Verification
+- **Numeric Verification:** 4-digit numeric input with auto-focus and backspace handling.
+- **Reference Info:** Displays the mobile number being verified.
+- **Resend Support:** Includes a countdown timer for OTP resending (simulated).
+
+### Step 3: Profile Completion
+- **Success Badge:** A green notification appears automatically once the OTP is verified.
+- **Full Name:** Required input field.
+- **Date of Birth:** Detailed selection grid with Day, Month, and Year dropdowns.
+- **Finalization:** Once complete, the user is redirected to the tournament dashboard.
+
+## Technical Details
+- **Architecture:** Built as a single-page component ([Signup.vue](file:///c:/Users/user/Desktop/frame9/src/screens/Signup.vue)) with reactive step transitions to ensure smooth performance.
+- **Routing:** Registered at `/signup` and linked directly from the Login page.
+- **Theme Consistency:** Uses the standard Frame 9 glassmorphism, accent colors, and typography.
+
+## Verification
+- **Lint Check:** Ran `npm run lint` and the project is fully compliant (0 errors).
+- **Navigation:** Verified the "Sign up as Player" link on the Login page works correctly.
+- **Logic:** Step-by-step state transitions were manually verified to match the reference images.

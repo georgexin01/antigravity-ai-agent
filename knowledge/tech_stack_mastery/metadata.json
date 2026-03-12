@@ -1,0 +1,11 @@
+{
+  "title": "User's Master Tech Stack & Tooling Reference",
+  "summary": "Consolidated knowledge of the user's preferred technologies (HTML, CSS, PHP, Vue, Bootstrap, Tailwind, React) and specialized AI tools (Stitch, AIStudio). Provides context for future UI/UX and development tasks across all projects.",
+  "last_updated": "2026-03-05T14:45:00Z",
+  "preferred_stack": {
+    "frontend": ["HTML", "CSS", "Vue", "React"],
+    "styling": ["Bootstrap", "Tailwind"],
+    "backend": ["PHP"],
+    "ai_tools": ["Stitch", "Google AIStudio"]
+  }
+}

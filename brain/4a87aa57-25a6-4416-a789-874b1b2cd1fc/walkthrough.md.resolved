@@ -1,0 +1,39 @@
+# Migration Walkthrough: React to Vue 3
+
+I have successfully migrated the `da-cheng-lok-lok` project from React to Vue 3 using Vite. Below is a summary of the work performed, the bugs resolved, and the final status.
+
+## Key Accomplishments
+
+### 1. Direct Conversion of Components & Screens
+- All screens (Home, Menu, Vouchers, Profile, etc.) were converted to Vue 3 Composition API (`<script setup>`).
+- Sub-components like [BottomNav.vue](file:///c:/Users/user/Desktop/antigravity/da-cheng-lok-lok-vue/src/components/BottomNav.vue) and [BranchModal.vue](file:///c:/Users/user/Desktop/antigravity/da-cheng-lok-lok-vue/src/components/BranchModal.vue) were fully migrated.
+- State management was transitioned from React `useState` to Vue `ref` and `computed`.
+
+### 2. Debugging the White Screen Issue
+The initial migration resulted in a white screen. I identified and fixed the following root causes:
+- **TypeScript Import Errors**: Fixed "type-only import" issues caused by `verbatimModuleSyntax` by using `import type`.
+- **Reactive State Corruptions**: Corrected [App.vue](file:///c:/Users/user/Desktop/antigravity/da-cheng-lok-lok-v3/src/App.vue) where reactive refs were being incorrectly assigned (e.g., `currentScreen.value = ...` instead of directly calling change handlers).
+- **Undefined Access Protection**: Added `v-if` safety checks and optional chaining in [Home.vue](file:///c:/Users/user/Desktop/antigravity/da-cheng-lok-lok-vue/src/views/Home.vue), [Menu.vue](file:///c:/Users/user/Desktop/antigravity/da-cheng-lok-lok-vue/src/views/Menu.vue), and [VoucherDetail.vue](file:///c:/Users/user/Desktop/antigravity/da-cheng-lok-lok-vue/src/views/VoucherDetail.vue) to prevent crashes when accessing arrays/objects before they are fully resolved or when data is missing.
+
+### 3. Build & Runtime Stability
+- Configured [vite.config.ts](file:///c:/Users/user/Desktop/antigravity/da-cheng-lok-lok/vite.config.ts) with Tailwind CSS v4 and path aliases.
+- Verified that `npm run dev` starts successfully without TypeScript or runtime errors.
+
+## Final Verification
+The development server is currently running at:
+[http://localhost:5174/](http://localhost:5174/)
+
+> [!IMPORTANT]
+> Since the automated browser tool is unavailable in this environment, please manually verify the following:
+> 1. Navigation between all tabs in the bottom navigation.
+> 2. Opening the branch selection modal from the Menu or Profile screen.
+> 3. Clicking on "Hot Picks" in the Home screen to navigate to the Menu.
+> 4. Redeeming a voucher in the Vouchers center.
+
+## Files Modified
+- [App.vue](file:///c:/Users/user/Desktop/antigravity/da-cheng-lok-lok-vue/src/App.vue)
+- [Home.vue](file:///c:/Users/user/Desktop/antigravity/da-cheng-lok-lok-vue/src/views/Home.vue)
+- [Menu.vue](file:///c:/Users/user/Desktop/antigravity/da-cheng-lok-lok-vue/src/views/Menu.vue)
+- [VoucherDetail.vue](file:///c:/Users/user/Desktop/antigravity/da-cheng-lok-lok-vue/src/views/VoucherDetail.vue)
+- [Constants.ts](file:///c:/Users/user/Desktop/antigravity/da-cheng-lok-lok-vue/src/constants.ts)
+- (And all other view/component files for type safety cleanup)

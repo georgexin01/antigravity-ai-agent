@@ -1,0 +1,7 @@
+# Task Outline: Implementing Design Constraints & Missing Pages
+
+- [ ] Add 5 new structural & AI behavior rules to [antigravity_agent_config_summary.txt](file:///c:/Users/user/Desktop/antigravity/antigravity_agent_config_summary.txt).
+- [ ] Create missing `programs.html` page (linked in headers).
+- [ ] Create missing [contact.html](file:///c:/Users/user/Desktop/antigravity/jin-hong-me-html/contact.html) page (mandatory).
+- [ ] Update [global.css](file:///c:/Users/user/Desktop/antigravity/mtdb-website/css/global.css) to enforce `100vh`/`95vh` hero slider height and fix header overlap via padding.
+- [ ] Audit MTDB pages ([about.html](file:///c:/Users/user/Desktop/antigravity/mtdb-website/about.html), [index.html](file:///c:/Users/user/Desktop/antigravity/mtdb-website/index.html)) to fix color contrast issues (removing white text on light beige backgrounds).

@@ -1,0 +1,38 @@
+# Task Plan
+
+- [x] Refine Event Details Page (Title, Register Button, Date design)
+- [x] Enhance Stamps Page Input Logic (Auto-focus, Auto-reset)
+- [x] Refactor Coupons Page (Tab switching, Filtering)
+- [x] Redesign Profile Page (Remove avatar/stats, Language modal, Delete button)
+- [x] Implement Language Selection UI (Glow effect, Selection state)
+- [x] Redesign Coupon Details (Final redemption flow with passcode)
+- [x] Refine Coupon Details (Longer description, Collapsible T&C)
+- [x] Refine Coupon Details (Short vs Long descriptions)
+- [x] Implement Coupon Success Popup (Custom messaging)
+- [x] Implement Multi-Step Signup Flow (Mobile -> OTP -> Profile)
+- [x] Refine Signup UI (Remove header, Add logo, Navigation links)
+  - [x] Remove header from Signup.vue
+  - [x] Add logo and intro text
+  - [x] Add "Login Now" link
+  - [x] Increase button size for completion
+- [x] Final Signup Refinements (OTP size, Label text, Header scale)
+  - [x] Shrink OTP inputs
+  - [x] Change "Complete Registration" to "Complete"
+  - [x] Reduce logo/title size and gap
+  - [x] Set OTP input width to 48px
+  - [x] Implement functional OTP resend countdown
+- [x] Finalize Logo Selection (Use JPG without padding)
+- [x] Optimize Layout & Fitment (Ensure no input overflow)
+- [x] Refine Registration Completion (Button active on input)
+- [x] Update Metadata & Branding (Favicons, OG tags, Manifest)
+- [x] Simplify Signup Phone Input (Remove selector, allow direct input)
+- [x] Harmonize Manual Navigation (Switch from Router to manual state)
+- [x] Refine Signup Typo & Styles (Font sizes, Readonly fields, Login-sync)
+- [x] Enable Guest Access (Home, Events, Coupons public list pages)
+- [x] Implement Draggable Homepage Slider (Mouse & Touch)
+- [x] Implement Account Management Screen
+  - [x] Create Account.vue with Profile Form
+  - [x] Add Route for /account
+  - [x] Link Account page from Profile
+- [x] Synchronize Brand Identity (Login & Signup Style/Logo Sync)
+- [x] Implement Custom Theme Cursor

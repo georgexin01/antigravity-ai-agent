@@ -1,0 +1,32 @@
+# Jin Hong M&E V2 - Homepage (index.html) Redesign Plan
+
+## Goal Description
+The objective is to overhaul [index.html](file:///C:/Users/user/Desktop/antigravity/maxcoach/index.html) to fully align with the newly established "Jin Hong M&E V2" premium design standard (MaxCoach patterns, Bootstrap 5, FontAwesome 6). The current [index.html](file:///C:/Users/user/Desktop/antigravity/maxcoach/index.html) has a solid layout but lacks the depth of content and the structural consistency (Header/Footer, icons) applied to the interior pages during the recent V2 overhaul.
+
+## Proposed Changes
+
+### Component 1: Global Structure Alignment
+- **Header & Footer**: Replace the existing custom header and footer in [index.html](file:///C:/Users/user/Desktop/antigravity/maxcoach/index.html) with the exact Bootstrap 5 compliant header and the dark-premium footer used in [about.html](file:///C:/Users/user/Desktop/antigravity/maxcoach/about.html), [services.html](file:///C:/Users/user/Desktop/antigravity/jin-hong-me-html/services.html), etc.
+- **Dependencies**: Inject Bootstrap 5 CSS/JS and FontAwesome 6 CSS into the `<head>` to support the new components.
+- **Floating CTA**: Add the global floating WhatsApp button (`.float-wa`) to the bottom right.
+
+### Component 2: Hero Slider & Intro Section
+- **Hero Slider**: Keep the immersive Swiper slider, but ensure fonts and spacing align with the global CSS variables.
+- **About/Intro Asymmetrical Grid**: Update the text to include deeper company philosophies derived from the JIN_HONG_read.pdf (already extracted into [about.html](file:///C:/Users/user/Desktop/antigravity/maxcoach/about.html)).
+
+### Component 3: The Bento Box (Why Choose Us)
+- **Icons Update**: Replace the raw SVG paths with high-quality FontAwesome solid icons.
+- **Content Expansion**: Enhance the text to emphasize the CIDB G7, ST Class A, and SPAN C1 certifications, as well as the 800+ local workforce advantage.
+
+### Component 4: Deep Content Integration (Services & Projects)
+- **Services Expansion**: Replace the 3 "Hover Cards" with the 6 premium MaxCoach service cards (with gradient hover lines) established in [services.html](file:///C:/Users/user/Desktop/antigravity/jin-hong-me-html/services.html) to provide a full overview of capabilities.
+- **Projects Showcase [NEW SECTION]**: Introduce a "Featured Projects" section pulling the top 3 cards from [projects.html](file:///C:/Users/user/Desktop/antigravity/maxcoach/projects.html) (e.g., GDS Data Center, EVE Factory, AT&S Factory) to immediately build trust on the homepage.
+
+## Verification Plan
+
+### Manual Verification
+The user can open [index.html](file:///C:/Users/user/Desktop/antigravity/maxcoach/index.html) in their browser to verify:
+1. The header and footer perfectly visually match the interior pages.
+2. The slider works smoothly.
+3. The new Services Grid (6 items) and Projects Gallery (3 items) display with premium hover effects.
+4. The WhatsApp button floats correctly and links to the correct number.

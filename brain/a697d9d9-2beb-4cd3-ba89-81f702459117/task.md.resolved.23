@@ -1,0 +1,74 @@
+# Task: Redesign Jin Hong M&E Website Aesthetics
+
+- [x] Phase 1: Brainstorming & Design Discovery
+- [x] Phase 2: Design Specification
+- [x] Phase 3: Implementation
+- [x] Phase 4: Verification
+- [x] Phase 5: Design Refinement
+
+## Phase 6: Dark Theme Completion
+
+- [x] Convert "Featured Projects" to dark section in [index.html](file:///C:/Users/user/Desktop/antigravity/jin-hong-me-html-v2/index.html)
+- [x] Redesign "Testimonials" with dark glass panels in [index.html](file:///C:/Users/user/Desktop/antigravity/jin-hong-me-html-v2/index.html)
+- [x] Redesign "FAQ" section with dark tech aesthetics in [index.html](file:///C:/Users/user/Desktop/antigravity/jin-hong-me-html-v2/index.html) & [faq.html](file:///c:/Users/user/Desktop/antigravity/jin-hong-me-html-v2/faq.html)
+- [x] Redesign contact form and inputs to dark style
+- [x] Final dark theme sweep on all subpages
+
+## Phase 7: Detail Page Consistency & Global Sync
+
+- [x] Update [project-details.html](file:///C:/Users/user/Desktop/antigravity/jin-hong-me-html-v2/project-details.html) header/footer to match homepage
+- [x] Redesign [project-details.html](file:///C:/Users/user/Desktop/antigravity/jin-hong-me-html-v2/project-details.html) content to Dark Tech style
+- [x] Synchronize headers/footers in About, Services, Projects, etc.
+- [x] Final audit of all subpages for aesthetic polish
+
+## Phase 8: Layout Refactor & Global Rules
+
+- [x] Update [global.css](file:///C:/Users/user/Desktop/antigravity/jin-hong-me-html-v2/css/global.css) (body padding: 0, .main-session padding)
+- [x] Wrap all pages in `<div class="main-session">`
+- [x] Add 30px safety padding to `.footer-bottom`
+- [x] Save all edits and layout rules in AI agent knowledge
+- [x] Conduct final verification and walkthrough
+
+## Phase 9: Unified Dark Aesthetic Enforcement
+
+- [x] Scan and replace remaining white/light backgrounds in all 11 HTML files
+- [x] Convert light card backgrounds to `glass-panel` or `bg-surface`
+- [x] Final verification of design rule integration in knowledge base
+
+## Phase 10: Advanced Skill Integration & Research
+
+- [x] Update global config with mandatory UI/UX skill import rule
+- [x] Find top 1 GitHub Figma website design skill repository
+- [x] Implement/Sync new design patterns from research (Master Tier UI/UX Integrated)
+- [x] Integrate Figma-first design protocol and Skill Invocation rules into global settings
+- [x] Integrate agent-memory skill for persistent cross-session intelligence
+- [x] Update global config and protocols with "Memory Tier" rules
+
+## Phase 11: Jin Hong Master Tier Upgrade
+
+- [x] Audit jin-hong-me-html-v2 for unfinished content and layout flaws
+- [x] Verify compliance with all AI settings (Dark Theme, Padding, Flow)
+- [x] Implement "Design Spells" micro-interactions (Magnetic Hover) site-wide
+- [x] Revert "Design Spells" as requested by user
+- [x] Update global config to enforce Figma (`figma-automation`, `stitch-ui-design`) as absolute highest design priority
+
+## Phase 12: Figma-Driven Design Pass & Image Generation
+
+- [x] Read and apply `figma-automation` and `stitch-ui-design` rules for layout structures.
+- [x] Integrate high-quality photos (using PDF extraction) to substitute AI generation.
+- [x] Implement Figma layout updates (spacing, shadows, typography) page by page.
+- [x] Ensure all placeholders are replaced with genuine visual assets.
+
+## Phase 12.5: Intelligent PDF Image Extraction & Review
+
+- [x] Construct Node.js/Portable script to extract raw images from target PDF.
+- [x] Algorithmically filter and select the highest-quality authentic JPG photographs.
+- [x] Inject approved corporate images into website layout.
+- [x] Save "PDF Extraction Strategy" to global AI settings.
+
+## Phase 13: Aesthetic Profiling & Unique Image Distribution
+
+- [x] Append the Long-Term Aesthetic Profile to global configuration.
+- [x] Apply user's specific image selections to the Homepage slideshow.
+- [ ] Apply user's specific image selections to the Service Sector cards.
+- [x] Update the About Us page with the designated banner and vision imagery.

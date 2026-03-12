@@ -1,0 +1,42 @@
+# Convert App to Vue 3
+
+The goal is to convert the existing React + Vite application in `c:\Users\user\Desktop\frame9` into a Vue 3 + Vite application, maintaining the exact same UI and functionality, using modern Vue 3 syntax (`<script setup>`, Composition API).
+
+## Proposed Changes
+
+### Configuration and Setup
+- **[MODIFY]** [package.json](file:///c:/Users/user/Desktop/frame9/package.json)
+  - Remove React dependencies: `react`, `react-dom`, `@vitejs/plugin-react`, `lucide-react`, `motion`
+  - Add Vue dependencies: `vue`, `@vitejs/plugin-vue`, `lucide-vue-next`
+- **[MODIFY]** [vite.config.ts](file:///c:/Users/user/Desktop/frame9/vite.config.ts)
+  - Replace `@vitejs/plugin-react` with `@vitejs/plugin-vue`
+- **[MODIFY]** [tsconfig.json](file:///c:/Users/user/Desktop/frame9/tsconfig.json)
+  - Add standard Vue TypeScript configurations if needed (e.g., skipLibCheck).
+- **[MODIFY]** [index.html](file:///c:/Users/user/Desktop/frame9/index.html)
+  - Change `src="/src/main.tsx"` to `src="/src/main.ts"`
+
+### Source Files
+We will port the React components to single-file Vue components (SFCs).
+
+- **[NEW]** [src/main.ts](file:///c:/Users/user/Desktop/frame9/src/main.ts)
+  - Entry point for the Vue app.
+- **[NEW]** [src/App.vue](file:///c:/Users/user/Desktop/frame9/src/App.vue)
+  - Port of `App.tsx`. Will use Vue's built-in `<Transition>` and `<TransitionGroup>` components to replace `motion/react` `AnimatePresence` and `motion.div`.
+- **[NEW]** [src/components/Header.vue](file:///c:/Users/user/Desktop/frame9/src/components/Header.vue)
+  - Port of `Header.tsx`.
+- **[NEW]** [src/components/BottomNav.vue](file:///c:/Users/user/Desktop/frame9/src/components/BottomNav.vue)
+  - Port of `BottomNav.tsx`.
+- **[NEW]** [src/components/LazyImage.vue](file:///c:/Users/user/Desktop/frame9/src/components/LazyImage.vue)
+  - Port of `LazyImage.tsx`.
+
+### Cleanup
+- **[DELETE]** `src/main.tsx`
+- **[DELETE]** `src/App.tsx`
+- **[DELETE]** `src/components/Header.tsx`
+- **[DELETE]** `src/components/BottomNav.tsx`
+- **[DELETE]** `src/components/LazyImage.tsx`
+
+## Verification Plan
+1. **Dependency Installation**: Run `npm install` to ensure new packages install without conflicts.
+2. **Build Test**: Run `npm run build` to verify the application bundles correctly.
+3. **Dev Server**: Run `npm run dev` in the background and use browser tools to verify that all screens render smoothly and layout matches the original React app 100%.

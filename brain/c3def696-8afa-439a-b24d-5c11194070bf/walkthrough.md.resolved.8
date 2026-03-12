@@ -1,0 +1,22 @@
+# Walkthrough - Coupon Details & Redemption Feedback
+
+I have completed the final enhancements for the Coupon system, focusing on content richness, UI clarity, and redemption feedback.
+
+## Changes Made
+
+### Detailed Coupon Content
+
+- **Description Differentiation:** The main coupons list now keeps the **short summary**, while the Coupon Details page exclusively displays the **long, professional description**.
+- **Collapsible Terms & Conditions:** Implemented a smooth toggle for the T&C section. It is now collapsed by default to keep the interface clean, expanding only when the user needs to see the details.
+- **Header Fix:** Definitive fix for the template string constant error in the header section.
+
+### Redemption Feedback
+
+- **Custom Success Modal:** Added a specialized `COUPON_SUCCESS` state to the main application popup.
+- **Tailored Messaging:** Successfully redeemed coupons now trigger a specific message: _"Coupon Redeemed! This coupon has been successfully used and is now invalidated. Thank you for using Frame 9!"_
+
+## Verification
+
+- **Redemption Flow:** Manually verified that entering 4 digits triggers the correct new "Coupon Redeemed" modal.
+- **Content:** Confirmed that long descriptions display correctly in the cinematic grid header.
+- **Syntax:** Ran `npm run lint` - **0 errors**. All persistent template issues are fully resolved.

@@ -1,0 +1,8 @@
+# Task Outline: Reorganize Rules & Knowledge Base
+
+- [x] Read and analyze the current [antigravity_agent_config_summary.txt](file:///c:/Users/user/Desktop/antigravity/antigravity_agent_config_summary.txt).
+- [x] Reorganize the sections logically (e.g., Core Rules -> Web Workflow -> App Workflow -> General Policies) without deleting any details.
+- [x] Update [antigravity_agent_config_summary.txt](file:///c:/Users/user/Desktop/antigravity/antigravity_agent_config_summary.txt) with the restructured content.
+- [x] Read and analyze the key knowledge base files (e.g., [master_strategy.md](file:///C:/Users/user/.gemini/antigravity/knowledge/tech_stack_mastery/artifacts/master_strategy.md), [jin_hong_design_protocols.md](file:///C:/Users/user/.gemini/antigravity/knowledge/tech_stack_mastery/artifacts/jin_hong_design_protocols.md)).
+- [x] Reorganize the knowledge base files for better flow without deleting details.
+- [x] Update the knowledge base files with the restructured content.

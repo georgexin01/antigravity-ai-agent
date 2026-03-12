@@ -1,0 +1,95 @@
+# Jin Hong M&E: Premium Corporate Design Protocol (V4)
+
+_Standard for Industrial High-Tech Precision Interfaces_
+
+## 1. Structural Standards (The "Modern Density" Protocol)
+
+- **4-Column Grid Layout**: Force `col-lg-3` for primary showcases (Services, Features) to ensure the interface feels "dense" and premium.
+- **Deep Detail Synchronization**: Mandated sync of Header, Footer, and Scripts between Homepage and _all_ interior pages (e.g., `project-details.html`).
+- **Main Session Wrapper**: MANDATORY wrap of all mid-page content in `<div class="main-session">`.
+- **Layout Safety Rules**:
+  - `body`: Must have `padding: 0 !important;` to avoid top/bottom leaks.
+  - `.footer-bottom`: Must have `padding-bottom: 30px;` (safety margin for floating elements).
+  - `.main-session`: Handles the primary page-level bottom spacing (`60-90px`).
+
+## 2. Aesthetic Evolution (Dark Tech Precision)
+
+Avoid light foundations for high-tech industrial projects. Adhere to the **"Dark + Gray + Blue"** onyx palette:
+
+1. **Base Foundation**: Deep Onyx (#0a0b10) for maximum contrast.
+2. **Surface Layer**: Slate Slate (#14161f) for mid-ground elements.
+3. **Glassmorphism**: MANDATORY Use of `.glass-panel` (backdrop-filter: blur(20px)) for all floating cards and menus.
+4. **Accent Glow**: Electric Blue (HSL 217, 100%, 61%) used sparingly for icons, shadows, and navigation underlines.
+5. **Pattern Overlays**: Apply low-opacity `linear-gradient` grids or masks to dark backgrounds to create "blueprint" texture.
+
+## 3. UI Conversion Library & Animations
+
+- **Master Button Protocol**: maintain `.btn-v3-` classes: Primary, Vibrant, Glass, Cyber, Soft, Outline, White, and Ghost.
+- **Trust Ribbon Strategy**: Floating ribbon (20+ Years / 800+ Workers) immediately below Hero.
+- **Micro-Animations**:
+  - Staggered reveal delays (`.delay-1` to `.delay-4`) for grid items.
+  - Floating vertical animations for high-impact trust numbers.
+
+## 4. Engineering Standards (Conversion & Stability)
+
+- **Dark Theme Priority**: All subpages must resolve to a unified dark theme; white background div-boxes are strictly prohibited in V4.
+- **WA Direct Hooks**: All conversion buttons hook into `wa.me/` for immediate 1-to-1 industrial client response.
+- **Relative Path Migration**: assets must be local (`images/certs/`) to ensure reliability.
+
+## 5. Theme Visibility & Consistency Rules [NEW]
+
+- **Prohibited Contrasts**: Pure white (`#fff`) or light grey (`#f8f9fa`) container backgrounds are strictly prohibited when the overall site theme is Dark/Onyx.
+- **Inner Div Policy**: All internal session divs, cards, and modal boxes must use `var(--color-surface-base)`, `var(--color-surface-muted)`, or `.glass-panel`.
+- **Reasoning**: To maintain the "Industrial High-Tech" visual integrity and avoid jarring visual spikes in dark mode environments.
+- **Save Priority**: This rule is now a core part of the Jin Hong Design setting and must be enforced in all future layout expansions.
+
+## 6. Master Tier Design Solutions (Awesome Skills Integration)
+
+### 6.1 Micro-interactions (Design Spells)
+
+- **The "Wow" Factor**: DO NOT settle for default Bootstrap/Tailwind behaviors. Use magnetic hover effects, physics-based scroll reveals, and fluid transitions to make the site feel "expensive."
+- **Execution**: Apply `transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1)` as a baseline for premium motion.
+
+### 6.2 Figma-Driven Accuracy
+
+- **Token Extraction**: When a Figma URL is provided, prioritize extracting design tokens (colors, font-weights, spacing) via `figma-automation` to ensure 100% brand fidelity.
+- **Component Parity**: Mirror Figma component hierarchies directly in the CSS architecture.
+
+### 6.3 Rigorous Visual Validation
+
+- **Reverse Validation**: Before claiming a UI task is done, actively look for visual flaws (misalignments, contrast issues, responsive breakage) as defined in `ui-visual-validator`.
+- **Objective Checklist**: Verify every project against WCAG 2.1 contrast standards and pixel-perfect spacing before delivery.
+
+## 7. Cross-Project Consistency (Memory Powered)
+
+### 7.1 Historical Retrieval
+
+- **Pre-Flight Search**: Before initializing a new page or component, the agent MUST query `agent-memory` for any previously successful patterns, specific color preferences (like the Dark/Onyx priority), or conversion hooks used in other industrial projects.
+- **Thinking Wider**: Use historical data to avoid repeating mistakes and to evolve the design system across multiple separate workspaces.
+
+## 8. Japanese Precision Integration (V5 Upgrade)
+
+Integrating the **Japanese Design Standard** to achieve 100/100 visual and functional score:
+
+### 8.1 Advanced Typography & "Ma" (Negative Space)
+
+- **Breathing Room**: Implement a minimum `line-height: 1.75` for all description text and `letter-spacing: 0.02em` for headings.
+- **Intentional Whitespace**: Between complex technical sections, introduce a `120px - 150px` vertical gap to prevent cognitive overload—this is the Japanese "Ma" (间) applied to industrial data.
+
+### 8.2 Visual Signage Logic (Inspired by NAVITIME/Mercari)
+
+- **Status Badges**: Use high-contrast, bold-background badges for "Status" or "Safety Certs" that mimic Japanese infrastructure signage (High legibility, sharp corners within a rounded container).
+- **Navigation Clarity**: Every section must have a clear "Breadcrumb or Progress Anchor" to tell the user exactly where they are in the "Industrial Journey."
+
+### 8.3 "Soft-Touch" Engineering (Hybrid Aesthetics)
+
+- **Refined Rounding**: Standardize `border-radius: 16px` for all glass panels and `8px` for buttons. This creates a "precision gadget" feel rather than a "heavy iron" feel.
+- **Micro-Shadows**: Use multi-layered, ultra-soft shadows (`box-shadow: 0 4px 6px rgba(0,0,0,0.1), 0 10px 15px rgba(0,0,0,0.1)`) to lift cards off the Onyx background without looking "dirty."
+
+### 8.4 Contextual Intelligence (UX)
+
+- **Service Cross-Linking**: On service-specific pages, automatically inject a "Smart Link" to a complementary service (e.g., Fire Protection → Electrical) to mimic the Japanese "Demand Pre-judgment" logic.
+
+---
+
+_Verified Status: V5 Upgrade (Japanese Precision) Integrated and Active._

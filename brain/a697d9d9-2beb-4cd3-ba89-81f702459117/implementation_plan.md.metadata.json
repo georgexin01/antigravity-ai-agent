@@ -1,0 +1,6 @@
+{
+  "artifactType":  "ARTIFACT_TYPE_IMPLEMENTATION_PLAN",
+  "summary":  "Implementation plan for Phase 12.5. Details extracting raw images from the PDF profile via Python, building an AI review gallery, and permanently adding the PDF Image Protocol to the global AI settings.",
+  "updatedAt":  "2026-03-10T06:59:48.139073200Z",
+  "version":  "10"
+}

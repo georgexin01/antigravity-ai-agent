@@ -1,0 +1,62 @@
+# Project Walkthrough: MTDB Website Generation (Beige Theme Update)
+
+## Changes Made
+
+Successfully updated the **Malaysian Talent Development Board (MTDB)** website theme from the default blue to a custom **6-Tier Light Brown/Beige (米色)** palette, as requested by the user. The master knowledge configs have also been updated to proactively ask for theme colors in future projects and enforce dynamic HSL scaling.
+
+### 1. Structural Delivery
+
+The following file structure has been fully populated and linked:
+
+```text
+mtdb-website/
+├── css/
+│   └── global.css          (UPDATED: 6-Tier Beige background system & Typography)
+├── js/
+│   └── main.js             (Sticky header & Swiper.js mechanics)
+├── images/
+│   ├── hero-1.jpg          (UPDATED: AI Generated Beige Theme)
+│   ├── hero-2.jpg          (UPDATED: AI Generated Beige Theme)
+│   ├── about-home.jpg      (UPDATED: AI Generated Beige Theme)
+│   ├── about-banner.jpg    (UPDATED: AI Generated Beige Theme)
+│   ├── services-banner.jpg (UPDATED: AI Generated Beige Theme)
+│   └── aii-banner.jpg      (UPDATED: AI Generated Beige Theme)
+├── index.html              (Dynamic hero, Trust Ribbon, 4-Column Grid)
+├── about.html              (10-Year Roadmap, Vision, Mission)
+├── services.html           (Service Range & 5-Step Delivery Flow)
+├── faq.html                (MANDATORY: Bootstrap Accordion Q&A)
+├── privacy.html            (MANDATORY: Mobile-readable Policy)
+├── terms.html              (MANDATORY: Mobile-readable ToS)
+└── project-details.html    (MANDATORY: Academy in Industry details template)
+```
+
+### 2. Design Implementation (Beige Theme Update)
+
+- **6-Tier Backgrounds**: Implemented the new HSL tiering (`--bg-layer-1` to `--bg-layer-6`) across all cards, ribbons, and header boundaries using varying degrees of light brown, sand, and deep bark.
+- **Brand Colors**: Mapped `--color-primary` to a sophisticated earth brown and `--color-accent` to a warm gold highlight.
+- **Gradient Adjustments**: Changed the Swiper.js overlay gradients from deep blue to a deep brown (`rgba(58, 46, 36, 0.9)`) to ensure the transition from the image to text is seamless.
+
+### 3. Visual Coverage (Beige/Warm Earth Overhaul)
+
+All 5 placeholder images were completely recreated using AI with strict negative prompts against blue/navy to comply with the new "米色" (Light Brown) theme requirement.
+
+```carousel
+![Hero Banner 1 - Tech & Innovation (Beige)](file:///C:/Users/user/.gemini/antigravity/brain/8be5b78a-0be3-456c-bfe3-705a199a7311/mtdb_hero_bg1_beige_1773109683865.png)
+<!-- slide -->
+![Hero Banner 2 - Regional Talent Flow (Beige)](file:///C:/Users/user/.gemini/antigravity/brain/8be5b78a-0be3-456c-bfe3-705a199a7311/mtdb_hero_bg2_beige_1773109699625.png)
+<!-- slide -->
+![About Section - Professional Engineers (Beige)](file:///C:/Users/user/.gemini/antigravity/brain/8be5b78a-0be3-456c-bfe3-705a199a7311/mtdb_about_home_beige_1773109726382.png)
+<!-- slide -->
+![About Banner - KL Skyline Dawn (Beige)](file:///C:/Users/user/.gemini/antigravity/brain/8be5b78a-0be3-456c-bfe3-705a199a7311/mtdb_about_banner_beige_1773109741562.png)
+<!-- slide -->
+![Services Banner - Abstract Growth (Beige)](file:///C:/Users/user/.gemini/antigravity/brain/8be5b78a-0be3-456c-bfe3-705a199a7311/mtdb_services_banner_beige_1773109756648.png)
+<!-- slide -->
+![Academy in Industry Banner - Smart Factory (Beige)](file:///C:/Users/user/.gemini/antigravity/brain/8be5b78a-0be3-456c-bfe3-705a199a7311/mtdb_aii_banner_beige_1773109774952.png)
+```
+
+## Validation Results
+
+- **PDF Content Accuracy**: successfully parsed the `Malaysian Talent Development Board_PPT_V1 1.pdf` data and accurately distributed the 10-year roadmap, Mission Pillars, and Focus Industries into `about.html`, `index.html`, and `services.html`.
+- **Global Configuration Met**: Mandatory execution of `project-details`, `faq`, `terms`, and `privacy` exist and are accessible from the global footer.
+
+The website is fully built locally at `c:\Users\user\Desktop\antigravity\mtdb-website\index.html`. You can open this file in your browser right now to perform your visual review.

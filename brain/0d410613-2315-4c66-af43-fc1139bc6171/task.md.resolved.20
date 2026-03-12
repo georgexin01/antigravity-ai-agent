@@ -1,0 +1,16 @@
+# JIN HONG M&E Projects - Master Task List
+
+## 1. V2 Overhaul (Refinement) [COMPLETE]
+- [x] Redesign all 6 interior pages for `jin-hong-me-html-v2`.
+- [x] Generate 4K-optimized (1600px) assets for sliders and honors.
+- [x] Synchronize "transparent-to-solid" headers.
+
+## 2. V3 Project Generation (New Brand) [COMPLETE]
+- [x] Initialize `jin-hong-me-html` folder structure.
+- [x] Create core V3 design system (HSL-based tokens).
+- [x] Implement V3 Index.html with 4K sliders and sticky header.
+- [x] Deploy 5 synchronized interior pages.
+- [x] Final verification and audit.
+
+---
+*Created by Antigravity AI*

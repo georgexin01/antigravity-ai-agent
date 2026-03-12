@@ -1,0 +1,27 @@
+# Core Features Redesign Plan
+
+The goal is to replace the current Bento Grid layout for "Core Features" with a more balanced, high-end 3-column grid that uses **official image icons** and follows premium design protocols (Large round corners, soft shadows, high line-height).
+
+## Proposed Changes
+
+### [Zeta Capital Website]
+
+#### [MODIFY] [index.html](file:///c:/Users/user/Desktop/antigravity/zeta/index.html)
+- Replace the Bento Grid in the "Features Summary" section with a uniform 3-column grid (`grid-3`).
+- Use official icons: [images/core_features1.png](file:///c:/Users/user/Desktop/antigravity/zeta/images/core_features1.png) through [images/core_features6.png](file:///c:/Users/user/Desktop/antigravity/zeta/images/core_features6.png).
+- Apply `glass-panel` styling with refined padding and hover effects.
+- Ensure "Design Spells" (reveal animations) are correctly applied to each card.
+
+#### [MODIFY] [style.css](file:///c:/Users/user/Desktop/antigravity/zeta/css/style.css)
+- Refine `.feature-icon` styles to accommodate image icons instead of FontAwesome.
+- Ensure `grid-3` is optimized for various screen sizes with proper spacing.
+
+## Verification Plan
+
+### Automated Tests
+- Not applicable for static layout changes.
+
+### Manual Verification
+- Verify the layout on desktop (3 columns) and mobile (1 column).
+- Check that all 6 official icons are displayed correctly.
+- Ensure hover effects and scroll reveal animations are smooth.

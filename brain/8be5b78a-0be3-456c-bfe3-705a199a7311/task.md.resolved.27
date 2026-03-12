@@ -1,0 +1,8 @@
+# Task Outline: Dynamic Homepage Structural Rules
+
+- [ ] Remove `trust-ribbon` from [index.html](file:///c:/Users/user/Desktop/antigravity/mtdb-website/index.html).
+- [ ] Update [global.css](file:///c:/Users/user/Desktop/antigravity/mtdb-website/css/global.css) to enforce `height: 100vh` on `.hero-slider-container`.
+- [ ] Update [antigravity_agent_config_summary.txt](file:///c:/Users/user/Desktop/antigravity/antigravity_agent_config_summary.txt):
+  - Add `100vh` rule for slider containers.
+  - Add Trust Ribbon dynamic rules (2-3 variants, random positioning, non-mandatory).
+  - Add Section Variation rule (3-5 different design layouts per session like About/Service/Features for non-repetitive generation).

@@ -1,0 +1,22 @@
+# Fix Banner Image Paths
+
+The banner images are not appearing because the frontend is using relative paths (e.g., `images/banners/banner1.jpg`) from the database without prepending the required base URL (`https://frame9.my/uploads/`).
+
+## Proposed Changes
+
+### [Component Name]
+
+#### [MODIFY] [constants.ts](file:///c:/Users/user/Desktop/frame9/src/constants.ts)
+- Add `IMAGE_BASE_URL` constant set to `https://frame9.my/uploads/`.
+
+#### [MODIFY] [Home.vue](file:///c:/Users/user/Desktop/frame9/src/screens/Home.vue)
+- Import `IMAGE_BASE_URL`.
+- Update the `banners` computed property to prepend the base URL to each image path.
+
+## Verification Plan
+
+### Automated Tests
+- I'll verify the logic by reading the file.
+
+### Manual Verification
+- The user should refresh the browser and verify the banner images are now visible.

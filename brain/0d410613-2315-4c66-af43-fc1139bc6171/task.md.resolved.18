@@ -1,0 +1,29 @@
+# Jin Hong M&E V2 & AI Knowledge Expansion
+
+## 1. Knowledge Acquisition (Deep Dive)
+
+- [x] Study `maxcoach` template for premium portfolio/corporate design patterns.
+- [x] Analyze 8 old projects in `oldproject/` (PHP/Vue) and `downloaded-template/` specifically for HTML/CSS/JS.
+- [x] Extract UI/UX Patterns: 50+ custom CSS/div structures, flex/grid layouts, Bootstrap usage.
+- [x] Extract Component Patterns: WhatsApp link buttons, gradient backgrounds, mandatory pages.
+- [x] Save high-quality images found to `resource/images` using the **Smart Image Caching** (rating/usage) system.
+- [x] Synthesize all learnings into AI master knowledge/skills.
+
+## 2. V2 Interior Pages Overhaul (50+ Custom Designs)
+
+- [x] Overhaul `about.html` with deep content from PDF and extracted CSS patterns.
+- [x] Overhaul `services.html` using premium CSS cards and interactive hover states.
+- [x] Overhaul `projects.html` using gallery zoom plugins and sleek transitions.
+- [x] Overhaul `contact.html` and `honors.html` with advanced form UI and MaxCoach alert styling.
+## 3. V2 Refinements (Assets & UI Sync)
+
+- [x] Generate AI-safe certificate/award images to replace potentially sensitive docs.
+- [x] Generate 3x premium AI images for the homepage slideshow.
+- [x] Synchronize the "transparent-to-solid" header design across all interior pages.
+- [x] Update all pages with new generated assets.
+- [x] Final verification of mobile responsiveness and asset loading.
+
+## 4. Finalization
+
+- [x] Security and responsiveness compliance.
+- [x] Master Strategy updated with image resolution protocols.

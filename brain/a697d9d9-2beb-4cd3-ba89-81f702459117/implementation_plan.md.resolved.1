@@ -1,0 +1,36 @@
+# Implementation Plan - Redesign: Dark + Gray + Blue (v4.0)
+
+Complete overhaul of the website aesthetic to a "Dark Tech" theme with deep blues and slate grays, emphasizing precision and industrial authority.
+
+## Design Specification
+- **Base Background**: `#0a0b10` (Deep Onyx)
+- **Primary Accent**: `#3a86ff` (Electric Blue)
+- **Gray Tiers**: `#1c1e26` (Slate), `#2d313d` (Charcoal)
+- **Typography**: `Inter` for body, `Outfit` or `Montserrat` for bold headlines.
+
+## Proposed Changes
+
+### 1. Global Design System
+#### [MODIFY] [global.css](file:///c:/Users/user/Desktop/antigravity/jin-hong-me-html-v2/css/global.css)
+- Reset CSS variables to the new "Dark + Gray + Blue" palette.
+- Implement glassmorphism utility classes (`.glass-card`).
+- Add asymmetrical grid layouts (`.asym-grid`).
+- Update all button variants to follow the new neon/glow style.
+
+### 2. Homepage Overhaul
+#### [MODIFY] [index.html](file:///c:/Users/user/Desktop/antigravity/jin-hong-me-html-v2/index.html)
+- **Hero**: Update to a deep blue gradient overlay with high-contrast text.
+- **Sections**: Use zig-zag layout for "Sectors" and "About".
+- **Visuals**: Use CSS gradients and blue glow effects for card borders.
+- **Stats**: Update to vibrant blue numbers.
+
+### 3. Navigation & Footer
+#### [MODIFY] [Header/Footer]
+- Implement a semi-transparent blur header (`backdrop-filter`).
+- Update footer to deep navy/gray with high-contrast white/blue text.
+
+## Verification Plan
+### Manual Verification
+1. **Visual "Wow" Factor**: Confirm the dark theme feels premium and industrial.
+2. **Contrast Check**: Ensure text is readable on dark backgrounds (WCAG AA).
+3. **Responsive Flow**: Check asymmetrical sections on mobile to ensure they stack correctly.

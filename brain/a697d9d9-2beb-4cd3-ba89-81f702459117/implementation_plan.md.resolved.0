@@ -1,0 +1,51 @@
+# Implementation Plan - Update Jin Hong M&E Website to v4.0 Standards
+
+Update the existing `jin-hong-me-html-v2` website to comply with the latest global agent automation protocols (v4.0). This includes adding missing UI components, enhancing animations, and ensuring structural consistency across all pages.
+
+## Proposed Changes
+
+### Global Styles and Interactions
+#### [MODIFY] [global.css](file:///c:/Users/user/Desktop/antigravity/jin-hong-me-html-v2/css/global.css)
+- Add styles for the Scroll-to-Top button (45x45px, 8px radius).
+- Add helper classes for the "Page Introduction" section (flex/grid alternating layout).
+- Ensure body has appropriate top-offset or padding to prevent header overlap if needed.
+
+#### [MODIFY] [main.js](file:///c:/Users/user/Desktop/antigravity/jin-hong-me-html-v2/js/main.js) (or create if missing)
+- Implement `IntersectionObserver` for animated number counters.
+- Implement Scroll-to-Top button logic:
+    - Fades in when scrolling down.
+    - Triggers smooth scroll to top.
+    - Animates the WhatsApp button (`.float-wa`) upward by 60px when the Scroll-to-Top button appears to prevent collision.
+
+### Homepage Enhancements
+#### [MODIFY] [index.html](file:///c:/Users/user/Desktop/antigravity/jin-hong-me-html-v2/index.html)
+- Add `data-target` attributes to stat numbers for the counter animation.
+- Add the Scroll-to-Top button HTML.
+- Update footer credits to match the mandatory format: `© 2026 JIN HONG M&E SDN BHD. All Rights Reserved. | Provided by [Zeta Capital Sdn. Bhd.](https://zeta-capital.com/)`.
+- Verify all internal links for consistency.
+
+### Interior Page Refinement
+#### [MODIFY] [about.html](file:///c:/Users/user/Desktop/antigravity/jin-hong-me-html-v2/about.html)
+#### [MODIFY] [services.html](file:///c:/Users/user/Desktop/antigravity/jin-hong-me-html-v2/services.html)
+- Add Scroll-to-Top button HTML.
+- Refine the Page Intro section to follow the "Image Left/Text Right" flex pattern immediately below the breadcrumb.
+- Synchronize footer content and credits.
+
+### Auxiliary Pages
+#### [MODIFY] [project-details.html](file:///c:/Users/user/Desktop/antigravity/jin-hong-me-html-v2/project-details.html)
+#### [MODIFY] [faq.html](file:///c:/Users/user/Desktop/antigravity/jin-hong-me-html-v2/faq.html)
+#### [MODIFY] [privacy.html](file:///c:/Users/user/Desktop/antigravity/jin-hong-me-html-v2/privacy.html)
+#### [MODIFY] [terms.html](file:///c:/Users/user/Desktop/antigravity/jin-hong-me-html-v2/terms.html)
+- Ensure they all feature the Scroll-to-Top button and standardized footer.
+
+## Verification Plan
+
+### Automated Tests
+- N/A (Static HTML project)
+
+### Manual Verification
+1.  **Scroll Interaction**: Scroll down [index.html](file:///c:/Users/user/Desktop/antigravity/jin-hong-me-html-v2/index.html) and verify the Scroll-to-Top button fades in and the WhatsApp button moves up.
+2.  **Stat Counters**: Verify numbers in the stats ribbon animate from 0 to their values when scrolled into view.
+3.  **Link Integrity**: Click every link in the header and footer to ensure no 404s.
+4.  **Responsive Check**: Verify the Scroll-to-Top and WhatsApp buttons do not collide on mobile screens.
+5.  **Contrast**: Check text readability on all sections using browser dev tools.

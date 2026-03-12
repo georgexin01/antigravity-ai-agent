@@ -1,0 +1,28 @@
+# JIN HONG M&E Projects - Master Task List
+
+## 1. V2 Overhaul (Legacy) [COMPLETE]
+
+- [x] Redesign all 6 interior pages for `jin-hong-me-html-v2`.
+- [x] Generate 4K-optimized assets.
+
+## 2. V3 Project Generation (New Brand) [COMPLETE]
+
+- [x] Initialize folder structure and core design system.
+- [x] Implement initial V3 pages.
+
+## 3. V3 Premium Upgrades (ThemeForest Standard)
+
+- [x] **Homepage "Wow" Elements**: background patterns, testimonials, CTA banner, quick inquiry.
+- [x] **About Us Expansion**: Vision/Mission/Values/Team sessions.
+- [x] **Services 4x4 Grid**: Restructure for visual density.
+- [x] **Project Detail Flow**: Create [project-details.html](file:///C:/Users/user/Desktop/antigravity/maxcoach/project-details.html) and link from gallery.
+- [x] **Contact & Footer Audit**: Google Map, Privacy/Terms, and mandatory **Zeta Capital credits**.
+- [x] **FAQ Session**: Implement homepage/dedicated FAQ module.
+- [ ] **Homepage Layout Refinement**:
+  - [ ] Reorder sections: FAQ/Inquiry -> CTA -> Footer.
+  - [ ] Optimize Testimonial Swiper (3 items per view, autoplay).
+  - [ ] Update Master Config with new positioning rules.
+
+---
+
+_Created by Antigravity AI_

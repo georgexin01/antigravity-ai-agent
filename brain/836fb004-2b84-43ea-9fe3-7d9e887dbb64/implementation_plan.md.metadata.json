@@ -1,0 +1,6 @@
+{
+  "artifactType":  "ARTIFACT_TYPE_IMPLEMENTATION_PLAN",
+  "summary":  "Updated plan to add \"Open with Antigravity\" to the context menu with silent/background execution to avoid interrupting the user.",
+  "updatedAt":  "2026-03-12T01:40:05.575295500Z",
+  "version":  "1"
+}

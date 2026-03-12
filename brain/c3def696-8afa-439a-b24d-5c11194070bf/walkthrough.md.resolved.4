@@ -1,0 +1,22 @@
+# Walkthrough - Coupon Redemption Flow
+
+I have implemented a major redesign of the Coupon Details page to support a more secure, merchant-verified redemption flow.
+
+## Changes Made
+
+### New Coupon Details Layout
+- **Hero Grid Display:** The top of the page now features a large, cinematic image background with a bold category badge and high-contrast title/description overlay.
+- **Removed Legacy Elements:** The old "Use Now" badge and the "Save to Wallet" button have been removed to make room for the new redemption logic.
+
+### Passcode Redemption System
+- **Merchant Verification:** Added a new "Use Now" section containing a 4-digit passcode input (numeric only).
+- **Intelligent Focus:** The inputs feature the same smart logic used in the Stamps page:
+  - Automatic focus on the next box after entry.
+  - Automatic reset of the current and subsequent boxes when clicking an input.
+  - Backspace support for reverse navigation.
+- **Redemption Button:** Added a "Use Coupon" button that stays disabled until all 4 digits are entered.
+
+## Verification
+- Verified the grid layout responsiveness.
+- Manually confirmed passcode input behaviors (auto-focus, numeric filtering).
+- Ran `npm run lint` - 0 errors found. All components and types are fully verified.

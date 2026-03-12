@@ -1,0 +1,5 @@
+# Task Outline: AI Image Resource Vault
+
+- [x] Create `c:\Users\user\Desktop\antigravity\ai_image_resources\` directory.
+- [x] Duplicate all existing images from `mtdb-website` into the resource vault.
+- [x] Update `antigravity_agent_config_summary.txt` with the 90% Suitability Pre-Check rule.

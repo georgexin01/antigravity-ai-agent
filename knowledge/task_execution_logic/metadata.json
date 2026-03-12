@@ -1,0 +1,6 @@
+{
+  "title": "Task Execution Logic",
+  "summary": "Pattern for summarizing user requests into titles and then searching the skills folder for a matching skill to execute the task.",
+  "last_updated": "2026-03-05T14:02:00Z",
+  "references": []
+}

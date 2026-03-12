@@ -1,0 +1,6 @@
+{
+  "artifactType":  "ARTIFACT_TYPE_IMPLEMENTATION_PLAN",
+  "summary":  "Implementation plan to fix broken banner image paths by adding a global IMAGE_BASE_URL constant and updating the Home screen's image mapping logic.",
+  "updatedAt":  "2026-03-11T09:28:00.197193500Z",
+  "version":  "7"
+}

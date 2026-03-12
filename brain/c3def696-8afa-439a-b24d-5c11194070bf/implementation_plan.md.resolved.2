@@ -1,0 +1,40 @@
+# Implementation Plan - UI Refinements
+
+## Goal
+
+The goal was to refine several UI components of the Frame 9 app, including the Event Details, Stamps, Coupons, and Profile pages, ensuring they match specific design and behavioral requirements.
+
+## Proposed Changes
+
+### [DONE] Event Details Page
+
+- Removed specific text elements and added dynamic title display.
+- Redesigned date/time section as text-based blocks.
+- Implemented "Register Now" button with state management.
+
+### [DONE] Stamps Page
+
+- Enhanced verification input fields with auto-advance and reset-to-right logic.
+- Updated Terms & Conditions for weekend-only availability.
+
+### [DONE] Coupons Page
+
+- Added reactive tab filtering for Available vs Used coupons.
+- Redesigned the Coupon Details screen with "Use Now" labels and interactive promo codes.
+- Added `code` property to [Coupon](file:///c:/Users/user/Desktop/frame9/src/types.ts#32-42) type and mock data.
+- **[REFINE]** Implemented longer, more descriptive coupon content.
+- **[REFINE]** Made the Terms & Conditions section collapsible for a cleaner UI.
+
+### [DONE] Profile Page
+
+- Simplified header (removed avatar and edit buttons).
+- Implemented Language Selector Modal with national flags and selection glow.
+- Redesigned "Delete Account" button to be desaturated/dark red.
+- Adjusted Sign Out button to red-border style.
+- Increased overall page padding.
+
+## Verification Results
+
+- All screens tested for responsiveness and aesthetic alignment.
+- Component state (registration, language selection, coupon filtering) verified as working correctly.
+- Full project lint passing.

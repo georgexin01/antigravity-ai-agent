@@ -1,0 +1,43 @@
+# [Goal Description]
+
+Create a premium, 3-step signup process in [Signup.vue](file:///c:/Users/user/Desktop/frame9/src/screens/Signup.vue) following the user's provided screenshots while maintaining the Frame 9 dark-mode aesthetic.
+
+## Proposed Changes
+
+### Core Logic & State Management
+
+- **[NEW] [Signup.vue](file:///c:/Users/user/Desktop/frame9/src/screens/Signup.vue)**
+  - Implement a `currentStep` ref (1, 2, 3).
+  - Step 1: Mobile input + Compliance.
+  - Step 2: 4-digit OTP verification + Resend timer.
+  - Step 3: Profile setup (Name, DOB).
+  - Use `v-if`/`v-else` for step transitions.
+
+### Navigation & Routing
+
+- **[MODIFY] [index.ts](file:///c:/Users/user/Desktop/frame9/src/router/index.ts)**
+  - Register the `/signup` route.
+- **[MODIFY] [Login.vue](file:///c:/Users/user/Desktop/frame9/src/screens/Login.vue)**
+  - Link the "Sign up as Player" button to the new `/signup` route.
+
+### Metadata & Branding
+- **[NEW] [public/](file:///c:/Users/user/Desktop/frame9/public/)**
+  - Move/Copy all files from `favicon/` to `public/`.
+- **[MODIFY] [site.webmanifest](file:///c:/Users/user/Desktop/frame9/public/site.webmanifest)**
+  - Update [name](file:///c:/Users/user/Desktop/frame9/src/types.ts#12-21), `short_name`, and `description` based on [metadata.json](file:///c:/Users/user/Desktop/frame9/metadata.json).
+- **[MODIFY] [index.html](file:///c:/Users/user/Desktop/frame9/index.html)**
+  - Add `<title>`, `<meta name="description">`, and favicon links.
+  - Add Open Graph (OG) and Twitter meta tags.
+
+## Verification Plan
+
+### Automated Tests
+
+- Run `npm run lint` to confirm TypeScript and Vue syntax correctness.
+
+### Manual Verification
+
+- Navigate through all 3 steps of the signup flow.
+- Verify the progress bar updates correctly.
+- Ensure the OTP input handles numeric validation and auto-focus (similar to the Coupons/Stamps logic).
+- Confirm the profile information step (Name, DOB) correctly reflects the design in the reference screenshots.

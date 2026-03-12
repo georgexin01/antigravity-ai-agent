@@ -1,0 +1,12 @@
+# Task Checklist: Setup "Open with Antigravity" Context Menu
+
+- [x] Planning & Research <!-- id: 0 -->
+  - [x] Locate Antigravity executable <!-- id: 1 -->
+  - [x] Define registry keys for files, folders, and background <!-- id: 2 -->
+- [x] Implementation <!-- id: 3 -->
+  - [x] Create [.reg](file:///C:/Users/user/.gemini/antigravity/scratch/antigravity_context_menu.reg) file for context menu shortcut <!-- id: 4 -->
+  - [x] Apply registry changes via PowerShell <!-- id: 5 -->
+  - [/] Setup silent/background execution for context menu <!-- id: 9 -->
+- [x] Verification <!-- id: 6 -->
+  - [x] Verify registry keys exist and have correct values <!-- id: 7 -->
+  - [x] Notify user to test the right-click menu <!-- id: 8 -->

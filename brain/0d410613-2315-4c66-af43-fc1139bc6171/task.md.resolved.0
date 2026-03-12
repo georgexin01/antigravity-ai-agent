@@ -1,0 +1,26 @@
+# Jin Hong M&E Website Redesign & AI Core Optimization
+
+## 1. System Cleanup & Core Optimization
+- [ ] Review current AI Knowledge Items and Skills.
+- [ ] Merge and compress redundant Knowledge Items.
+- [ ] Delete unused or generic AI Skills not aligned with user's specific tech stack (Vue, React, AI Studio, Stitch, PHP, HTML/CSS).
+
+## 2. Web Design Workflow & Skill Creation
+- [ ] Define a comprehensive Web Design workflow skill.
+- [ ] Detail the exact step-by-step process for researching templates, extracting HTML/CSS, downloading assets, and implementation.
+
+## 3. Reference Research & Asset Gathering 
+- [ ] Search the web for modern engineering / construction / corporate web templates.
+- [ ] Extract layout and CSS ideas.
+- [ ] Download or generate appropriate high-quality images for the `images` folder.
+
+## 4. Website Overhaul (`jin-hong-me-html`)
+- [ ] Implement a dynamic Slider / Slideshow on the homepage.
+- [ ] Refactor `index.html` with new, structured, and modern sections.
+- [ ] Refactor `about.html`, `services.html`, `projects.html`, `contact.html`.
+- [ ] Update `global.css` with premium styling (typography, spacing, colors, animations).
+- [ ] Remove old placeholder methods and clean up unused assets.
+
+## 5. Finalization
+- [ ] Document the successful process.
+- [ ] Save the specific workflow as the definitive AI Web Design Skill.

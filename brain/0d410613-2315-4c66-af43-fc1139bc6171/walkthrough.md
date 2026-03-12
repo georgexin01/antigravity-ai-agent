@@ -1,0 +1,43 @@
+# Master UI/UX Upgrade Walkthrough - Jin Hong M&E
+
+This document summarizes the high-end design protocols and interactive features implemented to achieve "ThemeForest Excellence" standards.
+
+## 1. Master Premium Button Library (8 Levels)
+
+Defined in `global.css` for site-wide consistency:
+
+- **Primary**: `.btn-v3-primary` - Soft glow, flagship action.
+- **Glass**: `.btn-v3-glass` - Backdrop blur for hero sections.
+- **Vibrant**: `.btn-v3-vibrant` - Gradient-driven high conversion.
+- **Cyber**: `.btn-v3-cyber` - Sharp industrial aesthetic.
+- **Soft**: `.btn-v3-soft` - Clean, secondary interaction.
+- **Outline**: `.btn-v3-outline-glow` - Minimalist with hover depth.
+- **White**: `.btn-v3-white` - Optimized for dark/gradient backgrounds.
+- **Ghost**: `.btn-v3-ghost` - Navigation-focused subtle link.
+
+## 2. Dynamic 5-Tier Depth Hierarchy
+
+A sophisticated background strategy to maintain visual interest and structural clarity:
+
+1.  **White**: Neutral foundation for long-form content.
+2.  **Shallow Blue**: Subtle theme tint for primary rhythm.
+3.  **Shallow Muted**: Grey-blue tint for secondary separation (e.g., Services Overview).
+4.  **Premium Deep**: High-contrast dark blue accent (e.g., FAQ) for brand authority.
+5.  **Soft Gradient**: Vertical blends to link related sections.
+
+## 3. Trust & Authority Modules
+
+- **Animated Trust Ribbon**: Floating stats area (20+ Industry / 800+ Workers / 500+ Projects) with reveal animations.
+- **Visual Qualifications**: Custom 3D icons for CIDB G7, ST Class A, SPAN C1, and ISO 9001 (replaces standard list).
+- **Project Detail Flow**: Integrated "View Details" CTA on all project showcases linking to a dedicated deep-dive template.
+- **Instant Connect**: Header integration with **WhatsApp** (`wa.me`) for sub-second communication.
+
+## 4. Global Branding Standards
+
+- **Footer Dense Protocol**: Includes Quick Links, Contact details, Legal links (FAQ, Privacy, Terms).
+- **Mandatory Credits**: Branding provided by [Zeta Capital Sdn. Bhd.](https://zeta-capital.com/).
+- **Positioning Flow**: Homepage bottom-path: **Testimonials -> FAQ (Premium Deep) -> Vibrant CTA -> Global Footer**.
+
+---
+
+_Handed over by Antigravity AI - Engineering Design Synergy Authorized._

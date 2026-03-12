@@ -1,0 +1,22 @@
+# Walkthrough - Profile & Coupon Refinements
+
+I have completed the latest round of UI refinements for the Profile and Coupon details systems.
+
+## Changes Made
+
+### Coupon Details Page Redesign
+- **Premium Coupon Aesthetic:** Implemented a new "punched-hole" coupon design with a dotted border and dark surface background.
+- **Top Info Section:** Redesigned the header to show the coupon category, title, and description in a sleek, horizontal card layout.
+- **"Use Now" Label & Promo Code:** Added a stylized "Use Now" badge and a large, mono-spaced promo code display (e.g., `SAVE20PRO`).
+- **Interactive Copy:** Tapping the promo code container now automatically copies it to the clipboard with a "Copied" checkmark feedback.
+- **Updated Data:** Added a `code` property to the [Coupon](file:///c:/Users/user/Desktop/frame9/src/types.ts#32-42) type and populated all mock coupons with unique promo codes.
+
+### Profile Page Enhancements
+- **Darker Delete Account:** Desaturated and severely darkened the "Delete Account" button to a dark red (`bg-red-950/20`) with a subtle border, removing the previous "shiny" glow effect as per feedback.
+- **Sign Out Button:** Reverted to the requested red-tinted border design.
+- **Cleanup:** Fixed TypeScript errors in the menu iteration loop.
+
+## Verification
+- Verified reactive selection logic in the Language popup.
+- Confirmed promo code copying functionality.
+- Ran `npm run lint` - 0 errors found. All types and templates are clean.

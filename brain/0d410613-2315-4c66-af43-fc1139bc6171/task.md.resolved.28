@@ -1,0 +1,39 @@
+# JIN HONG M&E Projects - Master Task List
+
+## 1. V2 Overhaul (Legacy) [COMPLETE]
+
+- [x] Redesign all 6 interior pages for `jin-hong-me-html-v2`.
+- [x] Generate 4K-optimized assets.
+
+## 2. V3 Project Generation (New Brand) [COMPLETE]
+
+- [x] Initialize folder structure and core design system.
+- [x] Implement initial V3 pages.
+
+## 3. V3 Premium Upgrades (ThemeForest Standard)
+
+- [x] **Homepage "Wow" Elements**: background patterns, testimonials, CTA banner, quick inquiry.
+- [x] **About Us Expansion**: Vision/Mission/Values/Team sessions.
+- [x] **Services 4x4 Grid**: Restructure for visual density.
+- [x] **Project Detail Flow**: Create [project-details.html](file:///C:/Users/user/Desktop/antigravity/maxcoach/project-details.html) and link from gallery.
+- [x] **Contact & Footer Audit**: Google Map, Privacy/Terms, and mandatory **Zeta Capital credits**.
+- [x] **FAQ Session**: Implement homepage/dedicated FAQ module.
+- [x] **Homepage Layout Refinement**:
+  - [x] Reorder sections: FAQ/Inquiry -> CTA -> Footer.
+  - [x] Optimize Testimonial Swiper (3 items per view, autoplay).
+  - [x] Update Master Config with new positioning rules.
+- [ ] **Master Premium Button Library**:
+  - [ ] Implementation of 8 distinct button themes in CSS.
+  - [ ] Apply new buttons to Homepage & Interior pages.
+- [ ] **Alternating Section Background System**:
+  - [ ] Define HSL-based "Shallow Tint" variables in global.css.
+  - [ ] Audit all 6 pages to apply White/Shallow alternating logic.
+- [ ] **Knowledge Architecture Update**:
+  - [ ] Standardize Button & Background protocols in persistent AI Knowledge.
+- [ ] **Animated Trust Stats Section**:
+  - [ ] Implement ribbon with 20+/800+/500+ stats.
+  - [ ] Add large typography and scroll reveal animations.
+
+---
+
+_Created by Antigravity AI_

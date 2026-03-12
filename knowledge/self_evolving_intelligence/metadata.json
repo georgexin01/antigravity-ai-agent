@@ -1,0 +1,7 @@
+{
+  "title": "Self-Evolving Intelligence & Auto-Optimization",
+  "summary": "Core logic for AI to autonomously study, learn, and optimize knowledge and skills based on user interaction history and task outcomes.",
+  "last_updated": "2026-03-05T14:06:00Z",
+  "version": "1.0.0",
+  "capabilities": ["Self-Study", "Auto-Optimization", "Recursive Learning"]
+}

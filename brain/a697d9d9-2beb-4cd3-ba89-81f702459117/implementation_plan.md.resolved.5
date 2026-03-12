@@ -1,0 +1,80 @@
+# Implementation Plan - Redesign: Dark + Gray + Blue (v4.0)
+
+Complete overhaul of the website aesthetic to a "Dark Tech" theme with deep blues and slate grays, emphasizing precision and industrial authority.
+
+## Design Specification
+
+- **Base Background**: `#0a0b10` (Deep Onyx)
+- **Primary Accent**: `#3a86ff` (Electric Blue)
+- **Gray Tiers**: `#1c1e26` (Slate), `#2d313d` (Charcoal)
+- **Typography**: `Inter` for body, `Outfit` or `Montserrat` for bold headlines.
+
+## Proposed Changes
+
+### 1. Global Design System
+
+#### [MODIFY] [global.css](file:///c:/Users/user/Desktop/antigravity/jin-hong-me-html-v2/css/global.css)
+
+- Reset CSS variables to the new "Dark + Gray + Blue" palette.
+- Implement glassmorphism utility classes (`.glass-card`).
+- Add asymmetrical grid layouts (`.asym-grid`).
+- Update all button variants to follow the new neon/glow style.
+
+### 2. Homepage Overhaul
+
+#### [MODIFY] [index.html](file:///c:/Users/user/Desktop/antigravity/jin-hong-me-html-v2/index.html)
+
+- **Hero**: Update to a deep blue gradient overlay with high-contrast text.
+- **Sections**: Use zig-zag layout for "Sectors" and "About".
+- **Visuals**: Use CSS gradients and blue glow effects for card borders.
+- **Stats**: Update to vibrant blue numbers.
+
+### 3. Navigation & Footer
+
+#### [MODIFY] [Header/Footer]
+
+- Implement a semi-transparent blur header (`backdrop-filter`).
+- Update footer to deep navy/gray with high-contrast white/blue text.
+
+## Verification Plan
+
+### Manual Verification
+
+1. **Visual "Wow" Factor**: Confirm the dark theme feels premium and industrial.
+2. **Contrast Check**: Ensure text is readable on dark backgrounds (WCAG AA).
+3. **Responsive Flow**: Check asymmetrical sections on mobile to ensure they stack correctly.
+
+## Phase 6: Dark Theme Completion
+
+Final cleanup of remaining "light" themed sections in [index.html](file:///c:/Users/user/Desktop/antigravity/jin-hong-me-html-v2/index.html) to ensure 100% dark tech consistency.
+
+### Section Redesigns
+
+- **Featured Projects**: Remove `bg-white`, switch section background to `#0a0b10`, and use `glass-panel` for cards.
+- **Testimonials**: Change slide backgrounds from `bg-white` to dark glass panels (`testimonial-card-v4`).
+- **FAQ Section**: Convert `bg-white` section to `bg-dark-tech`. Update accordion items to be dark with light text.
+- **Quick Enquiry Form**: Update the form container and inputs to follow the dark glassmorphism style.
+
+## Phase 7: Detail Page Consistency & Global Sync
+
+Synchronize all subpages to use the premium Dark Tech header and footer from the homepage.
+
+### Subpage Synchronization
+
+- [MODIFY] **project-details.html**: Replace old white header/footer with Dark Tech versions. Redesign content cards to dark glass style.
+- [MODIFY] **All Pages**: Conduct a final audit to ensure `app-header` and `footer-v3` are consistent across `about`, `services`, `projects`, `honors`, `contact`, `faq`, `privacy`, and `terms`.
+- [MODIFY] **global.css**: Ensure any page-specific overrides in `<style>` tags are moved to the global stylesheet or standardized.
+
+## Phase 8: Layout Refactor & Detail Page Completion
+
+Refining global layout rules and completing the transition of all subpages to the premium Dark Tech style.
+
+### Global Layout Updates
+
+- [MODIFY] **global.css**: Reset `body` padding (top/bottom) to 0. Add `.main-session` with 60-90px bottom padding.
+- [MODIFY] **All Pages**: Wrap all content between `header` and `footer` in a `<div class="main-session">`.
+
+### Detail Page Redesign
+
+- [MODIFY] **project-details.html**: Finalize dark theme for all content blocks, removing light backgrounds from the info card and related projects.
+- [MODIFY] **Subpage Consistency**: Carry over the `main-session` wrapper and dark theme refinements to [services.html](file:///c:/Users/user/Desktop/antigravity/jin-hong-me-html-v2/services.html), [projects.html](file:///c:/Users/user/Desktop/antigravity/jin-hong-me-html-v2/projects.html), [faq.html](file:///c:/Users/user/Desktop/antigravity/jin-hong-me-html-v2/faq.html), etc.

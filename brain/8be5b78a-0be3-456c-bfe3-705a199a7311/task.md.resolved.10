@@ -1,0 +1,5 @@
+# Task Outline: Add Auxiliary Page Generation Rules
+
+- [x] Update [antigravity_agent_config_summary.txt](file:///c:/Users/user/Desktop/antigravity/antigravity_agent_config_summary.txt) to require generation of extra content pages.
+- [x] Add [project-details.html](file:///c:/Users/user/Desktop/antigravity/jin-hong-me-html/project-details.html), [faq.html](file:///c:/Users/user/Desktop/antigravity/jin-hong-me-html/faq.html), [privacy.html](file:///c:/Users/user/Desktop/antigravity/jin-hong-me-html/privacy.html), [terms.html](file:///c:/Users/user/Desktop/antigravity/jin-hong-me-html/terms.html), and `testimonial.html` (if applicable) to the Website Creation Workflow.
+- [x] Add condition that Privacy/Terms can be skipped only if explicitly not needed by the company profile.

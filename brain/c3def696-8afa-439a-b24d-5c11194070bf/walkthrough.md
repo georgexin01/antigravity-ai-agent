@@ -1,0 +1,30 @@
+# Walkthrough - Finalized Signup & Theme Refinements
+
+I have completed all requested refinements to the Signup flow and core branding.
+
+## Changes Completed
+
+### Signup Flow & Logic
+
+- **Phone Number Validation:** Adjusted the minimum length to **9 characters** to be more inclusive.
+- **OTP Resend Timer:** Implemented a functional **59s** countdown. The link now becomes a clickable **"Resend now"** button only after the timer hits 0.
+- **Registration Completion:** The "Complete" button is now active as soon as you have entered any name and the full Date of Birth.
+- **Header Section:** Reduced the scale of the logo and "Register" title, and tightened the vertical spacing for a better flow.
+
+### Theme & Branding
+
+- **Surface & Background:** Updated the Signup page to use `bg-background` for the page and `bg-surface/50` with a `backdrop-blur` for the form containers.
+- **Unified Logo:** Switched both Login and Signup pages to use the `logo_frame9.jpg` version without white padding for a modern, full-frame look.
+- **OTP Sizing:** Perfected the OTP input boxes to be **48px** squares for consistent alignment.
+
+### Metadata & Branding
+
+- **Favicons:** Configured standard, Apple, and SVG favicons for all devices.
+- **Manifest:** Updated `site.webmanifest` with "Frame 9 Sports" branding and matching theme colors.
+- **SEO & Sharing:** Added Open Graph and Twitter tags with high-resolution sharing images for social media.
+
+## Verification
+
+- **User Flow:** Verified the "Login now" and "Sign up" links correctly route between pages.
+- **State Management:** Timer and validation states were manually verified for accuracy.
+- **Responsive Layout:** Adjustments to gaps and paddings ensure perfect fitment on mobile screens without overflow.

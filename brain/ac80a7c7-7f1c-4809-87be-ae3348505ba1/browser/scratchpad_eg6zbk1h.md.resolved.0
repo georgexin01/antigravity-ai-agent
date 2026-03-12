@@ -1,0 +1,7 @@
+# Image Extraction Plan - Zeta Capital
+
+- [ ] Open `https://zetacapital.my/`
+- [ ] Extract `<img>` tag URLs
+- [ ] Extract background image URLs from CSS
+- [ ] List all unique image URLs
+- [ ] Record findings in scratchpad

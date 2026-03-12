@@ -1,0 +1,23 @@
+# Walkthrough - Profile & Coupon Refinements
+
+I have completed the final rounds of UI refinements for the Profile and Coupon details systems.
+
+## Changes Made
+
+### Coupon Details Page Final Polish
+- **"USE NOW" Label:** Increased the font size to `1rem` for better visibility as requested.
+- **Icon Refinements:**
+  - Replaced the generic QR icon in the merchant counter section with a `Store` icon.
+  - Removed the `HelpCircle` icon from the Terms & Conditions section for a cleaner, text-focused look.
+- **Bug Fix:** Definitively fixed the "Unterminated string constant" error by rewriting the template with a single-line string literal.
+- **Premium Design:** Maintained the "punched-hole" coupon aesthetic and interactive promo-code copying.
+
+### Profile Page Enhancements
+- **Darker Delete Account:** Desaturated and darkened the "Delete Account" button to a dark red (`bg-red-950/20`) with a subtle border.
+- **Sign Out Button:** Reverted to the red-tinted border style as requested.
+- **Cleanup:** Fixed TypeScript errors in the menu iteration loop.
+
+## Verification
+- Verified reactive selection logic in the Language selector.
+- Confirmed promo code copying functionality.
+- Ran `npm run lint` - 0 errors found. All types and templates are verified as clean.

@@ -1,0 +1,21 @@
+# Task: React to Vue Migration (da-cheng-lok-lok)
+
+- [x] Initial Research & Plan
+- [x] Project Scaffolding (Vite + Vue 3 + Tailwind)
+- [x] Components Migration
+- [x] Screens Migration
+- [x] App.vue Logic Migration
+- [x] Debug white screen issue (TS errors, ref assignments)
+- [x] Fix reactive state management in [App.vue](file:///c:/Users/user/Desktop/antigravity/da-cheng-lok-lok-v3/src/App.vue)
+- [x] Implement type-only imports and safety checks in all components
+- [x] Verify development server execution
+- [x] Finalize migration and documentation
+- [x] Update Food Item Images
+  - [x] Create directory for local images
+  - [x] Generate image for '时令蔬菜'
+  - [x] Generate image for '特色香肠'
+  - [x] Generate image for '干肉骨茶' (Quota Hit)
+  - [x] Generate image for '猪肚汤' (Quota Hit)
+  - [x] Generate image for '药材鸡' (Quota Hit)
+  - [x] Update constants.ts with new image paths
+  - [x] Verify image display in the app
