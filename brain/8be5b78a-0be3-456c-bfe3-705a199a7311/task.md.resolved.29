@@ -1,9 +1,0 @@
-# Task Outline: Comprehensive Rule Sync
-
-- [ ] Redesign [index.html](file:///c:/Users/user/Desktop/antigravity/mtdb-website/index.html) "About Snippet" to use an overlapping/asymmetrical layout instead of standard 50/50.
-- [ ] Redesign [index.html](file:///c:/Users/user/Desktop/antigravity/mtdb-website/index.html) "Core Services" into a staggered or zig-zag layout to meet the anti-repetition rule.
-- [ ] Regenerate `about-banner.jpg` using natural coloration.
-- [ ] Regenerate `services-banner.jpg` using natural coloration.
-- [ ] Regenerate `aii-banner.jpg` using natural coloration.
-- [ ] Regenerate `about-home.jpg` using natural coloration.
-- [ ] Final visual check on [global.css](file:///c:/Users/user/Desktop/antigravity/mtdb-website/css/global.css) padding and layouts.

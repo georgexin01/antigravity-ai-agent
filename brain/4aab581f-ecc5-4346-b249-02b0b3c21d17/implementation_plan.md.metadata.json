@@ -1,5 +1,0 @@
-{
-  "artifactType": "ARTIFACT_TYPE_IMPLEMENTATION_PLAN",
-  "summary": "Implementation plan for converting the downloaded template into a PHP project following the user's specific method. Includes resource handling, component extraction, and path cleanup.",
-  "updatedAt": "2026-02-12T04:14:03.650751100Z"
-}

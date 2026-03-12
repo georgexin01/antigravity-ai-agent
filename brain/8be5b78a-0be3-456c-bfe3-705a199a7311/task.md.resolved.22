@@ -1,7 +1,0 @@
-# Task Outline: Update MTDB Theme Color
-
-- [x] Analyze the current CSS and convert the blue/green theme to a 6-tier light brown/beige (米色) HSL palette.
-- [x] Update [global.css](file:///c:/Users/user/Desktop/antigravity/mtdb-website/css/global.css) with the new root variables and apply the layered backgrounds.
-- [x] Re-generate the 5 AI images (`hero-1`, `hero-2`, `about-home`, `about-banner`, `services-banner`, `aii-banner`) using prompts that strictly dictate the new beige/brown theme.
-- [x] Replace the old images with the new beige-themed images in the `images/` directory.
-- [x] Verify the updated design locally.

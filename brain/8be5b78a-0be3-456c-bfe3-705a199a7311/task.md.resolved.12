@@ -1,6 +1,0 @@
-# Task Outline: Add Euro-US Mobile App Standards
-
-- [x] Extract core app design principles (Responsive, typography, Material Design 3, WCAG contrast)
-- [x] Extract required components (OTP 6-box, animated sliders, real-time validation)
-- [x] Extract the layered development process (1.1-1.4 to 2.1-2.4)
-- [x] Add the summarized rules to [antigravity_agent_config_summary.txt](file:///c:/Users/user/Desktop/antigravity/antigravity_agent_config_summary.txt) under a dedicated App Development Workflow section

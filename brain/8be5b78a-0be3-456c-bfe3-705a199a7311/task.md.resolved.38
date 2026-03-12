@@ -1,6 +1,0 @@
-# Task Outline: Scroll to Top Button
-
-- [x] Add HTML markup for Scroll to Top button in [index.html](file:///c:/Users/user/Desktop/antigravity/mtdb-website/index.html).
-- [x] Add CSS styling for the button in [global.css](file:///c:/Users/user/Desktop/antigravity/mtdb-website/css/global.css).
-- [x] Add JS logic for fade in/out and smooth scrolling in [index.html](file:///c:/Users/user/Desktop/antigravity/mtdb-website/index.html).
-- [x] Save the rule to [antigravity_agent_config_summary.txt](file:///c:/Users/user/Desktop/antigravity/antigravity_agent_config_summary.txt).

@@ -1,6 +1,0 @@
-{
-  "artifactType":  "ARTIFACT_TYPE_IMPLEMENTATION_PLAN",
-  "summary":  "Implementation plan for migrating the React-based 'da-cheng-lok-lok' project to Vue 3 + Vite, preserving all features and data while following the new automation standards.",
-  "updatedAt":  "2026-03-06T02:25:58.738556200Z",
-  "version":  "2"
-}

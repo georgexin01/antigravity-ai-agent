@@ -1,7 +1,0 @@
-# Task: Visit http://localhost:5666/ and check Vben Admin panel
-
-## Checklist
-- [ ] Visit http://localhost:5666/
-- [ ] Check page title
-- [ ] Check for visible errors (Supabase/connection)
-- [ ] Report findings

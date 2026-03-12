@@ -1,9 +1,0 @@
-# Task Outline: Homepage 6-Section Redesign
-
-- [x] Update [antigravity_agent_config_summary.txt](file:///c:/Users/user/Desktop/antigravity/antigravity_agent_config_summary.txt) with the 6-Section minimum rule for homepages.
-- [x] Add "Overview / Understand Us" section to [index.html](file:///c:/Users/user/Desktop/antigravity/mtdb-website/index.html).
-- [x] Add "Testimonials" section to [index.html](file:///c:/Users/user/Desktop/antigravity/mtdb-website/index.html).
-- [x] Add "FAQ" section to [index.html](file:///c:/Users/user/Desktop/antigravity/mtdb-website/index.html).
-- [x] Add "Contact Enquiry" section to [index.html](file:///c:/Users/user/Desktop/antigravity/mtdb-website/index.html).
-- [x] Add "Call to Action (CTA)" section to [index.html](file:///c:/Users/user/Desktop/antigravity/mtdb-website/index.html).
-- [x] Ensure all sections use dynamic UI layouts (asymmetrical, staggered, flex).

@@ -1,5 +1,0 @@
-{
-  "artifactType":  "ARTIFACT_TYPE_IMPLEMENTATION_PLAN",
-  "summary":  "Implementation plan to add 'Open with Antigravity' to the Windows context menu using a silent PowerShell wrapper to prevent terminal popups.",
-  "updatedAt":  "2026-03-12T01:41:34.903379Z"
-}
