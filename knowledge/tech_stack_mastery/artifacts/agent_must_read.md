@@ -33,15 +33,19 @@
 | **ADPRS (Advanced Rating)**      | **MANDATORY**: Every design pattern is scored across 5 axes: Visual (30%), Structure (25%), UX Flow (20%), Code Quality (15%), Reusability (10%). Scores are per-context (industry + project type). Confidence requires 6+ uses before retirement. Patterns decay -2/month if unused. Score 85+ = Starred, 70-84 = Active, 50-69 = Warning (A/B test alternatives), 30-49 = Critical (stop + research), <30 = Retired forever. AI reads `user_preference_dna.md` before every project to pre-filter patterns. Full protocol: `self_evolving_intelligence/artifacts/evolving_knowledge.md` Section 5.                                                                                                                                                   |
 | **Auto-Skill Scouting (Daily)**  | **MANDATORY**: Once per day (first session), search Google for high-quality AI agent skills from GitHub/dev.to/Medium. Download 1-2 max to `skills/` folder. Test over 2-3 projects, rate /100. Keep if ≥70, merge-useful-parts if 50-69, permanently delete + blacklist if <50. Full protocol: `self_evolving_intelligence/artifacts/evolving_knowledge.md` Section 7.                                                                                                                                                                                                                                                                                                                                                                                |
 | **Auto-Cleanup Temp Documents**  | **MANDATORY**: On every session start, scan `brain/`, `conversations/`, `annotations/`, `implicit/`, `daemon/`, `playground/`, `html_artifacts/`, `context_state/` for stale files. **Retention policy**: Low-importance files (`.resolved.*`, `.pbtxt`, `.pb`, daemon logs) → delete after **1 day**. Medium-importance files (`implementation_plan.*`, `walkthrough.*`, `scratchpad_*`) → delete after **3 days**. Higher-importance files (`task.md`, media assets `.png/.jpg`) → delete after **7 days**. If a file is clearly no longer useful (orphaned, superseded, or from a completed/abandoned task), AI may delete it **immediately** regardless of age. Never delete files inside `skills/`, `knowledge/`, `scratch/`, or `code_tracker/`. |
-| **AI Image Resource Management** | **MANDATORY**:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| **AI Image Resource Management** | **MANDATORY**: ### 6. AI Image Resource Management                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 
-- **Reusability Check**: When generating or using images for a project, assess if the asset has long-term value or "reuse potential" (e.g., high-end 3D abstract renders, generic hero backgrounds).
-- **Central Library**: Save all reusable assets to `c:\Users\user\Desktop\antigravity\ai_image_resources` with descriptive, project-agnostic filenames (e.g., `abstract_security_shield.png`).
-- **Knowledge Preference**: Always check this directory before generating new images to save tokens and ensure visual consistency across the user's ecosystem. |
+- **MMP (Multimodal Prompting)**: When using `generate_image`, always apply SVP techniques (specific lighting, materials, and art direction).
+- **Reusability Check**: Assess if generated assets (3D renders, hero backgrounds) have long-term value.
+- **Central Library**: Save all reusable assets to `c:\Users\user\Desktop\antigravity\ai_image_resources`.
+- **Knowledge Preference**: Always check this directory before generating new images.
+  |
   | **Japanese Design Standard** | Before every website/app creation, update, or redesign task, read: `C:\Users\user\.gemini\antigravity\knowledge\tech_stack_mastery\artifacts\japanese_design_library.md`. |
+  | **Stitch Visual Protocol** | **MANDATORY**: For every image generation or UI design task, follow the `stitch_visual_protocol.md` (SVP). Use "Stitch Hierarchy" (1.1-1.4) for structure and MMP for prompting. |
   | **Figma-First** | Prioritize `figma-automation` + `stitch-ui-design` as the primary design truth source. This overrides generic aesthetic choices. |
   | **Vue3 FNB Auto-read** | Before every task, read `C:\Users\user\.gemini\antigravity\skills\vue3-fnb-framework\SKILL.md`. |
   | **UI First** | Always prioritize a stunning, high-craft UI (Glassmorphism, Micro-animations) over functionality speed. |
+  | **DNA Auto-Codification** | **MANDATORY**: After every design task or template study, update `website_design_dna.md` with new LNS formulas and layering tricks. |
 
 ---
 
@@ -132,13 +136,15 @@ FAQ / Inquiry → Vibrant CTA Banner → Global Footer
 
 ## 5. Website Creation Workflow (Step-by-Step)
 
-1. **Architecture**: Create `index.html`, `css/global.css`, `js/main.js`, `images/`.
-2. **Design Reference**: Check pattern library (`construction_agency_layout_patterns.md`) first. Then ThemeForest if needed.
-3. **Component Integration**: Sticky header + comprehensive footer. Swiper.js for hero slider + testimonials.
-4. **Page Propagation**: Duplicate header/footer/scripts across all inner pages. Add breadcrumb banners.
-5. **Auxiliary Pages** (MANDATORY): `project-details.html`, `faq.html`, `privacy.html`, `terms.html`. Link all in footer.
-6. **Refine & Link**: Verify all `wa.me` hooks, internal links, real images, WCAG contrast. Remove all placeholders.
-7. **Visual Validation**:
+1. **Session Strategy (Critical)**: Before coding, determine the exact session sequence (e.g., Hero -> Signature Item -> Gallery -> Story). Tailor this to the business's real needs based on `website_design_dna.md`.
+2. **Layering Architecture (Critical)**: Plan how sections will look "pro++". You MUST use pseudo-elements (`::before`/`::after`), `overflow: hidden`, and absolute transparent PNG overlays to create deep, artistic background layering. FLAT BACKGROUNDS ARE BANNED.
+3. **Architecture**: Create `index.html`, `css/global.css`, `js/main.js`, `images/`.
+4. **Design Reference**: Check pattern library (`construction_agency_layout_patterns.md`) and LNS formulas in `website_design_dna.md` first.
+5. **Component Integration**: Sticky header + comprehensive footer. Swiper.js for hero slider + testimonials.
+6. **Page Propagation**: Duplicate header/footer/scripts across all inner pages. Add breadcrumb banners.
+7. **Auxiliary Pages** (MANDATORY): `project-details.html`, `faq.html`, `privacy.html`, `terms.html`. Link all in footer.
+8. **Refine & Link**: Verify all `wa.me` hooks, internal links, real images, WCAG contrast. Remove all placeholders.
+9. **Visual Validation**:
    - [ ] No plain Bootstrap default sections
    - [ ] At least one "wow" element per page
    - [ ] Dark theme consistent — no white/light background containers
