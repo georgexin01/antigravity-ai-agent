@@ -32,6 +32,7 @@
 | **Memory Pre-flight**            | Use `agent-memory` to search past design decisions and patterns BEFORE starting any new task.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | **ADPRS (Advanced Rating)**      | **MANDATORY**: Every design pattern is scored across 5 axes: Visual (30%), Structure (25%), UX Flow (20%), Code Quality (15%), Reusability (10%). Scores are per-context (industry + project type). Confidence requires 6+ uses before retirement. Patterns decay -2/month if unused. Score 85+ = Starred, 70-84 = Active, 50-69 = Warning (A/B test alternatives), 30-49 = Critical (stop + research), <30 = Retired forever. AI reads `user_preference_dna.md` before every project to pre-filter patterns. Full protocol: `self_evolving_intelligence/artifacts/evolving_knowledge.md` Section 5.                                                                                                                                                   |
 | **Auto-Skill Scouting (Daily)**  | **MANDATORY**: Once per day (first session), search Google for high-quality AI agent skills from GitHub/dev.to/Medium. Download 1-2 max to `skills/` folder. Test over 2-3 projects, rate /100. Keep if ≥70, merge-useful-parts if 50-69, permanently delete + blacklist if <50. Full protocol: `self_evolving_intelligence/artifacts/evolving_knowledge.md` Section 7.                                                                                                                                                                                                                                                                                                                                                                                |
+| **Live Design & Verification**  | **MANDATORY**: While creating, editing, or updating any website/app, ALWAYS maintain an active Chrome tab with a "Live View" (local dev server or file URL). AI MUST: 1. Visit the browser regularly to verify design integrity. 2. Self-rate each session's quality (Industrial/Figma standard). 3. If a session is rated low, it MUST be refactored immediately in the live view context. This setting is permanent for all systems. |
 | **Auto-Cleanup Temp Documents**  | **MANDATORY**: On every session start, scan `brain/`, `conversations/`, `annotations/`, `implicit/`, `daemon/`, `playground/`, `html_artifacts/`, `context_state/` for stale files. **Retention policy**: Low-importance files (`.resolved.*`, `.pbtxt`, `.pb`, daemon logs) → delete after **1 day**. Medium-importance files (`implementation_plan.*`, `walkthrough.*`, `scratchpad_*`) → delete after **3 days**. Higher-importance files (`task.md`, media assets `.png/.jpg`) → delete after **7 days**. If a file is clearly no longer useful (orphaned, superseded, or from a completed/abandoned task), AI may delete it **immediately** regardless of age. Never delete files inside `skills/`, `knowledge/`, `scratch/`, or `code_tracker/`. |
 | **AI Image Resource Management** | **MANDATORY**: ### 6. AI Image Resource Management                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 
@@ -110,7 +111,9 @@ Contains **21 copy-paste section templates** (HTML + CSS) from ConstX and Gencyo
 ### Page Rules
 
 - **Hero Slider**: Must use `height: 100vh` for full-screen immersion.
-- **Homepage Minimum**: 6 deeply designed, distinct sections. Never just 2-3 brief blocks.
+- **Homepage Minimum**: 10 deeply designed, distinct sections. Never just 2-3 brief blocks.
+- **Inner Page Density (MANDATORY)**: "About", "Services", and "Portfolio" pages must contain at least **6-8 distinct sections** (effectively +3 to +5 more than standard layouts).
+- **Informational Page Volume**: "FAQ", "Privacy Policy", and "Terms & Conditions" must contain between **10 to 20 detailed items/sections** each. Minimalist legal pages are prohibited.
 - **Contact Page**: Mandatory for every project. Include Google Map, address, WhatsApp CTA.
 - **Number Counters**: Any stats section (e.g., "1.8m+ projects") MUST use IntersectionObserver JS to animate from 0 → target on scroll. No static numbers.
 - **Inner Page Intro**: Below breadcrumb banner on inner pages — left: relevant image, right: title + description.
@@ -119,6 +122,7 @@ Contains **21 copy-paste section templates** (HTML + CSS) from ConstX and Gencyo
 - **Trust Ribbon**: Not mandatory for every site. When used, randomize from 2-3 designs and vary placement (not always directly below hero).
 - **Scroll-to-Top Button**: Every website MUST include one. Fixed bottom-right, 45×45px, `border-radius: 8px`. Fades in on scroll. WhatsApp button (if present) MUST animate up 60px when scroll-to-top appears.
 - **WCAG Contrast**: Light background → dark text. Always verify every word is readable.
+- **Industrial Spacing Protocol [MANDATORY]**: Every section on every page MUST have at least `100px` top and bottom padding (`padding: 100px 0`). Never use `padding-bottom: 0` unless it is a design-specific overlap that is compensated for elsewhere.
 
 ### Homepage Tail Order (MANDATORY)
 
@@ -238,6 +242,15 @@ npm run dev
 - **5-Tier Background System**: White → Shallow Tint → Muted Grey-Blue → Deep Accent → Pattern Overlay.
 - **Testimonial**: Always include 3-item client testimonial slider (Swiper.js).
 - **Project Showcase**: Every item must have a "View Details" CTA linking to a dedicated inner page.
+
+## 9. Ultra-Premium Design Standard (150% Density)
+
+**MANDATORY**: Before concluding any design task, cross-reference:
+`C:\Users\user\.gemini\antigravity\knowledge\tech_stack_mastery\artifacts\ultra_premium_design_dna.md`
+
+- **Visual Limit**: Design must exceed 100% standard by adding 50% more micro-detail (crystal icons, artistic layering, animated border lines, glowing telemetry).
+- **Physics Baseline**: All UI transitions must feel "physics-based" (Cubic Bezier) and responsive to haptic-style micro-scrolls.
+- **Background Depth**: Flat backgrounds are prohibited. Every section must have at least 3 layers of depth (Base -> Pattern/Texture -> Floating Artistic Motif).
 
 ---
 
