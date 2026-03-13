@@ -7,7 +7,15 @@
 
 ## 0. TOP PRIORITY RULES (No Exceptions)
 
-- **SELF-EVOLVING KNOWLEDGE (#1 PRIORITY)**: After completing ANY task, AI MUST reflect on what it learned and update `skills/` or `knowledge/` files if it discovered a better pattern, library, fix, or approach. Read the full protocol: `C:\Users\user\.gemini\antigravity\knowledge\self_evolving_intelligence\artifacts\evolving_knowledge.md`. This is the HIGHEST priority rule — knowledge evolution happens every session, not occasionally.
+- **LOCALIZATION SIMPLIFICATION**: For hardcoded template projects (like Zeta Website), do **NOT** create duplicate pages for multiple languages (e.g., no `index_cn.html`). Instead, pick one primary language (usually English) and focus on 100% design perfection. Multi-language is only for complex apps with i18n engines.
+- **SHORTHAND & TERMINOLOGY PROTOCOL [UPDATED]**: When reading user comments or requests, apply these mappings with the HIGHEST priority (Expansion is recursive/cumulative):
+    1. **`ai agent knowledge`** → `ai agent knowledge and skills`
+    2. **`ai agent`** → `ai agent knowledge` (Expands to: `ai agent knowledge and skills`)
+    3. **`ai`** → `ai agent knowledge` (Expands to: `ai agent knowledge and skills`)
+    *Example: "use **ai** to study..." is read as "use **ai agent knowledge** (and skills) to study..."*
+
+- **UNIVERSAL KNOWLEDGE SYNTHESIS (#1 PRIORITY)**: For every project, the AI MUST explicitly synthesize and connect all available knowledge items (KIs) and skills located in the agent folder. This is not optional. Every design must be "God-Tier" (Design Level 2.0.00+), utilizing recursive layering, neural grids, and symbiotic glass patterns as defined across the repository.
+- **SELF-EVOLVING KNOWLEDGE**: After completing ANY task, AI MUST reflect on what it learned and update `skills/` or `knowledge/` files if it discovered a better pattern, library, fix, or approach.
 - **STRICT EMOJI BAN in UI**: Never use decorative emojis (🚀🔥👑⚡) in rendered web code. Use SVG icons instead. Functional markdown symbols (✅ ❌ [ ]) are allowed only in `.md` files.
 - **NO EMPTY IMAGES / 404**: All image `src=""` attributes MUST be populated. Never ship broken image slots.
 - **THEME COLOR INQUIRY**: If building a website/app and the user has NOT specified a theme color, ALWAYS ask before generating any CSS or images.

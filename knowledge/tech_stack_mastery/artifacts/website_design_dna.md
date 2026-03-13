@@ -92,6 +92,18 @@ The LNS provides a shorthand for session div structures. **Deeper Thinking Rule*
     - Standard title: "Ready to Evolve?".
     - Design: Large typography symbol background, glassmorphism panel, and internal linear gradient for maximum conversion impact.
 
+10. **Mirror Synthesis Protocol [NEW]**:
+    - When duplicating a live site, the target is 95% content match.
+    - **Header/Footer Mirroring**: Absolute parity in link structure and brand placement.
+    - **Section Sequence Symmetry**: Replicate the exact vertical order of narrative themes (e.g., Hero -> Portfolio -> Pricing -> Testimonials).
+    - **Visual Translation**: Convert standard sections into "Evolution 3.0" industrial components while preserving original copy.
+
+11. **Layered Narrative Protocol [NEW]**:
+    - Use staggered background shades to create visual "layers in line."
+    - **Tokens**: `--color-bg-alt` (slightly lighter/textured) and `--color-bg-deep` (darker/pure black).
+    - **Rhythm**: Toggle background classes (`.bg-alt`, `.bg-deep`, `.bg-main`) between sections to create structural separation.
+    - **Industrial Edge**: Staggered backgrounds prevent visual fatigue and emphasize section-depth.
+
 ### Content Strategy Mapping
 
 - **For SaaS/Tech**: `Hero -> Tech Specs -> Social Proof -> Features -> FAQ`.
