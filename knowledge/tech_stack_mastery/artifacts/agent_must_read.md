@@ -12,9 +12,12 @@
     1. **`ai agent knowledge`** → `ai agent knowledge and skills`
     2. **`ai agent`** → `ai agent knowledge` (Expands to: `ai agent knowledge and skills`)
     3. **`ai`** → `ai agent knowledge` (Expands to: `ai agent knowledge and skills`)
+    4. **`方程式` (fāngchéngshì)** → `ai agent knowledge` (Expansion recursive)
+    5. **`formula` / `equation`** → `ai agent knowledge` (Expansion recursive)
     *Example: "use **ai** to study..." is read as "use **ai agent knowledge** (and skills) to study..."*
 
-- **UNIVERSAL KNOWLEDGE SYNTHESIS (#1 PRIORITY)**: For every project, the AI MUST explicitly synthesize and connect all available knowledge items (KIs) and skills located in the agent folder. This is not optional. Every design must be "God-Tier" (Design Level 2.0.00+), utilizing recursive layering, neural grids, and symbiotic glass patterns as defined across the repository.
+- **UNIVERSAL KNOWLEDGE SYNTHESIS (#1 PRIORITY)**: For every project, the AI MUST explicitly synthesize and connect all available KIs. Every design must be "God-Tier" (Design Level 2.0.00+).
+- **VSS SYNTAX PROTOCOL (Web vs Mobile)**: When reading or storing layouts (from images/research), ALWAYS use Vector Shorthand Syntax (VSS) `{ }` and `[ ]`. CRITICAL: Store Website designs in `website_design_dna.md` and Mobile App designs in `mobile_app_design_dna.md`. Do not mix them.
 - **SELF-EVOLVING KNOWLEDGE**: After completing ANY task, AI MUST reflect on what it learned and update `skills/` or `knowledge/` files if it discovered a better pattern, library, fix, or approach.
 - **STRICT EMOJI BAN in UI**: Never use decorative emojis (🚀🔥👑⚡) in rendered web code. Use SVG icons instead. Functional markdown symbols (✅ ❌ [ ]) are allowed only in `.md` files.
 - **NO EMPTY IMAGES / 404**: All image `src=""` attributes MUST be populated. Never ship broken image slots.
@@ -36,6 +39,7 @@
 | **Auto-Accept**                  | All edits and command executions are auto-accepted. No confirmation prompts for routine tasks.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | **Workflow Auto-Discovery**      | Before starting a task, check `_agent/workflows/` for available SOPs.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | **npm auto-run**                 | Always run `npm install` and `npm run dev` without asking.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| **CSS Framework Auto-Install**   | **MANDATORY**: If a design or VSS pattern uses Bootstrap or Tailwind CSS, automatically install them (via CDN for static HTML, or npm+config for Vue/React apps) without asking the user.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | **Skill Auto-Import**            | When creating a website or APP, automatically reference: `ui-ux-pro-max`, `frontend-design`, `stitch-ui-design`, `figma-automation`, `ui-visual-validator`, `agent-memory`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | **Memory Pre-flight**            | Use `agent-memory` to search past design decisions and patterns BEFORE starting any new task.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | **ADPRS (Advanced Rating)**      | **MANDATORY**: Every design pattern is scored across 5 axes: Visual (30%), Structure (25%), UX Flow (20%), Code Quality (15%), Reusability (10%). Scores are per-context (industry + project type). Confidence requires 6+ uses before retirement. Patterns decay -2/month if unused. Score 85+ = Starred, 70-84 = Active, 50-69 = Warning (A/B test alternatives), 30-49 = Critical (stop + research), <30 = Retired forever. AI reads `user_preference_dna.md` before every project to pre-filter patterns. Full protocol: `self_evolving_intelligence/artifacts/evolving_knowledge.md` Section 5.                                                                                                                                                   |
@@ -54,7 +58,7 @@
   | **Figma-First** | Prioritize `figma-automation` + `stitch-ui-design` as the primary design truth source. This overrides generic aesthetic choices. |
   | **Vue3 FNB Auto-read** | Before every task, read `C:\Users\user\.gemini\antigravity\skills\vue3-fnb-framework\SKILL.md`. |
   | **UI First** | Always prioritize a stunning, high-craft UI (Glassmorphism, Micro-animations) over functionality speed. |
-  | **DNA Auto-Codification** | **MANDATORY**: After every design task or template study, update `website_design_dna.md` with new LNS formulas and layering tricks. |
+  | **DNA Auto-Codification** | **MANDATORY**: After every design task, store the extracted VSS formula into either `website_design_dna.md` or `mobile_app_design_dna.md` depending on the platform type. |
 
 ---
 
@@ -251,14 +255,15 @@ npm run dev
 - **Testimonial**: Always include 3-item client testimonial slider (Swiper.js).
 - **Project Showcase**: Every item must have a "View Details" CTA linking to a dedicated inner page.
 
-## 9. Ultra-Premium Design Standard (150% Density)
+## 9. The Master Design DNA Formularies (200% VSS Protocol)
 
-**MANDATORY**: Before concluding any design task, cross-reference:
-`C:\Users\user\.gemini\antigravity\knowledge\tech_stack_mastery\artifacts\ultra_premium_design_dna.md`
+**MANDATORY**: Before concluding any design task or generating any layout, cross-reference the appropriate DNA Vault:
+- For Websites: `C:\Users\user\.gemini\antigravity\knowledge\tech_stack_mastery\artifacts\website_design_dna.md`
+- For Mobile Apps: `C:\Users\user\.gemini\antigravity\knowledge\tech_stack_mastery\artifacts\mobile_app_design_dna.md`
 
-- **Visual Limit**: Design must exceed 100% standard by adding 50% more micro-detail (crystal icons, artistic layering, animated border lines, glowing telemetry).
+- **Extraction Vault Rule**: Check the "Extraction Repository" in these files for stored [Label/Title] VSS formulas before generating new CSS shapes.
 - **Physics Baseline**: All UI transitions must feel "physics-based" (Cubic Bezier) and responsive to haptic-style micro-scrolls.
-- **Background Depth**: Flat backgrounds are prohibited. Every section must have at least 3 layers of depth (Base -> Pattern/Texture -> Floating Artistic Motif).
+- **Background Depth**: Flat backgrounds are prohibited. Every section must use recursive VSS nesting `{ @absolute_texture }` for depth.
 
 ---
 
