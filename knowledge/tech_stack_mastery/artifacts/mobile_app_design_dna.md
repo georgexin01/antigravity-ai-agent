@@ -45,7 +45,8 @@ To expand the AI's app design intelligence autonomously, the **AI MUST actively 
 
 1. **Auto-Evolution of Syntax**: If the AI encounters a new mobile gesture, native component, or complex layout that VSS struggles with, the AI **MUST** invent a new VSS symbol/rule and append it to the "Core Syntax Rules" above.
 2. **Visual Image Extraction**: When parsing mobile app screenshots, Dribbble concepts, or Figma files, immediately codify the structure into VSS and append it below.
-3. **MANDATORY EXTRACTION VAULTING**: Every unique mobile app layout the AI builds or studies MUST be appended to "Section 4: The Extraction Repository". The AI has permission to store an **unlimited** number of samples to build its design memory.
+3. **Live Harvesting Protocol**: For any live view URL provided, extract the "Industrial-Standard" mobile/app dashboard logic, interaction spring-physics, and haptic-responsive components.
+4. **MANDATORY EXTRACTION VAULTING**: Every unique mobile app layout the AI builds or studies MUST be appended to "Section 4: The Extraction Repository". The AI has permission to store an **unlimited** number of samples to build its design memory.
 
 ---
 

@@ -265,7 +265,24 @@ npm run dev
 - **Physics Baseline**: All UI transitions must feel "physics-based" (Cubic Bezier) and responsive to haptic-style micro-scrolls.
 - **Background Depth**: Flat backgrounds are prohibited. Every section must use recursive VSS nesting `{ @absolute_texture }` for depth.
 
+## 11. Live View Design Harvesting Protocol (MANDATORY)
+
+**TRIGGER**: Whenever the user provides a URL link to a website or app.
+
+**AI ACTION PIPELINE**:
+1. **DEEP DIVE**: Immediately visit the URL using browser tools.
+2. **DNA EXTRACTION**: 
+    - Extract **Palette & Typography** (CSS variables).
+    - Extract **Structural Logic** (Layout VSS).
+    - Extract **Micro-Interactions** (Hover, Scroll, Physics).
+    - Extract **Artistic Motifs** (Recursive layering, motifs).
+3. **KNOWLEDGE EVOLUTION**: 
+    - Summarize the "Unique Species" of design found.
+    - Codify findings into VSS v2.0 formulas.
+    - AUTOMATICALLY save to `website_design_dna.md` (Web) or `mobile_app_design_dna.md` (App) in the **Extraction Vault**.
+4. **SYNTAX UPGRADE**: If a new interaction or structural pattern is discovered that VSS cannot currently express, the AI MUST evolve the VSS syntax and document it in the DNA files.
+
 ---
 
 > **This document is Permanent Knowledge.** It supersedes `antigravity_agent_config_summary.txt` which has been archived.
-> _V4.1 — Active as of 2026-03-10_
+> _V5.0 — Active as of 2026-03-14 (Integrated Live Learning Protocol)_

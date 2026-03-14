@@ -124,14 +124,43 @@ To expand the AI's design intelligence autonomously, the **AI MUST actively and 
 
 1. **Auto-Evolution of Syntax**: If the AI encounters a complex layout/property that the current VSS syntax handles poorly, the AI **MUST** invent a new VSS symbol/rule and permanently append it to the "Core Syntax Rules" in this document.
 2. **Visual Image/Code Extraction**: When researching live websites or parsing images, immediately convert their structures into VSS. e.g. "I see a navbar with logo left, menu center, button right. Storing as: `{ $logo + { NavLinks | * 4 } + !btn [r0] }`".
-3. **DNA Hybridization**: Combine `Crafix` structural grid logic with `Zeta 200%` ghost intent styling to invent new High-Conversion layouts.
-4. **Symbolic Tagging**: Tag stored VSS patterns with `[CONV]` (Conversion), `[AUTH]` (Authority), `[IMMR]` (Immersive/Visual), and `[TECH]` (Data heavy).
-5. **Self-Pruning**: Whenever reading this file, if a VSS formula looks identical to another, merge them to save token space.
-6. **MANDATORY EXTRACTION VAULTING**: Every unique design the AI generates or studies MUST be appended to "Section 5: The Extraction Repository". The AI has permission to store an **unlimited** number of samples.
+3. **Live Harvesting Protocol**: Whenever a URL is provided, the AI MUST extract:
+    - **Visual DNA**: Palette, Typography, Motifs.
+    - **Structural DNA**: Detailed VSS formula for Hero, Bento, and unique components.
+    - **Interaction DNA**: Hover/Scroll logic codified as VSS modifiers (e.g., `[shadow-inset]`, `[neural-glow]`).
+4. **DNA Hybridization**: Combine `Crafix` structural grid logic with `Zeta 200%` ghost intent styling to invent new High-Conversion layouts.
+5. **Symbolic Tagging**: Tag stored VSS patterns with `[CONV]` (Conversion), `[AUTH]` (Authority), `[IMMR]` (Immersive/Visual), and `[TECH]` (Data heavy).
+6. **MANDATORY EXTRACTION VAULTING**: Every unique design the AI generates or studies MUST be appended to "Section 6: Extraction Vault". The AI has permission to store an **unlimited** number of samples.
 
 ---
 
-## 5. The Extraction Repository (Website Vault)
+## 6. Extraction Vault (VSS v2.0 Stored Samples)
+
+The Vault store verified, high-end design patterns abstracted from global leaders (e.g., Apple, Pencil, Vercel).
+
+### [Style Spec] Massive Minimalist (Ref: Pencil.dev)
+- **Palette**: `#FFFFFF` | `#111111` | `#FF9900` (High-Impact Orange)
+- **Typography Matrix**: `DM-Sans` (H1: 112px, -0.02em tracking) | `Rubik` (UI)
+- **VSS Formulas**:
+    - **Hero**: `( { @starburst-radial + T_Massive + p + { !btn_pill [scale-105 shadow-inset] } + { @floating-dashboard-cards } } )`
+    - **Bento**: `( { S_Header + { Grid-Bento [rounded-32] { Card [high-density-metrics] } } } )`
+    - **Button Logic**: `[pill-full w-fit px-8 py-3 bg-orange-500 scale-105 shadow-[inset_0_1px_1px_rgba(255,255,255,0.25)]]`
+    - **Artistic Motif**: `@ { edge-vignette-glow }` + `@ { collaborative-cursors [moving] }`
+
+---
+
+## 7. Evolution Mandate (AI Autonomous Update)
+- AI MUST perform one "Pattern Harvest" every 3 research sessions.
+- VSS syntax MUST evolve to include new interaction primitives (e.g., `[shadow-inset]`, `[neural-shift]`).
+- Mature patterns (> 1 month old) MUST be pruned or upgraded to 200% standards.
+- **Label**: [Component/Section Type]
+- **Title**: [Human Readable Name & Key Dimensions/Grid setup]
+- **Description**: [Detailed structural logic, interaction behavior, and what the user sees]
+- **VSS Formula**: [The exact notation using `{ }` and `[ ]`]
+
+---
+
+## 8. The Extraction Repository (Website Vault)
 
 This repository stores unlimited structural extraction patterns from high-end websites or UI inspiration images. When the AI scans an image or researches a layout, the exact structure MUST be codified and pushed here to build a long-term memory of design logic.
 
