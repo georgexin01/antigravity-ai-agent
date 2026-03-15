@@ -82,6 +82,27 @@ To ensure this intelligence is persistent across different environments and git 
 
 ---
 
+## 7. Section Background Mastery & Layering [CRITICAL MANDATE]
+
+To maintain the "Engineering Authority" aesthetic, the following background rules are **MANDATORY**:
+
+### I. Layered Depth Logic
+- **Alternating Sections**: Adjacent sections must NEVEr share the same background color.
+- **The 10% Rule**: Sections should alternate between `Cyber Black (#020305)` and a slightly lighter `Cyber Neutral (#0c0d12)`. This creates a cognitive "layering" effect that improves page scanability.
+
+### II. Rich Background Utility Protocol
+Every landing page must utilize at least 3 of the following "Rich" background types to establish technical density:
+- **Liquid Gradient (Breathing)**: Used for high-concept or "ecosystem" sections.
+- **Space Stars (Animated)**: Used for portfolio or visionary sections to create "depth-of-field".
+- **HUD Geo Art**: Asymmetrical technical overlays (text codes, geometric runes) to break the grid.
+- **AI Banner Imagery**: Full-bleed, high-contrast AI-generated tech backgrounds for hero sections.
+
+### III. Mobile Ecosystem Showcase
+- **The Frame Rule**: Mobile screenshots must ALWAYS be presented within a high-fidelity device frame (e.g., `iphone_cover.png`) to ground the software in reality.
+- **Interactive Focus**: Use "Center Mode" carousels where the active app is framed and side apps are blurred/desaturated, mimicking professional product photography.
+
+---
+
 **Status**: CRYSTALLIZED // ENGINEERING_AUTHORITY
-**DNA Version**: 3.1.0 (.agent Standard)
+**DNA Version**: 3.2.0 (Background Mastery Edition)
 **Project**: Zeta-Web-V3
