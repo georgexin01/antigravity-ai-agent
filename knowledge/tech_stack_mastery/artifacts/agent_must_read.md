@@ -279,10 +279,14 @@ npm run dev
 3. **KNOWLEDGE EVOLUTION**: 
     - Summarize the "Unique Species" of design found.
     - Codify findings into VSS v2.0 formulas.
-    - AUTOMATICALLY save to `website_design_dna.md` (Web) or `mobile_app_design_dna.md` (App) in the **Extraction Vault**.
+    - AUTOMATICALLY save to **[website_stored_samples.md]** or **[mobile_app_stored_samples.md]**.
 4. **SYNTAX UPGRADE**: If a new interaction or structural pattern is discovered that VSS cannot currently express, the AI MUST evolve the VSS syntax and document it in the DNA files.
+
+## 12. Autonomous Research Mandate (MANDATORY)
+
+**RULE**: The AI is **AUTO-ALLOWED** to perform live view research on any URL provided by the user. There is **NO NEED TO ASK FOR PERMISSION** before using browser tools for study, analysis, or extraction. This is a permanent authorization.
 
 ---
 
 > **This document is Permanent Knowledge.** It supersedes `antigravity_agent_config_summary.txt` which has been archived.
-> _V5.0 — Active as of 2026-03-14 (Integrated Live Learning Protocol)_
+> _V6.0 — Active as of 2026-03-14 (Integrated Autonomous Research & External Vaults)_

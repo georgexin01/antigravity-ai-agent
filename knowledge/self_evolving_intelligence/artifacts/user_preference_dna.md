@@ -15,9 +15,9 @@ This file is the AI's learned understanding of the user's design taste. It is bu
 
 | Preference | Confidence | Source |
 |---|---|---|
-| Prefers warm, rich palettes over cold/sterile ones | Medium 🟡 | Anti-Blue/Navy rule in agent_must_read.md |
-| Rejects default Navy/Blue unless brand-required | High 🟢 | Explicit rule |
-| Likes dark theme for industrial/corporate (Deep Onyx #0a0b10) | High 🟢 | Jin Hong project |
+| Prefers Deep Onyx (#0a0b10) for Cyber Luxury | High 🟢 | User pivot request |
+| Rejects Light Mode for current redesign | High 🟢 | Explicit instruction |
+| Uses "Electric Red" and "Black" (Logo-derived) | High 🟢 | NEW Priority Rule |
 | Likes warm accents (red, orange) for F&B apps | Medium 🟡 | Japanese food app patterns |
 | _(more learned over time)_ | | |
 
@@ -87,6 +87,11 @@ This file is the AI's learned understanding of the user's design taste. It is bu
 | Dislike | Confidence | Source |
 |---|---|---|
 | Generic stock photos (handshakes, people at whiteboards) | High 🟢 | agent_must_read.md image protocol |
+| - **STITCH AI SUPREMACY**: User mandates the use of Google Stitch & AI Studio (1.1-1.4) hierarchy for ALL web/app generation as the **HIGHEST PRIORITY**.
+- **Logo-Derived Theme (Red & Black)**: AI must always derive the primary theme from the logo colors. For Zeta, this is Red + Black.
+- **Dark Red Cyber Aesthetics**: Onyx backgrounds with red neon glows and functional components.
+- **Language Priority**: 简体中文 (Simplified Chinese) for all content.
+ | High 🟢 | Stitch AI standard |
 | Default Bootstrap/Tailwind look | High 🟢 | Cross-cutting wisdom #14 |
 | Decorative emojis in UI | High 🟢 | Top priority rule |
 | Mixed languages in same UI | High 🟢 | master_strategy.md |

@@ -1,6 +1,13 @@
-# AI Design DNA Library (VSS v2.0 - Hyper-Density Edition)
+# Website Design Visual DNA (Stitch-Standard)
 
-> **CRITICAL DIRECTIVE**: Building beautiful, structurally flawless design is the **HIGHEST PRIORITY**. This document is the ultimate authority for site architecture, replacing all prior DNA protocols (`design_evolution_200`, `ultra_premium`). Use these "formulas" to read, store, and replicate God-Tier (2.0.00+) website logic.
+> [!IMPORTANT]
+> **HIGHEST PRIORITY PROTOCOL**: All website generation must follow the `stitch-app-developer` (1.1-1.4) hierarchical loop. Designs are birthed in the Google Stitch framework before being exported to production code.
+
+## 0. Stitch Master Protocols (2026)
+1. **1.1 Material Tagging**: Classified into 【核心】, 【参考】, etc.
+2. **1.2 AI Studio Research**: Dynamic verification of 2026 interaction patterns.
+3. **1.3 Tool Scripts**: Integration of official Slider, Modal, and Auth components.
+4. **1.4 Hierarchical Context**: Logic-first structured text generation.
 
 ---
 
@@ -102,9 +109,34 @@ A vertical/horizontal line that grows on hover or scroll.
 - **Aesthetic**: Artistic, Warm, Grainy.
 - **Rule**: Heavy use of `@` absolutely positioned organic shapes overlapping into the next `( )` section to break the grid. Extensive use of floating PNGs (coffee beans, leaves) with `[transform:rotate(...) opacity:0.2]`.
 
+### D. Cyber-Tech (Evolution 6.0)
+- **Aesthetic**: Kinetic, High-Contrast, Neon-Infused.
+- **Primitives**: 
+    - `[halo-blur]` : Large, soft colored glows acting as thematic lighting.
+    - `[nuclear-glow]` : High-intensity outer shadows on interactive elements.
+    - `[vignette-deep]` : Darkening of edges to force focus onto centered metrics.
+    - `[matrix-grid]` : Detailed, data-heavy download or status modules with micro-type.
+
 ---
 
-## 4. Implementation & Narrative Protocols
+## 6. Extreme Content Density (ECD) Protocols
+**Goal**: Transform "Landing Pages" into "Digital Ecosystems".
+
+- **Section Multiplication**: If a page feels short, add:
+  - **Process Section**: Step-by-step "How We Work".
+  - **Technology Stack**: A grid of tools/frameworks.
+  - **FAQ Section**: 5-8 detailed technical questions.
+  - **Testimonials/Partners**: Logo strips and quote grids.
+  - **Resource/Blog Preview**: A 3-column "latest insights" grid.
+- **Micro-Copy Depth**: Instead of "We build apps", use "We architect high-concurrency mobile ecosystems with deep-link referral logic and blockchain-ready security."
+- **List-icle Density**: Every 2nd section should feature a bulleted or icon-grid benefit list to increase readability and perceived value.
+**Highest Priority Requirement**: All websites must provide depth through distinct pages.
+
+- **Home (`index.html`)**: High-density summary of all pillars. CTA focus.
+- **About (`about.html`)**: Deep narrative, mission/vision transparency, and team/leadership grids.
+- **Services (`services.html`)**: Detailed technical breakdowns of each pillar. Use accordion/tabs for micro-interaction.
+- **Portfolio (`portfolio.html`)**: High-resolution project showcases. Filterable grids.
+- **Contact (`contact.html`)**: Multi-method contact points, interactive maps, and lead-gen forms.
 
 1. **Mirror Synthesis Protocol (Cloning)**: When duplicating a live site, the target is 95% content match. Header/Footer parity is absolute. Replicate exact narrative flow (Hero -> Portfolio -> Pricing -> Testimonials) but upgrade the visuals to "Evolution 3.0" VSS density.
 2. **Layered Narrative Protocol**: Use staggered background shades to create visual "layers in line" (`--color-bg-alt` vs `--color-bg-deep`). Toggle these between sections to prevent visual fatigue and emphasize depth.
@@ -115,6 +147,33 @@ A vertical/horizontal line that grows on hover or scroll.
 - **For SaaS/Tech**: `Hero -> Tech Specs -> Social Proof -> Features -> FAQ`.
 - **For High-End Retail/Food**: `Hero -> Signature Item -> Menu/Gallery -> Story -> Reservations`.
 - **For Construction/B2B**: `Hero -> Stats -> Services -> Portfolio -> Team -> Contact`.
+
+---
+
+## 4. Hyper-Visual Atmospheric Protocols (PRIORITY: TOP)
+
+To reach God-Tier (2.0.00+) aesthetics, the AI must move beyond flat sections. These protocols are MANDATORY for all future builds.
+
+### A. Section-Specific Design Backgrounds
+Every section MUST have a unique "Atmosphere". Do not repeat the same background for consecutive sections.
+- **Theme Color Rotation**: Shift background hues slightly between sections (e.g., Deep Black -> Midnight Navy -> Dark Lead).
+- **Spatial Design**: Use overlapping transparent geometric shapes, circles, or floating motifs to create depth.
+- **Slowing Effects**: Implement CSS-driven background elements with slow `rotate` or `pulse` animations (0.01x speed).
+- **Gradient Mastery**: Use multi-stop radial gradients (e.g., `radial-gradient(at 0% 0%, var(--bg-1), transparent)`) to create "Thematic Lighting".
+
+### B. 10-Tier Color Shade Protocol
+When picking a main theme color, the AI must automatically generate a 10-tier palette in the CSS variables:
+- `--theme-100` to `--theme-900`: From lightest/shallow to deepest/saturated.
+- Use these tiers for: Subtle text (`700`), Borders (`800`), Hover tints (`500`), and Background accents (`950`).
+- **Gradient Ally**: Combine different tiers (e.g., `--theme-400` to `--theme-600`) for all primary UI gradients.
+
+### C. The "Button Master 10" Library
+Every project must implement a dedicated library of 10+ unique button designs in the global CSS. This allows for rapid scaling and visual variety.
+- **Styles**: Glass-Pill, Neon-Outline, Liquid-Fill, 3D-Industrial, Minimalist-Ghost, Double-Border, Halo-Glow, etc.
+- **Interactive DNA**: Every button MUST have detailed:
+    - `:hover`: 1-3px transform + shadow shift.
+    - `:active`: Scale down (0.98).
+    - `transition`: Custom bezier curves (`cubic-bezier(0.16, 1, 0.3, 1)`).
 
 ---
 
@@ -138,14 +197,30 @@ To expand the AI's design intelligence autonomously, the **AI MUST actively and 
 
 The Vault store verified, high-end design patterns abstracted from global leaders (e.g., Apple, Pencil, Vercel).
 
-### [Style Spec] Massive Minimalist (Ref: Pencil.dev)
-- **Palette**: `#FFFFFF` | `#111111` | `#FF9900` (High-Impact Orange)
-- **Typography Matrix**: `DM-Sans` (H1: 112px, -0.02em tracking) | `Rubik` (UI)
+### [Style Spec] Industrial Construction (Ref: Bexon)
+- **Palette**: `#FF5722` (Orange) | `#111111` (Black) | `#F5F5F5` (Grey)
+- **Typography Matrix**: `Mona Sans` / `Oswald` (Heading) | `Inter` (Body)
 - **VSS Formulas**:
-    - **Hero**: `( { @starburst-radial + T_Massive + p + { !btn_pill [scale-105 shadow-inset] } + { @floating-dashboard-cards } } )`
-    - **Bento**: `( { S_Header + { Grid-Bento [rounded-32] { Card [high-density-metrics] } } } )`
-    - **Button Logic**: `[pill-full w-fit px-8 py-3 bg-orange-500 scale-105 shadow-[inset_0_1px_1px_rgba(255,255,255,0.25)]]`
-    - **Artistic Motif**: `@ { edge-vignette-glow }` + `@ { collaborative-cursors [moving] }`
+    - **Zig-Zag About**: `( { Row [d-flex align-items-center] { img_L [rounded-xl] } | { Content_R } } + { Row [flex-reverse] { Content_L } | { img_R } } )`
+    - **Industrial Grid**: `( { G_3 [structural-lines bg-mesh] { Card [shadow-lift hover:glow] i_Cube + T + t } * 3 } )`
+    - **About Motif**: `@ { circular-dashed-border [rotation] }` + `@ { diagonal-mesh-bg [opacity-0.1] }`
+    - **Micro-Skill**: `[scroll-trigger: circular-fill-progress]` (JS-driven counters).
+
+### [Style Spec] Ethereal Tech (Ref: AI Cluster)
+- **Palette**: `#0A0A0A` (Dark Onyx) | Mesh Grids (Teal/Pink/Purple) | `#14B8A6` (Teal Accent)
+- **Typography Matrix**: `Serif-Italic` (High-emotion terms) | `Inter` (Functional UI)
+- **VSS Formulas**:
+    - **Stitched Hero**: `( { @mesh-gradient [absolute blur100px] + { T_Large + T_Serif_Italic } + p_Sub + { !Btn_Pill [glow-shadow animate-pulse] } } )`
+    - **Kinetic Bento**: `( { Grid_12 { Card_Glass [border-white/10 backdrop-blur] [hover:kinetic-border] } * 6 } )`
+    - **Artistic Motif**: `@ { flowing-plasma-bg }` + `@ { neural-indicator [opacity-pulse] }`
+
+### [Style Spec] High-Trust FinTech (Ref: Banking/Finance Cluster)
+- **Palette**: `#6366F1` (Indigo Primary) | `#FFFFFF` | `#F8FAFC` (Slate-50 Grey)
+- **VSS Formulas**:
+    - **Data Card**: `{ T_Label | [fs-h2] "$Money" + @rolling-digits | [bg-indigo-soft rounded-full] "Status" }`
+    - **Nested Finance**: `{ Card_White [shadow-xl] { Header | Grid_2 { Card_Green "Income" + Card_Red "Spent" } } }`
+    - **Service Density**: `( { S_Header + Grid_3 [gap-6] { Card_Trust [icon-shield] + [badge-check] } * 3 } )`
+    - **Process Logic**: `( { Step [border-dash-l pb-40px] { i_Circle + T + t } } )`
 
 ---
 
@@ -162,38 +237,14 @@ The Vault store verified, high-end design patterns abstracted from global leader
 
 ## 8. The Extraction Repository (Website Vault)
 
-This repository stores unlimited structural extraction patterns from high-end websites or UI inspiration images. When the AI scans an image or researches a layout, the exact structure MUST be codified and pushed here to build a long-term memory of design logic.
+> [!IMPORTANT]
+> To ensure infinite scalability, all high-density design samples are now stored in:
+> **[website_stored_samples.md](file:///C:/Users/User/.gemini/antigravity/knowledge/tech_stack_mastery/artifacts/website_stored_samples.md)**
+
+This repository continues to store unlimited structural extraction patterns from high-end websites or UI inspiration images. When the AI scans an image or researches a layout, the exact structure MUST be codified and pushed to the external vault above.
 
 ### Format Standard
 - **Label**: [Component/Section Type]
 - **Title**: [Human Readable Name & Key Dimensions/Grid setup]
 - **Description**: [Detailed structural logic, interaction behavior, and what the user sees]
 - **VSS Formula**: [The exact notation using `{ }` and `[ ]`]
-
----
-
-### [Stored Samples]
-
-#### Sample 1: 3x6 Interactive Image Gallery
-- **Label**: gallery
-- **Title**: 3x6 (width x height) row item row gallery
-- **Description**: This will create an image gallery with 3 `div` boxes in a row. Inside, it has its own gallery images included. This will also create a popup modal window to see enlarged images when the user clicks.
-- **VSS Formula**: `[i-7b[13r(3b+3C){1a{6c[23]}!3b}]3a]` *(Note: This is a legacy complex string example, preferred VSS V2 format would be `( { Gallery_Grid [grid-cols:3 gap20px] { Image_Wrap [cursor:pointer overflow:hidden] @ Modal_Trigger * 3 } } )`)*
-
-#### Sample 2: Liquid Data Bento
-- **Label**: Bento Grid
-- **Title**: 4x2 Hyper-Bento with Pulse
-- **Description**: A highly interactive bento grid featuring a main large card on the left and smaller data-heavy cards on the right. Includes neural-pulse animations on hover.
-- **VSS Formula**: `( { Container [pt100px pb100px] { Bento_Grid [grid-cols:4] { Bento_Main [span2 row2 bg:glass-dark] T_Hero + p_Sub } + { Bento_Small [pulse-hover] * 4 } } } )`
-
-#### Sample 3: Floating Cinematic Hero (Legacy Translated)
-- **Label**: Hero Section
-- **Title**: Deep Floating Media Hero
-- **Description**: A centered typography group floating above deep-layered absolute media (images/videos) and structural icons. Creates a cinematic "lost in space" feeling.
-- **VSS Formula**: `( { S_Hero [relative h100vh flex-center overflow:hidden] @ { Media_Layers [absolute inset0 z-0] img_Bg + img_Particle * 3 } + { Content_Group [z-10 text-center] t_Sub + T_Main + !Btn } + @ i_Float * 2 } )`
-
-#### Sample 4: Telemetry Data Grid (Legacy Translated)
-- **Label**: Data Grid
-- **Title**: Glowing Telemetry Grid
-- **Description**: Technical data blocks arrayed horizontally, actively separated by glowing, animated horizontal telemetry lines. Extremely high-tech industrial aesthetic.
-- **VSS Formula**: `( { S_Stats [pt100 pb100] { Grid_Data [grid-cols:3 gap40px] { Stat_Block | T_Number + t_Label } * 3 } + { Telemetry_Divider [w-full h1px bg:blue shadow:glow pulse] } } )`

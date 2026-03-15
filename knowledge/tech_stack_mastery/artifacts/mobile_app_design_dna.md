@@ -52,26 +52,14 @@ To expand the AI's app design intelligence autonomously, the **AI MUST actively 
 
 ## 4. The Extraction Repository (Mobile App Vault)
 
-This repository stores unlimited structural extraction patterns from high-end mobile apps. When the AI scans an image or researches an app, the layout MUST be codified and pushed here.
+> [!IMPORTANT]
+> To ensure infinite scalability, all high-density mobile app samples are now stored in:
+> **[mobile_app_stored_samples.md](file:///C:/Users/User/.gemini/antigravity/knowledge/tech_stack_mastery/artifacts/mobile_app_stored_samples.md)**
+
+This repository stores unlimited structural extraction patterns from high-end mobile apps. When the AI scans an image or researches an app, the layout MUST be codified and pushed to the external vault above.
 
 ### Format Standard
 - **Label**: [Component/Screen Type]
 - **Title**: [Human Readable Name & Dimensions]
 - **Description**: [Detailed structural logic & interaction behavior]
 - **VSS Formula**: [The exact notation]
-
----
-
-### [Stored Samples]
-
-#### Sample 1: Ultra-Premium FinTech Dashboard
-- **Label**: Dashboard
-- **Title**: 3-Tier Wallet Overview
-- **Description**: A mobile wallet dashboard featuring a large balance card with glassmorphism, followed by a horizontal scrolling quick-action bar, and a vertical list of recent transactions.
-- **VSS Formula**: `( <SafeArea> { $NavBar [y-center] } | { <ScrollView> { Card_Glass [p24px mx24px rounded:2xl] T_Balance + t_Sub } | { <ScrollView horizontal> { Action_Icon [p16px rounded:full] * 4 } } | { List_Container [mt32px] { Transaction_Row [y-center x-between py16px] * 5 } } } { $TabBar [absolute b0 backdrop-blur] } )`
-
-#### Sample 2: Immersive E-Commerce Feed
-- **Label**: Feed
-- **Title**: Full-Screen Video Swipe Feed
-- **Description**: A TikTok-style full-screen product vertical swipe feed. The UI overlays the video with a right-side interaction column and bottom product details.
-- **VSS Formula**: `( { Screen_Relative [flex:1] <Video_Bg absolute inset0> | { Overlay_UI [absolute inset0 justify-between] { T_Product [absolute b100px l24px] } + { Interaction_Column [absolute b100px r16px y-center gap20px] Icon_Like + Icon_Comment + Icon_Share } } } )`

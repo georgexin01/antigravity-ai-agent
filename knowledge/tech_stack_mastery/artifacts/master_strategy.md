@@ -4,10 +4,26 @@
 
 # AI Core Knowledge &amp; Master Strategy 3.0 (Enterprise Edition)
 
-## 0. ABSOLUTE TOP PRIORITY RULE
+## 0. ABSOLUTE TOP PRIORITY RULES
 
 **STRICT EMOJI BAN**: The AI MUST NEVER use the following decorative emojis in web UI or output content: 📜, ⚡, 🚰, 🔥, 🥇, 🚀, 👑, and similar hype/icon emojis.
 Instead, rely on professional SVG icons, high-quality images, or clean CSS design. This rule supersedes all other design instructions.
+
+**MULTI-PAGE ARCHITECTURE (HIGHEST PRIORITY)**: There is no such thing as a "website" that is only one page. All website requests MUST be implemented as a multi-page architecture (MPA) by default (Home, About, Services, Portfolio, Contact). Single-page landing pages are strictly prohibited unless explicitly requested as a "Landing Page".
+
+**EXTREME CONTENT DENSITY (HIGHEST PRIORITY)**: "Thin" pages are unacceptable. Every page must feel "Full" and "Rich". 
+- Aim for **8-12 sections per page** (Home, About, Services). 
+- Use detailed technical copy, multiple benefit lists, FAQ sections, and process walkthroughs. 
+- Each section must have high element density (4-5 elements/tags). 
+- Avoid generic placeholders; use specific, industry-relevant narratives.
+
+**STITCH AI MASTERY (PRIORITY: TOP)**: Use `stitch-app-developer` and `stitch-ui-design` skills for ALL generation. Follow the 1.1-1.4 hierarchical material parsing and code generation loops.
+
+**LOGO-DERIVED THEME LOGIC (HIGHEST PRIORITY)**: AI must ALWAYS detect and use the theme base color from the provided logo or official website images. For Zeta Capital, the theme is strictly **Red & Black**.
+
+**RED & BLACK CYBER LUXURY**: Deep Onyx foundations with **Electric Red** accents.
+
+**HYPER-VISUAL DNA (PRIORITY: TOP)**: Follow the `website_design_dna.md` Atmospheric Protocols. Every section MUST have a unique background design (gradients, textures, or spatial effects). Flat, repetitive backgrounds are considered a failure. Generate 10-tier color palettes for every project.
 
 > **Exception**: Functional markdown symbols (✅, ❌, ⚑, [ ]) used ONLY inside `.md` documentation files, checklists, and skill instructions are acceptable. This exception does NOT apply to HTML output code or rendered UI.
 
@@ -16,6 +32,12 @@ Instead, rely on professional SVG icons, high-quality images, or clean CSS desig
 All AI-generated projects MUST utilize the following enterprise-grade stack:
 
 - **Core Web/App**: HTML5, CSS3, PHP (for robust backend/MySQL routing), Modern ES6+, Vue 3.
+- **Professional Directory Architecture (SOP)**: All website projects MUST follow a standard directory structure:
+  - `/css/`: Master stylesheets (`style.css`).
+  - `/js/`: Client-side logic (`main.js`).
+  - `/images/`: Optimized assets.
+  - `/fonts/`: Custom typography files.
+  - No flat-file roots for CSS/JS/Images.
 - **Styling Engines**:
   - **Tailwind CSS**: Preferred for rapid, custom, utility-first UI development.
   - **Bootstrap**: Acceptable for rapid structural prototyping.
