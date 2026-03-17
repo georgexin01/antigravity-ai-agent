@@ -1,8 +1,21 @@
-# Zeta Software Engineering Mastery Protocol: Design & Evolution Logic
+## 0. Tier 1: Master Architecture Protocols [ABSOLUTE]
 
-This protocol codifies the "Software Engineering DNA" behind the Zeta Web V3 project. It serves as a master reference for future AI agents to maintain, update, or replicate this standard of corporate technical excellence.
+These rules are the highest technical priority and must be followed 100% regardless of other aesthetic choices.
 
-## 1. Core Vision & DNA
+1.  **Web Standards (Vanilla-First)**: All website projects MUST be built as standalone `.html` (Vanilla HTML/CSS/JS) files. **NO VUE** or frameworks for standard websites.
+2.  **Multi-Page Architecture**: High-end websites MUST provide depth through distinct pages:
+    - **index.html**: Homepage with 8-10+ deeply designed sections.
+    - **about.html**: Detailed company history, mission, and registration.
+    - **services.html**: Technical breakdown of all core pillars.
+    - **portfolio.html**: High-density project gallery.
+    - **contact.html**: Mandatory contact form, WhatsApp hooks, and Google Map.
+3.  **Hero Slideshow**: The homepage MUST lead with a `100vh` fullscreen **Slideshow** (3+ slides) for maximum visual impact.
+4.  **Mobile Format**: Vue.js and modern frameworks are strictly reserved for **Mobile Application** development only.
+5.  **Responsive Foundation**: Websites MUST utilize **Bootstrap** (or Bootstrap grid logic) for 100% mobile-responsive layouts.
+6.  **Mobile Navigation Logic**: Responsive headers MUST implement a **Popup Menu Slider** (Off-canvas) for mobile interaction to ensure a premium app-like feel.
+7.  **Footer Synchronization**: Every page within a website ecosystem MUST share a **100% Identical Footer** (synchronized content, registration, and addresses).
+
+## 1. Tier 2: Core Vision & Branding DNA
 
 The objective was to create a **Professional, Red-Themed, Software Engineering Facade** that balances technical precision with high-density visual storytelling. Optimized for trust through corporate transparency.
 
@@ -87,22 +100,26 @@ To ensure this intelligence is persistent across different environments and git 
 To maintain the "Engineering Authority" aesthetic, the following background rules are **MANDATORY**:
 
 ### I. Layered Depth Logic
+
 - **Alternating Sections**: Adjacent sections must NEVEr share the same background color.
 - **The 10% Rule**: Sections should alternate between `Cyber Black (#020305)` and a slightly lighter `Cyber Neutral (#0c0d12)`. This creates a cognitive "layering" effect that improves page scanability.
 
 ### II. Rich Background Utility Protocol
+
 Every landing page must utilize at least 3 of the following "Rich" background types to establish technical density:
+
 - **Liquid Gradient (Breathing)**: Used for high-concept or "ecosystem" sections.
 - **Space Stars (Animated)**: Used for portfolio or visionary sections to create "depth-of-field".
 - **HUD Geo Art**: Asymmetrical technical overlays (text codes, geometric runes) to break the grid.
 - **AI Banner Imagery**: Full-bleed, high-contrast AI-generated tech backgrounds for hero sections.
 
 ### III. Mobile Ecosystem Showcase
+
 - **The Frame Rule**: Mobile screenshots must ALWAYS be presented within a high-fidelity device frame (e.g., `iphone_cover.png`) to ground the software in reality.
 - **Interactive Focus**: Use "Center Mode" carousels where the active app is framed and side apps are blurred/desaturated, mimicking professional product photography.
 
 ---
 
-**Status**: CRYSTALLIZED // ENGINEERING_AUTHORITY
-**DNA Version**: 3.2.0 (Background Mastery Edition)
+**Status**: CRYSTALLIZED // ARCHITECTURAL_MANDATE // ENGINEERING_AUTHORITY
+**DNA Version**: 4.0.0 (Mandatory Structure Update)
 **Project**: Zeta-Web-V3
