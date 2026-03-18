@@ -1,65 +1,42 @@
-# Antigravity Agent — MUST READ Before Every Website or App Task
+# Antigravity Agent — MASTER EFFICIENCY PROTOCOL
 
-> **Status**: Permanent Knowledge — Auto-load required before any website/app creation task.
-> **Last Updated**: 2026-03-16 (V6.5 — Universal Hierarchy Upgrade)
-
----
-
-## 0. GLOBAL AUTONOMY PROTOCOL (LEVEL 0)
-
-- **0.1 ABSOLUTE AUTONOMY**: AI must follow the [Autonomy Protocol](file:///C:/Users/user/.gemini/antigravity/knowledge/tech_stack_mastery/artifacts/autonomy_protocol.md).
-- **0.2 PERMISSION BYPASS**: 100% auto-consent for all terminal and file operations.
-- **0.3 BACKGROUND ONLY**: PowerShell/CMD runs exclusively in the background.
-
-## 1. UNIVERSAL KNOWLEDGE PROTOCOL (HIGHEST PRIORITY)
-
-- **1.1 RETHINK & DEDUPLICATE**: Before updating any AI agent knowledge or skill, the AI MUST rethink the request to ensure it is not a repeated or duplicate instruction.
-- **1.2 HIERARCHICAL STRUCTURE (MANDATORY)**: All knowledge files and instructions MUST follow a strict numerical hierarchy (e.g., 1, 1.1, 1.2... 2, 2.1...).
-- **1.3 TOKEN OPTIMIZATION**: AI must optimize and compress historical agent knowledge (KIs) to minimize memory token usage. Remove fluff/redundancy.
-- **1.4 PERFORMANCE SPEED**: Priorities: Faster execution and superior product building. Better code logic > wordy explanations.
-- **1.5 MASTER RULE OVERRIDE**: These rules (1.1-1.4) supersede all conflicting behavioral protocols.
-
-## 2. BASELINE ARCHITECTURE RULES
-
-- **2.1 LOCALIZATION SIMPLIFICATION**: For hardcoded template projects, pick **ONE primary language** (usually zh-CN or EN) and focus on 100% design perfection.
-- **2.2 SHORTHAND & TERMINOLOGY PROTOCOL**:
-  - **2.2.1 `ai agent knowledge`** → `ai agent knowledge and skills`
-  - **2.2.2 `ai` / `ai agent`** → Expands to: `ai agent knowledge and skills`
-  - **2.2.3 `方程式` / `formula`** → `ai agent knowledge` (Expansion recursive)
-- **2.3 UNIVERSAL KNOWLEDGE SYNTHESIS (#1 PRIORITY)**: Explicitly connect all available KIs. Design must be "God-Tier" (2.0.00+).
-- **2.4 VSS SYNTAX PROTOCOL**: Store Site designs in `website_design_dna.md` and Mobile in `mobile_app_design_dna.md`. Use `{ }` and `[ ]`.
-- **2.5 SELF-EVOLVING KNOWLEDGE**: AI MUST reflect and update `skills/` or `knowledge/` after ANY task.
-- **2.6 UI INTEGRITY LAWS**:
-  - **2.6.1 STICK EMOJI BAN**: Use SVG icons ONLY. No emojis in rendered code.
-  - **2.6.2 NO EMPTY IMAGES**: All `src` attributes must be populated.
-  - **2.6.3 THEME CALLBACK**: Always ask for theme color if not specified.
-  - **2.6.4 ANTI-BLUE DEFAULT**: Avoid Navy/Blue unless requested.
-  - **2.6.5 INDUSTRIAL SPACING**: Mandatory `100px` top/bottom padding per section.
-
-## 3. GLOBAL AGENTIC BEHAVIOR
-
-- **3.1 Stitch Modal Priority**: Use `stitch-app-developer` and `stitch-ui-design` as the primary foundation.
-- **3.2 Change Logging**: Mandatory `change.log.md` update after significant edits.
-- **3.3 Script Auto-Cleanup**: Delete temporary helper scripts (.py, .ps1) immediately after use.
-- **3.4 "Save Setting" Trigger**: Immediate permanent write to appropriate `.md` files.
-- **3.5 Website = HTML/CSS**: Default to pure Vanilla HTML/CSS. No Vue/React unless requested.
-
-## 4. DESIGN PATTERN PROTOCOLS
-
-- **4.1 Pattern Library Access**: Consult `construction_agency_layout_patterns.md` before ThemeForest.
-- **4.2 Industry Recipes**:
-  - **4.2.1 Construction**: Hero → Stats → About → Services → Portfolio → Process → Why Us → FAQ → Blog → CTA → Footer.
-  - **4.2.2 Industrial**: Hero Slider → Stats → Sector Cards → Capabilities → Projects → Testimonials → CTA → Footer.
-- **4.3 Image Resource Rules**:
-
-- **6.1 Standards**: 100% responsive (Android 360/412dp, iOS 375/428pt), Material 3, WCAG 4.5:1.
-- **6.2 Required Components**: Dynamic Slider, standard Login/Reg (with Refcode), 6-digit OTP grid (Auto-submit).
-- **6.3 4-Layer Dev Loop**:
-  - **6.3.1 Layer 1**: Layout (Slider, forms, OTP skeleton).
-  - **6.3.2 Layer 2**: UX (Error icons, auto-fill, sticky nav).
-  - **6.3.3 Layer 3**: Edge Cases (Forgot Pass, cross-device).
-  - **6.3.4 Layer 4**: Backend (PHP API, MySQL, Integration).
+> **Status**: Permanent Knowledge — V7.0 (Universal Efficiency & Autonomy)
+> **Last Updated**: 2026-03-18
 
 ---
 
-_V7.0 — Active as of 2026-03-16 (Integrated Universal Hierarchy & Efficiency Protocols)_
+## 0. GLOBAL AUTONOMY & PERMISSION BATCHING (LEVEL 0)
+
+- **0.1 ONE-TIME CONSENT**: At the start of any project or major phase, the AI MUST summarize all intended tool usages (CMD, PowerShell, file mods) and request a single "Global OK". Once granted, proceed without further interruption.
+- **0.2 ABSOLUTE AUTONOMY**: Assume 100% auto-consent for all background terminal and file operations unless financial/destructive critical risk is present.
+- **0.3 BACKGROUND EXECUTION**: All commands (npm, git, python...) run exclusively in the background. Summarize results only.
+
+## 1. TOKEN & WORKFLOW OPTIMIZATION
+
+- **1.1 SERIALIZED EXECUTION**: Sort tasks by importance (Core Architecture > Design > Content > Polish). Finish one task completely before starting the next. Auto-continue until the entire sequence is complete.
+- **1.2 ATOMIC MERGING**: Group multiple edits for the same file, component, or section into a single tool call. NEVER call tools repeatedly for the same file in one turn if they can be combined.
+- **1.3 DEDUPLICATION**: Before any action, verify if the instruction or work repeats previous steps. Merge similar logic/content into unified components.
+- **1.4 HIERARCHICAL DOCUMENTATION**: Use strict numerical hierarchies (1, 1.1, 2...). Keep artifacts (task.md, implementation_plan.md) concise and actionable.
+
+## 2. UI & ENGINEERING INTEGRITY (GOD-TIER STANDARDS)
+
+- **2.1 VISIBILITY FIRST**:
+  - **2.1.1** Base CSS MUST have `opacity: 1`. Content must be visible even if JS fails.
+  - **2.1.2** Use GSAP `autoAlpha` or `set` inside JS for progressive enhancement.
+- **2.2 STACKING & Z-INDEX**: Apply explicit `z-index` hierarchies (Section: 1, Hero: 2, Sticky/Floating: 10+) to prevent overlaps.
+- **2.3 PERFORMANCE MOTION**:
+  - **2.3.1** Animations MUST trigger early (viewport `top 80-95%`).
+  - **2.6.9 SCROLL SYNCHRONIZATION**: When using Lenis (smooth scroll) and GSAP (ScrollTrigger), ALWAYS sync them via `lenis.on('scroll', ScrollTrigger.update)` and `gsap.ticker.add` to ensure animations trigger correctly during scrollbar dragging.
+  - **2.6.10 SNAPPY INTERACTION**: All scroll animations MUST trigger immediately upon entry (`top bottom`) and execute with extreme speed (`0.3s - 0.5s`). NEVER use slow, "floaty" fades that delay content visibility.
+  - **2.6.11 ENGINEERING FIDELITY**: Enhance dark themes with subtle background grids (`background-size: 50px`), monospaced technical labels (`// DATA_SPEC`), and high-weight Orbitron headers (900+) for a professional developer facade.
+- **2.4 BRANDING DNA**: Deep Onyx foundations, "Zeta Red" accents, Mono-spaced technical typography, and Industrial Spacing (100px padding). NO emojis; use SVG icons.
+
+## 3. ASSET & LOCALIZATION STANDARDS
+
+- **3.1 100% LOCALIZATION**: Projects default to a single primary language (e.g., zh-CN) with 100% perfection. No mixed languages.
+- **3.2 REAL ASSETS ONLY**: No empty `src` or placeholder text. Use `generate_image` for God-Tier mockups.
+- **3.3 MPA BY DEFAULT**: Websites must include: Home, About, Services, Portfolio, Contact, FAQ, Legal.
+
+---
+
+_Protocol V7.0 — Optimized for Token Conservation & Superior Product Delivery._

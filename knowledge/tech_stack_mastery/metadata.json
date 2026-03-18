@@ -1,11 +1,20 @@
 {
   "title": "User's Master Tech Stack & Tooling Reference",
-  "summary": "Consolidated knowledge of the user's preferred technologies (HTML, CSS, PHP, Vue, Bootstrap, Tailwind, React) and specialized AI tools (Stitch, AIStudio). Provides context for future UI/UX and development tasks across all projects.",
-  "last_updated": "2026-03-05T14:45:00Z",
+  "summary": "Consolidated knowledge of the user's preferred technologies (HTML, CSS, PHP, Vue, Bootstrap, Tailwind, React) and specialized AI tools (Stitch, AIStudio). Includes mobile app creation blueprints, i18n mastery, PWA patterns, and universal app creation autopilot protocols.",
+  "last_updated": "2026-03-18T20:00:00Z",
+  "version": "2.0",
   "preferred_stack": {
-    "frontend": ["HTML", "CSS", "Vue", "React"],
-    "styling": ["Bootstrap", "Tailwind"],
+    "frontend": ["HTML", "CSS", "Vue 3", "React"],
+    "styling": ["Bootstrap", "Tailwind CSS"],
     "backend": ["PHP"],
+    "build_tools": ["Vite"],
+    "i18n": ["vue-i18n@10"],
     "ai_tools": ["Stitch", "Google AIStudio"]
-  }
+  },
+  "artifacts_added_2026_03_18": [
+    "vue3_mobile_app_blueprint.md",
+    "i18n_multilingual_mastery.md",
+    "mobile_app_creation_autopilot.md",
+    "pwa_offline_first_patterns.md"
+  ]
 }
