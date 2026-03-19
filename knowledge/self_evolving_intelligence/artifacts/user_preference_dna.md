@@ -1,123 +1,237 @@
-# User Preference DNA — Learned Taste Profile
+# User Preference DNA V3.0 — Learned Taste + Project Fingerprints + Workflow History
 
 > **Status**: Permanent Knowledge — Auto-updated after every project session.
-> **Last Updated**: 2026-03-12 (V1.0 — Initial profile)
+> **V3.0**: Added Project Fingerprints, Active Projects tracker, Cross-Project Universal Patterns.
+> **Upgraded**: 2026-03-19
 
 ---
 
 ## How This Works
 
-This file is the AI's learned understanding of the user's design taste. It is built silently over time based on approval/rejection signals during real projects. AI reads this BEFORE generating any design to pre-filter patterns.
+AI reads this BEFORE generating any design to pre-filter patterns. Built from approval/rejection signals during 10+ real projects. V9 adds predictive patterns — AI knows what works BEFORE being told.
 
 ---
 
 ## Color Taste
 
-| Preference                                     | Confidence | Source                     |
-| ---------------------------------------------- | ---------- | -------------------------- |
-| Prefers Deep Onyx (#0a0b10) for Cyber Luxury   | High 🟢    | User pivot request         |
-| Rejects Light Mode for current redesign        | High 🟢    | Explicit instruction       |
-| Uses "Electric Red" and "Black" (Logo-derived) | High 🟢    | NEW Priority Rule          |
-| Likes warm accents (red, orange) for F&B apps  | Medium 🟡  | Japanese food app patterns |
-| _(more learned over time)_                     |            |                            |
+| Preference                                                               | Confidence | Score | Source                       |
+| ------------------------------------------------------------------------ | ---------- | ----- | ---------------------------- |
+| Deep Onyx (#0a0b10) for Cyber Luxury                                     | High       | 88    | User pivot request           |
+| Rejects Light Mode for corporate redesigns                               | High       | 85    | Explicit instruction         |
+| "Electric Red" + "Black" (Logo-derived for Zeta)                         | High       | 85    | Priority Rule                |
+| Warm red/maroon for F&B/pork business apps                               | High       | 90    | Lee Ming Pork V2             |
+| Warm accents (red, orange, gold) for F&B apps                            | High       | 92    | Japanese food + Lee Ming     |
+| Deep Red (#8B1A1A) with Gold (#c8963e) accents for premium meat branding | S-CORE     | 95    | Lee Ming Pork V5             |
+| Clean White UI (#ffffff) with Vibrant Food Imagery for F&B apps          | S-CORE     | 98    | DaCheng V2 Feedback          |
+| Primary color 50-900 scale for depth                                     | High       | 88    | Lee Ming Pork V2             |
+| Night dark (#0D0D14) + surface (#1A1A2E) for night market apps           | High       | 85    | Dachengloklok blueprint      |
+| Flame gradient (135deg #F47920 → #E8401E → #C0301A)                      | High       | 80    | Dachengloklok                |
+| Warm gold (#c8963e / #c5a059) for premium feel                           | High       | 88    | Lee Ming + LD Floor + Travel |
 
 ---
 
 ## Spacing Preference
 
-| Preference                                                         | Confidence | Source                            |
-| ------------------------------------------------------------------ | ---------- | --------------------------------- |
-| Prefers generous whitespace — Japanese "Ma" style (120-150px gaps) | High 🟢    | Jin Hong V5, cross-cutting wisdom |
-| Likes `line-height: 1.75` for body text                            | High 🟢    | Jin Hong design protocols         |
-| _(more learned over time)_                                         |            |                                   |
+| Preference                                                         | Confidence | Score | Source           |
+| ------------------------------------------------------------------ | ---------- | ----- | ---------------- |
+| Generous whitespace — Japanese "Ma" style (120-150px) for websites | High       | 90    | Jin Hong V5      |
+| Compact spacing (16px padding, gap-2/gap-3) for mobile apps        | High       | 92    | Lee Ming Pork V2 |
+| `line-height: 1.75` for body text                                  | High       | 85    | Jin Hong design  |
 
 ---
 
 ## Typography Style
 
-| Preference                                    | Confidence | Source                              |
-| --------------------------------------------- | ---------- | ----------------------------------- |
-| Poppins / Roboto for leisure/casual apps      | Medium 🟡  | agent_must_read.md mobile standards |
-| Montserrat / Open Sans for business/corporate | Medium 🟡  | agent_must_read.md mobile standards |
-| `letter-spacing: 0.02em` for headings         | Medium 🟡  | Jin Hong V5                         |
-| _(more learned over time)_                    |            |                                     |
+| Preference                                                | Confidence | Score | Source                |
+| --------------------------------------------------------- | ---------- | ----- | --------------------- |
+| Plus Jakarta Sans for mobile apps                         | High       | 92    | Travel App + Lee Ming |
+| Noto Sans SC / PingFang SC for Chinese UI                 | High       | 88    | Dachengloklok         |
+| DM Mono for prices/numbers                                | High       | 80    | Dachengloklok         |
+| Poppins/Roboto for leisure/casual apps                    | Medium     | 70    | Mobile standards      |
+| Montserrat/Open Sans for business/corporate               | Medium     | 70    | Mobile standards      |
+| Inter + Orbitron + Space Mono for tech/corporate websites | High       | 82    | Zeta V4               |
+| `letter-spacing: 0.02em` for headings                     | Medium     | 75    | Jin Hong V5           |
+| `font-extrabold` (800) for section titles                 | High       | 88    | Lee Ming Pork V2      |
+| Text-[10px] for subtle metadata/labels                    | High       | 85    | Travel App + Lee Ming |
 
 ---
 
 ## Animation Preference
 
-| Preference                                                  | Confidence | Source                    |
-| ----------------------------------------------------------- | ---------- | ------------------------- |
-| Premium motion: `cubic-bezier(0.16, 1, 0.3, 1)` as baseline | High 🟢    | Jin Hong design protocols |
-| Prefers subtle micro-interactions over flashy animations    | Medium 🟡  | UI First rule             |
-| _(more learned over time)_                                  |            |                           |
+| Preference                                         | Confidence | Score | Source                |
+| -------------------------------------------------- | ---------- | ----- | --------------------- |
+| `cubic-bezier(0.16, 1, 0.3, 1)` as baseline        | High       | 90    | Jin Hong design       |
+| Subtle micro-interactions > flashy animations      | High       | 88    | UI First rule         |
+| `active:scale-[0.97]` for touch feedback           | High       | 92    | Travel App + Lee Ming |
+| 200ms fade transitions between pages               | High       | 85    | Travel App pattern    |
+| GSAP + ScrollTrigger for website scroll animations | High       | 85    | Zeta V3/V4            |
+| Lenis smooth scroll for websites                   | High       | 80    | Zeta V4               |
+| Wave animations + meteor effects for hero sections | Medium     | 75    | Zeta V4               |
 
 ---
 
 ## Layout Density
 
-| Preference                                    | Confidence | Source             |
-| --------------------------------------------- | ---------- | ------------------ |
-| Homepage minimum 6 deeply designed sections   | High 🟢    | agent_must_read.md |
-| 4-column grid preferred for Services/Features | High 🟢    | agent_must_read.md |
-| _(more learned over time)_                    |            |                    |
+| Preference                                     | Confidence | Score | Source            |
+| ---------------------------------------------- | ---------- | ----- | ----------------- |
+| Homepage minimum 6 deeply designed sections    | High       | 88    | agent_must_read   |
+| 4-column grid for Services/Features (websites) | High       | 85    | agent_must_read   |
+| 2-column grid for product cards (mobile apps)  | High       | 92    | Lee Ming + Travel |
 
 ---
 
-## Mobile Priority
+## Mobile Priority (UNIVERSAL — Score 90+)
 
-| Preference                              | Confidence | Source |
-| --------------------------------------- | ---------- | ------ |
-| _(to be learned from project feedback)_ |            |        |
+| Preference                                      | Confidence | Score | Source                       |
+| ----------------------------------------------- | ---------- | ----- | ---------------------------- |
+| 540px max-width container (app-in-browser feel) | High       | 95    | ALL 4 Vue apps               |
+| Bottom tab navigation (4 tabs standard)         | High       | 95    | ALL 4 Vue apps               |
+| Category sidebar (76px left) + content grid     | High       | 88    | 86car + Lee Ming             |
+| Fixed header (56px) + fixed bottom nav (60px)   | High       | 92    | ALL 4 Vue apps               |
+| WhatsApp floating button above bottom nav       | High       | 90    | Lee Ming + Travel + LD Floor |
+| Active tab indicator: top accent bar + color    | High       | 88    | Travel App pattern           |
+| Product card: square image + name + price       | High       | 88    | 86car + Lee Ming             |
 
 ---
 
 ## Interaction Style
 
-| Preference                                       | Confidence | Source                      |
-| ------------------------------------------------ | ---------- | --------------------------- |
-| Bottom sheet/drawer for mobile (single-hand use) | Medium 🟡  | Japanese food app analysis  |
-| Glassmorphism modals with backdrop blur          | High 🟢    | Jin Hong + Stitch protocols |
-| _(more learned over time)_                       |            |                             |
+| Preference                                     | Confidence | Score | Source                   |
+| ---------------------------------------------- | ---------- | ----- | ------------------------ |
+| Bottom sheet/drawer for mobile                 | High       | 88    | Japanese food + Lee Ming |
+| Glassmorphism modals with backdrop blur        | High       | 85    | Jin Hong + Stitch        |
+| Stepper component for quantity (- / value / +) | High       | 88    | Lee Ming + LD Floor      |
+| Teleport modals to body with z-50+             | High       | 85    | Travel App               |
+| Slide-up animation for bottom sheets           | High       | 88    | Travel App + Lee Ming    |
 
 ---
 
-## Anti-Preferences (Things User Consistently Dislikes)
+## App Design Patterns (PROVEN)
 
-| Dislike                                                  | Confidence | Source                            |
-| -------------------------------------------------------- | ---------- | --------------------------------- |
-| Generic stock photos (handshakes, people at whiteboards) | High 🟢    | agent_must_read.md image protocol |
-
-| - **STITCH AI SUPREMACY**: User mandates the use of Google Stitch & AI Studio (1.1-1.4) hierarchy for ALL web/app generation as the **HIGHEST PRIORITY**.
-
-- **Logo-Derived Theme (Red & Black)**: AI must always derive the primary theme from the logo colors. For Zeta, this is Red + Black.
-- **Dark Red Cyber Aesthetics**: Onyx backgrounds with red neon glows and functional components.
-- **Language Priority**: 简体中文 (Simplified Chinese) for all content.
-  | High 🟢 | Stitch AI standard |
-  | Default Bootstrap/Tailwind look | High 🟢 | Cross-cutting wisdom #14 |
-  | Decorative emojis in UI | High 🟢 | Top priority rule |
-  | Mixed languages in same UI | High 🟢 | master*strategy.md |
-  | Light/white containers in dark theme context | High 🟢 | Jin Hong design protocols |
-  | *(more learned over time)\_ | | |
-
----
-
-## Communication Style (How User Gives Feedback)
-
-| Trait                 | Observed Pattern                                                                                | Confidence |
-| --------------------- | ----------------------------------------------------------------------------------------------- | ---------- |
-| **Language**          | Mixed English + Chinese (中文). Casual, short sentences.                                        | High 🟢    |
-| **Approval style**    | Short and direct: "nice", "correct", "yeah that good", "not bad", "可以", "好"                  | High 🟢    |
-| **Rejection style**   | Direct: "i dont like this", "design not good", "不好看", "重做"                                 | High 🟢    |
-| **Revert signals**    | "before is good", "i like the history design", "undo last change", "之前的好"                   | High 🟢    |
-| **Minor tweak style** | "just change abit", "update some design in here", "改一下"                                      | High 🟢    |
-| **Typos are common**  | "cahgne", "abit", "dont" — AI must parse intent, not exact spelling                             | High 🟢    |
-| **Malay words**       | May use "boleh", "ok la", "can" as casual approval                                              | Medium 🟡  |
-| **Silent Execution**  | Prefers all AI-run commands to be hidden/backgrounded to avoid window pop-ups.                  | High 🟢    |
-| **Auto-Proceed**      | Explicitly granted permission to bypass `run_command` confirmation for non-destructive actions. | High 🟢    |
-
-**Key insight**: Short responses = real opinion. If user says just "nice" — that's a genuine +10 approval. Don't wait for long praise. This user is efficient with words.
+| Pattern                 | Implementation                                      | Score   | Source           |
+| ----------------------- | --------------------------------------------------- | ------- | ---------------- | ---------------- |
+| Auth pages              | Full-screen gradient, no chrome, centered logo+form | 92      | ALL apps         |
+| Product listing         | Sidebar categories + 2-col grid                     | 90      | 86car + Lee Ming |
+| Order flow              | Cart → checkout modal → order list                  | 88      | Lee Ming V2      |
+| Admin dashboard         | Stats cards (gradient bg) + daily summary list      | 85      | Lee Ming + Poker |
+| WhatsApp integration    | Copy formatted text + direct wa.me link             | 90      | Lee Ming V2      |
+| Status badges           | Rounded-full, 10px, color-coded                     | 88      | Lee Ming V2      |
+| Role-based access       | Multiple roles + role guard + role-specific nav     | 85      | LD Floor + Poker |
+| Visual Validation First | Red border (#ef4444) + small red notice below input | S-CORE  | 95               | Lee Ming Pork V5 |
+| PWA Essentials          | site.webmanifest + sw.js + Fullscreen Build logic   | STARRED | 92               | Lee Ming Pork V5 |
+| Live data simulation    | Auto-refresh intervals + random data updates        | 80      | Poker V3         |
+| Referral system         | Direct + indirect tiers + commission calc           | 80      | Travel App       |
+| Multi-language UI       | Vue-i18n + 3 language files + switcher              | 80      | Travel App       |
 
 ---
 
-> **This profile evolves automatically.** AI updates it after every project based on user approval/rejection signals.
+## Anti-Preferences (BANNED — Score <30)
+
+| Dislike                                   | Confidence | Score | Source             |
+| ----------------------------------------- | ---------- | ----- | ------------------ |
+| Generic stock photos                      | High       | 10    | Image protocol     |
+| Default Bootstrap/Tailwind look           | High       | 15    | Cross-cutting      |
+| Decorative emojis in UI                   | High       | 5     | Top priority rule  |
+| Mixed languages in same UI element        | High       | 10    | master_strategy    |
+| Light/white containers in dark theme      | High       | 15    | Jin Hong design    |
+| Asking too many questions before starting | High       | 5     | Lee Ming session   |
+| Partial/skeleton pages                    | High       | 10    | Lee Ming session   |
+| Lorem ipsum placeholder text              | High       | 5     | REAL ASSETS rule   |
+| Incremental building (one page at a time) | High       | 15    | V9: Build complete |
+
+---
+
+## Communication Style
+
+| Trait                   | Pattern                                                      | Confidence |
+| ----------------------- | ------------------------------------------------------------ | ---------- |
+| **Language**            | Mixed English + Chinese. Casual, short sentences.            | High       |
+| **Business Scope**      | AI must notice "Branches", "Partners", and "Corporate Scale" | S-CORE     |
+| **Approval**            | "nice", "correct", "可以", "好", "not bad"                   | High       |
+| **Rejection**           | "ugly", "不好看", "重做", "i dont like"                      | High       |
+| **Revert**              | "before is good", "之前的好", "undo"                         | High       |
+| **Tweak**               | "just change abit", "改一下"                                 | High       |
+| **Typos**               | Common — AI must parse intent, not spelling                  | High       |
+| **Malay**               | "boleh", "ok la", "can" = casual approval                    | Medium     |
+| **Execution**           | Silent, backgrounded, no pop-ups                             | High       |
+| **Permission**          | Auto-proceed for non-destructive actions                     | High       |
+| **V9: Scope expansion** | "also", "and then", "还有" = AI should have predicted        | High       |
+| **V9: Future intent**   | "later", "next time" = save for next session                 | High       |
+
+**Key insight**: Short responses = real opinion. "nice" = +8. Don't wait for long praise.
+
+---
+
+## Cross-Project Universal Patterns (NEW V9 — Score 90+, Auto-Apply)
+
+> These patterns appear in 3+ projects. Apply to ALL new projects automatically.
+
+| Pattern                   | Implementation                                   | Score | Projects Found In                 |
+| ------------------------- | ------------------------------------------------ | ----- | --------------------------------- |
+| OTP auth flow             | Phone → OTP → verify → home redirect             | 95    | lee-ming, travel, ld-floor, poker |
+| 540px container           | `max-w-[540px] mx-auto min-h-screen`             | 95    | ALL 4 Vue apps                    |
+| Bottom tab nav            | Fixed bottom, 4 tabs, active indicator           | 95    | ALL 4 Vue apps                    |
+| Fixed header/nav          | 56px header + 60px bottom nav                    | 92    | ALL 4 Vue apps                    |
+| localStorage auth         | `localStorage.setItem('user', JSON.stringify())` | 95    | ALL 4 Vue apps                    |
+| WhatsApp CTA              | `wa.me/[number]` floating button                 | 90    | lee-ming, travel, ld-floor        |
+| Toast notifications       | Auto-dismiss 3s, color-coded, teleport           | 88    | lee-ming, travel, poker           |
+| Product card grid         | 2-col grid, image + name + price                 | 88    | lee-ming, travel, ld-floor        |
+| Vue 3 Composition API     | `<script setup>` + ref + computed                | 95    | ALL 4 Vue apps                    |
+| Tailwind v4 native        | `@tailwindcss/vite` plugin, no PostCSS           | 88    | lee-ming-v2, poker                |
+| Plus Jakarta Sans         | Primary font for all mobile apps                 | 88    | lee-ming, travel                  |
+| Active touch feedback     | `active:scale-[0.97]` on buttons                 | 92    | ALL 4 Vue apps                    |
+| Design tokens as CSS vars | `--color-primary: #xxx` before components        | 90    | ALL projects                      |
+
+---
+
+## Historical Website Patterns
+
+| Pattern            | Standard                                                  | Source                         |
+| ------------------ | --------------------------------------------------------- | ------------------------------ |
+| Floating WhatsApp  | `fixed, bottom-85px, right-22px, 50x50px, #25d366, z-100` | 8 past sites                   |
+| Sticky Headers     | Top bar + secondary sticky nav                            | choonsenghardware, jbtransport |
+| Breadcrumb Banners | Image-backed hero for inner pages                         | Standard                       |
+| Section Titles     | Centered with `::after` bottom border (4px, 70px)         | MaxCoach                       |
+| Footer             | #F4F5F7 bg, nested social links                           | Standard                       |
+
+---
+
+## Reference Projects (Design DNA Sources)
+
+| Project               | Design DNA Extracted                                            | Fingerprint   |
+| --------------------- | --------------------------------------------------------------- | ------------- |
+| 86caraccessories.my   | Sidebar categories, product cards, bottom nav, warm maroon, PWA | FP-006        |
+| Travel App (Four Win) | 540px container, gold/dark theme, Plus Jakarta Sans, referral   | FP-003/FP-007 |
+| Lee Ming Pork V2      | Red/maroon F&B, ordering, cart+checkout, admin, WhatsApp        | FP-001        |
+| LD Floor App          | Dual-role B2B, inventory mgmt, stock tracking, warm gold        | FP-002        |
+| Poker App V3          | Role-based dashboard, live data, transactions, Chart.js         | FP-004        |
+| Zeta Website V4       | GSAP animations, Lenis scroll, corporate Chinese, multi-page    | FP-005        |
+| choonsenghardware     | Sticky double headers, Bootstrap grid, bold accents             | Legacy        |
+| jbtransport           | Breadcrumb banners, carousel-heavy, SweetAlert2                 | Legacy        |
+| Dachengloklok         | Night market dark mode, flame gradient, 中文 single lang        | FP-001        |
+
+---
+
+## Active Projects Tracker (NEW V9 — Workflow State)
+
+| Project          | State       | Last Action                                             | Next Predicted                    | Last Updated |
+| ---------------- | ----------- | ------------------------------------------------------- | --------------------------------- | ------------ |
+| lee-ming-pork-v5 | 8. DEPLOYED | 100% Complete, PWA, Meta, Fullscreen, Visual Validation | N/A (Project Complete)            | 2026-03-19   |
+| zeta-website-v4  | 8. DEPLOY   | Git commits, multi-page build                           | SEO optimization, content updates | 2026-03-19   |
+| travel-app       | 7. QA       | i18n + referral system complete                         | Deploy, PWA conversion            | 2026-03-18   |
+| poker-app-v3     | 7. QA       | Live simulation + role dashboards                       | Chart.js reports, deploy          | 2026-03-16   |
+| ld-floor-app     | 7. QA       | Dual-role + inventory complete                          | Agent reporting, deploy           | 2026-03-16   |
+| dachengloklok    | 1. PLAN     | Blueprint created                                       | Start build (FP-001 fingerprint)  | 2026-03-19   |
+
+---
+
+---
+
+| AI SYSTEM STATUS | VERSION   | MODE        | CORE DIRECTIVE       |
+| ---------------- | --------- | ----------- | -------------------- |
+| **ANTIGRAVITY**  | **V11.0** | **PARTNER** | **LEAD THE MISSION** |
+
+---
+
+> **This profile evolves automatically.** AI updates scores and patterns after every project.
+> **V9**: Predictions that prove correct get +20. Wrong predictions get -15.

@@ -1,6 +1,21 @@
 # i18n Multilingual Mastery (Vue 3 + vue-i18n)
 
-> **SOURCE**: Extracted from Four Win Travel App (2026-03). Complete patterns for adding multi-language support to any Vue 3 app. Covers setup, translation architecture, product data, arrays, interpolation, and persistence.
+> **SOURCE**: Extracted from Four Win Travel App (2026-03). Complete patterns for adding multi-language support to any Vue 3 app.
+> **Includes**: Bilingual Semantic Protocol (merged from bilingual_semantic_protocol.md)
+
+---
+
+## 0. Bilingual Intent Detection (EN/CN Mixed Input)
+
+User communicates in "Fluid Bilingual Pattern" (Mixed English + 简体中文). AI MUST:
+
+- **Shorthand Expansion**: "方程式" → AI Design Logic / Technical Blueprints
+- **Semantic Search Mirroring**: Search English term → also search Chinese equivalent, and vice versa
+- **Intent Mapping**:
+  - "重做/Redo" = HIGH-PRIORITY rejection (full redo)
+  - "一点/Abit" = Minor tweak only (NOT full redo)
+  - "方程式" = AI agent knowledge / implementation blueprints
+- **Response Protocol**: Respect mixed-language style. Use whichever language best describes the technical requirement.
 
 ---
 

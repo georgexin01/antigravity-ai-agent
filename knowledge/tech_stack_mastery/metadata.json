@@ -1,8 +1,8 @@
 {
   "title": "User's Master Tech Stack & Tooling Reference",
-  "summary": "Consolidated knowledge of the user's preferred technologies (HTML, CSS, PHP, Vue, Bootstrap, Tailwind, React) and specialized AI tools (Stitch, AIStudio). Includes mobile app creation blueprints, i18n mastery, PWA patterns, and universal app creation autopilot protocols.",
-  "last_updated": "2026-03-18T20:00:00Z",
-  "version": "2.0",
+  "summary": "Consolidated knowledge of the user's preferred technologies and AI-optimized app creation protocols. Includes unified blueprint, core agent protocol, and app creation masterplan.",
+  "last_updated": "2026-03-19T12:00:00Z",
+  "version": "3.0",
   "preferred_stack": {
     "frontend": ["HTML", "CSS", "Vue 3", "React"],
     "styling": ["Bootstrap", "Tailwind CSS"],
@@ -11,10 +11,24 @@
     "i18n": ["vue-i18n@10"],
     "ai_tools": ["Stitch", "Google AIStudio"]
   },
-  "artifacts_added_2026_03_18": [
-    "vue3_mobile_app_blueprint.md",
-    "i18n_multilingual_mastery.md",
-    "mobile_app_creation_autopilot.md",
-    "pwa_offline_first_patterns.md"
+  "v3_consolidation": {
+    "new_files": [
+      "app_creation_masterplan.md — Claude AI app building methodology",
+      "unified_app_blueprint.md — Replaces mobile_app_creation_autopilot + vue3_mobile_app_blueprint",
+      "agent_core_protocol.md — Replaces agent_must_read + autonomy_protocol + master_strategy"
+    ],
+    "superseded_files": [
+      "mobile_app_creation_autopilot.md → merged into unified_app_blueprint.md",
+      "vue3_mobile_app_blueprint.md → merged into unified_app_blueprint.md",
+      "agent_must_read.md → merged into agent_core_protocol.md",
+      "autonomy_protocol.md → merged into agent_core_protocol.md",
+      "master_strategy.md → merged into agent_core_protocol.md"
+    ]
+  },
+  "priority_read_order": [
+    "1. agent_core_protocol.md (ALWAYS first)",
+    "2. app_creation_masterplan.md (for new app projects)",
+    "3. unified_app_blueprint.md (for Vue 3 apps)",
+    "4. Domain-specific files as needed"
   ]
 }

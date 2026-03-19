@@ -329,3 +329,26 @@ When redesigning for projects like **Jin Hong ME V4**, prioritize:
 1. **Glass-on-Grid**: High-contrast glass panels atop technical blueprint textures.
 2. **Technical Matrix**: Grid items using `col-lg-3` for maximum density.
 3. **Ghost Intent**: High-contrast micro-shadows that react to cursor proximity.
+
+---
+
+## 10. CONTENT LOCALIZATION & CIVILIZATION DESIGN (Consolidated)
+
+> Merged from content_localization_protocol.md. Non-negotiable for all website creation.
+
+### 10.1 High-Density Content Architecture
+- **8-10+ Section Standard**: Every homepage must have high content density. Short/minimalist pages are deprecated.
+- **Informational Authority**: Comprehensive business view on single page: history, services, proof, ethics, regional impact, vision.
+
+### 10.2 Pre-Design Intelligence (Research Before Planning)
+- **Industry Deep-Dive**: Identify main focus points for the business vertical
+- **Client Logic**: Extract USPs from client's existing presence
+- **Market Positioning**: Exceed competition's content strategy
+
+### 10.3 Civilization Design (Regional Context)
+- **Regional Context**: Incorporate location-specific elements (landmarks, local ecosystem, branches)
+- **Demographic Harmony**: Visual language matches target audience's cultural background
+- **Localized Partnerships**: Show local business involvement
+
+### 10.4 Connective Workflow
+1. Data Collection → 2. Structural Planning (8-10 sections) → 3. Connectivity Audit → 4. Execution

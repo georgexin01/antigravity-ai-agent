@@ -1,6 +1,15 @@
 # Knowledge: Stitch Visual Protocol (SVP)
 
-The "Stitch Visual Protocol" is a set of elite design and prompting guidelines derived from Google Stitch to ensure production-grade UI/UX visual excellence in every generation.
+> The "Stitch Visual Protocol" is a set of elite design and prompting guidelines derived from Google Stitch.
+> **Includes**: Official Stitch & AI Studio Modal Protocols (merged)
+
+## 0. Source Priority & Default Actions
+
+- **Priority**: stitch-app-developer SKILL > Google AI Studio > agent_core_protocol
+- **Default**: On any "create/redesign" request, generate `stitch-ui-design` prompt mapping FIRST
+- **Visual Extraction**: Use AI Studio multimodal to parse images/PDFs into structural components before coding
+- **Component-First**: Design modularly in Stitch → export to HTML/CSS/PHP
+- **Modal Mastery**: All notifications/forms in glassmorphism modals. Desktop = centered, Mobile = bottom sheet.
 
 ## 1. Multimodal Prompting (MMP)
 
