@@ -769,20 +769,45 @@ Every quarter (or every 10 projects, whichever comes first):
 ### 7.2 File Hierarchy (Priority Order)
 
 ```
-TIER 0 (Always loaded — brain core):
-  1. evolving_knowledge.md      ← YOU ARE HERE (brain + prediction engine)
-  2. must_do_master_rules.md    ← mandatory checklist + auto-queue rules
-  3. agent_core_protocol.md     ← execution + predictive autonomy
-  4. skill_path_router.md       ← routing + prediction queue
+TIER 0 — INSTANT LOAD (Every session, <100 tokens total):
+  0a. session_cache.md           ← 10 tokens — instant context (project, state, what to load)
+  0b. user_taste_dna.md          ← 50 tokens — design preferences (loves/hates)
 
-TIER 1 (Loaded per task via router + fingerprint):
-  5. app_creation_masterplan.md  ← app methodology
-  6. unified_app_blueprint.md    ← Vue 3 architecture
-  7. user_preference_dna.md      ← design taste + project fingerprints
-  8. website_design_dna.md       ← website framework
+TIER 1 — SELECTIVE LOAD (Read headings → load matching sections only):
+  1. evolving_knowledge.md       ← Brain engine (selective per §7.3 matrix)
+  2. must_do_master_rules.md     ← Checklist (selective per §7.3 matrix)
+  3. agent_core_protocol.md      ← Execution autonomy
+  4. skill_path_router.md        ← Routing + prediction queue
 
-TIER 2 (Loaded only when specifically needed):
-  9-23. All other specialized files
+TIER 2 — TASK-SPECIFIC (Load ONLY when fingerprint matches):
+  5. app_creation_masterplan.md   ← APP tasks only
+  6. unified_app_blueprint.md     ← APP tasks only (Vue 3 scaffold)
+  7. typescript_pinia_standard.md ← APP tasks only (types + stores)
+  8. mobile_design_mastery.md     ← APP tasks only (mobile patterns)
+  9. website_design_dna.md        ← WEBSITE tasks only (incl. §10 localization)
+  10. jin_hong_design_protocols.md ← CORPORATE/DARK tasks only
+  11. i18n_multilingual_mastery.md ← MULTI-LANG tasks only
+  12. pwa_offline_first_patterns.md← BUILD/DEPLOY tasks only
+
+TIER 3 — REFERENCE (Load only when explicitly needed):
+  13. user_preference_dna.md      ← Design taste + fingerprints
+  14. design_vault/README.md      ← DESIGN tasks only (match engine)
+  15. design_research_engine.md   ← DESIGN tasks only (tools + inspiration)
+
+TIER 4 — TRACKING (Updated at session end, rarely read mid-session):
+  16. score_ledger.md             ← Append-only scoring log
+  17. brain_status.md             ← Health dashboard + design level
+  18. v10_evolution_vault.md      ← Discoveries + failures
+  19. baseline_snapshot_2026Q1.md ← Frozen reference (never load mid-session)
+
+DELETED (Consolidated — no longer separate files):
+  ✗ ai_design_level.md           → merged into brain_status.md
+  ✗ vue3_fnb_mastery.md          → content in japanese_food_app_design.md
+  ✗ content_localization_protocol.md → merged into website_design_dna.md §10
+  ✗ mobile_adept_interaction_dna.md → merged into mobile_design_mastery.md
+  ✗ mobile_app_design_dna.md     → merged into mobile_design_mastery.md
+  ✗ mobile_app_stored_samples.md → merged into mobile_design_mastery.md
+  ✗ stitch_standard_text.md      → deleted (project-specific, 0 cross-use)
 ```
 
 ### 7.3 SELECTIVE SECTION LOADING (V11 Token Saver)
