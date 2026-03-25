@@ -2,6 +2,7 @@
 
 > [!IMPORTANT]
 > **HIGHEST PRIORITY PROTOCOL**: All website generation must follow the `stitch-app-developer` (1.1-1.4) hierarchical loop. Designs are birthed in the Google Stitch framework before being exported to production code.
+> **SENIOR DESIGNER STANDARD**: Every project must adhere to the [Senior Designer Protocol](file:///C:/Users/User/.gemini/antigravity/knowledge/tech_stack_mastery/artifacts/senior_designer_protocol.md).
 
 ## 0. Stitch Master Protocols (2026)
 
@@ -9,6 +10,7 @@
 2. **1.2 AI Studio Research**: Dynamic verification of 2026 interaction patterns.
 3. **1.3 Tool Scripts**: Integration of official Slider, Modal, and Auth components.
 4. **1.4 Hierarchical Context**: Logic-first structured text generation.
+5. **1.5 Brand Kit Mastery**: Mandatory extraction of client color tokens and font weights before UI construction.
 
 ---
 

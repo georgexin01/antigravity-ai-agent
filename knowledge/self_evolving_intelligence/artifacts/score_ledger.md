@@ -57,6 +57,8 @@
 [2026-03-19] old-new-customer-type  | D1:CodeQuality   | Bug: checkbox not saved to store    | -8  | -- | FIXED
 [2026-03-19] notes-not-saved        | D1:CodeQuality   | Bug: checkout notes lost            | -8  | -- | FIXED
 [2026-03-19] homeview-extra-div     | D1:CodeQuality   | Bug: broken HTML nesting (2x)       | -10 | -- | FIXED
+[2026-03-20] V11-Reward-Mode        | D14:Reusability  | Inplanted Reward Protocol to V11     | +50 | 95 | S-CORE
+[2026-03-20] Complex-Chain-Inplant  | D1:CodeQuality   | Multi-file core protocol update      | +50 | -- | REWARD
 ```
 
 ---

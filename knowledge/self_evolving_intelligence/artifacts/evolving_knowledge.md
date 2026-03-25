@@ -57,6 +57,7 @@ Scan EVERY user message for these signal types:
 | 10  | **V9: Sequence Signal** | User does A then always does B          | → Save A→B to Auto-Queue (Section 4)            |
 | 11  | **V9: Scope Expansion** | "also add", "and then", "还要"          | → Predict full scope, queue remaining           |
 | 12  | **V9: Future Intent**   | "later I want", "next time", "之后要"   | → Save to Prediction Queue (Section 4.2)        |
+| 13  | **V11: Senior Design**  | "senior designer", "pro look", "expert" | → Apply [Senior Designer Protocol](file:///C:/Users/User/.gemini/antigravity/knowledge/tech_stack_mastery/artifacts/senior_designer_protocol.md) |
 
 ### 1.2 Detection Keywords (Trilingual — EN/CN/MY)
 
@@ -1023,6 +1024,16 @@ V9.0 (2026-03-19) — Predictive Intelligence Engine
 Previous: V8.0 (chat scanning, auto-save routing, ADPRS V2.0)
 Previous: V6.0 (basic evolution, no chat scanning)
 ```
+
+### 8.4 V11 Structural Overlap & Auto-Confirmation Learning
+
+> **Core Insight**: "Websites and apps share 90% of the same structural layout design; they only differ slightly in content display."
+
+When analyzing user requests, apply the **Structural Overlap Protocol**:
+1. **Identify the Delta**: Note when the user asks to modify a layout part (e.g., standardizing a 2x2 grid, forcing a vertical stack on mobile navigation, adjusting a hero section banner).
+2. **The 2nd/3rd Time Rule**: If the AI is asked to make a similar structural or layout change a 2nd or 3rd time across any conversation or project, consider that design pattern **CONFIRMED**.
+3. **Auto-Record to DNA**: Immediately extract that confirmed structural pattern and save it to `user_preference_dna.md` or as a Universal Pattern in the Auto-Queue. 
+4. **Result**: The AI becomes "smarter" by pre-applying these confirmed structural layouts to all future apps/websites without waiting for the user to ask, significantly reducing repetitive chat requests.
 
 ---
 

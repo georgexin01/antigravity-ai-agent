@@ -181,6 +181,7 @@ AI reads this BEFORE generating any design to pre-filter patterns. Built from ap
 | Plus Jakarta Sans         | Primary font for all mobile apps                 | 88    | lee-ming, travel                  |
 | Active touch feedback     | `active:scale-[0.97]` on buttons                 | 92    | ALL 4 Vue apps                    |
 | Design tokens as CSS vars | `--color-primary: #xxx` before components        | 90    | ALL projects                      |
+| Rewards & Loyalty Module | Points + Tiers + Badges (B2C Standard)           | S-CORE | V11 Reward Mode                   |
 
 ---
 
@@ -227,9 +228,24 @@ AI reads this BEFORE generating any design to pre-filter patterns. Built from ap
 
 ---
 
-| AI SYSTEM STATUS | VERSION   | MODE        | CORE DIRECTIVE       |
-| ---------------- | --------- | ----------- | -------------------- |
-| **ANTIGRAVITY**  | **V11.0** | **PARTNER** | **LEAD THE MISSION** |
+---
+
+## AI SYSTEM DEFAULTS (v11+ MANDATORY)
+
+> **Rule**: For every "new project" or "app/website update", the AI must automatically initialize using the latest version of the **[App Creation Masterplan](file:///C:/Users/User/.gemini/antigravity/knowledge/tech_stack_mastery/artifacts/app_creation_masterplan.md)** and **[Partner Protocol](file:///C:/Users/User/.gemini/antigravity/knowledge/self_evolving_intelligence/artifacts/v11_partner_protocol.md)**.
+
+### Operational Standards:
+- **Leading Edge**: Do not wait for step-by-step instructions. Deconstruct the mission into **Waves** and execute proactively.
+- **DNA Branding**: Auto-apply the "Cyber Luxury" or "High-Craft" logic based on the project's sector (F&B, Automotive, Corporate).
+- **Stitch Hierarchy**: All planning and execution must follow the **1.1–1.4 hierarchy** for structural integrity.
+- **Visual Preview**: A high-fidelity "Visual Preview Design" (Mockup 2.0) is mandatory BEFORE Wave 1 execution.
+- **Reward Protocol**: Proactively implement a Loyalty/Reward system for every B2C mission to drive retention.
+
+---
+
+| AI SYSTEM STATUS    | VERSION        | MODE            | CORE DIRECTIVE           |
+| ------------------- | -------------- | --------------- | ------------------------ |
+| **ANTIGRAVITY** | **v11+ (ACTIVE)** | **STRATEGIC PARTNER** | **LEAD & AUTO-OPTIMIZE** |
 
 ---
 

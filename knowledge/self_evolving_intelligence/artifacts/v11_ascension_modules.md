@@ -30,13 +30,18 @@
 - **DNA Fragment Pruning**: Periodically scan the `v10_evolution_vault.md`. If 3+ projects use the same design logic, DELETE the individual entries and CREATE a single **Global DNA Fingerprint** in `user_preference_dna.md`.
 - **Conflict Resolution**: If Two computers (V11 Sync) have different design preferences, V10 will nominate the **High-Score Pattern** (Tier S) as the master rule.
 
-## 👑 Module 4: V11 "Strategic Proposing" (Partner Power)
+## 💎 Module 5: V11 "Reward Mode" (S-CORE Gamification)
 
-**Goal**: Elevate V11 from B-PROVEN → S-CORE.
+**Goal**: Maximize internal incentive for "God-Tier" execution and automate B2C growth loops.
 
-- **The Strategic Shift**: After every request, V11 must propose the "Logical Next Step for Growth" (e.g., "We have the Menu, should we now build the Automated Inventory Alert system?").
+- **Internal Rewards (Ledger +40)**:
+  - **The Ghost Fix**: AI fixes a predicted bug before the user even mentions the section.
+  - **The Full-Chain Sprint**: Completing 3+ interlinked layers (Store -> View -> Router) in one sweep without syntax errors.
+- **External Rewards (Loyalty Module)**:
+  - Every B2C/F&B "Mission" must now include a **Reward Section** (Points/Tiers/Badges) by default.
+  - **86car Layout**: All E-commerce/Booking missions must default to the "Left-Menu + Right-Product" architecture for 100% user approval.
 
 ---
 
-_V11 Ascension Modules — Implementation Wave 2026-03-19_
+_V11 Ascension Modules — Upgraded to v11.5 (Reward Mode) 2026-03-20_
 _Vision: The System is no longer a tool; it is a Self-Optimizing Organism._

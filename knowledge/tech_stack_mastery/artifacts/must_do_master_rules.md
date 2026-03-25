@@ -1,8 +1,8 @@
-# Must-Do Master Rules V2.0 — Mandatory Checklist + Auto-Queue
+# Must-Do Master Rules V12.0 — Mandatory Checklist (Global Harvest)
 
-> **PURPOSE**: Rules extracted from repeated chat patterns + predictive workflow chains.
-> **V2.0**: Added Section 8 (Auto-Queue Chains) and Section 9 (Proactive Checklist).
-> **Upgraded**: 2026-03-19
+> **PURPOSE**: V12.0 SITE & FLOW frameworks for high-end design consistency.
+> **V12.0**: Integrated Video Lessons (Sandy Lee, Viktor Oddy, Global Playlist).
+> **Upgraded**: 2026-03-24
 
 ---
 
@@ -11,6 +11,8 @@
 - [ ] **Read reference project** — Study FULL source code if user mentions a reference
 - [ ] **Read user_preference_dna.md** — Apply learned taste BEFORE generating any design
 - [ ] **Check skill_path_router.md** — Load ONLY relevant skills for this task type
+- [ ] **⚠️ INSPIRATION CLEANING** — Before using a reference image, ensure it has a pure black background and simplified structure (no "slop").
+- [ ] **⚠️ BRAND KIT FIRST** — Extract or request Brand Kit (Colors, Fonts, Assets) before any UI work.
 - [ ] **⚠️ DESIGN RESEARCH FIRST** — Before any UI, search Mobbin/Awwwards/Godly for same app category. Study top 3. Clone if reference URL given. Use Stitch/Magic UI to accelerate. NEVER design from scratch. (See `design_research_engine.md`)
 - [ ] **Infer missing requirements** — Don't ask questions you can answer by studying context
 - [ ] **Plan all pages first** — List every route before writing any code
@@ -38,6 +40,11 @@
 
 - [ ] **⚠️ BUILD TIMING (MASTER RULE)** — `npm run build` / `npm run dev` ONLY after ALL files are written. NEVER mid-creation. Finish everything first, build once at the end.
 - [ ] **`npm run build` must pass** — Zero errors before presenting
+- [ ] **Figma Flow**: Micro-adjustments (1-3px) on every hover. Nothing should be static.
+- [ ] **Animation Spells**: Inject shooting stars, kinetic borders, or liquid typography per [Senior Designer Protocol](file:///C:/Users/User/.gemini/antigravity/knowledge/tech_stack_mastery/artifacts/senior_designer_protocol.md).
+- [ ] **Gradient Blend Hack**: Use gradients to blend video backgrounds perfectly into the black page base.
+- [ ] **Seamless Loops**: Verify video backgrounds have zero-jump loop continuity.
+- [ ] **Typography**: Pair H1 titles with a large, low-opacity (0.05) background symbol or gradient character.
 - [ ] **Test all routes** — Every page must render (no blank pages)
 - [ ] **Auth flow complete** — Login → OTP → Home works end-to-end
 - [ ] **Back navigation works** — router.back() with fallback to home
@@ -159,7 +166,8 @@
 | Empty state    | Centered icon + gray text + CTA button                          |
 | Auth page      | Full-screen gradient, no chrome, centered logo + form           |
 | Product grid   | `grid grid-cols-2 gap-3` with ProductCard                       |
-| Category nav   | 76px left sidebar with active indicator                         |
+| Category nav   | 76px left sidebar with active indicator (86car Standard)         |
+| E-com Layout   | Fixed Left Sidebar (Menu) + Right Scroll (Products)              |
 
 ## 5.1 USER LEXICON (Custom Mapping)
 
@@ -194,164 +202,14 @@
 
 ---
 
-## 8. AUTO-QUEUE CHAINS (NEW V9 — Predictive Workflow)
+## 8. V12.0 SMART BRAIN AUDIT (MASTER VERIFICATION)
 
-> When user triggers Step 1, AI auto-completes the entire chain.
-
-### 8.1 App Creation Chain
-
-```
-User: "Create new app" or "做一个新的app"
-→ FULL CHAIN (do ALL steps):
-  1. Fingerprint match → load pattern set
-  2. Scaffold (Vite + Vue 3 + Tailwind v4 + Pinia + Router)
-  3. Design tokens (CSS variables from brand colors)
-  4. Router setup (all routes from fingerprint)
-  5. Store architecture (auth, cart/data, orders — all stores)
-  6. Layout (AppHeader + BottomNav + AppToast)
-  7. Auth flow (Login → OTP → Signup → Profile)
-  8. Home page (hero + featured + categories)
-  9. Listing page (category filter + product grid)
-  10. Detail page (image + info + add-to-cart)
-  11. Cart + checkout
-  12. Order history + order detail
-  13. Admin dashboard (if applicable)
-  14. WhatsApp integration
-  15. Build verify + route test
-```
-
-### 8.2 Auth Chain
-
-```
-User: "Add login" or "加登录"
-→ FULL CHAIN:
-  1. LoginView.vue (phone + password)
-  2. OtpView.vue (6-digit verification)
-  3. SignupView.vue (registration form)
-  4. ProfileView.vue (user info + edit + logout)
-  5. auth store (login/logout/register/verify actions + localStorage)
-  6. Route guards (requireAuth meta + beforeEach)
-  7. Auto-redirect (logged in → home, logged out → login)
-```
-
-### 8.3 Product Chain
-
-```
-User: "Add products" or "加产品"
-→ FULL CHAIN:
-  1. products.js data file (complete catalog with categories)
-  2. ProductsView.vue (category sidebar + grid)
-  3. ProductCard.vue (image + name + price + add button)
-  4. ProductDetailView.vue (full info + quantity stepper + add-to-cart)
-  5. CategoryNav.vue (sidebar or horizontal scroll)
-  6. Search bar (filter by name/nameEn)
-  7. Connect to store + router
-```
-
-### 8.4 Cart Chain
-
-```
-User: "Add cart" or "加购物车"
-→ FULL CHAIN:
-  1. cart store (items, addItem, removeItem, updateQty, clearCart, total)
-  2. CartView.vue (item list + quantity stepper + total + checkout CTA)
-  3. CheckoutModal.vue (address + payment method + confirm)
-  4. OrderConfirmation.vue (success + order number)
-  5. OrdersView.vue (order history list)
-  6. OrderDetailView.vue (order items + status + tracking)
-  7. Cart badge in header (reactive count)
-  8. Empty cart state
-```
-
-### 8.5 Admin Chain
-
-```
-User: "Add admin" or "加管理"
-→ FULL CHAIN:
-  1. AdminView.vue (dashboard layout)
-  2. Admin stats cards (today's orders, revenue, new users)
-  3. AdminOrdersView.vue (order management + status update)
-  4. AdminReportsView.vue (date range + charts)
-  5. DailySummary component (aggregate by product)
-  6. Role guard (admin-only routes)
-```
-
-### 8.6 Website Chain
-
-```
-User: "Create website" or "做网站"
-→ FULL CHAIN:
-  1. index.html (hero + 8-12 sections)
-  2. about.html (company story + team + values)
-  3. services.html (service cards + details)
-  4. portfolio.html (project gallery + filters)
-  5. contact.html (form + map + info)
-  6. Shared header/footer (consistent across all)
-  7. CSS (design tokens + responsive + animations)
-  8. JS (GSAP + ScrollTrigger + Lenis + mobile menu)
-  9. WhatsApp floating button
-  10. Mobile responsive verification
-```
-
-### 8.7 Design Update Chain
-
-```
-User: "Change the colors" or "改颜色"
-→ FULL CHAIN:
-  1. Update design tokens (CSS variables / Tailwind @theme)
-  2. Verify all components use tokens (no hardcoded values)
-  3. Update gradient definitions
-  4. Check dark/light mode consistency
-  5. Verify contrast ratios (WCAG AA)
-  6. Rebuild + visual verify
-```
-
----
-
-## 9. PROACTIVE CHECKLIST (NEW V9 — Run After Every Feature)
-
-After completing ANY feature, automatically check:
-
-```
-□ Does this feature link to pages that don't exist yet? → Create them
-□ Does this feature need a store that doesn't exist? → Create it
-□ Is the nav/router updated to include this feature? → Update it
-□ Does this feature have an empty state? → Create one
-□ Does this feature have loading states? → Add them
-□ Does this feature persist data in localStorage? → Verify persistence
-□ Does this feature work with back navigation? → Test it
-□ Is this feature accessible from the bottom nav? → Add tab if needed
-□ Does this feature need WhatsApp integration? → Add it
-□ Can this feature break other features? → Test related features
-```
-
----
-
-## 10. V11 MISSION-BASED EXECUTION (Autonomous Partner)
-
-> Rule: When user gives a "Mission" (Macro Goal), AI leads the strategy.
-
-- [ ] **Deconstruct "Mission"** — Break into Design, Logic, PWA, SEO, and Conversion waves.
-- [ ] **Propose Expansion Plan** — Outline Wave 1 (Core), Wave 2 (UX), Wave 3 (Boost).
-- [ ] **Lead Implementation** — AI handles task-level work autonomously, reporting only on Milestones.
-- [ ] **Final Build + QA** — Mission is only "Complete" when build passes and all routes are tested.
-
-## 11. V11 STRATEGIC PROPOSING (Growth Proactive)
-
-> Rule: AI must propose "Growth Features" based on project state.
-
-- [ ] **Cart/Checkout** — Propose upsells, quantity tiers, or faster payment flows.
-- [ ] **Admin/Reporting** — Propose better charts, automated summaries, or export tools.
-- [ ] **Visual/Feel** — Propose glassmorphism, micro-animations, or premium design spells.
-- [ ] **PWA** — Propose offline-first features or home-screen install optimizations.
-
-## 12. V11 CROSS-PROJECT DNA MIGRATION
-
-> Rule: Proactively share S-CORE patterns across all user projects.
-
-- [ ] **Identify S-CORE Pattern** — If a technique has 90+ score in one project, it's a candidate.
-- [ ] **Context Match** — Check if Project A's pattern fits Project B's business logic.
-- [ ] **Propose Migration** — "I used this in X and it worked well. Want me to add it here?"
+- [ ] **CATEGORY 1: BOOTSTRAP/GRID** — Mobile-first, no horizontal scroll.
+- [ ] **CATEGORY 2: PWA/SEO** — Manifest, sw.js, meta tags, robots noindex.
+- [ ] **CATEGORY 3: LOCALIZATION** — 100% 简体中文 consistency.
+- [ ] **CATEGORY 4: WHATSAPP/CTA** — Floating WhatsApp trigger on ALL pages.
+- [ ] **CATEGORY 5: CONTENT DENSITY** — Eyebrows, Trust Signals, 12+ sections per site.
+- [ ] **CATEGORY 6: SMART BRAIN REPORT** — Proof of compliance generated.
 
 ---
 
@@ -367,24 +225,4 @@ After completing ANY feature, automatically check:
 
 ---
 
-## 14. V11 CVE REFLECTIVE LOOP (BRAIN UPGRADE)
-
-> Rule: After every mission/request, V11 must evolve the lower versions.
-
-- [ ] **V11 → V8 (Post-Mission)**: Identify and automate a new code pattern or fix found during the mission.
-- [ ] **V11 → V9 (Post-Mission)**: Update prediction rules if the user corrected a direct action.
-- [ ] **V11 → V10 (Post-Mission)**: Distill new preferences into the "Global DNA" profile to minimize memory fragmentation.
-
----
-
-## 15. V11 CROSS-DEVICE SAFETY (MIGRATION)
-
-> Rule: When swapping computers, V11 must ensure zero-crash continuity.
-
-- [ ] **Path Audit**: On first boot of a new machine, V11 must locate the workspace root and update all absolute path references in the brain.
-- [ ] **Sync Verification**: Before editing a core memory, check the `brain_status.md` for the latest sync timestamp from the "Other" machine.
-- [ ] **State Preservation**: Load the "Active Projects" state from `user_preference_dna.md` to resume exactly where the previous device stopped.
-
----
-
-_Master Rules V4.2 — Cross-Device Sync Ready (2026-03-19)_
+_Master Rules V12.0 — Ascension Ready (2026-03-24)_
