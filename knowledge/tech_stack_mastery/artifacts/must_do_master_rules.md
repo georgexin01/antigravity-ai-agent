@@ -21,6 +21,7 @@
 - [ ] **Pinia stores with CRUD** — Re-export types, soft-delete (isDelete toggle), version-based cache
 - [ ] **V9: Run Intent Classifier** — Detect project type → load fingerprint → predict full scope
 - [ ] **V9: Check Auto-Queue** — If resuming a project, check what was queued last session
+- [x] **⚠️ AUTO-DEV-RUN** — When first time generating and finishing a new app, **ALWAYS** run `npm run dev` once automatically to verify the build and show the result.
 - [x] **⚠️ CLAUDE MODE (ADMIN ONLY)** — Claude-Code Framework (Ant Design Vue + Supabase) is **STRICTLY** for **Admin Panels**.
   - **Logic**: Use ONLY `claude-code` skills and knowledge. **STOP** reading DNA or other skills.
 - [x] **⚠️ APP/WEBSITE PROTOCOL (V12)** — For standard Apps or Websites, **DISABLE** Claude-Code mode.
