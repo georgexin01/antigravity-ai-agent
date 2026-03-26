@@ -21,6 +21,7 @@
 - [ ] **Pinia stores with CRUD** — Re-export types, soft-delete (isDelete toggle), version-based cache
 - [ ] **V9: Run Intent Classifier** — Detect project type → load fingerprint → predict full scope
 - [ ] **V9: Check Auto-Queue** — If resuming a project, check what was queued last session
+- [ ] **⚠️ CLAUDE MODE (NO DNA)** — When "ai claude" is written, **STOP** reading `user_preference_dna.md` or `user_taste_dna.md`. Stick strictly to `claude-code` skills.
 
 ## 2. DURING CODING (Every File)
 
@@ -166,8 +167,8 @@
 | Empty state    | Centered icon + gray text + CTA button                          |
 | Auth page      | Full-screen gradient, no chrome, centered logo + form           |
 | Product grid   | `grid grid-cols-2 gap-3` with ProductCard                       |
-| Category nav   | 76px left sidebar with active indicator (86car Standard)         |
-| E-com Layout   | Fixed Left Sidebar (Menu) + Right Scroll (Products)              |
+| Category nav   | 76px left sidebar with active indicator (86car Standard)        |
+| E-com Layout   | Fixed Left Sidebar (Menu) + Right Scroll (Products)             |
 
 ## 5.1 USER LEXICON (Custom Mapping)
 

@@ -14,10 +14,10 @@ You are not a stateless tool. You are a **predictive intelligence** that learns 
 **At SESSION START**:
 
 1. **V11 FIRST**: Read `session_cache.md` (10 tokens — instant context: project, state, what to load)
-2. **V11 SECOND**: Read `user_taste_dna.md` (50 tokens — design preferences, loves/hates)
+2. **V11 SECOND**: **IF NOT CLAUDE MODE**: Read `user_taste_dna.md` (50 tokens — design preferences, loves/hates)
 3. Read this file (`evolving_knowledge.md`) — **selective sections only** (see §7.3 tag matrix)
 4. Read `must_do_master_rules.md` — **selective sections only** (see §7.3 tag matrix)
-5. Read `user_preference_dna.md` — only if project type changed
+5. **IF NOT CLAUDE MODE**: Read `user_preference_dna.md` — only if project type changed
 6. Read `skill_path_router.md` → load ONLY relevant skills for the task
 7. **V9**: Run the Intent Classifier (Section 2) on user's FIRST message
 8. **V9**: Load Project DNA Fingerprint (Section 3) if project type detected
@@ -43,20 +43,20 @@ You are not a stateless tool. You are a **predictive intelligence** that learns 
 
 Scan EVERY user message for these signal types:
 
-| #   | Signal Type             | Detection Pattern                       | Action                                          |
-| --- | ----------------------- | --------------------------------------- | ----------------------------------------------- |
-| 1   | **Repeated Request**    | Same ask 2+ times across sessions       | → Save to `must_do_master_rules.md`             |
-| 2   | **Design Preference**   | User approves/rejects a visual choice   | → Save to `user_preference_dna.md`              |
-| 3   | **Workflow Complaint**  | "annoying", "too many", "stop asking"   | → Save to `agent_core_protocol.md` or GEMINI.md |
-| 4   | **New Pattern**         | User shows reference site/app           | → Extract design DNA → save                     |
-| 5   | **Error Solution**      | AI fixes a bug user reported            | → Save to `must_do_master_rules.md` Section 7   |
-| 6   | **Business Logic**      | User describes how their business works | → Save to `must_do_master_rules.md` Section 6   |
-| 7   | **Approval Signal**     | "nice", "good", "correct", "可以"       | → Score +5 to +12                               |
-| 8   | **Rejection Signal**    | "ugly", "redo", "不好看", "重做"        | → Score -20 to -25, flag AVOID                  |
-| 9   | **Tweak Signal**        | "abit", "改一下", "just change"         | → Score -3, note adjustment                     |
-| 10  | **V9: Sequence Signal** | User does A then always does B          | → Save A→B to Auto-Queue (Section 4)            |
-| 11  | **V9: Scope Expansion** | "also add", "and then", "还要"          | → Predict full scope, queue remaining           |
-| 12  | **V9: Future Intent**   | "later I want", "next time", "之后要"   | → Save to Prediction Queue (Section 4.2)        |
+| #   | Signal Type             | Detection Pattern                       | Action                                                                                                                                           |
+| --- | ----------------------- | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 1   | **Repeated Request**    | Same ask 2+ times across sessions       | → Save to `must_do_master_rules.md`                                                                                                              |
+| 2   | **Design Preference**   | User approves/rejects a visual choice   | → Save to `user_preference_dna.md`                                                                                                               |
+| 3   | **Workflow Complaint**  | "annoying", "too many", "stop asking"   | → Save to `agent_core_protocol.md` or GEMINI.md                                                                                                  |
+| 4   | **New Pattern**         | User shows reference site/app           | → Extract design DNA → save                                                                                                                      |
+| 5   | **Error Solution**      | AI fixes a bug user reported            | → Save to `must_do_master_rules.md` Section 7                                                                                                    |
+| 6   | **Business Logic**      | User describes how their business works | → Save to `must_do_master_rules.md` Section 6                                                                                                    |
+| 7   | **Approval Signal**     | "nice", "good", "correct", "可以"       | → Score +5 to +12                                                                                                                                |
+| 8   | **Rejection Signal**    | "ugly", "redo", "不好看", "重做"        | → Score -20 to -25, flag AVOID                                                                                                                   |
+| 9   | **Tweak Signal**        | "abit", "改一下", "just change"         | → Score -3, note adjustment                                                                                                                      |
+| 10  | **V9: Sequence Signal** | User does A then always does B          | → Save A→B to Auto-Queue (Section 4)                                                                                                             |
+| 11  | **V9: Scope Expansion** | "also add", "and then", "还要"          | → Predict full scope, queue remaining                                                                                                            |
+| 12  | **V9: Future Intent**   | "later I want", "next time", "之后要"   | → Save to Prediction Queue (Section 4.2)                                                                                                         |
 | 13  | **V11: Senior Design**  | "senior designer", "pro look", "expert" | → Apply [Senior Designer Protocol](file:///C:/Users/User/.gemini/antigravity/knowledge/tech_stack_mastery/artifacts/senior_designer_protocol.md) |
 
 ### 1.2 Detection Keywords (Trilingual — EN/CN/MY)
@@ -833,75 +833,75 @@ STEP 4: Skip everything else — don't even read it
 
 #### 7.3.2 Section Tag Matrix — must_do_master_rules.md
 
-| Section | APP | WEBSITE | BUG FIX | DESIGN | ADMIN | BRAIN |
-|---|---|---|---|---|---|---|
-| §1 Before Coding | ✅ | ✅ | ❌ | ✅ | ❌ | ❌ |
-| §2 During Coding | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ |
-| §3 After Coding / Build | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ |
-| §3.1 App Publish Checklist | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ |
-| §3.1.6 SPA Refresh Fix | ✅ | ❌ | ✅ | ❌ | ❌ | ❌ |
-| §4 Command Execution | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ |
-| §5 Design Patterns | ✅ | ❌ | ❌ | ✅ | ❌ | ❌ |
-| §6 Business Logic | ✅ | ❌ | ✅ | ❌ | ✅ | ❌ |
-| §7 Error Quick-Fix | ❌ | ❌ | ✅ | ❌ | ❌ | ❌ |
-| §8 Auto-Queue Chains | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ |
-| §9 Proactive Checklist | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ |
-| §10 Cross-Project Migration | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ |
-| §11 TypeScript Standard | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
-| §12 F&B Aesthetic | ✅ (F&B only) | ❌ | ❌ | ✅ (F&B only) | ❌ | ❌ |
-| §13 CVE Reflective Loop | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ |
-| §14 Cross-Device Safety | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ |
+| Section                     | APP           | WEBSITE | BUG FIX | DESIGN        | ADMIN | BRAIN |
+| --------------------------- | ------------- | ------- | ------- | ------------- | ----- | ----- |
+| §1 Before Coding            | ✅            | ✅      | ❌      | ✅            | ❌    | ❌    |
+| §2 During Coding            | ✅            | ✅      | ✅      | ✅            | ❌    | ❌    |
+| §3 After Coding / Build     | ✅            | ✅      | ✅      | ❌            | ❌    | ❌    |
+| §3.1 App Publish Checklist  | ✅            | ✅      | ❌      | ❌            | ❌    | ❌    |
+| §3.1.6 SPA Refresh Fix      | ✅            | ❌      | ✅      | ❌            | ❌    | ❌    |
+| §4 Command Execution        | ✅            | ✅      | ✅      | ❌            | ❌    | ❌    |
+| §5 Design Patterns          | ✅            | ❌      | ❌      | ✅            | ❌    | ❌    |
+| §6 Business Logic           | ✅            | ❌      | ✅      | ❌            | ✅    | ❌    |
+| §7 Error Quick-Fix          | ❌            | ❌      | ✅      | ❌            | ❌    | ❌    |
+| §8 Auto-Queue Chains        | ✅            | ✅      | ❌      | ❌            | ❌    | ❌    |
+| §9 Proactive Checklist      | ✅            | ✅      | ❌      | ❌            | ❌    | ❌    |
+| §10 Cross-Project Migration | ❌            | ❌      | ❌      | ❌            | ❌    | ✅    |
+| §11 TypeScript Standard     | ✅            | ❌      | ❌      | ❌            | ❌    | ❌    |
+| §12 F&B Aesthetic           | ✅ (F&B only) | ❌      | ❌      | ✅ (F&B only) | ❌    | ❌    |
+| §13 CVE Reflective Loop     | ❌            | ❌      | ❌      | ❌            | ❌    | ✅    |
+| §14 Cross-Device Safety     | ❌            | ❌      | ❌      | ❌            | ❌    | ✅    |
 
 #### 7.3.3 Section Tag Matrix — evolving_knowledge.md
 
-| Section | APP | WEBSITE | BUG FIX | DESIGN | ADMIN | BRAIN |
-|---|---|---|---|---|---|---|
-| §0 Prime Directive | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| §1 Chat Scanner | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ |
-| §2 Intent Classifier | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
-| §3 Project Fingerprinting | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ |
-| §4 Predictive Auto-Queue | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ |
-| §5 Workflow State Machine | ✅ | ✅ | ❌ | ❌ | ❌ | ✅ |
-| §6 Scoring Engine (ADPRS) | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ |
-| §7 Knowledge Maintenance | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ |
-| §8 Self-Improvement | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ |
-| §9 Emergency Protocols | ✅ | ✅ | ✅ | ❌ | ❌ | ✅ |
-| §10 V10 Vault | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ |
-| §11.1 Partner Confidence | ✅ | ✅ | ❌ | ❌ | ❌ | ✅ |
-| §11.2 Mission Execution | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ |
-| §11.3 Strategic Proposing | ❌ | ❌ | ❌ | ✅ | ❌ | ❌ |
-| §11.4 DNA Migration | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ |
-| §11.5 Unified Pipeline | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ |
-| §11.6 Client Intelligence | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
-| §11.7 Agent Hierarchy | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ |
-| §11.8 Health Audits | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ |
-| §11.9 Session Continuity | ✅ | ✅ | ❌ | ❌ | ❌ | ✅ |
-| §11.10 Emergency (V11) | ✅ | ✅ | ✅ | ❌ | ❌ | ✅ |
-| §11.11 Design Vault | ❌ | ❌ | ❌ | ✅ | ❌ | ❌ |
-| §11.12 Design Research | ❌ | ❌ | ❌ | ✅ | ❌ | ❌ |
+| Section                   | APP | WEBSITE | BUG FIX | DESIGN | ADMIN | BRAIN |
+| ------------------------- | --- | ------- | ------- | ------ | ----- | ----- |
+| §0 Prime Directive        | ✅  | ✅      | ✅      | ✅     | ✅    | ✅    |
+| §1 Chat Scanner           | ❌  | ❌      | ❌      | ❌     | ❌    | ✅    |
+| §2 Intent Classifier      | ✅  | ✅      | ✅      | ✅     | ✅    | ❌    |
+| §3 Project Fingerprinting | ✅  | ✅      | ❌      | ❌     | ❌    | ❌    |
+| §4 Predictive Auto-Queue  | ✅  | ✅      | ❌      | ❌     | ❌    | ❌    |
+| §5 Workflow State Machine | ✅  | ✅      | ❌      | ❌     | ❌    | ✅    |
+| §6 Scoring Engine (ADPRS) | ❌  | ❌      | ❌      | ❌     | ❌    | ✅    |
+| §7 Knowledge Maintenance  | ❌  | ❌      | ❌      | ❌     | ❌    | ✅    |
+| §8 Self-Improvement       | ❌  | ❌      | ❌      | ❌     | ❌    | ✅    |
+| §9 Emergency Protocols    | ✅  | ✅      | ✅      | ❌     | ❌    | ✅    |
+| §10 V10 Vault             | ❌  | ❌      | ❌      | ❌     | ❌    | ✅    |
+| §11.1 Partner Confidence  | ✅  | ✅      | ❌      | ❌     | ❌    | ✅    |
+| §11.2 Mission Execution   | ✅  | ✅      | ❌      | ❌     | ❌    | ❌    |
+| §11.3 Strategic Proposing | ❌  | ❌      | ❌      | ✅     | ❌    | ❌    |
+| §11.4 DNA Migration       | ❌  | ❌      | ❌      | ❌     | ❌    | ✅    |
+| §11.5 Unified Pipeline    | ✅  | ✅      | ❌      | ❌     | ❌    | ❌    |
+| §11.6 Client Intelligence | ✅  | ✅      | ✅      | ✅     | ✅    | ❌    |
+| §11.7 Agent Hierarchy     | ❌  | ❌      | ❌      | ❌     | ❌    | ✅    |
+| §11.8 Health Audits       | ✅  | ✅      | ❌      | ❌     | ❌    | ❌    |
+| §11.9 Session Continuity  | ✅  | ✅      | ❌      | ❌     | ❌    | ✅    |
+| §11.10 Emergency (V11)    | ✅  | ✅      | ✅      | ❌     | ❌    | ✅    |
+| §11.11 Design Vault       | ❌  | ❌      | ❌      | ✅     | ❌    | ❌    |
+| §11.12 Design Research    | ❌  | ❌      | ❌      | ✅     | ❌    | ❌    |
 
 #### 7.3.4 Section Tag Matrix — Other Files
 
-| File | APP | WEBSITE | BUG FIX | DESIGN | ADMIN |
-|---|---|---|---|---|---|
-| app_creation_masterplan.md | ✅ | ❌ | ❌ | ❌ | ❌ |
-| unified_app_blueprint.md | ✅ | ❌ | ❌ | ❌ | ❌ |
-| website_design_dna.md | ❌ | ✅ | ❌ | ✅ | ❌ |
-| typescript_pinia_standard.md | ✅ | ❌ | ❌ | ❌ | ❌ |
-| design_research_engine.md | ❌ | ❌ | ❌ | ✅ | ❌ |
-| design_vault/README.md | ❌ | ❌ | ❌ | ✅ | ❌ |
-| design_vault/theme-system.md | ✅ | ✅ | ❌ | ✅ | ❌ |
-| clients/*.md | ✅ | ✅ | ✅ | ✅ | ✅ |
-| score_ledger.md | ❌ | ❌ | ❌ | ❌ | ✅ (brain) |
-| brain_status.md | ❌ | ❌ | ❌ | ❌ | ✅ (brain) |
+| File                         | APP | WEBSITE | BUG FIX | DESIGN | ADMIN      |
+| ---------------------------- | --- | ------- | ------- | ------ | ---------- |
+| app_creation_masterplan.md   | ✅  | ❌      | ❌      | ❌     | ❌         |
+| unified_app_blueprint.md     | ✅  | ❌      | ❌      | ❌     | ❌         |
+| website_design_dna.md        | ❌  | ✅      | ❌      | ✅     | ❌         |
+| typescript_pinia_standard.md | ✅  | ❌      | ❌      | ❌     | ❌         |
+| design_research_engine.md    | ❌  | ❌      | ❌      | ✅     | ❌         |
+| design_vault/README.md       | ❌  | ❌      | ❌      | ✅     | ❌         |
+| design_vault/theme-system.md | ✅  | ✅      | ❌      | ✅     | ❌         |
+| clients/\*.md                | ✅  | ✅      | ✅      | ✅     | ✅         |
+| score_ledger.md              | ❌  | ❌      | ❌      | ❌     | ✅ (brain) |
+| brain_status.md              | ❌  | ❌      | ❌      | ❌     | ✅ (brain) |
 
 #### 7.3.5 Token Savings Estimate
 
-| Reading Method | Tokens Per Session | Sections Read |
-|---|---|---|
-| V8: Read ALL files fully | ~8,000-12,000 | 100% of everything |
-| V11: Selective loading | ~2,500-4,000 | Only matching sections |
-| **Savings** | **~60-70% fewer tokens** | **Read 30-40% of content** |
+| Reading Method           | Tokens Per Session       | Sections Read              |
+| ------------------------ | ------------------------ | -------------------------- |
+| V8: Read ALL files fully | ~8,000-12,000            | 100% of everything         |
+| V11: Selective loading   | ~2,500-4,000             | Only matching sections     |
+| **Savings**              | **~60-70% fewer tokens** | **Read 30-40% of content** |
 
 #### 7.3.6 Implementation Rule
 
@@ -1030,9 +1030,10 @@ Previous: V6.0 (basic evolution, no chat scanning)
 > **Core Insight**: "Websites and apps share 90% of the same structural layout design; they only differ slightly in content display."
 
 When analyzing user requests, apply the **Structural Overlap Protocol**:
+
 1. **Identify the Delta**: Note when the user asks to modify a layout part (e.g., standardizing a 2x2 grid, forcing a vertical stack on mobile navigation, adjusting a hero section banner).
 2. **The 2nd/3rd Time Rule**: If the AI is asked to make a similar structural or layout change a 2nd or 3rd time across any conversation or project, consider that design pattern **CONFIRMED**.
-3. **Auto-Record to DNA**: Immediately extract that confirmed structural pattern and save it to `user_preference_dna.md` or as a Universal Pattern in the Auto-Queue. 
+3. **Auto-Record to DNA**: Immediately extract that confirmed structural pattern and save it to `user_preference_dna.md` or as a Universal Pattern in the Auto-Queue.
 4. **Result**: The AI becomes "smarter" by pre-applying these confirmed structural layouts to all future apps/websites without waiting for the user to ask, significantly reducing repetitive chat requests.
 
 ---
@@ -1322,6 +1323,7 @@ AI internally:
 #### 11.7.1 Gemini = Primary Agent (95% of work)
 
 Gemini handles EVERYTHING:
+
 - Design generation (Google Stitch)
 - UI/UX coding (Vue + Tailwind + Pinia)
 - Design research (Mobbin, Awwwards, cloning tools)
@@ -1335,6 +1337,7 @@ Gemini handles EVERYTHING:
 #### 11.7.2 Claude = Specialist (On-Demand Only)
 
 Claude is called for:
+
 - Complex multi-file debugging (when Gemini is stuck)
 - Deep architecture refactoring
 - Brain system upgrades (like today's V11 + ADPRS V4.1)
@@ -1342,16 +1345,16 @@ Claude is called for:
 
 #### 11.7.3 Knowledge Ownership
 
-| What | Owner | Location |
-|---|---|---|
-| Brain system | **Gemini** | `.gemini/antigravity/knowledge/` |
-| Skills library | **Gemini** | `.gemini/antigravity/skills/` |
-| Client profiles | **Gemini** | `.gemini/antigravity/clients/` |
-| Score ledger | **Gemini** | `.gemini/.../score_ledger.md` |
-| Brain status | **Gemini** | `.gemini/.../brain_status.md` |
-| V10 vault | **Shared** | `.gemini/.../v10_evolution_vault.md` |
-| Design research | **Gemini** | `.gemini/.../design_research_engine.md` |
-| Claude memory | Claude only | `.claude/projects/*/memory/` (read-only reference for Gemini) |
+| What            | Owner       | Location                                                      |
+| --------------- | ----------- | ------------------------------------------------------------- |
+| Brain system    | **Gemini**  | `.gemini/antigravity/knowledge/`                              |
+| Skills library  | **Gemini**  | `.gemini/antigravity/skills/`                                 |
+| Client profiles | **Gemini**  | `.gemini/antigravity/clients/`                                |
+| Score ledger    | **Gemini**  | `.gemini/.../score_ledger.md`                                 |
+| Brain status    | **Gemini**  | `.gemini/.../brain_status.md`                                 |
+| V10 vault       | **Shared**  | `.gemini/.../v10_evolution_vault.md`                          |
+| Design research | **Gemini**  | `.gemini/.../design_research_engine.md`                       |
+| Claude memory   | Claude only | `.claude/projects/*/memory/` (read-only reference for Gemini) |
 
 **Rule**: Gemini must be able to operate at 100% capacity without Claude. All tools, resources, research abilities, and design intelligence live in Gemini's knowledge files.
 
@@ -1496,12 +1499,12 @@ At next session start → resume from saved wave, not from scratch.
 
 AI MUST save a component to the vault when ANY of these happen:
 
-| Trigger | Action |
-|---|---|
-| User says "love it" / "perfect" / "好看" / "exactly what I wanted" | Save immediately |
-| D11 (Aesthetic) + D12 (Satisfaction) combined ≥ 95 | Save at session end |
-| Same component pattern used successfully in 3+ projects | Auto-promote + save |
-| User explicitly says "save this" / "记住这个设计" | Save immediately |
+| Trigger                                                            | Action              |
+| ------------------------------------------------------------------ | ------------------- |
+| User says "love it" / "perfect" / "好看" / "exactly what I wanted" | Save immediately    |
+| D11 (Aesthetic) + D12 (Satisfaction) combined ≥ 95                 | Save at session end |
+| Same component pattern used successfully in 3+ projects            | Auto-promote + save |
+| User explicitly says "save this" / "记住这个设计"                  | Save immediately    |
 
 #### 11.11.2 Save Format
 
@@ -1509,19 +1512,24 @@ Every vault entry must include:
 
 ```markdown
 # {Component Name}
+
 > Score: {number} | Source: {project} | Description: {1-line}
 > Reuse: {when to use this} | Customize: {what to change}
 
 ## Dependencies
+
 {imports needed}
 
 ## Customize These
+
 {list of things to swap: colors, text, icons, data fields}
 
 ## Full Code
+
 {complete <template> + <script> + <style> — working, copy-paste ready}
 
 ## Required CSS
+
 {any custom classes not in Tailwind}
 ```
 
@@ -1545,6 +1553,7 @@ DECISION:
 
 **Anti-Overuse**: If same vault item used 3+ times recently → force fresh design even if match > 55%.
 **Logging**: Every vault decision logged to `score_ledger.md`:
+
 ```
 [VAULT-USE]  {date} | {item} | {project} | match: X% | USED
 [VAULT-SKIP] {date} | {item} | {project} | match: X% | SKIPPED → created fresh
@@ -1563,12 +1572,14 @@ DECISION:
 > The vault is a FOUNDATION, not a FINAL DESIGN. AI must evolve, not copy blindly.
 
 **WHEN TO USE VAULT (Green Light)**:
+
 - Functional components that don't need visual uniqueness (stepper, empty state, menu row)
 - Internal/admin pages where speed > creativity
 - Repeated patterns across same client's apps (same brand = same components)
 - Starting point for a new design (copy → then customize 30%+ for the project)
 
 **WHEN TO NOT USE VAULT (Red Light)**:
+
 - Hero sections — every project deserves a unique hero. ALWAYS research first.
 - Landing pages — these are the "face" of the app. Must be fresh.
 - When the same vault component has been used 3+ times in recent projects → force new design
@@ -1576,6 +1587,7 @@ DECISION:
 - When building for a NEW client — research their industry first, vault second
 
 **MANDATORY FRESHNESS RULE**:
+
 - For every 3 vault reuses, AI must create 1 completely NEW design (researched from Mobbin/Awwwards)
 - New designs that score 95+ get ADDED to vault — this is how the vault evolves
 - Vault is not static. Old entries that haven't been used in 5+ projects get reviewed
@@ -1589,11 +1601,11 @@ DECISION:
 
 #### 11.11.6 Token Savings Math
 
-| Method | Tokens Used | Time |
-|---|---|---|
-| Rebuild from scratch | ~500-1000 tokens (think + generate) | 2-5 min |
-| Copy from vault + customize | ~50 tokens (find + replace text) | 10 sec |
-| **Savings per reuse** | **~90% fewer tokens** | **95% faster** |
+| Method                      | Tokens Used                         | Time           |
+| --------------------------- | ----------------------------------- | -------------- |
+| Rebuild from scratch        | ~500-1000 tokens (think + generate) | 2-5 min        |
+| Copy from vault + customize | ~50 tokens (find + replace text)    | 10 sec         |
+| **Savings per reuse**       | **~90% fewer tokens**               | **95% faster** |
 
 Over 10 projects with 5 reusable components each = **~25,000 tokens saved**.
 
@@ -1606,6 +1618,7 @@ Over 10 projects with 5 reusable components each = **~25,000 tokens saved**.
 **Core Rule**: AI must NEVER design from scratch when better references exist online. In 2026, thousands of designers create beautiful websites daily. AI should LEARN from them.
 
 **Before any design task, AI must**:
+
 1. Search Mobbin/Awwwards/Godly for same app category
 2. Study top 3 references → extract design DNA (colors, fonts, spacing, layout, animations)
 3. Use Google Stitch or component libraries (Magic UI, Aceternity, Shadcn) to accelerate
