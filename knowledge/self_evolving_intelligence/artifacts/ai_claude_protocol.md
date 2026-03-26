@@ -11,8 +11,10 @@
 
 When the user types **"ai claude"**, the Antigravity Agent MUST immediately:
 
-1.  **Scope Restricted**: Claude-Code Mode is **ONLY** active when creating or updating **Admin Panels**.
-2.  **App/Website Disengagement**: If the current task is a website or a standard application, **ABORT** Claude-Code framework usage and revert to the standard Antigravity V12 High-End (Tailwind CSS) protocol.
+1.  **Strict Scope**: Claude-Code Mode is **ONLY** for **Admin Panels**.
+2.  **Binary Switch**:
+    - **If Admin**: Use ONLY `claude-code` directory skills. Ignore DNA and other knowledge.
+    - **If Website/App**: **ABORT** Claude-Code mode. Use Antigravity V12 (Tailwind) and full DNA/Knowledge access.
 3.  **Index all sub-skills** in the `claude-code` directory.
 4.  **Static Execution**: Follow the logic exactly as written. Do not suggest "improvements" or "modernizations" unless they are explicitly in the skill.
 5.  **No-Learning Guard (Skills)**: Disable all auto-updates to the files in `.gemini\antigravity\skills\claude-code\`.
