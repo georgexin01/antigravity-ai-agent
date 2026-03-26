@@ -143,20 +143,21 @@ AI reads this BEFORE generating any design to pre-filter patterns. Built from ap
 
 ## Communication Style
 
-| Trait                   | Pattern                                                      | Confidence |
-| ----------------------- | ------------------------------------------------------------ | ---------- |
-| **Language**            | Mixed English + Chinese. Casual, short sentences.            | High       |
-| **Business Scope**      | AI must notice "Branches", "Partners", and "Corporate Scale" | S-CORE     |
-| **Approval**            | "nice", "correct", "可以", "好", "not bad"                   | High       |
-| **Rejection**           | "ugly", "不好看", "重做", "i dont like"                      | High       |
-| **Revert**              | "before is good", "之前的好", "undo"                         | High       |
-| **Tweak**               | "just change abit", "改一下"                                 | High       |
-| **Typos**               | Common — AI must parse intent, not spelling                  | High       |
-| **Malay**               | "boleh", "ok la", "can" = casual approval                    | Medium     |
-| **Execution**           | Silent, backgrounded, no pop-ups                             | High       |
-| **Permission**          | Auto-proceed for non-destructive actions                     | High       |
-| **V9: Scope expansion** | "also", "and then", "还有" = AI should have predicted        | High       |
-| **V9: Future intent**   | "later", "next time" = save for next session                 | High       |
+| Trait                   | Pattern                                                            | Confidence |
+| ----------------------- | ------------------------------------------------------------------ | ---------- |
+| **Language**            | Mixed English + Chinese. Casual, short sentences.                  | High       |
+| **Business Scope**      | AI must notice "Branches", "Partners", and "Corporate Scale"       | S-CORE     |
+| **Approval**            | "nice", "correct", "可以", "好", "not bad"                         | High       |
+| **Rejection**           | "ugly", "不好看", "重做", "i dont like"                            | High       |
+| **Revert**              | "before is good", "之前的好", "undo"                               | High       |
+| **Tweak**               | "just change abit", "改一下"                                       | High       |
+| **Typos**               | Common — AI must parse intent, not spelling                        | High       |
+| **Malay**               | "boleh", "ok la", "can" = casual approval                          | Medium     |
+| **Execution**           | Silent, backgrounded, no pop-ups                                   | High       |
+| **Permission**          | Auto-proceed for non-destructive actions                           | High       |
+| **V9: Scope expansion** | "also", "and then", "还有" = AI should have predicted              | High       |
+| **V9: Future intent**   | "later", "next time" = save for next session                       | High       |
+| **AI Claude Trigger**   | "ai claude" = Switch to Claude-Code focus (Read Only, No-Learning) | S-CORE     |
 
 **Key insight**: Short responses = real opinion. "nice" = +8. Don't wait for long praise.
 
@@ -166,22 +167,23 @@ AI reads this BEFORE generating any design to pre-filter patterns. Built from ap
 
 > These patterns appear in 3+ projects. Apply to ALL new projects automatically.
 
-| Pattern                   | Implementation                                   | Score | Projects Found In                 |
-| ------------------------- | ------------------------------------------------ | ----- | --------------------------------- |
-| OTP auth flow             | Phone → OTP → verify → home redirect             | 95    | lee-ming, travel, ld-floor, poker |
-| 540px container           | `max-w-[540px] mx-auto min-h-screen`             | 95    | ALL 4 Vue apps                    |
-| Bottom tab nav            | Fixed bottom, 4 tabs, active indicator           | 95    | ALL 4 Vue apps                    |
-| Fixed header/nav          | 56px header + 60px bottom nav                    | 92    | ALL 4 Vue apps                    |
-| localStorage auth         | `localStorage.setItem('user', JSON.stringify())` | 95    | ALL 4 Vue apps                    |
-| WhatsApp CTA              | `wa.me/[number]` floating button                 | 90    | lee-ming, travel, ld-floor        |
-| Toast notifications       | Auto-dismiss 3s, color-coded, teleport           | 88    | lee-ming, travel, poker           |
-| Product card grid         | 2-col grid, image + name + price                 | 88    | lee-ming, travel, ld-floor        |
-| Vue 3 Composition API     | `<script setup>` + ref + computed                | 95    | ALL 4 Vue apps                    |
-| Tailwind v4 native        | `@tailwindcss/vite` plugin, no PostCSS           | 88    | lee-ming-v2, poker                |
-| Plus Jakarta Sans         | Primary font for all mobile apps                 | 88    | lee-ming, travel                  |
-| Active touch feedback     | `active:scale-[0.97]` on buttons                 | 92    | ALL 4 Vue apps                    |
-| Design tokens as CSS vars | `--color-primary: #xxx` before components        | 90    | ALL projects                      |
-| Rewards & Loyalty Module | Points + Tiers + Badges (B2C Standard)           | S-CORE | V11 Reward Mode                   |
+| Pattern                   | Implementation                                   | Score  | Projects Found In                 |
+| ------------------------- | ------------------------------------------------ | ------ | --------------------------------- |
+| OTP auth flow             | Phone → OTP → verify → home redirect             | 95     | lee-ming, travel, ld-floor, poker |
+| 540px container           | `max-w-[540px] mx-auto min-h-screen`             | 95     | ALL 4 Vue apps                    |
+| Bottom tab nav            | Fixed bottom, 4 tabs, active indicator           | 95     | ALL 4 Vue apps                    |
+| Fixed header/nav          | 56px header + 60px bottom nav                    | 92     | ALL 4 Vue apps                    |
+| localStorage auth         | `localStorage.setItem('user', JSON.stringify())` | 95     | ALL 4 Vue apps                    |
+| WhatsApp CTA              | `wa.me/[number]` floating button                 | 90     | lee-ming, travel, ld-floor        |
+| Toast notifications       | Auto-dismiss 3s, color-coded, teleport           | 88     | lee-ming, travel, poker           |
+| Product card grid         | 2-col grid, image + name + price                 | 88     | lee-ming, travel, ld-floor        |
+| Vue 3 Composition API     | `<script setup>` + ref + computed                | 95     | ALL 4 Vue apps                    |
+| Tailwind v4 native        | `@tailwindcss/vite` plugin, no PostCSS           | 88     | lee-ming-v2, poker                |
+| Plus Jakarta Sans         | Primary font for all mobile apps                 | 88     | lee-ming, travel                  |
+| Active touch feedback     | `active:scale-[0.97]` on buttons                 | 92     | ALL 4 Vue apps                    |
+| Design tokens as CSS vars | `--color-primary: #xxx` before components        | 90     | ALL projects                      |
+| **AI Claude Mode**        | **Full-Session Focus on `claude-code` Skills**   | S-CORE | Trigger: `ai claude`              |
+| Rewards & Loyalty Module  | Points + Tiers + Badges (B2C Standard)           | S-CORE | V11 Reward Mode                   |
 
 ---
 
@@ -235,6 +237,7 @@ AI reads this BEFORE generating any design to pre-filter patterns. Built from ap
 > **Rule**: For every "new project" or "app/website update", the AI must automatically initialize using the latest version of the **[App Creation Masterplan](file:///C:/Users/User/.gemini/antigravity/knowledge/tech_stack_mastery/artifacts/app_creation_masterplan.md)** and **[Partner Protocol](file:///C:/Users/User/.gemini/antigravity/knowledge/self_evolving_intelligence/artifacts/v11_partner_protocol.md)**.
 
 ### Operational Standards:
+
 - **Leading Edge**: Do not wait for step-by-step instructions. Deconstruct the mission into **Waves** and execute proactively.
 - **DNA Branding**: Auto-apply the "Cyber Luxury" or "High-Craft" logic based on the project's sector (F&B, Automotive, Corporate).
 - **Stitch Hierarchy**: All planning and execution must follow the **1.1–1.4 hierarchy** for structural integrity.
@@ -243,9 +246,9 @@ AI reads this BEFORE generating any design to pre-filter patterns. Built from ap
 
 ---
 
-| AI SYSTEM STATUS    | VERSION        | MODE            | CORE DIRECTIVE           |
-| ------------------- | -------------- | --------------- | ------------------------ |
-| **ANTIGRAVITY** | **v11+ (ACTIVE)** | **STRATEGIC PARTNER** | **LEAD & AUTO-OPTIMIZE** |
+| AI SYSTEM STATUS | VERSION           | MODE                  | CORE DIRECTIVE           |
+| ---------------- | ----------------- | --------------------- | ------------------------ |
+| **ANTIGRAVITY**  | **v11+ (ACTIVE)** | **STRATEGIC PARTNER** | **LEAD & AUTO-OPTIMIZE** |
 
 ---
 
