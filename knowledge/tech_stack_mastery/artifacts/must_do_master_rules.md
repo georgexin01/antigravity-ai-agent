@@ -21,7 +21,7 @@
 - [ ] **Pinia stores with CRUD** — Re-export types, soft-delete (isDelete toggle), version-based cache
 - [ ] **V9: Run Intent Classifier** — Detect project type → load fingerprint → predict full scope
 - [ ] **V9: Check Auto-Queue** — If resuming a project, check what was queued last session
-- [ ] **⚠️ CLAUDE MODE (NO DNA)** — When "ai claude" is written, **STOP** reading `user_preference_dna.md` or `user_taste_dna.md`. Stick strictly to `claude-code` skills.
+- [ ] **⚠️ CLAUDE MODE (ADMIN ONLY)** — Claude-Code Framework (Ant Design Vue + Supabase) is **ONLY** for **Admin Panels**. If the work is website or app related, **STOP** Claude-Code mode and use **Tailwind CSS + Vite + Vue 3 (V12)**.
 
 ## 2. DURING CODING (Every File)
 
