@@ -1,7 +1,20 @@
 # Unified App Blueprint — Vue 3 + Vite + Tailwind
 
 > **Replaces**: `mobile_app_creation_autopilot.md` + `vue3_mobile_app_blueprint.md`
-> **V2.0** — Consolidated, token-optimized. Same output quality, 60% fewer tokens.
+> **V2.1** — V13 Upgraded with triggers, gates, verification. 2026-03-27
+
+---
+
+## WHEN TO USE THIS FILE
+
+```
+Trigger:    task_type = APP (Vue 3 mobile/web app)
+Pre-check:  typescript_pinia_standard.md patterns understood
+Depends:    agent_core_protocol.md (execution sequence)
+            must_do_master_rules.md (phase gates)
+Next:       → Build views using §7 priority order
+            → Verify using must_do_master_rules.md Phase 3
+```
 
 ---
 
@@ -192,4 +205,53 @@ Auth pages: Full-screen gradient, centered logo, form card, safe-area padding.
 
 ---
 
-_Blueprint V2.0 — Consolidated from autopilot + vue3_blueprint (2026-03-19)_
+## 12. VERIFICATION CHECKLIST
+
+After building an app with this blueprint:
+
+```
+- [ ] Design tokens defined in style.css @theme (no hardcoded colors)
+- [ ] All routes in router/index.js (lazy-loaded, guards applied)
+- [ ] Data layer complete: types → dummy data → stores
+- [ ] App shell: Header (56px) + BottomNav (60px) + Container (540px)
+- [ ] ALL views production-ready (no skeletons, no TODOs)
+- [ ] localStorage persistence for auth, cart, locale
+- [ ] WhatsApp float on all B2B/B2C pages
+- [ ] npm run build passes with zero errors
+- [ ] Every route renders (no blank pages)
+```
+
+### WRONG / CORRECT Examples
+
+```javascript
+// WRONG — build views before data layer
+// Step 1: HomeView.vue  ← no data to display!
+
+// CORRECT — data layer first
+// Step 1: types/products.ts → Step 2: data/products.ts → Step 3: stores/products.ts → Step 4: views/Home.vue
+```
+
+```css
+/* WRONG — hardcoded color */
+.header { background: #8B1A1A; }
+
+/* CORRECT — design token */
+.header { background: var(--color-primary); }
+/* or with Tailwind: class="bg-primary" */
+```
+
+```javascript
+// WRONG — hash router
+import { createWebHashHistory } from 'vue-router'  // ← NEVER
+
+// CORRECT — clean URLs
+import { createWebHistory } from 'vue-router'  // ← ALWAYS
+```
+
+### Next Step
+→ Run `must_do_master_rules.md` Phase 3 verification chain
+→ Then Phase 4 publish checklist (if deploying)
+
+---
+
+_Blueprint V2.1 — V13 Upgraded with gates + verification (2026-03-27)_

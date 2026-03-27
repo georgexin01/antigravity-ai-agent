@@ -1,6 +1,19 @@
 # PWA & Offline-First Patterns
 
 > **PURPOSE**: Complete reference for converting any Vue/React web app into a Progressive Web App. Covers manifest, meta tags, icons, service workers, and fullscreen mode.
+> **V13 Upgraded**: 2026-03-27
+
+---
+
+## WHEN TO USE THIS FILE
+
+```
+Trigger:    task_type = APP or DEPLOY, AND project needs PWA
+            Also: must_do_master_rules.md Phase 3 Step 3.2 (auto-include check)
+Pre-check:  App is built and npm run build passes
+Depends:    App views complete, brand kit resolved ({{BRAND_COLOR}}, {{APP_NAME}})
+Next:       → must_do_master_rules.md Phase 4 (publish)
+```
 
 ---
 
@@ -212,3 +225,58 @@ export default {
 - PWA install available in Chrome, Edge
 - `display: standalone` works as desktop window
 - Different icon sizes needed (at least 192x192 and 512x512)
+
+---
+
+## 8. VERIFICATION CHECKLIST
+
+After applying PWA patterns:
+
+```
+- [ ] manifest.json exists in public/ with name, short_name, icons, display: standalone
+- [ ] index.html has: <link rel="manifest" href="/manifest.json">
+- [ ] Meta tags: theme-color, apple-mobile-web-app-capable, apple-mobile-web-app-status-bar-style
+- [ ] Favicon: SVG + ICO fallback + apple-touch-icon
+- [ ] Icons: at least 192x192 + 512x512 with maskable purpose
+- [ ] Service worker: sw.js in public/ (PROD only activation)
+- [ ] SPA fallback: .htaccess + _redirects + 404.html + catch-all route
+- [ ] viewport meta: width=device-width, viewport-fit=cover, user-scalable=no
+- [ ] CSS: overscroll-behavior: none, min-height: 100dvh, safe-area insets
+- [ ] Fullscreen: standalone display, no zoom on double-tap
+```
+
+### WRONG / CORRECT Examples
+
+```html
+<!-- WRONG — missing viewport-fit=cover (breaks on notch devices) -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- CORRECT — full viewport control -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+```
+
+```json
+// WRONG — missing maskable purpose (ugly icon on Android)
+{ "src": "/icons/icon-192x192.png", "sizes": "192x192" }
+
+// CORRECT — maskable for adaptive icons
+{ "src": "/icons/icon-192x192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" }
+```
+
+```javascript
+// WRONG — SW active in development (caching stale files during dev)
+navigator.serviceWorker.register('/sw.js')
+
+// CORRECT — PROD only
+if (import.meta.env.PROD) {
+  navigator.serviceWorker.register('/sw.js')
+}
+```
+
+### Next Step
+→ Run `must_do_master_rules.md` Phase 3 full verification chain
+→ Then Phase 4 publish checklist
+
+---
+
+_PWA Patterns V1.1 — V13 Upgraded with trigger, verification, WRONG/CORRECT (2026-03-27)_

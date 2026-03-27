@@ -1,7 +1,11 @@
 {
   "title": "Self-Evolving Intelligence & Auto-Optimization",
-  "summary": "Core logic for AI to autonomously study, learn, and optimize knowledge and skills based on user interaction history and task outcomes.",
-  "last_updated": "2026-03-05T14:06:00Z",
-  "version": "1.0.0",
-  "capabilities": ["Self-Study", "Auto-Optimization", "Recursive Learning"]
+  "summary": "Core logic for AI to autonomously study, learn, and optimize. V13 adds session_boot_sequence.md for deterministic startup.",
+  "last_updated": "2026-03-27T12:00:00Z",
+  "version": "2.0.0",
+  "v13_upgrade": "2026-03-27",
+  "capabilities": ["Self-Study", "Auto-Optimization", "Recursive Learning", "Deterministic Boot Sequence"],
+  "new_files": [
+    "session_boot_sequence.md — 5-step deterministic session startup protocol"
+  ]
 }

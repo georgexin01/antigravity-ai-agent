@@ -3,7 +3,19 @@
 > **Source**: Learned from `admin-panel-wms-v2` (user's production admin panel)
 > **Rule**: ALL future Vue app projects MUST follow this structure for types, stores, and data
 > **Database**: Supabase (future) — dummy data for now, structure must be Supabase-ready
-> **Created**: 2026-03-19
+> **Created**: 2026-03-19 | **V13 Upgraded**: 2026-03-27
+
+---
+
+## WHEN TO USE THIS FILE
+
+```
+Trigger:  task_type = APP or ADMIN, AND project has data entities
+Pre-check: Task classified via session_boot_sequence.md Step 3
+Depends:  None (this is the FIRST data-layer file to apply)
+Next:     → unified_app_blueprint.md (build order)
+          → must_do_master_rules.md Phase 2 (during coding rules)
+```
 
 ---
 
@@ -303,5 +315,55 @@ For implementation examples, study:
 
 ---
 
-_TypeScript + Pinia Standard V1.0 — Created 2026-03-19_
+## VERIFICATION CHECKLIST
+
+After applying this standard to a project:
+
+```
+- [ ] Every entity has: interface, FormValues, PageParams, StatusOptions
+- [ ] Every interface has: id (string), isDelete (boolean), createdAt, updatedAt
+- [ ] Stores re-export types: export * from '../types/{{ENTITY_LOWER}}'
+- [ ] Stores use soft-delete: isDelete toggle, never hard delete
+- [ ] Stores have version++ on every mutation
+- [ ] Dummy data matches interface exactly (no extra/missing fields)
+- [ ] Views import from stores (single import path)
+- [ ] No `deletedAt` anywhere — only `isDelete: boolean`
+- [ ] No number IDs — only string UUIDs
+- [ ] No number status codes — only string enums
+```
+
+### WRONG / CORRECT Examples
+
+```typescript
+// WRONG — deletedAt timestamp
+interface Product { deletedAt?: string | null }
+
+// CORRECT — isDelete boolean
+interface Product { isDelete: boolean }
+```
+
+```typescript
+// WRONG — number ID
+interface Product { id: number }
+
+// CORRECT — string UUID
+interface Product { id: string }
+```
+
+```typescript
+// WRONG — importing types directly in view
+import type { Product } from '../types/products'
+
+// CORRECT — importing from store (single source)
+import { useProductsStore, type Product } from '../stores/products'
+```
+
+### Next Step
+→ Create dummy data matching these types
+→ Then build views consuming these stores
+→ See `unified_app_blueprint.md` §2 for build order
+
+---
+
+_TypeScript + Pinia Standard V1.1 — V13 Upgraded (2026-03-27)_
 _Source: admin-panel-wms-v2 production patterns_

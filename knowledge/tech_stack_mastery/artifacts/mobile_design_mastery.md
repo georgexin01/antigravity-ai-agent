@@ -2,7 +2,20 @@
 
 > **Consolidated from**: mobile_adept_interaction_dna.md + mobile_app_design_dna.md + mobile_app_stored_samples.md
 > **Purpose**: Single file for ALL mobile design knowledge. Load when task = APP.
-> **Protocol ID**: ADEPT-V2-2026
+> **Protocol ID**: ADEPT-V2-2026 | **V13 Upgraded**: 2026-03-27
+
+---
+
+## WHEN TO USE THIS FILE
+
+```
+Trigger:    task_type = APP, AND building mobile-first UI
+Pre-check:  Design tokens defined (agent_core_protocol.md §4.3)
+            User taste loaded (user_taste_dna.md)
+Depends:    unified_app_blueprint.md (app structure exists)
+Next:       → Build views with these patterns applied
+            → Verify with must_do_master_rules.md Phase 3 Step 3.6
+```
 
 ---
 
@@ -68,5 +81,56 @@ Goal: Move beyond "responsive stacking" → achieve **Native App Feel** below 76
 
 ---
 
-_Mobile Design Mastery V2.0 — Consolidated (2026-03-19)_
+---
+
+## 4. VERIFICATION CHECKLIST
+
+After applying mobile design patterns:
+
+```
+- [ ] Container: max-w-[540px] mx-auto min-h-screen
+- [ ] Touch targets: all interactive elements ≥ 44px
+- [ ] Safe area: pb-[env(safe-area-inset-bottom)] on bottom nav
+- [ ] No horizontal scroll on any screen
+- [ ] Bottom nav: fixed, 60px, 4 tabs, active indicator
+- [ ] Header: fixed top, 56px, dynamic title, back button
+- [ ] Cards: rounded-xl + shadow + hover/active transitions
+- [ ] Modals: backdrop-blur + slide-up animation
+- [ ] Glassmorphism: bg-white/10 backdrop-blur-xl (where applicable)
+- [ ] Physics motion: cubic-bezier(0.16, 1, 0.3, 1) on transitions
+```
+
+### WRONG / CORRECT Examples
+
+```html
+<!-- WRONG — no safe area (content hidden behind notch) -->
+<nav class="fixed bottom-0 h-[60px]">
+
+<!-- CORRECT — safe area respected -->
+<nav class="fixed bottom-0 h-[60px] pb-[env(safe-area-inset-bottom)]">
+```
+
+```html
+<!-- WRONG — tiny touch target (hard to tap on mobile) -->
+<button class="px-2 py-1 text-sm">Delete</button>
+
+<!-- CORRECT — 44px minimum touch target -->
+<button class="min-h-[44px] min-w-[44px] px-4 py-3">Delete</button>
+```
+
+```css
+/* WRONG — desktop-first (then scramble to fix mobile) */
+.container { max-width: 1200px; }
+
+/* CORRECT — mobile-first (540px app container) */
+.container { max-width: 540px; margin: 0 auto; }
+```
+
+### Next Step
+→ Verify responsiveness via `must_do_master_rules.md` Phase 3 Step 3.6
+→ Check user_taste_dna.md alignment (LOVES dark gradients, glassmorphism)
+
+---
+
+_Mobile Design Mastery V2.1 — V13 Upgraded with trigger, verification, WRONG/CORRECT (2026-03-27)_
 _Merged: mobile_adept_interaction_dna + mobile_app_design_dna + mobile_app_stored_samples_

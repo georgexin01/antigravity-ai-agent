@@ -1,233 +1,328 @@
-# Must-Do Master Rules V12.0 — Mandatory Checklist (Global Harvest)
+# Must-Do Master Rules V13.0 — Sequential Execution Checklist
 
-> **PURPOSE**: V12.0 SITE & FLOW frameworks for high-end design consistency.
-> **V12.0**: Integrated Video Lessons (Sandy Lee, Viktor Oddy, Global Playlist).
-> **Upgraded**: 2026-03-24
+> **PURPOSE**: Step-by-step execution gates. AI MUST follow this sequence.
+> **V13.0**: Rewritten with Claude Skills DNA — each rule has trigger, action, and verification.
+> **Upgraded**: 2026-03-27
 
 ---
 
-## 1. BEFORE CODING (Every Project)
+## HOW TO USE THIS FILE
 
-- [ ] **Read reference project** — Study FULL source code if user mentions a reference
-- [ ] **Read user_preference_dna.md** — Apply learned taste BEFORE generating any design
-- [ ] **Check skill_path_router.md** — Load ONLY relevant skills for this task type
-- [ ] **⚠️ INSPIRATION CLEANING** — Before using a reference image, ensure it has a pure black background and simplified structure (no "slop").
-- [ ] **⚠️ BRAND KIT FIRST** — Extract or request Brand Kit (Colors, Fonts, Assets) before any UI work.
-- [ ] **⚠️ DESIGN RESEARCH FIRST** — Before any UI, search Mobbin/Awwwards/Godly for same app category. Study top 3. Clone if reference URL given. Use Stitch/Magic UI to accelerate. NEVER design from scratch. (See `design_research_engine.md`)
-- [ ] **Infer missing requirements** — Don't ask questions you can answer by studying context
-- [ ] **Plan all pages first** — List every route before writing any code
-- [ ] **TypeScript types FIRST** — Define Entity, FormValues, PageParams, StatusOptions BEFORE any UI (see `typescript_pinia_standard.md`)
-- [ ] **Dummy data with audit fields** — Every record: `id`, `isDelete: boolean`, `createdAt`, `updatedAt`
-- [ ] **Pinia stores with CRUD** — Re-export types, soft-delete (isDelete toggle), version-based cache
-- [ ] **V9: Run Intent Classifier** — Detect project type → load fingerprint → predict full scope
-- [ ] **V9: Check Auto-Queue** — If resuming a project, check what was queued last session
-- [x] **⚠️ AUTO-DEV-RUN** — When first time generating and finishing a new app, **ALWAYS** run `npm run dev` once automatically to verify the build and show the result.
-- [x] **⚠️ CLAUDE MODE (ADMIN ONLY)** — Claude-Code Framework (Ant Design Vue + Supabase) is **STRICTLY** for **Admin Panels**.
-  - **Logic**: Use ONLY `claude-code` skills and knowledge. **STOP** reading DNA or other skills.
-- [x] **⚠️ APP/WEBSITE PROTOCOL (V12)** — For standard Apps or Websites, **DISABLE** Claude-Code mode.
-  - **Logic**: Use V12 High-End Protocol (Tailwind CSS + Vue 3 + Pinia). Use DNA for style guidance.
+This file is a **sequential gate system**. Each phase BLOCKS the next phase.
+- Phase 1 (BEFORE) must complete before Phase 2 (DURING)
+- Phase 2 (DURING) must complete before Phase 3 (AFTER)
+- If any REQUIRED gate fails → STOP and resolve before continuing
 
-## 2. DURING CODING (Every File)
+---
 
-- [ ] **Design tokens first** — NEVER hardcode hex colors or font names in components
-- [ ] **Complete data entry** — Enter ALL products/items in one go. No "TODO" placeholders
-- [ ] **Complete views** — Every page PRODUCTION-READY when created. No skeleton pages
-- [ ] **Chinese language** — If app is Chinese, ALL UI text in 简体中文. No mixed English labels
-- [ ] **WhatsApp integration** — Add floating button + wa.me link for every B2B/B2C app
-- [ ] **SVG icons only** — NEVER use emoji in UI. Use inline SVG (Lucide style)
-- [ ] **Mobile-first** — 540px container, bottom nav, 44px touch targets, safe-area insets
-- [ ] **localStorage persistence** — Auth, cart, orders, locale — all must survive refresh
-- [ ] **⚠️ CLEAN URLs (NO HASH)** — ALWAYS `createWebHistory()`. NEVER `createWebHashHistory()`. Add `.htaccess` + `_redirects` + `spaFallback()` plugin (see §3.1.6)
-- [ ] **V9: Chain completion** — If building page A, and page A links to B/C, build B/C too
-- [ ] **V9: Connect everything** — Store ↔ views ↔ router ↔ nav must all be connected
+## PHASE 1: BEFORE CODING (Gates — Must Pass Before Writing Any Code)
 
-## 3. AFTER CODING (Every Build)
+### Gate 1.1: Task Classification
+```
+Action:   Classify task type (see agent_core_protocol.md §1)
+Output:   task_type = "admin" | "app" | "website" | "design" | "bugfix" | "enhancement"
+Gate:     If task_type = "admin" → load ONLY claude-code/ skills, SKIP all design DNA
+          If task_type = "bugfix" → jump to Error Recovery (agent_core_protocol.md §6)
+          Otherwise → continue to Gate 1.2
+```
 
-- [ ] **⚠️ BUILD TIMING (MASTER RULE)** — `npm run build` / `npm run dev` ONLY after ALL files are written. NEVER mid-creation. Finish everything first, build once at the end.
-- [ ] **`npm run build` must pass** — Zero errors before presenting
-- [ ] **Figma Flow**: Micro-adjustments (1-3px) on every hover. Nothing should be static.
-- [ ] **Animation Spells**: Inject shooting stars, kinetic borders, or liquid typography per [Senior Designer Protocol](file:///C:/Users/User/.gemini/antigravity/knowledge/tech_stack_mastery/artifacts/senior_designer_protocol.md).
-- [ ] **Gradient Blend Hack**: Use gradients to blend video backgrounds perfectly into the black page base.
-- [ ] **Seamless Loops**: Verify video backgrounds have zero-jump loop continuity.
-- [ ] **Typography**: Pair H1 titles with a large, low-opacity (0.05) background symbol or gradient character.
-- [ ] **Test all routes** — Every page must render (no blank pages)
-- [ ] **Auth flow complete** — Login → OTP → Home works end-to-end
-- [ ] **Back navigation works** — router.back() with fallback to home
-- [ ] **Cart badge updates** — Real-time count in header
-- [ ] **V9: Run proactive checklist** — See Section 9 below
+### Gate 1.2: Context Loading
+```
+Action:   Read these files (parallel, not sequential):
+          - user_preference_dna.md → extract taste scores ≥ 90
+          - skill_path_router.md → identify which skills match task_type
+          - Reference project (if user mentioned one) → study FULL source
+Verify:   List loaded context items. If reference project given but not read → STOP
+```
 
-## 3.1 APP PUBLISH CHECKLIST (⚠️ MANDATORY — Every App Build/Create/Update)
+### Gate 1.3: Brand Kit
+```
+Trigger:  Any UI task (app, website, design)
+Action:   Extract or request: primary color, secondary color, font family, logo
+Source:   Check existing files first (index.html, theme.css, tailwind.config)
+          If not found → ask user ONE question: "What's your brand color and font?"
+          If user doesn't respond → use professional defaults (blue #3b82f6, Inter)
+Gate:     Brand Kit must be resolved before ANY component code is written
+```
 
-> These items are **100% MUST INCLUDE** on every `npm run build` for any app.
-> **Smart Detection**: AI must check if these already exist in the project (search `index.html`, `public/`, `main.js`). If missing → add them. If exist → maintain/optimize.
-> Non-negotiable. AI must auto-apply ALL of these without being asked.
+### Gate 1.4: Design Research
+```
+Trigger:  New app or website (not bugfix, not admin)
+Action:   If reference URL given → clone structure and style
+          If reference image given → clean background, extract layout
+          If neither → search Mobbin/Awwwards for same category, study top 3
+Output:   Design direction decided. Layout structure defined
+WRONG:    Designing from scratch without any reference
+CORRECT:  Always start from proven patterns, then customize
+```
 
-### 3.1.1 META DETAILS (Auto-Research)
+### Gate 1.5: Inspiration Cleaning
+```
+Trigger:  User provides reference image for design
+Action:   Before using, verify: pure black background, simplified structure
+          Remove "slop" (noisy elements, watermarks, cluttered backgrounds)
+Gate:     Clean reference ready before extracting patterns
+```
 
-- [ ] `<title>` — Descriptive, keyword-rich title matching the app's purpose
-- [ ] `<meta name="description">` — AI researches project context (package.json, index.html, URL if provided) to generate accurate description
-- [ ] `<meta name="viewport">` — Mobile-first: `width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover`
-- [ ] `<meta charset="UTF-8">`
-- [ ] `<meta name="theme-color">` — Match app's primary brand color
-- [ ] `<meta name="apple-mobile-web-app-capable" content="yes">`
-- [ ] `<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">`
-- [ ] Open Graph tags: `og:title`, `og:description`, `og:type`, `og:image` (if available)
+### Gate 1.6: Page Planning
+```
+Trigger:  Any app or website task
+Action:   List EVERY route/page before writing any code
+Output:   Complete route map (path, component name, layout, auth requirement)
+Example:
+  /           → Home.vue          (public, bottom-nav)
+  /menu       → Menu.vue          (public, bottom-nav)
+  /cart       → Cart.vue          (auth, bottom-nav)
+  /orders     → Orders.vue        (auth, bottom-nav)
+  /login      → Login.vue         (public, no-nav)
+Gate:     All routes listed. No "will add later" allowed
+```
 
-### 3.1.2 NOINDEX / NOFOLLOW (Default ON)
-
-- [ ] **ALWAYS** add `<meta name="robots" content="noindex, nofollow">` on every app build
-- [ ] Only remove when user explicitly says "open index" or "allow crawling"
-- [ ] This protects staging/dev apps from being indexed by search engines
-
-### 3.1.3 FAVICON (Auto-Generate if Missing)
-
-- [ ] Check if `/favicon.ico` or `/favicon.svg` exists in `public/` folder
-- [ ] If user provided favicon folder → use those files
-- [ ] If NO favicon exists → AI generates a simple SVG favicon using the app's brand color + first letter/initials
-- [ ] Include both: `<link rel="icon" type="image/svg+xml" href="/favicon.svg">` and fallback `.ico`
-- [ ] Add `<link rel="apple-touch-icon" href="/apple-touch-icon.png">` if available
-
-### 3.1.4 FULLSCREEN MODE (Build Only)
-
-- [ ] Add `manifest.json` with `"display": "standalone"` (app-like fullscreen)
-- [ ] On first user interaction (click/tap), trigger `document.documentElement.requestFullscreen()` with try/catch
-- [ ] Only activate in production build (`import.meta.env.PROD`)
-- [ ] Respect user's exit — don't re-trigger fullscreen after user exits it manually
-- [ ] Implementation: Add a one-time click listener in `main.js` or `App.vue` `onMounted`
-
-### 3.1.5 PWA INSTALL PROMPT (Build Only)
-
-- [ ] Create `manifest.json` (or `site.webmanifest`) in `public/` with: `name`, `short_name`, `start_url`, `display: standalone`, `background_color`, `theme_color`, `icons` (192x192 + 512x512)
-- [ ] Register service worker for offline caching (basic): `navigator.serviceWorker.register('/sw.js')`
-- [ ] Create minimal `sw.js` in `public/` with cache-first strategy for static assets
-- [ ] Link manifest: `<link rel="manifest" href="/manifest.json">` or `<link rel="manifest" href="/site.webmanifest">`
-- [ ] Browser will auto-show "Add to Home Screen" / "Install App" prompt when PWA criteria are met
-- [ ] Only activate service worker in production build (`import.meta.env.PROD`)
-
-### 3.1.6 SPA REFRESH FIX (⚠️ MANDATORY — Prevents 404 on Refresh)
-
-> **Problem**: Vue/React apps using `createWebHistory()` (clean URLs like `/login`, `/products`) get 404 on page refresh because the server looks for physical files that don't exist.
-> **Rule**: ALWAYS use `createWebHistory()` (clean URLs) + add ALL 3 server fallback files below.
-
-- [ ] **Use `createWebHistory()`** — Clean URLs (`/login` not `/#/login`). NEVER use hash mode.
-- [ ] **`.htaccess` in `public/`** — For Apache/shared hosting:
-  ```
-  <IfModule mod_rewrite.c>
-    RewriteEngine On
-    RewriteBase /
-    RewriteRule ^index\.html$ - [L]
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule . /index.html [L]
-  </IfModule>
-  ```
-- [ ] **`_redirects` in `public/`** — For Netlify/Cloudflare Pages: `/*  /index.html  200`
-- [ ] **Vite `spaFallback()` plugin** — Copies `dist/index.html` → `dist/404.html` after build (for GitHub Pages, static hosts)
-  ```javascript
-  function spaFallback() {
-    return {
-      name: "spa-fallback",
-      closeBundle() {
-        const { readFileSync, writeFileSync } = require("fs");
-        const { resolve } = require("path");
-        try {
-          const html = readFileSync(resolve("dist/index.html"), "utf-8");
-          writeFileSync(resolve("dist/404.html"), html);
-        } catch {}
-      },
-    };
+### Gate 1.7: Type System
+```
+Trigger:  Any app with data entities
+Action:   Define TypeScript types BEFORE any UI code
+Output:   For each entity: interface, FormValues, PageParams, StatusOptions, enums
+Template:
+  export interface {{Entity}} {
+    id: string
+    {{fields}}
+    isDelete: boolean
+    createdAt: string
+    updatedAt: string
   }
-  ```
-- [ ] **Catch-all route in router** — `{ path: '/:pathMatch(.*)*', redirect: '/' }` as last route
-- [ ] **Result**: 3 files auto-generated in `dist/` on every build: `.htaccess`, `_redirects`, `404.html`
+  export type {{Entity}}FormValues = Omit<{{Entity}}, 'id' | 'isDelete' | 'createdAt' | 'updatedAt'>
+Gate:     Types defined. Stores can now be written
+```
 
-### 4.1 V8 DEEP INTEGRITY (ANTI-CRASH)
-
-- **HTML Depth-Check**: Before every `replace_file_content` call on a Vue template, AI must manually verify the balance of opening/closing tags in the code block.
-- **Tailwind v4 Semantic Audit**: Proactively use modern utilities (e.g., `bg-linear-*`, `z-val`) over deprecated or ad-hoc classes.
-- **Build Guard**: Continuous `npm run build` checks during "Wave Transitions" to catch lints early.
-
-## 4. COMMAND EXECUTION (Every Session)
-
-- [ ] **BUILD/DEV LAST** — `npm run build` and `npm run dev` ONLY after ALL AI code generation is complete. No mid-creation builds.
-- [ ] **Batch commands** — Combine with `&&` into ONE terminal call
-- [ ] **Use file tools for file creation** — Terminal ONLY for npm/git/dev-server
-- [ ] **Background long commands** — dev server, builds
-- [ ] **Auto-proceed** — Don't ask permission for non-destructive operations
-
-## 5. DESIGN PATTERNS (Always Apply)
-
-| Pattern        | Standard                                                        |
-| -------------- | --------------------------------------------------------------- |
-| App container  | `max-w-[540px] mx-auto min-h-screen bg-white shadow`            |
-| Header         | Fixed top, 56px, dynamic title, back button, cart badge         |
-| Bottom nav     | Fixed bottom, 60px, 4 tabs, active indicator bar                |
-| Card           | `rounded-xl border border-gray-100`, hover shadow               |
-| Button primary | Brand color bg, white text, `rounded-lg`, `active:scale-[0.97]` |
-| Modal          | Teleport to body, `bg-black/40`, slide-up content               |
-| Toast          | Teleport, auto-dismiss 3s, color-coded (green/red/blue)         |
-| Price display  | Brand color, `font-bold`, RM prefix                             |
-| Status badge   | `rounded-full text-[10px] font-bold px-2`, color by status      |
-| Empty state    | Centered icon + gray text + CTA button                          |
-| Auth page      | Full-screen gradient, no chrome, centered logo + form           |
-| Product grid   | `grid grid-cols-2 gap-3` with ProductCard                       |
-| Category nav   | 76px left sidebar with active indicator (86car Standard)        |
-| E-com Layout   | Fixed Left Sidebar (Menu) + Right Scroll (Products)             |
-
-## 5.1 USER LEXICON (Custom Mapping)
-
-- Whenever the user says **"div"**, they mean **CARD** (e.g., "in div" = "in card").
-- Whenever the user says **"section div"**, they mean **CARD INSIDE SECTION**.
-- **Visual Validation First**: When a form is submitted with required fields empty or invalid, always highlight inputs with `border-red-500 bg-red-50` AND show a **small red notice** (e.g., `text-[9px] font-black uppercase`) below the input to clarify the error.
-
-## 6. BUSINESS LOGIC (Common Patterns)
-
-| Feature        | Implementation                                              |
-| -------------- | ----------------------------------------------------------- |
-| Order cutoff   | `computed: new Date().getHours() < 23` → disable UI         |
-| Payment rules  | `computed: user.isNew ? 'prepaid' : 'cod'`                  |
-| Daily summary  | `computed: aggregate today's orders by product`             |
-| WhatsApp copy  | Generate formatted text → `navigator.clipboard.writeText()` |
-| Search         | Filter by name (Chinese) + nameEn (English) simultaneously  |
-| Price tiers    | Same product, different prices based on quantity            |
-| Extra services | Checkbox list with per-kg surcharges                        |
-| Order status   | Array of `{ key, label, color }` with badge display         |
-
-## 7. ERROR QUICK-FIX (Don't Read Knowledge Files)
-
-| Error                         | Fix                                                   |
-| ----------------------------- | ----------------------------------------------------- |
-| `@tailwindcss/postcss` needed | Use `@tailwindcss/vite` plugin instead                |
-| Module not found              | Check path casing + file extension                    |
-| Component not found           | Check import path in `<script setup>`                 |
-| Cannot read null              | Add `v-if` guard or `?.` optional chaining            |
-| Port in use                   | Let Vite auto-increment                               |
-| CSS not applying              | Check @theme token name matches class usage           |
-| Keep-alive not working        | Add component `name` option or check `:exclude` array |
+### Gate 1.8: Store System
+```
+Trigger:  After Gate 1.7 (types exist)
+Action:   Create Pinia stores with CRUD + localStorage persistence
+Rules:    - Re-export types: `export * from '#/types/{{entity}}'`
+          - Soft delete: toggle `isDelete`, never hard delete
+          - Audit fields: `createdAt`, `updatedAt` auto-set
+          - Version-based cache: `dataVersion` ref for reactive refresh
+Gate:     Stores created. Views can now reference them
+```
 
 ---
 
-## 8. V12.0 SMART BRAIN AUDIT (MASTER VERIFICATION)
+## PHASE 2: DURING CODING (Rules — Apply While Writing Every File)
 
-- [ ] **CATEGORY 1: BOOTSTRAP/GRID** — Mobile-first, no horizontal scroll.
-- [ ] **CATEGORY 2: PWA/SEO** — Manifest, sw.js, meta tags, robots noindex.
-- [ ] **CATEGORY 3: LOCALIZATION** — 100% 简体中文 consistency.
-- [ ] **CATEGORY 4: WHATSAPP/CTA** — Floating WhatsApp trigger on ALL pages.
-- [ ] **CATEGORY 5: CONTENT DENSITY** — Eyebrows, Trust Signals, 12+ sections per site.
-- [ ] **CATEGORY 6: SMART BRAIN REPORT** — Proof of compliance generated.
+### Rule 2.1: Design Tokens First
+```
+Trigger:  Writing any component with visual styles
+Check:    Are CSS variables / @theme tokens defined?
+          YES → use tokens: bg-primary, text-dim, shadow-card
+          NO  → STOP. Create theme.css first (see agent_core_protocol.md §4.3)
+WRONG:    bg-[#FF6B35] hardcoded in component
+CORRECT:  bg-primary using design token
+```
+
+### Rule 2.2: Complete Data
+```
+Trigger:  Any component that displays data (products, menu items, team, etc.)
+Action:   Enter ALL items in one go. Count: minimum matches real-world expectation
+WRONG:    3 products with "TODO: add more"
+CORRECT:  12+ products with real names, prices, descriptions, images
+```
+
+### Rule 2.3: Production-Ready Views
+```
+Trigger:  Creating any page/view
+Action:   Page must be FULLY functional when created. All states handled:
+          - Loading state
+          - Empty state (centered icon + text + CTA)
+          - Error state
+          - Data state (populated with real data)
+WRONG:    Skeleton page with "Coming Soon" text
+CORRECT:  Full page with all states, interactions, and data
+```
+
+### Rule 2.4: Language Consistency
+```
+Trigger:  Any UI text
+Check:    What is the project language?
+Action:   100% of ALL UI text in that language. Zero mixing
+WRONG:    Chinese app with English button "Submit" and label "Name"
+CORRECT:  Chinese app: "提交" button, "姓名" label — 100% 简体中文
+```
+
+### Rule 2.5: Icon Standard
+```
+Trigger:  Any icon needed in UI
+Action:   Use inline SVG (Lucide style). Never emoji
+WRONG:    <span>🏠</span>
+CORRECT:  <svg>...(house icon)</svg> or <LucideHome />
+```
+
+### Rule 2.6: Mobile-First Dimensions
+```
+Trigger:  Mobile app views
+Apply:    - Container: max-w-[540px] mx-auto
+          - Touch targets: min h-11 (44px)
+          - Safe area: pb-[env(safe-area-inset-bottom)]
+          - Bottom nav: fixed, 60px, 4 tabs
+```
+
+### Rule 2.7: Chain Completion
+```
+Trigger:  Building page A that links to page B or C
+Action:   Build B and C too. Don't leave dead links
+Example:  Building ProductList → also build ProductDetail
+          Building Home → also build all pages linked from Home
+WRONG:    "Page B coming in next task"
+CORRECT:  All linked pages built in same session
+```
+
+### Rule 2.8: WhatsApp Integration
+```
+Trigger:  Any B2B or B2C app
+Action:   Add floating WhatsApp button on all pages
+Template:
+  <a href="https://wa.me/{{PHONE}}" target="_blank"
+     class="fixed bottom-20 right-4 z-50 w-14 h-14 bg-[#25D366] rounded-full
+            flex items-center justify-center shadow-lg">
+    <svg ...whatsapp icon... />
+  </a>
+```
+
+### Rule 2.9: localStorage Persistence
+```
+Trigger:  Any app with auth, cart, orders, or user preferences
+Action:   All critical state must survive page refresh
+Pattern:  Pinia store with localStorage sync in `$subscribe`
+Verify:   Refresh page → data still present
+```
 
 ---
 
-## 13. F&B AESTHETIC PROTOCOL (CLEAN WHITE)
+## PHASE 3: AFTER CODING (Verification Chain — Execute Sequentially)
 
-> Rule: Food apps must prioritize appetite, cleanliness, and vibrancy.
+### Step 3.1: Build
+```
+Trigger:  ALL files written (Phase 2 complete)
+Action:   npm run build
+Gate:     MUST pass with zero errors
+          If fails → run Error Recovery (agent_core_protocol.md §6) → rebuild
+WRONG:    Building mid-creation
+CORRECT:  Finish everything → build once
+```
 
-- [ ] **Clean White Logic** — Baseline should be `#FFFFFF` or very light grays. NO DARK THEMES for food unless specified.
-- [ ] **Hungry-First Imagery** — Hero sections must feature 1-2 high-impact, realistic food photos.
-- [ ] **Corporate Nuance** — Always check for "Branches," "Locations," and "Company Info." Assume multi-location by default.
-- [ ] **Internal Point of Sale** — WhatsApp is for consultation; 100% of "点餐" apps must have internal order receipt logic.
-- [ ] **Deep Order History** — History cards must be clickable to show itemized receipts.
+### Step 3.2: Auto-Include Check (Scan & Add Missing)
+```
+Action:   Scan index.html, public/, main.ts for these items:
+          ✓ Meta tags (charset, viewport, description, theme-color, apple-mobile)
+          ✓ Robots noindex (unless user said "allow crawling")
+          ✓ Favicon (generate SVG if missing)
+          ✓ Manifest.json (PWA)
+          ✓ Service worker (PROD only)
+          ✓ SPA fallback files (.htaccess, _redirects, 404.html)
+          ✓ Open Graph tags
+          ✓ Catch-all router route
+Gate:     If any missing → add them → rebuild
+```
+
+### Step 3.3: Route Verification
+```
+Action:   Scan router config. For each route:
+          - Does the component file exist?
+          - Does it import correctly?
+          - Does it render (not blank)?
+Gate:     All routes verified. No dead routes
+```
+
+### Step 3.4: Auth Flow Test
+```
+Trigger:  App has authentication
+Action:   Verify: Login → OTP/Password → Home → Profile → Logout
+          Verify: Protected routes redirect to login when not authed
+          Verify: Back navigation works (router.back() with fallback)
+```
+
+### Step 3.5: Persistence Test
+```
+Action:   Verify localStorage items:
+          - Auth token survives refresh
+          - Cart items survive refresh
+          - Language preference survives refresh
+```
+
+### Step 3.6: Mobile Responsiveness
+```
+Action:   Verify:
+          - Container: max-w-[540px] centered
+          - Bottom nav visible, not overlapping content
+          - Touch targets ≥ 44px
+          - No horizontal scroll
+          - safe-area-inset applied
+```
+
+### Step 3.7: Visual Polish Check
+```
+Action:   Verify:
+          - Hover effects on all interactive elements
+          - Transitions use cubic-bezier(0.16, 1, 0.3, 1)
+          - No static buttons (all have active:scale feedback)
+          - Gradient blends for video backgrounds (if any)
+          - Typography hierarchy (H1 > H2 > body > caption)
+```
+
+### Step 3.8: First Run
+```
+Action:   npm run dev (run in background)
+Purpose:  Show user the running result
+Gate:     App loads without console errors
+```
 
 ---
 
-_Master Rules V12.0 — Ascension Ready (2026-03-24)_
+## PHASE 4: PUBLISH CHECKLIST (When User Says "publish" or "deploy")
+
+### 4.1 Final Meta Audit
+```
+Action:   Verify index.html has ALL meta tags from Step 3.2
+          If user says "allow crawling" → remove noindex
+          Generate accurate <title> and <meta description> from project context
+```
+
+### 4.2 PWA Completeness
+```
+Action:   Verify:
+          ✓ manifest.json has: name, short_name, start_url, display: standalone, icons (192+512)
+          ✓ sw.js registered (PROD only)
+          ✓ Fullscreen mode on first tap (PROD only, with try/catch)
+```
+
+### 4.3 SPA Fallback
+```
+Action:   Verify ALL 4 fallback mechanisms:
+          ✓ .htaccess (Apache)
+          ✓ _redirects (Netlify/CF)
+          ✓ 404.html (GitHub Pages — via spaFallback() Vite plugin)
+          ✓ Catch-all route: { path: '/:pathMatch(.*)*', redirect: '/' }
+```
+
+### 4.4 Build & Ship
+```
+Action:   npm run build → verify zero errors → ready for deployment
+```
+
+---
+
+## SMART BRAIN AUDIT (Final Compliance — Run After Phase 3)
+
+| Category | Check | Pass Criteria |
+|----------|-------|---------------|
+| Grid/Layout | Mobile-first responsive | No horizontal scroll, 540px container |
+| PWA/SEO | Manifest + SW + meta | All files present in public/ |
+| Language | UI text consistency | 100% single language, zero mixing |
+| CTA | WhatsApp integration | Floating button on all B2B/B2C pages |
+| Content | Data density | Real data, no placeholders, no TODOs |
+| Tokens | Design system | Zero hardcoded colors/fonts in components |
+
+---
+
+_Master Rules V13.0 — Claude Skills DNA Upgrade (2026-03-27)_
+_Structure: Phase gates → Sequential steps → Verification chain → Audit_

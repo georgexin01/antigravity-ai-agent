@@ -2,6 +2,19 @@
 
 > **SOURCE**: Extracted from Four Win Travel App (2026-03). Complete patterns for adding multi-language support to any Vue 3 app.
 > **Includes**: Bilingual Semantic Protocol (merged from bilingual_semantic_protocol.md)
+> **V13 Upgraded**: 2026-03-27
+
+---
+
+## WHEN TO USE THIS FILE
+
+```
+Trigger:    task_type = APP, AND project needs multi-language support
+            User says: "add i18n", "multi-language", "translate", "bilingual"
+Pre-check:  Vue 3 project exists with router + views
+Depends:    unified_app_blueprint.md (app structure must exist first)
+Next:       → must_do_master_rules.md Phase 2 Rule 2.4 (language consistency)
+```
 
 ---
 
@@ -288,3 +301,62 @@ export function getToursGrouped(category) {
 - Keep brand names untranslated (e.g., "Four Win Travel")
 - Currency always "RM" (Malaysian Ringgit) regardless of language
 - Phone format: +60 prefix always shown
+
+---
+
+## 10. VERIFICATION CHECKLIST
+
+After adding i18n to a project:
+
+```
+- [ ] vue-i18n@10 installed, legacy: false set
+- [ ] Locale files: en.js + zh.js (+ ms.js if needed)
+- [ ] localStorage persistence: saved on switch, loaded on start
+- [ ] Every hardcoded string replaced with $t('key')
+- [ ] Toast messages use t('toast.xxx')
+- [ ] WhatsApp links wrapped in computed() with t()
+- [ ] Form labels, placeholders, buttons all translated
+- [ ] Empty states, error messages translated
+- [ ] Product data: structural in JS, text in locale files
+- [ ] No mixed languages in same UI element
+- [ ] Language switcher component with flag + label
+```
+
+### WRONG / CORRECT Examples
+
+```javascript
+// WRONG — non-reactive nav labels (computed once, never updates on language switch)
+const tabs = [
+  { label: t('nav.home'), path: '/' },
+]
+
+// CORRECT — reactive with computed()
+const tabs = computed(() => [
+  { label: t('nav.home'), path: '/' },
+])
+```
+
+```javascript
+// WRONG — t() for array data (stringifies the array)
+const highlights = t('tourData.xian.highlights')
+
+// CORRECT — tm() for arrays and objects
+const highlights = tm('tourData.xian.highlights')
+```
+
+```javascript
+// WRONG — legacy mode (breaks Composition API)
+createI18n({ locale: 'en', messages })
+
+// CORRECT — composition mode
+createI18n({ legacy: false, locale: 'en', messages })
+```
+
+### Next Step
+→ Test language switching in all pages
+→ Verify computed() values update reactively
+→ Run `must_do_master_rules.md` Phase 3
+
+---
+
+_i18n Mastery V1.1 — V13 Upgraded with trigger, verification, WRONG/CORRECT (2026-03-27)_

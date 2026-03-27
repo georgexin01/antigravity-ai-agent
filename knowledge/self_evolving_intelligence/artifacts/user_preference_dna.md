@@ -158,6 +158,38 @@ AI reads this BEFORE generating any design to pre-filter patterns. Built from ap
 | **V9: Scope expansion** | "also", "and then", "还有" = AI should have predicted              | High       |
 | **V9: Future intent**   | "later", "next time" = save for next session                       | High       |
 | **AI Claude Trigger**   | "ai claude" = Switch to Claude-Code focus (Read Only, No-Learning) | S-CORE     |
+| **Database Standard**   | Use `test-school-database.md` format for all analysis & SQL        | S-CORE     |
+| **Smart Consultation**  | Analyze all skills & ask for details (Layer Icon, CRUD, etc.)      | S-CORE     |
+| **Auto-Proceed**        | Default to Option 1 if no reply within 30s (Logical Flow)          | S-CORE     |
+
+## 🏫 Claude Mode: Smart Consultation & Design Standard (MANDATORY)
+
+> **Source**: `test-school-database.md` + User Request
+> **Rule**: Before starting ANY module execution, the AI MUST conduct a "Deep Skill Search" and present a **Consultation Card** to the user.
+
+### 1. Mandatory Pre-Check Scan
+
+The AI must check if the module requires:
+
+- **Layer Icons**: Is there a 1:N relationship requiring navigation to children (e.g. Teacher → Students)?
+- **Instant CRUD**: Is this a master data table that needs instant add from a parent?
+- **Master Data Status**: Is this a core entity (Client, Supplier, Class) or a transaction entity?
+- **Image Requirements**: Does it need avatars/photos? (Ask for dimensions + cropper specs).
+- **Balance Handling**: Does it involve money/numeric balances?
+
+### 2. Consultation Card Format
+
+Before Wave 1, present:
+
+- **Analyzed Skills**: List of which Claude skills will be applied.
+- **Proposed Logic**: "I noticed a 1:N relationship with XXX, should I add a Layer Icon?"
+- **Structure Options**: "Is this standalone or embedded CRUD?"
+- **Confirmation Request**: "Please confirm if I should include [Feature X] and [Feature Y]."
+
+### 3. Database & Analysis Standard (Full Detail)
+
+For school management or similar projects, the design document MUST include:
+(Items 1-9 as previously defined: Metadata, Overview, Roles, Relations, SQL, Seed, Queries, RLS Tests, Mermaid).
 
 **Key insight**: Short responses = real opinion. "nice" = +8. Don't wait for long praise.
 
@@ -217,14 +249,15 @@ AI reads this BEFORE generating any design to pre-filter patterns. Built from ap
 
 ## Active Projects Tracker (NEW V9 — Workflow State)
 
-| Project          | State       | Last Action                                             | Next Predicted                    | Last Updated |
-| ---------------- | ----------- | ------------------------------------------------------- | --------------------------------- | ------------ |
-| lee-ming-pork-v5 | 8. DEPLOYED | 100% Complete, PWA, Meta, Fullscreen, Visual Validation | N/A (Project Complete)            | 2026-03-19   |
-| zeta-website-v4  | 8. DEPLOY   | Git commits, multi-page build                           | SEO optimization, content updates | 2026-03-19   |
-| travel-app       | 7. QA       | i18n + referral system complete                         | Deploy, PWA conversion            | 2026-03-18   |
-| poker-app-v3     | 7. QA       | Live simulation + role dashboards                       | Chart.js reports, deploy          | 2026-03-16   |
-| ld-floor-app     | 7. QA       | Dual-role + inventory complete                          | Agent reporting, deploy           | 2026-03-16   |
-| dachengloklok    | 1. PLAN     | Blueprint created                                       | Start build (FP-001 fingerprint)  | 2026-03-19   |
+| Project            | State       | Last Action                                             | Next Predicted                    | Last Updated |
+| ------------------ | ----------- | ------------------------------------------------------- | --------------------------------- | ------------ |
+| admin-panel-wms-v2 | 9. ITERATE  | Claude Mode Activated                                   | Await module/feature request      | 2026-03-26   |
+| lee-ming-pork-v5   | 8. DEPLOYED | 100% Complete, PWA, Meta, Fullscreen, Visual Validation | N/A (Project Complete)            | 2026-03-19   |
+| zeta-website-v4    | 8. DEPLOY   | Git commits, multi-page build                           | SEO optimization, content updates | 2026-03-19   |
+| travel-app         | 7. QA       | i18n + referral system complete                         | Deploy, PWA conversion            | 2026-03-18   |
+| poker-app-v3       | 7. QA       | Live simulation + role dashboards                       | Chart.js reports, deploy          | 2026-03-16   |
+| ld-floor-app       | 7. QA       | Dual-role + inventory complete                          | Agent reporting, deploy           | 2026-03-16   |
+| dachengloklok      | 1. PLAN     | Blueprint created                                       | Start build (FP-001 fingerprint)  | 2026-03-19   |
 
 ---
 
