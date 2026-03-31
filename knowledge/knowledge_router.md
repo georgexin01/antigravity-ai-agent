@@ -15,6 +15,7 @@
 | **Session Boot Sequence** | `self_evolving_intelligence/artifacts/session_boot_sequence.md` | EVERY session start | Yes |
 | **Session Cache** | `self_evolving_intelligence/artifacts/session_cache.md` | EVERY session start (Step 1) | Yes |
 | **User Taste DNA** | `self_evolving_intelligence/artifacts/user_taste_dna.md` | EVERY session start (Step 2) | Yes |
+| **AI Claude Protocol V3** | `self_evolving_intelligence/artifacts/ai_claude_protocol.md` | User says "ai claude" → ADMIN mode (7 intelligence patterns) | Yes |
 | **Agent Core Protocol** | `tech_stack_mastery/artifacts/agent_core_protocol.md` | APP / WEBSITE / ENHANCE tasks | Yes |
 | **Must-Do Master Rules** | `tech_stack_mastery/artifacts/must_do_master_rules.md` | APP / WEBSITE / DEPLOY tasks | Yes |
 | **V13 Ascension Mastery** | `tech_stack_mastery/artifacts/v12_ascension_mastery.md` | New projects (BLAST framework) | Yes |
@@ -97,6 +98,17 @@ session_boot_sequence.md
     → routes to: skill_path_router.md
     → activates: agent_core_protocol.md
 
+ai_claude_protocol.md (V3.0 — 7 Intelligence Patterns)
+    → activated by: session_boot_sequence.md Step 3 (task_type = ADMIN)
+    → loads: skills/claude-code/* (all 13 skills)
+    → Pattern 1 (Consultation): runs BEFORE create-module/skill.md
+    → Pattern 2 (Dependencies): scans parent modules before Step 1
+    → Pattern 3 (Registry): tracks all modules in project
+    → Pattern 4 (Quality): 5-dimension self-check after each module
+    → Pattern 5 (Prediction): suggests next module based on FK schema
+    → Pattern 6 (Batching): parallelizes files within pipeline steps
+    → Pattern 7 (Mistakes): WRONG/CORRECT for 4 error-prone skills
+
 agent_core_protocol.md
     → gates: must_do_master_rules.md (Phase 1→2→3→4)
     → references: v12_ascension_mastery.md (BLAST framework)
@@ -106,10 +118,12 @@ must_do_master_rules.md
     → Phase 1 reads: user_preference_dna.md, skill_path_router.md
     → Phase 2 applies: agent_core_protocol.md §4 (architecture rules)
     → Phase 3 uses: pwa_offline_first_patterns.md (PWA verification)
+    → §11 Vben Admin: delegates to ai_claude_protocol.md for ADMIN tasks
 
 skill_path_router.md
     → routes to: ALL knowledge files based on task_type
-    → fingerprints: 7 project types with pre-loaded file lists
+    → ADMIN mode: routes to ai_claude_protocol.md
+    → fingerprints: 8 project types with pre-loaded file lists
     → predictions: auto-load next files based on completion
 
 unified_app_blueprint.md
