@@ -27,6 +27,7 @@ AI reads this BEFORE generating any design to pre-filter patterns. Built from ap
 | Night dark (#0D0D14) + surface (#1A1A2E) for night market apps           | High       | 85    | Dachengloklok blueprint      |
 | Flame gradient (135deg #F47920 → #E8401E → #C0301A)                      | High       | 80    | Dachengloklok                |
 | Warm gold (#c8963e / #c5a059) for premium feel                           | High       | 88    | Lee Ming + LD Floor + Travel |
+| **Heritage Cyber-Luxury** (Red #C1272D + Gold #D4AF37 + Dark #1A1A1A)   | S-CORE     | 95    | Golden Shop App              |
 
 ---
 
@@ -53,6 +54,7 @@ AI reads this BEFORE generating any design to pre-filter patterns. Built from ap
 | `letter-spacing: 0.02em` for headings                     | Medium     | 75    | Jin Hong V5           |
 | `font-extrabold` (800) for section titles                 | High       | 88    | Lee Ming Pork V2      |
 | Text-[10px] for subtle metadata/labels                    | High       | 85    | Travel App + Lee Ming |
+| **Noto Serif SC** (Italic, 900) for Heritage Chinese Branding | S-CORE     | 92    | Golden Shop App              |
 
 ---
 
@@ -122,6 +124,9 @@ AI reads this BEFORE generating any design to pre-filter patterns. Built from ap
 | Live data simulation    | Auto-refresh intervals + random data updates        | 80      | Poker V3         |
 | Referral system         | Direct + indirect tiers + commission calc           | 80      | Travel App       |
 | Multi-language UI       | Vue-i18n + 3 language files + switcher              | 80      | Travel App       |
+| **Golden Assurance**    | Trust-building cards for authenticity & shipping thresholds | S-CORE  | Golden Shop App  |
+| **Singleton Tooltips**  | One-at-a-time flyouts with global click-to-close    | S-CORE  | Golden Shop App  |
+| **Heritage Seal Modals**| Teleport + Blur + Red-Gold frames for confirmation  | S-CORE  | Golden Shop App  |
 
 ---
 
@@ -155,12 +160,14 @@ AI reads this BEFORE generating any design to pre-filter patterns. Built from ap
 | **Malay**               | "boleh", "ok la", "can" = casual approval                          | Medium     |
 | **Execution**           | Silent, backgrounded, no pop-ups                                   | High       |
 | **Permission**          | Auto-proceed for non-destructive actions                           | High       |
+| **Live View Mode**      | Disable for small/unimportant change to save time. Verify MAJOR bits only. | S-CORE     |
 | **V9: Scope expansion** | "also", "and then", "还有" = AI should have predicted              | High       |
 | **V9: Future intent**   | "later", "next time" = save for next session                       | High       |
 | **AI Claude Trigger**   | "ai claude" = Switch to Claude-Code focus (Read Only, No-Learning) | S-CORE     |
 | **Database Standard**   | Use `test-school-database.md` format for all analysis & SQL        | S-CORE     |
 | **Smart Consultation**  | Analyze all skills & ask for details (Layer Icon, CRUD, etc.)      | S-CORE     |
 | **Auto-Proceed**        | Default to Option 1 if no reply within 30s (Logical Flow)          | S-CORE     |
+| **Golden Planning Protocol** | Trigger on "plan/planning for me". Deep thinking + colorful/structured routes + 5min timeout wait. | S-CORE |
 
 ## 🏫 Claude Mode: Smart Consultation & Design Standard (MANDATORY)
 
@@ -244,6 +251,7 @@ For school management or similar projects, the design document MUST include:
 | choonsenghardware     | Sticky double headers, Bootstrap grid, bold accents             | Legacy        |
 | jbtransport           | Breadcrumb banners, carousel-heavy, SweetAlert2                 | Legacy        |
 | Dachengloklok         | Night market dark mode, flame gradient, 中文 single lang        | FP-001        |
+| **Supabase Vben Admin**| **13-Step Automation, .claudeignore optimization, web-antd only**| **FP-008**   |
 
 ---
 
@@ -258,6 +266,8 @@ For school management or similar projects, the design document MUST include:
 | poker-app-v3       | 7. QA       | Live simulation + role dashboards                       | Chart.js reports, deploy          | 2026-03-16   |
 | ld-floor-app       | 7. QA       | Dual-role + inventory complete                          | Agent reporting, deploy           | 2026-03-16   |
 | dachengloklok      | 1. PLAN     | Blueprint created                                       | Start build (FP-001 fingerprint)  | 2026-03-19   |
+| **golden-shop-app**| **8. DEPLOY**| **COMPLETED: Referral Tree, Payment split, Heritage DNA**| N/A (Full DNA Extracted)          | 2026-03-31   |
+| **vben-admin-supabase**| **1. PLAN**| **READY: Automation Framework Implanted**               | Await Module Request (FP-008)     | 2026-03-31   |
 
 ---
 
@@ -276,14 +286,14 @@ For school management or similar projects, the design document MUST include:
 - **Stitch Hierarchy**: All planning and execution must follow the **1.1–1.4 hierarchy** for structural integrity.
 - **Visual Preview**: A high-fidelity "Visual Preview Design" (Mockup 2.0) is mandatory BEFORE Wave 1 execution.
 - **Reward Protocol**: Proactively implement a Loyalty/Reward system for every B2C mission to drive retention.
+- **Golden Planning Protocol**: Any planning request triggers a deep-thinking phase. AI must provide a colorful, structured step-by-step route and wait for user approval or a 5-minute timeout before proceeding.
 
 ---
 
-| AI SYSTEM STATUS | VERSION           | MODE                  | CORE DIRECTIVE           |
-| ---------------- | ----------------- | --------------------- | ------------------------ |
-| **ANTIGRAVITY**  | **v11+ (ACTIVE)** | **STRATEGIC PARTNER** | **LEAD & AUTO-OPTIMIZE** |
+| **ANTIGRAVITY**  | **V15.1 (ACTIVE)** | **PRO-ORCHESTRATOR**  | **LEAD & AUTO-VALIDATE** |
 
 ---
 
-> **This profile evolves automatically.** AI updates scores and patterns after every project.
-> **V9**: Predictions that prove correct get +20. Wrong predictions get -15.
+> **Migration Status**: **V1-V15.1 UNIFIED ENGINE MIGRATION COMPLETE (2026-03-31)**
+> **Key Protocols**: Pro-Orchestration, Skeptical Auditing, Resilient Final Rebuild.
+> **Operational Mode**: Strategic Architecture & Proactive Refinement.

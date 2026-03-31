@@ -18,6 +18,28 @@
 
 ## 1. TASK ROUTING TABLE
 
+### ADMIN MODE / CLAUDE-CODE (Admin Panels / CRM / ERP)
+```
+ALWAYS READ (3 files):
+  skills/claude-code/supabase-rls-rbac-design.md (Must read FIRST)
+  skills/claude-code/mcp-supabase-postgres-connection.md (Must read FIRST)
+  knowledge/self_evolving_intelligence/artifacts/ai_claude_protocol.md
+
+READ IF RELEVANT:
+  skills/claude-code/supabase-auth-architecture/SKILL.md
+  skills/claude-code/create-module/SKILL.md
+  skills/claude-code/ui-standardization/SKILL.md
+
+SKIP:
+  All design DNA, taste profiles, brand kits, vanilla website skills.
+
+V9 — AUTO-PREDICT NEXT FILES:
+  → After SQL: module creation skill + types needed next
+  → After types: Pinia store + shared utils needed next
+  → After store: Drawer/List/Form views needed next
+  → After i18n: workflow testing needed next
+```
+
 ### MOBILE APP CREATION (Vue 3 / React)
 ```
 ALWAYS READ (4 files):

@@ -1,8 +1,27 @@
-# Must-Do Master Rules V13.0 — Sequential Execution Checklist
+# Must-Do Master Rules V15.3 — Design-System Syncer Protocol
 
 > **PURPOSE**: Step-by-step execution gates. AI MUST follow this sequence.
-> **V13.0**: Rewritten with Claude Skills DNA — each rule has trigger, action, and verification.
-> **Upgraded**: 2026-03-27
+> **V15.3**: Upgraded with "Figma Design Audit" (Token Sync + Asset Export).
+> **Upgraded**: 2026-03-31
+
+---
+
+## MISSION GATES (MANDATORY SEQUENTIAL FLOW)
+
+### GATE 0.5: ARCHITECTURAL IMPACT SCAN (⚠️ V14.1 SPEED UP)
+- **Trigger**: Any modification to a Shared Component, Store, or Global Style.
+- **Action**: Use `grep_search` to map only **at-risk** target elements.
+- **Outcome**: A list of "Targeted Content" to be verified in Phase 10.
+
+### GATE 0.8: MATHEMATICAL LOGIC PROOF (⚠️ V15.0 Finalized)
+- **Policy**: Run this gate during the **"Final Mission Rebuild"**.
+- **Action**: Create a `vitest` spec file and run `npm run test`.
+- **Outcome**: 100% logic green-light before project completion.
+
+### GATE 4.3: FIGMA DESIGN AUDIT (⚠️ NEW V15.3)
+- **Trigger**: User provides a Figma Design URL.
+- **Action**: Use **`FIGMA_EXTRACT_DESIGN_TOKENS`** to pull colors, type, and spacing.
+- **Outcome**: Auto-synced `tailwind.config.js` and local assets before Phase 4.
 
 ---
 
@@ -17,22 +36,35 @@ This file is a **sequential gate system**. Each phase BLOCKS the next phase.
 
 ## PHASE 1: BEFORE CODING (Gates — Must Pass Before Writing Any Code)
 
+### Gate 1.0: Auto-Ignore Validation (CORE ECONOMY)
+```
+Action:   Verify root ignore files (.claudeignore, .geminiignore) in antigravity/
+Check:    Do they block node_modules, dist, and vendor while ALLOWING src/assets images?
+Gate:     If unoptimized → refresh root ignores. Maximize savings while KEEPING visual visibility (!**/*.png, !**/*.svg etc.) for high-craft UI development.
+```
+
 ### Gate 1.1: Task Classification
 ```
 Action:   Classify task type (see agent_core_protocol.md §1)
-Output:   task_type = "admin" | "app" | "website" | "design" | "bugfix" | "enhancement"
-Gate:     If task_type = "admin" → load ONLY claude-code/ skills, SKIP all design DNA
+Output:   task_type = "admin" | "app" | "website" | "bugfix" | "enhancement"
+Gate:     If task_type = "admin" → load ONLY claude-code/ skills. 
+          **MANDATORY**: Follow the 13-Step Pipeline in Section 11.
+          Read `supabase-rls-rbac-design.md` and `mcp-supabase-postgres-connection.md` first. 
+          SKIP all design DNA.
+          Verify `.claudeignore` (see Section 11.2).
           If task_type = "bugfix" → jump to Error Recovery (agent_core_protocol.md §6)
           Otherwise → continue to Gate 1.2
 ```
 
-### Gate 1.2: Context Loading
+### Gate 1.2: Context Loading (ROI-FIRST)
 ```
-Action:   Read these files (parallel, not sequential):
-          - user_preference_dna.md → extract taste scores ≥ 90
-          - skill_path_router.md → identify which skills match task_type
-          - Reference project (if user mentioned one) → study FULL source
-Verify:   List loaded context items. If reference project given but not read → STOP
+Action:   Read these files in order of ROI (high to low):
+          1.  Implementation Plan / Walkthrough artifacts (distilled memory)
+          2.  user_preference_dna.md (taste context)
+          3.  skill_path_router.md (logic routing)
+          4.  Reference project structure (use grep_search or list_dir first)
+          5.  Raw source code (ONLY after semantic mapping in Step 12.1)
+Verify:   List loaded context items. If raw code read before artifacts → FAILURE
 ```
 
 ### Gate 1.3: Brand Kit
@@ -276,6 +308,65 @@ Purpose:  Show user the running result
 Gate:     App loads without console errors
 ```
 
+### Step 3.9: Live View Optimization (New Rule)
+```
+Trigger:  Small changes (text updates, color tweaks, single padding)
+Action:   **Live View Optimization**: Skip browser subagent verification for minor UI/text tweaks. Reserve "Live View" for major feature completions to save time.
+
+Gate:     Only use 'Live View' (browser subagent) for MAJOR features or complex logic.
+
+## 10. SIMULATED TOOL: AskUserQuestion (⚠️ MASTER RULE)
+> **Trigger**: Any requirement ambiguity, design blocker, or user-choice point.
+> **Standard**: AI MUST use this markdown block instead of normal text to ask questions.
+
+| Component | Standard |
+|---|---|
+| **Visual** | Use `> [!CAUTION]` for maximum visibility. |
+| **Context** | Explain the technical or design constraint first. |
+| **Question** | Clear, bold, one-sentence actionable inquiry. |
+| **Options** | Use a bulleted list for choices or paths. |
+
+**Template**:
+```markdown
+> [!CAUTION]
+> ## ❓ AskUserQuestion
+> **Context**: [Strategic or technical rationale for the question]
+> **Question**: **[Actionable inquiry]**
+> **Options**:
+> - [Option 1]
+> - [Option 2]
+```
+```
+
+---
+
+## 11. VBEN ADMIN AUTOMATION FRAMEWORK (13-STEP PIPELINE)
+> **Trigger**: `task_type = "admin"` or "new module Article".
+> **Standard**: AI MUST follow the sequential pipeline to ensure zero-placeholder CRUD.
+
+### 📜 11.1 The 4 Master Rules (Protection Chain)
+1.  **Read Skill FIRST**: Never pattern-match from existing code. Follow `.claude/skills/` EXACTLY.
+2.  **One Step at a Time**: Complete each skill 100% before moving on. NO jumping ahead.
+3.  **Field Names = UI Labels**: `shortDescription` → "Short Description". Never rename or shorten.
+4.  **AskUserQuestion**: Use for every decision point.
+
+### 🛡️ 11.2 .claudeignore Strategy (27% Token Savings)
+> **Action**: Proactively create or update `.claudeignore` once a Vben project is detected.
+
+| Type | Ignore Path (Blacklist) |
+|---|---|
+| **UI Variations** | `web-ele`, `web-naive`, `web-tdesign` |
+| **Tooling/Internal** | `internal/`, `scripts/`, `node_modules/` |
+| **Bloat** | `pnpm-lock.yaml`, `Playground/` |
+| **Packages** | `ui-kit`, `layouts`, `plugins` (unless referenced) |
+
+**Whitelist Rules**: Always keep `apps/web-antd/src/`, `.claude/skills/`, `CLAUDE.md`, `locales/`, `stores/`, `types/`, `views/`, `utils/`, `composables/`, `router/`.
+
+### 🚀 11.3 The 13-Step Pipeline logic
+1. analyze-schema → 2. generate-supabase-schema → 3. generate-store → 4. generate-views → 5. generate-route → 6. generate-i18n → 7. workflow-test → (8-13 Refinement).
+
+Gate:     System must self-correct: New skills automatically unblock paths.
+
 ---
 
 ## PHASE 4: PUBLISH CHECKLIST (When User Says "publish" or "deploy")
@@ -311,6 +402,22 @@ Action:   npm run build → verify zero errors → ready for deployment
 
 ---
 
+## 12. AI ROI & TOKEN ECONOMY (⚠️ MASTER RULE)
+> **Trigger**: This protocol is ALWAYS active to maintain maximum profitability and speed.
+> **Logic**: AI MUST minimize brute-force scanning in favor of semantic intent and distilled memory.
+
+| Rule | Specification | ROI Impact |
+|---|---|---|
+| **12.1 Semantic Intent Mapping** | Use `grep_search` or `list_dir` to find targets. NEVER read entire folders. | **-60% Tokens (Research)** |
+| **12.2 Artifact-First Memory** | Read `implementation_plan.md` or `walkthrough.md` before re-scanning source files. | **-40% Tokens (Loading)** |
+| **12.3 Delta-Only Bug Fixing** | Read ONLY the 20 lines around the error provided by console/terminal. | **-80% Tokens (Recovery)** |
+| **12.4 Workspace Grooming** | **MANDATORY Auto-Cleanup**: Automatically delete `/tmp` scripts and one-off artifacts after session completion to prevent indexing bloat. | **Fast Indexing** |
+| **12.5 Incremental Verification** | Only use `browser_subagent` for major UI completions. Use local logic for small tweaks. | **Time Savings** |
+
+Gate:     If AI context exceeds 500K tokens → AI MUST perform a "Context Purge" by summarizing state and clearing history.
+
+---
+
 ## SMART BRAIN AUDIT (Final Compliance — Run After Phase 3)
 
 | Category | Check | Pass Criteria |
@@ -324,5 +431,29 @@ Action:   npm run build → verify zero errors → ready for deployment
 
 ---
 
-_Master Rules V13.0 — Claude Skills DNA Upgrade (2026-03-27)_
+## 13. APP PUBLISH ESSENTIALS (⚠️ MANDATORY)
+
+> **Trigger**: Run this automatically during the "Final Rebuild" phase of every project.
+
+| Task | Specification | Logic |
+|---|---|---|
+| **PWA Manifest** | `public/manifest.json` | 512x512 icon, maskable, app-like orientation |
+| **Meta SEO** | `<meta>` tags in `index.html` | OG:Title, OG:Image, Description (Client-Specific) |
+| **Favicon** | `public/favicon.ico` | Generate SVG source → `favicon.ico` from brand colors |
+| **404 Sync** | `spaFallback()` logic | Ensure refresh on Sub-pages does not return 404 |
+
+---
+
+## 14. CLAUDE-CODE MODE (ADMIN ERP)
+
+> **Trigger**: User mentions "Claude", "CRM", "ERP", or "Admin Panel".
+
+1. **Strict Framework**: Use ONLY Ant Design Vue + Supabase + camelCase.
+2. **14-Step Flow**: SQL → Seed → Types → Store → Utils → Mock → Form → Drawer → List → Detail → Update Parent → Routes → i18n → Test.
+3. **Malaysian Context**: RM currency, +60 phone, Sdn Bhd, MY cities.
+4. **Soft Delete**: Always use `isDelete` boolean; never hard delete.
+
+---
+
+_Master Rules V13.2 — Economy & Automation Protocol (2026-03-31)_
 _Structure: Phase gates → Sequential steps → Verification chain → Audit_

@@ -1,0 +1,6 @@
+- [x] Update `ai_claude_protocol.md` with Supabase read priority
+- [x] Update `must_do_master_rules.md` (Gate 1.1) for admin tasks
+- [x] Update `session_boot_sequence.md` (Step 4) for admin mode routing
+- [x] Update `skill_path_router.md` with dedicated ADMIN section
+- [x] Verify updated files and confirm trigger logic
+- [x] Create walkthrough artifact

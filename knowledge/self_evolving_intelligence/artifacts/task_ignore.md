@@ -1,0 +1,4 @@
+- [x] Create "Extreme Performance" .claudeignore upgrade plan
+- [x] Implement "Extreme Performance" rules in `.claudeignore`
+- [x] Verify framework-specific exclusion logic
+- [x] Create walkthrough artifact

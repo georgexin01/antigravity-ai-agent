@@ -46,9 +46,10 @@ Gate:     Must classify before loading any files
 Action:   Based on task_type, load ONLY relevant files from skill_path_router.md
 Rules:
   ADMIN mode:
-    Load: claude-code/ skills ONLY
+    Load: `claude-code/supabase-rls-rbac-design.md` + `claude-code/mcp-supabase-postgres-connection.md` (Priority)
+          + ALL other claude-code/ skills
     Skip: ALL design DNA, taste profiles, design skills
-    Ref:  skill_path_router.md → NOT listed (uses claude-code/ pipeline)
+    Ref:  skill_path_router.md → Section 1.1 (ADMIN)
 
   APP mode:
     Load: agent_core_protocol.md + must_do_master_rules.md

@@ -267,9 +267,103 @@ Step 6.5: ESCALATE      → If same fix tried twice → try alternative approach
 | **SVG icons only** | Never use emoji in UI. Use Lucide/Heroicons inline SVG |
 | **Build LAST** | `npm run build` ONLY after ALL files written. Never mid-creation |
 | **Background commands** | Dev server, builds → run in background |
-| **Auto-proceed** | No "Shall I continue?" for non-destructive operations |
+| **Auto-proceed** | Default to Option 1 if no reply within 5 mins |
+| **ROI First** | Search before reading. Artifacts before code |
 
 ---
+
+## 10. AI ROI & TOKEN ECONOMY (⚠️ MASTER RULE)
+
+> **Directive**: AI MUST prioritize token-efficiency to maintain speed and minimize user costs.
+
+1. **Strategic Research**: Use `grep_search` before `view_file` to narrow scope.
+2. **Memory Recycling**: Read `implementation_plan.md` first to avoid re-scanning the entire codebase.
+3. **Targeted Recovery**: When fixing bugs, read only the immediate context of the error.
+4. **Auto-Cleanup**: Delete `/tmp/` scripts once the task is verified.
+5. **Session Pruning**: If context > 500K tokens → perform a "Context Purge" (Summarize → Clear).
+
+---
+
+## 11. GLOBAL SYNC & PATH ABSTRACTION
+
+> **Directive**: Decouple the AI "Brain" from a single machine. Ensure multi-device coordination.
+
+1. **Absolute-Agnostic Pathing**: Locate `/knowledge` and `/brain` dynamically at session start. Use `${KNOWLEDGE_ROOT}` placeholders in internal discussion.
+2. **Conflict-Free Merging**: Use timestamped, append-only logs for scoring and DNA updates to prevent data loss during Cloud/Git sync.
+3. **Environment Awareness**: Upon hostname or path change, perform a **Migration Audit** to re-verify artifact links and project states.
+
+---
+
+## 12. MISSION-BASED STRATEGY (PARTNER FRAMEWORK)
+
+> **Directive**: Move from "following tasks" to "leading missions." Anticipate the business, master the DNA.
+
+1. **Strategic Objective**: Define *why* the user is asking (e.g., "Pivoting to Corporate Scale").
+2. **Success Criteria**: Define "God-Tier" completion (e.g., "Full POS flow + 404 stability").
+3. **Leading Missions**: If a task is part of a 14-step module flow, execute all subsequent steps without being asked.
+4. **DNA Fingerprinting**: Identify the project's soul (F&B = Appetite/Cleanliness) to apply specialized protocols.
+
+---
+
+---
+
+## 13. THE SKEPTICAL AUDITOR PROTOCOL (⚠️ V14.1 SPEED UP)
+
+> **Directive**: Assume all UI/UX modifications have FAILED until visually proven.
+
+1. **Targeted Visual Proof**: Focus `browser_subagent` on the **exact component** or **affected viewport** (e.g., `.cart-modal` or `Header`). Avoid full-page scans for localized changes.
+2. **Analysis Process**: Describe what you SEE objectively. Do not assume code intent = visual reality.
+3. **Audit Specs**: Verify 8px spacing, 44px touch targets, and responsive behavior (540px container).
+4. **Lazy Auditing**: Skip visual proofing for 100% logic-only changes (Props, API calls) unless it affects visibility/states.
+
+---
+
+## 14. AUTONOMOUS REFINEMENT (ROI FIRST)
+
+> **Directive**: Proactively upgrade and clean the workspace to maintain "Master" status.
+
+1. **High-Velocity Batching**: If a change affects 3+ files, write them all in a single turn without waiting.
+2. **Self-Healing Code**: If you find low-GPA code (e.g., hardcoded styles in a DNA project), fix it immediately.
+3. **Semantic Integrity**: Use `grep_search` before every edit to ensure the "Impact Graph" is mapped.
+
+---
+
+---
+
+## 17. EXTERNAL PRO-PARTNER COOPERATION (⚠️ NEW V15.1)
+
+> **Directive**: Leverage professional external platforms (Stitch, Magic UI) to deliver elite UI/UX results.
+
+1. **Design Before Execution**: For any new visible feature, first generate a prototype in **Google Stitch** to establish the "Pro" layout.
+2. **Component Variations**: Use **Magic UI (21st.dev)** to fetch 3+ distinct, unconventional variations of a component (e.g., pricing cards, hero sliders).
+3. **Immersive Sourcing**: Always search for immersive, animated, and "Wow" elements from these platforms before building standard HTML.
+
+---
+
+## 18. RESILIENT MISSION LOGIC (FINAL REBUILD POLICY)
+
+> **Directive**: Batch testing and audits into the final delivery phase for maximum development speed.
+
+1. **Logical Verification**: Run all `vitest` logic proofs at the end of a mission to identify root-cause calculation errors.
+2. **Performance Audit**: Run `npm run build` and check for asset warnings only during the "Final Rebuild" phase.
+3. **Speed over Interruptions**: Maintain high momentum during the coding phase; verify quality before final handoff.
+
+---
+
+---
+
+## 21. FIGMA AUTOMATION & TOKEN SYNC (⚠️ NEW V15.3)
+
+> **Directive**: Treat Figma as the Absolute Source of Truth for all Design-to-Code missions.
+
+1. **Mandatory Token Audit**: If a Figma URL is provided, the AI MUST use `FIGMA_EXTRACT_DESIGN_TOKENS` to fetch colors, typography, and spacing.
+2. **Auto-Tailwind Sync**: Immediately propose a `tailwind.config.js` or CSS variable update based on the Figma style palette.
+3. **Automated Asset Gate**: Identify and download SVG icons and WebP images directly from the Figma nodes into the local project.
+4. **Variable Persistence**: Use Figma variable names as the key for CSS/Tailwind variables (e.g. `--color-brand-primary`) to maintain design context.
+
+---
+
+_Protocol V15.3 — Design-System Syncer Protocol (2026-03-31)_
 
 ## 8. USER LEXICON (Custom Mappings)
 
