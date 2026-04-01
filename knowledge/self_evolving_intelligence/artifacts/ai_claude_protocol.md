@@ -1,10 +1,48 @@
-# AI Claude Mode — Activation Protocol V3.0
+# AI Claude Mode — Activation Protocol V5.0
 
 > **PURPOSE**: When user says "ai claude" in Gemini chat, activate Claude-Code mode.
 > **Trigger**: User says "ai claude", "claude mode", "admin mode", or "create module"
 > **Effect**: Switch from default Gemini design mode → Claude-Code admin panel mode
-> **Created**: 2026-03-12 | **V3.0 Upgraded**: 2026-03-31
-> **V3.0**: Added 7 intelligence patterns from Gemini brain (adapted for admin context)
+> **Created**: 2026-03-12 | **V5.0 Upgraded**: 2026-04-01
+> **V5.0**: Added Predictive Mapping Strategy (P0.5) & Token ROI Economy.
+
+---
+
+## SECTION 0: INITIAL PROJECT BOOT SEQUENCE (MANDATORY STRICT)
+
+> **Goal**: Formalized Boot-and-Ask synchronization.
+
+### 0.1 Strict Activation (New V5.1)
+- **Trigger**: User says "ai claude".
+- **Action 1**: Auto-open Claude Mode flags.
+- **Action 2**: Read ALL 14 skill files/folders in `C:\Users\user\.gemini\antigravity\skills\claude-code\`.
+- **Action 3**: STOP ALL EXECUTION.
+
+### 0.2 Conditional Boot Checks (NEW)
+Before asking any questions, AI MUST verify the current project state:
+- **Check 1 (`node_modules`)**: If `node_modules` directory exists, flag `pnpm install` as **COMPLETED**.
+- **Check 2 (`.claudeignore`)**: If `.claudeignore` / `.geminiignore` exist, flag Ignore Optimization as **COMPLETED**.
+- **Check 3 (Dev Stability)**: If the Active Projects tracker shows "Stable" or recently bug-fixed, flag Bug Fixing as **COMPLETED**.
+
+### 0.3 The Dynamic Question Gate
+- If ALL steps are **COMPLETED**, skip this gate entirely, do NOT show AskUserQuestion, and auto-resume from the last saved state (Section 0.5).
+- If ANY step is missing, AI MUST present the `AskUserQuestion` template mentioning ONLY the missing steps.
+- **MANDATORY**: Wait for explicit user confirmation if the question is shown.
+
+### 0.3.5 Post-Confirmation Execution (FAST-TRACK WORLD RECORD)
+Only execute the steps that are NOT yet COMPLETED:
+- **Step 1: pnpm install** — Direct execution. No heavy knowledge overhead.
+- **Step 2: .ignore Research & Deploy** — Research possible ignore files and update `.claudeignore` / `.geminiignore`.
+- **Step 3: pnpm dev:local Health Check** — Start dev server + verify local Supabase (Docker) connection status.
+- **Step 4: Instant Bug Fixing** — Use skills for lightning-fast resolution of pre-existing errors (TS, Circular, Port mismatches).
+
+### 0.5 Fast-Save & Auto-Resume (NEW)
+- At the end of every Claude Mode session (or when the user stops), AI automatically saves the current module progress and file path to the **Active Projects Tracker**.
+- Upon reactivation ("ai claude"), if the Boot Gate is skipped (Gate 0.3), the AI instantly reloads the exact context and says:
+  > *"Restored context for [Project/Module Name]. Ready to continue from [Step/File]."*
+
+### 0.4 Error Handling
+- If `docker ps` returns error → stop and ask user to start Docker.
 
 ---
 
@@ -28,12 +66,13 @@
 | Setting | Default (Gemini) | Claude Mode (ADMIN) |
 |---------|-----------------|---------------------|
 | **Source skills** | All 26 Gemini skills | `skills/claude-code/` ONLY |
+| **Approval** | Auto-Approve All | **Selective Wait (Option 1)** |
+| **Mandatory Wait**| N/A | SQL, SQL Schema, Store logic, API, Multi-File |
+| **Auto-Pass** | N/A | Minor UI tweaks (CSS, text) in single file |
 | **Design DNA** | Load user_taste_dna + design vault | SKIP all design files |
 | **Knowledge files** | Load per task type | Load claude-code skills ONLY |
 | **Code style** | Vue 3 + Tailwind vanilla | Vben Admin + Ant Design + Supabase |
-| **Database** | Dummy data / localStorage | Supabase (PostgreSQL + RLS) |
 | **Execution** | V13 phases (Before→During→After) | 14-step module pipeline |
-| **Testing** | Manual + E2E | Workflow test engine |
 
 ---
 
@@ -62,21 +101,26 @@
 /supabase-auth-architecture → Auth design reference
 ```
 
-### Execution Sequence
+### Execution Sequence (Predictive V5.0)
 ```
 User: "ai claude create module teacher"
   │
-  ├── 1. Activate ADMIN mode
-  ├── 2. Load priority files (RLS + MCP connection)
-  ├── 3. Check: does user provide field table?
-  │       YES → Run /create-module pipeline
-  │       NO  → Ask: module name, fields, relationships, FK, balance, menu
+  ├── 1. PHASE P0: BOOT & VERIFY
+  │       ├── 0.1 Post-Install Verify (Gate 18)
+  │       ├── 0.2 Registry Scan (Intelligence Registry)
+  │       └── 0.3 PREDICTIVE MAPPING (P0.5)
+  │           └─ Map Schema → V2 Skills (e.g., Currency, FK, RLS)
   │
-  ├── 4. Execute 14-step pipeline:
-  │       SQL → Seed → Types → Store → Shared → Mock → Form
-  │       → Drawers → List → Detail → Parent Layer → Route → i18n → Workflow
+  ├── 2. PHASE P1: SMART CONSULTATION & PLANNING
+  │       ├── 1.1 Present Pattern Matches (Matched 4 Predictive Skills)
+  │       └── 1.2 Implementation Plan (Skip approved patterns)
   │
-  └── 5. Verify: pnpm dev:antd compiles, all CRUD works
+  ├── 3. PHASE P2: IMPROVEMENT EXECUTION
+  │       ├── 2.1 Snippet Injection (Zero-Think Boilerplate)
+  │       └── 2.2 ROI-First Scanning (Precise view_file ranges)
+  │
+  └── 4. PHASE P5: UPDATE KNOWLEDGE
+          └── 5.1 Log Token ROI & Confidence in Vault V2
 ```
 
 ---
@@ -86,8 +130,8 @@ User: "ai claude create module teacher"
 ```
 NEVER LOAD:
   ✗ user_taste_dna.md          (design preferences irrelevant)
-  ✗ user_preference_dna.md     (taste scoring irrelevant)
-  ✗ design_vault/*             (no design vault matching)
+  ✗ user_preference_dna.md     (Taste scoring irrelevant — user explicitly requested to skip)
+  ✗ design_vault/*             (No design vault matching)
   ✗ mobile_design_mastery.md   (not mobile app)
   ✗ website_design_dna.md      (not website)
   ✗ unified_app_blueprint.md   (not vanilla Vue app)

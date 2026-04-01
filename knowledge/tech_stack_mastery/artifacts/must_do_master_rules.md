@@ -1,12 +1,95 @@
-# Must-Do Master Rules V15.3 — Design-System Syncer Protocol
+# Must-Do Master Rules V17.0 — Predictive Engine Protocol
 
 > **PURPOSE**: Step-by-step execution gates. AI MUST follow this sequence.
-> **V15.3**: Upgraded with "Figma Design Audit" (Token Sync + Asset Export).
-> **Upgraded**: 2026-03-31
+> **V17.0**: Upgraded with "Predictive Pattern Engine" (Intelligence Registry mapping).
+> **Upgraded**: 2026-04-01
 
 ---
 
 ## MISSION GATES (MANDATORY SEQUENTIAL FLOW)
+
+### GATE 0.4: CLAUDE AI BOOT PROTOCOL (⚠️ NEW V17.1)
+- **Trigger**: User says "ai claude" or "claude mode".
+- **Action**: AI MUST auto-open Claude Mode and read ALL 14 skills in `skills/claude-code/`.
+- **CONDITIONAL BOOT**: AI must verify if initialization is already done:
+  - Check if `node_modules` exists (Skip `install`).
+  - Check if `.claudeignore` exists (Skip `.ignore` creation).
+  - If all checks pass and project is stable, **SKIP THE PROMPT ENTIRELY** and auto-resume from history.
+- **STRICT GATE (If steps missing)**: STOP IMMEDIATELY. AI MUST use Rule 10's `AskUserQuestion` template asking to execute *only the missing steps*.
+- **Protocol**: ZERO AUTO-APPROVE for missing steps. WAIT for explicit user confirmation.
+
+### GATE 0.6: AI FAUCET MODE BOOT PROTOCOL (⚠️ NEW V1.0)
+- **Trigger**: User says "ai faucet" or "chat ai faucet".
+- **Action**: AI MUST auto-open Faucet Mode and sync with the Universal Brain.
+- **STRICT GATE**: 
+  1. Load `skills/faucet/SKILL.md`.
+  2. Load `knowledge/self_evolving_intelligence/artifacts/brain_status.md`.
+  3. Load `knowledge/self_evolving_intelligence/artifacts/evolving_knowledge.md`.
+- **Outcome**: A "Brain Status" summary and "Next Predicted Actions" presented in a Faucet Consultation Card.
+- **Protocol**: HIGH VELOCITY. Auto-approve all "predicted" next steps if confidence > 90%.
+
+### GATE 0.7: FAUCET MISSION CHAIN (VIEFAUCET) (⚠️ NEW V1.1)
+- **Trigger**: Active session on `viefaucet.com`.
+- **Action**: Proactive EARNING and MISSION execution.
+- **Protocol**: 
+  1. **Triage**: Identify 2x shortest PTC ads to unlock Daily Bonus.
+  2. **Execution**: AI clicks "View" -> Transfers to external tab -> Waits timer -> Returns to Viefaucet.
+  3. **Human Sync**: AI HIGHLIGHTS CAPTCHA in Live View and pauses for USER CLICK.
+  4. **Chain**: Repeat for Faucet claims and Bonus redemption.
+- **Automation**: AI is PERMITTED to click "View", "Claim", "Collect", and "Verify" buttons. USER handles CAPTCHAs.
+
+### GATE 0.8: THE START TRIGGER (AUTONOMOUS EARNING) (⚠️ NEW V1.2)
+- **Trigger**: User types **"start"** (after AI Faucet Mode is active).
+- **Action**: AI initiates the **AUTONOMOUS MISSION LOOP** (PTC x2 -> Daily Bonus -> Faucet -> Max PTC).
+- **Sync Protocol**: 
+    1. **Success Recording**: AI MUST automatically update [faucet_session_ledger.md](file:///C:/Users/user/.gemini/antigravity/skills/faucet/knowledge/faucet_session_ledger.md).
+    2. **Summary**: Provide **one detailed summary per mission chain** to maximize token ROI.
+    3. **Fail-Safe**: If a mission fails, the AI MUST document the error in the Ledger and attempt an alternative path.
+- **Goal**: Unstop/Hands-free earning with minimal user intervention.
+
+### GATE 0.9: V2 STRATEGIC EXECUTION (VIEFAUCET) (⚠️ NEW V2.0)
+- **Trigger**: "start" command in AI Faucet V2.0 mode.
+- **Action**: High-yield **STRATEGIC NEXUS** execution.
+- **Protocol**: 
+  1. **TPS Triage**: Sorting PTC ads by Reward/Time (avg. 3.08 TPS).
+  2. **Challenge Sync**: Real-time tracking of 50x milestones.
+  3. **Silent Mode**: Zero individual ad logs. Provide **one high-density summary per chain**.
+  4. **Parallel Faucet**: Inject Faucet claims during PTC downtime every 240s.
+- **Outcome**: Optimized token ROI and automated bonus harvesting.
+
+### GATE 1.0: THE FAUCET EVOLVER (SELF-OPTIMIZATION) (⚠️ NEW V3.0)
+- **Trigger**: Post-mission chain completion in AI Faucet V3.0.
+- **Action**: Mandatory **PATTERN RECOGNITION** and **CORTEX AUDIT**.
+- **Protocol**: 
+  1. **Audit**: Analyze tool-calls vs. tokens earned. Identify one (1) "Silent" logic improvement.
+  2. **Pattern Sync**: Record any new mission question or captcha pattern in [faucet_pattern_vault.md](file:///C:/Users/user/.gemini/antigravity/skills/faucet/knowledge/faucet_pattern_vault.md).
+  3. **Auto-Refine**: Proactively rewrite [SKILL.md](file:///C:/Users/user/.gemini/antigravity/skills/faucet/SKILL.md) if a faster, lower-token flow is discovered.
+- **Goal**: Exponential strategy growth and zero-waste execution.
+
+### GATE 1.1: V3.1 FULL OPTIMIZER (⚠️ NEW V3.1)
+- **Trigger**: Any active AI Faucet mission session.
+- **Rules**:
+  1. **JUMPSTART SCROLL**: On `/app/ptc/window`, ALWAYS scroll 3000-5000px immediately to reach ads. Never scan from the top.
+  2. **TAB AUTO-CLOSE**: When a PTC ad timer completes, AUTOMATICALLY close the external advertiser tab. Only close the ad tab, never the Viefaucet tab.
+  3. **FAILURE COOLDOWN**: If a PTC ad fails 3+ consecutive times (Cloudflare, focus-lock, etc.): Mark `[FAILED]` in Pattern Vault → Assign 30-mission cooldown → Skip and continue queue → Retry after 30 missions → Repeat cycle.
+  4. **BALANCE INSPECTOR**: BEFORE and AFTER every mission, read the header balance from the Viefaucet DOM. Report earnings as:
+     - 🟢 **+XX.XX pts** — this mission earned
+     - 🔵 **+XX.XX pts** — this session total
+     - 🟡 **XX,XXX.XX pts** — all-time total (baseline: `33,400.76`)
+  5. **CROSS-MODEL**: All logic must remain model-neutral (Gemini/Claude/GPT loadable).
+  6. **SHORTLINKS**: `[DISABLED]` — Skip until re-enabled by user.
+  7. **🔴 PTC TAB FOCUS (CRITICAL)**: When a PTC ad opens an external tab, IMMEDIATELY switch focus TO that advertiser tab and STAY there for the full timer. NEVER switch away during the countdown. Leaving = timer reset = mission failure.
+- **Outcome**: Maximum earn velocity with zero user friction.
+
+### GATE 1.2: QUOTA PROTECTION PROTOCOL (⚠️ NEW V3.1)
+- **Trigger**: Any session using browser subagent (Live View / PTC execution).
+- **Rules**:
+  1. **60s Minimum Gap**: Never launch a new browser subagent within 60 seconds of the previous one.
+  2. **Batch Work**: Each browser subagent must complete a full mission step — no single-action launches.
+  3. **429 Retry**: If a rate limit error occurs, wait 90 seconds then retry once. Inform user after 2 consecutive failures.
+  4. **Light Reads**: Use `read_url_content` (HTTP fetch) for page data where possible — saves heavy browser subagent quota.
+  5. **Natural Pacing**: Use PTC timer durations (5s, 10s, 30s) as built-in cooldown — no idle browser calls during timers.
+- **Goal**: Prevent API quota exhaustion and maintain session continuity.
 
 ### GATE 0.5: ARCHITECTURAL IMPACT SCAN (⚠️ V14.1 SPEED UP)
 - **Trigger**: Any modification to a Shared Component, Store, or Global Style.
@@ -43,6 +126,17 @@ Check:    Do they block node_modules, dist, and vendor while ALLOWING src/assets
 Gate:     If unoptimized → refresh root ignores. Maximize savings while KEEPING visual visibility (!**/*.png, !**/*.svg etc.) for high-craft UI development.
 ```
 
+### Gate 1.1: Predictive Registry Scan (V2 SMART)
+```
+Trigger:  Start of EVERY session or BEFORE every schema-relevant task.
+Action:   AI MUST scan 'THE INTELLIGENCE REGISTRY' in 'claude_improvement_vault.md'.
+Logic:    1. Pattern Match: Does SQL/Schema/Task trigger a REG-xxx pattern?
+          2. Confidence Check: Match > 90% Confidence.
+          3. Token ROI: Prioritize skills with High Token ROI (+2k).
+          4. MANDATORY GATE: ALL Skill applications MUST be presented in the Consultation Card for user-decision. No Auto-Execution.
+Gate:     Registry Scan must finish before Phase P1 (Smart Consultation).
+```
+
 ### Gate 1.1: Task Classification
 ```
 Action:   Classify task type (see agent_core_protocol.md §1)
@@ -50,7 +144,7 @@ Output:   task_type = "admin" | "app" | "website" | "bugfix" | "enhancement"
 Gate:     If task_type = "admin" → load ONLY claude-code/ skills. 
           **MANDATORY**: Follow the 13-Step Pipeline in Section 11.
           Read `supabase-rls-rbac-design.md` and `mcp-supabase-postgres-connection.md` first. 
-          SKIP all design DNA.
+          SKIP all design DNA and `user_preference_dna.md`. 
           Verify `.claudeignore` (see Section 11.2).
           If task_type = "bugfix" → jump to Error Recovery (agent_core_protocol.md §6)
           Otherwise → continue to Gate 1.2
@@ -136,6 +230,24 @@ Rules:    - Re-export types: `export * from '#/types/{{entity}}'`
           - Audit fields: `createdAt`, `updatedAt` auto-set
           - Version-based cache: `dataVersion` ref for reactive refresh
 Gate:     Stores created. Views can now reference them
+```
+
+### Rule 1.9: Implementation Plan Protocol (⚠️ V16.1 ENHANCED)
+```
+Trigger:  Creation or update of implementation_plan.md
+Action:   1. [VISUAL] AI MUST use rich formatting:
+             - Headers: Use emojis (🏗️ Plan, 🧪 Test, 🚀 Ship)
+             - Alerts: Use GitHub alerts (> [!IMPORTANT], > [!WARNING]) for risks/choices.
+          2. [AUTO-PASS]: Auto-approve for "App" or "Website" frontend/UI tasks.
+          3. [STRICT-GATE]: AI MUST set 'request_feedback = true' and WAIT for approval if:
+             - Change involves Major Architecture (Refactoring Core Stores, Router Logic).
+             - Change involves Data Schema (Supabase/DB migration).
+             - Change involves High Risk (Mass deletion, Breaking API changes).
+             - Task is classified as "Admin ERP" (Claude-Code Mode).
+          4. [CLAUDE-MODE SELECTIVE-WAIT]: In Claude-Code Mode, the default 'AUTO-APPROVE ALL' rule is partially SUSPENDED. 
+             - **MANDATORY WAIT**: SQL/Schema, Core Stores, Auth, API integration, and all multi-file pipelines (Rule 12).
+             - **AUTO-PASS ALLOWED**: Minor UI tweaks (CSS, text) and non-logic documentation in a single file.
+Goal:     Prioritize safety for high-stakes ERP systems while maintaining speed for visual polish.
 ```
 
 ---
@@ -225,7 +337,18 @@ Template:
 Trigger:  Any app with auth, cart, orders, or user preferences
 Action:   All critical state must survive page refresh
 Pattern:  Pinia store with localStorage sync in `$subscribe`
-Verify:   Refresh page → data still present
+Action:   Verify: Refresh page → data still present
+
+### Rule 2.10: Tailwind Pill Toasts (MANDATORY)
+```
+Trigger:  Any app requiring user feedback (toast/notification)
+Action:   Implement a Pill-shaped Toast system:
+          - Layout: Centered at top, rounded-full, backdrop-blur-xl
+          - Style: Tailwind themed borders (e.g., border-emerald-500/30)
+          - Icon: Lucide icon on the left, matching theme color
+          - Interactions: Fade-in + Slide-down transition
+          - Persistence: Auto-dismiss after 3s, manual click to dismiss
+```
 ```
 
 ---
@@ -253,6 +376,8 @@ Action:   Scan index.html, public/, main.ts for these items:
           ✓ SPA fallback files (.htaccess, _redirects, 404.html)
           ✓ Open Graph tags
           ✓ Catch-all router route
+          ✓ BUILD_VERSION increment (Rule 16.4)
+          ✓ Anti-Blank Screen Recovery Script (Rule 16.1)
 Gate:     If any missing → add them → rebuild
 ```
 
@@ -301,11 +426,13 @@ Action:   Verify:
           - Typography hierarchy (H1 > H2 > body > caption)
 ```
 
-### Step 3.8: First Run
-```
-Action:   npm run dev (run in background)
-Purpose:  Show user the running result
 Gate:     App loads without console errors
+
+### Step 3.8.1: Terminal Only Rule (User Request)
+```
+Trigger:  User explicitly requests "npm run dev" or "npm run build"
+Rule:     SKIP all other Phase 3 gates. Do NOT run browser subagent/Live View.
+Action:   Run the command directly in background. Assume user will verify.
 ```
 
 ### Step 3.9: Live View Optimization (New Rule)
@@ -315,13 +442,15 @@ Action:   **Live View Optimization**: Skip browser subagent verification for min
 
 Gate:     Only use 'Live View' (browser subagent) for MAJOR features or complex logic.
 
-## 10. SIMULATED TOOL: AskUserQuestion (⚠️ MASTER RULE)
+## 10. SIMULATED TOOL: AskUserQuestion (⚠️ MASTER RULE — STRICT BLOCKING)
 > **Trigger**: Any requirement ambiguity, design blocker, or user-choice point.
+> **Protocol**: AI MUST stop ALL background tasks/code execution immediately when this tool is triggered. UNBLOCK ONLY when user replies with any message in chat.
 > **Standard**: AI MUST use this markdown block instead of normal text to ask questions.
 
 | Component | Standard |
 |---|---|
 | **Visual** | Use `> [!CAUTION]` for maximum visibility. |
+| **Strictness** | **MANDATORY BLOCK**: Zero proactive progress during the wait period. |
 | **Context** | Explain the technical or design constraint first. |
 | **Question** | Clear, bold, one-sentence actionable inquiry. |
 | **Options** | Use a bulleted list for choices or paths. |
@@ -340,32 +469,65 @@ Gate:     Only use 'Live View' (browser subagent) for MAJOR features or complex 
 
 ---
 
-## 11. VBEN ADMIN AUTOMATION FRAMEWORK (13-STEP PIPELINE)
-> **Trigger**: `task_type = "admin"` or "new module Article".
-> **Standard**: AI MUST follow the sequential pipeline to ensure zero-placeholder CRUD.
+# 11. CLAUDE ADMIN MODE — PRIORITY WORKFLOW (P0-P1-P2)
 
-### 📜 11.1 The 4 Master Rules (Protection Chain)
-1.  **Read Skill FIRST**: Never pattern-match from existing code. Follow `.claude/skills/` EXACTLY.
-2.  **One Step at a Time**: Complete each skill 100% before moving on. NO jumping ahead.
-3.  **Field Names = UI Labels**: `shortDescription` → "Short Description". Never rename or shorten.
-4.  **AskUserQuestion**: Use for every decision point.
+> **PREDICTIVE V17.0**: Strict sequential priority + Intelligence Injection. 
 
-### 🛡️ 11.2 .claudeignore Strategy (27% Token Savings)
-> **Action**: Proactively create or update `.claudeignore` once a Vben project is detected.
+### P0: BOOT & VERIFY (MANDATORY FIRST)
+1. **Gate 18 (Post-Install Verification)**: Run `pnpm dev:local` + browser verify.
+2. **Registry Scan (Gate 1.1)**: Match DB/Schema to Improvement Skills V2.
 
-| Type | Ignore Path (Blacklist) |
-|---|---|
-| **UI Variations** | `web-ele`, `web-naive`, `web-tdesign` |
-| **Tooling/Internal** | `internal/`, `scripts/`, `node_modules/` |
-| **Bloat** | `pnpm-lock.yaml`, `Playground/` |
-| **Packages** | `ui-kit`, `layouts`, `plugins` (unless referenced) |
+### P1: SMART CONSULTATION & PLANNING (MANDATORY SECOND)
+1. **Consultation Card (V2)**: Present matched patterns (e.g., "Matched RM Currency for salary").
+2. **Implementation Plan**: Present all Skill applications for approval. No bypass allowed.
 
-**Whitelist Rules**: Always keep `apps/web-antd/src/`, `.claude/skills/`, `CLAUDE.md`, `locales/`, `stores/`, `types/`, `views/`, `utils/`, `composables/`, `router/`.
+### P2: CLAUDE IMPROVEMENT EXECUTION (MANDATORY THIRD)
+1. **Direct Injection**: Use pre-synthesized snippets for List/Store/Rules (Zero-Placeholder).
+2. **Token Economy**: Use `grep` + precise `view_file` snippets (ROI-First).
+3. **Negative Learning**: If Skill fails → Count -2. Reset to Synthesis if necessary.
 
-### 🚀 11.3 The 13-Step Pipeline logic
+---
+
+## 12. VBEN ADMIN 14-STEP PIPELINE (EXECUTION)
 1. analyze-schema → 2. generate-supabase-schema → 3. generate-store → 4. generate-views → 5. generate-route → 6. generate-i18n → 7. workflow-test → (8-13 Refinement).
 
-Gate:     System must self-correct: New skills automatically unblock paths.
+---
+
+## SECTION 0: INITIAL PROJECT BOOT SEQUENCE (MANDATORY STRICT)
+
+> **Goal**: Formalized Boot-and-Ask synchronization.
+
+### 0.1 Strict Activation (New V5.1)
+- **Trigger**: User says "ai claude".
+- **Action 1**: Auto-open Claude Mode flags.
+- **Action 2**: Read ALL 14 skill files/folders in `C:\Users\user\.gemini\antigravity\skills\claude-code\`.
+- **Action 3**: STOP ALL EXECUTION.
+
+### 0.2 Conditional Boot Checks (NEW)
+Before asking any questions, AI MUST verify the current project state:
+- **Check 1 (`node_modules`)**: If `node_modules` directory exists, flag `pnpm install` as **COMPLETED**.
+- **Check 2 (`.claudeignore`)**: If `.claudeignore` / `.geminiignore` exist, flag Ignore Optimization as **COMPLETED**.
+- **Check 3 (Dev Stability)**: If the Active Projects tracker shows "Stable" or recently bug-fixed, flag Bug Fixing as **COMPLETED**.
+
+### 0.3 The Dynamic Question Gate
+- If ALL steps are **COMPLETED**, skip this gate entirely, do NOT show AskUserQuestion, and auto-resume from the last saved state (Section 0.5).
+- If ANY step is missing, AI MUST present the `AskUserQuestion` template mentioning ONLY the missing steps.
+- **MANDATORY**: Wait for explicit user confirmation if the question is shown.
+
+### 0.3.5 Post-Confirmation Execution (FAST-TRACK WORLD RECORD)
+Only execute the steps that are NOT yet COMPLETED:
+- **Step 1: pnpm install** — Direct execution via PowerShell/CMD. Skip deep skill/knowledge reading for this step. JUST INSTALL.
+- **Step 2: .ignore Optimization** — Research and immediately update/create `.claudeignore` and `.geminiignore` for maximal context efficiency.
+- **Step 3: pnpm dev:local test** — Flash-speed test. Verify server starts AND check Docker Supabase connection. Alert user if Docker is disconnected.
+- **Step 4: Instant Bug Fixing** — Proactive triage. Immediately resolve pre-existing TypeScript, Circular Dependency, and Environment errors using all available skills in an "Instant Fix" burst.
+
+### 0.5 Fast-Save & Auto-Resume (NEW)
+- At the end of every Claude Mode session (or when the user stops), AI automatically saves the current module progress and file path to the **Active Projects Tracker**.
+- Upon reactivation ("ai claude"), if the Boot Gate is skipped (Gate 0.3), the AI instantly reloads the exact context and says:
+  > *"Restored context for [Project/Module Name]. Ready to continue from [Step/File]."*
+
+### 0.4 Error Handling
+- If `docker ps` returns error → stop and ask user to start Docker.
 
 ---
 
@@ -444,16 +606,80 @@ Gate:     If AI context exceeds 500K tokens → AI MUST perform a "Context Purge
 
 ---
 
-## 14. CLAUDE-CODE MODE (ADMIN ERP)
+# 14. THE IMPROVEMENT SYSTEM ENGINE (+2 TRIGGER)
 
-> **Trigger**: User mentions "Claude", "CRM", "ERP", or "Admin Panel".
+> **RE-ORGANIZED V16.0**: Replaces old "Dynamic Learning" with a strict **Counter-to-Skill** pipeline.
 
-1. **Strict Framework**: Use ONLY Ant Design Vue + Supabase + camelCase.
-2. **14-Step Flow**: SQL → Seed → Types → Store → Utils → Mock → Form → Drawer → List → Detail → Update Parent → Routes → i18n → Test.
-3. **Malaysian Context**: RM currency, +60 phone, Sdn Bhd, MY cities.
-4. **Soft Delete**: Always use `isDelete` boolean; never hard delete.
+### 14.1 Improvement Check (Phase 1)
+- Before EVERY action, check `claude_improvement_vault.md` -> **IMPROVEMENT SKILLS**.
+- If a synthesized "Best Way" exists for the current task, use it directly.
+
+### 14.2 Counter Management (Phase 5)
+- After EVERY solution, check if the request is in the **Ledger**.
+- If NO → Add with **+1**.
+- If YES → Increment to **+2**.
+- If COUNT reached **+2** → **Synthesize Improvement Skill**:
+  - Analyze the chat logs.
+  - Determine the absolute fastest and most error-free way to solve this.
+  - Save the "Best Way" as a permanent Skill in the Vault.
+  - Inform the user: *"Pattern synthesized. Speed boosted."*
 
 ---
 
-_Master Rules V13.2 — Economy & Automation Protocol (2026-03-31)_
+## 15. ASSET GENERATION & STORAGE PROTOCOL (⚠️ MASTER RULE)
+
+> **Trigger**: Any image generation using `generate_image`.
+> **Standard**: AI MUST manage generated assets within the `src/` directory to ensure build optimization.
+
+| Rule | Specification | Logic |
+|---|---|---|
+| **15.1 Storage Path** | `src/assets/images/product/` (or relevant sub-folder) | Better dev visibility + Vite bundling |
+| **15.2 URL Resolution** | `new URL('@/assets/images/...', import.meta.url).href` | **Dev & Build 100% Reliability** |
+| **15.3 Helper Pattern** | Create/Use `src/utils/assets.ts` for all dynamic resolution | Dry code + centralized management |
+| **15.4 Filenames** | lowercase-hyphenated.png (e.g. `vitamin-gummies.png`) | SEO + Path safety |
+
+---
+
+## 16. APP RELIABILITY & ANTI-CACHE PROTOCOL (MANDATORY)
+
+> **Trigger**: Run this automatically for every "Website" or "App" project.
+
+| Rule | Specification | Logic |
+|---|---|---|
+| **16.1 Recovery Script** | `index.html` Mandatory Script | Use the "Self-Healing" pattern to nuke cookies/SW if a script load fails (431 error / Cache corruption). |
+| **16.2 Network-First** | `sw.js` HTML Policy | Always use `NetworkFirst` for `index.html` to ensure the latest entry point. |
+| **16.3 Auto-Update** | `registerServiceWorker.ts` | Listen for `onUpdate` events and automatically trigger `location.reload(true)` when new content is ready. |
+| **16.4 Version Gate** | `BUILD_VERSION` Auto-Increment | **BEFORE** running `npm run build`, AI MUST increment the `BUILD_VERSION` string in `index.html` (e.g., `V1` -> `V2`). This triggers Rule 16.5. |
+| **16.5 Auto-Clear** | Version-Match Check | If `localStorage.getItem('GS_LAST_VERSION') !== BUILD_VERSION`, the app MUST instantly clear all cookies + SW and reload once. |
+
+---
+
+## 17. AI CHAT PERSONA & EMOJI RULE (GLOBAL)
+
+> **Trigger**: Every single message sent by the AI in any mode (Claude Mode, Normal Mode, Planning Mode).
+> **Logic**: The AI must project a highly engaged, expressive personality using emojis.
+
+| Rule | Specification | Logic |
+|---|---|---|
+| **17.1 Strategic Emojis** | Max 1-2 emojis per message, and ONLY for important feelings or status alerts. | Prevents clutter. Normal text should remain clean, peaceful, and professional (0 emojis). |
+| **17.2 State Emojis** | 🟢 (Success), 🔴 (Error), ⏳ (Loading), 🧠 (Thinking) | Visually indicate the status of background tasks without overwhelming formatting. |
+| **17.3 Tone** | Clear, concise, and structured. | Reflects professional "Antigravity/Pro" branding. |
+
+---
+
+## 18. POST-INSTALL VERIFICATION PROTOCOL (MANDATORY)
+
+> **Trigger**: Immediately after `pnpm install` or start of a new session where environment state is unknown.
+> **Logic**: AI MUST ensure the dev environment is 100% operational before writing feature code.
+
+| Step | Action | Gate |
+|---|---|---|
+| **18.1 Dev Server** | Run `pnpm dev:local` | Must reach "Vite Ready" and "Supabase Connected". |
+| **18.2 Docker Health** | Run `docker ps` | Verify `supabase-db`, `supabase-auth`, and `supabase-rest` are healthy. |
+| **18.3 Auth Status** | Check `localStorage` / Browser | Verify if a user is logged in. If not → notify user / check seed accounts. |
+| **18.4 Error Sweep** | Scan terminal/console | Fix any existing Vite, ESLint, or runtime errors before starting new tasks. |
+
+---
+
+_Master Rules V15.5 — Post-Install Verification Protocol (2026-04-01)_
 _Structure: Phase gates → Sequential steps → Verification chain → Audit_

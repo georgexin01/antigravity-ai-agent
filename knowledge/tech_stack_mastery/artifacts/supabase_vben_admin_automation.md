@@ -6,11 +6,11 @@
 
 ---
 
-## 🚀 The 13-Step AI Skills Pipeline
+## 🚀 The 14-Step AI Skills Pipeline
 Every new module (e.g., "new module Article") must trigger this exact sequence:
 
-1.  **analyze-schema**: Read user requirement → define fields → confirm layout.
-2.  **generate-supabase-schema**: Create SQL (Table + RLS + Triggers + Audit Fields).
+1.  **interactive-schema-consultation**: (MANDATORY PAUSE) Ask the user: "What database table will this use, and what are the specific columns?" Proactively recommend standard columns (e.g., status, sort, isDelete, relation FKs). **STOP and WAIT for explicit user confirmation** before generating any code or SQL.
+2.  **generate-supabase-schema**: Create SQL (Table + RLS + Triggers + Audit Fields) based ONLY on the confirmed consultation.
 3.  **generate-store**: Define TypeScript interfaces → Create Pinia store → API methods.
 4.  **generate-views**: Generate 6 Vue 3 files (List, Form, Detail, + 3 specialized drawers).
 5.  **generate-route**: Register module in the application router.

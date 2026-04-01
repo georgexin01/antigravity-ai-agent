@@ -110,13 +110,14 @@ npm install && npm install [all-deps-at-once]
 ### 2.2 Build Order (STRICT — Each Layer Depends on Previous)
 
 ```
-Layer 1: CONFIG      → vite.config.js, index.html, style.css (design tokens)
-Layer 2: PLUMBING    → main.js, router/index.js
+Layer 1: CONFIG      → vite.config.js, index.html (with BUILD_VERSION), theme.css
+Layer 2: PLUMBING    → main.js, router/index.js, registerServiceWorker.ts (auto-update)
 Layer 3: DATA        → data/{domain}.js (all entities, categories, statuses)
 Layer 4: STATE       → stores/ or composables/ (auth, cart, orders)
 Layer 5: LAYOUT      → components/ (AppHeader, BottomNav, WhatsAppFloat, Toast)
 Layer 6: VIEWS       → views/ (all pages, built in parallel batches)
-Layer 7: VERIFY      → npm run build (zero errors required)
+Layer 7: RELIABILITY → sw.js (NetworkFirst strategy), index.html (Recovery Script)
+Layer 8: VERIFY      → npm run build (increment V-number), npm run dev
 ```
 
 **Why this order**: You cannot build views without data. You cannot build layout without routes. Design tokens must exist before any component references colors.

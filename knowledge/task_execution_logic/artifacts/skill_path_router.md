@@ -116,6 +116,22 @@ V9 — AUTO-PREDICT:
   → After rebuild: test related features that might break
 ```
 
+### AI FAUCET MODE (Knowledge Nexus / Brain Sync)
+```
+ALWAYS READ (3 files):
+  skills/faucet/SKILL.md
+  knowledge/self_evolving_intelligence/artifacts/brain_status.md
+  knowledge/self_evolving_intelligence/artifacts/evolving_knowledge.md
+
+READ IF RELEVANT:
+  knowledge/self_evolving_intelligence/artifacts/user_preference_dna.md
+  knowledge/tech_stack_mastery/artifacts/must_do_master_rules.md
+
+V9 — AUTO-PREDICT NEXT FILES:
+  → After brain sync: predicted project files for current active task
+  → After prediction: next logical feature in the app_creation_masterplan
+```
+
 ### PRODUCT DATA UPDATE / PRICE CHANGE
 ```
 READ NOTHING FROM KNOWLEDGE.

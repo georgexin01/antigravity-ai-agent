@@ -151,6 +151,7 @@ AI reads this BEFORE generating any design to pre-filter patterns. Built from ap
 | Trait                   | Pattern                                                            | Confidence |
 | ----------------------- | ------------------------------------------------------------------ | ---------- |
 | **Language**            | Mixed English + Chinese. Casual, short sentences.                  | High       |
+| **Emojis & Tone**       | **MANDATORY LIMIT**: Use ONLY 1-2 emojis per message, specifically for important alerts or feelings. Otherwise, use 0 emojis to keep chat clean and peaceful. | S-CORE     |
 | **Business Scope**      | AI must notice "Branches", "Partners", and "Corporate Scale"       | S-CORE     |
 | **Approval**            | "nice", "correct", "可以", "好", "not bad"                         | High       |
 | **Rejection**           | "ugly", "不好看", "重做", "i dont like"                            | High       |
@@ -160,14 +161,11 @@ AI reads this BEFORE generating any design to pre-filter patterns. Built from ap
 | **Malay**               | "boleh", "ok la", "can" = casual approval                          | Medium     |
 | **Execution**           | Silent, backgrounded, no pop-ups                                   | High       |
 | **Permission**          | Auto-proceed for non-destructive actions                           | High       |
-| **Live View Mode**      | Disable for small/unimportant change to save time. Verify MAJOR bits only. | S-CORE     |
-| **V9: Scope expansion** | "also", "and then", "还有" = AI should have predicted              | High       |
-| **V9: Future intent**   | "later", "next time" = save for next session                       | High       |
-| **AI Claude Trigger**   | "ai claude" = Switch to Claude-Code focus (Read Only, No-Learning) | S-CORE     |
-| **Database Standard**   | Use `test-school-database.md` format for all analysis & SQL        | S-CORE     |
-| **Smart Consultation**  | Analyze all skills & ask for details (Layer Icon, CRUD, etc.)      | S-CORE     |
-| **Auto-Proceed**        | Default to Option 1 if no reply within 30s (Logical Flow)          | S-CORE     |
+| **Live View Mode**      | Disable for small/unimportant change. **ALWAYS DISABLE** when user requests `npm run dev` or `npm run build`. | S-CORE     |
+| **Instant Command**     | Do NOT check other rules/gates when `npm run dev/build` is requested. Just run it. | S-CORE | User 2026-03-31 |
+| **Pill Toasts (Tailwind)**| **Mandatory: pill shape, themed borders, centered top, backdrop-blur** | S-CORE | Golden Shop App |
 | **Golden Planning Protocol** | Trigger on "plan/planning for me". Deep thinking + colorful/structured routes + 5min timeout wait. | S-CORE |
+| **AskUserQuestion BLOCK** | **Strictly wait for reply**. Stop all execution/proactivity until user speaks. | S-CORE | User 2026-04-01 |
 
 ## 🏫 Claude Mode: Smart Consultation & Design Standard (MANDATORY)
 
@@ -214,7 +212,8 @@ For school management or similar projects, the design document MUST include:
 | Fixed header/nav          | 56px header + 60px bottom nav                    | 92     | ALL 4 Vue apps                    |
 | localStorage auth         | `localStorage.setItem('user', JSON.stringify())` | 95     | ALL 4 Vue apps                    |
 | WhatsApp CTA              | `wa.me/[number]` floating button                 | 90     | lee-ming, travel, ld-floor        |
-| Toast notifications       | Auto-dismiss 3s, color-coded, teleport           | 88     | lee-ming, travel, poker           |
+| Toast notifications       | Tailwind Pill: rounded-full, border, backdrop-blur, Lucide icon | S-CORE | ALL Vue apps |
+| **Pill Toasts (Tailwind)**| **Mandatory: pill shape, themed borders, centered top, backdrop-blur** | S-CORE | Golden Shop App |
 | Product card grid         | 2-col grid, image + name + price                 | 88     | lee-ming, travel, ld-floor        |
 | Vue 3 Composition API     | `<script setup>` + ref + computed                | 95     | ALL 4 Vue apps                    |
 | Tailwind v4 native        | `@tailwindcss/vite` plugin, no PostCSS           | 88     | lee-ming-v2, poker                |
@@ -266,7 +265,7 @@ For school management or similar projects, the design document MUST include:
 | poker-app-v3       | 7. QA       | Live simulation + role dashboards                       | Chart.js reports, deploy          | 2026-03-16   |
 | ld-floor-app       | 7. QA       | Dual-role + inventory complete                          | Agent reporting, deploy           | 2026-03-16   |
 | dachengloklok      | 1. PLAN     | Blueprint created                                       | Start build (FP-001 fingerprint)  | 2026-03-19   |
-| **golden-shop-app**| **8. DEPLOY**| **COMPLETED: Referral Tree, Payment split, Heritage DNA**| N/A (Full DNA Extracted)          | 2026-03-31   |
+| **golden-shop-app**| **8. DEPLOY**| **Updated image URLs to local paths (currently broken in dev)**| Predict: Move images to `public/products/` for Vite resolution | 2026-03-31   |
 | **vben-admin-supabase**| **1. PLAN**| **READY: Automation Framework Implanted**               | Await Module Request (FP-008)     | 2026-03-31   |
 
 ---

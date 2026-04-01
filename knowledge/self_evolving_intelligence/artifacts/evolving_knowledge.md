@@ -1,7 +1,7 @@
-# Antigravity Evolving Brain — V15.3 (Design-System Syncer)
+# Antigravity Evolving Brain — V18.0 (Evolving Nexus)
 
 > **PRIORITY**: LEVEL 0 (HIGHEST) — This file is the AI's self-improvement + design-sync engine.
-> **V15.3**: Upgraded to "Design-System Syncer." Integrates Figma Automation (Rube MCP), Design Token Sync, and Auto-Asset Export.
+> **V18.0**: Upgraded to "Evolving Nexus." Integrates AI Faucet Brain V3 (The Evolver), Pattern Recognition Vault, and Self-Refinement Protocols.
 > **Upgraded**: 2026-03-31
 
 ---
