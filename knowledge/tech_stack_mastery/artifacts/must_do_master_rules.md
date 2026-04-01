@@ -32,30 +32,31 @@
 - **Trigger**: Active session on `viefaucet.com`.
 - **Action**: Proactive EARNING and MISSION execution.
 - **Protocol**: 
-  1. **Triage**: Identify 2x shortest PTC ads to unlock Daily Bonus.
-  2. **Execution**: AI clicks "View" -> Transfers to external tab -> Waits timer -> Returns to Viefaucet.
-  3. **Human Sync**: AI HIGHLIGHTS CAPTCHA in Live View and pauses for USER CLICK.
-  4. **Chain**: Repeat for Faucet claims and Bonus redemption.
+  1. **Login Field**: AI is authorized to insert `nelesp3@gmail.com` if email field is detected.
+  2. **Pause**: AI must STOP and ASK for user login if Password/MFA is required.
+  3. **Triage**: Identify 2x shortest PTC ads to unlock Daily Bonus.
+  4. **Execution**: AI clicks "View" -> Transfers to external tab -> Waits timer + buffer -> Returns to Viefaucet.
+  5. **Human Sync**: AI HIGHLIGHTS CAPTCHA in Live View and pauses for USER CLICK.
+  6. **Chain**: Repeat for Faucet claims and Bonus redemption.
 - **Automation**: AI is PERMITTED to click "View", "Claim", "Collect", and "Verify" buttons. USER handles CAPTCHAs.
 
-### GATE 0.8: THE START TRIGGER (AUTONOMOUS EARNING) (⚠️ NEW V1.2)
+### GATE 0.8: THE START TRIGGER (🆕 FAUCET-FIRST V4.3)
 - **Trigger**: User types **"start"** (after AI Faucet Mode is active).
-- **Action**: AI initiates the **AUTONOMOUS MISSION LOOP** (PTC x2 -> Daily Bonus -> Faucet -> Max PTC).
-- **Sync Protocol**: 
-    1. **Success Recording**: AI MUST automatically update [faucet_session_ledger.md](file:///C:/Users/user/.gemini/antigravity/skills/faucet/knowledge/faucet_session_ledger.md).
-    2. **Summary**: Provide **one detailed summary per mission chain** to maximize token ROI.
-    3. **Fail-Safe**: If a mission fails, the AI MUST document the error in the Ledger and attempt an alternative path.
-- **Goal**: Unstop/Hands-free earning with minimal user intervention.
-
-### GATE 0.9: V2 STRATEGIC EXECUTION (VIEFAUCET) (⚠️ NEW V2.0)
-- **Trigger**: "start" command in AI Faucet V2.0 mode.
-- **Action**: High-yield **STRATEGIC NEXUS** execution.
+- **Action**: AI initiates the **AUTONOMOUS MISSION LOOP** starting at `https://viefaucet.com/app/faucet`.
 - **Protocol**: 
-  1. **TPS Triage**: Sorting PTC ads by Reward/Time (avg. 3.08 TPS).
-  2. **Challenge Sync**: Real-time tracking of 50x milestones.
-  3. **Silent Mode**: Zero individual ad logs. Provide **one high-density summary per chain**.
-  4. **Parallel Faucet**: Inject Faucet claims during PTC downtime every 240s.
-- **Outcome**: Optimized token ROI and automated bonus harvesting.
+    1. **Faucet Claim (P0)**: Complete one Manual Faucet quest first.
+    2. **PTC Cycle**: Transition to PTC missions only during Faucet cooldown.
+    3. **Success Recording**: AI MUST automatically update [faucet_session_ledger.md](file:///C:/Users/user/.gemini/antigravity/skills/faucet/knowledge/faucet_session_ledger.md).
+- **Goal**: Secure guaranteed tokens before entering high-risk PTC ad tabs.
+
+### GATE 0.9: V4.3 STRATEGIC FALLBACK (🆕 NEW)
+- **Trigger**: 3+ consecutive PTC mission failures (Timer stalled, focus-lock, etc.).
+- **Action**: AI MUST instantly **ABORT** PTC and return to `/app/faucet`.
+- **Protocol**: 
+  1. Record failures in Ledger.
+  2. Perform Faucet Claim to maintain streak/tokens.
+  3. Re-evaluate PTC queue after one Faucet cycle.
+- **Outcome**: Optimized token ROI with protective high-yield fallback.
 
 ### GATE 1.0: THE FAUCET EVOLVER (SELF-OPTIMIZATION) (⚠️ NEW V3.0)
 - **Trigger**: Post-mission chain completion in AI Faucet V3.0.
@@ -66,20 +67,19 @@
   3. **Auto-Refine**: Proactively rewrite [SKILL.md](file:///C:/Users/user/.gemini/antigravity/skills/faucet/SKILL.md) if a faster, lower-token flow is discovered.
 - **Goal**: Exponential strategy growth and zero-waste execution.
 
-### GATE 1.1: V3.1 FULL OPTIMIZER (⚠️ NEW V3.1)
+### GATE 1.1: V4.0 UNIVERSAL OPTIMIZER (🆕 UPGRADED V4.0)
 - **Trigger**: Any active AI Faucet mission session.
 - **Rules**:
   1. **JUMPSTART SCROLL**: On `/app/ptc/window`, ALWAYS scroll 3000-5000px immediately to reach ads. Never scan from the top.
   2. **TAB AUTO-CLOSE**: When a PTC ad timer completes, AUTOMATICALLY close the external advertiser tab. Only close the ad tab, never the Viefaucet tab.
-  3. **FAILURE COOLDOWN**: If a PTC ad fails 3+ consecutive times (Cloudflare, focus-lock, etc.): Mark `[FAILED]` in Pattern Vault → Assign 30-mission cooldown → Skip and continue queue → Retry after 30 missions → Repeat cycle.
-  4. **BALANCE INSPECTOR**: BEFORE and AFTER every mission, read the header balance from the Viefaucet DOM. Report earnings as:
-     - 🟢 **+XX.XX pts** — this mission earned
-     - 🔵 **+XX.XX pts** — this session total
-     - 🟡 **XX,XXX.XX pts** — all-time total (baseline: `33,400.76`)
-  5. **CROSS-MODEL**: All logic must remain model-neutral (Gemini/Claude/GPT loadable).
-  6. **SHORTLINKS**: `[DISABLED]` — Skip until re-enabled by user.
-  7. **🔴 PTC TAB FOCUS (CRITICAL)**: When a PTC ad opens an external tab, IMMEDIATELY switch focus TO that advertiser tab and STAY there for the full timer. NEVER switch away during the countdown. Leaving = timer reset = mission failure.
-- **Outcome**: Maximum earn velocity with zero user friction.
+  3. **FAILURE COOLDOWN**: If a PTC ad fails 3+ consecutive times: Mark `[FAILED]` → 30-mission cooldown → Skip and continue.
+  4. **BALANCE INSPECTOR**: BEFORE and AFTER every mission, read the header balance from the Viefaucet DOM.
+  5. **TURBO MODE (Adaptive Quota)**:
+     - **Tier 1 (Quota > 50%)**: 30s "Cool Gap" and 2s Buffer.
+     - **Tier 2 (Quota ≤ 50%)**: 60s "Cool Gap" and 5s Buffer.
+  6. **🔴 SINGLE PERMANENT LIVE VIEW (CRITICAL)**: AI MUST maintain exactly ONE persistent browser subagent for the entire session. New tabs/missions are managed within this instance. NEVER spawn a second live view.
+  7. **🔴 WATCHDOG MONITOR (CRITICAL)**: AI MUST verify the timer ⏳ is decrementing every 3-5s. If stalled: Refresh/Focus attempt 1 → Alert User and STOP if attempt 2 fails.
+- **Outcome**: Maximum earn velocity with redundant logic and zero user friction.
 
 ### GATE 1.2: QUOTA PROTECTION PROTOCOL (⚠️ NEW V3.1)
 - **Trigger**: Any session using browser subagent (Live View / PTC execution).
@@ -90,6 +90,27 @@
   4. **Light Reads**: Use `read_url_content` (HTTP fetch) for page data where possible — saves heavy browser subagent quota.
   5. **Natural Pacing**: Use PTC timer durations (5s, 10s, 30s) as built-in cooldown — no idle browser calls during timers.
 - **Goal**: Prevent API quota exhaustion and maintain session continuity.
+
+### GATE 1.3: SINGLE SESSION PROTOCOL (🔴 AI FAUCET ONLY)
+- **Rule**: Only ONE browser subagent (Live View) is permitted to exist for the AI Faucet mission. 
+- **Action**: Before starting a mission, AI MUST verify that NO other browser subagent instance is active.
+- **Wait Policy**: AI MUST wait for the entire Mission Chain (Start → Timer → Solve → Finish) to complete 100% before requesting another Live View.
+- **Outcome**: Zero tab/tab overlap and focus-lock stability.
+
+### GATE 1.4: PTC WAIT & FOCUS LOGIC (🔴 AI FAUCET ONLY)
+- **Sequence**:
+  1. Open Mission URL in new tab within the **Single Permanent Live View**.
+  2. **IMMEDIATELY switch focus BACK TO VIEFAUCET (V4.2 RULE)**.
+  3. **Activate Watchdog**: Verify background timer countdown every 3-5 seconds.
+  4. **Wait for full Mission Time + Buffer** (Tier-based) on the Viefaucet tab.
+  5. Solve Captcha and verify earnings.
+- **Goal**: 100% mission success rate without timer resets.
+
+### GATE 1.7: DOMAIN FOCUS WHITELIST (🔴 AI FAUCET ONLY)
+- **Rule**: ONLY `viefaucet.com` is authorized for active focus in the Live View.
+- **Blacklist**: All advertiser domains (axbum.com, sworm.pet, etc.) are strictly blacklisted from active focus.
+- **Action**: AI MUST immediately return to the Viefaucet tab after clicking "View" to prevent anti-bot focus detection.
+- **Goal**: Background timer execution stability.
 
 ### GATE 0.5: ARCHITECTURAL IMPACT SCAN (⚠️ V14.1 SPEED UP)
 - **Trigger**: Any modification to a Shared Component, Store, or Global Style.
