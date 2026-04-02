@@ -52,44 +52,58 @@ Inputs are defined in `/create-module` skill. Follow that skill's input checklis
 
 ---
 
-## 3. EXECUTION SEQUENCE (Step 2 — Build in Order)
+## 3. EXECUTION SEQUENCE (Step 2 — Build in Waves, Not Serial)
 
-### Phase 1: Architecture (files that other files depend on)
+> **V15 WAVE BATCHING**: Plan ALL → execute in parallel batches → check ONCE.
+> Independent steps in same wave run in parallel. Sequential steps stay ordered.
+> See `_shared/batch_execution_protocol.md` for full protocol.
+
+### WAVE 1: Architecture (SEQUENTIAL — each depends on previous)
 ```
-Step 3.1: Design tokens         → CSS variables / Tailwind @theme config
-Step 3.2: TypeScript types      → Entity, FormValues, PageParams, enums, options
-Step 3.3: Pinia stores          → CRUD methods, re-export types, localStorage persistence
-Step 3.4: Router config         → ALL routes defined. Detail = hideInMenu. List = keepAlive
+→ 3.1: Design tokens         (CSS variables / Tailwind @theme config)
+  → 3.2: TypeScript types    (Entity, FormValues, PageParams, enums, options)
+    → 3.3: Pinia stores      (CRUD methods, re-export types, localStorage persistence)
+      → 3.4: Router config   (ALL routes defined. Detail = hideInMenu. List = keepAlive)
+```
+**GATE**: Wave 1 must complete before Wave 2. These have true dependencies.
+
+### WAVE 2: Views (PARALLEL within wave — depend on Wave 1)
+```
+PARALLEL BATCH:
+  → 3.5: Layout shell        (Header 56px + Bottom Nav 60px + Container 540px)
+  → 3.6: Pages (ALL at once) (Each page PRODUCTION-READY. No skeletons, no TODOs)
+  → 3.7: Shared components   (Cards, Modals, Toast, Status badges, Empty states)
+THEN:
+  → 3.8: Connect everything  (Store ↔ Views ↔ Router ↔ Nav — all wired)
+```
+**RULE**: 3.5, 3.6, 3.7 are independent — write in same batch. 3.8 wires them after.
+
+### WAVE 3: Polish (PARALLEL within wave — depend on Wave 2)
+```
+PARALLEL BATCH:
+  → 3.9: Interactions        (Hover effects, transitions cubic-bezier(0.16, 1, 0.3, 1))
+  → 3.10: WhatsApp CTA       (Floating button on ALL B2B/B2C pages)
+  → 3.11: PWA + Meta         (manifest.json, sw.js, OG tags, favicon, noindex)
+THEN:
+  → 3.12: SPA fallback       (.htaccess + _redirects + 404.html + catch-all route)
 ```
 
-### Phase 2: Views (depend on Phase 1)
+### WAVE 4: Verify (Build ONCE → parallel checks)
 ```
-Step 3.5: Layout shell          → Header (fixed 56px) + Bottom Nav (fixed 60px) + Container (540px)
-Step 3.6: Pages (ALL at once)   → Each page PRODUCTION-READY. No skeletons, no TODOs
-Step 3.7: Shared components     → Cards, Modals, Toast, Status badges, Empty states
-Step 3.8: Connect everything    → Store ↔ Views ↔ Router ↔ Nav — all wired
-```
-
-### Phase 3: Polish (depends on Phase 2)
-```
-Step 3.9: Interactions          → Hover effects, transitions (cubic-bezier(0.16, 1, 0.3, 1))
-Step 3.10: WhatsApp CTA         → Floating button on ALL B2B/B2C pages
-Step 3.11: PWA + Meta           → manifest.json, sw.js, OG tags, favicon, noindex
-Step 3.12: SPA fallback         → .htaccess + _redirects + 404.html + catch-all route
+FIRST:
+  → 3.13: npm run build      (ONLY NOW. Must pass with zero errors)
+THEN PARALLEL:
+  → 3.14: Route check        (Every route renders — no blank pages)
+  → 3.15: Auth flow          (Login → OTP → Home → Profile → Logout works)
+  → 3.16: Persistence        (localStorage survives refresh)
+  → 3.17: Mobile check       (540px container, bottom nav, 44px touch targets, safe-area)
+FINALLY:
+  → 3.18: npm run dev        (Auto-run on first build to show result)
 ```
 
-### Phase 4: Verify (depends on Phase 3)
-```
-Step 3.13: npm run build        → ONLY NOW. Must pass with zero errors
-Step 3.14: Route check          → Every route renders (no blank pages)
-Step 3.15: Auth flow            → Login → OTP → Home → Profile → Logout works
-Step 3.16: Persistence          → localStorage survives refresh
-Step 3.17: Mobile check         → 540px container, bottom nav, 44px touch targets, safe-area
-Step 3.18: npm run dev          → Auto-run on first build to show result
-```
-
-**WRONG**: Build mid-creation, create skeleton pages, leave TODOs
-**CORRECT**: Finish ALL files → build once → verify all → present
+**CYCLE**: 18 steps → 4 waves (67% fewer think-edit-check cycles)
+**WRONG**: Build mid-creation, check after each file, create skeleton pages
+**CORRECT**: Finish ALL files per wave → move to next wave → build ONCE → verify all
 
 ---
 

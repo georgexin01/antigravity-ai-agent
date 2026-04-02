@@ -9,7 +9,7 @@
 
 ---
 
-## §1 — P0 CRITICAL RULES (12 rules — NEVER skip)
+## §1 — P0 CRITICAL RULES (14 rules — NEVER skip)
 
 ```
 P0-01  Design tokens FIRST before any component
@@ -61,6 +61,27 @@ P0-11  Smart Consultation Card before complex modules (ADMIN mode)
 P0-12  BUGFIX: Read error → classify → fix → rebuild
        → Do NOT read design files for bug fixes
        → Do NOT restructure code unless fix requires it
+
+P0-13  ERROR LEARNING: On ANY error:
+       → FIRST: Check _shared/error_learning_vault.md for known fix
+       → If found: apply recorded fix immediately (skip debugging)
+       → If not found: debug → fix → RECORD in error_learning_vault.md
+       → Escalation (max 3 attempts per error):
+         Attempt 1: Fix directly
+         Attempt 2: Try alternative method/approach
+         Attempt 3: Swap/remove component, use different one
+         After 3 fails: Cancel + tell user what was tried
+       → Error seen 2+ times = vault fix mandatory (no re-debugging)
+       → Error seen 4+ times + vault fix fails = auto-swap component
+
+P0-14  BATCH EXECUTION: For tasks with 2+ files:
+       → PLAN all files + dependencies BEFORE touching any file
+       → GROUP into batches (independent files = same batch, parallel)
+       → EXECUTE batch by batch (write multiple small files per response)
+       → CHECK once after ALL edits (not after each file)
+       → FIX in waves (plan all fixes → apply all → check once)
+       → NEVER serial loop: edit→check→edit→check for multi-file tasks
+       → Full protocol: _shared/batch_execution_protocol.md
 ```
 
 ---

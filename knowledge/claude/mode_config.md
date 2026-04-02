@@ -52,23 +52,38 @@ Step 0.6: If ANY check fails → show ONLY missing steps, wait for user
 
 ---
 
-## 14-STEP PIPELINE (From create-module Skill)
+## 14-STEP PIPELINE (Wave-Batched — 8 Waves Instead of 14 Serial)
+
+> V15: 14 serial steps → 8 waves (43% fewer cycles). Same pipeline, wave-grouped by dependency.
 
 ```
-Step  1: Migration SQL (FK, money, enum, image fields)
-Step  2: Seed SQL (Malaysian locale data)
-Step  3: Types (enums, interfaces, PageParams)
-Step  4: Pinia Store (Supabase CRUD operations)
-Step  5: Update shared files (data-refresh, index, delete-actions)
-Step  6: Mock backend (6 files for staging mode)
-Step  7: Form component (with image upload if needed)
-Step  8: Drawers (create, edit, detail)
-Step  9: List component (CellFkLink for FK columns)
-Step 10: Detail component (dual mode: page + drawer)
-Step 11: Parent list layer icon (if 1:N children)
-Step 12: Route module config
-Step 13: i18n translations (zh-CN + en-US)
-Step 14: Workflow tests (CRUD, instant, FK — based on structure)
+WAVE 1: Step 1 — Migration SQL (FK, money, enum, image fields)
+
+WAVE 2 (Parallel — both depend on Wave 1):
+  → Step 2: Seed SQL (Malaysian locale data)
+  → Step 3: Types (enums, interfaces, PageParams)
+
+WAVE 3: Step 4 — Pinia Store (needs types from Wave 2)
+
+WAVE 4 (Parallel — independent after Wave 3):
+  → Step 5: Update shared files (data-refresh, index, delete-actions)
+  → Step 6: Mock backend (6 files for staging mode)
+
+WAVE 5 (Parallel — both need store from Wave 3):
+  → Step 7: Form component (with image upload if needed)
+  → Step 8: Drawers (create, edit, detail)
+
+WAVE 6 (Parallel — both need views from Wave 5):
+  → Step 9: List component (CellFkLink for FK columns)
+  → Step 10: Detail component (dual mode: page + drawer)
+
+WAVE 7 (Parallel — independent after Wave 6):
+  → Step 11: Parent list layer icon (if 1:N children)
+  → Step 12: Route module config
+
+WAVE 8 (Parallel — need all above):
+  → Step 13: i18n translations (zh-CN + en-US)
+  → Step 14: Workflow tests (CRUD, instant, FK — based on structure)
 ```
 
 ---

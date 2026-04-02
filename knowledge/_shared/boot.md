@@ -79,7 +79,7 @@ Follow mode_config.md instructions.
 
 ---
 
-## P0 CRITICAL RULES (All Modes — Never Skip)
+## P0 CRITICAL RULES (15 Rules — All Modes — Never Skip)
 
 ```
 P0-01  Design tokens FIRST before any component
@@ -96,6 +96,32 @@ P0-09  No skeleton pages. Build COMPLETE views.
 P0-10  Follow mode gate. NEVER read files outside your mode folder.
 P0-11  Consultation Card before complex modules (CLAUDE mode).
 P0-12  BUGFIX: read error → classify → fix → rebuild. No design files.
+P0-13  ERROR LEARNING: On ANY error → check _shared/error_learning_vault.md FIRST.
+       If vault has fix → use it immediately (skip debugging).
+       If vault has no fix → debug → record fix in vault after solving.
+       Escalation: Attempt 1 (fix) → Attempt 2 (alternative method) →
+       Attempt 3 (swap component) → Cancel + notify user.
+       Same error 2+ times = vault fix mandatory. 4+ times = auto-swap.
+P0-14  BATCH EXECUTION: For tasks with 2+ files:
+       → PLAN all files + dependencies first (before touching any file)
+       → GROUP into parallel batches (independent files = same batch)
+       → EXECUTE batch by batch (write multiple files per response)
+       → CHECK once after all edits (not after each file)
+       → FIX in waves (all errors at once, not one-by-one)
+       → NEVER do serial: edit→check→edit→check for known multi-file tasks
+       Full protocol: _shared/batch_execution_protocol.md
+
+P0-15  MINIMIZE SCREENSHOTS & LIVE VIEW:
+       Screenshots and browser live view are EXPENSIVE (time + tokens).
+       → NEVER capture screenshots for: text changes, CSS tweaks, config edits,
+         type definitions, store logic, router changes, i18n updates
+       → ONLY use live view / screenshots when:
+         ✓ Major feature completion (full page built, needs visual verify)
+         ✓ Complex layout debugging (elements overlapping, alignment broken)
+         ✓ User explicitly asks "show me" or "take screenshot"
+         ✓ Final QA verification (Phase 3 mobile responsive check)
+       → For everything else: trust the code. Build → check terminal → done.
+       → Default: NO live view. Code-only verification.
 ```
 
 ---

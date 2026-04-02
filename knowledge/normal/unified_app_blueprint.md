@@ -43,18 +43,34 @@ src/
 
 ---
 
-## 2. BUILD ORDER (STRICT)
+## 2. BUILD ORDER (STRICT — WAVE BATCHING)
+
+> V15: 8 serial steps → 6 waves (37% fewer cycles). Same output, batched execution.
 
 ```
-1. style.css → Design tokens (@theme), utility classes (.btn, .card, .input-field)
-2. main.js → Register plugins (router, pinia, i18n)
-3. router/index.js → All routes (lazy-loaded), navigation guards
-4. data/{domain}.js → Complete entity data + categories + statuses
-5. stores/ or composables/ → State management (auth, cart, domain logic)
-6. App.vue → Shell with conditional chrome
-7. components/ → Layout components (Header, Nav, Card, Toast, Float)
-8. views/ → All pages (build in parallel batches, each view COMPLETE)
-9. Verify → npm run build (zero errors)
+WAVE 1 (Foundation):
+  → style.css        Design tokens (@theme), utility classes (.btn, .card, .input-field)
+
+WAVE 2 (Parallel — both depend on Wave 1):
+  → main.js          Register plugins (router, pinia, i18n)
+  → data/{domain}.js Complete entity data + categories + statuses
+  ✓ Independent — write in same batch
+
+WAVE 3 (Router — depends on Wave 2):
+  → router/index.js  All routes (lazy-loaded), navigation guards
+
+WAVE 4 (Parallel — depends on Wave 1-3):
+  → stores/          State management (auth, cart, domain logic)
+  → components/      Layout components (Header, Nav, Card, Toast, Float)
+  ✓ Independent — write in same batch
+
+WAVE 5 (Final Assembly — depends on Wave 4):
+  → App.vue          Shell with conditional chrome (needs stores)
+  → views/           All pages in parallel batches, each COMPLETE
+  ✓ Independent — write in same batch
+
+WAVE 6 (Verify):
+  → npm run build    Zero errors. CHECK ONCE after all files written.
 ```
 
 ---

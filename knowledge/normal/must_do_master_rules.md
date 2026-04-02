@@ -6,123 +6,24 @@
 
 ---
 
-## MISSION GATES (MANDATORY SEQUENTIAL FLOW)
+## MISSION GATES (V15 WAVE BATCHING)
 
-### GATE 0.4: CLAUDE AI BOOT PROTOCOL (⚠️ NEW V17.1)
-- **Trigger**: User says "ai claude" or "claude mode".
-- **Action**: AI MUST auto-open Claude Mode and read ALL 14 skills in `skills/claude-code/`.
-- **CONDITIONAL BOOT**: AI must verify if initialization is already done:
-  - Check if `node_modules` exists (Skip `install`).
-  - Check if `.claudeignore` exists (Skip `.ignore` creation).
-  - If all checks pass and project is stable, **SKIP THE PROMPT ENTIRELY** and auto-resume from history.
-- **STRICT GATE (If steps missing)**: STOP IMMEDIATELY. AI MUST use Rule 10's `AskUserQuestion` template asking to execute *only the missing steps*.
-- **Protocol**: ZERO AUTO-APPROVE for missing steps. WAIT for explicit user confirmation.
-
-### GATE 0.6: AI FAUCET MODE BOOT PROTOCOL (⚠️ NEW V1.0)
-- **Trigger**: User says "ai faucet" or "chat ai faucet".
-- **Action**: AI MUST auto-open Faucet Mode and sync with the Universal Brain.
-- **STRICT GATE**: 
-  1. Load `skills/faucet/SKILL.md`.
-  2. Load `knowledge/self_evolving_intelligence/artifacts/brain_status.md`.
-  3. Load `knowledge/self_evolving_intelligence/artifacts/evolving_knowledge.md`.
-- **Outcome**: A "Brain Status" summary and "Next Predicted Actions" presented in a Faucet Consultation Card.
-- **Protocol**: HIGH VELOCITY. Auto-approve all "predicted" next steps if confidence > 90%.
-
-### GATE 0.7: FAUCET MISSION CHAIN (VIEFAUCET) (⚠️ NEW V1.1)
-- **Trigger**: Active session on `viefaucet.com`.
-- **Action**: Proactive EARNING and MISSION execution.
-- **Protocol**: 
-  1. **Login Field**: AI is authorized to insert `nelesp3@gmail.com` if email field is detected.
-  2. **Pause**: AI must STOP and ASK for user login if Password/MFA is required.
-  3. **Triage**: Identify 2x shortest PTC ads to unlock Daily Bonus.
-  4. **Execution**: AI clicks "View" -> Transfers to external tab -> Waits timer + buffer -> Returns to Viefaucet.
-  5. **Human Sync**: AI HIGHLIGHTS CAPTCHA in Live View and pauses for USER CLICK.
-  6. **Chain**: Repeat for Faucet claims and Bonus redemption.
-- **Automation**: AI is PERMITTED to click "View", "Claim", "Collect", and "Verify" buttons. USER handles CAPTCHAs.
-
-### GATE 0.8: THE START TRIGGER (🆕 FAUCET-FIRST V4.3)
-- **Trigger**: User types **"start"** (after AI Faucet Mode is active).
-- **Action**: AI initiates the **AUTONOMOUS MISSION LOOP** starting at `https://viefaucet.com/app/faucet`.
-- **Protocol**: 
-    1. **Faucet Claim (P0)**: Complete one Manual Faucet quest first.
-    2. **PTC Cycle**: Transition to PTC missions only during Faucet cooldown.
-    3. **Success Recording**: AI MUST automatically update [faucet_session_ledger.md](file:///C:/Users/user/.gemini/antigravity/skills/faucet/knowledge/faucet_session_ledger.md).
-- **Goal**: Secure guaranteed tokens before entering high-risk PTC ad tabs.
-
-### GATE 0.9: V4.3 STRATEGIC FALLBACK (🆕 NEW)
-- **Trigger**: 3+ consecutive PTC mission failures (Timer stalled, focus-lock, etc.).
-- **Action**: AI MUST instantly **ABORT** PTC and return to `/app/faucet`.
-- **Protocol**: 
-  1. Record failures in Ledger.
-  2. Perform Faucet Claim to maintain streak/tokens.
-  3. Re-evaluate PTC queue after one Faucet cycle.
-- **Outcome**: Optimized token ROI with protective high-yield fallback.
-
-### GATE 1.0: THE FAUCET EVOLVER (SELF-OPTIMIZATION) (⚠️ NEW V3.0)
-- **Trigger**: Post-mission chain completion in AI Faucet V3.0.
-- **Action**: Mandatory **PATTERN RECOGNITION** and **CORTEX AUDIT**.
-- **Protocol**: 
-  1. **Audit**: Analyze tool-calls vs. tokens earned. Identify one (1) "Silent" logic improvement.
-  2. **Pattern Sync**: Record any new mission question or captcha pattern in [faucet_pattern_vault.md](file:///C:/Users/user/.gemini/antigravity/skills/faucet/knowledge/faucet_pattern_vault.md).
-  3. **Auto-Refine**: Proactively rewrite [SKILL.md](file:///C:/Users/user/.gemini/antigravity/skills/faucet/SKILL.md) if a faster, lower-token flow is discovered.
-- **Goal**: Exponential strategy growth and zero-waste execution.
-
-### GATE 1.1: V4.0 UNIVERSAL OPTIMIZER (🆕 UPGRADED V4.0)
-- **Trigger**: Any active AI Faucet mission session.
-- **Rules**:
-  1. **JUMPSTART SCROLL**: On `/app/ptc/window`, ALWAYS scroll 3000-5000px immediately to reach ads. Never scan from the top.
-  2. **TAB AUTO-CLOSE**: When a PTC ad timer completes, AUTOMATICALLY close the external advertiser tab. Only close the ad tab, never the Viefaucet tab.
-  3. **FAILURE COOLDOWN**: If a PTC ad fails 3+ consecutive times: Mark `[FAILED]` → 30-mission cooldown → Skip and continue.
-  4. **BALANCE INSPECTOR**: BEFORE and AFTER every mission, read the header balance from the Viefaucet DOM.
-  5. **TURBO MODE (Adaptive Quota)**:
-     - **Tier 1 (Quota > 50%)**: 30s "Cool Gap" and 2s Buffer.
-     - **Tier 2 (Quota ≤ 50%)**: 60s "Cool Gap" and 5s Buffer.
-  6. **🔴 SINGLE PERMANENT LIVE VIEW (CRITICAL)**: AI MUST maintain exactly ONE persistent browser subagent for the entire session. New tabs/missions are managed within this instance. NEVER spawn a second live view.
-  7. **🔴 WATCHDOG MONITOR (CRITICAL)**: AI MUST verify the timer ⏳ is decrementing every 3-5s. If stalled: Refresh/Focus attempt 1 → Alert User and STOP if attempt 2 fails.
-- **Outcome**: Maximum earn velocity with redundant logic and zero user friction.
-
-### GATE 1.2: QUOTA PROTECTION PROTOCOL (⚠️ NEW V3.1)
-- **Trigger**: Any session using browser subagent (Live View / PTC execution).
-- **Rules**:
-  1. **60s Minimum Gap**: Never launch a new browser subagent within 60 seconds of the previous one.
-  2. **Batch Work**: Each browser subagent must complete a full mission step — no single-action launches.
-  3. **429 Retry**: If a rate limit error occurs, wait 90 seconds then retry once. Inform user after 2 consecutive failures.
-  4. **Light Reads**: Use `read_url_content` (HTTP fetch) for page data where possible — saves heavy browser subagent quota.
-  5. **Natural Pacing**: Use PTC timer durations (5s, 10s, 30s) as built-in cooldown — no idle browser calls during timers.
-- **Goal**: Prevent API quota exhaustion and maintain session continuity.
-
-### GATE 1.3: SINGLE SESSION PROTOCOL (🔴 AI FAUCET ONLY)
-- **Rule**: Only ONE browser subagent (Live View) is permitted to exist for the AI Faucet mission. 
-- **Action**: Before starting a mission, AI MUST verify that NO other browser subagent instance is active.
-- **Wait Policy**: AI MUST wait for the entire Mission Chain (Start → Timer → Solve → Finish) to complete 100% before requesting another Live View.
-- **Outcome**: Zero tab/tab overlap and focus-lock stability.
-
-### GATE 1.4: PTC WAIT & FOCUS LOGIC (🔴 AI FAUCET ONLY)
-- **Sequence**:
-  1. Open Mission URL in new tab within the **Single Permanent Live View**.
-  2. **IMMEDIATELY switch focus BACK TO VIEFAUCET (V4.2 RULE)**.
-  3. **Activate Watchdog**: Verify background timer countdown every 3-5 seconds.
-  4. **Wait for full Mission Time + Buffer** (Tier-based) on the Viefaucet tab.
-  5. Solve Captcha and verify earnings.
-- **Goal**: 100% mission success rate without timer resets.
-
-### GATE 1.7: DOMAIN FOCUS WHITELIST (🔴 AI FAUCET ONLY)
-- **Rule**: ONLY `viefaucet.com` is authorized for active focus in the Live View.
-- **Blacklist**: All advertiser domains (axbum.com, sworm.pet, etc.) are strictly blacklisted from active focus.
-- **Action**: AI MUST immediately return to the Viefaucet tab after clicking "View" to prevent anti-bot focus detection.
-- **Goal**: Background timer execution stability.
+> **V15 UPGRADE**: Faucet gates moved to `faucet/mode_config.md`.
+> Claude boot gates moved to `claude/mode_config.md`.
+> This file now contains ONLY Normal mode gates + Phase 1-4 rules.
+> Phase 1 gates use WAVE BATCHING (see `_shared/batch_execution_protocol.md`).
 
 ### GATE 0.5: ARCHITECTURAL IMPACT SCAN (⚠️ V14.1 SPEED UP)
 - **Trigger**: Any modification to a Shared Component, Store, or Global Style.
 - **Action**: Use `grep_search` to map only **at-risk** target elements.
-- **Outcome**: A list of "Targeted Content" to be verified in Phase 10.
+- **Outcome**: A list of "Targeted Content" to be verified in Phase 3.
 
-### GATE 0.8: MATHEMATICAL LOGIC PROOF (⚠️ V15.0 Finalized)
+### GATE 0.8: MATHEMATICAL LOGIC PROOF (⚠️ V15.0)
 - **Policy**: Run this gate during the **"Final Mission Rebuild"**.
 - **Action**: Create a `vitest` spec file and run `npm run test`.
 - **Outcome**: 100% logic green-light before project completion.
 
-### GATE 4.3: FIGMA DESIGN AUDIT (⚠️ NEW V15.3)
+### GATE 4.3: FIGMA DESIGN AUDIT (⚠️ V15.3)
 - **Trigger**: User provides a Figma Design URL.
 - **Action**: Use **`FIGMA_EXTRACT_DESIGN_TOKENS`** to pull colors, type, and spacing.
 - **Outcome**: Auto-synced `tailwind.config.js` and local assets before Phase 4.
@@ -131,122 +32,83 @@
 
 ## HOW TO USE THIS FILE
 
-This file is a **sequential gate system**. Each phase BLOCKS the next phase.
+This file is a **wave-batched gate system**. Each phase BLOCKS the next phase.
 - Phase 1 (BEFORE) must complete before Phase 2 (DURING)
 - Phase 2 (DURING) must complete before Phase 3 (AFTER)
+- **Within each phase**: independent gates run in PARALLEL WAVES
 - If any REQUIRED gate fails → STOP and resolve before continuing
 
 ---
 
-## PHASE 1: BEFORE CODING (Gates — Must Pass Before Writing Any Code)
+## PHASE 1: BEFORE CODING (Wave-Batched Gates)
 
-### Gate 1.0: Auto-Ignore Validation (CORE ECONOMY)
-```
-Action:   Verify root ignore files (.claudeignore, .geminiignore) in antigravity/
-Check:    Do they block node_modules, dist, and vendor while ALLOWING src/assets images?
-Gate:     If unoptimized → refresh root ignores. Maximize savings while KEEPING visual visibility (!**/*.png, !**/*.svg etc.) for high-craft UI development.
-```
+> **V15**: 10 serial gates → 4 waves (60% fewer cycles). Same rules, wave-grouped by dependency.
 
-### Gate 1.1: Predictive Registry Scan (V2 SMART)
+### WAVE 1 (Parallel — No Dependencies Between These)
 ```
-Trigger:  Start of EVERY session or BEFORE every schema-relevant task.
-Action:   AI MUST scan 'THE INTELLIGENCE REGISTRY' in 'claude_improvement_vault.md'.
-Logic:    1. Pattern Match: Does SQL/Schema/Task trigger a REG-xxx pattern?
-          2. Confidence Check: Match > 90% Confidence.
-          3. Token ROI: Prioritize skills with High Token ROI (+2k).
-          4. MANDATORY GATE: ALL Skill applications MUST be presented in the Consultation Card for user-decision. No Auto-Execution.
-Gate:     Registry Scan must finish before Phase P1 (Smart Consultation).
-```
+Gate 1.0: Auto-Ignore Validation
+  Action:   Verify .claudeignore/.geminiignore block node_modules, dist, vendor
+            while ALLOWING src/assets images (!**/*.png, !**/*.svg)
+  Gate:     If unoptimized → refresh root ignores
 
-### Gate 1.1: Task Classification
-```
-Action:   Classify task type (see agent_core_protocol.md §1)
-Output:   task_type = "admin" | "app" | "website" | "bugfix" | "enhancement"
-Gate:     If task_type = "admin" → load ONLY claude-code/ skills. 
-          **MANDATORY**: Follow the 13-Step Pipeline in Section 11.
-          Read `supabase-rls-rbac-design.md` and `mcp-supabase-postgres-connection.md` first. 
-          SKIP all design DNA and `user_preference_dna.md`. 
-          Verify `.claudeignore` (see Section 11.2).
-          If task_type = "bugfix" → jump to Error Recovery (agent_core_protocol.md §6)
-          Otherwise → continue to Gate 1.2
-```
+Gate 1.2: Task Classification
+  Action:   Classify task_type (see agent_core_protocol.md §1)
+  Output:   "admin" | "app" | "website" | "bugfix" | "enhancement"
+  Gate:     admin → switch to claude/mode_config.md
+            bugfix → jump to agent_core_protocol.md §6
+            otherwise → continue
 
-### Gate 1.2: Context Loading (ROI-FIRST)
+Gate 1.6: Page Planning
+  Action:   List EVERY route/page before writing any code
+  Output:   Complete route map (path, component name, layout, auth)
+  Gate:     All routes listed. No "will add later" allowed
 ```
-Action:   Read these files in order of ROI (high to low):
-          1.  Implementation Plan / Walkthrough artifacts (distilled memory)
-          2.  user_preference_dna.md (taste context)
-          3.  skill_path_router.md (logic routing)
-          4.  Reference project structure (use grep_search or list_dir first)
-          5.  Raw source code (ONLY after semantic mapping in Step 12.1)
-Verify:   List loaded context items. If raw code read before artifacts → FAILURE
-```
+**All 3 gates are independent — execute in parallel. WAIT for all to complete.**
 
-### Gate 1.3: Brand Kit
+### WAVE 2 (Parallel — Depends on Wave 1)
 ```
-Trigger:  Any UI task (app, website, design)
-Action:   Extract or request: primary color, secondary color, font family, logo
-Source:   Check existing files first (index.html, theme.css, tailwind.config)
-          If not found → ask user ONE question: "What's your brand color and font?"
-          If user doesn't respond → use professional defaults (blue #3b82f6, Inter)
-Gate:     Brand Kit must be resolved before ANY component code is written
-```
+Gate 1.1: Predictive Registry Scan
+  Trigger:  After 1.0 completes (ignore files verified)
+  Action:   Scan INTELLIGENCE REGISTRY in claude_improvement_vault.md
+  Gate:     Registry scan finished before Consultation Card
 
-### Gate 1.4: Design Research
-```
-Trigger:  New app or website (not bugfix, not admin)
-Action:   If reference URL given → clone structure and style
-          If reference image given → clean background, extract layout
-          If neither → search Mobbin/Awwwards for same category, study top 3
-Output:   Design direction decided. Layout structure defined
-WRONG:    Designing from scratch without any reference
-CORRECT:  Always start from proven patterns, then customize
-```
+Gate 1.3: Brand Kit Extraction
+  Trigger:  After 1.2 confirms UI task (not bugfix/admin)
+  Action:   Extract: primary color, secondary, font, logo
+  Source:   Check existing files first → ask ONE question if missing
+  Gate:     Brand Kit resolved before ANY component code
 
-### Gate 1.5: Inspiration Cleaning
+Gate 1.2b: Context Loading (ROI-FIRST)
+  Action:   Read in order: Implementation Plan → user_preference_dna →
+            Reference project → Raw code (ONLY after artifacts)
+  Gate:     If raw code read before artifacts → FAILURE
 ```
-Trigger:  User provides reference image for design
-Action:   Before using, verify: pure black background, simplified structure
-          Remove "slop" (noisy elements, watermarks, cluttered backgrounds)
-Gate:     Clean reference ready before extracting patterns
-```
+**All 3 gates are independent — execute in parallel. WAIT for all to complete.**
 
-### Gate 1.6: Page Planning
+### WAVE 3 (Sequential — Depends on Wave 2)
 ```
-Trigger:  Any app or website task
-Action:   List EVERY route/page before writing any code
-Output:   Complete route map (path, component name, layout, auth requirement)
-Example:
-  /           → Home.vue          (public, bottom-nav)
-  /menu       → Menu.vue          (public, bottom-nav)
-  /cart       → Cart.vue          (auth, bottom-nav)
-  /orders     → Orders.vue        (auth, bottom-nav)
-  /login      → Login.vue         (public, no-nav)
-Gate:     All routes listed. No "will add later" allowed
-```
+Gate 1.4: Design Research (needs 1.3 Brand Kit)
+  Action:   Reference URL → clone structure. Image → extract layout.
+            Neither → search Mobbin/Awwwards top 3 in same category.
+  Gate:     Design direction decided
 
-### Gate 1.7: Type System
+Gate 1.5: Inspiration Cleaning (needs 1.4)
+  Trigger:  User provides reference image
+  Action:   Clean background, remove slop/watermarks
+  Gate:     Clean reference ready
 ```
-Trigger:  Any app with data entities
-Action:   Define TypeScript types BEFORE any UI code
-Output:   For each entity: interface, FormValues, PageParams, StatusOptions, enums
-Template:
-  export interface {{Entity}} {
-    id: string
-    {{fields}}
-    isDelete: boolean
-    createdAt: string
-    updatedAt: string
-  }
-  export type {{Entity}}FormValues = Omit<{{Entity}}, 'id' | 'isDelete' | 'createdAt' | 'updatedAt'>
-Gate:     Types defined. Stores can now be written
-```
+**Sequential chain: 1.4 → 1.5. Cannot parallelize (1.5 depends on 1.4).**
 
-### Gate 1.8: Store System
+### WAVE 4 (Sequential Data Layer — Depends on Wave 1 Gate 1.6)
 ```
-Trigger:  After Gate 1.7 (types exist)
-Action:   Create Pinia stores with CRUD + localStorage persistence
-Rules:    - Re-export types: `export * from '#/types/{{entity}}'`
+Gate 1.7: Type System (needs 1.6 Page Planning)
+  Action:   Define TypeScript types for each entity
+  Output:   interface, FormValues, PageParams, enums
+  Gate:     Types defined → stores can now be written
+
+Gate 1.8: Store System (needs 1.7)
+  Action:   Create Pinia stores with CRUD + localStorage persistence
+  Rules:    - Re-export types: `export * from '#/types/{{entity}}'`
           - Soft delete: toggle `isDelete`, never hard delete
           - Audit fields: `createdAt`, `updatedAt` auto-set
           - Version-based cache: `dataVersion` ref for reactive refresh
@@ -449,19 +311,18 @@ Action:   Verify:
 
 Gate:     App loads without console errors
 
-### Step 3.8.1: Terminal Only Rule (User Request)
+### Step 3.8.1: Terminal Only Rule (Default)
 ```
-Trigger:  User explicitly requests "npm run dev" or "npm run build"
-Rule:     SKIP all other Phase 3 gates. Do NOT run browser subagent/Live View.
-Action:   Run the command directly in background. Assume user will verify.
+Rule:     DEFAULT behavior is terminal-only verification (npm run build → check output).
+          Do NOT launch browser subagent / Live View / screenshots unless:
+            ✓ Major feature completion (full page needs visual verify)
+            ✓ Complex layout debug (elements overlapping/misaligned)
+            ✓ User explicitly asks "show me" / "screenshot"
+            ✓ Final QA (Phase 3 mobile responsive check)
+Action:   Trust the code. Build → check terminal errors → done.
+WRONG:    Screenshot after every CSS change or text edit
+CORRECT:  Screenshot only for major milestones or user request
 ```
-
-### Step 3.9: Live View Optimization (New Rule)
-```
-Trigger:  Small changes (text updates, color tweaks, single padding)
-Action:   **Live View Optimization**: Skip browser subagent verification for minor UI/text tweaks. Reserve "Live View" for major feature completions to save time.
-
-Gate:     Only use 'Live View' (browser subagent) for MAJOR features or complex logic.
 
 ## 10. SIMULATED TOOL: AskUserQuestion (⚠️ MASTER RULE — STRICT BLOCKING)
 > **Trigger**: Any requirement ambiguity, design blocker, or user-choice point.
