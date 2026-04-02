@@ -1,9 +1,0 @@
-{
-  "title": "Task Execution Logic",
-  "summary": "Skill path routing and task categorization. AI reads this to determine which skills/knowledge files to load for each task type, preventing token waste.",
-  "last_updated": "2026-03-19T12:00:00Z",
-  "version": "2.0",
-  "artifacts": [
-    "skill_path_router.md — Routes tasks to correct skills/knowledge files"
-  ]
-}
