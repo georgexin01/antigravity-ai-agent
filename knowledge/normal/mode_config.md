@@ -6,25 +6,22 @@
 
 ---
 
-## FILE INDEX (What's In This Folder)
+## FILE INDEX (12 Files + Design Vault 7 + Client DNA 5 = 24 Total)
 
 ```
-CORE PROTOCOLS:
-  agent_core_protocol.md        → Execution sequence, architecture rules, error recovery
-  must_do_master_rules.md       → Sequential gates (Phase 1→2→3→4)
-  v12_ascension_mastery.md      → BLAST/SITE frameworks for new projects
+CORE PROTOCOLS (2):
+  agent_core_protocol.md        → Execution waves, architecture rules, error recovery, BLAST/SITE
+  must_do_master_rules.md       → Phase gates (1→2→3→4), verification, utility rules (compressed)
 
-APP BUILDING:
-  unified_app_blueprint.md      → Vue 3 + Vite + Tailwind scaffold, 8-step build order
+APP BUILDING (2):
+  unified_app_blueprint.md      → Vue 3 + Vite + Tailwind scaffold, wave-batched build order
   typescript_pinia_standard.md  → Types + Pinia store patterns
 
-WEBSITE BUILDING:
-  website_design_dna.md         → VSS syntax, density rules, template DNA
-  website_full_sequence_audit.md → QA checklist (after coding)
-  website_stored_samples.md     → Copy-paste reference components
+WEBSITE BUILDING (1):
+  website_design_dna.md         → VSS syntax, density rules, template DNA, stored samples (merged)
 
-DESIGN SYSTEM:
-  design_vault/README.md        → Match engine (≥85% copy, 55-84% modify, <55% create)
+DESIGN SYSTEM (7 in design_vault/):
+  design_vault/README.md        → Match engine + design research workflow (merged)
   design_vault/theme-system.md  → 5 themes + 20 buttons + cards
   design_vault/micro-interactions.md → 10 animation categories
   design_vault/auth-login-gradient.md → S-CORE 95 auth page
@@ -32,23 +29,16 @@ DESIGN SYSTEM:
   design_vault/mobile-nav-fullscreen-dark.md → S-CORE 95 dark nav
   design_vault/phone-showcase-sticky.md → S-CORE 95 showcase
 
-DESIGN & UX:
+DESIGN & UX (2):
   user_preference_dna.md        → Full taste profile + scores + fingerprints
-  design_research_engine.md     → AI research: Mobbin/Awwwards → clone → customize
   mobile_design_mastery.md      → Native feel mobile patterns
-  senior_designer_protocol.md   → High-end design review
-  stitch_visual_protocol.md     → Google Stitch integration
 
-FEATURE MODULES:
+FEATURE MODULES (2):
   i18n_multilingual_mastery.md  → vue-i18n patterns (lazy-load when "i18n" triggered)
   pwa_offline_first_patterns.md → PWA manifest + SW (lazy-load when "PWA" triggered)
 
-CLIENT DNA:
-  client_dna/86car_design_dna.md
-  client_dna/japanese_food_app_design.md
-  client_dna/jin_hong_design_protocols.md
-  client_dna/zeta_branding_authority_dna.md
-  client_dna/golden_shop_design_dna.md
+CLIENT DNA (5):
+  client_dna/86car, japanese_food, jin_hong, zeta, golden_shop
 ```
 
 ---
