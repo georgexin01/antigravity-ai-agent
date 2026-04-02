@@ -28,7 +28,11 @@ antigravity/
 │   │   ├── mobile_design_mastery.md
 │   │   ├── i18n_multilingual_mastery.md
 │   │   ├── pwa_offline_first_patterns.md
-│   │   ├── v12_ascension_mastery.md
+│   │   ├── v12_ascension_mastery.md (Legacy Ascension)
+│   │   ├── v12_visionary_dna.md (NEW Level 7 Visionary Standard)
+│   │   ├── level_7_test_protocol.md
+│   │   ├── smart_learning_brain.md
+│   │   ├── level_7_progress.md
 │   │   ├── website_full_sequence_audit.md
 │   │   ├── website_stored_samples.md
 │   │   ├── senior_designer_protocol.md
@@ -160,8 +164,13 @@ USER MESSAGE                          → MODE      → FOLDER LOCK
 "earn" / "mission" / "solana faucet"  → FAUCET    → _shared + faucet/
 
 Everything else                        → NORMAL    → _shared + normal/
-"build app" / "website" / "design"    → NORMAL    → _shared + normal/
+"build app" / "website" / "create"    → **LEVEL 7**  → _shared + normal + L7 skills
+"design" / "redesign" / "UI"          → **LEVEL 7**  → _shared + normal + L7 skills
 "fix bug" / "deploy" / "update"       → NORMAL    → _shared + normal/
+
+"level 7" / "3d" / "immersive"         → NORMAL/L7 → _shared + normal/L7
+"threejs" / "gsap" / "webgl"           → NORMAL/L7 → _shared + normal/L7
+"v12 dna" / "master design"            → NORMAL/L7 → _shared + normal/L7
 ```
 
 ---
@@ -208,6 +217,25 @@ Phase 2: Build (execute, lazy-load feature modules)
   │  └─ Triggers: i18n, PWA, mobile, animations, client DNA
   │
 Phase 3: Verify + Save (hot_rules_cache verify chain + session_cache update)
+
+### LEVEL 7: MASTER/3D MODE (4 Phases)
+
+```
+Phase 0: Boot (_shared/boot.md + normal/smart_learning_brain.md)
+  │  └─ Load: v12_visionary_dna + level_7_test_protocol
+  │
+Phase 1: Asset Orchestration (Kling/Gemini/Lovable)
+  │  ├─ Identify 3D Assets (Draco/GLTF)
+  │  ├─ Generate Visual Continuity Map (Liquid Glass)
+  │  └─ Architecture Worker Threads (Audio/Renderer)
+  │
+Phase 2: Build Immersive Engine (Three.js/GSAP/GLSL)
+  │  ├─ Initialize Physics & Animation Timelines
+  │  ├─ Apply Custom Shaders & Texture Manifests
+  │  └─ MSDF Type + spatial audio integration
+  │
+Phase 3: Performance Audit + Save (60FPS Verify + session_cache update)
+```
 ```
 
 ### CLAUDE MODE (3 Phases)
