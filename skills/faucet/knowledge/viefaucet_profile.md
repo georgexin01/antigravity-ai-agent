@@ -1,38 +1,33 @@
-# Viefaucet Profile — V1.1 (Research & Execution Asset)
+# Viefaucet Profile — V4.0 (Universal Optimizer)
 
-> **PURPOSE**: Provide detailed context and operational strategy for AI Faucet Flow 1.
+> **PURPOSE**: Provide detailed context and operational strategy for AI Faucet V4.0.
 > **SOURCE**: https://viefaucet.com/
+> **AUTHORIZED EMAIL**: `nelesp3@gmail.com`
 
-## 1. PLATFORM OVERVIEW
-- **Type**: Multi-coin Crypto Faucet & PTC Ecosystem.
-- **Earning Channels**:
-    - **Faucet**: Periodic claims (timer-based).
-    - **PTC (Paid-To-Click)**: Core earning module (`/app/ptc/window`).
-    - **Offerwalls**: Surveys and tasks.
-    - **Daily Bonuses**: Incentivized login streaks.
+## 1. USER AUTHENTICATION
+- **Primary Method**: Login with Google (OAuth).
+- **Authorized Email**: `nelesp3@gmail.com`
+- **Rule**: AI inserts email and WAITS for User password/MFA entry if required.
 
-## 2. MISSION EXECUTION STRATEGY (V1.1)
-- **Speed-to-Bonus then Max**: 
-    1. Identify and click two (2) shortest duration PTC ads (5-10s).
-    2. Unlock and claim the **Daily Bonus** (`/app/bonus`).
-    3. Transition to **Max Earnings**: Target high-token PTC ads (30-60s).
+## 2. MISSION EXECUTION STRATEGY (V4.0)
+- **Turbo Mode**: Enabled (30s Cool Gap between browser calls).
+- **Watchdog**: Active (Checks timer every 3-5 seconds).
+- **Single Session**: Strictly one persistent browser instance.
 
-## 3. PAGE LOGIC (DEEP DIVE)
+## 3. PAGE LOGIC (V4.0)
 
 ### Faucet Page (`/app/faucet`)
-- **Antibot**: Order-based selection (e.g., text/image order like "mouse-cow-fox").
+- **Antibot**: Order-based selection.
 - **Verification**: reCAPTCHA checkbox.
-- **Claim Action**: "Collect Your Reward" button.
 
 ### PTC Page (`/app/ptc/window`)
-- **Stay Outside Mechanic**: Must stay on the external ad window for the full timer duration.
+- **Stay Outside Mechanic**: Must stay on the external ad window.
 - **Verification**: "Least Often" captcha icon modal.
-- **Trigger**: "View" button -> External Tab -> Wait -> Returns to Viefaucet -> Solving captcha.
+- **Trigger**: "View" button -> External Tab -> Wait + Buffer -> Returns to Viefaucet -> Solving captcha.
 
 ### Bonus Page (`/app/bonus`)
-- **Requirement**: Locked until 2x PTC ads are completed.
 - **Action**: "Claim" in the streak table.
 
 ---
 
-_V1.1 Viefaucet Profile — 2026-04-01_
+_V4.0 Universal Optimizer Profile — 2026-04-01_
