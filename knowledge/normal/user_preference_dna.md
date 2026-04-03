@@ -86,7 +86,10 @@ AI reads this BEFORE generating any design to pre-filter patterns. Built from ap
 
 | Preference                                      | Confidence | Score | Source                       |
 | ----------------------------------------------- | ---------- | ----- | ---------------------------- |
-| 540px max-width container (app-in-browser feel) | High       | 95    | ALL 4 Vue apps               |
+| 540px max-width container (Full 100% width flush on mobile) | S-CORE | 98 | fu-huo-lao-app + User Feedback |
+| Standard Padding: `px-2` or `px-3` | S-CORE | 95 | Wider Mobile Rule 2026-04-03 |
+| Font Size Shift: -1px for all text > 14px | S-CORE | 92 | Wider Mobile Rule 2026-04-03 |
+| Catalog Sidebar: 100px width, px-2 button padding | S-CORE | 90 | fu-huo-lao-app |
 | Bottom tab navigation (4 tabs standard)         | High       | 95    | ALL 4 Vue apps               |
 | Category sidebar (76px left) + content grid     | High       | 88    | 86car + Lee Ming             |
 | Fixed header (56px) + fixed bottom nav (60px)   | High       | 92    | ALL 4 Vue apps               |
@@ -166,6 +169,7 @@ AI reads this BEFORE generating any design to pre-filter patterns. Built from ap
 | **Pill Toasts (Tailwind)**| **Mandatory: pill shape, themed borders, centered top, backdrop-blur** | S-CORE | Golden Shop App |
 | **Golden Planning Protocol** | Trigger on "plan/planning for me". Deep thinking + colorful/structured routes + 5min timeout wait. | S-CORE |
 | **AskUserQuestion BLOCK** | **Strictly wait for reply**. Stop all execution/proactivity until user speaks. | S-CORE | User 2026-04-01 |
+| **Approval Coloring**     | **Mandatory**: Use GitHub Alerts (`> [!IMPORTANT]`, `> [!WARNING]`) and bold colorful markers in implementation plans to highlight anything requiring user approval. | S-CORE | User 2026-04-03 |
 
 ## 🏫 Claude Mode: Smart Consultation & Design Standard (MANDATORY)
 
@@ -266,6 +270,7 @@ For school management or similar projects, the design document MUST include:
 | ld-floor-app       | 7. QA       | Dual-role + inventory complete                          | Agent reporting, deploy           | 2026-03-16   |
 | dachengloklok      | 1. PLAN     | Blueprint created                                       | Start build (FP-001 fingerprint)  | 2026-03-19   |
 | **golden-shop-app**| **8. DEPLOY**| **Updated image URLs to local paths (currently broken in dev)**| Predict: Move images to `public/products/` for Vite resolution | 2026-03-31   |
+| **fu-huo-lao-app**| **8. DEPLOY**| **100% Width Layout Fix Completed**                    | Predict: Finalize catering specific features (Equipment Rental) | 2026-04-03   |
 | **vben-admin-supabase**| **1. PLAN**| **READY: Automation Framework Implanted**               | Await Module Request (FP-008)     | 2026-03-31   |
 
 ---

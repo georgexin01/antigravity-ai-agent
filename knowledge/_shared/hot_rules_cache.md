@@ -31,8 +31,11 @@ P0-04  HATES auto-blocked (-20 score)
 P0-05  Build must succeed before deploy
        → npm run build → 0 errors → then deploy. No exceptions.
 
-P0-06  Mobile responsive test
-       → Test at: 375px (iPhone SE), 390px (iPhone 14), 414px (iPhone Plus)
+P0-06  Mobile viewport MUST use width=412 (NOT device-width)
+       → <meta name="viewport" content="width=412, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+       → Why: device-width causes oversized layout on real phones (Display Zoom/Font Size)
+       → 412px = S20 Ultra/FE standard. Matches Chrome F12 simulation exactly.
+       → If existing app has width=device-width → upgrade to width=412 immediately
        → Touch targets: min 44x44px
 
 P0-07  Auth flow must complete
