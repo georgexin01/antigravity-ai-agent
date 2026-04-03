@@ -86,10 +86,10 @@ AI reads this BEFORE generating any design to pre-filter patterns. Built from ap
 
 | Preference                                      | Confidence | Score | Source                       |
 | ----------------------------------------------- | ---------- | ----- | ---------------------------- |
-| 540px max-width container (Full 100% width flush on mobile) | S-CORE | 98 | fu-huo-lao-app + User Feedback |
-| Standard Padding: `px-2` or `px-3` | S-CORE | 95 | Wider Mobile Rule 2026-04-03 |
-| Font Size Shift: -1px for all text > 14px | S-CORE | 92 | Wider Mobile Rule 2026-04-03 |
-| Catalog Sidebar: 100px width, px-2 button padding | S-CORE | 90 | fu-huo-lao-app |
+| 100% Flush Mobile edges (zero root margin/padding) | S-CORE | 98 | fu-huo-lao-app + User Feedback |
+| Standard Padding: `px-2` or `px-3` | S-CORE | 95 | Heritage Blueprint 2026-04-03 |
+| Font Size Shift: -1px for all text > 14px | S-CORE | 92 | Heritage Blueprint 2026-04-03 |
+| Catalog Sidebar: Content-fit width, px-2 button padding | S-CORE | 90 | fu-huo-lao-app |
 | Bottom tab navigation (4 tabs standard)         | High       | 95    | ALL 4 Vue apps               |
 | Category sidebar (76px left) + content grid     | High       | 88    | 86car + Lee Ming             |
 | Fixed header (56px) + fixed bottom nav (60px)   | High       | 92    | ALL 4 Vue apps               |

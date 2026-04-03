@@ -1,0 +1,6 @@
+- [x] Update faucet_session_ledger.md with new baseline (40,510.55 tokens)
+- [/] Navigate to 99Faucet Solana (https://99faucet.com/faucet/sol)
+- [ ] Enter nelesp3@gmail.com and wait for user's hCaptcha solve
+- [ ] Perform first 99Faucet claim
+- [ ] Monitor VieFaucet timer (34m remaining as of last check)
+- [ ] Rotate back to VieFaucet when timer < 1m
