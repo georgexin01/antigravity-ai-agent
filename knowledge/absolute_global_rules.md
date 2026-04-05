@@ -1,7 +1,8 @@
-# Hot Rules Cache V1.0 — Universal Rules in One File
+# Absolute Global Rules V1.1 — Universal Master Rules
 
-> **PURPOSE**: Single file replacing 4 separate reads at session start.
-> **Read FIRST every session**. Contains ALL P0 + P1 rules + error triage + verify chain.
+> **PURPOSE**: Primary session entry point & rule enforcement.
+> **MANDATORY**: READ [GLOBAL_READ_ME_FIRST.md](file:///C:/Users/User/.gemini/antigravity/knowledge/GLOBAL_READ_ME_FIRST.md) BEFORE ANY OTHER ACTION.
+> **Contains**: ALL P0 + P1 rules + error triage + verify chain + SHARED SYNC MANDATE.
 > **Replaces**: agent_core_protocol (P0/P1 extraction), must_do_master_rules (gates extraction),
 >              user_taste_dna (deleted), v12_ascension_mastery (BLAST extraction)
 > **Token cost**: ~400 tokens (vs ~2,500 from 4 separate files)

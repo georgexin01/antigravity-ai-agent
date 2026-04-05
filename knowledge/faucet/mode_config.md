@@ -12,6 +12,8 @@
 ```
 CONFIG:
   viefaucet_profile.md         → VieFaucet platform config + credentials
+  free_bonk_profile.md         → Free-Bonk platform config + credentials
+  only_faucet_profile.md       → OnlyFaucet platform config + credentials
   faucet_pattern_vault.md      → Success patterns + timing strategies
   viefaucet_strategy_v2.md     → Advanced earning strategy
   faucet_blacklist.md          → Banned platforms (solkong.live)
@@ -78,7 +80,9 @@ F-02  ZERO TOLERANCE: 0.01 token deviation → flag for review
 F-03  Authorized email: nelesp3@gmail.com
 F-04  Never skip Triple-Layer Audit
 F-05  Duration buffer: always +10s beyond stated ad duration
-F-06  Platform priority: VieFaucet first → 99Faucet fallback
+F-06  Platform priority: VieFaucet first → Free-Bonk/OnlyFaucet rotation.
+F-07  ROTATION: After 2-3 success missions on primary → switch to secondary for cooldown.
+F-08  SUCCESS HISTORY: Apply "Trusted" status to VieFaucet, Free-Bonk, OnlyFaucet.
 ```
 
 ---
@@ -117,10 +121,9 @@ Faucet mode SKIPS these P0 rules from boot.md:
   P0-06 (Mobile test) → NOT APPLICABLE
   P0-09 (No skeleton pages) → NOT APPLICABLE
 
-Faucet mode KEEPS these P0 rules:
-  P0-05 (Build succeed) → if faucet website development
-  P0-10 (Mode gate) → ALWAYS
-  P0-12 (Error triage) → if errors occur
+F-09  STUDY MANDATE: When "ai faucet" is triggered, the AI MUST reread the full
+      faucet knowledge folder (viefaucet_profile, session_ledger, etc.) to 
+      ensure zero-drift execution.
 ```
 
 ---

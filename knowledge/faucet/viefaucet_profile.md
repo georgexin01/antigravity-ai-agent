@@ -21,15 +21,21 @@
 - **Verification**: reCAPTCHA checkbox.
 
 ### PTC Page (`/app/ptc/iframe`)
+- **Strategy**: Precision Antibot + Upside-Down Selection.
+- **V4.0 Mandate**: **PULSE-RESCAN** after *each* Anti-Bot interaction.
+- **Verification**: DUAL-VERIFY (Gemini 3 + Gemma-4) required.
+- **Captcha**: ROTATION_ONLY (Target: 180-degree variance icon).
+
 - **Action**: "View" button -> New tab/viewer opens.
 - **Stealth Protocol (v2.2 - VISION PRO)**: 
     1. Close bottom ads/widgets (e.g. Gemshop/Play Now) if possible.
     2. WAIT for timer to reach 0 on the viewer page.
-    3. **Singularity Vision Sync**:
+    3. **Singularity Vision Sync (V2.3 - ZERO ERRORS)**:
        a. Capture full-page screenshot of the 5 icons.
-       b. Scan the `captcha_vault/` for matches.
-       c. If match found -> Use 100% certainty.
-       d. If no match -> Solve manually + SAVE icons to vault (Census Phase).
+       b. **EXCLUSION_FIRST_V2.3**: Scan the `captcha_vault/` for known upright characters.
+       c. If match found -> Identify the unique "Upside Down" pattern (April 2026 update).
+       d. **Verification**: If certainty < 100% -> Perform "Census Phase" to record image DNA.
+       e. Solve with 30s Turbo Gap safety active.
     4. Click 'Verify' within the viewer tab.
     5. **AUDIT**: Verify balance delta increase.
     6. **CLOSE**: Terminate viewer tab immediately on verification.

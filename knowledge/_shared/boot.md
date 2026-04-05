@@ -145,6 +145,9 @@ P0-16  MODE TRIGGER PROTOCOL:
        and the presentation of a "Live View" (Data summary/Intelligence report),
        NOT the creation of new files, websites, or dashboards unless explicitly
        commanded (e.g., "build me a dashboard").
+P0-17  AI FAUCET STUDY MANDATE:
+       When the user messages "ai faucet", the AI MUST study and understand the
+       full AI Faucet knowledge document and rules FIRST before any next action.
 ```
 
 ---
