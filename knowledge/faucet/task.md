@@ -1,6 +1,16 @@
-- [x] Update faucet_session_ledger.md with new baseline (40,510.55 tokens)
-- [/] Navigate to 99Faucet Solana (https://99faucet.com/faucet/sol)
-- [ ] Enter nelesp3@gmail.com and wait for user's hCaptcha solve
-- [ ] Perform first 99Faucet claim
-- [ ] Monitor VieFaucet timer (34m remaining as of last check)
-- [ ] Rotate back to VieFaucet when timer < 1m
+- [/] Phase 1: Captcha Vision Vault (V1.1)
+    - [x] Create captcha_vault/ directory
+    - [ ] Update viefaucet_profile.md (Visual Protocol)
+    - [ ] Update faucet_brain_V22.md (Pattern Match logic)
+    - [ ] Log 'Census Phase' in the ledger
+- [ ] Phase 2: Lockout Monitoring (15m remaining)
+    - [ ] Perform 'RESUME' once timer expires
+- [ ] Phase 3: Dynamic Calibration (5x ads)
+    - [ ] Ad 6: Execute with 10s buffer -> Log TTC
+    - [ ] Ad 7: Execute with 10s buffer -> Log TTC
+    - [ ] Ad 8: Execute with 10s buffer -> Log TTC
+    - [ ] Ad 9: Execute with 10s buffer -> Log TTC
+    - [ ] Ad 10: Execute with 10s buffer -> Log TTC
+- [ ] Phase 3: Dynamic Calibration
+    - [ ] If SR=100% -> Reduce buffer to 8s for next wave
+- [ ] Final Session Audit & Walkthrough

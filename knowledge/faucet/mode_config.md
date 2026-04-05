@@ -1,8 +1,8 @@
-# Faucet Mode — V15 Configuration
+# Faucet Mode — V15 Configuration (Isolated)
 
 > Trigger: "ai faucet", "faucet mode", "claim", "viefaucet", "99faucet", "earn", "mission"
-> This mode is for: Faucet website earning automation ONLY.
-> Folder lock: `_shared/` + `faucet/` + `skills/faucet/` only.
+> Identity: OMNISCIENT_EARNING_ENGINE_V22
+> Folder lock: `_shared/` + `faucet/` + `faucet/skills/` only.
 > Blocked: `normal/`, `claude/`, `skills/normal/`, `skills/claude-code/`
 
 ---
@@ -12,12 +12,12 @@
 ```
 CONFIG:
   viefaucet_profile.md         → VieFaucet platform config + credentials
-  99faucet_profile.md          → 99Faucet Solana platform config
   faucet_pattern_vault.md      → Success patterns + timing strategies
   viefaucet_strategy_v2.md     → Advanced earning strategy
+  faucet_blacklist.md          → Banned platforms (solkong.live)
 
 TRACKING:
-  faucet_session_ledger.md     → Token verification ledger (append-only)
+  faucet_session_ledger.md     → Token verification + Performance Metrics
 
 SKILL:
   skills/faucet/SKILL.md       → V5.5 Precision Audit Protocol
@@ -28,13 +28,13 @@ SKILL:
 ## BOOT SEQUENCE (Faucet-Specific)
 
 ```
-Step 0.1: Load viefaucet_profile.md + 99faucet_profile.md
+Step 0.1: Load viefaucet_profile.md
 Step 0.2: Load faucet_pattern_vault.md (success patterns)
-Step 0.3: Load faucet_session_ledger.md (current balance state)
+Step 0.3: Load faucet_session_ledger.md (Current SPM: 45s)
 Step 0.4: Check platform status:
-  □ VieFaucet available? → primary target
-  □ VieFaucet on 429/empty? → shift to 99Faucet Solana
-Step 0.5: Resume from session fingerprint if same faucet session
+  □ VieFaucet available? → Primary target
+  □ VieFaucet on 429? → ENFORCE 300s Turbo-Gap
+Step 0.5: Initialize Evolving Cognitive Engine (V22.2)
 ```
 
 ---
@@ -64,9 +64,8 @@ CLAIM_VIEFAUCET_PRECISION:
 
 ```
 CLAIM_99FAUCET_SOL:
-  - Focus: 1-minute Solana frequency claims
-  - Trigger: VieFaucet on 429 or empty ad queue
-  - Rule: Shift 100% to 99Faucet when VieFaucet unavailable
+  - STATUS: DEPRECATED / REMOVED
+  - RULE: Shift 100% to VieFaucet Mastery.
 ```
 
 ---
@@ -103,9 +102,6 @@ F-06  Platform priority: VieFaucet first → 99Faucet fallback
 ```
 CROSS-READ ALLOWED:
   None. Faucet mode is fully self-contained.
-
-CROSS-READ BLOCKED:
-  Everything in normal/ and claude/ folders.
 ```
 
 ---

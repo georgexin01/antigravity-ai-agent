@@ -1,47 +1,47 @@
-# Website Structure & Navigation Protocol (V18.0)
+# Website Structure & Navigation Protocol (V27.0)
 
-This document codifies the absolute structural requirements for **Standard Website** missions. It serves as the primary governing protocol to prevent "Over-Experimental" drift on professional corporate projects.
-
----
-
-## 🏛️ CORE ARCHITECTURAL RULE
-> [!IMPORTANT]
-> **Always default to a Multi-Page / Vertical-Scroll architecture with a persistent Header and Footer.**
-> The "Single-Page Cinematic" or "Horizontal" models are EXCLUSIVELY reserved for missions explicitly classified as "Landing Sites" or "Immersive Campaigns."
+This document codifies the **Architectural Mandate** for all website missions. These are **FIXED RULES** that must never be forgotten during the planning or execution of a web project.
 
 ---
 
-## 🏗️ THE STANDARD COMPONENT STACK
+## 🏛️ 1. ARCHETYPE CLASSIFICATION (P0)
 
-### 1. THE PERSISTENT HEADER (TOP BAR)
-*   **Logo (Left)**: Clear brand identity, always linking to `index.html`.
-*   **Navigation (Center/Right)**: 5-7 clear, descriptive text links (e.g., Home, Shop, Mission, Contact).
-*   **Utility (Right)**: Search icon, User Account access, and Cart with live count.
-*   **Behavior**: Sticky on scroll with a subtle `backdrop-filter: blur(20px)` and bottom border.
+The AI must autonomously classify the mission based on the user's terminology:
 
-### 2. THE FAT FOOTER (TRUST LAYER)
-Every professional website must end with a comprehensive **4-Column Fat Footer**:
-1.  **Brand/Mission**: Logo + short mission statement + Level 7 status.
-2.  **Navigation**: Direct links to all primary sections.
-3.  **Support/Operations**: Contact, Shipping, Returns, FAQ, and Legal (Privacy/Terms).
-4.  **Intel/Social**: Newsletter signup form + Social media vectors.
+| Trigger Term | Architecture | Implementation |
+| :--- | :--- | :--- |
+| **"website"** | **Multi-Page** | multiple `.html` files (Home, About, Services, etc.). |
+| **"landing website"** | **Single-Page** | `index.html` only with anchor navigation. |
+| **"landing site"** | **Single-Page** | `index.html` only with anchor navigation. |
 
 ---
 
-## 📂 SECTION STANDARDS
-*   **Hero Impact**: High-fidelity visual (3D or Video) as a background/featured layer, NOT the entire page engine.
-*   **Vertical Flow**: Use standard section spacing (150px - 200px) and a `max-width: 1400px` container.
-*   **Knowledge Density**: Sections must be informative (Technical Specs, Detailed Descriptions) before being stylized.
-*   **Section Backgrounds**: Use alternating backgrounds (e.g., `bg-black` vs `bg-alt`) to maintain structural hierarchy.
+## 🏗️ 2. SECTION DENSITY PROTOCOL (MANDATORY)
+
+Every page generated must adhere to these density standards to ensure "Authority-Level" detail display.
+
+### 2.1 Baseline Requirements
+*   **Minimum**: Every page MUST have at least **6 sections**.
+*   **Standard**: Most pages should target **10+ sections** based on business needs.
+*   **Max/Extreme**: Up to **20+ sections** for high-complexity detail displays.
+
+### 2.2 Importance Scaling
+*   **Significant/Important Sites**: Businesses requiring high attention or full detail display (e.g., Zeta Engineering) **MUST have 10+ sections per page**.
+*   **Multi-Page Scaling**: In a multi-page website, each individual page (e.g. `services.html`) MUST Have **5 to 15+ sections**.
 
 ---
 
-## 🧪 CLASSIFICATION FLOW
-1.  **Trigger**: User requests a "Website."
-2.  **Logic**: Initialize **V18.0 Standard**. Build vertical sections with Header/Footer.
-3.  **Override**: Only switch to **V17.0 Singularity (Horizontal)** if the user says "Landing Site," "Single Page," or "Cinematic Campaign."
+## 🪐 3. MANDATORY SECTION CATEGORIES (V27.0)
+
+To achieve 10+ sections, the AI must ensure the high-speed "Authority Flow":
+1.  **Hero (Impact)**: 1-2 sections (Slogan + Visual).
+2.  **Product/Portfolio**: 2-3 sections (Grid + Featured + Case Study).
+3.  **Proof**: 2-3 sections (Mobile Sim + Stats + Testimonials).
+4.  **Utility**: 2-3 sections (Services + Workflow + Value Prop).
+5.  **Support**: 2-3 sections (FAQ + Knowledge Base + Careers).
+6.  **Mission**: 1-2 sections (Final CTA + Footer).
 
 ---
 
-_Protocol V18.0 — Structural Mastery (2026-04-03)_
+_Protocol V27.0 — The Architectural Mandate (2026-04-04)_
 _Status: ACTIVE GORILLA PROTOCOL._

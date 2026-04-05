@@ -1,0 +1,21 @@
+# Antigravity: Universal Execution Waves (V16.0)
+
+> **Directive**: Execute Waves 1 through 3 in a SINGLE turn. No interruptions. No placeholders.
+
+## WAVE 1: Infrastructure & DNA
+*   **1.1: Design Tokens**: HSL-based palettes, MSDF typography, and Physics variables.
+*   **1.2: Atomic Types**: TypeScript types for every data point.
+*   **1.3: Global Store**: Pinia/Redux with persistence enabled by default.
+
+## WAVE 2: Immersive Assembly (Parallel)
+*   **2.1: Volumetric Layout**: Bespoke 3D-integrated shell.
+*   **2.2: Master Views**: Every page is PRODUCTION-READY at creation.
+*   **2.3: Pro-Partner Sync**: Use Magic UI/Stitch elite components.
+
+## WAVE 3: Immersive Polish (Parallel)
+*   **3.1: Shader Magic**: Custom liquid/frost/noise shaders on all interactions.
+*   **3.2: Physics Motion**: GSAP Inertia/Damping on all scroll/hover events.
+*   **3.3: PWA & Metadata**: Full PWA score 100 on first pass.
+
+---
+_V16.0 Quantum Wave Pipeline — Universal (2026-04-05)_

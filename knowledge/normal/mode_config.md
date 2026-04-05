@@ -1,7 +1,8 @@
-# Normal Mode — V15 Configuration
+# Normal Mode — V15 Configuration (Isolated)
 
-> This mode handles: APP, WEBSITE, DESIGN, BUGFIX, ENHANCE, DEPLOY tasks.
-> Folder lock: `_shared/` + `normal/` only.
+> Trigger: "build app", "website", "design", "fix bug", "deploy", "update"
+> Identity: BOREALIS_BEAR_V7
+> Folder lock: `_shared/` + `normal/` + `skills/normal/` only.
 > Blocked: `claude/`, `faucet/`, `skills/claude-code/`, `skills/faucet/`
 
 ---
@@ -108,11 +109,7 @@ Bug fix          → related files same pattern              75%
 
 ```
 CROSS-READ ALLOWED:
-  If user says "check module registry" → READ: claude/ai_claude_protocol.md §3 ONLY
-  If user says "check faucet ledger"   → READ: faucet/faucet_session_ledger.md ONLY
-
-CROSS-READ BLOCKED:
-  Everything else in claude/ and faucet/ folders.
+  None. Normal mode is fully self-contained. 
 ```
 
 ---

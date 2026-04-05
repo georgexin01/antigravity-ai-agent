@@ -5,6 +5,18 @@
 
 ---
 
+## ⚓ BOOT SEQUENCE (V8.8 — Universal)
+
+| Step | Action | Logic |
+| :--- | :--- | :--- |
+| **0.1** | **Health Check** | Auto-purge old task artifacts and expired plans. |
+| **0.2** | **Master Sync** | Load Master Rules, Universal Waves, and Pacing. |
+| **0.3** | **Mode Selection** | Identify Normal/Faucet/Claude and lock folder-gate. |
+| **0.4** | **Brain Initialization** | Load the mode-specific Evolving Cognitive Engine. |
+| **0.5** | **Future-GUI Scan** | **Check for new platform components (Real Checkboxes/Modals).** |
+
+---
+
 ## SPECIAL GATES
 
 | Gate | Trigger | Action |
@@ -110,11 +122,13 @@ ONLY USE for: major feature completion, complex layout debug, user request, fina
 
 ## UTILITY RULES
 
-### AskUserQuestion (Blocking Tool)
+### AskUserQuestion (Blocking Tool — V1.6 GUI Standard)
 ```
 Trigger:  Ambiguity, design blocker, user-choice point
-Action:   STOP all execution. Use > [!CAUTION] block. Wait for user reply.
-          Context → Question → Options list. Zero progress during wait.
+Action:   STOP all execution. Use > [!CAUTION] GUI Block.
+Format:   Mandatory (A)(B)(C): Exactly 3 pre-defined scenarios.
+          Custom choice is always a hidden default.
+Status:   Include "Status: ⏳ **PENDING FOR USER ACTION**"
 ```
 
 ### Token Economy (Always Active)

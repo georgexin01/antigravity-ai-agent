@@ -9,38 +9,33 @@
 ## LAST SESSION
 
 ```
-Date:       2026-03-19
-Project:    lee-ming-pork
-Type:       APP (Vue 3 + Tailwind v4 + Pinia)
-Client:     clients/lee-ming-pork.md
-State:      9. ITERATE
-Wave:       Wave 2 complete, Wave 3 in progress
+Date:       2026-04-05
+Project:    Antigravity Architecture V8.7
+Type:       SYSTEM REFRESH (Deep Isolation + UI V1/V2)
+State:      100% COMPLETE & VERIFIED
+Identity:   BOREALIS_BEAR_V7 (Normal Link)
 
 What was done:
-  - Fixed full ordering flow (auth → cart → checkout → order → WhatsApp)
-  - Added FAQ page, OrderDetailView, date picker on orders
-  - Redesigned order cards (gradient status), fixed 404 on refresh
-  - Built V11 brain + ADPRS V4.1 + design vault + theme system
+  - Achieve 100% Isolation between Normal, Faucet, and Claude folders.
+  - Decouple identities: Bear (Normal), Engine (Faucet), Pipeline (Claude).
+  - Elevate Global Master Layer (Master Rules, Execution Waves) to _shared/.
+  - Build 3 Isolated Evolving Brains (Predictive Logic).
+  - Implement Auto-Cleanup and GitHub Portability (Relative Paths).
+  - Upgrade AI Communication UI to V1.6 (Minimalist) + V2.0 (Proposed Colors).
 
 What to load next session:
-  - Sections: §2 (During Coding), §3 (After Coding), §6 (Business Logic)
-  - Skip: §1 (Before Coding — project exists), §7 (Error Quick-Fix — no bugs pending)
-  - Vault: Check order-card-gradient.md if building list pages
-  - Client: Load lee-ming-pork.md (brand #8B1A1A, WhatsApp 60123456789)
-
-Predicted next tasks:
-  - Admin reports page improvement
-  - Product images (currently all null)
-  - PWA final setup + deploy preparation
+  - Master Layer: _shared/boot.md (V15.2), _shared/master_rules.md
+  - Mode Brains: [mode]/[mode]_brain_Vxx.md
+  - Mission DNA: normal/client_dna/ 
 ```
 
 ## ACTIVE PROJECTS QUEUE
 
 | Priority | Project | State | Next Action |
 |---|---|---|---|
-| 1 | lee-ming-pork | 9. ITERATE | Admin reports, product images, deploy prep |
-| 2 | dachengloklok | 1. PLAN | Start build (blueprint ready) |
-| 3 | travel-app | 7. QA | Deploy, PWA conversion |
+| 1 | lee-ming-pork | 9. ITERATE | Resume in NORMAL Mode (Fixing images/PWA) |
+| 2 | AI Faucet | MISSION | Resume in FAUCET Mode (ROI Earning) |
+| 3 | AI Claude | MISSION | Resume in CLAUDE Mode (CRUD Automation) |
 
 ---
 

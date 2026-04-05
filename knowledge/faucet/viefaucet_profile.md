@@ -20,10 +20,20 @@
 - **Antibot**: Order-based selection.
 - **Verification**: reCAPTCHA checkbox.
 
-### PTC Page (`/app/ptc/window`)
-- **Stay Outside Mechanic**: Must stay on the external ad window.
-- **Verification**: "Least Often" captcha icon modal.
-- **Trigger**: "View" button -> External Tab -> Wait + Buffer -> Returns to Viefaucet -> Solving captcha.
+### PTC Page (`/app/ptc/iframe`)
+- **Action**: "View" button -> New tab/viewer opens.
+- **Stealth Protocol (v2.2 - VISION PRO)**: 
+    1. Close bottom ads/widgets (e.g. Gemshop/Play Now) if possible.
+    2. WAIT for timer to reach 0 on the viewer page.
+    3. **Singularity Vision Sync**:
+       a. Capture full-page screenshot of the 5 icons.
+       b. Scan the `captcha_vault/` for matches.
+       c. If match found -> Use 100% certainty.
+       d. If no match -> Solve manually + SAVE icons to vault (Census Phase).
+    4. Click 'Verify' within the viewer tab.
+    5. **AUDIT**: Verify balance delta increase.
+    6. **CLOSE**: Terminate viewer tab immediately on verification.
+    7. Return focus to Primary Task List.
 
 ### Bonus Page (`/app/bonus`)
 - **Action**: "Claim" in the streak table.

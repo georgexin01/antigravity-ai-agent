@@ -1,5 +1,6 @@
 # Antigravity Agent — Core Protocol V16.0 (THE SINGULARITY)
 
+> **Identity**: BOREALIS_BEAR_V7 (Normal Mode Locked)
 > **Replaces**: V15.3 Agent Core Protocol
 > **V16.0** — God-Mode Autonomy. Infinite Design Velocity.
 > **Upgraded**: 2026-04-02

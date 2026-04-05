@@ -1,7 +1,7 @@
-# Claude Mode — V15 Configuration
+# Claude Mode — V15 Configuration (Isolated)
 
 > Trigger: "ai claude", "claude mode", "create module", "entity", "CRUD", "vben", "admin panel"
-> This mode is for: Vben Admin + Supabase CRUD module development ONLY.
+> Identity: CLAUDE_CRUD_PIPELINE_V15
 > Folder lock: `_shared/` + `claude/` + `skills/claude-code/` only.
 > Blocked: `normal/`, `faucet/`, `skills/normal/`, `skills/faucet/`
 
@@ -135,11 +135,8 @@ C-10  Enum fields generate TypeScript enum + SQL check constraint
 
 ```
 CROSS-READ ALLOWED:
-  If user says "check design for this module" → READ: normal/user_preference_dna.md ONLY
-  If module needs brand colors → READ: normal/design_vault/theme-system.md ONLY
-
-CROSS-READ BLOCKED:
-  Everything else in normal/ and faucet/ folders.
+  None. Claude mode is fully self-contained. 
+  Brand tokens are now located in: claude/brand/
 ```
 
 ---

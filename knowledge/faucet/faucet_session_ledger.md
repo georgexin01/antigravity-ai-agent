@@ -1,23 +1,27 @@
-# Faucet Session Ledger — V2.0 (Balance Inspector)
+# Faucet Session Ledger — V2.2 (Learning Engine)
 
 > **PURPOSE**: Record successful missions, balance deltas, and platform audit logs in real-time.
 > **V2.0**: Added Balance Inspector, Session Delta tracking, All-Time totals.
 
 ## 1. BALANCE TRACKING
-- **Status**: Live (V2.0 Unified Engine)
-- **🟡 All-Time Baseline (AI Faucet Created)**: `33,400.76` pts
-- **🔵 Session Start Balance**: `40,510.55` tokens
-- **🟢 Session Earned**: +0.00 tokens (Quest Only Mode)
-- **Last Verified Balance**: 40,510.55
-- **Missions Completed This Session**: 0
-- **Missions Completed All-Time**: 24
-- **Platform In-Use**: 99Faucet Solana (Fallback)
+- **Status**: Live (V2.2 Learning Engine)
+- **🟡 All-Time Baseline**: `33,400.76` pts
+- **🔵 Session Start Balance (V22.1)**: `47,492.72` tokens
+- **🟢 Session Earned**: +1,285.70 tokens
+- **📊 Total Historical Earned**: +15,377.66 tokens (Verified)
+- **📅 Today's Earned (2026-04-05)**: +1,285.70 tokens
+- **⏱️ Baseline SPM**: 45s (Target: 25s)
+- **Last Verified Balance**: 48,778.42
+- **Missions Completed This Session**: 6
+- **Missions Completed All-Time**: 34
+- **Platform In-Use**: VieFaucet (Primary Only)
 
-## 2. RECENT SUCCESS RECORDINGS (Auto-Updated)
+## 2. RECENT SUCCESS RECORDINGS (Auto-Updated — V2.2 PMT)
 
-| Date | Mission | Reward | Result | Notes |
-|---|---|---|---|---|
-| 2026-04-03 | PTC V2 | — | PENDING | V2.0 Deployment Initialization |
+| Date | Mission | Reward | TTC | Result | Mystery Solved? |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 2026-04-05 | 5x PTC Iframe Raid | 110.55 | ~360s | SUCCESS | Dismissed bottom banners |
+| 2026-04-05 | Faucet | 78.75 | ~30s | SUCCESS | n/a |
 
 ## 3. PLATFORM AUDIT LOGS
 - **Viefaucet.com 2026-04-03**: **UPGRADED to V2.0**. Added 429 Error Detection and automatic fallback to 99Faucet.
@@ -28,8 +32,14 @@
 
 ## 4. NEXT GOALS
 1. [x] Execute `START_V2_UNIFIED_LOOP`.
-2. [ ] Audit first PTC success delta.
-3. [ ] Monitor for 429 Switch to Solana if quota hit.
+2. [x] Pin ROI Valuation Rates for Session (100k:$1).
+3. [ ] Perform Wave 5 Census (Vision Vault).
+
+## 5. FINANCIAL ROI VALUATION (Session Pinned)
+- **Token -> SOL Rate**: 1:0.0000001237 (FaucetPay)
+- **SOL -> USD Rate**: $80.83 (Market)
+- **Conversion Factor**: **100k Tokens : $1.00 USD**
+- **Current USD Status**: **$0.477** (47,715.12 pts)
 
 
 ---

@@ -15,11 +15,13 @@
 | **AUTOLOGIN_MAIL** | **Email field detection** | **INSERT: `nelesp3@gmail.com` -> Stop/Wait.** | **🆕 NEW** |
 | PTC_TAB_FOCUS | Timer requires focus on ad tab | Stay on ad tab for duration + buffer. | High |
 
-## 2. SITE STRUCTURE PATTERNS (V4.0)
-- **Menu ID**: Sidebar links for Dashboard, Faucet, etc.
-- **Balance Element**: Header balance displayed in points. Read before/after EVERY mission.
-- **Mission Instance**: Single Persistent Live View (Shared Tab session).
-- **Turbo Gap**: 30s cooldown between browser calls when Quota > 50%.
+## 2. SITE STRUCTURE PATTERNS (V4.2 Optimized)
+- **Ad Dismissal**: `div[class*='play-now'] x button` or pixel offset `-10, -10` from widget corner.
+- **Turbo Gap**: Dynamic (Currently 30s).
+- **Speed Bands**:
+    - **Safe**: Buffer +10s
+    - **Balanced**: Buffer +5s
+    - **Turbo**: Buffer +2s
 
 ## 3. FAILURE LOG (AUTO-MANAGED)
 | Ad Name | Failures | Cooldown Left | Status |
@@ -28,4 +30,8 @@
 
 ---
 
-_V4.0 Universal Optimizer Pattern Vault — 2026-04-01_
+## 4. TRAINING LOGS (v22.2.1 PDL)
+- **Current Speed Mode**: Agile Training (Wait: 8s)
+- **Recent Failures**: Platform Lockout (18m).
+- **Mystery Identified**: Multi-viewer tab collision or rapid captcha failure.
+- **Resolution**: Implemented "Incremental Fallback" and "Tab-Closure" to prevent lockout re-trigger.

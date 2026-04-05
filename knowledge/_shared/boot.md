@@ -1,9 +1,25 @@
-# Antigravity V15 — Universal Boot Protocol
+# Antigravity V15.2 — Universal Boot Protocol (Portable)
 
 > Read this FIRST every session. All modes. No exceptions.
-> Version: V15.0 | Engine: Gemini 2.5 Flash | Updated: 2026-04-02
+> Version: V15.2 (Deep Isolation + UI V1) | Updated: 2026-04-05
 
 ---
+
+## STEP 0: WORKSPACE INITIALIZATION (< 1 sec)
+
+### 0.1: Health Check & Auto-Cleanup
+Read `_shared/auto_cleanup_rules.md`.
+→ Scan for completed `task.md` or old artifacts. 
+→ **PURGE** if older than 48h. Stay lean. Stay fast.
+
+### 0.2: Global Master Layer
+Read `_shared/master_rules.md` + `_shared/universal_execution_waves.md`.
+→ Load the 4-Phase Gate System and Quantum Wave pipeline.
+→ These apply to ALL modes.
+
+### 0.3: UI Display Sync (V1/V2)
+Read `_shared/ui_display_protocol.md`.
+→ Format all replies using V1 High-Fidelity Markdown (Tables, Mermaid, Checkboxes).
 
 ## GLOBAL RULE #1 — FIRST RUN CHECK (Before Everything)
 
@@ -122,6 +138,13 @@ P0-15  MINIMIZE SCREENSHOTS & LIVE VIEW:
          ✓ Final QA verification (Phase 3 mobile responsive check)
        → For everything else: trust the code. Build → check terminal → done.
        → Default: NO live view. Code-only verification.
+
+P0-16  MODE TRIGGER PROTOCOL:
+       Keywords like "ai faucet", "ai claude", and "normal mode" are EXCLUSIVE
+       agentic mode switches. They trigger the loading of specific knowledge
+       and the presentation of a "Live View" (Data summary/Intelligence report),
+       NOT the creation of new files, websites, or dashboards unless explicitly
+       commanded (e.g., "build me a dashboard").
 ```
 
 ---
@@ -218,5 +241,20 @@ User says "switch back":
 
 ---
 
-_Antigravity V15 — Universal Boot Protocol (2026-04-02)_
-_3 modes. Strict isolation. ~400 tokens to boot. Gemini 2.5 Flash optimized._
+---
+
+## PORTABILITY & SYSTEM RESILIENCE (GitHub Sync)
+
+If the environment is cloned to a new computer:
+1. **Root Discovery**: AI must detect the current working directory as the `{{ROOT}}`.
+2. **Path Auto-Correction**: All internal tools MUST use paths relative to `{{ROOT}}`.
+3. **Identity Sync**: 
+   - FAUCET ↔ `OMNISCIENT_EARNING_ENGINE_V22`
+   - CLAUDE ↔ `CLAUDE_CRUD_PIPELINE_V15`
+   - NORMAL ↔ `BOREALIS_BEAR_V7`
+4. **Rebuild Command**: If `boot.md` is corrupt or missing paths → use `_shared/portability_protocol.md` to restore.
+
+---
+
+_Antigravity V15.2 — Portable Memory Engine (2026-04-05)_
+_100% Isolation. UI Evolution Active. Auto-Cleanup Enabled._

@@ -1,8 +1,8 @@
-# Mode Connections Map — V15
+# Mode Connections Map — V15 (Isolated)
 
-> Modes are ISOLATED but NOT DISCONNECTED.
-> Each mode runs in its own folder, but they share a brain and can hand off context.
-> This file defines HOW modes connect without breaking isolation.
+> Modes are 100% ISOLATED. ZERO CROSS-READ POLICY.
+> Each mode runs in its own folder with zero dependencies on other mode folders.
+> This file defines the absolute boundaries for context safety.
 
 ---
 
@@ -34,38 +34,12 @@ TYPE 4: SHARED LEARNING (_shared/learning_vault.md — future)
 
 ---
 
-## CROSS-READ MAP (What Each Mode Can Access From Others)
+## CROSS-READ MAP (ZERO CONTEXT BREACH)
 
-### NORMAL MODE can read from:
-```
-FROM claude/:
-  ✓ ai_claude_protocol.md §3 (Module Registry)     → When checking if admin module exists
-  ✓ claude_improvement_vault.md §1 (Registry)       → When referencing module patterns
-
-FROM faucet/:
-  ✓ faucet_session_ledger.md                         → When user asks about earnings status
-  ✗ Everything else BLOCKED
-```
-
-### CLAUDE MODE can read from:
-```
-FROM normal/:
-  ✓ user_preference_dna.md                           → When module needs brand colors/taste
-  ✓ design_vault/theme-system.md                     → When generating UI with correct theme
-  ✓ typescript_pinia_standard.md                     → When referencing shared type patterns
-
-FROM faucet/:
-  ✗ Everything BLOCKED (no connection between admin and faucet)
-```
-
-### FAUCET MODE can read from:
-```
-FROM normal/:
-  ✗ Everything BLOCKED (faucet is fully self-contained)
-
-FROM claude/:
-  ✗ Everything BLOCKED (faucet is fully self-contained)
-```
+### ALL MODES (Normal, Claude, Faucet):
+*   **CROSS-READ POLICY**: `NONE`.
+*   **EXCEPTION**: `_shared/` folder is the only universal source.
+*   **ISOLATION**: 100% Folder-Lock active.
 
 ---
 
