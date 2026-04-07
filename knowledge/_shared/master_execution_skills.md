@@ -18,8 +18,21 @@ Read this first (10 tokens) to restore project state without full directory re-s
 For any task involving 2+ files, prioritize **Wave Execution** over serial edits (Saves 40-57% cycles).
 1. **PLAN**: List ALL files, dependencies, and parallel batches.
 2. **BATCH**: Group independent files into the same edit wave.
-3. **CHECK**: Run build/lint ONCE after the entire batch is complete.
-4. **FIX**: Apply all fixes in a single "Fix Wave" based on the error log.
+3. **PARALLEL (RAM-Safe)**: Use `waitForPreviousTools: false` for independent tasks — **MAX 2-3 parallel tools at once**. Never exceed 3 when Gemma4:26b is loaded (17GB model = high memory pressure).
+4. **ATOMIC READ**: If target knowledge is known, use `grep_search` instead of `view_file` to ingest only the required logic.
+5. **CHECK**: Run build/lint ONCE after the entire batch is complete.
+6. **FIX**: Apply all fixes in a single "Fix Wave" based on the error log.
+
+> **RAM Safety Rule (Dynamic — Check on Boot)**:
+> At session start, AI must check available RAM using:
+> `Get-CimInstance Win32_OperatingSystem | Select-Object TotalVisibleMemorySize, FreePhysicalMemory`
+> Then apply the following ceiling:
+> | Free RAM Available | Max Parallel Tools |
+> | :--- | :--- |
+> | < 4 GB | **1 (Serial only)** |
+> | 4–8 GB | **2 (Safe Parallel)** |
+> | > 8 GB | **3 (Full Parallel)** |
+> This ensures portability across all PCs and never assumes a fixed spec.
 
 ### Wave Template (Standard Module):
 - **Batch A (Parallel)**: Types, Locales, Config.

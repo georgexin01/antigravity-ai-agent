@@ -7,7 +7,9 @@
 ## 🧠 1. THE SOVEREIGN BRAIN (Gemma-4)
 Gemma-4 is the primary Mission Brain. It owns all high-density reasoning and vision.
 
-### 🧩 Logic Protocols (180° Rule)
+### 🧩 Logic Protocols (Sovereign V27.2)
+- **Primary Brain (gemma4:26b)**: High-density reasoning for rotates, scripts, and ROI math.
+- **Speed Ascension**: Achieve velocity via **Atomic Reading** (grep) and **Parallel Tool Waves** instead of model switching.
 - **Protocol ORIENT_PRIORITY**: Identify "Upright Majority" (4 identical icons) vs. "Odd Rotation" (1 icon rotated 180°).
 - **SHAPE_PATH_FILTER**: Analyze silhouettes only; color is bait.
 - **NULL_TARGET_FALLBACK**: If confidence < 10% -> SELECT "No Option" button.
