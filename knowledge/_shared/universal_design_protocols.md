@@ -6,59 +6,45 @@
 
 ---
 
-## 🎨 1. BRAND DNA & CINEMATIC INTENT (BPC)
-The **Brand Preservation Card (BPC)** captures the cinematic soul of a project:
-- **Vibe**: Cinematic, Industrial, Minimal, or Organic.
-- **Authority**: High-Authority headers + System/Mono telemetry labels.
-- **Anti-Slop Palette**: Sampling from reference URLs; strictly Zero #000000 (Zinc/Off-Black).
-- **Motion Gravity**: Stiffness and damping settings for scroll-sync sequences.
+## 🎨 1. BRAND DNA (BPC)
+- **Vibe**: Cinematic, Industrial, Minimal.
+- **Rules**: High-Authority headers, Mono telemetry, Zero `#000000` (Use Zinc/Off-Black).
+- **Motion**: Stiff/damped scroll-sync.
 
-## 📺 2. COMMUNICATION UI (Markdown GUI)
-All AI responses MUST prioritize scan-efficiency using these **Atomic Markdown Templates**:
+## 📺 2. AI GUI TEMPLATES
+AI output strictly uses Atomic Markdown.
 
-### 🟢 2.1 THE SUCCESS CARD (Mission Accomplished)
+### 2.1 SUCCESS CARD
 > [!IMPORTANT]
-> ### 💎 MISSION ACCOMPLISHED: [Task Name]
-> **Result**: [Build Success / Verification Passed]
-> **Impact**: [Briefly list logic/file changes]
-> **Efficiency**: [Tokens/Time Saved]
-> 
-> **Status**: ✅ **VERIFIED READY**
+> ### 💎 SUCCESS: [Task]
+> **Result**: [Passed]
+> **Impact**: [Logic changes]
+> **Status**: ✅ **VERIFIED**
 
-### 🟡 2.2 THE ACTION CARD (Approval Request)
+### 2.2 ACTION CARD
 > [!IMPORTANT]
-> ### ⚡ EXECUTION READINESS: [Mission Name]
-> **Plan**: [1-sentence summary of approach]
-> **Impact**: [Files to be modified/deleted]
-> **Risk**: [Low/Med/High]
-> 
-> **Action**: Please type **"APPROVE"** or **"START"** to execute.
+> ### ⚡ READY: [Task]
+> **Plan**: [1-sentence summary]
+> **Impact**: [Files changed]
+> **Action**: Type **"APPROVE"**.
 
-### 🔴 2.3 THE WARNING/QUESTION CARD (Blocking Input)
+### 2.3 BLOCKER CARD
 > [!CAUTION]
 > ### 🛑 INPUT REQUIRED: [Topic]
-> **Issue**: [Context of the blocker]
-> **Options**:
-> - **(A)** [Option 1]
-> - **(B)** [Option 2]
-> 
-> **Status**: ⏳ **PENDING USER REPLY**
+> **Issue**: [Blocker context]
+> **Options**: (A) [Opt 1] | (B) [Opt 2]
+> **Status**: ⏳ **PENDING**
 
-### 🔵 2.4 THE INTELLIGENCE CARD (Predictive Thinking)
+### 2.4 INSIGHT CARD
 > [!TIP]
-> ### 🧠 PREDICTIVE INSIGHT: [Agent Mode]
-> [1-2 sentences of forward-thinking strategy or DNA discovery].
-> 
-> **Logic**: [How to apply this to the build]
+> ### 🧠 PREDICTIVE: [Mode]
+> [1 sentence prediction].
+> **Logic**: [Implementation]
+
+## ⚙️ 3. SYSTEM PORTABILITY
+- `STABILITY`: Maximize version saturation before vX+1.
+- `PATHS`: Environment-agnostic relative to `.gemini/antigravity/`.
+- `SYNC`: Re-calculate `SearchPaths` via `system_kernel.md` on new PC.
 
 ---
-
-## ⚙️ 3. EVOLUTION PACING & PORTABILITY
-- **Stability First**: Maximize version saturation before major ascension (vX+1).
-- **Synthesis Rule**: Consolidate minor iterations (vX.X) into high-density documents.
-- **Portability**: All paths MUST remain environment-agnostic (relative to `.gemini/antigravity/`).
-- **Migration**: On new system detection, re-calculate tool `SearchPaths` and sync via `system_kernel.md`.
-
----
-
-_V27.0 Universal Design Protocols — Shared Mastery Active (2026-04-07)_
+_V28.1 Universal Design Protocols — Logic Compressed (2026-04-07)_

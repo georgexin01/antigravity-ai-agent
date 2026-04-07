@@ -38,15 +38,15 @@ Gemma-4 is the primary Mission Brain. It owns all high-density reasoning and vis
 
 ## 🏗️ 3. SOVEREIGN ROLES (V27.0)
 
-| Task | Commander (G4 Local) | Bridge (G3 Cloud) |
+| Task | Commander (G4 Local) | Bridge (Gemini Cloud) |
 | :--- | :--- | :--- |
 | **Mission Analysis**| ✓ Primary Researcher | ✗ |
-| **Visual Intake** | ✓ Reads workspace/snipaste/ | ✗ |
+| **Visual Intake** | ✓ Reads workspace/snipaste/ (Local ZTV) | ✗ **BANNED (Token Waste)** |
 | **Coordinate Map** | ✓ Calculates Exact (X, Y) | ✗ |
-| **Captcha Solve** | ✓ Primary Solve (180° Rule) | ✓ Parity Check (Solo) |
+| **Captcha Solve** | ✓ Absolute Primary Solve (100% Trust) | ✗ **(Dual-Verify Scrapped)** |
 | **JS Scripts** | ✓ Primary Author | ✓ Review & Execute |
 | **Navigation** | ✗ | ✓ Tactical Browser Control |
-| **Execution** | ✗ | ✓ Pixel-Perfect Click |
+| **Execution** | ✗ | ✓ Pixel-Perfect Click (via XYZ) |
 
 ---
 

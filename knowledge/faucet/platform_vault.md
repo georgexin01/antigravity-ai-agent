@@ -21,8 +21,8 @@
 
 ---
 
-## 💎 3. VIEFAUCET.COM (Secondary Backup)
-- **Status**: secondary (Lockout Monitoring)
+## 💎 3. VIEFAUCET.COM (Priority 3: LAST RESORT)
+- **Status**: DEPRIOTIZED (Do not run until Free-Bonk and OnlyFaucet are 100% exhausted).
 - **URL**: `https://viefaucet.com/`
 - **Core Loop**: Manual Faucet (300s) + PTC Cycle (50x Daily).
 - **Captcha**: **ROTATION_ONLY** (Select the 180-degree variance icon).

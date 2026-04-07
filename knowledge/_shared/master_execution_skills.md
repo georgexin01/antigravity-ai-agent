@@ -13,40 +13,34 @@ Read this first (10 tokens) to restore project state without full directory re-s
 - **Rule**: Update at the END of every session; trim old entries to < 30 lines.
 
 ---
-
-## 🌊 2. BATCH EXECUTION PROTOCOL (Wave Process)
-For any task involving 2+ files, prioritize **Wave Execution** over serial edits (Saves 40-57% cycles).
-1. **PLAN**: List ALL files, dependencies, and parallel batches.
-2. **BATCH**: Group independent files into the same edit wave.
-3. **PARALLEL (RAM-Safe)**: Use `waitForPreviousTools: false` for independent tasks — **MAX 2-3 parallel tools at once**. Never exceed 3 when Gemma4:26b is loaded (17GB model = high memory pressure).
-4. **ATOMIC READ**: If target knowledge is known, use `grep_search` instead of `view_file` to ingest only the required logic.
-5. **CHECK**: Run build/lint ONCE after the entire batch is complete.
-6. **FIX**: Apply all fixes in a single "Fix Wave" based on the error log.
-
-> **RAM Safety Rule (Dynamic — Check on Boot)**:
-> At session start, AI must check available RAM using:
-> `Get-CimInstance Win32_OperatingSystem | Select-Object TotalVisibleMemorySize, FreePhysicalMemory`
-> Then apply the following ceiling:
-> | Free RAM Available | Max Parallel Tools |
-> | :--- | :--- |
-> | < 4 GB | **1 (Serial only)** |
-> | 4–8 GB | **2 (Safe Parallel)** |
-> | > 8 GB | **3 (Full Parallel)** |
-> This ensures portability across all PCs and never assumes a fixed spec.
-
-### Wave Template (Standard Module):
-- **Batch A (Parallel)**: Types, Locales, Config.
-- **Batch B (Parallel)**: Stores, Composables, Mocks.
-- **Batch C (Parallel)**: Views, Components, Drawer.
-- **Batch D**: Router, App Entry (Context dependencies).
+## ⚡ 1. GLOBAL MICRO-DELEGATE (Token Saver)
+**Rule**: Cloud Orchestrator MUST NOT process unformatted bulk text >100 lines (e.g., raw JSON dumps, sprawling system logs).
+**Action**: If User pastes block data, Cloud AI triggers Local Gemma-4 -> `Gemma-4 parses bulk data` -> `Gemma-4 returns only the minimal extracted logic (e.g. 3 lines)`. Cloud AI resumes processing.
 
 ---
 
-## 🛠️ 3. CORE EXECUTION SKILLS
-- **Cycle Control**: PLAN -> BATCH -> EXECUTE -> AUDIT.
-- **Cost Reduction**: Minimize browser-tool calls for static verification.
-- **Accuracy**: 100% path precision and zero-drift click execution.
+## 🌊 2. BATCH WAVES (Speed Multiplier)
+**Mandate**: Serial edits strictly forbidden for multi-file tasks.
+1. **PLAN**: Map dependencies.
+2. **BATCH**: Group targets into parallel scopes.
+3. **PARALLEL LIMIT (RAM-Safe)**: 
+   - `BOOT_CHECK`: `$ Get-CimInstance Win32_OperatingSystem | Select TotalVisibleMemorySize, FreePhysicalMemory`
+   - `IF <4GB` -> 1 Tool (Serial)
+   - `IF 4-8GB` -> 2 Tools
+   - `IF >8GB` -> 3 Tools. Max 3 if Gemma-4 model active (17GB footprint).
+4. **JIT INGESTION**: Use `grep_search` locally. Full file `view_file` only when absolutely necessary.
+5. **SINGLE VERIFY**: Run Build/Lint exactly once after wave finishes.
+
+### Wave Template (Vue/Vite Standard):
+- **Wave A**: Types/Config.
+- **Wave B**: Stores/Composables.
+- **Wave C**: Views/Components.
+- **Wave D**: Router/Main.
 
 ---
 
-_Execution Master V27.0 — Shared Efficiency Active (2026-04-07)_
+## 🛠️ 3. CORE EXECUTE SKILLS
+`FLOW`: PLAN -> BATCH -> EXECUTE -> AUDIT.
+
+---
+_Execution Master V28.1 — Logic Compressed (2026-04-07)_

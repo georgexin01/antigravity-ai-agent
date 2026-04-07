@@ -25,34 +25,61 @@ The VSS allows the AI to extract and store complex nested design layouts (from i
 - **`[ ]`** = Pure CSS Style Injector. _e.g., `[font-size:14px color:red]`_
 - **`" "` (Space)** = Grouping and separation tool for easier AI parsing. Keep variables distinct: `{ a + b }` not `{a+b}`.
 
-### Expanded Variable Dictionary (Unlimited Storage)
+### Expanded Variable Dictionary (VSS 5.0: Singularity Level)
 
-The AI is permitted to use an unlimited combination of 26 lowercase letters, 26 uppercase letters, symbols, and numbers. **Case matters**:
+The AI is permitted to use an unlimited combination of symbols and strict 2-letter semantic codes. **Case matters**:
 
-- **Uppercase (Structural/Large)**: `C` (Container), `T` (Title/H1), `G` (Grid), `H` (Hero), `S` (Section).
-- **Lowercase (Elements/Small)**: `c` (card), `t` (paragraph text), `i` (icon), `img` (image), `b` (button).
-- **Symbols (Modifiers)**: `$` (Brand/Logo), `!` (Primary Action/CTA), `@` (Absolute Positioning/Z-index layer), `*` (Multiplier, e.g., `c * 4` means 4 cards).
-- **Custom IDs**: Combine them for exact clarity: `GT1l` (Glass-Tier 1 left), `c_hero`.
+**The `Aa` Double-Vector Syntax:**
+Always use a two-letter structural prefix. The 1st is Uppercase (Element Type). The 2nd is Lowercase (State/Variant).
+- **Containers (`C`)**: `Cg` (Grid), `Cf` (Flex), `Ca` (Absolute), `Cg` (Glass/Bento).
+- **Typography (`T`)**: `Th` (Headline), `Tp` (Paragraph), `Tq` (Quote), `Tm` (Muted).
+- **Buttons (`B`)**: `Bp` (Primary CTA), `Bs` (Secondary), `Bo` (Outline), `Bg` (Ghost/Liquid).
+- **Media (`I`)**: `Ib` (Background Image), `Iv` (Video), `Ii` (Micro Icon).
 
-### Utility-First Style Injector (Bootstrap & Tailwind Inspired)
+**Ghost Logic & Data Primitives (Brain Hookups)**:
+- `< >` = Vue/API Data Injection (`<price>`). Tells Gemma-4 to inject a variable, not static text.
+- `{$ }` = **Pinia / React State Binding**. *Critical Upgrade:* If the AI sees `Bp_{$cart_state}`, the AI is FORCED to not only write the button, but write the Javascript reactive logic underneath it simultaneously. 
+- `~` = Accordion / Foldable.
+- `=` = Carousel / Slider Track. 
+- `^` = Modal overlay (Z-index 9999).
+- `?` = Tooltip / Popover trigger.
 
-When writing styling inside `[ ]`, adopt universal, predictable CSS-framework abbreviations to maximize AI parsing compatibility and cross-project consistency:
+**The Infinity Engine & Motion Vectors (GSAP Hookups)**:
+- `>>`, `<<`, `^^` = **Base Motion vectors** (CSS Fade Right, Left, Up).
+- `@gsap_pin` = **Advanced Scroll Pinning**. The AI must wrap this container in a `ScrollTrigger.create({pin:true})` engine block.
+- `@gsap_scrub` = **Scroll Linked Animation**.
+- `@magnet_x` = **Magnetic Hover Physics** (cursor pull logic).
 
-- **Spacing (`m` for margin, `p` for padding)**: Format `{property}{sides}-{size}`. Sides: `t` (top), `b` (bottom), `l` (left), `r` (right), `x` (horizontal), `y` (vertical). _E.g., `[pt-5 my-auto px-4]`, `[mb-100px]`._
-- **Sizing**: Combine `w` (width) or `h` (height) with values. _E.g., `[w-100]`, `[vh-100]`, `[w-auto]`._
-- **12-Column Layouts**: VSS actively uses the unified 12-column mental model. _E.g., `[col-6]` = 50% width, `[col-lg-4]` = 33.3% width._ For modern grids: `[d-grid gap-3]`.
-- **Flexbox Mechanics**: Use standardized classes. _E.g., `[d-flex align-items-center justify-content-between flex-column]`._
-- **Positioning & Layers**: Use `[position-relative]`, `[position-absolute top-0 start-50 translate-middle]`, and `[z-n]` (where n is z-index).
-- **Typography & Display**: Use `[fs-1]` to `[fs-6]` for font sizes, `[fw-bold]` for weights, `[text-center]`, `[text-truncate]`, and `[d-none]` / `[d-block]` for visibility.
-- **Borders & Effects**: Define physical presence with `[rounded-circle]`, `[rounded-3]`, `[border-bottom]`, and `[shadow-lg]` or `[opacity-50]`.
-- **Responsive Breakpoints**: Prepend standard viewport prefixes for media queries: `sm:`, `md:`, `lg:`, `xl:`, `xxl:`. _E.g., `[md:w-50 lg:d-none]`. This guarantees structural adaptability when parsing complex layouts._
+**Master Keyboard Symbols (Logic & Routing)**:
+- `&` = **Tight Link**: Bind two elements with zero CSS gap (`Ii & Tp`).
+- `%` = **Responsive Layout Break**: Switches state (`Cg %md Cf`).
+- `/` = **Physical Divider**: `<hr>` line.
+- `:` = **State Trigger**: Hover/Focus/Active (`Bp:hover`).
+- `#` = **Identity Anchor**: DOM ID link.
+- `*` = **Multiplier**: Iterate elements (`c * 4`).
+- `@` = **Absolute Position Layer**.
+
+### Gemma-4 Strict Parsing Rule (Key-Value Styling)
+
+To prevent severe hallucination loops in smaller local models like Gemma-4, the syntax inside styling brackets `[ ]` MUST strictly adhere to Javascript/JSON-like Key:Value mapping. **Mashed abbreviation strings like `[pt-5 my-auto]` are banned.**
+
+- **Spacing**: Use `[pad:5 y:auto gap:2rem]`. Gemma computes `pad:5` to `padding: 3rem` flawlessly.
+- **Sizing**: Use `[w:100 h:75vh w:auto]`.
+- **Layout/Grid**: Define explicit matrices: `[grid:4x2 gap:2rem flex:col align:center justify:between]`.
+- **Positioning**: Use `[pos:absolute top:0 start:50 z:10]`.
+- **Typography**: Use `[fs:h1 fw:bold text:center truncate:true visible:hidden]`.
+- **Responsive Strictness**: `[md_w:50 lg_visible:false]`. Underscores instead of colons prevent LLM parsing collisions.
+
+> **Gemma-4 Multi-Layer Macro (`[depth:X]`)**:
+> If the styling bracket contains `[depth:3]` or higher, Gemma-4 is UNDER STRICT ORDERS to NEVER output flat CSS. It MUST generate a multi-layer UI component. 
+> *Output must include:* Base Color -> Linear-Gradient Overlay -> Backdrop-Filter Blur -> Inset Glow Box-Shadow -> Drop Shadow.
 
 ### VSS Read/Write Examples
 
-- **Basic Card**: `{ [bg:dark p20px] I1 | T1 + t2 }`
+- **Basic Card**: `{ [bg:dark pad:5] I1 | T1 + t2 }`
   _(A dark padded div containing an image above a row containing title and text)_
-- **God-Tier Hero Extraction**: `( { C_Main [relative h100vh] { @bg_vid } | { T_Hero [fw900 mb20px] + { !cta_1 [pl20px pr20px] + !cta_2 } } } )`
-  _(A relative section with an absolute background video, and a column with a bold title above a row with two buttons built with specific padding)._
+- **Singularity Hero Extraction**: `( { C_Main [pos:relative h:100vh] { @gsap_scrub Ib_Video } | { Th_Hero [fw:bold margin_b:5] + { !Bp_GetNow_{$checkout} [pad_x:5 depth:3] + !Bs_Read } } } )`
+  _(A relative God-tier hero with GSAP scrubbing video, 3-layer depth button tied to Pinia state logic)._
 
 ---
 
@@ -123,13 +150,13 @@ A vertical/horizontal line that grows on hover or scroll.
 ### A. Zeta 200% (The standard)
 
 - **Aesthetic**: Immersive, High-density, Physics-based.
-- **Hero VSS**: `( { @motif [absolute t0 r0 blur30px] + { T_Main [fw800] | !CTA_Primary [ghost-glow] } } )`
+- **Hero VSS**: `( { @motif [pos:absolute top:0 right:0 blur:30px] + { Th_Main [fw:800] | !Bp_Primary [depth:3] } } )`
 - **Strategy**: Hero -> Trust Ribbon (Floating) -> About (Asymmetrical LNS) -> Services (Symbiotic Glass) -> Workflow (Neural Grid) -> Partner Network (Code Rain) -> Tech Stack (Liquid Typography) -> Footer.
 
 ### B. Crafix Industrial
 
 - **Aesthetic**: Solid, Structural, Industrial B2B.
-- **Bento VSS**: `( { Grid_4x2 [gap20px] { Bento_Wide [span2 blur10px] + Bento_Small [bg:dark] * 3 } } )`
+- **Bento VSS**: `( { Cg_4x2 [gap:20px] { Cg_Wide [span:2 blur:10px] + Cg_Small [bg:dark] * 3 } } )`
 - **Rule**: Transparent property overlays over heavy machinery imagery.
 
 ### C. Themesflat Organics
@@ -170,7 +197,7 @@ A vertical/horizontal line that grows on hover or scroll.
 
 1. **Mirror Synthesis Protocol (Cloning)**: When duplicating a live site, the target is 95% content match. Header/Footer parity is absolute. Replicate exact narrative flow (Hero -> Portfolio -> Pricing -> Testimonials) but upgrade the visuals to "Evolution 3.0" VSS density.
 2. **Layered Narrative Protocol**: Use staggered background shades to create visual "layers in line" (`--color-bg-alt` vs `--color-bg-deep`). Toggle these between sections to prevent visual fatigue and emphasize depth.
-3. **Animation Visibility Buffer**: For components with `transform: translateY` animations and bottom borders (e.g., Glass Cards), always add `[mb5px]`. This ensures the border isn't clipped by the container during rest/transition.
+3. **Animation Visibility Buffer**: For components with `transform: translateY` animations and bottom borders (e.g., Glass Cards), always add `[margin_b:5]`. This ensures the border isn't clipped by the container during rest/transition.
 4. **Pre-Footer CTA Protocol**: Every page MUST conclude with a high-impact Call to Action section immediately preceding the footer (e.g., "Ready to Evolve?"). Use large typography background, glassmorphism, and internal linear gradients.
 
 ### Content Strategy Mapping
@@ -189,18 +216,30 @@ To reach God-Tier (2.0.00+) aesthetics, the AI must move beyond flat sections. T
 
 Every section MUST have a unique "Atmosphere". Do not repeat the same background for consecutive sections.
 
-- **Theme Color Rotation**: Shift background hues slightly between sections (e.g., Deep Black -> Midnight Navy -> Dark Lead).
+- **Theme Color Rotation**: Shift background hues slightly between sections.
 - **Spatial Design**: Use overlapping transparent geometric shapes, circles, or floating motifs to create depth.
 - **Slowing Effects**: Implement CSS-driven background elements with slow `rotate` or `pulse` animations (0.01x speed).
 - **Gradient Mastery**: Use multi-stop radial gradients (e.g., `radial-gradient(at 0% 0%, var(--bg-1), transparent)`) to create "Thematic Lighting".
 
-### B. 10-Tier Color Shade Protocol
+### B. The BLOOD System: Symphonic OKLCH Color Physics (120/100 Depth)
 
-When picking a main theme color, the AI must automatically generate a 10-tier palette in the CSS variables:
+The biological core of visual hierarchy. **HEX/RGB/HSL ARE OFFICIALLY BANNED.** The AI must computationally convert to and separate the main theme into a massive 10-Tier OKLCH Lighter/Darker spectrum via CSS Variables.
 
-- `--theme-100` to `--theme-900`: From lightest/shallow to deepest/saturated.
-- Use these tiers for: Subtle text (`700`), Borders (`800`), Hover tints (`500`), and Background accents (`950`).
-- **Gradient Ally**: Combine different tiers (e.g., `--theme-400` to `--theme-600`) for all primary UI gradients.
+*Why OKLCH?* It calculates Lightness (L) mathematically relative to the human eye. This guarantees perfect contrast in both Dark and Light modes without manual tweaking.
+
+**The Super-Long OKLCH Spectrum Rule**:
+The AI must declare `oklch(L C H)` mapping across all layers:
+*   `--primary-100` (`L: 0.95` Ultra Lighter): Used as text contrast on deep backgrounds.
+*   `--primary-200 to 300` (`L: 0.85` Lighter): Used for subtle glowing hover-states or inset borders.
+*   `--primary-400 to 500` (`L: 0.60` Core Theme): The exact brand chroma. Used for CTAs.
+*   `--primary-600 to 800` (`L: 0.25` Darker): Used for card backgrounds and Glass blending.
+*   `--primary-900 to 1000` (`L: 0.10` Ultra Darker): Used as the base root simulation for deep void space.
+
+**Biological Integration**: 
+*   **The Bone (VSS)**: Shapes the container. `[bg-primary-900]`
+*   **The Flesh (Matrix)**: The glassmorphism blur dynamically mixes with OKLCH transparent variants (`oklch(from var(--primary-800) l c h / 50%)`).
+*   **The Muscle (Stitch/GSAP)**: Hover physics shift exact Lightness math from `L:0.6` to `L:0.5`.
+*   **The Mind (AI)**: Decides the initial OKLCH value before pushing it into the 10 step scale.
 
 ### C. The "Button Master 10" Library
 
@@ -276,20 +315,24 @@ The Vault store verified, high-end design patterns abstracted from global leader
 
 ---
 
-## 8. The Extraction Repository (Website Vault)
+## 8. The System Design Vault & Ocular Extraction
 
 > [!IMPORTANT]
-> To ensure infinite scalability, all high-density design samples are now stored in:
-> **[website_stored_samples.md](file:///C:/Users/User/.gemini/antigravity/knowledge/tech_stack_mastery/artifacts/website_stored_samples.md)**
+> To ensure infinite scalability, all high-density design samples and cloned UI images are stored in a multi-file structural vault: **`knowledge/normal/design_vault/`**.
 
-This repository continues to store unlimited structural extraction patterns from high-end websites or UI inspiration images. When the AI scans an image or researches a layout, the exact structure MUST be codified and pushed to the external vault above.
+### The Ocular Extraction Protocol (Copy Mapping)
+Whenever the user uploads an image of a UI or requests to "copy this design", the AI **MUST** perform the following high-fidelity cloning procedure:
 
-### Format Standard
+1. **Optical Scan**: Break the UI down into its core rows/containers.
+2. **VSS Translation**: Convert the exact layout (including absolute badges, overlapping layers, and flex grids) into a pure VSS 4.0 string sequence.
+3. **The Grey-Box Rule**: The AI must **NEVER** fail because it lacks source images. Replace all literal photographs with structured placeholders: `Ib_<GrayBox:Pizza>` or `img_<GrayBox:Avatar>`. This ensures the structure is perfectly cloned without breaking HTML integrity.
+4. **Permanent Vault Storage**: The AI must create a new `.md` file inside the `design_vault/` (e.g., `mobile-finance-dashboard.md`) and save the exact VSS Layout and Theme requirements.
+5. **Instant Recall**: Whenever the user asks to build an app, the AI must search the `design_vault/` by keyword and instantly deploy the stored VSS string into live HTML/CSS.
 
-- **Label**: [Component/Section Type]
-- **Title**: [Human Readable Name & Key Dimensions/Grid setup]
-- **Description**: [Detailed structural logic, interaction behavior, and what the user sees]
-- **VSS Formula**: [The exact notation using `{ }` and `[ ]`]
+### Format Standard for Vault Entries
+- **Filename**: `design_vault/[platform]-[niche]-[theme].md`
+- **Header**: Description of Theme (e.g., Dark Mode + Orange Accents).
+- **VSS Mapping**: The exact VSS string separated by section (Hero, Carousels, Nav).
 
 ---
 

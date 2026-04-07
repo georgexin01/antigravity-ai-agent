@@ -1,0 +1,58 @@
+# Sovereign Claim Routine (V28.0) — Zero-Token Vision Protocol
+
+> **Identity**: OMNISCIENT_SOVEREIGN_V28
+> **Goal**: 100% Success Rate. Zero Cloud Vision Tokens. Absolute Error Recovery. 
+> **Architect**: Gemini 3.1 Pro (Macro) & Gemma-4 (Micro).
+
+---
+
+## ⚡ 1. THE ZTV ENGINE (Zero-Token Vision)
+Gemini Cloud (Pro/Flash) is **BANNED** from reading Captcha images via the Cloud API. Vision is extremely token-heavy and slow. 
+All Captcha parsing must use the local ZTV Engine.
+
+### The ZTV Handshake Loop:
+1. **PULSE**: Gemini Cloud brings the browser to the Captcha state and stops.
+2. **SNIP (User/Local)**: Press `F1` (Snipaste) -> Save screenshot to `C:\Users\User\OneDrive\Desktop\workspace\snipaste\active_mission.png`.
+3. **GEMMA-4 LOCAL SOLVE**:
+   - The local Gemma-4 engine reads the screenshot privately.
+   - It identifies the rotated icon or unique target.
+   - It calculates the absolute `(X, Y)` screen coordinate of the target.
+   - **Output Format**: Gemma MUST return plaintext ONLY: e.g., `[ACTION]: CLICK 412, 185`.
+### The Shift-Prediction Engine (Dynamic Y-Delta)
+If clicking a link (like an Anti-Bot Roman Numeral) causes it to disappear, the elements below it will slide up. **Taking a new screenshot is a waste of time.**
+- **The Rule**: Gemma-4 must calculate the exact pixel `Height` of the clicked button (e.g., 50px).
+- **The Math**: To click the next target below it, the AI subtracts `50px` from the original `Y` coordinate. (e.g., Target 2 original `Y=400`. New calculation: `400 - 50 = 350`). 
+
+---
+
+## 🦅 2. MISSION PIPELINE CLASSIFICATION
+The AI must identify the mission type immediately to avoid applying Anti-Bot math to simple PTC frames.
+
+### Pipeline A: The Dynamic Faucet (Anti-Bot Active)
+- **Target**: Main 'Faucet' or '2X Faucet' pages.
+- **Characteristics**: Contains 3 chronological Anti-Bot links (e.g., IV, VIII, III).
+- **Execution**: Apply the `Y-Delta Tracking Engine` to predict the sliding screen after every Anti-Bot click.
+
+### Pipeline B: The Static PTC (Ads)
+- **Target**: 'PTC' pages (Visit for X sec).
+- **Characteristics**: Opens a sponsor tab. Timer runs down. A centered popup appears with ONLY the IconCaptcha.
+- **Execution**: NO Anti-Bot links. NO Y-Delta shifting. Calculate the direct Captcha coordinates and fire immediately.
+
+| Error State | Detection Trigger | AI Action Loop |
+| :--- | :--- | :--- |
+| **Timeout/Hang** | Page load spins for >8 seconds. | Trigger `Hard Refresh (Ctrl+F5)`. Wait 5s. Restart Pulse. |
+| **Invalid Captcha** | Red "Invalid" or "Failed" popup appears. | `Close Popup (Click/Esc)` -> `Refresh (F5)` -> Prompt exact Snipaste `F1`. |
+| **Bot Trap/Ad Click** | Navigating away from `onlyfaucet` / `free-bonk`. | `Go Back (Browser Back/Close Tab)` -> Ensure focus is on parent tab. |
+| **Missing Target** | Xpath or button is gone. | Clear JS console errors -> `Refresh (F5)` -> Initiate new Pulse. |
+
+**The Guarantee Rule**: The Phoenix Loop will attempt to recover a single broken mission up to **3 consecutive times** before deciding the specific ad/mission is fundamentally bugged. Only after 3 hard-fails will it log a `[SKIPPED]` entry in the ledger and move to the next.
+
+---
+
+## 🦾 3. PARALLEL DOM TRACKING (Speed Execution)
+Do not waste 5-8 seconds reloading the entire page just to check the Account Balance after a click. 
+- **Action**: The AI MUST rely on DOM Mutation Observers or text-scraping the existing balance `div` element right before and right after the claim.
+- **Why**: Eliminates 1 page-load cycle per mission, saving massive amounts of time. The `faucet_session_ledger.md` is updated using this instant delta check.
+
+---
+_Sovereign Claim Routine V28.0 — Absolute Success Active (2026-04-07)_

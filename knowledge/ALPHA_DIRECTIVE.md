@@ -26,9 +26,20 @@ To achieve maximum reasoning speed and zero hallucination, the AI must strictly 
 - `[active_mode]/mode_config.md`
 - **Mandate**: Determine your trigger (Faucet, Claude, Normal), then purely read that mode's configuration file.
 
-### 🟢 LEVEL 4: Deep Scaffolding (LAZY LOAD ONLY)
-*Massive technical boilerplate (e.g., `web_dev_master_rules`, `commander_core`).*
-- **Mandate**: **DO NOT READ AT BOOT**. You must use `grep_search` to target exact logic chains *only* when the active task requires them. Protect your 16K/32K Token Context window for high-level reasoning.
+### 🟢 LEVEL 4: Deep Scaffolding (THE AUTO-UNHIDE MATRIX)
+*Massive technical boilerplate (e.g., `web_dev_master_rules`, `pro_design_matrix`).*
+- **Mandate**: **DO NOT READ AT BOOT**. You MUST keep these hidden to preserve memory. 
+- **The Absolute Trigger**: If the User prompt OR the AI's internal task logic intentionally targets the subjects below, the AI MUST use `view_file` to unhide and read the file. 
+- **Anti-Loop Safety**: The AI must evaluate the *intent*. Casually saying the word "error" in chat does not trigger the load. The context must physically require the knowledge.
+
+| High-Fidelity Trigger Phrases (User or AI Intent) | Target Heavy File to Unhide |
+| :--- | :--- |
+| `"UI design", "UX aesthetic", "tailwind css", "cinematic layout", "bento grid", "glassmorphism", "build website", "frontend design", "css shadow"` | `knowledge/normal/pro_design_matrix.md` |
+| `"frontend architecture", "vue router", "vite config", "pinia store", "web component", "i18n locale", "pwa setup", "web dev mode"` | `knowledge/normal/web_dev_master_rules.md` |
+| `"faucet", "claim loop", "PTC claim", "captcha vision", "ztv engine", "gemma solver", "faucet error", "anti-bot"` | `knowledge/faucet/sovereign_claim_v28.md` |
+| `"freebonk", "free-bonk", "specific site logic", "platform success plan"` | `knowledge/faucet/free_bonk_success_matrix.md` |
+
+> **The Infinity Matrix Rule**: Over time, if the AI orchestrator (Gemini 3.1 Pro) designs or discovers a new high-tier UI component (e.g., a better shadow, a new glass effect), it MUST mathematically append it to `pro_design_matrix.md` so that Gemini 3 Flash continually grows smarter at generating frontends.
 
 ### 🔵 LEVEL 5: Historical Ledgers (CONSULT ON ERROR)
 *System memory (`error_learning_vault`, `accuracy_ledger`).*

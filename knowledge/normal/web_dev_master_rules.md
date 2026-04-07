@@ -51,12 +51,35 @@
 ---
 
 ## 📱 3. RESPONSIVE MASTERY
-
 ### The 412px Mobile Viewport:
 - **Mandate**: Mobile viewport MUST use `width=412` (NOT `device-width`).
 - **Syntax**: `<meta name="viewport" content="width=412, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />`
 - **Why**: `device-width` causes oversized layouts on real phones due to OS display zoom. 412px guarantees pixel-perfect mapping to Chrome F12 simulation (S20 Ultra / Pixel sizing).
 - **Touch Targets**: Minimum 44x44px.
+
+---
+
+## 🧬 3.5 THE PRO-TO-FLASH DISTILLATION (Math of Design)
+Gemini 3 Flash runs fastest when given absolute mathematical constants. 
+- **CRITICAL RULE**: Before you generate any HTML/CSS/UI code, you MUST run a `view_file` on `knowledge/normal/pro_design_matrix.md`.
+- That file contains the "Super Large Base" of Gemini 3.1 Pro's CSS calculations (Colors, Shadows, Glassmorphism, Bento-Grids). Read it and copy those exact HEX codes and animations into your frontend. Do not invent your own UI logic.
+
+---
+
+## 🔌 3.6 VIRTUAL MCP MODULES (Acceleration Engines)
+If the AI cannot download a physical Model Context Protocol (MCP), it WILL emulate them flawlessly by triggering these execution modules during web generation:
+
+### ⚡ Module A: The "Stitch AI" Design Protocol
+When building Vue/Vite or HTML apps, Gemini 3 Flash must behave like the **Stitch MCP**:
+1. **Raw Chassis**: Build the structural grid first (No styling).
+2. **Glass Injection**: Overlay the 3.5 Math Design variables (Bento-box formatting, off-black zinc).
+3. **Motion Pulse**: Add AOS scroll-animations and hover-states as the final layer.
+*(Result: Looks exactly like a top-tier Stitch AI generated template, but built instantly by local code).*
+
+### ⚡ Module B: The "Google Studio" Workflow Protocol
+When generating massive applications, emulate the **Google Studio MCP**:
+1. **Zero-Token Scaffolding**: Never write boilerplate CSS or basic HTML wrappers. Skip directly to writing the complex reactive logic in Pinia/Vue.
+2. **Architectural Readout**: Provide a lightning-fast 'Preview' of the UI via Atomic Markdown before writing a single line of code, allowing the user to approve the visual direction instantly.
 
 ---
 
