@@ -1,10 +1,20 @@
-# AI Claude Mode — Activation Protocol V5.0
+# AI Claude Mode — Activation Protocol V6.0
 
-> **PURPOSE**: When user says "ai claude" in Gemini chat, activate Claude-Code mode.
+> **PURPOSE**: When user says "ai claude" in Gemini chat, activate Claude-Code Synergy mode.
 > **Trigger**: User says "ai claude", "claude mode", "admin mode", or "create module"
-> **Effect**: Switch from default Gemini design mode → Claude-Code admin panel mode
-> **Created**: 2026-03-12 | **V5.0 Upgraded**: 2026-04-01
-> **V5.0**: Added Predictive Mapping Strategy (P0.5) & Token ROI Economy.
+> **Effect**: Switch from default Gemini design mode → Claude-Code Synergy (Director ↔ Architect)
+> **Created**: 2026-03-12 | **V6.0 Upgraded**: 2026-04-07
+> **V6.0**: Integrated Gemini 3 (Director) ↔ Gemma-4 (Architect) Synergy Protocol.
+
+---
+
+## ⛔ IMMUTABLE SKILLS LOCK (HIGHEST PRIORITY)
+
+> **`skills/claude-code/` IS PERMANENTLY LOCKED.**
+> The AI may ONLY **READ** these files as fixed references. NEVER write, edit, add, or delete anything inside `skills/claude-code/`.
+>
+> All learning, synergy upgrades, and improvements are written to `knowledge/claude/` files ONLY.
+> **MANTRA: Skills are the Law. Knowledge adapts around the Law.**
 
 ---
 
@@ -41,6 +51,11 @@ Only execute the steps that are NOT yet COMPLETED:
 - Upon reactivation ("ai claude"), if the Boot Gate is skipped (Gate 0.3), the AI instantly reloads the exact context and says:
   > *"Restored context for [Project/Module Name]. Ready to continue from [Step/File]."*
 
+### 0.6 The Synergy Handoff Protocol (V1.0)
+- **Role: Director (Gemini 3 Flash)**: Planning, Pattern Detection, Consultation, Logic Audit, UI Logic, Testing.
+- **Role: Architect (Gemma-4)**: Structural SQL, Types, Pinia Scaffolding, Mock API Boilerplate, I18n.
+- **Flow**: Director briefs Architect → Architect drafts structure → Director audits & completes high-fidelity UI components.
+
 ### 0.4 Error Handling
 - If `docker ps` returns error → stop and ask user to start Docker.
 
@@ -72,7 +87,8 @@ Only execute the steps that are NOT yet COMPLETED:
 | **Design DNA** | Load user_taste_dna + design vault | SKIP all design files |
 | **Knowledge files** | Load per task type | Load claude-code skills ONLY |
 | **Code style** | Vue 3 + Tailwind vanilla | Vben Admin + Ant Design + Supabase |
-| **Execution** | V13 phases (Before→During→After) | 14-step module pipeline |
+| **Execution** | V13 phases (Before→During→After) | 14-step Synergy Pipeline |
+| **Model Role** | Single Agent | **Director (G3) ↔ Architect (G4)** |
 
 ---
 
@@ -101,26 +117,32 @@ Only execute the steps that are NOT yet COMPLETED:
 /supabase-auth-architecture → Auth design reference
 ```
 
-### Execution Sequence (Predictive V5.0)
+### Execution Sequence (Synergy V6.0)
 ```
 User: "ai claude create module teacher"
   │
-  ├── 1. PHASE P0: BOOT & VERIFY
+  ├── 1. PHASE P0: BOOT & VERIFY (Director ↔ Ghost Scan)
   │       ├── 0.1 Post-Install Verify (Gate 18)
-  │       ├── 0.2 Registry Scan (Intelligence Registry)
-  │       └── 0.3 PREDICTIVE MAPPING (P0.5)
+  │       ├── 0.2 Registry Ghost Scan (Gemma-4 Scans Schema)
+  │       └── 0.3 PREDICTIVE MAPPING (Director)
   │           └─ Map Schema → V2 Skills (e.g., Currency, FK, RLS)
   │
-  ├── 2. PHASE P1: SMART CONSULTATION & PLANNING
-  │       ├── 1.1 Present Pattern Matches (Matched 4 Predictive Skills)
-  │       └── 1.2 Implementation Plan (Skip approved patterns)
+  ├── 2. PHASE P1: SMART CONSULTATION (Director)
+  │       ├── 1.1 Present Pattern Matches (Director)
+  │       └── 1.2 Implementation Plan (Director breaks into G4/G3 tasks)
   │
-  ├── 3. PHASE P2: IMPROVEMENT EXECUTION
-  │       ├── 2.1 Snippet Injection (Zero-Think Boilerplate)
-  │       └── 2.2 ROI-First Scanning (Precise view_file ranges)
+  ├── 3. PHASE P2: ARCHITECT DRAFTING (Gemma-4)
+  │       ├── 2.1 SQL Migration & Seed (Gemma-4 Architect)
+  │       ├── 2.2 Types & Store Scaffold (Gemma-4 Architect)
+  │       └── 2.3 Mock API Boilerplate (Gemma-4 Architect)
   │
-  └── 4. PHASE P5: UPDATE KNOWLEDGE
-          └── 5.1 Log Token ROI & Confidence in Vault V2
+  ├── 4. PHASE P3: FIDELITY FINISHING (Director)
+  │       ├── 3.1 Vue View Logic & Drawers (Director Finish)
+  │       ├── 3.2 Logic Audit of G4 Drafts (Director Audit)
+  │       └── 3.3 Advanced UI Patterns (Director Finish)
+  │
+  └── 5. PHASE P5: UPDATE KNOWLEDGE
+          └── 5.1 Log Synergy ROI & Confidence in Vault V2
 ```
 
 ---

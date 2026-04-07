@@ -149,7 +149,11 @@ AI reads this BEFORE generating any design to pre-filter patterns. Built from ap
 
 ---
 
-## Communication Style
+## Communication Style (V16.1 Restricted)
+- **Ultra-Short**: Absolute minimum text. Show only critical 'Done' status.
+- **Action-Oriented Titles**: Focus title on the main question (e.g. "Approve Summary Card at top?").
+- **Text-Tip Plans**: Use simple bullets instead of technical 'V16 Redesign Plan' labels.
+- **No Fluff**: Skip explanations, intros, and metadata headers.
 
 | Trait                   | Pattern                                                            | Confidence |
 | ----------------------- | ------------------------------------------------------------------ | ---------- |
@@ -225,7 +229,7 @@ For school management or similar projects, the design document MUST include:
 | Active touch feedback     | `active:scale-[0.97]` on buttons                 | 92     | ALL 4 Vue apps                    |
 | Design tokens as CSS vars | `--color-primary: #xxx` before components        | 90     | ALL projects                      |
 | **AI Claude Mode**        | **Full-Session Focus on `claude-code` Skills**   | S-CORE | Trigger: `ai claude`              |
-| Rewards & Loyalty Module  | Points + Tiers + Badges (B2C Standard)           | S-CORE | V11 Reward Mode                   |
+| **App Component Design**| **Vue 3 + Tailwind CSS Utilities** (V16 Mandatory) | S-CORE | User 2026-04-06 |
 
 ---
 

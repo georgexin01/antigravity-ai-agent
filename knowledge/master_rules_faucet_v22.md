@@ -1,16 +1,18 @@
-# Master Rules V22.1 — The Omniscient Engine
+# Master Rules V23.0 — The Omniscient Synergy Engine
 
 > Derived from V15 Master Rules & V21 ROI Logic.
-> Focus: Sub-Second Triage, Human-Sync Jitter, Zero-Miss Timing.
+> **V23.0**: Hardened with G3 Director ↔ G4 Analyst cooperative mandate.
 
 ## 🧠 1. Engine Core (P0)
 
-1. **Sub-Second Triage (SST)**: The agent must execute any visible button (Faucet, PTC, Claim) within **800ms** of it appearing in the DOM. Use `MutationObserver`.
-2. **"3-Hit Rule" (Fail-Safe)**: If an Antibot or Captcha fails (as indicated by page reset or error message), the system must:
+1. **Sub-Second Triage (SST)**: The agent must execute any visible button (Faucet, PTC, Claim) within **800ms** of it appearing in the DOM. Use `MutationObserver`. | **Agent: G3 Director**
+2. **"3-Hit Rule" (Fail-Safe)**: If an Antibot or Captcha fails, the system must:
    - Attempt 1: Refresh & Re-try.
    - Attempt 2: Wait 5s & Re-try.
    - Attempt 3: Skip to the next mission (PTC → Faucet fallback).
 3. **Baton Sync (Persistence)**: Every mission state must be written to the `BOREALIS_MISSION_BATON_V22` in `localStorage` for cross-tab synchronization.
+4. **[NEW] Synergy Handoff**: On every captcha encounter, G3 Director solves first → passes screenshot to G4 Analyst for dual-check → compare at 90% confidence gate before executing click. | **Agent: G3 + G4 Required**
+5. **[NEW] Cloud-Solo Fallback**: If G4 Analyst is offline, G3 Director bypasses the dual-check gate and executes with 85% confidence minimum. | **Agent: G3 Director only**
 
 ## 🛡️ 2. Stealth & Human-Sync (P1)
 
@@ -31,4 +33,12 @@
 3. **Singularity Orb**: The background must feel "alive" with an animated canvas or CSS pulse.
 
 ---
-_V22.1 Omniscience Rule Set — 2026-04-04_
+
+## 📋 FUTURE KNOWLEDGE RULE (PERMANENT)
+
+> Any new rule added here MUST include:
+> - **Agent Tag**: G3 Director, G4 Analyst, or G3 + G4 Required
+> - **Fallback**: What happens when G4 is offline (Cloud-Solo mode)
+
+---
+_V23.0 Omniscience Rule Set — Synergy Hardened (2026-04-07)_

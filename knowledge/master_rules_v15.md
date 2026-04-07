@@ -1,6 +1,7 @@
-# Must-Do Master Rules V15 — Compressed
+# Must-Do Master Rules V16 — The Singularity
 
 > Wave-batched gate system. Phase 1→2→3→4 sequential. Within each phase: parallel waves.
+> **V16 Upgrade**: Incorporates Volumetric UI, Hyper-Density (Liquid Glass), and Physics-Based Motion as baseline utilities.
 > Claude sections moved to `claude/mode_config.md`. Faucet sections moved to `faucet/mode_config.md`.
 
 ---
@@ -72,6 +73,8 @@
 | **2.8** | WhatsApp float on all B2B/B2C pages. `fixed bottom-20 right-4 z-50 w-14 h-14 bg-[#25D366] rounded-full` | — | — |
 | **2.9** | localStorage persistence. Auth/cart/prefs survive refresh. Pinia `$subscribe` sync. | — | — |
 | **2.10** | Pill toast: centered top, rounded-full, backdrop-blur-xl, Lucide icon, auto-dismiss 3s | — | — |
+| **2.11** | **Asset Localization Protocol**: Research high-quality motion URLs/videos first → Use in code → Confirm with user → `curl` download to `assets/video` or `assets/images` → Sync local path. | URL research | Localized cache |
+| **2.12** | **The Synergy Handoff**: Mandatory "Logic Audit" by Gemini 3 Flash for all code drafted by local Gemma-4 architects. In **Claude Mode**, use Gemma-4 for Waves 1-4 (Data) and Gemini-3 for Waves 5-8 (UI). | — | — |
 
 ---
 
@@ -88,6 +91,7 @@ npm run build → MUST pass zero errors. If fails → agent_core §6 error recov
 ✓ Robots noindex (remove only if user says "allow crawling")
 ✓ Favicon (generate SVG if missing) + Manifest.json + SW (PROD only)
 ✓ SPA fallback: .htaccess + _redirects + 404.html + catch-all route
+✓ Self-Healing Logic: `.htaccess` MUST include `Header set Clear-Site-Data "\"cache\", \"cookies\", \"storage\""` during forced recovery phases.
 ✓ BUILD_VERSION increment + Anti-Blank Recovery Script
 ```
 
@@ -116,7 +120,7 @@ ONLY USE for: major feature completion, complex layout debug, user request, fina
 | **Meta** | All meta tags from 3.2. Remove noindex if "allow crawling". Accurate title + description |
 | **PWA** | manifest.json (name, short_name, start_url, display:standalone, icons 192+512), SW registered |
 | **SPA** | .htaccess + _redirects + 404.html + catch-all route — all 4 mechanisms |
-| **Build** | `npm run build` → zero errors → deploy |
+| **Build** | `npm run build` → zero errors → deploy. **Fullscreen on click enabled.** |
 
 ---
 
@@ -134,12 +138,20 @@ Status:   Include "Status: ⏳ **PENDING FOR USER ACTION**"
 ### Token Economy (Always Active)
 | Rule | Action | Savings |
 |------|--------|---------|
+| Ghost Protocol | Offload 100% of "Scaffolding Scans" & "Pattern Matching" to local Gemma-4 | -85% Cloud Input |
+| Context Frag | Split 11k+ rule file into <2k "Mission DNA" fragments for specific tasks | -80% Context |
 | Semantic search | `grep_search` before `view_file`. Never read entire folders | -60% |
 | Artifact-first | Read implementation_plan before re-scanning source | -40% |
-| Delta bug fix | Read ONLY 20 lines around error | -80% |
+| Delta-Scan | Prioritize code modified in the last 24h via `ghost_context_optimizer.ps1` | -90% Research |
 | Auto-cleanup | Delete /tmp scripts after session | Fast indexing |
-| No live view | Use browser_subagent only for major UI completions | Time savings |
-| Context purge | If >500K tokens → summarize + clear | Prevent overflow |
+| Context purge | If >500K tokens → summarize + clear (unless 100% exact required) | Prevent overflow |
+| V16 Singularity | Apply Volumetric UI + Glassmorphism + Plus Jakarta Sans + 20px corners | S-CORE 95 |
+
+### AI Trigger Commands (V4.0)
+| `token remain` | Trigger Synergy Audit Table | Gemini 3 Usage, Gemma-4 Saved, Speed Index, Efficiency Score |
+| `ghost scan` | Trigger Local Discovery | Gemma-4 scans filesystem for Gaps & Consistency |
+| `frag active` | Trigger Context Compression | Switch to <2k Token "Mission DNA" fragments |
+| *Working* | Minimalist Step Reporting (V28.2) | 1-3 Word toolAction/toolSummary limits |
 
 ### Final Compliance Audit
 | Category | Pass Criteria |
@@ -150,6 +162,8 @@ Status:   Include "Status: ⏳ **PENDING FOR USER ACTION**"
 | CTA | WhatsApp float on B2B/B2C |
 | Content | Real data, no placeholders, no TODOs |
 | Tokens | Zero hardcoded colors/fonts |
+| Scroll-to-Top | Universal `window.scrollTo(0, 0)` on route changes | P0-18 |
+| Fullscreen | Disabled in `dev`, Enabled in `build`/Production | P2.11 |
 
 ### Asset Management
 | Rule | Standard |
@@ -190,4 +204,18 @@ Default: 0 emojis. Clean professional text.
 
 ---
 
-_Must-Do Master Rules V15 — Compressed from 567→~200 lines. Same rules. Same output. (2026-04-02)_
+## §7: CINEMATIC BACKGROUND PROTOCOL (ZETA V4 HARDENED)
+
+| Category | Standard Requirement | Logic |
+| :--- | :--- | :--- |
+| **Fixed Plane** | `.wave-container { position: fixed; top: 0; left: 0; height: 100vh; }` | **Desktop Only**. Syncs image + particles to viewport. |
+| **Mobile Reset** | `.wave-container { position: absolute !important; height: 100% !important; }` | Essential for scroll performance on hand-helds. |
+| **Expansion Loop** | `animation: space-motion 30s linear infinite alternate;` | Accelerated cosmic heartbeat. |
+| **Spatial Scale** | `transform: scale(1.15);` at 100% keyframe. | +15% zoom for maximum cinematic depth. |
+| **Star Density** | **50 Prime Particles** (1.2px - 3.7px range). | Minimalist, high-fidelity starfield. |
+| **Meteor Logic** | **4 Rare Events** (0-100% vertical range). | Full-section coverage, low-frequency, high-KE. |
+| **Color Spectrum** | `["#ffffff", "#ff4d4d", "#ffd700", "#ffa500", "#1a1a1a", "#add8e6"]` | Added Light Blue. |
+
+---
+
+_Must-Do Master Rules V16.1 — The Singularity Architecture (2026-04-07)_

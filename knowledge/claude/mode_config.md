@@ -1,9 +1,42 @@
-# Claude Mode — V15 Configuration (Isolated)
+# Claude Mode — V16 Configuration (Synergy Active)
 
 > Trigger: "ai claude", "claude mode", "create module", "entity", "CRUD", "vben", "admin panel"
-> Identity: CLAUDE_CRUD_PIPELINE_V15
+> Identity: CLAUDE_SYNERGY_PIPELINE_V16
 > Folder lock: `_shared/` + `claude/` + `skills/claude-code/` only.
 > Blocked: `normal/`, `faucet/`, `skills/normal/`, `skills/faucet/`
+
+---
+
+## ⛔ IMMUTABLE ZONE — ABSOLUTE RULE
+
+```
+DIRECTORY: skills/claude-code/
+
+STATUS: PERMANENTLY LOCKED. READ-ONLY FOREVER.
+
+RULE:
+  ✗ NEVER edit any file inside skills/claude-code/
+  ✗ NEVER add, remove, or rename files inside skills/claude-code/
+  ✗ NEVER modify skill logic, steps, or patterns inside skills/claude-code/
+
+  ✓ Skills are FIXED REFERENCES. The AI reads them as ground truth.
+  ✓ All adaptations, synergy logic, and improvements go into:
+      → knowledge/claude/ai_claude_protocol.md
+      → knowledge/claude/mode_config.md
+      → knowledge/claude/claude_brain_V15.md
+      → knowledge/claude/claude_improvement_vault.md
+
+MANTRA: Knowledge wraps around Skills. Skills never change.
+```
+
+---
+
+## 📋 FUTURE KNOWLEDGE RULE (PERMANENT)
+
+> Any new knowledge saved to `knowledge/claude/` MUST include:
+> 1. **Agent Tag**: Which model (G3 Director / G4 Architect) owns each task or pattern.
+> 2. **Synergy Bridge**: How G3 and G4 hand off to each other for that step.
+> 3. **Fallback**: What G3 does when G4 is offline (Cloud-Solo mode).
 
 ---
 
@@ -52,38 +85,40 @@ Step 0.6: If ANY check fails → show ONLY missing steps, wait for user
 
 ---
 
-## 14-STEP PIPELINE (Wave-Batched — 8 Waves Instead of 14 Serial)
+## 14-STEP SYNERGY PIPELINE (Wave-Batched)
 
-> V15: 14 serial steps → 8 waves (43% fewer cycles). Same pipeline, wave-grouped by dependency.
+> V16: Handoff model between **Gemma-4 (Architect)** and **Gemini 3 (Director)**.
 
 ```
-WAVE 1: Step 1 — Migration SQL (FK, money, enum, image fields)
+WAVE 1 (Architect - G4): 
+  → Step 1: Migration SQL (FK, money, enum, image fields)
 
-WAVE 2 (Parallel — both depend on Wave 1):
+WAVE 2 (Architect - G4 / Parallel):
   → Step 2: Seed SQL (Malaysian locale data)
   → Step 3: Types (enums, interfaces, PageParams)
 
-WAVE 3: Step 4 — Pinia Store (needs types from Wave 2)
+WAVE 3 (Architect - G4): 
+  → Step 4: Pinia Store Scaffold (Types + Supabase CRUD)
 
-WAVE 4 (Parallel — independent after Wave 3):
-  → Step 5: Update shared files (data-refresh, index, delete-actions)
-  → Step 6: Mock backend (6 files for staging mode)
+WAVE 4 (Architect - G4 / Parallel):
+  → Step 5: Update shared stores (index.ts, data-refresh.ts)
+  → Step 6: Mock backend (all JS/TS staging routes)
 
-WAVE 5 (Parallel — both need store from Wave 3):
-  → Step 7: Form component (with image upload if needed)
-  → Step 8: Drawers (create, edit, detail)
+WAVE 5 (Director - G3 / Parallel):
+  → Step 7: Form component (Complex validation & UI logic)
+  → Step 8: Drawers (Create, Edit, Detail components)
 
-WAVE 6 (Parallel — both need views from Wave 5):
-  → Step 9: List component (CellFkLink for FK columns)
-  → Step 10: Detail component (dual mode: page + drawer)
+WAVE 6 (Director - G3 / Parallel):
+  → Step 9: List component (CellFkLink, VxeGrid complex config)
+  → Step 10: Detail component (AntD Descriptions & Layout)
 
-WAVE 7 (Parallel — independent after Wave 6):
-  → Step 11: Parent list layer icon (if 1:N children)
-  → Step 12: Route module config
+WAVE 7 (Architect - G4 / Parallel):
+  → Step 11: Parent list layer icon (Simple UI add)
+  → Step 12: Route module config (Template-based)
 
-WAVE 8 (Parallel — need all above):
-  → Step 13: i18n translations (zh-CN + en-US)
-  → Step 14: Workflow tests (CRUD, instant, FK — based on structure)
+WAVE 8 (Director - G3 / Parallel):
+  → Step 13: i18n translations (Final linguist audit)
+  → Step 14: Workflow tests (End-to-end reliability check)
 ```
 
 ---
@@ -141,4 +176,4 @@ CROSS-READ ALLOWED:
 
 ---
 
-_Claude Mode V15 Config — Vben Admin + Supabase Pipeline (2026-04-02)_
+_Claude Mode V16 Config — Synergy Architecture (2026-04-07)_

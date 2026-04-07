@@ -1,16 +1,13 @@
-# Absolute Global Rules V1.1 — Universal Master Rules
+# Absolute Global Rules V1.5 — ZETA Advanced Design Taxonomy
 
-> **PURPOSE**: Primary session entry point & rule enforcement.
+> **PURPOSE**: Final session authority & 16,000-token context optimization.
 > **MANDATORY**: READ [GLOBAL_READ_ME_FIRST.md](file:///C:/Users/User/.gemini/antigravity/knowledge/GLOBAL_READ_ME_FIRST.md) BEFORE ANY OTHER ACTION.
-> **Contains**: ALL P0 + P1 rules + error triage + verify chain + SHARED SYNC MANDATE.
-> **Replaces**: agent_core_protocol (P0/P1 extraction), must_do_master_rules (gates extraction),
->              user_taste_dna (deleted), v12_ascension_mastery (BLAST extraction)
-> **Token cost**: ~400 tokens (vs ~2,500 from 4 separate files)
-> **Updated**: 2026-04-02
+> **Current Context**: 16,000 Tokens (Local 26B Authority).
+> **Updated**: 2026-04-07 (Synergy V1.5 Advanced Design Expansion)
 
 ---
 
-## §1 — P0 CRITICAL RULES (14 rules — NEVER skip)
+## §1 — P0 CRITICAL RULES (23 rules — NEVER skip)
 
 ```
 P0-01  Design tokens FIRST before any component
@@ -27,7 +24,7 @@ P0-03  LOVES auto-applied (+12 score)
 P0-04  HATES auto-blocked (-20 score)
        → Flat boring layouts, aggressive colors, tiny text (<14px),
          cluttered sidebars, popup modals on mobile, skeleton pages,
-         generic Bootstrap look, auto-play sounds
+         generic Bootstrap look, auto-play sounds, CUSTOM CURSOR
 
 P0-05  Build must succeed before deploy
        → npm run build → 0 errors → then deploy. No exceptions.
@@ -78,14 +75,63 @@ P0-13  ERROR LEARNING: On ANY error:
        → Error seen 2+ times = vault fix mandatory (no re-debugging)
        → Error seen 4+ times + vault fix fails = auto-swap component
 
-P0-14  BATCH EXECUTION: For tasks with 2+ files:
-       → PLAN all files + dependencies BEFORE touching any file
-       → GROUP into batches (independent files = same batch, parallel)
-       → EXECUTE batch by batch (write multiple small files per response)
-       → CHECK once after ALL edits (not after each file)
-       → FIX in waves (plan all fixes → apply all → check once)
-       → NEVER serial loop: edit→check→edit→check for multi-file tasks
-       → Full protocol: _shared/batch_execution_protocol.md
+P0-14  BATCH EXECUTION (V3.1 16K Authority):
+       → Gemini 3 (Director): Strategic Planning & Final Audit. 
+       → Gemma-4 (Architect): MANDATORY structural drafting for ALL tasks.
+       → 16K Wall: Architect can maintain 100% coherence for files up to 12,000 tokens.
+       → Multi-file drafts? → ALWAYS delegate to Gemma-4.
+
+P0-15  TOKEN CONSERVATION (16K OPTIMAL):
+       → Use "Mission Briefing" syntax for high-density structural updates.
+       → Offload 100% of repetitive boilerplate to the local engine.
+       → Goal: Preserve Cloud context for Strategic Direction only.
+
+P0-16  CONTEXT COMPRESSION (MASTER RESET):
+       → At 14,000 local tokens → Proactively summarize and reset session.
+       → Summaries MUST be saved to 'evolving_knowledge.md' before reset.
+
+P0-17  NO CUSTOM CURSOR (USER MANDATE):
+       → NEVER implement custom liquid cursors or mouse-followers.
+       → Respect system cursor (auto/default/pointer).
+       → Why: High friction, performance cost, poor user UX on touch.
+
+P0-18  REVEAL STANDARD (AOS 2.3.1):
+       → Default to Animate On Scroll (AOS) for all section entry animations.
+       → Why: Stable, globally recognized, avoids "hidden content" bugs.
+       → Config: duration: 1200, easing: 'ease-out-back', once: true.
+
+P0-19  MOTION SCOPE (HERO DISPLAY ONLY):
+       → Complex 3D/Video must be confined to the Home/Hero `div` (Mode A).
+       → Stop using global fixed/z-index backgrounds for 3D/Video.
+       → Exception: Mode D (Product Cinema) full-screen scrollytelling.
+
+P0-20  LAYERED DEPTH (10% PROTOCOL):
+       → Use solid theme colors with 10% deltas for layer separation.
+       → Hierarchy: Base (#050505) → Surface 1 (#0c0c0c) → Surface 2 (#121212).
+       → Source: Reference [ZETA Advanced Design Taxonomy V15] for all modes.
+
+P0-21  DESIGN HIERARCHY (THE 6 LAYERS):
+       → Apply Layer 0 (Atmosphere) through Layer 5 (Reactive) sequentially.
+       → Layer 6 (Intelligence) drafts the logic before any component writing.
+
+P0-22  SCROLLYTELLING (CANVAS SCRUB):
+       → Peak "Level 10" interaction: Scroll-Controlled Frame Sequences.
+       → Logic: Draw to `<canvas>` based on `ScrollTrigger` frame-scrub.
+       → Why: Maximum cinematic impact + user-driven pacing.
+
+P0-23  ASSET OPTIMIZATION (FRAMES):
+       → WebP sequences only. Max 150KB/frame. lazy-loaded IntersectionObserver.
+       → Why: Ensures no layout shift or stuttering during motion transitions.
+
+P0-24  TEXTURE BAN (USER MANDATE):
+       → NEVER use noisy, grainy, or sandy textures for backgrounds.
+       → High-fidelity smooth gradients or solid slate only.
+       → Why: Noisy backgrounds conflict with the 'Clean Industrial' brand.
+
+P0-25  BODY GRADIENT STANDARD:
+       → The `body` MUST use a fixed linear gradient (Slate-Dark → True Black).
+       → background: linear-gradient(180deg, #1a1a1a 0%, #000000 100%) fixed;
+       → Why: Provides a deep, professional foundation for Glass 3.0 layering.
 ```
 
 ---
@@ -242,5 +288,5 @@ Most tasks (80%+) can be completed with hot_rules_cache alone.
 
 ---
 
-_Hot Rules Cache V1.0 — 27 rules + error triage + verification in one file (2026-04-02)_
+_Hot Rules Cache V1.2 — Synergy V3.0 Hardened (2026-04-07)_
 _Read this FIRST every session. Expand to full files ONLY when needed._

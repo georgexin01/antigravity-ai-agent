@@ -1,7 +1,8 @@
-# 💎 Claude Improvement Vault — V2.0 "The Predictive Engine"
+# 📎 Claude Improvement Vault — V3.0 "Synergy-Aware Predictor"
 
 > **PURPOSE**: Autonomous pattern-matching & token-optimized synthesis.
-> **V2 logic**: Registry-First. AI matches Schema → Predicts Skill → Direct Injection.
+> **V3.0 Upgrade**: Registry now tracks which Agent (Director G3 / Architect G4) generated each skill.
+> **IMMUTABLE**: `skills/claude-code/` is READ-ONLY. This vault only improves `knowledge/claude/`.
 
 ---
 
@@ -21,21 +22,34 @@
 
 - **[SKILL-001] Vben RLS Module Permission Grant**:
   - *Best Way*: Use the specialized SQL grant script to sync `test_school.permission`.
+  - *Agent*: **Gemma-4 Architect** (SQL Structural Drafting)
   - *Confidence*: **Count +5 (Auto-Execute ENABLED)**.
 
 - **[SKILL-002] Currency RM Formatter**:
-  - *Best Way*: `formatter: ({ cellValue }) => (cellValue ? \"RM ${cellValue}\" : '-')`.
+  - *Best Way*: `formatter: ({ cellValue }) => (cellValue ? "RM ${cellValue}" : '-')`.
+  - *Agent*: **Gemma-4 Architect** (Boilerplate Pattern)
   - *Confidence*: **Count +2 (Synthesized)**.
+
+- **[SKILL-003] Director Audit Protocol (NEW)**:
+  - *Best Way*: After G4 drafts Waves 1-4 (SQL + Types + Store), Director (G3) runs quality checks: FK display fields, RLS completeness, Money field types.
+  - *Agent*: **Gemini 3 Director** (S-CORE 98 Audit)
+  - *Confidence*: **Count +1 (Active)**.
+
+- **[SKILL-004] Ghost Schema Scan (NEW)**:
+  - *Best Way*: Before any `/create-module`, use G4 to quickly scan existing `stores/` and `types/` to detect missing FK parents and prevent dependency failures.
+  - *Agent*: **Gemma-4 Architect** (Zero-Token Discovery)
+  - *Confidence*: **Count +1 (Active)**.
 
 ---
 
 ## 📈 TOKEN ROI & PERFORMANCE TRACKER
 *Measuring the speed and efficiency gains of V2.*
 
-| ID | Skill Used | Time Saved (Seconds) | Tokens Saved | Status |
-| :--- | :--- | :--- | :--- | :--- |
-| **L-001** | SKILL-001 | 120s | 5,500 | ✅ (Proved V2) |
-| **L-002** | Master Rule V16.0 | 450s | 12,000 | ✅ (Proved V2) |
+| ID | Skill Used | Agent | Time Saved (Seconds) | Tokens Saved | Status |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **L-001** | SKILL-001 | G4 Architect | 120s | 5,500 | ✅ (Proved V2) |
+| **L-002** | Master Rule V16.0 | G3 Director | 450s | 12,000 | ✅ (Proved V2) |
+| **L-003** | Synergy V6.0 Boot | G3 Director | 30s | 2,000 | ✅ (Active) |
 
 ---
 

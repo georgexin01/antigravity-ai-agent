@@ -1,65 +1,57 @@
-# 🧩 ANTIGRAVITY SYNERGY BLUEPRINT (V1.0)
+# 🧩 ANTIGRAVITY SYNERGY BLUEPRINT (V3.0)
 
 > **Identity**: SYNERGY_ORCHESTRATOR
-> **Scope**: Gemini ↔ Gemma-4 Automated Cooperation
+> **Scope**: Gemini 3 (Director) ↔ Gemma-4 (Structural Architect)
 
-## ⚓ 1. THE AUTOMATED DISCOVERY & FALLBACK (BOOT)
-At each session start, Gemini must execute `ollama show gemma4:e2b` to:
-- **Phase A**: Verify `ollama` is installed and running.
-- **Phase B**: Check if `gemma4:e2b` is present in the model list.
-- **Phase C (The Fallback)**: If Phase A or B fails, Gemini MUST automatically transition to **"Cloud-Only Mode"** (Native Gemini 3). The user must be notified only once per session.
-- **Phase D (Baton Lock Recovery)**: If a command hangs (>10 minutes), Gemini MUST ask for an Ollama restart.
-- **Phase E (Baton Lock Mitigation)**: To prevent hangs, Gemini MUST implement the **"8k Wall"** (Task Atomization) and **Complexity Triage**.
-- **Phase F (Cloud Rerun Mandate)**: ANY failed or hung local task **MUST** be re-executed in the Cloud.
-- **Phase G (Dynamic Precision)**: Gemini MUST implement the **"Pulse-Rescan"** (Layout Sync after every click) and **"Dual-Verify"** for all mission-critical interactions.
-
-
-
+## ⚓ 1. THE AUTOMATED DISCOVERY & HIERARCHICAL FALLBACK (BOOT)
+At each session start, Gemini executes `ollama list`:
+- **Phase A**: Verify `ollama` is running.
+- **Phase B (Hierarchy Check)**: 
+  1. `gemma4:26b` (Primary - Structural Architect)
+  2. `gemma4:e4b` (Standard Drafter)
+- **Phase C (The Fallback)**: If no local model, use Cloud-Only mode.
+- **Phase D (Baton Lock Mitigation)**: To prevent hangs, Gemini MUST atomize tasks exceeding 16,000 tokens for local pass.
 
 ---
 
-## 🏛️ 2. HYBRID DECISION TREE (TRIAGE)
+## 🏛️ 2. HYBRID MICRO-TASK TRIAGE (V4.1)
 
-| Task Category | Recommendation | Logic |
-| :--- | :--- | :--- |
-| **Online Research** | Gemini 3 (Cloud) | Needs Browser / Search API. |
-| **Deep Thinking** | Gemma-4 (Local) | Local hardware + "--think high" mode. |
-| **HTML/Vue Build** | Gemma-4 (Local) | High token density, local compute. |
-| **Complex Orchestration** | Gemini 3 (Cloud) | Managing multiple files, planning logic. |
-| **Environment Action** | Gemini 3 (Cloud) | Writing files, running build commands. |
-| **Security Review** | Gemini 3 (Cloud) | High-fidelity cross-check with vault. |
+Gemini 3 Flash (Director) breaks every mission into **"Mini-Parts"** and assigns the strongest agent:
 
----
-
-## 🧠 3. THE DECISION ENGINE (ORCHESTRATION)
-
-### Thresholds (Auto-Switch)
-- **Token Arbitrage**: Tasks involving file read/summaries > 1,500 tokens should be automatically offloaded to Gemma unless speed is the primary constraint.
-- **Complexity Handover**: Gemma-4 handles "Raw Data Scouring," "Summarization," and "Initial Boilerplate Generation." Gemini handles "Refining," "Architecture Planning," and "S-CORE 95 Verification."
-
-### The "Baton Pass" Logic (V3.0 Precision)
-1. **Analyze (8k Wall)**: If the prompt payload exceeds 8,000 tokens, Gemini MUST atomize the task into discrete, smaller sub-tasks for Gemma.
-4. **Wait (Baton Monitor)**: Gemini acknowledges the handoff and monitors the 10-minute lock threshold.
-5. **Pulse-Rescan (Dynamic)**: After *every* successful sub-task click, Gemini **MUST** perform a fresh layout capture (Screenshot + DOM) to solve the next step using updated coordinates.
-6. **Dual-Verify (Confidence)**: Captcha challenges require a 2-pass agreement between Gemini 3 and Gemma-4. If answers diverge -> Trigger 3rd pass or Refresh.
-7. **Recovery**: If any local error occurs, Gemini is mandated to **"Solve or Skip."** Gemini MUST immediately re-run the failed logic using Cloud compute to finalize the task.
-8. **Finalize**: Gemini summarizes and continues.
-
-
-
-
-## 📈 4. THE SELF-EVOLVING LEARNING LOOP (AUTO-IMPROVE)
-
-### Proactive Evolution
-- **Gemini's Role**: If Gemini 3 discovers a new trend (e.g., Liquid Glass 2.0), it MUST proactively update the `gemma_context_window.md` or `absolute_global_rules.md` without waiting for a user request.
-- **Gemma's Role**: If Gemma generates a high-performance code pattern, Gemini acts as the "Gatekeeper," verifying it and promoting it to the `modular_component_registry.md`.
-- **Knowledge Sync**: Every session conclusion triggers a "Knowledge Hardening" review, where the AI assesses if any local insights should be codified into the root rules.
-
-## 🛠️ 5. COORDINATION SCRIPTS
-- **Gemma Sync**: `Get-ModelMetadata.ps1`.
-- **Gemma Execution**: [antigravity.ps1](file:///C:/Users/User/.gemini/antigravity/scripts/antigravity.ps1) (Official CLI Bridge).
-- **Usage**: `.\antigravity.ps1 -Prompt "[TASK]" -ThinkHigh $true`
+| Mini-Part Category | Primary Agent | Strongest Point | Logic |
+| :--- | :--- | :--- | :--- |
+| **Mission Triage** | Gemini 3 Flash | **Strategy** | Breaking user request into 5+ sub-tasks. |
+| **Fidelity Audit** | Gemini 3 Flash | **S-CORE 98** | High-end Visual & UX "Taste" check. |
+| **Logic Scaffolding** | Gemma-4 26B | **Boilerplate** | Structural Vue/HTML drafting & types. |
+| **CSS Utilities** | Gemma-4 26B | **Standardization**| 100% Tailwind class generation. |
+| **Discovery Scan** | Gemma-4 26B | **Zero Token** | Finding missing tags/scripts across project. |
+| **Motion Physics** | Gemini 3 Flash | **Aesthetic** | Advanced GSAP & Three.js math. |
+| **Security Audit** | Gemini 3 Flash | **Verification** | PowerShell, system, and deployment check. |
+| **[CLAUDE] SQL/Types/Store/Routes** | Gemma-4 26B | **Data Layer** | Waves 1-4 of the 14-step CRUD pipeline. |
+| **[CLAUDE] Views/Tests/Audit** | Gemini 3 Flash | **UI Layer** | Waves 5-8 of the 14-step CRUD pipeline. |
+| **[FAUCET] Captcha Primary** | Gemini 3 Flash | **Vision** | Screenshot + orientation analysis. |
+| **[FAUCET] Captcha Dual-Check** | Gemma-4 26B | **Logic** | Independent exclusion pass, 90% gate. |
+| **[FAUCET] ROI/SPM Analysis** | Gemma-4 26B | **Math** | Coin profitability ranking per wave. |
+| **[FAUCET] JS Script Writing** | Gemma-4 26B | **Stealth Code** | `.user.js` + anti-bot bypass scripts. |
 
 ---
 
-_Antigravity Synergy Engine — Self-Evolving & Professional Orchestration active (2026-04-05)_
+## 🧠 3. THE DYNAMIC PULSE (V4.1 AUTONOMOUS)
+
+### The Autonomous Switching Rule (Solve or Escalate)
+1. **Low Confidence**: If Gemma-4 26B returns an "Unclear" signal or fails a syntax check, it is immediately **escalated** to Gemini 3 Flash.
+2. **Error Recovery**: If a local run fails > 2 times, the mission is moved 100% to Cloud (Gemini 3).
+3. **DNA Sync**: Every local Architect run **MUST** include the latest [user_preference_dna.md](file:///C:/Users/User/.gemini/antigravity/knowledge/user_preference_dna.md) as a mandatory context header.
+
+---
+
+## 🛡️ V3.1 HARDENED HIERARCHY
+- **Rule**: `gemma4:26b` is the MANDATORY Structural Architect.
+- **Rule**: If `gemma4:e4b` is used, downgrade "Architectural Reasoning" to Cloud.
+- **Rule**: `gemma4:31b` is BLOCKED (Hardware Safety).
+- **Security Check**: Gemini 3 MUST manually verify 100% of any system-level PowerShell commands generated by local models before execution.
+
+---
+
+_Antigravity Synergy V3.2 — Hybrid Handoff Active + Claude & Faucet Mode Integration (2026-04-07)_
+

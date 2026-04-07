@@ -1,9 +1,43 @@
-# Faucet Mode — V15 Configuration (Isolated)
+# Faucet Mode — V16 Synergy Configuration
 
 > Trigger: "ai faucet", "faucet mode", "claim", "viefaucet", "99faucet", "earn", "mission"
-> Identity: OMNISCIENT_EARNING_ENGINE_V22
+> Identity: OMNISCIENT_EARNING_ENGINE_V23
 > Folder lock: `_shared/` + `faucet/` + `faucet/skills/` only.
 > Blocked: `normal/`, `claude/`, `skills/normal/`, `skills/claude-code/`
+
+---
+
+## 📘 SKILLS REFERENCE (Updatable)
+
+> **`faucet/skills/captcha.md`** is an **active technical reference**. It CAN and SHOULD be updated when:
+> - CapSolver or 2Captcha changes their API schema.
+> - New CAPTCHA types appear on faucet platforms.
+> - A new JS detection pattern is discovered.
+>
+> Unlike `skills/claude-code/` (which is user-locked forever), faucet skills evolve with the platform.
+
+---
+
+## 🤝 SYNERGY MANDATE (V3.0 Active)
+
+| Task | Agent | Logic |
+| :--- | :--- | :--- |
+| **Browser Navigation** | Gemini 3 Flash (Director) | Real-time DOM, tab control, screenshot capture |
+| **Captcha Vision (Primary)** | Gemini 3 Flash (Director) | Icon identification + orientation analysis |
+| **Captcha Dual-Check** | Gemma-4 (Analyst) | Independent 2nd pass using exclusion/feature-count logic |
+| **ROI / SPM Analysis** | Gemma-4 (Analyst) | SPM math, coin profitability ranking before each wave |
+| **JS Script Writing** | Gemma-4 (Analyst) | Primary author of all `.user.js` and stealth console scripts |
+| **Knowledge Compression** | Gemma-4 (Analyst) | Compress ledger + strategy every 10 claim cycles |
+| **Audit & Session Log** | Gemini 3 Flash (Director) | Triple-layer reward delta audit + final ledger write |
+
+---
+
+## 📋 FUTURE KNOWLEDGE RULE (PERMANENT)
+
+> Any new knowledge saved to `knowledge/faucet/` MUST include:
+> 1. **Agent Tag**: Which model (G3 Director / G4 Analyst) owns each task.
+> 2. **Synergy Bridge**: How G3 and G4 hand off to each other for that pattern.
+> 3. **Fallback**: What happens if G4 is offline (Cloud-Solo mode).
 
 ---
 
@@ -36,7 +70,10 @@ Step 0.3: Load faucet_session_ledger.md (Current SPM: 45s)
 Step 0.4: Check platform status:
   □ VieFaucet available? → Primary target
   □ VieFaucet on 429? → ENFORCE 300s Turbo-Gap
-Step 0.5: Initialize Evolving Cognitive Engine (V22.2)
+Step 0.5: Initialize Evolving Cognitive Engine (V23)
+Step 0.6: [NEW] Synergy Check: Verify Gemma-4 availability via `ollama list`
+  □ Gemma-4 available? → Activate full cooperative mode
+  □ Gemma-4 offline?  → Activate Cloud-Solo mode (G3 handles all tasks)
 ```
 
 ---
@@ -128,4 +165,4 @@ F-09  STUDY MANDATE: When "ai faucet" is triggered, the AI MUST reread the full
 
 ---
 
-_Faucet Mode V15 Config — Precision Earning Automation (2026-04-02)_
+_Faucet Mode V16 Config — Synergy Cooperative Earning (2026-04-07)_
