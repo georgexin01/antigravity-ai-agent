@@ -1,4 +1,4 @@
-# 🧩 ANTIGRAVITY SYNERGY BLUEPRINT (V3.0)
+# 🧩 ANTIGRAVITY SYNERGY BLUEPRINT (V1.0 - LIVEVIEW)
 
 > **Identity**: SYNERGY_ORCHESTRATOR
 > **Scope**: Gemini 3 (Director) ↔ Gemma-4 (Structural Architect)
@@ -29,10 +29,14 @@ Gemini 3 Flash (Director) breaks every mission into **"Mini-Parts"** and assigns
 | **Security Audit** | Gemini 3 Flash | **Verification** | PowerShell, system, and deployment check. |
 | **[CLAUDE] SQL/Types/Store/Routes** | Gemma-4 26B | **Data Layer** | Waves 1-4 of the 14-step CRUD pipeline. |
 | **[CLAUDE] Views/Tests/Audit** | Gemini 3 Flash | **UI Layer** | Waves 5-8 of the 14-step CRUD pipeline. |
-| **[FAUCET] Captcha Primary** | Gemini 3 Flash | **Vision** | Screenshot + orientation analysis. |
-| **[FAUCET] Captcha Dual-Check** | Gemma-4 26B | **Logic** | Independent exclusion pass, 90% gate. |
-| **[FAUCET] ROI/SPM Analysis** | Gemma-4 26B | **Math** | Coin profitability ranking per wave. |
+| **[FAUCET] Live View Pilot** | Gemini 3 Flash | **Automation** | Visual-First interaction via take_snip.ps1. |
+| **[FAUCET] Script Archi** | Gemma-4 26B | **Logic** | Drafts DOM selectors & navigation flow. |
+| **[FAUCET] Math / ROI** | Gemma-4 26B | **Logic** | 100% calculation priority (Coin Ranking/Profit). |
+| **[FAUCET] Captcha Primary** | Gemma-4 26B | **Logic** | Initial oddity & exclusion scan (Local Path). |
+| **[FAUCET] Captcha Supervisor** | Gemini 3 Flash | **Vision** | Final Audit & Verification (100% confidence). |
+| **[FAUCET] Snip Bridge** | take_snip.ps1 | **Input** | AI-Triggered local capture to ./snipaste/. |
 | **[FAUCET] JS Script Writing** | Gemma-4 26B | **Stealth Code** | `.user.js` + anti-bot bypass scripts. |
+| **[FAUCET] Snip Bridge** | User + G4 | **Input** | F1 Snipaste -> Local Read -> G4 Analysis. |
 
 ---
 
@@ -53,5 +57,13 @@ Gemini 3 Flash (Director) breaks every mission into **"Mini-Parts"** and assigns
 
 ---
 
-_Antigravity Synergy V3.2 — Hybrid Handoff Active + Claude & Faucet Mode Integration (2026-04-07)_
+_Antigravity Synergy V8.5 — Reverted to Live View (2026-04-07)_
+
+## 🏛️ 9. LIVE VIEW REINTEGRATION (V8.5)
+- **Status**: ACTIVE.
+- **Protocol**: AI performs "Visual Interaction Loop" (VIL).
+- **Update**: Knowledge Base is auto-patched with visual coordinate maps.
+- **Role**: Gemini 3 Flash executes visual-level browser interaction.
+- **Persistence**: 100% usage of `take_snip.ps1` for real-time capture.
+- **Triage**: PRIMARY Vision for all interactive elements.
 

@@ -110,6 +110,8 @@ Bug fix          → related files same pattern              75%
 ```
 CROSS-READ ALLOWED:
   None. Normal mode is fully self-contained. 
+
+N-01  GUI Fidelity: All mission responses MUST follow `_shared/universal_design_protocols.md` atomic templates.
 ```
 
 ---
