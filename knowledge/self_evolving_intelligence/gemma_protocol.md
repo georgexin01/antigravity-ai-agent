@@ -11,12 +11,16 @@ This protocol empowers **Gemma-4 26B** as the primary **Structural Architect** o
 - **Reasoning**: 26B handles architectural trade-offs (e.g., choice of props vs. slots) locally.
 - **Drafting**: Use for all boilerplate, CRUD, and complex multi-file logic to maximize Gemini 3 token efficiency.
 
-### 🗄️ MODEL HIERARCHY (V3.0)
-AI must automatically check availability and use the highest installed model:
-1. **gemma4:26b** (Primary - Structural Architect)
-2. **gemma4:e4b** (Fallback 1 - High-Speed Drafting)
-3. **gemma4:e2b** (Fallback 2 - Local Task Oracle)
-* **gemma4:31b** (DISABLED - PC Hardware Limit)
+### 📊 MODEL HIERARCHY & RAM-AWARE SELECTION (V4.2)
+AI MUST perform a real-time RAM check (`Get-CimInstance Win32_OperatingSystem`) before every local delegation.
+
+| System Free RAM | Delegation Target | Mode |
+| :--- | :--- | :--- |
+| **< 4.0 GB** | **CLOUDNATIVE (Gemini 3)** | 🛑 SAFETY BLOCK: Zero local load to prevent freeze. |
+| **4.0 GB - 10.0 GB** | **gemma4:e2b** (2B Experts) | 🟢 EFFICIENT: Low-impact local drafting. |
+| **> 10.0 GB** | **gemma4:e4b** (4B Experts) | 🚀 HIGH FIDELITY: Full structural architecting. |
+
+* **gemma4:26b** (DEPRECATED/DELETED - Hardware Limit Reached)
 
 ## 🛡️ SAFETY & LIMITS
 - **Availability Gate**: Before every call, Gemini MUST verify "Gemma Readiness" via `ollama list`. If the primary (26B) is missing, attempt E4B, then E2B. If all are unreachable, revert to **Native Gemini 3**.

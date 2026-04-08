@@ -41,6 +41,7 @@ Before asking any questions, AI MUST verify the current project state:
 
 ### 0.3.5 Post-Confirmation Execution (FAST-TRACK WORLD RECORD)
 Only execute the steps that are NOT yet COMPLETED:
+- **Step 0: ENVIRONMENT HARDENING (CRITICAL)** — Before any pnpm commands, AI MUST read `knowledge/claude/vben_recovery_handbook.md` and run a "Zombie/Ghost Scan" for `C:\Users\user\node_modules` and orphan Node processes.
 - **Step 1: pnpm install** — Direct execution. No heavy knowledge overhead.
 - **Step 2: .ignore Research & Deploy** — Research possible ignore files and update `.claudeignore` / `.geminiignore`.
 - **Step 3: pnpm dev:local Health Check** — Start dev server + verify local Supabase (Docker) connection status.
@@ -117,32 +118,58 @@ Only execute the steps that are NOT yet COMPLETED:
 /supabase-auth-architecture → Auth design reference
 ```
 
-### Execution Sequence (Synergy V6.0)
+### Execution Sequence (Token Economy Synergy V7.0)
 ```
 User: "ai claude create module teacher"
   │
-  ├── 1. PHASE P0: BOOT & VERIFY (Director ↔ Ghost Scan)
-  │       ├── 0.1 Post-Install Verify (Gate 18)
-  │       ├── 0.2 Registry Ghost Scan (Gemma-4 Scans Schema)
-  │       └── 0.3 PREDICTIVE MAPPING (Director)
+  ├── 1. PHASE P0: BOOT & VERIFY (Director - G3)
+  │       ├── 0.1 Post-Install Verify (Gate 18 + Environment Hardening)
+  │       ├── 0.2 Registry Ghost Scan (G4 Scans Schema locally)
+  │       └── 0.3 PREDICTIVE MAPPING (Director outputs JSON mapping)
   │           └─ Map Schema → V2 Skills (e.g., Currency, FK, RLS)
   │
-  ├── 2. PHASE P1: SMART CONSULTATION (Director)
-  │       ├── 1.1 Present Pattern Matches (Director)
-  │       └── 1.2 Implementation Plan (Director breaks into G4/G3 tasks)
+  ├── 2. PHASE P1: SMART CONSULTATION (Director - G3)
+  │       ├── 1.1 Present Pattern Matches (Director - High logic, low tokens)
+  │       └── 1.2 Implementation Plan (Director breaks into JSON payloads for G4)
   │
-  ├── 3. PHASE P2: ARCHITECT DRAFTING (Gemma-4)
-  │       ├── 2.1 SQL Migration & Seed (Gemma-4 Architect)
-  │       ├── 2.2 Types & Store Scaffold (Gemma-4 Architect)
-  │       └── 2.3 Mock API Boilerplate (Gemma-4 Architect)
+  ├── 3. PHASE P2 & P3: THE ZERO-COST 99% FIDELITY MATRIX
+  │   [Every step is algorithmically split to guarantee Gemini 3 quality using Gemma-4 compute]
   │
-  ├── 4. PHASE P3: FIDELITY FINISHING (Director)
-  │       ├── 3.1 Vue View Logic & Drawers (Director Finish)
-  │       ├── 3.2 Logic Audit of G4 Drafts (Director Audit)
-  │       └── 3.3 Advanced UI Patterns (Director Finish)
+  │   [🔴 STRICT LOCAL RUN - ZERO CLOUD TOKENS]
+  │   ├── Step 1 (SQL): G4 writes 100% locally. G3 strictly provides the 'uuid, varchar' field list.
+  │   ├── Step 2 (Seed): G4 generates local dummy data.
+  │   ├── Step 3 (Types): G4 maps SQL columns to TypeScript interfaces. (99% deterministic).
+  │   ├── Step 4 (Store): G4 writes the standard Pinia Supabase CRUD boilerplate.
+  │   ├── Step 5 (Shared): G4 updates data-refresh and index.ts.
+  │   ├── Step 6 (Mock): G4 writes all REST Mock routes (highly repetitive, zero logic).
+  │   ├── Step 12 (Route): G4 creates standard Vben router objects.
+  │   ├── Step 14 (Test): G4 generates Playwright templates.
+  │
+  │   [🟡 HYBRID RUN - G3 REVIEWS G4'S WORK]
+  │   ├── Step 13 (i18n): G4 generates the massive JSON structure. G3 does a tiny context review on translation nuance (e.g., "status" vs "状态").
+  │
+  │   [🟢 G3 PRIME COMPUTE - PROTECTING VBEN UI QUALITY]
+  │   [G4 outputs rough templates; G3 polishes them to hit 99% quality]
+  │   ├── Step 7 (Form): G3 writes the Shadcn complex validation logic. 
+  │   ├── Step 8 (Drawers): G3 handles event bridging between Vue components.
+  │   ├── Step 9 (List): G3 implements VxeTable and `CellFkLink`.
+  │   ├── Step 10 (Detail): G3 writes the AntD Descriptions.
+  │   ├── Step 11 (Icon): G3 selects the appropriate icon string.
+  │   └── [OPTIONAL] SNIPASTE BRIDGE: G3 Bridge prefers `ui-snap.png` for UI verification to save tokens.
   │
   └── 5. PHASE P5: UPDATE KNOWLEDGE
-          └── 5.1 Log Synergy ROI & Confidence in Vault V2
+          └── 5.1 Log Synergy ROI & Token Savings in Vault V2
+
+---
+
+## 🛑 STRICT DIRECTIVE: ZERO-COST LOCAL RESEARCH (Gemma-4)
+
+> **Mandate**: Save massive Cloud Tokens by delegating all heavy text processing, log analysis, and file searching to the local machine.
+
+1. **Schema Parsing**: Do NOT send full `001_initial_schema.sql` dumps to Gemini. Gemma-4 parses the local file and returns a tiny Markdown summary.
+2. **Error Log Analysis**: Do NOT dump raw Docker/Vite logs to Gemini. Gemma-4 scans locally and returns only the root cause.
+3. **Answering User Queries**: If the user asks "how does the store work?", Gemma-4 generates the technical explanation locally. Gemini only formats the final output if needed.
+4. **Calculations**: Any repetitive math, JSON formatting, or array generation is restricted to the local Gemma-4 agent.
 ```
 
 ---

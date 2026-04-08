@@ -21,7 +21,8 @@ Gemma-4 is the primary Mission Brain. It owns all high-density reasoning and vis
 
 ---
 
-## 🌉 2. THE SNIPASTE BRIDGE (Zero-Token Vision)
+## 🌉 2. THE SNIPASTE BRIDGE (Global Vision V1.0)
+> **Ref**: [Universal Snipaste Protocol](file:///C:/Users/user/.gemini/antigravity/knowledge/self_evolving_intelligence/artifacts/global_vision_protocol.md)
 **Hot Folder**: `c:\Users\User\OneDrive\Desktop\workspace\snipaste\active_mission.png`
 
 ### Visual Handshake Loop:

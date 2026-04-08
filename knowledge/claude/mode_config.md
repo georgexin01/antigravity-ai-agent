@@ -85,40 +85,32 @@ Step 0.6: If ANY check fails → show ONLY missing steps, wait for user
 
 ---
 
-## 14-STEP SYNERGY PIPELINE (Wave-Batched)
+## 14-STEP TOKEN ECONOMY PIPELINE (Hybrid Quality)
 
-> V16: Handoff model between **Gemma-4 (Architect)** and **Gemini 3 (Director)**.
+> V17: Extreme Token Saving Architecture. **Gemma-4 (Architect/Local)** does heavy lifting (80% of tokens). **Gemini 3 (Director/Cloud)** provides JSON instructions and Vue High-Fidelity polish (20% of tokens).
 
 ```
-WAVE 1 (Architect - G4): 
-  → Step 1: Migration SQL (FK, money, enum, image fields)
-
-WAVE 2 (Architect - G4 / Parallel):
+WAVE 1 (Architect - G4 local compute): 
+  [Gemini 3 provides only short JSON prompts mapping the schema]
+  → Step 1: Migration SQL (FK, money, enum, image fields, RLS)
   → Step 2: Seed SQL (Malaysian locale data)
   → Step 3: Types (enums, interfaces, PageParams)
-
-WAVE 3 (Architect - G4): 
   → Step 4: Pinia Store Scaffold (Types + Supabase CRUD)
 
-WAVE 4 (Architect - G4 / Parallel):
+WAVE 2 (Architect - G4 local compute):
   → Step 5: Update shared stores (index.ts, data-refresh.ts)
   → Step 6: Mock backend (all JS/TS staging routes)
+  → Step 12: Route module config
+  → Step 13: i18n translations (Huge token savings doing this locally)
+  → Step 14: Workflow tests
 
-WAVE 5 (Director - G3 / Parallel):
+WAVE 3 (Director - G3 API compute / High-Fidelity UI):
+  [Gemini 3 handles Vue files to guarantee perfect Vben/ShadUI integration]
   → Step 7: Form component (Complex validation & UI logic)
   → Step 8: Drawers (Create, Edit, Detail components)
-
-WAVE 6 (Director - G3 / Parallel):
   → Step 9: List component (CellFkLink, VxeGrid complex config)
   → Step 10: Detail component (AntD Descriptions & Layout)
-
-WAVE 7 (Architect - G4 / Parallel):
-  → Step 11: Parent list layer icon (Simple UI add)
-  → Step 12: Route module config (Template-based)
-
-WAVE 8 (Director - G3 / Parallel):
-  → Step 13: i18n translations (Final linguist audit)
-  → Step 14: Workflow tests (End-to-end reliability check)
+  → Step 11: Parent list layer icon
 ```
 
 ---
@@ -133,18 +125,17 @@ Pattern 4: Quality Tracker      → 5-dimension self-check after each module
 Pattern 5: Prediction           → Suggest next module based on FK schema
 Pattern 6: Wave Batching        → Parallelize files within pipeline steps
 Pattern 7: Common Mistakes      → WRONG/CORRECT for 4 error-prone skills
+Pattern 8: Snipaste Local-Sync  → Use `ui-snap.png` for Zero-Token UI review (V27.0)
 ```
 
 ---
 
-## PREDICTIONS (After Step → Next Predicted)
+## PREDICTIONS & DELEGATION (Token Economy)
 
 ```
-After SQL migration  → types + store needed next
-After types + store  → views (drawer, list, form) needed next
-After views          → routes + i18n needed next
-After i18n           → workflow tests needed next
-After module done    → predict next module from FK schema
+Rule 1: If a task outputs raw backend boilerplate > 100 lines (SQL, Mock, i18n), it MUST be assigned to G4.
+Rule 2: G3 (Gemini) NEVER pushes full backend code. It yields instructions to G4.
+Rule 3: G3 focuses its token allowance explicitly on standardizing standard Vue 3 / Shadcn UI syntax.
 ```
 
 ---
