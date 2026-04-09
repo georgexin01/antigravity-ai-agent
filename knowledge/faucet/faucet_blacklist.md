@@ -1,12 +1,15 @@
-# Faucet Blacklist (Isolated)
+# Faucet Blacklist: Sovereign Elite Restricted Targets
 
-The following platforms are BANNED from OMNISCIENT_EARNING_ENGINE_V22 operation.
+The following platforms are BANNED from SOVEREIGN_ELITE_V30.0 operation to ensure maximum ROI and security.
 
 | Platform | Reason | Date Banned |
 | :--- | :--- | :--- |
-| `solkong.live` | Low ROI / User Request | 2026-04-05 |
+| `solkong.live` | Low ROI / Operational Inefficiency | 2026-04-05 |
 
-## Operational Rule:
-1. NEVER navigate to these URLs.
-2. If redirected to these URLs, CLOSE immediately.
-3. REMOVE all knowledge associations.
+## 🛡️ ELITE OPERATIONAL PROTOCOL
+1. **Rule S-01**: ABSOLUTE ZERO NAVIGATION. No mission wave shall enter these domains.
+2. **Rule S-02**: FORCE CLOSE. If redirected via ad-popups, the Bridge (G3) must terminate the tab within 500ms.
+3. **Rule S-03**: SILENT DISCARD. Any data originating from these sources is flagged as corrupted and ignored by the SBP protocol.
+
+---
+_V30.0 Sovereign Elite Blacklist — Security Active (2026-04-09)_

@@ -1,109 +1,91 @@
-# AI Faucet CAPTCHA Solving: Universal Skills & API Schemas
+# Faucet CAPTCHA Skills: Sovereign Elite V25.0
 
-This document details the automated "skills" for bypassing common faucet CAPTCHAs, including hCaptcha, reCAPTCHA, and specialized **Drag-and-Drop / Slider** puzzles.
+This document details the automated "skills" for bypassing faucet challenges using the **Local Vision Sandbox**. External APIs are now deprioritized (Rule SM-01).
 
 ---
 
-## 🧩 1. The "Drag-and-Drop" Skill (Slider Puzzle)
-**Service:** CapSolver (Recommended)
-**Task Type:** `SliderTask` / `SliderTaskProxyLess`
+## 👁️ 1. LOCAL VISION: FEATURE INVERSION (G4 Analyst)
+**Primary Resolution Logic for Free-Bonk / OnlyFaucet / VieFaucet**
 
 ### How it Works:
-The slider CAPTCHA (popular on modern faucets) requires moving a puzzle piece into a hole in a background image. The service returns the exact **X-coordinate** (in pixels) needed to complete the slide.
+Instead of sending images to a cloud service, the AI triggers a silent pulse (`auto_pulse.ps1`) and analyzes the local file `active_mission.png` using **Gemma-4**.
 
-### API Request Schema (Node.js/JS):
-```javascript
-const solveSlider = async (apiKey, websiteURL, captchaImages) => {
-  const response = await fetch('https://api.capsolver.com/createTask', {
-    method: 'POST',
-    body: JSON.stringify({
-      clientKey: apiKey,
-      task: {
-        type: "SliderTaskProxyLess",
-        websiteURL: websiteURL,
-        images: captchaImages // Array of [base64_bg, base64_puzzle]
-      }
-    })
-  });
-  const data = await response.json();
-  // Returns: { x: 142, y: 0 }
-  return data.solution.x;
-};
+### Key Techniques:
+- **Protocol 180° FLIP**: Identify the icon with an inverted Y-axis silhouette (upside down).
+- **Protocol LEAST_DISPLAYED**: Identify the "Unique Icon" by calculating the feature frequency of the 5-slot grid.
+- **Symmetry Analysis**: Detect orientation differences by comparing left-right vs. top-bottom pixel density.
+
+### 🧠 Phoenix Deep Learning (V1.0)
+If the above logic fails:
+1. `ztv_v3_solver.py --record-failure` saves the misclick coordinates.
+2. `faucet_postmortem_engine.py` reviews the failure and deduces why the logic failed (e.g., color baiting).
+3. The new logic rule is appended as an archetype to this document via the **SBP** loop.
+
+---
+
+## 📐 1.5. UNIVERSAL LAYOUT SHIFT DELTA (G4 Analyst — SM-06)
+**Applied To**: Any captcha where clicking an answer element causes it to HIDE, shifting lower elements UP.
+
+### Detection Rule:
+G4 Analyst must ask: *"When I click a target, does it disappear from the DOM?"*
+- **YES** → Apply `LAYOUT_SHIFT_DELTA` rule.
+- **NO** → Standard static coordinate click.
+
+### Known Captcha Types Using This Rule:
+| Platform | Captcha Type | Shift Trigger | Avg Element Height |
+| :--- | :--- | :--- | :--- |
+| **Free-Bonk** | Anti-Bot Links (3-step) | Click hides link | ~21px |
+| **Generic Multi-Step** | Sequential Answer Forms | Click hides row | Varies (Ask G4) |
+| **Roman Numeral Verify** | Ordered Number Click | Click removes number | ~21–35px |
+
+### Execution Formula (SM-06):
 ```
-
----
-
-## 🤖 2. The hCaptcha Skill (Enterprise Sync)
-**Service:** 2Captcha / CapSolver
-**Task Type:** `hCaptchaTaskProxyLess`
-
-### How it Works:
-You provide the `siteKey` and the `websiteURL`. The service returns a `token` which you inject into the `h-captcha-response` textarea.
-
-### Implementation Workflow:
-1.  **Extract siteKey:** Usually found in the `data-sitekey` attribute of the captcha div.
-2.  **Request Solution:** Wait 20-40 seconds for the worker to solve.
-3.  **Inject Token:**
-    ```javascript
-    document.querySelector('[name="h-captcha-response"]').innerHTML = hCaptchaToken;
-    document.querySelector('[name="g-recaptcha-response"]').innerHTML = hCaptchaToken;
-    // Call Callback
-    window.hcaptcha.execute();
-    ```
-
----
-
-## ⚙️ 3. Universal "AI Faucet" Solver Logic
-To use these skills in a Faucet script (like Tampermonkey), use a "Detection Observer" that waits for the captcha to appear, identifies the type, and triggers the solver.
-
-### Detection logic:
-```javascript
-const captchaDetector = () => {
-    if (document.querySelector('.h-captcha')) return "HCAPTCHA";
-    if (document.querySelector('.g-recaptcha')) return "RECAPTCHA";
-    if (document.querySelector('.geetest_slider_anchor')) return "SLIDER";
-    return null;
-};
+Y_click_N = Y_original_N - (sum of heights of all previously clicked/hidden elements)
 ```
+**Example with 3 links (each H=21px)**:
+- Click 1 → Y=132 (normal)
+- Click 2 → Y=132 - 21 = **111**
+- Click 3 → Y=132 - 21 - 21 = **90**
 
-> [!TIP]
-> **Anti-Detection:** Always use a `proxyless` task when using these APIs with a browser extension or a local script to ensure the solve matches your IP context as closely as possible.
+### G4 Prompt Instruction (SM-06):
+When G4 Analyst detects a sequential multi-step captcha:
+1. Identify all targets in ONE pulse (no rescan).
+2. Return `coords` AND `height` for each element.
+3. The Bridge applies the delta formula before each click.
 
----
-
-## 👁️ 4. Vision-Based Custom Logic (V23.1 Zeta Standard)
-This section details the internal "Vision-Only" brain logic for solving captchas that standard APIs (CapSolver/2Captcha) may struggle with.
-
-### 🔄 4.1 Rotation & Symmetry Scanning (5-Slot)
-**Scenario:** 5 slots, all similar icons, find the one that is rotated differently.
-1.  **Symmetry Analysis:** Calculate the vertical and horizontal symmetry of each of the 5 icons.
-2.  **Frequency Match:** Count orientaton-matches. If 4 icons are oriented at 0° (or follow a 90/270/180 majority), target the outlier.
-3.  **Feature Inversion:** Specifically look for "inverted" features like weight distribution (base vs. top) to detect upside-down orientation.
-
-### 🎨 4.2 Bait Resistance (Shape vs. Color)
-**Scenario:** 5 icons, colors vary, find the odd shape/rotation.
-- **Rule:** Color is used as "bait" to distract from path differences.
-- **Action:** Convert source images to grayscale or bitmask before comparison to negate color-based decision making.
-- **Protocol:** If 4 items share a shape + rotation but differ in color, and 1 item shares the background color but differs in rotation -> **TARGET THE ROTATION-DEVIANT.**
-
-### 🚫 4.3 "No Option" Logic
-**Scenario:** "None of the above" or "Captcha is broken/empty".
-- If the Vision Engine confidence score for all 5 slots is < 15% (No upside-down found) -> **Select the "No Option" button** or trigger a "Refresh" pulse.
+### SBP Update Rule:
+If a NEW captcha type is discovered that uses element hiding, the Bridge adds it to the **Known Captcha Types** table above via SBP.
 
 ---
 
-## 🛠️ 5. Implementation (Pseudo-Code)
-```javascript
-const solveVisualOddity = (slots) => {
-    const bitmasks = slots.map(img => convertToShapeBitmask(img));
-    const rotationScores = bitmasks.map(mask => calculateOrientation(mask));
-    
-    const majorityRotation = getMajority(rotationScores);
-    const outlierIndex = rotationScores.findIndex(s => s !== majorityRotation);
-    
-    if (outlierIndex === -1) return "SELECT_NO_OPTION";
-    return outlierIndex; // 0-4
-};
-```
+## 🤖 2. EXTERNAL FALLBACK (Bridged Skills)
+**Service:** CapSolver / 2Captcha (Only if SM-02 RAM Tier fails)
 
-_Last Updated: 2026-04-07 (Omniscient Synergy Protocol)_
+### 🧩 Drag-and-Drop (Slider)
+- **Task Type**: `SliderTaskProxyLess`
+- **Logic**: Returns the exact X-coordinate for the puzzle gap.
+- **Bait Resistance**: Convert images to grayscale before analysis to negate color-based distraction.
+
+---
+
+## 🛠️ 3. SOVEREIGN SOLVER INTEGRATION (V30.0)
+The logic is unified in `scripts/ztv_v3_solver.py`, which manages the handshake between visual capture and coordinate resolution.
+
+### Execution Workflow (Elite):
+1. **Pulse**: Trigger `Snipaste` CLI.
+2. **Scan**: Gemma-4 reads the raw PNG.
+3. **Map**: Resolution of internal (X, Y) coordinates relative to the browser viewport.
+4. **Bridge**: Send JSON `{ "x": X, "y": Y }` to the Cloud Bridge for final tactical click.
+
+---
+
+## 🧬 4. MISSION DNA SIGNATURES (V31.0 Expand)
+| Platform | Captcha Type | Layout Shift? | Height Est. |
+| :--- | :--- | :--- | :--- |
+| **Free-Bonk** | IconCaptcha (Unique Icon) + Anti-Bot 3-step | ✅ YES | ~21px |
+| **OnlyFaucet** | ROTATION_SOLVE (180° flip) | ❌ NO (static) | — |
+| **DutchyCorp** | hCaptcha / Text-Grid | ❌ NO | — |
+| **FireFaucet** | hCaptcha / Custom Icon | ❌ NO | — |
+
+---
+_V25.0 Sovereign Elite Captcha Skills — Universal Layout Shift Active (2026-04-09)_

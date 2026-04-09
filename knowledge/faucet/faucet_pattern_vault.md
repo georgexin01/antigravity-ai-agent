@@ -1,46 +1,39 @@
-# Faucet Pattern Vault — V5.0 Synergy
+# Faucet Pattern Vault — V6.0 Sovereign Elite
 
 > **PURPOSE**: Store recognized earning patterns for zero-learning execution.
-> **V5.0**: Added Agent tag per pattern (G3 Director / G4 Analyst) per Future Knowledge Rule.
+> **V6.0 Elite**: Integrated **ZT-Vision Pulse** (SM-01) and **RAM-Aware Logic** (SM-02).
 
 ## 1. IDENTIFIED PATTERNS (QUEST/CAPTCHA)
 
-| Pattern ID | Description | Resolution Strategy | Agent | Efficiency |
-|---|---|---|---|---|
-| CAPTCHA_LO_ICON | "Least Often" verification modal | Scan icon elements and compare frequency in DOM | G3 Primary + G4 Dual-Check | High |
-| FAUCET_ORDER_3 | 3-item identification sequence | Match text string to button IDs sequentially | G3 Director | High |
-| PTC_STAY_TIMEOUT | Minimum view duration for PTC | Sync with browser network idle and local timer | G3 Director | Medium |
-| **TIMER_STUCK** | Timer stops or slows down | WATCHDOG: Refresh/Re-focus or Alert User | G3 Director | 🆕 NEW |
-| **OAUTH_GOOGLE** | Login via Google redirection | AUTHORIZED: Click button → Wait for Dashboard | G3 Director | 🆕 NEW |
-| **AUTOLOGIN_MAIL** | Email field detection | INSERT: `nelesp3@gmail.com` → Stop/Wait | G3 Director | 🆕 NEW |
-| PTC_TAB_FOCUS | Timer requires focus on ad tab | Stay on ad tab for duration + buffer | G3 Director | High |
+| Pattern ID | Description | Resolution Strategy | Agent | Protocol |
+| :--- | :--- | :--- | :--- | :--- |
+| **ZT_VISION_PULSE** | Standard Captcha Verification | Trigger `auto_pulse.ps1` -> G4 Local Vision Map | **G4 Analyst** | SM-01 |
+| **ICON_UNIQUE** | "Least Often" verification | Feature Frequency Analysis (Local) | **G4 Analyst** | SM-01 |
+| **ICON_180_FLIP** | Outlier Rotation (180°) | Silhouette Symmetry Inversion Check | **G4 Analyst** | SM-01 |
+| **FAUCET_DRAG_DROP**| Slider Puzzle Verification | X-Coordinate Delta Mapping | **G4 Analyst** | SM-01 |
+| **PTC_STAY_FOCUS** | Timer requires active tab | Force focus + Network Idle Watchdog | **G3 Director** | SM-03 |
+| **AUTO_LOGIN_SBP** | Email/Google field sync | **Silent Background Patching** of credentials | **G3 Director** | SBP |
+| **LAYOUT_SHIFT_DELTA**| Sequential target tracking | `Coordinate_Y - Hidden_Element_Height` calculation | **G4 Analyst**| SM-01 |
 
-## 2. SITE STRUCTURE PATTERNS (V4.2 Optimized)
-- **Ad Dismissal**: `div[class*='play-now'] x button` or pixel offset `-10, -10` from widget corner.
-- **Turbo Gap**: Dynamic (Currently 30s).
-- **Speed Bands**:
-    - **Safe**: Buffer +10s
-    - **Balanced**: Buffer +5s
-    - **Turbo**: Buffer +2s
+## 2. SITE STRUCTURE PATTERNS (Elite Optimized)
+- **Ad Dismissal**: Precise -10px, -10px offset from widget anchors to prevent misclicks.
+- **Turbo Gap**: Dynamic (Managed by Rule SM-04).
+- **Speed Bands (V30.0)**:
+    - **Elite**: Buffer +2s (Oversight Active)
+    - **Standard**: Buffer +5s
+    - **Safe (RAM < 4GB)**: Buffer +12s
 
-## 3. FAILURE LOG (AUTO-MANAGED)
-| Ad Name | Failures | Cooldown Left | Status |
-|---|---|---|---|
-| (none yet) | 0 | 0 | Ready |
-
----
-
-## 4. TRAINING LOGS (v22.2.1 PDL)
-- **Current Speed Mode**: Agile Training (Wait: 8s)
-- **Recent Failures**: Platform Lockout (18m).
-- **Mystery Identified**: Multi-viewer tab collision or rapid captcha failure.
-- **Resolution**: Implemented "Incremental Fallback" and "Tab-Closure" to prevent lockout re-trigger.
+## 3. FAILURE LOG (SM-02 AUDIT)
+| Ad Name | Failures | Cooldown | Status | RAM Tier |
+| :--- | :--- | :--- | :--- | :--- |
+| (none) | 0 | 0 | Ready | Elite (e4b) |
 
 ---
 
-## 📋 FUTURE KNOWLEDGE RULE (PERMANENT)
+## 📋 SOVEREIGN AGENT ROLES (Elite V30.0)
 
-> Any new pattern added here MUST include an **Agent** column entry:
-> - `G3 Director` = Gemini 3 Flash handles execution
-> - `G4 Analyst` = Gemma-4 handles logic/analysis
-> - `G3 Primary + G4 Dual-Check` = Both agents required (captcha verification)
+- **G3 Director (Cloud Bridge)**: Handles navigation, DOM interaction, and final click execution. Banned from visual intake to save tokens.
+- **G4 Analyst (Local Brain)**: Handles all visual decoding, coordinate math, and identity verification via Snipaste.
+
+---
+_V6.0 Sovereign Elite Pattern Vault — ZeroCloud Optimized (2026-04-09)_

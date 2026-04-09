@@ -1,74 +1,46 @@
-# Faucet Mode — V27.0 Sovereign Configuration
+# Faucet Mode — V30.0 Sovereign Elite Configuration
 
 > Trigger: "ai faucet", "faucet mode", "claim", "viefaucet", "free-bonk", "onlyfaucet", "earn", "mission"
-> Identity: OMNISCIENT_SOVEREIGN_V27.0
+> Identity: SOVEREIGN_ELITE_V30.0
 > Folder lock: `_shared/` + `faucet/` + `faucet/skills/` only.
-> Blocked: `normal/`, `claude/`, `skills/normal/`, `skills/claude-code/`
+> Protocols: SM-01, SM-02, SM-03, SM-04 (See master_rules.md)
 
 ---
 
-## 🤝 SOVEREIGN SYNERGY (V27.0 Active)
+## 🤝 SOVEREIGN ELITE SYNERGY (V30.0 Active)
 
 | Task | Agent | Logic |
 | :--- | :--- | :--- |
-| **Mission Analysis**| Gemma-4 (Commander) | Primary Researcher & ROI Ranking |
-| **Visual Intake** | Gemma-4 (Commander) | Reads local `workspace/snipaste/active_mission.png` |
-| **Coordinate Map** | Gemma-4 (Commander) | Calculates Exact Pixel (X, Y) Coordinates |
-| **Captcha Solve** | Gemma-4 (Commander) | Primary Solve (180° Rule) |
-| **Execution** | Gemini 3 (Bridge) | Tactical Browser Control & Pixel-Perfect Click |
-| **Audit** | Both | Final ledger verification in `faucet_session_ledger.md` |
+| **Mission Analysis**| Gemma-4 (Commander) | Research & ROI Ranking (Text-Only) |
+| **Visual Intake** | **SILENT SNIP** | `auto_pulse.ps1` -> `snipaste/active_mission.png` |
+| **Coordinate Map** | Gemma-4 (Commander) | Local Resolution of (X, Y) Coordinates |
+| **Captcha Solve** | Gemma-4 (Commander) | Local Decryption (Unique Icon Logic) |
+| **RAM Check** | Python/PS System | Auto-Selection: e4b (>8GB) / e2b (>4GB) |
+| **Execution** | Gemini 3 (Bridge) | Tactical Browser Command (JSON-driven) |
 
 ---
 
-## 📘 SOVEREIGN FILE INDEX
+## 🚀 SOVEREIGN BOOT SEQUENCE (Elite)
 
 ```
-CORE:
-  commander_core.md            → Mission Brain + Vision + Synergy Logic
-  platform_vault.md            → Unified platform config (Free-Bonk / OnlyFaucet / VieFaucet)
-  velocity_strategy_master.md  → ROI Math + Performance Evolution + Speed Bands
-  mode_config.md               → This configuration file
-
-TRACKING:
-  faucet_session_ledger.md     → Reward verification + Financial ROI (SOL/USD)
-  synergy_evolution_ledger.md  → Track G4 promotion and speed increases
-
-SKILL:
-  skills/faucet/SKILL.md       → V5.5 Precision Audit Protocol
+Step 0.1: Load faucet_master_rules.md (Global Directives)
+Step 0.2: Determine RAM Tier (SM-02):
+  □ Free RAM > 8GB → Active Elite (e4b)
+  □ Free RAM < 8GB → Active Standard (e2b)
+Step 0.3: Primary Target Discovery:
+  □ Free-Bonk status check
+  □ OnlyFaucet status check
+Step 0.4: Execute ZERO-TOKEN Observation (SM-01)
 ```
 
 ---
 
-## 🚀 SOVEREIGN BOOT SEQUENCE
+## 🎨 MASTER RULES (V30.0 HIGHLIGHTS)
 
-```
-Step 0.1: Load commander_core.md (Brain Initialization)
-Step 0.2: Load platform_vault.md (Target Discovery)
-Step 0.3: Load velocity_strategy_master.md (Speed/ROI Sync)
-Step 0.4: Primary Target Check (Low Token Observation):
-  □ Free-Bonk available? → EXIGENT
-  □ OnlyFaucet available? → EXIGENT
-  □ VieFaucet backup? → WAIT LOCKOUT
-Step 0.5: Verify Gemma-4 availability (Local-First Sync)
-  □ Gemma-4 available? → Activate Sovereign Control
-  □ Gemma-4 offline?  → Fallback: Cloud-Solo (G3 handles all)
-```
+- **Rule SM-01**: ALL visual processing remains LOCAL. No images sent to Gemini.
+- **Rule SM-02**: System-aware model selection to prevent memory crashes.
+- **Rule SM-03**: 500 Token hard-cap for orchestration.
+- **Rule SM-04**: Self-Evolving Speed Bands based on success velocity.
 
 ---
-
-## 📋 SOVEREIGN RULES (V27.0)
-
-```
-F-01  ALL reward deltas logged in faucet_session_ledger.md
-F-02  ZEROCloud Vision: Use Snipaste (F1) to workspace/snipaste/
-F-03  Authorized email: nelesp3@gmail.com
-F-04  Never skip Triple-Layer Audit
-F-05  Duration buffer: Duration + 10s (Auto-recalc by G4)
-F-06  Priority: Free-Bonk / OnlyFaucet FIRST → VieFaucet (Backup)
-F-07  Calibration: G4 maps visual features directly to pixel coordinates
-F-08  GUI Fidelity: All mission responses MUST follow `_shared/universal_design_protocols.md` atomic templates.
-```
-
----
-
-_Faucet Mode V27.0 Sovereign Config — Local-First Active (2026-04-07)_
+_Faucet Mode V30.0 Sovereign Elite — ZeroCloud Active (2026-04-09)_

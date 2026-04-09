@@ -1,0 +1,42 @@
+# Sovereign Loop Manager (V30.0 Elite)
+
+> **Identity**: SOVEREIGN_ELITE_V30.0 (Loop Master)
+> **Mandate**: Absolute Persistence. Zero Downtime. SBP-Enabled Rotation.
+
+## 🎡 1. THE MISSION CASCADE (Elite Elite)
+The AI follows this cascading priority based on ROI and mission readiness.
+
+### PLATFORM A: FREE-BONK.COM
+1. **Faucet Prime**: Main `faucet` claim cycle.
+2. **2X Faucet**: Immediate follow-up if cooldown is zero.
+3. **PTC Pipeline**: Execute ALL available ads via **ZT-Vision Pulse** mapping.
+4. **Audit**: Automated ledger sync via **Silent Background Patching (SBP)**.
+
+### PLATFORM B: ONLYFAUCET.COM
+1. **Currency Triage**: G4 Analyst selects highest ROI coin (SOL/BTC).
+2. **Rotation Solve**: G4 Local mapping of 180° flipped icons.
+3. **SBP Pulse**: AI authorized to patch selectors if DOM drift occurs.
+
+### PLATFORM C: FIREFAUCET / DUTCHYCORP
+1. **Earning DNA**: Navigate to PTC/Shortlinks only if A and B are on lockout.
+2. **Validation**: Manual Login Sync required for Wave 1 initialization.
+
+---
+
+## 🔄 2. ELITE STATE TRANSITIONS (V30.0)
+
+| Current State | Condition | Next Best Action | Protocol |
+| :--- | :--- | :--- | :--- |
+| **Faucet_Done** | `PTC_Count > 0` | Navigate to `/ptc` | SM-03 |
+| **PTC_Done** | `Platform_B_Ready = True` | Navigate to `onlyfaucet.com` | SM-01 |
+| **RAM_Critical** | `Free_Phys < 4GB` | Enter **Safe Buffer Mode** | SM-02 |
+| **All_Sites_Lock**| `Wait_Time > 10m` | **Silent SBP Audit** of Session | SBP |
+| **Solve_Fail** | `Retries = 2` | Refresh Page -> Rescan Pulse | SM-01 |
+
+---
+
+## 🧬 3. DYNAMIC ROI VALUATION (SBP Active)
+The Loop Manager automatically adjusts the "Efficiency Index" based on real-time TTC. If a mission wave (e.g., OnlyFaucet) experiences an hCaptcha bottleneck, the manager will silently pivot resources to Free-Bonk PTC ads to maximize SPM (Satoshi-per-Minute).
+
+---
+_V30.0 Sovereign Elite Loop Manager — Zero-Token Flow Active (2026-04-09)_

@@ -1,41 +1,47 @@
-# Platform Vault: Unified Mission Parameters (V27.0)
+# Platform Vault: Sovereign Elite Mission Parameters (V30.0)
 
-> **Priority Hierarchy**: **Free-Bonk / OnlyFaucet (High)** → **VieFaucet (Low/Backup)**
-> **Authorized Identity**: `nelesp3@gmail.com` (Google Login)
+> **Priority Hierarchy**: **Free-Bonk / OnlyFaucet (Primary)** → **VieFaucet / FireFaucet (Secondary)** → **DutchyCorp (Backup)**
+> **Authorized Identity**: `nelesp3@gmail.com` (Google System-Sync)
+> **Protocols**: SM-01 (Zero-Token), SM-02 (RAM-Aware), SBP (Silent)
 
 ---
 
-## 💎 1. FREE-BONK.COM (Primary Target)
-- **Status**: active
-- **URL**: `https://free-bonk.com/`
-- **Core Loop**: Faucet + 2X Faucet.
-- **Captcha**: **IconCaptcha** (Select the icon appearing only once).
-- **Mandate**: **PULSE-RESCAN** after the 'Verify Challenge' click.
+## 💎 1. FREE-BONK.COM (Mission DNA)
+- **Status**: ACTIVE [CRITICAL]
+- **URL**: `https://free-bonk.com/faucet`
+- **Captcha**: **IconCaptcha** (Unique Image).
+- **Elite Strategy**: ZT-Vision Pulse after "Verify Challenge".
 
-## 💎 2. ONLYFAUCET.COM (Primary Target)
-- **Status**: active
+## 💎 2. ONLYFAUCET.COM (Mission DNA)
+- **Status**: ACTIVE
 - **URL**: `https://onlyfaucet.com/`
-- **Core Loop**: Timer Faucet (ROI-selected coin BTC/LTC/SOL) + Shortlinks.
-- **Captcha**: **ROTATION_ONLY** (Select the 1 icon rotated 180°).
-- **Mandate**: **Gemma-4 Triage** required for currency ranking before every wave.
+- **Captcha**: **ROTATION_SOLVE** (180° Inversion).
+- **Optimization**: G4 Analyst ROI check on SOL/BTC rates before wave initiation.
 
----
+## 💎 3. FIREFAUCET.WIN (Mission DNA)
+- **Status**: RESEARCHED
+- **URL**: `https://firefaucet.win/`
+- **Captcha**: **hCaptcha / Custom Icon**.
+- **Strategy**: Auto-Faucet points accumulation. PTC cycle prioritization.
 
-## 💎 3. VIEFAUCET.COM (Priority 3: LAST RESORT)
-- **Status**: DEPRIOTIZED (Do not run until Free-Bonk and OnlyFaucet are 100% exhausted).
+## 💎 4. DUTCHYCORP / FINAL AUTOCLAIM (Mission DNA)
+- **Status**: RESEARCHED
+- **URL**: `https://autofaucet.dutchycorp.space/`
+- **Captcha**: **hCaptcha / reCAPTCHA / Text puzzles**.
+- **Strategy**: Shortlink wall (High ROI) + PTC. Manual interaction for login sync required.
+
+## 💎 5. VIEFAUCET.COM (Mission DNA)
+- **Status**: DEPRIORITIZED (Backup)
 - **URL**: `https://viefaucet.com/`
-- **Core Loop**: Manual Faucet (300s) + PTC Cycle (50x Daily).
-- **Captcha**: **ROTATION_ONLY** (Select the 180-degree variance icon).
-- **Turbo Gap**: 30s delay between missions for account safety.
-- **Stealth**: Close bottom widgets (Gemshop) before verification.
+- **Captcha**: **ROTATION_SOLVE** (180° variance).
 
 ---
 
-## 🛠️ GLOBAL MISSION LOGIC (V27.0)
-- **PULSE-RESCAN**: AI must perform a full layout sync (Snipaste) after EVERY interaction.
-- **DUAL-VERIFY**: Gemma-4 (Local) calculates coordinates; Gemini 3 (Bridge) executes.
-- **AUDIT**: Record balance delta in `faucet_session_ledger.md` post-claim.
+## 🛠️ GLOBAL MISSION LOGIC (V30.0 ELITE)
+- **RULE SM-01**: **Local Vision Supremacy**. No Cloud Vision (Gemini Bridge is text-only).
+- **RULE SM-02**: **RAM-Aware Tiers**. Active selection of e4b (>8GB) vs e2b (>4GB).
+- **RULE SM-03**: **Silent Background Patching (SBP)**. AI is authorized to refine coordinate maps and buffers silently.
+- **RULE SM-04**: **Token Hard-Cap**. Max 500 tokens per claim cycle.
 
 ---
-
-_V27.0 Sovereign Platform Vault — Local-First Active (2026-04-07)_
+_V30.0 Sovereign Elite Platform Vault — Sync Complete (2026-04-09)_

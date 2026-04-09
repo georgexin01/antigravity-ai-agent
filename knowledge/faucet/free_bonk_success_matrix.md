@@ -11,13 +11,11 @@ Free-Bonk has two absolute variants of claims. The AI must execute them strictly
 
 ### Variant A: The Faucet Claim (Dynamic Shifting)
 *   **Trigger**: Contains 3 Anti-Bot links (e.g., Roman Numerals).
-*   **Action**: Use the **Y-Delta Tracking Engine**. 
-    *   **Trigger Snipaste ONCE**. Do not take multiple screenshots.
-    *   Gemma-4 analyzes the single image and identifies all targets.
-    *   Click Button 1.
-    *   Calculate its physical Height (e.g., 50px).
-    *   Subtract that Height from the `Y` coordinate of Button 2, and so on.
-    *   This predicts where the screen slid to *without* taking new screenshots.
+    *   **Action**: Delegate 100% of the identification thought process to local **Gemma-4**. 
+    *   **Rule (Y-Delta Shift)**: Clicking an Anti-Bot link causes it to hide, shifting all lower elements UP by that element's height.
+        *   **Step 1**: Identify all 3 links in one pulse.
+        *   **Step 2**: After Step 1 click, subtract the hidden element's height from Step 2's target `Y`.
+        *   **Step 3**: Repeat for remaining steps to ensure 100% center-click accuracy.
 
 ### Variant B: The PTC Claim (Static Popup)
 *   **Trigger**: "Visit for 10 sec", followed by a centered popup.

@@ -23,6 +23,10 @@ If clicking a link (like an Anti-Bot Roman Numeral) causes it to disappear, the 
 - **The Rule**: Gemma-4 must calculate the exact pixel `Height` of the clicked button (e.g., 50px).
 - **The Math**: To click the next target below it, the AI subtracts `50px` from the original `Y` coordinate. (e.g., Target 2 original `Y=400`. New calculation: `400 - 50 = 350`). 
 
+### ⏱️ The Human-Aesthetic Timing (WAIT_COMMAND)
+- **Mandate**: AI MUST **WAIT 5 SECONDS** after solving the captcha but BEFORE clicking the final 'Verify', 'Claim', or 'Collect' button. 
+- **Purpose**: Mimic human interactions and ensure the server-side session has verified the captcha solve state before processing the reward payout.
+
 ---
 
 ## 🦅 2. MISSION PIPELINE CLASSIFICATION

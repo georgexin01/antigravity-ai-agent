@@ -1,39 +1,32 @@
-# Faucet Velocity & ROI Master: Sovereign Strategy (V27.0)
+# Faucet Velocity & ROI Master: Sovereign Elite V30.0
 
-> **Identity**: VELOCITY_MASTER_V27.0
-> **Logic Base**: Performance-Driven Evolution (PDE) + Real-Time ROI Audit.
-> **Mandate**: Optimize TTC (Time to Complete) and maximize Satoshi-per-Minute (SPM).
+> **Identity**: ELITE_VELOCITY_V30.0
+> **Logic Base**: Performance-Driven Evolution (PDE) + RAM-Aware Optimization.
+> **Mandate**: Maximize Satoshi-per-Minute (SPM) with Zero-Token Visual Overhead.
 
-## 📊 1. PERFORMANCE METRICS (Sovereign TTC)
-Gemma-4 calculates and logs the following for every mission:
-- **TTC (Time to Complete)**: Total seconds from mission start to "Success" toast.
-- **TTP (Time to Path)**: Seconds taken to identify the anti-bot/captcha goal.
-- **Efficiency Index**: `(Average_TTC / Current_TTC) * 100`.
-- **Velocity Audit**: Every 5 successes, G4 parses the ledger and rotates speed bands.
+## 📊 1. PERFORMANCE METRICS (Elite)
+The engine benchmarks every mission for the **Elite Efficiency Index**:
+- **TTC (Time to Complete)**: Page-Load to Success-Toast duration.
+- **ZT-Ratio**: Percentage of visual logic handled by local G4 vs. Cloud Bridge.
+- **RAM Tier stability**: Percentage of missions completed without Tier fallback.
 
-## ⚙️ 2. DYNAMIC SPEED BANDS (Learning Engine)
-The engine automatically shifts bands based on the last 5 missions to balance safety and speed.
-- **SAFE**: Standard 30s buffers; full DOM scans.
-- **BALANCED**: 15-20s random buffers; targeted selectors.
-- **TURBO**: 5-10s buffers; G4-Native coordinate execution (Short-Circuit activated).
+## ⚙️ 2. DYNAMIC SPEED BANDS (Elite V30.0)
+The engine automatically shifts bands based on the **RAM Scan (SM-02)** and success velocity.
+- **BAND ELITE**: Free RAM > 8GB. Buffer +2s. Short-circuit navigation enabled.
+- **BAND STANDARD**: Free RAM 4GB-8GB. Buffer +5s. Targeted DOM scans.
+- **BAND SAFE**: Free RAM < 4GB. Buffer +15s. Full focus lock and safe focus-navigation.
 
----
-
-## 💰 3. REAL-TIME ROI VALUATION (Financial Layer)
-To ensure maximum earning efficiency, the AI performs a **Financial Audit**:
-1. **Sync**: Visit `/withdraw` to capture "Tokens per 1 SOL" exchange rate.
-2. **Oracle**: Search for live **SOL/USD** price.
-3. **Ledger Update**: (Tokens / SOL_Rate) * SOL_USD_Price = **Total USD Value**.
-4. **Ranking**: G4 ranks LTC/BTC/SOL reward rates before every OnlyFaucet wave.
+## 💰 3. ROI AUDITING (Zero-Token Logic)
+1. **Sync**: G3 Bridge visits `/withdraw` or `/dashboard` to capture text-only balances.
+2. **Oracle**: G3 fetches the latest SOL/USD price via search (One pulse per session).
+3. **Ledger**: G4 Local Brain performs the final ROI valuation and ranks platforms in `platform_vault.md`.
 
 ---
 
-## 🎯 4. SOVEREIGN VISION & COORDINATES (V27.0)
-The engine uses **Local Visual Data** (Snipaste) to translate identification into precise screen clicks.
-- **Grid Mapping**: G4 identifies unique (180° rotated) icons and calculates exact (X, Y) relative to the active window.
-- **Aliasing**: G4 performs local OCR to match patterns (e.g., `lll` ↔ `111`).
-- **Sequential Array**: G4 provides the pixel-perfect click sequence to the Bridge (G3).
+## 🎯 4. SOVEREIGN VISION & COORDINATES (SM-01)
+- **Coordinate Map**: G4 translates (x, y) coordinates relative to the browser window dimensions.
+- **Silent Pulse Pulse**: All vision pulses are silent (zero UI flicker) via `auto_pulse.ps1`.
+- **SBP (Silent Background Patching)**: Authorized to update `velocity_strategy_master.md` buffers if 10 consecutive wins occur on a platform.
 
 ---
-
-_V27.0 Velocity Master Strategy — Satoshi Optimization Active (2026-04-07)_
+_V30.0 Sovereign Elite Velocity Master — Satoshi Maximization Active (2026-04-09)_
