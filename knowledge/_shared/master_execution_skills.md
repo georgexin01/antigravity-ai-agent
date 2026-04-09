@@ -6,6 +6,18 @@
 
 ---
 
+## ⚡ 0. HARDWARE IDENTITY LOCK (Instant Boot)
+**Mandate**: Bypasses system scans if the current hardware matches a verified entry in `hardware_ledger.md`.
+1. **CHECK**: At session start, the AI runs `$ Get-CimInstance Win32_BaseBoard | Select-Object -ExpandProperty SerialNumber`.
+2. **MATCH**: Cross-reference the serial with `hardware_ledger.md`.
+3. **LOCK**: If Serial == `A998A680-6CAC-371A-A581-345A60CFA18A` (PC: XIN):
+   - **SKIP** `nvidia-smi` scan.
+   - **SKIP** RAM capacity check.
+   - **INSTANT LOAD**: Use `my-gpu-gemma` (Q4_K_M) strictly on GPU.
+4. **FAILSAFE**: If ID mismatch, trigger full "VRAM Triage Matrix" scan.
+
+---
+
 ## ⚡ 1. SESSION WARM-UP CACHE (Instant Context)
 Read this first (10 tokens) to restore project state without full directory re-scans.
 - **Last Session**: [Date], [Project], [Mode Identity].
@@ -36,6 +48,21 @@ Read this first (10 tokens) to restore project state without full directory re-s
 - **Wave B**: Stores/Composables.
 - **Wave C**: Views/Components.
 - **Wave D**: Router/Main.
+
+---
+
+## ⚡ 4. GPU-VRAM AWARENESS (Performance Protocol)
+**Mandate**: Prioritize 100% GPU occupancy for local inference.
+1. **DETECTION**: Use `nvidia-smi` to scan available VRAM before model load.
+2. **THE 8GB THRESHOLD (RTX 2070)**: 
+   - **Scenario**: Total VRAM = 8GB. 
+   - **VRAM_SAFE_ZONE**: (Total VRAM - 512MB Buffer) = ~7.5GB effective limit.
+   - **Rule**: If a model exceeds the `VRAM_SAFE_ZONE`, the AI MUST trigger a fallback.
+3. **GEMMA-4 TRIAGE MATRIX (Selection Logic)**:
+   - **Tier 1 (Elite)**: `e4b` (Q4/Q5) - Use ONLY if free VRAM > 6GB.
+   - **Tier 2 (Performance)**: `e2b` (Dense/Compressed) - MANDATORY for 100% GPU speed (40+ t/s).
+   - **Tier 3 (Ultra-Compressed)**: `e4b-q4_k_m` - The "Safety" baseline for 8GB cards.
+4. **VELOCITY RULE**: Never allow the model to spill into System RAM (Hybrid Mode). Speed gain: **5x–10x faster**.
 
 ---
 

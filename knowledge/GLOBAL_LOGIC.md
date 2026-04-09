@@ -22,6 +22,19 @@
 - **Atomic Reading**: Use `grep` instead of full file reads for deep system dives.
 - **Ghost Context**: Switch to <2k Token "Mission DNA" fragments instead of bulky 11k rule files when actively coding.
 
+### GPU-First Execution Mandate (P0)
+- **Rule**: All Level 3 Cognition (Vision, Captcha, Heavy Data) MUST be delegated to the local GPU.
+- **Identity Lock**: The system MUST check `hardware_ledger.md` at boot. 
+  - If a hardware match is found (e.g., PC: XIN), use the `my-gpu-gemma` alias immediately.
+  - **No Scaling**: Do not attempt to run uncompressed models on 8GB VRAM (Avoid VRAM Overflow).
+- **Velocity Target**: 35-45 t/s. If <10 t/s detected, flush VRAM and restart the model.
+
+### OpenClaw Data Governance (P0)
+- **Mandate**: Decentralize knowledge into Two Levels of Truth.
+- **Shared Brain (`.gemini/knowledge/openclaw`)**: Store universal skills, architectural blueprints, and public-safe intelligence here. This is intended for git-sync/online sharing.
+- **Local Vault (`workspace/.openclaw`)**: Store PC-specific configs, private mission logs, and temporary workspace data here. This MUST NOT be shared.
+- **Decision Rule**: If the data identifies a specific machine or private mission result -> **LOCAL**. If the data provides a new generic skill or architectural rule -> **SHARED**.
+
 ---
 
 ## 🧹 2. AUTO-CLEANUP & RETENTION FRAMEWORK
