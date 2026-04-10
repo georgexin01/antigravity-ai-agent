@@ -18,7 +18,9 @@ AI reads this BEFORE generating any design to pre-filter patterns. Built from ap
 | ------------------------------------------------------------------------ | ---------- | ----- | ---------------------------- |
 | Deep Onyx (#0a0b10) for Cyber Luxury                                     | High       | 88    | User pivot request           |
 | Rejects Light Mode for corporate redesigns                               | High       | 85    | Explicit instruction         |
-| "Electric Red" + "Black" (Logo-derived for Zeta)                         | High       | 85    | Priority Rule                |
+| "Electric Red" + "Black" (Logo-derived for Zeta V4)                      | High       | 85    | Priority Rule                |
+| "Purple Power" (#a855f7) + "Onyx HSL" (Zeta V3/V5.3)                     | S-CORE     | 95    | Zeta IT Hardened             |
+| Liquid Glass Material (backdrop-blur + mask-composite)                   | S-CORE     | 92    | ZETA V3 Power AI             |
 | Warm red/maroon for F&B/pork business apps                               | High       | 90    | Lee Ming Pork V2             |
 | Warm accents (red, orange, gold) for F&B apps                            | High       | 92    | Japanese food + Lee Ming     |
 | Deep Red (#8B1A1A) with Gold (#c8963e) accents for premium meat branding | S-CORE     | 95    | Lee Ming Pork V5             |
@@ -45,12 +47,11 @@ AI reads this BEFORE generating any design to pre-filter patterns. Built from ap
 
 | Preference                                                | Confidence | Score | Source                |
 | --------------------------------------------------------- | ---------- | ----- | --------------------- |
+| Geist Sans / General Sans for Tech Mastery               | S-CORE     | 95    | Zeta IT V5.3          |
 | Plus Jakarta Sans for mobile apps                         | High       | 92    | Travel App + Lee Ming |
 | Noto Sans SC / PingFang SC for Chinese UI                 | High       | 88    | Dachengloklok         |
 | DM Mono for prices/numbers                                | High       | 80    | Dachengloklok         |
-| Poppins/Roboto for leisure/casual apps                    | Medium     | 70    | Mobile standards      |
-| Montserrat/Open Sans for business/corporate               | Medium     | 70    | Mobile standards      |
-| Inter + Orbitron + Space Mono for tech/corporate websites | High       | 82    | Zeta V4               |
+| Orbitron + Space Mono for Engineering Authority           | High       | 85    | Zeta V4               |
 | `letter-spacing: 0.02em` for headings                     | Medium     | 75    | Jin Hong V5           |
 | `font-extrabold` (800) for section titles                 | High       | 88    | Lee Ming Pork V2      |
 | Text-[10px] for subtle metadata/labels                    | High       | 85    | Travel App + Lee Ming |
@@ -266,14 +267,16 @@ For school management or similar projects, the design document MUST include:
 
 | Project            | State       | Last Action                                             | Next Predicted                    | Last Updated |
 | ------------------ | ----------- | ------------------------------------------------------- | --------------------------------- | ------------ |
+| **golden-shop-app**| **8. DEPLOY**| **Updated image URLs to local paths**                   | Complete                          | 2026-03-31   |
+| **zeta-website-v4**| **8. DEPLOY**| **Synced to Authority Folder**                          | SEO hardening                     | 2026-04-10   |
+| **zeta-it-website**| **7. QA**    | **V5.3 Hardened Protocol Applied**                      | Content completion                | 2026-04-10   |
+| **antigravity**    | **CORE**     | **Ghost Protocol V4.0 Context Active**                  | Rule 0 Enforced                   | 2026-04-10   |
 | admin-panel-wms-v2 | 9. ITERATE  | Claude Mode Activated                                   | Await module/feature request      | 2026-03-26   |
 | lee-ming-pork-v5   | 8. DEPLOYED | 100% Complete, PWA, Meta, Fullscreen, Visual Validation | N/A (Project Complete)            | 2026-03-19   |
-| zeta-website-v4    | 8. DEPLOY   | Git commits, multi-page build                           | SEO optimization, content updates | 2026-03-19   |
 | travel-app         | 7. QA       | i18n + referral system complete                         | Deploy, PWA conversion            | 2026-03-18   |
 | poker-app-v3       | 7. QA       | Live simulation + role dashboards                       | Chart.js reports, deploy          | 2026-03-16   |
 | ld-floor-app       | 7. QA       | Dual-role + inventory complete                          | Agent reporting, deploy           | 2026-03-16   |
 | dachengloklok      | 1. PLAN     | Blueprint created                                       | Start build (FP-001 fingerprint)  | 2026-03-19   |
-| **golden-shop-app**| **8. DEPLOY**| **Updated image URLs to local paths (currently broken in dev)**| Predict: Move images to `public/products/` for Vite resolution | 2026-03-31   |
 | **fu-huo-lao-app**| **8. DEPLOY**| **100% Width Layout Fix Completed**                    | Predict: Finalize catering specific features (Equipment Rental) | 2026-04-03   |
 | **vben-admin-supabase**| **1. PLAN**| **READY: Automation Framework Implanted**               | Await Module Request (FP-008)     | 2026-03-31   |
 

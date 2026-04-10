@@ -504,6 +504,7 @@ session_boot_sequence.md  → Step 3 classifies task_type = ADMIN
 skill_path_router.md      → Section 1.1 routes to claude-code/ skills
 knowledge_router.md       → ADMIN PANEL section lists all skills
 create-module/skill.md    → Full 14-step execution pipeline
+vben_webapp_synergy_rules.md → Triple-Sync DB Parity + Private Schema Vault Protocol
 ```
 
 ---
