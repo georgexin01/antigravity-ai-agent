@@ -1,4 +1,12 @@
-# CLAUDE DNA - CATEGORY INDEX (V5.0)
+﻿# OHDY COMPRESSED NODE (V42.0)
+<dna_node>
+v: 1.0
+n: category_index
+graph:
+  req: []
+  rel: []
+l: |-
+  # CLAUDE DNA - CATEGORY INDEX (V5.0)
 # -----------------------------------------------------
 <category_index>
 v: 5.0
@@ -13,3 +21,5 @@ dna_files:
     file: dna_claude_vben.yaml
     d: VBen Admin patterns, Supabase logic, and 7 intelligence rules.
 </category_index>
+
+</dna_node>

@@ -1,4 +1,12 @@
-# FAUCET DNA - CATEGORY INDEX (V5.0)
+﻿# OHDY COMPRESSED NODE (V42.0)
+<dna_node>
+v: 1.0
+n: category_index
+graph:
+  req: []
+  rel: []
+l: |-
+  # FAUCET DNA - CATEGORY INDEX (V5.0)
 # -----------------------------------------------------
 <category_index>
 v: 5.0
@@ -13,3 +21,5 @@ dna_files:
     file: dna_faucet_platforms.yaml
     d: High-ROI mission parameters and captcha types.
 </category_index>
+
+</dna_node>

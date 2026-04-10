@@ -1,4 +1,12 @@
-# DESIGN DNA - CATEGORY INDEX (V5.0)
+﻿# OHDY COMPRESSED NODE (V42.0)
+<dna_node>
+v: 1.0
+n: category_index
+graph:
+  req: []
+  rel: []
+l: |-
+  # DESIGN DNA - CATEGORY INDEX (V5.0)
 # -----------------------------------------------------
 <category_index>
 v: 5.0
@@ -16,3 +24,5 @@ dna_files:
     file: dna_user_taste.yaml
     d: User design preferences, fingerprint shortcuts, and brand KIT.
 </category_index>
+
+</dna_node>
