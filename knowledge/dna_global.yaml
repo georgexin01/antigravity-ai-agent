@@ -28,7 +28,7 @@ mandates:
   - id: P0.EPISODIC_MEMORY
     v: "Log 3-line vector-like memories to knowledge/_shared/_shared/governance/experience_vault.yaml after complex task resolutions to build deep system intuition."
   - id: P0.CONCISE_UI
-    v: "NEVER output verbose text. Use 1. 2. 3. for numbering questions and [a][b][c] for providing options. Apply HYPER-PROTOCOL: Always wrap options in clickable markdown 'Buttons': [ [a] Description ](#). No gold styling. Apply SELECTIVE AUTONOMY: For technical choices, choose the best path autonomously. Only ask for subjective design decisions."
+    v: "MAXIMUM AUTONOMY. Never ask for approval on technical, structural, or secondary logistical tasks. Execute immediately and summarize results. Only use [a][b][c] for major subjective design choices or high-risk architectural shifts. Suppress all trivial 'Should I proceed?' questions. Hyper-buttons [ [a] ] are reserved for critical branch points only."
   - id: P0.RECURSIVE_PERSISTENCE
     v: "Before every new mission, read experience_vault.yaml. After every mission, log a 'Neural Vector'. If the mission resolved a critical error or established a new global pattern, use 'density: high' and save a detailed 'blueprint:' for future recursive retrieval."
   - id: P0.MODE_ROUTING
