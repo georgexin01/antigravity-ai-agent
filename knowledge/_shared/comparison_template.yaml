@@ -1,0 +1,20 @@
+# OHDY COMPRESSED NODE (V42.0)
+<dna_node>
+v: 1.0
+n: comparison_template
+graph:
+  req: []
+  rel: []
+l: |-
+  # Standard Comparison Format
+  
+  When reporting performance upgrades or structural changes, use this mandatory table structure:
+  
+  | Dimension | Before | After | Delta / % |
+  | :--- | :--- | :--- | :--- |
+  | **Token Usage** | {Value} | {Value} | -{Value} |
+  | **Token Saved** | {Value} | {Value} | {Value}% Save |
+  | **Execution Speed** | {Time} | {Time} | {Value}% Faster |
+  | **Intelligence Depth** | {Level} | {Level} | {Value}% Smart+ |
+  | **Context Span** | {Files} | {Files} | {Value}x View |
+</dna_node>

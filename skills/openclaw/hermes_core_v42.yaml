@@ -1,0 +1,19 @@
+# OHDY: SKILL_HERMES_CORE (V42.0)
+# -----------------------------------------------------
+# EPOCH: NEURAL REBIRTH / HERMES SYNERGY
+<dna_node>
+n: hermes_core
+v: 42.0
+d: "Subagent delegation, context compression (GPDN), and PII scrubbing."
+k: [hermes, subagent, delegate, budget, redact]
+
+p:
+  - id: DEL_WORK  | n: Delegate Worker  | l: "Persona-locked worker spawning."
+  - id: APP_COMP  | n: Apply GPDN       | l: "Trigger at >32k tokens. Summarize history."
+  - id: ENF_BUDG  | n: Budget Watchdog  | l: "Verify turn/mission cost against DNA."
+  - id: SCR_SECR  | n: PII Redaction    | l: "Automated regex scrubbing of keys."
+
+rules:
+  - "ALWAYS use <REASONING_SCRATCHPAD> before delegation."
+  - "NEVER pass raw .env keys to subagents."
+</dna_node>

@@ -1,0 +1,262 @@
+﻿# OHDY COMPRESSED NODE (V42.0)
+<dna_node>
+v: 42.0
+n: 01_The_API_Bridge_Blueprint
+graph:
+  req: []
+  rel: []
+l: |-
+  # API Bridge Blueprint: Supabase REST via Axios (V2.0)
+  
+  Core Technology: Axios + Supabase PostgREST URL paths
+  Standard File: `src/api/request.ts`
+  Rule: ONE Axios instance for the entire app. No per-entity API files.
+  
+  ---
+  
+  ## 1. THE REQUEST CLIENT (Standard Template)
+  
+  ```typescript
+  // src/api/request.ts
+  import axios from 'axios'
+  
+  const SUPABASEURL = import.meta.env.VITEGLOBAPIURL || 'http://localhost:54321'
+  const SUPABASEANONKEY = import.meta.env.VITESUPABASEANON_KEY || ''
+  const SCHEMA = import.meta.env.VITEDBSCHEMA || 'quizLaa'
+  
+  const requestClient = axios.create({
+    baseURL: `${SUPABASE_URL}/rest/v1`,
+    timeout: 15000,
+    headers: {
+      'apikey': SUPABASEANONKEY,
+      'Content-Type': 'application/json',
+      'Accept-Profile': SCHEMA,
+      'Content-Profile': SCHEMA,
+    },
+  })
+  
+  // Request interceptor: attach JWT token
+  requestClient.interceptors.request.use((config) => {
+    const token = localStorage.getItem('accessToken')
+    if (token) {
+      config.headers.Authorization = `Bearer ${token}`
+    }
+    return config
+  })
+  
+  // Response interceptor: handle errors + 401 redirect
+  requestClient.interceptors.response.use(
+    (response) => response.data,
+    (error) => {
+      if (error.response?.status === 401) {
+        localStorage.removeItem('accessToken')
+        window.location.href = '/login'
+      }
+      return Promise.reject(error)
+    },
+  )
+  
+  export { requestClient }
+  ```
+  
+  ---
+  
+  ## 2. SUPABASE POSTGREST URL PATTERNS
+  
+  All data access goes through URL query parameters. This is the core pattern:
+  
+  ### 2.1 Reading Data (GET)
+  
+  ```typescript
+  // List all active records
+  requestClient.get('/lessons', {
+    params: {
+      select: '*',
+      is_delete: 'eq.false',
+      status: 'eq.1',
+      order: 'created_at.desc',
+    },
+  })
+  
+  // Single record by ID
+  requestClient.get('/lessons', {
+    params: {
+      select: '*',
+      id: `eq.${lessonId}`,
+    },
+    headers: { Accept: 'application/vnd.pgrst.object+json' }, // Returns object, not array
+  })
+  
+  // With FK join (get parent entity data)
+  requestClient.get('/students', {
+    params: {
+      select: '*,teacher:teacherId(id,name)',
+      is_delete: 'eq.false',
+    },
+  })
+  
+  // Pagination
+  requestClient.get('/lessons', {
+    params: {
+      select: '*',
+      is_delete: 'eq.false',
+      offset: page * pageSize,
+      limit: pageSize,
+    },
+    headers: { Prefer: 'count=exact' }, // Response header returns total count
+  })
+  
+  // Text search (ilike = case-insensitive)
+  requestClient.get('/lessons', {
+    params: {
+      select: '*',
+      title: `ilike.*${searchTerm}*`,
+    },
+  })
+  ```
+  
+  ### 2.2 Writing Data (POST/PATCH/DELETE)
+  
+  ```typescript
+  // Create
+  requestClient.post('/lessons', {
+    title: 'New Lesson',
+    description: 'Content here',
+    status: 1,
+  }, {
+    headers: { Prefer: 'return=representation' }, // Returns created record
+  })
+  
+  // Update
+  requestClient.patch('/lessons', {
+    title: 'Updated Title',
+    updated_at: new Date().toISOString(),
+  }, {
+    params: { id: `eq.${lessonId}` },
+    headers: { Prefer: 'return=representation' },
+  })
+  
+  // Soft Delete (preferred)
+  requestClient.patch('/lessons', {
+    is_delete: true,
+    updated_at: new Date().toISOString(),
+  }, {
+    params: { id: `eq.${lessonId}` },
+  })
+  
+  // Hard Delete (use only when no soft-delete column exists)
+  requestClient.delete('/lessons', {
+    params: { id: `eq.${lessonId}` },
+  })
+  ```
+  
+  ---
+  
+  ## 3. POSTGREST OPERATORS REFERENCE
+  
+  | Operator | Meaning | Example |
+  |----------|---------|---------|
+  | `eq` | Equals | `?status=eq.1` |
+  | `neq` | Not equals | `?status=neq.0` |
+  | `gt` / `gte` | Greater than / >= | `?score=gt.80` |
+  | `lt` / `lte` | Less than / <= | `?score=lt.50` |
+  | `like` | Pattern match (case-sensitive) | `?title=like.*lesson*` |
+  | `ilike` | Pattern match (case-insensitive) | `?title=ilike.*lesson*` |
+  | `in` | In array | `?status=in.(1,2,3)` |
+  | `is` | Is null/true/false | `?is_delete=is.false` |
+  | `not` | Negate | `?id=not.eq.{uuid}` |
+  | `or` | OR conditions | `?or=(status.eq.1,status.eq.2)` |
+  
+  ---
+  
+  ## 4. RESPONSE HEADERS (Useful)
+  
+  | Header | Purpose | When |
+  |--------|---------|------|
+  | `Prefer: return=representation` | Return created/updated record | POST, PATCH |
+  | `Prefer: count=exact` | Return total count in `content-range` header | GET (pagination) |
+  | `Accept: application/vnd.pgrst.object+json` | Return single object (not array) | GET single record |
+  | `Accept-Profile: {schema}` | Select non-public schema | All requests |
+  | `Content-Profile: {schema}` | Write to non-public schema | POST, PATCH, DELETE |
+  
+  ---
+  
+  ## 5. CAPACITOR NATIVE PLATFORM (Mobile Apps)
+  
+  When the WebApp runs inside Capacitor (mobile), add this detection for FormData uploads:
+  
+  ```typescript
+  import { Capacitor } from '@capacitor/core'
+  
+  // In request interceptor, before sending:
+  if (Capacitor.isNativePlatform() && config.data instanceof FormData) {
+    // Use native fetch instead of Axios for reliable multipart upload
+    const response = await fetch(`${config.baseURL}${config.url}`, {
+      method: config.method?.toUpperCase() || 'POST',
+      headers: {
+        Authorization: config.headers.Authorization,
+        apikey: config.headers.apikey,
+      },
+      body: config.data,
+    })
+    return response.json()
+  }
+  ```
+  
+  Rule: Only add Capacitor detection if `@capacitor/core` is in `package.json`. For web-only apps, skip this entirely.
+  
+  ---
+  
+  ## 6. STORAGE URLs (Images/Files)
+  
+  Supabase Storage has its own URL pattern separate from PostgREST:
+  
+  ```typescript
+  // Public bucket URL
+  const getStorageUrl = (bucket: string, path: string): string => {
+    return `${SUPABASE_URL}/storage/v1/object/public/${bucket}/${path}`
+  }
+  
+  // Authenticated bucket URL (requires token)
+  const getPrivateStorageUrl = (bucket: string, path: string): string => {
+    return `${SUPABASE_URL}/storage/v1/object/authenticated/${bucket}/${path}`
+  }
+  
+  // Upload to storage
+  const uploadFile = async (bucket: string, path: string, file: File) => {
+    const formData = new FormData()
+    formData.append('', file)
+    return axios.post(
+      `${SUPABASE_URL}/storage/v1/object/${bucket}/${path}`,
+      formData,
+      {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem('accessToken')}`,
+          apikey: SUPABASEANONKEY,
+        },
+      },
+    )
+  }
+  ```
+  
+  ---
+  
+  ## 7. ENVIRONMENT FILES
+  
+  ```bash
+  # .env.development
+  VITEGLOBAPI_URL=http://localhost:54321
+  VITESUPABASEANON_KEY=eyJhbGci...your-local-anon-key
+  VITEDBSCHEMA=quizLaa
+  
+  # .env.production
+  VITEGLOBAPI_URL=https://api.zeta-groups.com
+  VITESUPABASEANON_KEY=eyJhbGci...your-production-anon-key
+  VITEDBSCHEMA=quizLaa
+  ```
+  
+  ---
+  
+  Claude-Frontend Master Manual V2.0 (2026-04-08)
+  
+</dna_node>

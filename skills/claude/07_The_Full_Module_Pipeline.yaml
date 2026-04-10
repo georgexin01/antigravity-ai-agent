@@ -1,0 +1,301 @@
+﻿# OHDY COMPRESSED NODE (V42.0)
+<dna_node>
+v: 42.0
+n: 07_The_Full_Module_Pipeline
+graph:
+  req: [knowledge/claude/01Discovery_Pattern.yaml, knowledge/claude/02DataModel_Pattern.yaml]
+  rel: [skills/normal/master_design_pro.yaml]
+l: |-
+  # The Full Module Pipeline: 10-Step WebApp Module Creation (V2.0)
+  
+  Goal: Automated, repeatable process to add a new data module to the WebApp
+  Prerequisite: The Supabase table MUST already exist (created by Admin Panel / claude-code skills)
+  Output: Types + Store + Views + Route â€” fully connected to Supabase REST API
+  
+  ---
+  
+  ## OVERVIEW: THE 10-STEP PIPELINE
+  
+  ```
+  Step 1:  DISCOVER  â€” Read the Supabase table schema (columns, types, FKs)
+  Step 2:  TYPES     â€” Generate TypeScript interfaces (DB + App + FormValues)
+  Step 3:  STORE     â€” Generate Pinia store (CRUD + transforms)
+  Step 4:  LIST VIEW â€” Generate list page (card grid or table)
+  Step 5:  DETAIL    â€” Generate detail page (with page/embedded dual mode)
+  Step 6:  FORM      â€” Generate create/edit form (if entity supports writes)
+  Step 7:  ROUTE     â€” Add routes to router/index.ts
+  Step 8:  INDEX     â€” Update type/store index re-exports
+  Step 9:  VERIFY    â€” Run dev server, check no TypeScript errors
+  Step 10: REVIEW    â€” Quality checklist pass
+  ```
+  
+  ---
+  
+  ## STEP 1: DISCOVER â€” Read the Database Schema
+  
+  Input: Table name (e.g., `lessons`, `students`)
+  Action: Query Supabase to understand the table structure
+  
+  ### How to Read Schema:
+  
+  Option A: From Admin Panel SQL (if accessible)
+  - Read the SQL migration file in `admin-panel-quizLaa/supabase/migrations/`
+  - Extract: column names, types, FKs, constraints, defaults
+  
+  Option B: From PostgREST (if app is running)
+  - `GET /rest/v1/{table}?select=*&limit=1` â€” inspect response shape
+  - `GET /rest/v1/` â€” list all available tables
+  
+  Option C: From existing types (if Admin Panel has types)
+  - Read `apps/web-antd/src/api/{entity}.ts` â€” the Admin Panel's type definitions
+  
+  ### Discovery Checklist:
+  - [ ] Table name and schema (`quizLaa.{entity}`)
+  - [ ] All columns with SQL types
+  - [ ] Which columns are required vs nullable
+  - [ ] Foreign key relationships (parentTable, parentColumn)
+  - [ ] Does it have the Golden Five? (id, status, isdelete, createdat, updated_at)
+  - [ ] Any special column types? (jsonb arrays, numeric money, image URLs)
+  - [ ] What data already exists? (sample records help understand the shape)
+  
+  ### Discovery Output (Consultation Card):
+  
+  ```
+  Entity: lessons
+  Schema: quizLaa
+  Table: "quizLaa"."lessons"
+  
+  Columns:
+    id          uuid        PK, genrandomuuid()
+    title       text        NOT NULL
+    description text        nullable
+    duration    integer     NOT NULL
+    sort        integer     default 0
+    images      jsonb       default '[]' (string array)
+    video       text        nullable
+    status      integer     default 1
+    is_delete   boolean     default false
+    created_at  timestamptz default now()
+    updated_at  timestamptz default now()
+  
+  Foreign Keys: none
+  Special: images is jsonb array of URL strings
+  ```
+  
+  STOP: Present the consultation card to the user for confirmation before proceeding.
+  
+  ---
+  
+  ## STEP 2: TYPES â€” Generate TypeScript Interfaces
+  
+  File: `src/types/{entity}.ts`
+  Rule: Generate from Step 1 discovery. Three interfaces minimum.
+  
+  ### Template:
+  
+  ```typescript
+  // src/types/{entity}.ts
+  
+  /** DB type â€” raw record from Supabase (matches SQL columns exactly) */
+  export interface {Entity} {
+    id: string
+    // ... all columns from discovery, mapped per 02DataModel_Pattern.yaml
+    status: number
+    is_delete: boolean
+    created_at: string
+    updated_at: string
+  }
+  
+  /** App type â€” transformed for UI rendering */
+  export interface {Entity}View {
+    id: string
+    // ... only fields the UI needs, with formatted values
+  }
+  
+  /** Form values â€” for create/edit (no system columns) */
+  export interface {Entity}FormValues {
+    // ... only user-editable fields
+  }
+  ```
+  
+  ### Then update index:
+  
+  ```typescript
+  // src/types/index.ts â€” add export
+  export type { Entity, EntityView, EntityFormValues } from './{entity}'
+  ```
+  
+  ---
+  
+  ## STEP 3: STORE â€” Generate Pinia Store
+  
+  File: `src/stores/{entity}.ts`
+  Template: Follow `03PiniaStore_Pipeline.yaml` exactly
+  
+  ### Required Actions:
+  1. `getList()` â€” GET with `is_delete=eq.false` filter
+  2. `getDetail(id)` â€” GET single with cache check
+  3. `create(values)` â€” POST with `Prefer: return=representation`
+  4. `update(id, values)` â€” PATCH with `updated_at`
+  5. `remove(id)` â€” Soft delete (PATCH `is_delete: true`)
+  6. `$reset()` â€” Reset all refs
+  
+  ### Transform Function:
+  - Create a `toView(raw: Entity): EntityView` function
+  - Handle: date formatting, image fallbacks, FK name resolution, null defaults
+  
+  ### Then update index:
+  
+  ```typescript
+  // src/stores/index.ts â€” add export
+  export { useEntityStore } from './{entity}'
+  ```
+  
+  ---
+  
+  ## STEP 4: LIST VIEW â€” Generate List Page
+  
+  File: `src/views/{entity}/list.vue`
+  Template: Follow `04VueComponent_Manual.yaml` Section 2
+  
+  ### Must Include:
+  - Loading state with spinner
+  - Empty state message
+  - Card grid or table layout
+  - Search/filter input (if entity has a name/title field)
+  - Click handler to navigate to detail
+  - `onMounted` -> `store.getList()`
+  
+  ### Layout Decision:
+  
+  | Data Shape | Layout | When |
+  |-----------|--------|------|
+  | Visual (has images/cards) | Card grid | Courses, products, galleries |
+  | Tabular (many text fields) | Table | Students, transactions, logs |
+  | Mixed | Cards with expandable detail | Orders, lessons |
+  
+  ---
+  
+  ## STEP 5: DETAIL VIEW â€” Generate Detail Page
+  
+  File: `src/views/{entity}/detail.vue`
+  Template: Follow `04VueComponent_Manual.yaml` Section 3
+  
+  ### Must Include:
+  - Dual mode: `page` (reads from route.params.id) + `embedded` (reads from props.entityId)
+  - Loading state
+  - Not-found state
+  - Back button (page mode only)
+  - All entity fields displayed
+  - Edit button -> navigates to form or opens modal
+  - Delete button -> confirms then soft-deletes
+  
+  ---
+  
+  ## STEP 6: FORM VIEW â€” Generate Create/Edit Form
+  
+  File: `src/views/{entity}/form.vue`
+  Template: Follow `04VueComponent_Manual.yaml` Section 4
+  Skip if: Entity is read-only in the WebApp (no user writes)
+  
+  ### Must Include:
+  - Props: `entity` (null=create, object=edit)
+  - Watch `entity` for edit mode population
+  - Form state initialized from `EntityFormValues`
+  - Submit handler: create or update based on mode
+  - Cancel handler: emits `cancel`
+  - Validation: required fields, format checks
+  - Submitting state: disables button during API call
+  
+  ---
+  
+  ## STEP 7: ROUTE â€” Add Routes
+  
+  File: `src/router/index.ts`
+  Template: Follow `05RouterAuth_Guard.yaml` Section 3
+  
+  ### Add in this order:
+  1. List route: `/{entity}` -> `{Entity}List`
+  2. Detail route: `/{entity}/:id` -> `{Entity}Detail`
+  3. Create route (optional): `/{entity}/create` -> `{Entity}Create`
+  4. Edit route (optional): `/{entity}/:id/edit` -> `{Entity}Edit`
+  
+  All routes: `meta: { requiresAuth: true }`
+  
+  ---
+  
+  ## STEP 8: INDEX â€” Update Re-exports
+  
+  Update these index files:
+  
+  ```typescript
+  // src/types/index.ts
+  export type { Entity, EntityView, EntityFormValues } from './{entity}'
+  
+  // src/stores/index.ts
+  export { useEntityStore } from './{entity}'
+  ```
+  
+  ---
+  
+  ## STEP 9: VERIFY â€” Run and Check
+  
+  ### Verification Steps:
+  1. `pnpm dev` â€” starts without errors
+  2. Navigate to `/{entity}` â€” list page loads
+  3. Check browser DevTools Network tab â€” API calls go to correct PostgREST URL
+  4. Check response data matches expected shape
+  5. Click an item â€” detail page loads
+  6. If form exists: create a record, verify it appears in list
+  7. No TypeScript errors in terminal
+  
+  ### Common Issues:
+  
+  | Issue | Cause | Fix |
+  |-------|-------|-----|
+  | 404 on API call | Wrong table name in store | Check exact table name in Supabase |
+  | Empty response | RLS blocks anonymous access | Check RLS policies allow SELECT for authenticated users |
+  | CORS error | Supabase not configured for localhost | Add `http://localhost:5173` to Supabase CORS settings |
+  | Schema not found | Missing `Accept-Profile` header | Verify request.ts sets schema headers |
+  | 401 Unauthorized | Token expired or missing | Check localStorage has valid accessToken |
+  
+  ---
+  
+  ## STEP 10: REVIEW â€” Quality Checklist
+  
+  Run through the checklist in `08QualityChecklist.yaml`:
+  
+  - [ ] Types match SQL schema exactly
+  - [ ] Store has all 6 required actions + $reset
+  - [ ] List view has loading/empty/data states
+  - [ ] Detail view supports dual mode
+  - [ ] Form validates required fields
+  - [ ] Routes are registered with auth guard
+  - [ ] Index files re-export new types/stores
+  - [ ] No hardcoded URLs or API keys
+  - [ ] Mobile-responsive layout (412px viewport)
+  - [ ] Image fallbacks for missing images
+  
+  ---
+  
+  ## PARALLEL EXECUTION (Wave Batching)
+  
+  Steps that can run in parallel:
+  
+  ```
+  Wave 1: Step 1 (discover)           â€” must be first
+  Wave 2: Step 2 (types)              â€” depends on Step 1
+  Wave 3: Step 3 (store) + Step 7 (route)  â€” both depend on Step 2, not each other
+  Wave 4: Step 4 (list) + Step 5 (detail) + Step 6 (form)  â€” all depend on Step 3
+  Wave 5: Step 8 (index)              â€” depends on Steps 2-3
+  Wave 6: Step 9 (verify) + Step 10 (review)  â€” final
+  ```
+  
+  ---
+  
+  Claude-Frontend Master Manual V2.0 (2026-04-08)
+  
+</dna_node>
+
+
+

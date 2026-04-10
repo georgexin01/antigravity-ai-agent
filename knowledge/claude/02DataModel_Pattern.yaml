@@ -1,0 +1,21 @@
+# OHDY COMPRESSED NODE (V42.0)
+<dna_node>
+v: 42.0
+n: 02DataModel_Pattern
+graph:
+  req: []
+  rel: []
+l: |-
+  # Pattern 02: Postgres to TS Mapping Guide
+  
+  Logic mapping:
+  - text/varchar -> string
+  - uuid -> string (v4)
+  - integer/bigint -> number
+  - numeric/decimal -> number
+  - boolean -> boolean
+  - jsonb -> any / Record<string, any>
+  - timestamptz -> string (ISO)
+  
+  Rule: Use interfaces for DB, View, and Form objects.
+</dna_node>

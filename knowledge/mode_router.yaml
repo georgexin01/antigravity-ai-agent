@@ -1,0 +1,32 @@
+# MODE ROUTER - THE CONTEXT SWITCH (V1.0)
+# -----------------------------------------------------
+# Triggered by chat prefixes to isolate folder reading.
+
+<dna_node>
+v: 1.0
+n: mode_router
+l: |-
+  ---
+  modes:
+    - id: normal
+      trigger: ["ai", "default"]
+      locks: ["knowledge/normal/", "skills/normal/", "knowledge/_shared/"]
+      
+    - id: claude
+      trigger: ["ai claude", "claude"]
+      locks: ["knowledge/claude/", "skills/claude/", "knowledge/_shared/"]
+      
+    - id: faucet
+      trigger: ["ai faucet", "faucet", "bonk"]
+      locks: ["knowledge/faucet/", "skills/faucet/", "knowledge/_shared/"]
+      
+    - id: openclaw
+      trigger: ["ai openclaw", "openclaw", "hermes"]
+      locks: ["knowledge/openclaw/", "skills/openclaw/", "knowledge/_shared/"]
+  
+  default_priority:
+    - "knowledge/ALPHA_DIRECTIVE.yaml"
+    - "knowledge/GLOBAL_LOGIC.yaml"
+    - "knowledge/dna_global.yaml"
+  ---
+</dna_node>

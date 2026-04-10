@@ -1,0 +1,20 @@
+﻿# CLAUDE SKILL DNA - FRONTEND MASTER (V5.0)
+# -----------------------------------------------------
+<dna_node>
+v: 5.0
+n: Claude_Frontend_Architect
+id: skill.claude.frontend
+
+blueprint:
+  id: THE_BAKERY
+  flow: API_Bridge -> Data_Models -> Pinia_Store -> Vue_Components -> Router_Guards.
+  
+logic:
+  bridge: [Axios/Fetch, error_triage_p0, loading_state_management]
+  store: [Composition_API, reactive_refs, action_dispatch, persistence]
+  views: [Typescript_Props, Emits, Modular_Slots, i18n_Translation]
+
+quality:
+  checklist: [Full_Module_Pipeline_Verify, Env_Config_Check, Auth_Guard_Strength]
+</dna_node>
+

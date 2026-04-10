@@ -1,0 +1,15 @@
+﻿# SKILL: MOBILE DESIGN THINKING (V30.0)
+# -----------------------------------------------------
+<dna_node>
+v: 30.0
+id: MOBILE_UX_MASTER
+core:
+  - navigation: [Bottom_Sheet, Floating_Action_Button, Swipe_Gesture_Back]
+  - psychology: [Thumb_Zone_Optimization, Feedback_Haptics, Cognitive_Load_Minimization]
+  - layout: [Col_12_Fluid, Responsive_Breakpoints_360_430, Dynamic_Type_Support]
+
+platform_rules:
+  ios: [Blur_Translucency, SF_Symbols, Rounded_Corners_Max]
+  android: [Material_3_Elevation, Roboto_Flex, Color_Extraction_Monet]
+</dna_node>
+

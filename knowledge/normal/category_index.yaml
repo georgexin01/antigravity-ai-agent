@@ -1,0 +1,18 @@
+# DESIGN DNA - CATEGORY INDEX (V5.0)
+# -----------------------------------------------------
+<category_index>
+v: 5.0
+id: mode.normal
+n: Design Master Ecosystem (Normal Mode)
+
+dna_files:
+  - id: design
+    file: dna_design_matrix.yaml
+    d: VSS 5.0, OKLCH physics, Bento-grids, and cinematic UI/UX themes.
+  - id: app
+    file: dna_app_architecture.yaml
+    d: Vue 3 + Vite, Pinia stores, PWA, i18n, and Test Protocols.
+  - id: taste
+    file: dna_user_taste.yaml
+    d: User design preferences, fingerprint shortcuts, and brand KIT.
+</category_index>

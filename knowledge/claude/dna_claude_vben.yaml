@@ -1,0 +1,28 @@
+﻿# CLAUDE DNA - VBEN & SUPABASE (V5.0)
+# -----------------------------------------------------
+<dna_node>
+v: 5.0
+n: VBen_Admin_Sovereign
+
+intel_patterns:
+  - id: CONSULT
+    v: Consultation Card (Entity analysis + FK detection) before start.
+  - id: DEP_SCAN
+    v: Cross-module dependency scanner (types/stores exist?).
+  - id: REGISTRY
+    v: Maintain Module Registry in project root for FK maps.
+  - id: QUALITY
+    v: 5-Dim Tracker (SQL, Types, RLS, UI, Test).
+  - id: PREDICT
+    v: Predict next child entity based on FK schema.
+  - id: BATCH
+    v: Wave Batching (Parallelize file writes within pipeline).
+  - id: MISTAKES
+    v: WRONG/CORRECT audit for Store/Views/SQL/Tests.
+
+vben_standards:
+  ui: [VxeTable, CellFkLink, CellStatus, formatMoneyCell, ShadcnValidation]
+  db: [Supabase, PostgREST_Joins, RLS_RBAC, Schema_Qualified_Tables]
+  i18n: [zh-CN, en-US mandatory]
+</dna_node>
+

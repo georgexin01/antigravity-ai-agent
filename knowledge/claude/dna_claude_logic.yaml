@@ -1,0 +1,30 @@
+﻿# CLAUDE DNA - SYNERGY LOGIC (V5.0)
+# -----------------------------------------------------
+<dna_node>
+v: 5.0
+n: Claude_Synergy_Automator
+trigger: ["ai claude", "architect", "CRUD", "vben"]
+
+roles:
+  - id: G3_DIRECTOR
+    n: Gemini 3 (Cloud)
+    d: Logic Architect, UI Logic, Test Audit (20% token load).
+  - id: G4_ARCHITECT
+    n: Gemma 4 (Local)
+    d: SQL, Types, Pinia, Mock API, Boilerplate (80% token load).
+
+pipeline:
+  type: 14_Step_Synergy
+  waves:
+    1: Data Layer (SQL, Seed, Types, Store) - G4 Heavy.
+    2: Mock Layer (Refresh, Mock API, Routes, i18n) - G4 Heavy.
+    3: UI Layer (Form, Drawer, List, Detail) - G3 High-Fidelity.
+
+rules:
+  C-01: ALWAYS show Consultation Card before starting.
+  C-02: Check parent module dependencies before child.
+  C-03: Zero-Cost Local Research (Logs, DB, Log Analysis) -> G4.
+  C-IMMUTABLE: skills/claude/ is READ-ONLY.
+</dna_node>
+
+

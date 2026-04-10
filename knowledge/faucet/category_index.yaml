@@ -1,0 +1,15 @@
+# FAUCET DNA - CATEGORY INDEX (V5.0)
+# -----------------------------------------------------
+<category_index>
+v: 5.0
+id: mode.faucet
+n: Faucet Sovereign Ecosystem
+
+dna_files:
+  - id: logic
+    file: dna_faucet_logic.yaml
+    d: Core ZTV engine, anti-bot heuristics, and timing.
+  - id: platforms
+    file: dna_faucet_platforms.yaml
+    d: High-ROI mission parameters and captcha types.
+</category_index>

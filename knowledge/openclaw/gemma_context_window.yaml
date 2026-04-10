@@ -1,0 +1,37 @@
+﻿# OHDY COMPRESSED NODE (V42.0)
+<dna_node>
+v: 42.0
+n: gemma_context_window
+graph:
+  req: []
+  rel: []
+l: |-
+  # 🖼️ GEMMA CONTEXT WINDOW (V1.0)
+  
+  Identity: LOCALCONTEXTSYNCHRONIZER
+  Purpose: Synchronize local Gemma-4 with Gemini's high-level knowledge.
+  Mandate: Prepend this data to every local `ollama run` call.
+  
+  ## 🏗️ PROJECT DNA (Architecture)
+  - Framework: Vite + Vue 3 / HTML + Vanilla CSS / Scripting.
+  - DNA: [absoluteglobalrules.yaml](file:///C:/Users/User/.gemini/antigravity/knowledge/GLOBAL_LOGIC.yaml)
+  - Aesthetic: S-CORE 95 (Dark Gradients, Glassmorphism, Rounded 16-20px).
+  
+  ## 🎨 S-CORE 95 DESIGN TOKENS
+  - Primary: Gradient (Indigo-600 → Black).
+  - Secondary: Glass (White 10% opacity, 12px blur).
+  - Typography: Plus Jakarta Sans.
+  - Spacing: 16px padding, 24px section gaps.
+  
+  ## 📜 CORE RULES
+  1. Design Tokens First: Always define CSS variables first.
+  2. Types First: Interface/Type definitions before logic.
+  3. P0 Verification: Mobile-responsive (412px), 44px touch targets.
+  4. Clean Code: No placeholders. High density.
+  
+  ---
+  
+  Gemma Context Window — Synchronization Active (2026-04-05)
+  
+</dna_node>
+

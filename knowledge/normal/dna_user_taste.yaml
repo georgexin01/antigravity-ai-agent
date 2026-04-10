@@ -1,0 +1,25 @@
+﻿# DESIGN DNA - USER TASTE (V5.0)
+# -----------------------------------------------------
+<dna_node>
+v: 5.0
+n: User_Preference_DNA
+score: Global_Design_Index
+
+fingerprints:
+  - id: FP-001 (F&B)
+    v: App group + vue3_fnb rules + dense imagery.
+  - id: FP-005 (Corp)
+    v: Website group + Corporate tone + Client DNA sync.
+  - id: FP-006 (E-Com)
+    v: App group + PWA module + Cart physics.
+
+client_dna:
+  id: CLIENT_LOCK
+  refs: [86car, japanese_food, jin_hong, zeta, golden_shop]
+  logic: Extract Brand-Tokens + Palette before UI construction.
+
+presets:
+  - id: BOOT_FASTRACK
+    rule: Skip boot-gate if all integrity checks (node_modules, .ignore) pass.
+</dna_node>
+

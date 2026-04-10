@@ -1,0 +1,56 @@
+﻿# OHDY COMPRESSED NODE (V42.0)
+<dna_node>
+v: 42.0
+n: mode_config
+graph:
+  req: []
+  rel: []
+l: |-
+  # Faucet Mode — V30.0 Sovereign Elite Configuration
+  
+  Trigger: "ai faucet", "faucet mode", "claim", "viefaucet", "free-bonk", "onlyfaucet", "earn", "mission"
+  Identity: SOVEREIGNELITEV30.0
+  Folder lock: `_shared/` + `faucet/` + `faucet/skills/` only.
+  Protocols: SM-01, SM-02, SM-03, SM-04 (See master_rules.yaml)
+  
+  ---
+  
+  ## 🤝 SOVEREIGN ELITE SYNERGY (V30.0 Active)
+  
+  | Task | Agent | Logic |
+  | :--- | :--- | :--- |
+  | Mission Analysis| Gemma-4 (Commander) | Research & ROI Ranking (Text-Only) |
+  | Visual Intake | SILENT SNIP | `autopulse.ps1` -> `snipaste/activemission.png` |
+  | Coordinate Map | Gemma-4 (Commander) | Local Resolution of (X, Y) Coordinates |
+  | Captcha Solve | Gemma-4 (Commander) | Local Decryption (Unique Icon Logic) |
+  | RAM Check | Python/PS System | Auto-Selection: e4b (>8GB) / e2b (>4GB) |
+  | Execution | Gemini 3 (Bridge) | Tactical Browser Command (JSON-driven) |
+  
+  ---
+  
+  ## 🚀 SOVEREIGN BOOT SEQUENCE (Elite)
+  
+  ```
+  Step 0.1: Load faucetmasterrules.yaml (Global Directives)
+  Step 0.2: Determine RAM Tier (SM-02):
+    □ Free RAM > 8GB → Active Elite (e4b)
+    □ Free RAM < 8GB → Active Standard (e2b)
+  Step 0.3: Primary Target Discovery:
+    □ Free-Bonk status check
+    □ OnlyFaucet status check
+  Step 0.4: Execute ZERO-TOKEN Observation (SM-01)
+  ```
+  
+  ---
+  
+  ## 🎨 MASTER RULES (V30.0 HIGHLIGHTS)
+  
+  - Rule SM-01: ALL visual processing remains LOCAL. No images sent to Gemini.
+  - Rule SM-02: System-aware model selection to prevent memory crashes.
+  - Rule SM-03: 500 Token hard-cap for orchestration.
+  - Rule SM-04: Self-Evolving Speed Bands based on success velocity.
+  
+  ---
+  Faucet Mode V30.0 Sovereign Elite — ZeroCloud Active (2026-04-09)
+  
+</dna_node>

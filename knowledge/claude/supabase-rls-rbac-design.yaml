@@ -1,0 +1,41 @@
+﻿# SKILL: SUPABASE RLS & RBAC ARCHITECTURE (V1.0)
+# -----------------------------------------------------
+<dna_node>
+v: 1.0
+n: RBAC_Mastery_Protocol
+
+database_conventions:
+  public_schema:
+    naming: snake_case
+    tables: [project, role, "user"]
+    lock: SOLID_CORE # Do not change structure
+  project_schema:
+    naming: "snake_case (tables), camelCase (columns)"
+    quoting: "Double-quote column names (e.g. \"isDelete\")"
+
+auth_hook:
+  jwt_claims:
+    projectId: UUID
+    role: TEXT
+    roleLevel: INT
+
+permission_scopes:
+  all: "Full access to resource in project"
+  own: "Access restricted to matches with auth.uid()"
+  none: "Absolute denial"
+
+role_hierarchy:
+  root_admin: { level: 0, scope: all }
+  super_admin: { level: 10, scope: all }
+  admin: { level: 20, scope: all }
+  user: { level: 100, scope: own }
+
+implementation_rules:
+  - id: SEC.01
+    n: Schema Isolation
+    v: "One user -> One Project -> One Schema."
+  - id: SEC.02
+    n: RLS Authorize
+    v: "Use {project_schema}.authorize('resource', 'action') helper for all policies."
+</dna_node>
+

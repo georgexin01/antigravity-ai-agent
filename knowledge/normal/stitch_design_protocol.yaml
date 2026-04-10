@@ -1,0 +1,43 @@
+﻿# OHDY COMPRESSED NODE (V42.0)
+<dna_node>
+v: 42.0
+n: stitch_design_protocol
+graph:
+  req: []
+  rel: []
+l: |-
+  # Stitch "Taste Design" Protocol: Anti-Slop Engineering (V27.2)
+  
+  This protocol, extracted from the Stitch MCP core logic, defines the "High-Taste" standards for professional-grade frontend development. These rules are MANDATORY for all "Authority Class" missions.
+  
+  ---
+  
+  ## 🚫 1. BANNED PATTERNS (THE SLOP-LIST)
+  
+  To avoid the generic "AI-generated" look, the following patterns are strictly BANNED:
+  
+  1.  Pure Black (#000000): BANNED. Use deep Off-Blacks (e.g., `#010203`, `#050608`).
+  2.  Generic Typography: `Inter` font is BANNED for headers and premium brand identities. Generic serifs (Times New Roman, Georgia) are BANNED.
+  3.  Neon Glow Overload: "AI Purple/Blue" neon glows are BANNED. Use refined, single-hue accents with saturation < 80%.
+  4.  3-Column Equal Grid: BANNED: Rows of three equal-width cards. Use Asymmetric Layouts (e.g., 2/3 - 1/3, Zig-Zag).
+  5.  Filler Micro-copy: BANNED: "Seamless," "Elevate," "Unleash," "Next-Gen," "Empower."
+  6.  Generic Spinners: BANNED. Use Layout-Synced Skeletal Loaders.
+  
+  ---
+  
+  ## 🏗️ 2. MANDATED ARCHITECTURE (THE TASTE-CORE)
+  
+  Every component must follow these "High-Taste" mandates:
+  
+  1.  Atmospheric Density: Define and maintain a specific visual density (e.g., "Industrial Dense" vs "Galleria Airy").
+  2.  Asymmetric Hierarchy: Force variance in layout. No center-aligned "wall of text."
+  3.  No-Overlap Policy: Every element occupies its own spatial zone. No absolute stacking or overlapping.
+  4.  Spring-Physics Only: All motion must use spring dynamics (`stiffness: 100`, `damping: 20`). NO linear easing.
+  5.  Perpetual Micro-Interactions: Active UI nodes must have subtle, infinite loops (Pulse, Shimmer, Float).
+  
+  ---
+  
+  Protocol Update: Stitch Taste Design (2026-04-04)
+  Status: ACTIVE GORILLA PROTOCOL.
+  
+</dna_node>

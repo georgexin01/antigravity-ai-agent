@@ -1,0 +1,205 @@
+﻿# OHDY COMPRESSED NODE (V42.0)
+<dna_node>
+v: 42.0
+n: 08_Quality_Checklist
+graph:
+  req: []
+  rel: []
+l: |-
+  # Quality Checklist: Module Verification (V2.0)
+  
+  When: Run after completing all 10 pipeline steps
+  Rule: Every checkbox must pass before marking the module as "done"
+  
+  ---
+  
+  ## 1. TYPE SAFETY (src/types/{entity}.ts)
+  
+  - [ ] DB interface matches SQL columns exactly (name, type, nullable)
+  - [ ] Golden Five columns present: `id`, `status`, `isdelete`, `createdat`, `updated_at`
+  - [ ] App/View interface has only UI-needed fields with correct transformed types
+  - [ ] FormValues interface excludes system columns (id, status, is_delete, timestamps)
+  - [ ] FK join interface exists if entity has foreign keys
+  - [ ] All types re-exported from `src/types/index.ts`
+  - [ ] No `any` types (use `Record<string, unknown>` or specific type)
+  
+  ---
+  
+  ## 2. STORE CORRECTNESS (src/stores/{entity}.ts)
+  
+  - [ ] Uses `defineStore('name', () => { ... })` setup syntax
+  - [ ] `$reset()` resets ALL refs and is returned from store
+  - [ ] `getList()` filters `is_delete=eq.false` and `status=eq.1`
+  - [ ] `getList()` sets `loading = true/false` with try/finally
+  - [ ] `getDetail(id)` checks local cache before API call
+  - [ ] `create()` uses `Prefer: return=representation` header
+  - [ ] `update()` sets `updated_at` to current timestamp
+  - [ ] `remove()` does SOFT delete (`is_delete: true`), not hard DELETE
+  - [ ] All async actions wrapped in try/catch
+  - [ ] DB->App transform function is separate (testable, reusable)
+  - [ ] FK joins use PostgREST syntax: `select=*,parent:fkColumn(id,name)`
+  - [ ] Store re-exported from `src/stores/index.ts`
+  
+  ---
+  
+  ## 3. LIST VIEW (src/views/{entity}/list.vue)
+  
+  - [ ] Follows 1-to-6 Order: Imports -> Defines -> Stores -> State -> Lifecycle -> Functions
+  - [ ] `onMounted` calls `store.getList()` with loading state
+  - [ ] Three-state rendering: `v-if="loading"` / `v-else-if="empty"` / `v-else`
+  - [ ] Each list item has stable `:key="item.id"`
+  - [ ] Click handler navigates to detail page
+  - [ ] Mobile-responsive grid: `grid-cols-1 sm:grid-cols-2 lg:grid-cols-3`
+  - [ ] Image fallback for missing images (letter avatar or default)
+  - [ ] Search input filters local data (if entity has title/name field)
+  
+  ---
+  
+  ## 4. DETAIL VIEW (src/views/{entity}/detail.vue)
+  
+  - [ ] Supports dual mode via props: `entityId` + `mode` (page/embedded)
+  - [ ] Page mode reads ID from `route.params.id`
+  - [ ] Embedded mode reads ID from `props.entityId`
+  - [ ] Loading and not-found states handled
+  - [ ] Back button visible in page mode only
+  - [ ] All entity fields displayed with proper formatting
+  - [ ] Dates formatted (not raw ISO strings)
+  - [ ] Status shown as label (not raw number)
+  
+  ---
+  
+  ## 5. FORM VIEW (src/views/{entity}/form.vue)
+  
+  - [ ] Props: `entity` (null=create, object=edit)
+  - [ ] Emits: `submit`, `cancel`
+  - [ ] Form initialized with empty defaults (create mode)
+  - [ ] Watch populates form from entity prop (edit mode)
+  - [ ] Required fields validated before submit
+  - [ ] Submit button disabled while `submitting=true`
+  - [ ] Button text changes: "Create" vs "Save" based on mode
+  - [ ] Cancel button emits `cancel` event
+  
+  ---
+  
+  ## 6. ROUTER (src/router/index.ts)
+  
+  - [ ] List route: `/{entity}` with `requiresAuth: true`
+  - [ ] Detail route: `/{entity}/:id` with `requiresAuth: true`
+  - [ ] Create/Edit routes added if form exists
+  - [ ] Route names follow PascalCase: `{Entity}List`, `{Entity}Detail`
+  - [ ] Lazy-loaded: `component: () => import('@/views/...')`
+  
+  ---
+  
+  ## 7. API & NETWORK
+  
+  - [ ] All API calls go through `requestClient` (never raw axios/fetch)
+  - [ ] PostgREST URL is correct: `/rest/v1/{exacttablename}`
+  - [ ] Schema headers set: `Accept-Profile` + `Content-Profile`
+  - [ ] No hardcoded URLs in components or stores
+  - [ ] Pagination implemented if list can exceed 50 records
+  - [ ] Error responses handled gracefully (no unhandled promise rejections)
+  
+  ---
+  
+  ## 8. SECURITY
+  
+  - [ ] No API keys or secrets in source code (only in .env files)
+  - [ ] JWT token attached via interceptor (not manually per request)
+  - [ ] 401 response triggers logout + redirect to login
+  - [ ] User input sanitized before display (no v-html with user data)
+  - [ ] Form data validated before sending to API
+  
+  ---
+  
+  ## 9. UI/UX
+  
+  - [ ] Viewport meta tag: `width=412` (not `device-width`)
+  - [ ] Mobile-first responsive design
+  - [ ] Loading spinners for async operations
+  - [ ] Error feedback for failed operations (toast or inline message)
+  - [ ] Empty states have helpful messages (not blank screens)
+  - [ ] Images have `@error` fallback handler
+  - [ ] No layout shift during data loading
+  
+  ---
+  
+  ## 10. CODE QUALITY
+  
+  - [ ] `<script setup lang="ts">` used (no Options API)
+  - [ ] 1-to-6 Order followed in all components
+  - [ ] No `console.log` left (only `console.error` in catch blocks)
+  - [ ] No unused imports
+  - [ ] No TypeScript errors (`vue-tsc --noEmit` passes)
+  - [ ] Consistent naming: camelCase variables, PascalCase components, kebab-case files
+  
+  ---
+  
+  ## COMMON MISTAKES (WRONG -> CORRECT)
+  
+  ### Store:
+  ```typescript
+  // WRONG: Using supabase JS client
+  import { supabase } from '@/lib/supabase'
+  const { data } = await supabase.from('entity').select('*')
+  
+  // CORRECT: Using Axios requestClient with PostgREST URL
+  import { requestClient } from '@/api/request'
+  const data = await requestClient.get('/entity', { params: { select: '*' } })
+  ```
+  
+  ### Types:
+  ```typescript
+  // WRONG: Using camelCase for DB interface when SQL uses snake_case
+  export interface Lesson {
+    createdAt: string  // SQL column is created_at
+  }
+  
+  // CORRECT: Match SQL column names exactly
+  export interface Lesson {
+    created_at: string  // Exact match to SQL
+  }
+  ```
+  
+  ### Store Reset:
+  ```typescript
+  // WRONG: Missing $reset (logout will fail)
+  export const useEntityStore = defineStore('entity', () => {
+    const items = ref([])
+    return { items }
+  })
+  
+  // CORRECT: Always include $reset
+  export const useEntityStore = defineStore('entity', () => {
+    const items = ref([])
+    function $reset() { items.value = [] }
+    return { items, $reset }
+  })
+  ```
+  
+  ### Detail View:
+  ```typescript
+  // WRONG: Only supporting page mode
+  const id = route.params.id as string
+  
+  // CORRECT: Dual mode support
+  const resolvedId = props.mode === 'embedded'
+    ? props.entityId
+    : (route.params.id as string)
+  ```
+  
+  ### List View:
+  ```html
+  
+  <div v-for="item in items" :key="item.id">...</div>
+  
+  <div v-if="loading">Loading...</div>
+  <div v-else-if="items.length === 0">No records</div>
+  <div v-else v-for="item in items" :key="item.id">...</div>
+  ```
+  
+  ---
+  
+  Claude-Frontend Master Manual V2.0 (2026-04-08)
+  
+</dna_node>

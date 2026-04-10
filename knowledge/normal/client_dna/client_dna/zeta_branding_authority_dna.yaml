@@ -1,0 +1,21 @@
+﻿# MASTER CLIENT: ZETA BRANDING (V30.0)
+# -----------------------------------------------------
+<dna_node>
+v: 30.0
+id: ZETA_AUTHORITY
+branding:
+  name: "Zeta"
+  aesthetic: "Cinematic Dark-Tech / Industrial"
+  palette: ["#FF0000 (Pure Red)", "#000000 (Black)", "#FFFFFF (White)"]
+  tokens:
+    glass: [blur_4px, opacity_0.05, border_1px_red]
+    glow: [red_neon, 15px_blur]
+
+design_harden:
+  - id: ZETA.HARDEN.01
+    n: Absolute Red Conformity
+    v: "Every primary action must use Zeta Red (#FF0000) or high-contrast Red gradients."
+
+rel: [design_patterns/liquid_glass]
+</dna_node>
+

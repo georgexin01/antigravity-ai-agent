@@ -4,7 +4,7 @@ Mobile UX Audit Script - Full Mobile Design Coverage
 
 Analyzes React Native / Flutter code for compliance with:
 
-1. TOUCH PSYCHOLOGY (touch-psychology.md):
+1. TOUCH PSYCHOLOGY (touch-psychology.yaml):
    - Touch Target Sizes (44pt iOS, 48dp Android, 44px WCAG)
    - Touch Target Spacing (8px minimum gap)
    - Thumb Zone Placement (primary CTAs at bottom)
@@ -13,7 +13,7 @@ Analyzes React Native / Flutter code for compliance with:
    - Touch Feedback Timing (<50ms)
    - Touch Accessibility (motor impairment support)
 
-2. MOBILE PERFORMANCE (mobile-performance.md):
+2. MOBILE PERFORMANCE (mobile-performance.yaml):
    - ScrollView vs FlatList (CRITICAL)
    - React.memo for List Items
    - useCallback for renderItem
@@ -24,39 +24,39 @@ Analyzes React Native / Flutter code for compliance with:
    - Inline Function Detection
    - Animation Performance (transform/opacity only)
 
-3. MOBILE NAVIGATION (mobile-navigation.md):
+3. MOBILE NAVIGATION (mobile-navigation.yaml):
    - Tab Bar Max Items (5)
    - Tab State Preservation
    - Proper Back Handling
    - Deep Link Support
    - Navigation Structure
 
-4. MOBILE TYPOGRAPHY (mobile-typography.md):
+4. MOBILE TYPOGRAPHY (mobile-typography.yaml):
    - System Font Usage
    - Dynamic Type Support (iOS)
    - Text Scaling Constraints
    - Mobile Line Height
    - Font Size Limits
 
-5. MOBILE COLOR SYSTEM (mobile-color-system.md):
+5. MOBILE COLOR SYSTEM (mobile-color-system.yaml):
    - Pure Black Avoidance (#000000)
    - OLED Optimization
    - Dark Mode Support
    - Contrast Ratios
 
-6. PLATFORM iOS (platform-ios.md):
+6. PLATFORM iOS (platform-ios.yaml):
    - SF Symbols Usage
    - iOS Navigation Patterns
    - iOS Haptic Types
    - iOS-Specific Components
 
-7. PLATFORM ANDROID (platform-android.md):
+7. PLATFORM ANDROID (platform-android.yaml):
    - Material Icons Usage
    - Android Navigation Patterns
    - Ripple Effects
    - Android-Specific Components
 
-8. MOBILE BACKEND (mobile-backend.md):
+8. MOBILE BACKEND (mobile-backend.yaml):
    - Secure Storage (NOT AsyncStorage)
    - Offline Handling
    - Push Notification Support

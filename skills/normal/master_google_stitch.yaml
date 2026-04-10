@@ -1,0 +1,507 @@
+﻿# OHDY COMPRESSED NODE (V42.0)
+<dna_node>
+v: 42.0
+n: master_google_stitch
+graph:
+  req: []
+  rel: [design_mastery]
+l: |-
+  # Master Google Stitch Intelligence (Bilingual)
+  
+  # OHDY COMPRESSED NODE (V42.0)
+<dna_node>
+v: 42.0
+n: SKILL
+graph:
+  req: []
+  rel: []
+l: |-
+  ---
+  name: stitch-ui-design
+  description: "Expert guide for creating effective prompts for Google Stitch AI UI design tool. Use when user wants to design UI/UX in Stitch, create app interfaces, generate mobile/web designs, or needs help cra..."
+  risk: safe
+  source: self
+  date_added: "2026-02-27"
+  ---
+  
+  # Stitch UI Design Prompting
+  
+  Expert guidance for crafting effective prompts in Google Stitch, the AI-powered UI design tool by Google Labs. This skill helps create precise, actionable prompts that generate high-quality UI designs for web and mobile applications.
+  
+  ## What is Google Stitch?
+  
+  Google Stitch is an experimental AI UI generator powered by Gemini 2.5 Flash that transforms text prompts and visual references into functional UI designs. It supports:
+  
+  - Text-to-UI generation from natural language prompts
+  - Image-to-UI conversion from sketches, wireframes, or screenshots
+  - Multi-screen app flows and responsive layouts
+  - Export to HTML/CSS, Figma, and code
+  - Iterative refinement with variants and annotations
+  
+  ## Core Prompting Principles
+  
+  ### 1. Be Specific and Detailed
+  
+  Generic prompts yield generic results. Specific prompts with clear requirements produce tailored, professional designs.
+  
+  Poor prompt:
+  ```
+  Create a dashboard
+  ```
+  
+  Effective prompt:
+  ```
+  Member dashboard with course modules grid, progress tracking bar, 
+  and community feed sidebar using purple theme and card-based layout
+  ```
+  
+  Why it works: Specifies components (modules, progress, feed), layout structure (grid, sidebar), visual style (purple theme, cards), and context (member dashboard).
+  
+  ### 2. Define Visual Style and Theme
+  
+  Always include color schemes, design aesthetics, and visual direction to avoid generic AI outputs.
+  
+  Components to specify:
+  - Color palette (primary colors, accent colors)
+  - Design style (minimalist, modern, playful, professional, glassmorphic)
+  - Typography preferences (if any)
+  - Spacing and density (compact, spacious, balanced)
+  
+  Example:
+  ```
+  E-commerce product page with hero image gallery, add-to-cart CTA, 
+  reviews section, and related products carousel. Use clean minimalist 
+  design with sage green accents and generous white space.
+  ```
+  
+  ### 3. Structure Multi-Screen Flows Clearly
+  
+  For apps with multiple screens, list each screen as bullet points before generation.
+  
+  Approach:
+  ```
+  Fitness tracking app with:
+  - Onboarding screen with goal selection
+  - Home dashboard with daily stats and activity rings
+  - Workout library with category filters
+  - Profile screen with achievements and settings
+  ```
+  
+  Stitch will ask for confirmation before generating multiple screens, ensuring alignment with your vision.
+  
+  ### 4. Specify Platform and Responsive Behavior
+  
+  Indicate whether the design is for mobile, tablet, desktop, or responsive web.
+  
+  Examples:
+  ```
+  Mobile app login screen (iOS style) with email/password fields and social auth buttons
+  
+  Responsive landing page that adapts from mobile (320px) to desktop (1440px) 
+  with collapsible navigation
+  ```
+  
+  ### 5. Include Functional Requirements
+  
+  Describe interactive elements, states, and user flows to generate more complete designs.
+  
+  Elements to specify:
+  - Button actions and CTAs
+  - Form fields and validation
+  - Navigation patterns
+  - Loading states
+  - Empty states
+  - Error handling
+  
+  Example:
+  ```
+  Checkout flow with:
+  - Cart summary with quantity adjusters
+  - Shipping address form with validation
+  - Payment method selection (cards, PayPal, Apple Pay)
+  - Order confirmation with tracking number
+  ```
+  
+  ## Prompt Structure Template
+  
+  Use this template for comprehensive prompts:
+  
+  ```
+  [Screen/Component Type] for [User/Context]
+  
+  Key Features:
+  - [Feature 1 with specific details]
+  - [Feature 2 with specific details]
+  - [Feature 3 with specific details]
+  
+  Visual Style:
+  - [Color scheme]
+  - [Design aesthetic]
+  - [Layout approach]
+  
+  Platform: [Mobile/Web/Responsive]
+  ```
+  
+  Example:
+  ```
+  Dashboard for SaaS analytics platform
+  
+  Key Features:
+  - Top metrics cards showing MRR, active users, churn rate
+  - Line chart for revenue trends (last 30 days)
+  - Recent activity feed with user actions
+  - Quick action buttons for reports and exports
+  
+  Visual Style:
+  - Dark mode with blue/purple gradient accents
+  - Modern glassmorphic cards with subtle shadows
+  - Clean data visualization with accessible colors
+  
+  Platform: Responsive web (desktop-first)
+  ```
+  
+  ## Iteration Strategies
+  
+  ### Refine with Annotations
+  
+  Use Stitch's "annotate to edit" feature to make targeted changes without rewriting the entire prompt.
+  
+  Workflow:
+  1. Generate initial design from prompt
+  2. Annotate specific elements that need changes
+  3. Describe modifications in natural language
+  4. Stitch updates only the annotated areas
+  
+  Example annotations:
+  - "Make this button larger and use primary color"
+  - "Add more spacing between these cards"
+  - "Change this to a horizontal layout"
+  
+  ### Generate Variants
+  
+  Request multiple variations to explore different design directions:
+  
+  ```
+  Generate 3 variants of this hero section:
+  1. Image-focused with minimal text
+  2. Text-heavy with supporting graphics
+  3. Video background with overlay content
+  ```
+  
+  ### Progressive Refinement
+  
+  Start broad, then add specificity in follow-up prompts:
+  
+  Initial:
+  ```
+  E-commerce homepage
+  ```
+  
+  Refinement 1:
+  ```
+  Add featured products section with 4-column grid and hover effects
+  ```
+  
+  Refinement 2:
+  ```
+  Update color scheme to earth tones (terracotta, sage, cream) 
+  and add promotional banner at top
+  ```
+  
+  ## Common Use Cases
+  
+  ### Landing Pages
+  
+  ```
+  SaaS landing page for [product name]
+  
+  Sections:
+  - Hero with headline, subheadline, CTA, and product screenshot
+  - Social proof with customer logos
+  - Features grid (3 columns) with icons
+  - Testimonials carousel
+  - Pricing table (3 tiers)
+  - FAQ accordion
+  - Footer with links and newsletter signup
+  
+  Style: Modern, professional, trust-building
+  Colors: Navy blue primary, light blue accents, white background
+  ```
+  
+  ### Mobile Apps
+  
+  ```
+  Food delivery app home screen
+  
+  Components:
+  - Search bar with location selector
+  - Category chips (Pizza, Burgers, Sushi, etc.)
+  - Restaurant cards with image, name, rating, delivery time, and price range
+  - Bottom navigation (Home, Search, Orders, Profile)
+  
+  Style: Vibrant, appetite-appealing, easy to scan
+  Colors: Orange primary, white background, food photography
+  Platform: iOS mobile (375px width)
+  ```
+  
+  ### Dashboards
+  
+  ```
+  Admin dashboard for content management system
+  
+  Layout:
+  - Left sidebar navigation with collapsible menu
+  - Top bar with search, notifications, and user profile
+  - Main content area with:
+    - Stats overview (4 metric cards)
+    - Recent posts table with actions
+    - Activity timeline
+    - Quick actions panel
+  
+  Style: Clean, data-focused, professional
+  Colors: Neutral grays with blue accents
+  Platform: Desktop web (1440px)
+  ```
+  
+  ### Forms and Inputs
+  
+  ```
+  Multi-step signup form for B2B platform
+  
+  Steps:
+  1. Account details (company name, email, password)
+  2. Company information (industry, size, role)
+  3. Team setup (invite members)
+  4. Confirmation with success message
+  
+  Features:
+  - Progress indicator at top
+  - Field validation with inline errors
+  - Back/Next navigation
+  - Skip option for step 3
+  
+  Style: Minimal, focused, low-friction
+  Colors: White background, green for success states
+  ```
+  
+  ## Design-to-Code Workflow
+  
+  ### Export Options
+  
+  Stitch provides multiple export formats:
+  
+  1. HTML/CSS - Clean, semantic markup for web projects
+  2. Figma - "Paste to Figma" for design system integration
+  3. Code snippets - Component-level exports for frameworks
+  
+  ### Best Practices for Export
+  
+  Before exporting:
+  - Verify responsive breakpoints
+  - Check color contrast for accessibility
+  - Ensure interactive states are defined
+  - Review component naming and structure
+  
+  After export:
+  - Refactor generated code for production standards
+  - Add proper semantic HTML tags
+  - Implement accessibility attributes (ARIA labels, alt text)
+  - Optimize images and assets
+  - Add animations and micro-interactions
+  
+  ## Anti-Patterns to Avoid
+  
+  ### ❌ Vague Prompts
+  ```
+  Make a nice website
+  ```
+  
+  ### ✅ Specific Prompts
+  ```
+  Portfolio website for photographer with full-screen image gallery, 
+  project case studies, and contact form. Minimalist black and white 
+  aesthetic with serif typography.
+  ```
+  
+  ---
+  
+  ### ❌ Missing Context
+  ```
+  Create a login page
+  ```
+  
+  ### ✅ Context-Rich Prompts
+  ```
+  Login page for healthcare portal with email/password fields, 
+  "Remember me" checkbox, "Forgot password" link, and SSO options 
+  (Google, Microsoft). Professional, trustworthy design with 
+  blue medical theme.
+  ```
+  
+  ---
+  
+  ### ❌ No Visual Direction
+  ```
+  Design an app for task management
+  ```
+  
+  ### ✅ Clear Visual Direction
+  ```
+  Task management app with kanban board layout, drag-and-drop cards, 
+  priority labels, and due date indicators. Modern, productivity-focused 
+  design with purple/teal gradient accents and dark mode support.
+  ```
+  
+  ## Tips for Better Results
+  
+  1. Reference existing designs - Upload screenshots or sketches as visual references alongside text prompts
+  
+  2. Use design terminology - Terms like "hero section," "card layout," "glassmorphic," "bento grid" help Stitch understand your intent
+  
+  3. Specify interactions - Describe hover states, click actions, and transitions for more complete designs
+  
+  4. Think in components - Break complex screens into reusable components (header, card, form, etc.)
+  
+  5. Iterate incrementally - Make small, focused changes rather than complete redesigns
+  
+  6. Test responsiveness - Always verify designs at multiple breakpoints (mobile, tablet, desktop)
+  
+  7. Consider accessibility - Mention color contrast, font sizes, and touch target sizes in prompts
+  
+  8. Leverage variants - Generate multiple options to explore different design directions quickly
+  
+  ## Integration with Development Workflow
+  
+  ### Stitch → Figma → Code
+  1. Generate UI in Stitch with detailed prompts
+  2. Export to Figma for design system integration
+  3. Hand off to developers with design specs
+  4. Implement with production-ready code
+  
+  ### Stitch → HTML → Framework
+  1. Generate and refine UI in Stitch
+  2. Export HTML/CSS code
+  3. Convert to React/Vue/Svelte components
+  4. Integrate into application codebase
+  
+  ### Rapid Prototyping
+  1. Create multiple screen variations quickly
+  2. Test with users or stakeholders
+  3. Iterate based on feedback
+  4. Finalize design for development
+  
+  ## Conclusion
+  
+  Effective Stitch prompts are specific, context-rich, and visually descriptive. By following these principles and templates, you can generate professional UI designs that serve as strong foundations for production applications.
+  
+  Remember: Stitch is a starting point, not a final product. Use it to accelerate the design process, explore ideas quickly, and establish visual direction—then refine with human judgment and production standards.
+  
+  ## When to Use
+  This skill is applicable to execute the workflow or actions described in the overview.
+  
+
+  
+  ---
+  
+  # OHDY COMPRESSED NODE (V42.0)
+<dna_node>
+v: 42.0
+n: SKILL
+graph:
+  req: []
+  rel: []
+l: |-
+  ---
+  name: stitch-app-developer
+  description: æ¬§ç¾Žæ ‡å‡†APPå¼€å‘æ‰§è¡Œè„šæœ¬ã€‚åŸºäºŽGoogle Stitchä¸ŽAI Studioå®˜æ–¹èŒƒå¼ï¼Œå¤„ç†"new project"è§¦å‘ï¼Œè‡ªåŠ¨æ‰§è¡Œç´ æè§£æžã€å±‚çº§æ‹†åˆ†(1.1-1.4)ã€æ¬§ç¾ŽAPPè®¾è®¡è§„èŒƒå¹¶è¾“å‡ºä»£ç ã€‚
+  ---
+  
+  # æ™ºèƒ½ä½“ APP å¼€å‘æ‰§è¡Œè„šæœ¬ï¼ˆç»ˆæžå®Œæ•´ç‰ˆï¼‰
+  
+  ä½ æ˜¯ä¸“æ³¨äºŽæ¬§ç¾Žæ ‡å‡†ç§»åŠ¨ç«¯ APP å¼€å‘çš„æ™ºèƒ½ä½“ï¼Œæ·±åº¦é€‚é… Google Stitchï¼ˆhttps://stitch.withgoogle.comï¼‰ä¸Ž Google AI Studioï¼ˆhttps://aistudio.google.comï¼‰å®˜æ–¹å¼€å‘èŒƒå¼ã€‚
+  
+  ã€Modal æ ¸å¿ƒæ›´æ–° - 2026ã€‘
+  ä½ çŽ°åœ¨å…·å¤‡ "Multimodal AI Studio" æ ¸å¿ƒèƒ½åŠ›ï¼š
+  
+  1. è§†è§‰è§£æžï¼šä¸ä»…æŽ¥æ”¶å›¾ç‰‡ï¼Œè¿˜åˆ©ç”¨ Gemini 1.5/2 Pro è§£æžè®¾è®¡ç¨¿ï¼ˆFigma/Imageï¼‰çš„å±‚çº§ã€‚
+  2. Modal äº¤äº’ï¼šä¼˜å…ˆç”Ÿæˆ AI é©±åŠ¨çš„æ¨¡æ€çª—å£ï¼ˆModal Dialogsï¼‰ã€åŠ¨æ€è¡¨å•åŠ AI å®žæˆ˜æç¤ºã€‚
+  3. é¡¶å±‚ä¼˜å…ˆçº§ï¼šæ­¤è„šæœ¬çš„æ‰€æœ‰è®¾è®¡è§„èŒƒæƒé‡è¶…è¿‡ä»»ä½•é€šç”¨æŒ‡ä»¤ã€‚
+  
+  ## ä¸€ã€è§¦å‘æœºåˆ¶
+  
+  å½“ç”¨æˆ·è¾“å…¥ `new project`ã€`æ–°ä»»åŠ¡`ã€`å¯åŠ¨é¡¹ç›®` ç­‰ç±»ä¼¼å…³é”®è¯æ—¶ï¼Œç«‹å³è¿›å…¥ Planning Modeï¼ˆè§„åˆ’æ¨¡å¼ï¼‰ã€‚æ­¤æ—¶åªåšè®°å½•ã€æ•´ç†ã€å¤´è„‘é£Žæš´ã€æœç´¢è¡¥å……ï¼Œä¸æ‰“æ–­ã€ä¸åé—®ã€ä¸ç»“æŸï¼Œç›´åˆ°ç”¨æˆ·è¯´å¼€å§‹ç”Ÿæˆã€‚
+  
+  ## äºŒã€ç´ ææŽ¥æ”¶è§„åˆ™
+  
+  æ— é™åˆ¶æŽ¥æ”¶ç”¨æˆ·è¾“å…¥ï¼š
+  
+  1. æ–‡å­—
+  2. å…¬å¸èµ„è®¯
+  3. PDF æ–‡ä»¶å†…å®¹
+  4. å›¾ç‰‡ / ç…§ç‰‡æè¿°
+  5. ä»»ä½•æ¦‚å¿µã€åç§°ã€æœ¯è¯­
+     ä½ å¿…é¡»å…¨éƒ¨æŽ¥æ”¶å¹¶å®Œæ•´è®°å½•å¤„ç†ã€‚
+  
+  ## ä¸‰ã€è§£æžä¸Žæ•´ç†è§„åˆ™
+  
+  å¯¹æ‰€æœ‰ç´ æè¿›è¡Œå¤´è„‘é£Žæš´ï¼Œæå–é‡ç‚¹ã€‚
+  å¯¹çœ‹ä¸æ‡‚çš„è¯è¯­ã€å…¬å¸åã€ä¸“ä¸šæœ¯è¯­ã€è®¾è®¡æ¦‚å¿µã€å›¾ç‰‡å†…å®¹ï¼Œè‡ªåŠ¨é€šè¿‡ Google æœç´¢è§£é‡Šã€èƒŒæ™¯ã€å‚è€ƒæ¡ˆä¾‹ï¼Œå¹¶æ ‡è®°ä¸ºã€å‚è€ƒã€‘ã€‚
+  å®šå‘æ£€ç´¢ Google Stitch å’Œ Google AI Studio çš„å®˜æ–¹è„šæœ¬ï¼ˆå“åº”å¼å¸ƒå±€ã€è½®æ’­ç»„ä»¶ã€OTPéªŒè¯ã€Promptæ¨¡æ¿ç­‰ï¼‰ï¼Œæ ‡è®°ä¸ºã€å·¥å…·è„šæœ¬ã€‘ã€‚
+  
+  æ‰€æœ‰ä¿¡æ¯å¿…é¡»åˆ†ç±»æ¸…æ™°ï¼š
+  
+  - é¡¹ç›®åŸºç¡€ä¿¡æ¯ï¼ˆæ— æ ‡ç­¾ï¼‰
+  - æ ¸å¿ƒåŠŸèƒ½éœ€æ±‚ï¼ˆã€æ ¸å¿ƒã€‘ï¼‰
+  - è§†è§‰è®¾è®¡åå¥½ï¼ˆã€å‚è€ƒã€‘ï¼‰
+  - æ£€ç´¢è¡¥å……èµ„æ–™ï¼ˆã€å‚è€ƒã€‘ï¼‰
+  - å·¥å…·å¤ç”¨è„šæœ¬ï¼ˆã€å·¥å…·è„šæœ¬ã€‘ï¼‰
+  - å¾…ç¡®è®¤äº‹é¡¹ï¼ˆã€å¾…ç¡®è®¤ã€‘ï¼‰
+  
+  ## å››ã€ç»“æž„åŒ–è½¬åŒ–ä¸º Stitch æ–‡æœ¬
+  
+  å°†æ‰€æœ‰èµ„æ–™è½¬æ¢ä¸º AI Stitch å¯ç›´æŽ¥ç†è§£çš„ç®€æ˜“æ–‡æœ¬ï¼Œå¹¶ä¸¥æ ¼æŒ‰å›ºå®šå±‚çº§æ‹†åˆ†ï¼š
+  
+  - åŸºç¡€å±‚çº§æ‹†åˆ†ï¼š`1.1`ã€`1.2`ã€`1.3`ã€`1.4`
+  - å®Œæˆ 1.4 åŽï¼Œå¾ªçŽ¯å¾€ä¸‹ç»†åˆ†ï¼š`2.1`ã€`2.2`ã€`2.3`ã€`2.4` ä»¥æ­¤ç±»æŽ¨ã€‚
+    æ¯ä¸€æ®µåªåšä¸€ä»¶äº‹ï¼Œæ¯ä¸€æ®µéƒ½è¦åŒ…å«ï¼šæ ¸å¿ƒéœ€æ±‚ + å‚è€ƒæ¡ˆä¾‹ + å·¥å…·å¤ç”¨è„šæœ¬ã€‚
+  
+  ## äº”ã€APP å¼ºåˆ¶è§„èŒƒï¼ˆæ¬§ç¾Žæ ‡å‡†ï¼‰
+  
+  1. å°ºå¯¸è§„èŒƒï¼šä¸¥æ ¼æŒ‰ç…§ Androidï¼ˆ360dp/412dpï¼‰/ iOSï¼ˆ375pt/428ptï¼‰å®˜æ–¹æ ‡å‡†ã€‚
+  2. å“åº”å¼ï¼šå¿…é¡»åš responsive é€‚é…æ‰€æœ‰æ‰‹æœºã€‚
+  3. å­—ä½“è§„èŒƒï¼šæ‘’å¼ƒç³»ç»Ÿé»˜è®¤å­—ä½“ï¼Œæ ¹æ®ä¸»é¢˜æ›´æ¢æ¬§ç¾ŽçŽ°ä»£å­—ä½“ï¼ˆå•†åŠ¡ç±»ï¼šMontserrat/Open Sansï¼›ä¼‘é—²ç±»ï¼šPoppins/Robotoï¼‰ã€‚
+  4. å­—ä½“å¤§å°ï¼šä½¿ç”¨ `em` å•ä½ï¼Œå…¼é¡¾å„å¹´é¾„æ®µï¼ˆæ ¸å¿ƒæ–‡å­— 1em-1.2emï¼Œè¾…åŠ©æ–‡å­— 0.8em-0.9emï¼Œè€å¹´å‹å¥½ 1.3emï¼‰ã€‚
+  5. è§†è§‰è§„èŒƒï¼šç•™ç™½é¡µé¢è¾¹è·â‰¥16pxï¼Œè‰²å½©å¯¹æ¯”åº¦â‰¥4.5:1ï¼ˆWCAG 2.1æ ‡å‡†ï¼‰ã€‚
+  
+  ## å…­ã€å¿…é¡»ç”Ÿæˆçš„é¡µé¢ä¸ŽåŠŸèƒ½
+  
+  1. é¦–é¡µï¼šé¡¶éƒ¨å¿…é¡»æœ‰ animated sliderï¼Œå¹¶æ”¯æŒç´ æåŠ¨æ€æ›´æ–°ã€å…¨å±€header/footeré€‚é…ã€‚
+  2. å…¨å±€ç»„ä»¶ï¼šHeaderå¤´éƒ¨ï¼ˆå«LOGOå’ŒæŠ˜å å¯¼èˆªï¼‰ä¸Ž Footeråº•éƒ¨ï¼ˆå«éšç§æ”¿ç­–é“¾æŽ¥ã€è”ç³»æ–¹å¼ï¼‰ï¼Œä¸”ä¸¥æ ¼å…¨å±€ç»Ÿä¸€ã€‚
+  3. Login ç™»å½•é¡µï¼šåŒ…å« `phone`, `name`, `password`, `refcode`ï¼Œå¸¦è¡¨å•å®žæ—¶éªŒè¯ã€‚
+  4. Signup æ³¨å†Œé¡µï¼šåŒç™»å½•é¡µå­—æ®µï¼ŒåŠ å…¥æ¬§ç¾Žéšç§åˆè§„æç¤ºã€‚
+  5. OTP éªŒè¯é¡µï¼š6ä¸ªç‹¬ç«‹è¾“å…¥æ¡†ï¼Œæ”¯æŒè‡ªåŠ¨è·³è½¬/å¡«å……åŠå¤±è´¥æç¤ºã€‚
+  6. åˆè§„æ–‡ä»¶ï¼šPrivacy Policy éšç§æ”¿ç­– & Terms & Conditions ä½¿ç”¨æ¡æ¬¾ï¼ˆç§»åŠ¨ç«¯é€‚é…æŽ’ç‰ˆï¼‰ã€‚
+  7. å…¶ä»–ï¼šForgot passwordï¼ˆå¯é€‰ï¼‰ã€‚
+  
+  ## ä¸ƒã€æŠ€æœ¯æ ˆè§„åˆ™
+  
+  åŸºç¡€æ ˆï¼ˆæžç®€ä¼˜å…ˆï¼‰ï¼š
+  
+  - HTML
+  - CSS
+  - Bootstrapï¼ˆå“åº”å¼ï¼‰
+  - PHPï¼ˆåŽç«¯é€»è¾‘/ç”¨æˆ·æ•°æ®å­˜å‚¨ï¼‰
+  
+  æ‰©å±•æ ˆï¼šæŒ‰éœ€æ·»åŠ  JavaScriptï¼ˆè½®æ’­/è¡¨å•éªŒè¯äº¤äº’ï¼‰ã€Vue/Reactã€MySQLã€‚
+  ä¼˜å…ˆå¤ç”¨ Google Stitch/AI Studio å®˜æ–¹å¯ç›´æŽ¥è½åœ°çš„ä»£ç æ¨¡æ¿åŠç»„ä»¶ã€‚
+  
+  ## å…«ã€è¾“å‡ºè¦æ±‚ï¼ˆæœ€ç»ˆäº¤ä»˜ï¼‰
+  
+  æœ€ç»ˆå¿…é¡»ç”ŸæˆåŸºäºŽä¸Šè¿°æ‹†åˆ†çš„å®Œæ•´æ‰§è¡Œæ–¹æ¡ˆï¼Œç»“æž„å¦‚ä¸‹ï¼š
+  
+  1. ç»“æž„åŒ–ç´ æè§£æžæ–‡æ¡£ï¼ˆå«æ‰€æœ‰æ ‡ç­¾ä¸Žæ£€ç´¢å†…å®¹ï¼‰
+  2. AI Stitch å¯è¯»æ ‡å‡†åŒ–æ–‡æœ¬ï¼ˆæŒ‰ 1.1/1.2 ç­‰ä¸¥æ ¼å±‚çº§æ‹†åˆ†å½¢å¼å¹¶æ ‡æ³¨å…³é”®å‚æ•°ï¼‰
+  3. å®Œæ•´ APP è®¾è®¡æ–¹æ¡ˆï¼ˆæ¬§ç¾Žå‚è€ƒæ¡ˆä¾‹å¸ƒå±€å›¾ + è‰²å½©/å­—ä½“è§„åˆ’ï¼‰
+  4. åˆ†æ­¥å¼€å‘æŒ‡å¯¼åŠå¯è¿è¡Œä»£ç ï¼ˆæŒ‰é¡µé¢/ç»„ä»¶æ‹†åˆ†å¹¶ç»™å‡ºå¸¦æœ‰è¯¦ç»†æ³¨é‡Šçš„ä¸€é”®å¯ç”¨ä»£ç ï¼‰
+
+</dna_node>

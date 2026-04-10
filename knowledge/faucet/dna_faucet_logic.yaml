@@ -1,0 +1,28 @@
+﻿# FAUCET DNA - LOGIC & HEURISTICS (V5.0)
+# -----------------------------------------------------
+<dna_node>
+v: 5.0
+n: Sovereign_Claim_Engine
+
+ztv_engine:
+  rule: Zero-Token Vision (ZTV)
+  p: 11.0
+  logic: Local pulse -> Snip (F1) -> G4-GPU solve (my-gpu-gemma). NO CLOUD VISION.
+  ram_tier: e4b (>10GB free), e2b (4-10GB free).
+
+tactics:
+  - id: Y-DELTA
+    n: Dynamic Shift Prediction
+    v: Subtract clicked element Height from Y for disappearing items. Avoid new snip.
+  - id: TIME-AESTH
+    n: Human Timing
+    v: Mandatory 5s wait before Verify/Claim button fire.
+  - id: PHOENIX
+    n: Recovery Loop
+    v: Max 3 retries per mission. Shift heuristics after fail.
+
+reporting:
+  - id: LEDGER_SYNC
+    v: Sync delta via DOM Mutation Observer. No page reload for balance check.
+</dna_node>
+

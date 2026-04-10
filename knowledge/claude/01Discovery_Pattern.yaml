@@ -1,0 +1,21 @@
+# OHDY COMPRESSED NODE (V42.0)
+<dna_node>
+v: 42.0
+n: 01Discovery_Pattern
+graph:
+  req: []
+  rel: []
+l: |-
+  # Pattern 01: Automated Schema Discovery
+  
+  Rule: Analyze table schema before writing single line of code.
+  
+  Checklist:
+  - Table name + Schema
+  - Column names + Types (Postgres -> TS mapping)
+  - Nullability (Optional/Required)
+  - Foreign Keys (Relation mapping)
+  - Primary Key logic
+  
+  Output: Consultation Card to be approved by user.
+</dna_node>

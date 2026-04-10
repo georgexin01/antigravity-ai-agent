@@ -1,0 +1,15 @@
+# CLAUDE DNA - CATEGORY INDEX (V5.0)
+# -----------------------------------------------------
+<category_index>
+v: 5.0
+id: mode.claude
+n: Claude Logic Architect Ecosystem
+
+dna_files:
+  - id: logic
+    file: dna_claude_logic.yaml
+    d: Synergy pipeline (G3/G4), boot sequence, and handoff protocols.
+  - id: vben
+    file: dna_claude_vben.yaml
+    d: VBen Admin patterns, Supabase logic, and 7 intelligence rules.
+</category_index>

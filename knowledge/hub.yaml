@@ -1,0 +1,31 @@
+# GLOBAL SOVEREIGN HUB - SYSTEM KERNEL (V1.0)
+# -----------------------------------------------------
+<global_hub>
+v: 5.0
+status: SOVEREIGN_REBIRTH_ACTIVE
+tier: GLOBAL_MASTER_INDEX
+
+categories:
+  - id: kernel.logic
+    n: System Global DNA
+    d: P0 Alpha Directives and Global Execution Laws (Alpha/Logic).
+    v: 30.0
+  - id: mode.claude
+    n: Claude Logic Architect
+    d: Backend scaling, CRUD architecture, system optimization.
+  - id: mode.faucet
+    n: Faucet Sovereign
+    d: High-ROI visual intelligence for captcha/claim automation.
+  - id: mode.openclaw
+    n: OpenClaw Decentralized
+    d: Local-first knowledge sync and decentralized architecture.
+  - id: mode.normal
+    n: Design Master DNA
+    d: Vue 3, Tailwind, Bento layouts, Glassmorphism, Motion DNA.
+  - id: tech.nexus
+    n: Tech Stack Mastery
+    d: Standard methodologies for Vite/Next.js/Three.js/Docker.
+  - id: intel.evol
+    n: Self-Evolving Intelligence
+    d: Recursive logic refactoring and accuracy ledgers.
+</global_hub>

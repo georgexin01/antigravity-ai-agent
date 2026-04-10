@@ -1,0 +1,30 @@
+﻿# DESIGN DNA - MASTER MATRIX (V5.0)
+# -----------------------------------------------------
+<dna_node>
+v: 5.0
+n: Design_Cinematic_Pro
+logic: Cinematic_Fidelity_Shield
+
+vss_50:
+  syntax: [( ) section, { } div, [ ] css, " " group, u/ gsap]
+  Aa_Prefix: [Cg Grid, Cf Flex, Ca Abs, Th Head, Tp Para, Bp Btn]
+  physics: [>> fadeR, << fadeL, ^^ fadeU, @gsap_scrub, @magnet_x]
+
+ui_physics:
+  id: OKLCH_BLOOD
+  rule: HEX/RGB BANNED. Use OKLCH(L C H) for 10-tier spectrum.
+  standards: [Bento_Grid, Glassmorphism_Blur20, Negative_Space_150px, Artifact_Density_5layer]
+
+themes:
+  - id: ZETA_200
+    d: Standard. Immersive, Physics-based, 10-12 sections.
+  - id: CRAFIX
+    d: Industrial B2B, 4x2 Bento, Grid Lines.
+  - id: CYBER_TECH
+    d: Kinetic, Neon-Infused, nuclear-glow, vignette-deep.
+
+ocular_logic:
+  rule: Mirror_Sync (Cloning)
+  flow: Image/URL -> VSS Extract -> Design Vault Storage -> Instant Recall.
+</dna_node>
+

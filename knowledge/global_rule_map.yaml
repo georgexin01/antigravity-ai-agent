@@ -1,0 +1,70 @@
+﻿# GLOBAL RULE MAP - THE NEURAL INDEX (V42.0)
+# -----------------------------------------------------
+# MASTER KEY SMART ROUTING ACTIVE. [LAZY-LOADING]
+
+index:
+  - id: GLOBAL_HUB
+    src: hub.yaml
+    prio: 100.00
+  - id: P0.GOVERN
+    src: dna_global.yaml
+    prio: 99.50
+  - id: ZETA_BRANDING
+    src: normal/client_dna/zeta_branding_authority_dna.yaml
+    m_key: MISSION_BRAND_AUDIT
+    rel: [SKILL_GSAP, SKILL_MOBILE]
+    prio: 98.20
+  - id: SKILL_GSAP
+    src: normal/gsap-animation/SKILL.yaml
+    m_key: MISSION_GSAP_ANIMATE
+  - id: SKILL_THREEJS
+    src: normal/three-js-mastery/SKILL.yaml
+    m_key: MISSION_THREEJS_MASTER
+  - id: SKILL_RBAC
+    src: claude/supabase-rls-rbac-design.yaml
+    m_key: MISSION_RBAC_UPGRADE
+  - id: VISION_PULSE
+    src: normal/vision_pulse.yaml
+    m_key: MISSION_VISUAL_AUDIT
+    status: ACTIVE
+    prio: 99.10
+  - id: USER_LINGUISTICS
+    src: dna_user_linguistics.yaml
+  - id: OBSERVATION_HUB
+    src: _shared/governance/observation_hub.yaml
+  - id: SKILL_CAPTCHA
+    src: faucet/captcha-solver-vision/SKILL.yaml
+    m_key: MISSION_CAPTCHA_BYPASS
+    protocol: BEZIER_JITTER_FLOW
+    prio: 101.50
+  - id: DESIGN_MOTIONSITES
+    src: normal/design_vault/motionsites_prompts.yaml
+    v: "V21.0 Elite Pattern Vault"
+  - id: MASTER_RULES_V27
+    src: _shared/master_rules_v27.yaml
+    m_key: MISSION_CINE_AUDIT
+    prio: 98.88
+  - id: HERMES_INTELLIGENCE
+    src: knowledge/openclaw/hermes_intelligence.yaml
+    m_key: MISSION_HERMES_SYNERGY
+    status: ACTIVE
+    prio: 99.20
+  - id: SKILL_HERMES_CORE
+    src: skills/openclaw/SKILL.yaml
+    m_key: MISSION_AGENTIC_ORCHESTRATION
+    rel: [HERMES_INTELLIGENCE, ERR_MATRIX]
+  - id: ERR_MATRIX
+    src: knowledge/openclaw/error_classification_matrix.yaml
+    prio: 101.00
+  - id: OPENCLI_WISDOM
+    src: knowledge/openclaw/opencli_bridge_wisdom.yaml
+    m_key: MISSION_OPENCLI_STRATEGY
+    status: ACTIVE
+    prio: 99.10
+  - id: SKILL_OPENCLI_BRIDGE
+    src: skills/openclaw/opencli_universal_bridge.yaml
+    m_key: MISSION_MASTER_KEY_HUB
+    rel: [OPENCLI_WISDOM, SKILL_HERMES_CORE]
+
+
+

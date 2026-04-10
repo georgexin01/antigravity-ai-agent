@@ -1,0 +1,43 @@
+﻿# FAUCET DNA - PLATFORM PARAMETERS (V5.0)
+# -----------------------------------------------------
+<dna_node>
+v: 5.0
+n: Platform_Vault_Elite
+
+targets:
+  - id: FBK
+    n: Free-Bonk
+    u: https://free-bonk.com/faucet
+    c: IconCaptcha
+    s: ZT-Vision Pulse after Verify.
+    p: 12.0
+  - id: OFT
+    n: OnlyFaucet
+    u: https://onlyfaucet.com/
+    c: RotationSolve
+    s: 180-deg inversion logic. Pre-ROI check via G4.
+    p: 11.0
+  - id: FFW
+    n: FireFaucet
+    u: https://firefaucet.win/
+    c: hCaptcha/Icon
+    s: Auto-Faucet accumulation + PTC cycle.
+    p: 9.0
+  - id: DTC
+    n: DutchyCorp
+    u: https://autofaucet.dutchycorp.space/
+    c: Multi-Choice
+    s: Shortlinks + PTC. Login sync required.
+    p: 8.0
+  - id: VIE
+    n: VieFaucet
+    u: https://viefaucet.com/
+    c: RotationSolve
+    s: Backup priority.
+    p: 7.0
+
+sync:
+  identity: nelesp3@gmail.com
+  protocols: [SM-01, SM-02, SBP]
+</dna_node>
+

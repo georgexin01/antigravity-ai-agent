@@ -1,0 +1,23 @@
+﻿# DESIGN DNA - APP ARCHITECTURE (V5.0)
+# -----------------------------------------------------
+<dna_node>
+v: 5.0
+n: Web_Dev_Sovereign
+stack: [Vue3, Vite, Tailwind, Pinia, Supabase]
+
+scaffolding:
+  id: UNIFIED_BLUEPRINT
+  flow: tokens -> types -> stores -> layout -> views -> polish -> verify.
+  waves: Batch execution using Architect(G4) for boilerplate and Director(G3) for UI.
+
+standards:
+  logic: [Typescript_Pinia_Standard, i18n_Mastery, PWA_Offline_First]
+  testing:
+    id: LEVEL_7_TEST
+    logic: Standalone -> Integrated -> E2E -> Performance -> Stress -> Security -> UX.
+
+localization:
+  rule: Civilization_Design
+  v: High-density (8-10 sections), regional context, demo-harmony.
+</dna_node>
+
