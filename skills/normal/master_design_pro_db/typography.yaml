@@ -1,0 +1,11 @@
+﻿# OHDY NODE (V42.0)
+<dna_node>
+v: 1.0
+n: typography
+graph: {req: [], rel: []}
+l: |-
+  # Fragment: typography
+Typography and Pairing data
+
+
+</dna_node>

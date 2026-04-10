@@ -1,0 +1,11 @@
+﻿# OHDY NODE (V42.0)
+<dna_node>
+v: 1.0
+n: platforms
+graph: {req: [], rel: []}
+l: |-
+  # Fragment: platforms
+Cross-platform and OS-specific Architecture (SwiftUI/React Native)
+
+
+</dna_node>

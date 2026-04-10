@@ -58,7 +58,7 @@ l: |-
   task_type = APP:
     READ: unifiedappblueprint.yaml + typescriptpiniastandard.yaml + userpreferencedna.yaml
     BUILD ORDER: tokens → types → stores → layout → views → polish → verify
-    SKILLS: skills/normal/ui-ux-pro-max, mobile-design, tailwind-design-system
+    SKILLS: skills/normal/master_design_pro.yaml, master_mobile_architecture.yaml, tailwind-design-system
   
   task_type = WEBSITE:
     READ: websitedesigndna.yaml + userpreferencedna.yaml
@@ -68,7 +68,7 @@ l: |-
   task_type = DESIGN:
     READ: designvault/README.yaml + designvault/theme-system.yaml + userpreferencedna.yaml
     FLOW: match vault ≥85% → copy. 55-84% → modify. <55% → research → create.
-    SKILLS: skills/normal/design-logic-system, stitch-ui-design, ui-ux-pro-max
+    SKILLS: skills/normal/master_design_pro.yaml, master_google_stitch.yaml, ui-ux-pro-max
   
   task_type = BUGFIX:
     READ: Nothing extra. Use knowledge/GLOBAL_LOGIC.yaml error triage table.
@@ -127,5 +127,7 @@ l: |-
   Normal Mode V15 Config — APP, WEBSITE, DESIGN, BUGFIX, ENHANCE, DEPLOY (2026-04-02)
   
 </dna_node>
+
+
 
 

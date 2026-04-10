@@ -1,0 +1,11 @@
+﻿# OHDY NODE (V42.0)
+<dna_node>
+v: 1.0
+n: ui_ux
+graph: {req: [], rel: []}
+l: |-
+  # Fragment: ui_ux
+Mobile Interaction, Gestures, and Transition Patterns
+
+
+</dna_node>

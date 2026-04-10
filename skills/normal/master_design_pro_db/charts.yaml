@@ -1,0 +1,11 @@
+﻿# OHDY NODE (V42.0)
+<dna_node>
+v: 1.0
+n: charts
+graph: {req: [], rel: []}
+l: |-
+  # Fragment: charts
+Data visualization parameters
+
+
+</dna_node>

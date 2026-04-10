@@ -1,0 +1,11 @@
+﻿# OHDY NODE (V42.0)
+<dna_node>
+v: 1.0
+n: ux_rules
+graph: {req: [], rel: []}
+l: |-
+  # Fragment: ux_rules
+UX and Accessibility guidelines
+
+
+</dna_node>
