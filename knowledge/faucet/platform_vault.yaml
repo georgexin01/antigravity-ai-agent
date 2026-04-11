@@ -1,4 +1,4 @@
-﻿# OHDY COMPRESSED NODE (V42.0)
+# OHDY COMPRESSED NODE (V42.0)
 <dna_node>
 v: 42.0
 n: platform_vault
@@ -19,12 +19,20 @@ l: |-
   - URL: `https://free-bonk.com/faucet`
   - Captcha: IconCaptcha (Unique Image).
   - Elite Strategy: ZT-Vision Pulse after "Verify Challenge".
+  - Tuning_Metrics:
+      current_wait_timer: 5.0s
+      tuning_floor: 0.6s
+      success_streak: 0
   
   ## 💎 2. ONLYFAUCET.COM (Mission DNA)
   - Status: ACTIVE
   - URL: `https://onlyfaucet.com/`
   - Captcha: ROTATION_SOLVE (180° Inversion).
   - Optimization: G4 Analyst ROI check on SOL/BTC rates before wave initiation.
+  - Tuning_Metrics:
+      current_wait_timer: 5.0s
+      tuning_floor: 0.6s
+      success_streak: 0
   
   ## 💎 3. FIREFAUCET.WIN (Mission DNA)
   - Status: RESEARCHED

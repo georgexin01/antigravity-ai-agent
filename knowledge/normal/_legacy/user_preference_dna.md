@@ -1,0 +1,306 @@
+# User Preference DNA V3.0 — Learned Taste + Project Fingerprints + Workflow History
+
+Status: Permanent Knowledge — Auto-updated after every project session.
+V3.0: Added Project Fingerprints, Active Projects tracker, Cross-Project Universal Patterns.
+Upgraded: 2026-03-19
+
+---
+
+## How This Works
+
+AI reads this BEFORE generating any design to pre-filter patterns. Built from approval/rejection signals during 10+ real projects. V9 adds predictive patterns — AI knows what works BEFORE being told.
+
+---
+
+## Color Taste
+
+| Preference                                                               | Confidence | Score | Source                       |
+| ------------------------------------------------------------------------ | ---------- | ----- | ---------------------------- |
+| Deep Onyx (#0a0b10) for Cyber Luxury                                     | High       | 88    | User pivot request           |
+| Rejects Light Mode for corporate redesigns                               | High       | 85    | Explicit instruction         |
+| "Electric Red" + "Black" (Logo-derived for Zeta V4)                      | High       | 85    | Priority Rule                |
+| "Purple Power" (#a855f7) + "Onyx HSL" (Zeta V3/V5.3)                     | S-CORE     | 95    | Zeta IT Hardened             |
+| Liquid Glass Material (backdrop-blur + mask-composite)                   | S-CORE     | 92    | ZETA V3 Power AI             |
+| Warm red/maroon for F&B/pork business apps                               | High       | 90    | Lee Ming Pork V2             |
+| Warm accents (red, orange, gold) for F&B apps                            | High       | 92    | Japanese food + Lee Ming     |
+| Deep Red (#8B1A1A) with Gold (#c8963e) accents for premium meat branding | S-CORE     | 95    | Lee Ming Pork V5             |
+| Clean White UI (#ffffff) with Vibrant Food Imagery for F&B apps          | S-CORE     | 98    | DaCheng V2 Feedback          |
+| Primary color 50-900 scale for depth                                     | High       | 88    | Lee Ming Pork V2             |
+| Night dark (#0D0D14) + surface (#1A1A2E) for night market apps           | High       | 85    | Dachengloklok blueprint      |
+| Flame gradient (135deg #F47920 → #E8401E → #C0301A)                      | High       | 80    | Dachengloklok                |
+| Warm gold (#c8963e / #c5a059) for premium feel                           | High       | 88    | Lee Ming + LD Floor + Travel |
+| Heritage Cyber-Luxury (Red #C1272D + Gold #D4AF37 + Dark #1A1A1A)   | S-CORE     | 95    | Golden Shop App              |
+
+---
+
+## Spacing Preference
+
+| Preference                                                         | Confidence | Score | Source           |
+| ------------------------------------------------------------------ | ---------- | ----- | ---------------- |
+| Generous whitespace — Japanese "Ma" style (120-150px) for websites | High       | 90    | Jin Hong V5      |
+| Compact spacing (16px padding, gap-2/gap-3) for mobile apps        | High       | 92    | Lee Ming Pork V2 |
+| `line-height: 1.75` for body text                                  | High       | 85    | Jin Hong design  |
+
+---
+
+## Typography Style
+
+| Preference                                                | Confidence | Score | Source                |
+| --------------------------------------------------------- | ---------- | ----- | --------------------- |
+| Geist Sans / General Sans for Tech Mastery               | S-CORE     | 95    | Zeta IT V5.3          |
+| Plus Jakarta Sans for mobile apps                         | High       | 92    | Travel App + Lee Ming |
+| Noto Sans SC / PingFang SC for Chinese UI                 | High       | 88    | Dachengloklok         |
+| DM Mono for prices/numbers                                | High       | 80    | Dachengloklok         |
+| Orbitron + Space Mono for Engineering Authority           | High       | 85    | Zeta V4               |
+| `letter-spacing: 0.02em` for headings                     | Medium     | 75    | Jin Hong V5           |
+| `font-extrabold` (800) for section titles                 | High       | 88    | Lee Ming Pork V2      |
+| Text-[10px] for subtle metadata/labels                    | High       | 85    | Travel App + Lee Ming |
+| Noto Serif SC (Italic, 900) for Heritage Chinese Branding | S-CORE     | 92    | Golden Shop App              |
+
+---
+
+## Animation Preference
+
+| Preference                                         | Confidence | Score | Source                |
+| -------------------------------------------------- | ---------- | ----- | --------------------- |
+| `cubic-bezier(0.16, 1, 0.3, 1)` as baseline        | High       | 90    | Jin Hong design       |
+| Subtle micro-interactions > flashy animations      | High       | 88    | UI First rule         |
+| `active:scale-[0.97]` for touch feedback           | High       | 92    | Travel App + Lee Ming |
+| 200ms fade transitions between pages               | High       | 85    | Travel App pattern    |
+| GSAP + ScrollTrigger for website scroll animations | High       | 85    | Zeta V3/V4            |
+| Lenis smooth scroll for websites                   | High       | 80    | Zeta V4               |
+| Wave animations + meteor effects for hero sections | Medium     | 75    | Zeta V4               |
+
+---
+
+## Layout Density
+
+| Preference                                     | Confidence | Score | Source            |
+| ---------------------------------------------- | ---------- | ----- | ----------------- |
+| Homepage minimum 6 deeply designed sections    | High       | 88    | agentmustread   |
+| 4-column grid for Services/Features (websites) | High       | 85    | agentmustread   |
+| 2-column grid for product cards (mobile apps)  | High       | 92    | Lee Ming + Travel |
+
+---
+
+## Mobile Priority (UNIVERSAL — Score 90+)
+
+| Preference                                      | Confidence | Score | Source                       |
+| ----------------------------------------------- | ---------- | ----- | ---------------------------- |
+| 100% Flush Mobile edges (zero root margin/padding) | S-CORE | 98 | fu-huo-lao-app + User Feedback |
+| Standard Padding: `px-2` or `px-3` | S-CORE | 95 | Heritage Blueprint 2026-04-03 |
+| Font Size Shift: -1px for all text > 14px | S-CORE | 92 | Heritage Blueprint 2026-04-03 |
+| Catalog Sidebar: Content-fit width, px-2 button padding | S-CORE | 90 | fu-huo-lao-app |
+| Bottom tab navigation (4 tabs standard)         | High       | 95    | ALL 4 Vue apps               |
+| Category sidebar (76px left) + content grid     | High       | 88    | 86car + Lee Ming             |
+| Fixed header (56px) + fixed bottom nav (60px)   | High       | 92    | ALL 4 Vue apps               |
+| WhatsApp floating button above bottom nav       | High       | 90    | Lee Ming + Travel + LD Floor |
+| Active tab indicator: top accent bar + color    | High       | 88    | Travel App pattern           |
+| Product card: square image + name + price       | High       | 88    | 86car + Lee Ming             |
+
+---
+
+## Interaction Style
+
+| Preference                                     | Confidence | Score | Source                   |
+| ---------------------------------------------- | ---------- | ----- | ------------------------ |
+| Bottom sheet/drawer for mobile                 | High       | 88    | Japanese food + Lee Ming |
+| Glassmorphism modals with backdrop blur        | High       | 85    | Jin Hong + Stitch        |
+| Stepper component for quantity (- / value / +) | High       | 88    | Lee Ming + LD Floor      |
+| Teleport modals to body with z-50+             | High       | 85    | Travel App               |
+| Slide-up animation for bottom sheets           | High       | 88    | Travel App + Lee Ming    |
+
+---
+
+## App Design Patterns (PROVEN)
+
+| Pattern                 | Implementation                                      | Score   | Source           |
+| ----------------------- | --------------------------------------------------- | ------- | ---------------- |
+| Auth pages              | Full-screen gradient, no chrome, centered logo+form | 92      | ALL apps         |
+| Product listing         | Sidebar categories + 2-col grid                     | 90      | 86car + Lee Ming |
+| Order flow              | Cart → checkout modal → order list                  | 88      | Lee Ming V2      |
+| Admin dashboard         | Stats cards (gradient bg) + daily summary list      | 85      | Lee Ming + Poker |
+| WhatsApp integration    | Copy formatted text + direct wa.me link             | 90      | Lee Ming V2      |
+| Status badges           | Rounded-full, 10px, color-coded                     | 88      | Lee Ming V2      |
+| Role-based access       | Multiple roles + role guard + role-specific nav     | 85      | LD Floor + Poker |
+| Visual Validation First | Red border (#ef4444) + small red notice below input | S-CORE  | 95               | Lee Ming Pork V5 |
+| PWA Essentials          | site.webmanifest + sw.js + Fullscreen Build logic   | STARRED | 92               | Lee Ming Pork V5 |
+| Live data simulation    | Auto-refresh intervals + random data updates        | 80      | Poker V3         |
+| Referral system         | Direct + indirect tiers + commission calc           | 80      | Travel App       |
+| Multi-language UI       | Vue-i18n + 3 language files + switcher              | 80      | Travel App       |
+| Golden Assurance    | Trust-building cards for authenticity & shipping thresholds | S-CORE  | Golden Shop App  |
+| Singleton Tooltips  | One-at-a-time flyouts with global click-to-close    | S-CORE  | Golden Shop App  |
+| Heritage Seal Modals| Teleport + Blur + Red-Gold frames for confirmation  | S-CORE  | Golden Shop App  |
+
+---
+
+## Anti-Preferences (BANNED — Score <30)
+
+| Dislike                                   | Confidence | Score | Source             |
+| ----------------------------------------- | ---------- | ----- | ------------------ |
+| Generic stock photos                      | High       | 10    | Image protocol     |
+| Default Bootstrap/Tailwind look           | High       | 15    | Cross-cutting      |
+| Decorative emojis in UI                   | High       | 5     | Top priority rule  |
+| Mixed languages in same UI element        | High       | 10    | master_strategy    |
+| Light/white containers in dark theme      | High       | 15    | Jin Hong design    |
+| Asking too many questions before starting | High       | 5     | Lee Ming session   |
+| Partial/skeleton pages                    | High       | 10    | Lee Ming session   |
+| Lorem ipsum placeholder text              | High       | 5     | REAL ASSETS rule   |
+| Incremental building (one page at a time) | High       | 15    | V9: Build complete |
+
+---
+
+## Communication Style (V16.1 Restricted)
+- Ultra-Short: Absolute minimum text. Show only critical 'Done' status.
+- Action-Oriented Titles: Focus title on the main question (e.g. "Approve Summary Card at top?").
+- Text-Tip Plans: Use simple bullets instead of technical 'V16 Redesign Plan' labels.
+- No Fluff: Skip explanations, intros, and metadata headers.
+
+| Trait                   | Pattern                                                            | Confidence |
+| ----------------------- | ------------------------------------------------------------------ | ---------- |
+| Language            | Mixed English + Chinese. Casual, short sentences.                  | High       |
+| Emojis & Tone       | MANDATORY LIMIT: Use ONLY 1-2 emojis per message, specifically for important alerts or feelings. Otherwise, use 0 emojis to keep chat clean and peaceful. | S-CORE     |
+| Business Scope      | AI must notice "Branches", "Partners", and "Corporate Scale"       | S-CORE     |
+| Approval            | "nice", "correct", "可以", "好", "not bad"                         | High       |
+| Rejection           | "ugly", "不好看", "重做", "i dont like"                            | High       |
+| Revert              | "before is good", "之前的好", "undo"                               | High       |
+| Tweak               | "just change abit", "改一下"                                       | High       |
+| Typos               | Common — AI must parse intent, not spelling                        | High       |
+| Malay               | "boleh", "ok la", "can" = casual approval                          | Medium     |
+| Execution           | Silent, backgrounded, no pop-ups                                   | High       |
+| Permission          | Auto-proceed for non-destructive actions                           | High       |
+| Live View Mode      | Disable for small/unimportant change. ALWAYS DISABLE when user requests `npm run dev` or `npm run build`. | S-CORE     |
+| Instant Command     | Do NOT check other rules/gates when `npm run dev/build` is requested. Just run it. | S-CORE | User 2026-03-31 |
+| Pill Toasts (Tailwind)| Mandatory: pill shape, themed borders, centered top, backdrop-blur | S-CORE | Golden Shop App |
+| Golden Planning Protocol | Trigger on "plan/planning for me". Deep thinking + colorful/structured routes + 5min timeout wait. | S-CORE |
+| AskUserQuestion BLOCK | Strictly wait for reply. Stop all execution/proactivity until user speaks. | S-CORE | User 2026-04-01 |
+| Approval Coloring     | Mandatory: Use GitHub Alerts (`> [!IMPORTANT]`, `> [!WARNING]`) and bold colorful markers in implementation plans to highlight anything requiring user approval. | S-CORE | User 2026-04-03 |
+
+## 🏫 Claude Mode: Smart Consultation & Design Standard (MANDATORY)
+
+Source: `test-school-database.yaml` + User Request
+Rule: Before starting ANY module execution, the AI MUST conduct a "Deep Skill Search" and present a Consultation Card to the user.
+
+### 1. Mandatory Pre-Check Scan
+
+The AI must check if the module requires:
+
+- Layer Icons: Is there a 1:N relationship requiring navigation to children (e.g. Teacher → Students)?
+- Instant CRUD: Is this a master data table that needs instant add from a parent?
+- Master Data Status: Is this a core entity (Client, Supplier, Class) or a transaction entity?
+- Image Requirements: Does it need avatars/photos? (Ask for dimensions + cropper specs).
+- Balance Handling: Does it involve money/numeric balances?
+
+### 2. Consultation Card Format
+
+Before Wave 1, present:
+
+- Analyzed Skills: List of which Claude skills will be applied.
+- Proposed Logic: "I noticed a 1:N relationship with XXX, should I add a Layer Icon?"
+- Structure Options: "Is this standalone or embedded CRUD?"
+- Confirmation Request: "Please confirm if I should include [Feature X] and [Feature Y]."
+
+### 3. Database & Analysis Standard (Full Detail)
+
+For school management or similar projects, the design document MUST include:
+(Items 1-9 as previously defined: Metadata, Overview, Roles, Relations, SQL, Seed, Queries, RLS Tests, Mermaid).
+
+Key insight: Short responses = real opinion. "nice" = +8. Don't wait for long praise.
+
+---
+
+## Cross-Project Universal Patterns (NEW V9 — Score 90+, Auto-Apply)
+
+These patterns appear in 3+ projects. Apply to ALL new projects automatically.
+
+| Pattern                   | Implementation                                   | Score  | Projects Found In                 |
+| ------------------------- | ------------------------------------------------ | ------ | --------------------------------- |
+| OTP auth flow             | Phone → OTP → verify → home redirect             | 95     | lee-ming, travel, ld-floor, poker |
+| 540px container           | `max-w-[540px] mx-auto min-h-screen`             | 95     | ALL 4 Vue apps                    |
+| Bottom tab nav            | Fixed bottom, 4 tabs, active indicator           | 95     | ALL 4 Vue apps                    |
+| Fixed header/nav          | 56px header + 60px bottom nav                    | 92     | ALL 4 Vue apps                    |
+| localStorage auth         | `localStorage.setItem('user', JSON.stringify())` | 95     | ALL 4 Vue apps                    |
+| WhatsApp CTA              | `wa.me/[number]` floating button                 | 90     | lee-ming, travel, ld-floor        |
+| Toast notifications       | Tailwind Pill: rounded-full, border, backdrop-blur, Lucide icon | S-CORE | ALL Vue apps |
+| Pill Toasts (Tailwind)| Mandatory: pill shape, themed borders, centered top, backdrop-blur | S-CORE | Golden Shop App |
+| Product card grid         | 2-col grid, image + name + price                 | 88     | lee-ming, travel, ld-floor        |
+| Vue 3 Composition API     | `<script setup>` + ref + computed                | 95     | ALL 4 Vue apps                    |
+| Tailwind v4 native        | `@tailwindcss/vite` plugin, no PostCSS           | 88     | lee-ming-v2, poker                |
+| Plus Jakarta Sans         | Primary font for all mobile apps                 | 88     | lee-ming, travel                  |
+| Active touch feedback     | `active:scale-[0.97]` on buttons                 | 92     | ALL 4 Vue apps                    |
+| Design tokens as CSS vars | `--color-primary: #xxx` before components        | 90     | ALL projects                      |
+| AI Claude Mode        | Full-Session Focus on `claude-code` Skills   | S-CORE | Trigger: `ai claude`              |
+| App Component Design| Vue 3 + Tailwind CSS Utilities (V16 Mandatory) | S-CORE | User 2026-04-06 |
+
+---
+
+## Historical Website Patterns
+
+| Pattern            | Standard                                                  | Source                         |
+| ------------------ | --------------------------------------------------------- | ------------------------------ |
+| Floating WhatsApp  | `fixed, bottom-85px, right-22px, 50x50px, #25d366, z-100` | 8 past sites                   |
+| Sticky Headers     | Top bar + secondary sticky nav                            | choonsenghardware, jbtransport |
+| Breadcrumb Banners | Image-backed hero for inner pages                         | Standard                       |
+| Section Titles     | Centered with `::after` bottom border (4px, 70px)         | MaxCoach                       |
+| Footer             | #F4F5F7 bg, nested social links                           | Standard                       |
+
+---
+
+## Reference Projects (Design DNA Sources)
+
+| Project               | Design DNA Extracted                                            | Fingerprint   |
+| --------------------- | --------------------------------------------------------------- | ------------- |
+| 86caraccessories.my   | Sidebar categories, product cards, bottom nav, warm maroon, PWA | FP-006        |
+| Travel App (Four Win) | 540px container, gold/dark theme, Plus Jakarta Sans, referral   | FP-003/FP-007 |
+| Lee Ming Pork V2      | Red/maroon F&B, ordering, cart+checkout, admin, WhatsApp        | FP-001        |
+| LD Floor App          | Dual-role B2B, inventory mgmt, stock tracking, warm gold        | FP-002        |
+| Poker App V3          | Role-based dashboard, live data, transactions, Chart.js         | FP-004        |
+| Zeta Website V4       | GSAP animations, Lenis scroll, corporate Chinese, multi-page    | FP-005        |
+| choonsenghardware     | Sticky double headers, Bootstrap grid, bold accents             | Legacy        |
+| jbtransport           | Breadcrumb banners, carousel-heavy, SweetAlert2                 | Legacy        |
+| Dachengloklok         | Night market dark mode, flame gradient, 中文 single lang        | FP-001        |
+| Supabase Vben Admin| 13-Step Automation, .claudeignore optimization, web-antd only| FP-008   |
+
+---
+
+## Active Projects Tracker (NEW V9 — Workflow State)
+
+| Project            | State       | Last Action                                             | Next Predicted                    | Last Updated |
+| ------------------ | ----------- | ------------------------------------------------------- | --------------------------------- | ------------ |
+| golden-shop-app| 8. DEPLOY| Updated image URLs to local paths                   | Complete                          | 2026-03-31   |
+| zeta-website-v4| 8. DEPLOY| Synced to Authority Folder                          | SEO hardening                     | 2026-04-10   |
+| zeta-it-website| 7. QA    | V5.3 Hardened Protocol Applied                      | Content completion                | 2026-04-10   |
+| antigravity    | CORE     | Ghost Protocol V4.0 Context Active                  | Rule 0 Enforced                   | 2026-04-10   |
+| admin-panel-wms-v2 | 9. ITERATE  | Claude Mode Activated                                   | Await module/feature request      | 2026-03-26   |
+| lee-ming-pork-v5   | 8. DEPLOYED | 100% Complete, PWA, Meta, Fullscreen, Visual Validation | N/A (Project Complete)            | 2026-03-19   |
+| travel-app         | 7. QA       | i18n + referral system complete                         | Deploy, PWA conversion            | 2026-03-18   |
+| poker-app-v3       | 7. QA       | Live simulation + role dashboards                       | Chart.js reports, deploy          | 2026-03-16   |
+| ld-floor-app       | 7. QA       | Dual-role + inventory complete                          | Agent reporting, deploy           | 2026-03-16   |
+| dachengloklok      | 1. PLAN     | Blueprint created                                       | Start build (FP-001 fingerprint)  | 2026-03-19   |
+| fu-huo-lao-app| 8. DEPLOY| 100% Width Layout Fix Completed                    | Predict: Finalize catering specific features (Equipment Rental) | 2026-04-03   |
+| vben-admin-supabase| 1. PLAN| READY: Automation Framework Implanted               | Await Module Request (FP-008)     | 2026-03-31   |
+
+---
+
+## AI SYSTEM DEFAULTS (v11+ MANDATORY)
+
+Rule: For every "new project" or "app/website update", the AI must automatically initialize using the latest version of the [App Creation Masterplan](file:///C:/Users/User/.gemini/antigravity/knowledge/normal/research/tech_stack_mastery/artifacts/heritage_high_density_mobile.yaml) and [Partner Protocol](file:///C:/Users/User/.gemini/antigravity/knowledge/_shared/governance/experience_vault.yaml).
+
+### Operational Standards:
+
+- Leading Edge: Do not wait for step-by-step instructions. Deconstruct the mission into Waves and execute proactively.
+- DNA Branding: Auto-apply the "Cyber Luxury" or "High-Craft" logic based on the project's sector (F&B, Automotive, Corporate).
+- Stitch Hierarchy: All planning and execution must follow the 1.1–1.4 hierarchy for structural integrity.
+- Visual Preview: A high-fidelity "Visual Preview Design" (Mockup 2.0) is mandatory BEFORE Wave 1 execution.
+- Reward Protocol: Proactively implement a Loyalty/Reward system for every B2C mission to drive retention.
+- Golden Planning Protocol: Any planning request triggers a deep-thinking phase. AI must provide a colorful, structured step-by-step route and wait for user approval or a 5-minute timeout before proceeding.
+
+---
+
+| ANTIGRAVITY  | V15.1 (ACTIVE) | PRO-ORCHESTRATOR  | LEAD & AUTO-VALIDATE |
+
+---
+
+Migration Status: V1-V15.1 UNIFIED ENGINE MIGRATION COMPLETE (2026-03-31)
+Key Protocols: Pro-Orchestration, Skeptical Auditing, Resilient Final Rebuild.
+Operational Mode: Strategic Architecture & Proactive Refinement.

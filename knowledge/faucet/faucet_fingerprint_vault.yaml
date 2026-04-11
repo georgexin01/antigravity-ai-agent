@@ -1,0 +1,30 @@
+# FAUCET FINGERPRINT VAULT (V1.0)
+<dna_node>
+v: 1.0
+n: fingerprint_vault
+signatures:
+  - id: FBK_V1
+    u: "https://free-bonk.com/faucet"
+    dom_anchor: "button: Collect your reward"
+    y_delta: 58px
+    cumulative_shift_constant: 44px
+    coords:
+      antibot_grid: "CENTER_ALIGNED"
+      captcha_offset: [583, 762]
+      collect_button: [583, 617]
+    verified: 2026-04-11
+  - id: FBK_V2_ANIMALS
+    u: "https://free-bonk.com/faucet"
+    dom_anchor: "anti_bot: animals (cow/cat/ant)"
+    y_delta: 58px
+    coords:
+      collect_button: [583, 789]
+    verified: 2026-04-11
+  - id: OFT_V1
+    u: "https://onlyfaucet.com/"
+    dom_anchor: "span: faucet"
+    y_delta: 21px
+    coords:
+      captcha_offset: [640, 480]
+    verified: 2026-04-09
+</dna_node>

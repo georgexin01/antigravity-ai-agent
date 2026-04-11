@@ -1,4 +1,4 @@
-﻿# OHDY COMPRESSED NODE (V42.0)
+# OHDY COMPRESSED NODE (V42.0)
 <dna_node>
 v: 42.0
 n: mode_config
@@ -24,7 +24,15 @@ l: |-
   - Shared Path: `C:\Users\User\.gemini\antigravity\knowledge\openclaw\`
   - Local Hook: `c:\Users\User\OneDrive\Desktop\workspace\.openclaw\` (PC-Specific Overlay).
   
-  ## ⚖️ 3. DECENTRALIZED LAWS
+  ## ⚡ 3. STRICT CONTEXT FENCING (Mythos-Class)
+  - MANDATE: Load only the minimum necessary knowledge for the detected Task ID.
+  - VAULT: Knowledge in `_vault/` is strictly EXCLUDED from default boot.
+  - PULSE: Access `_vault/` via `view_file` ONLY if task == "UI" or "Taste".
+  - Task: UI -> Load `universal_design_protocols.yaml`, block `system_kernel.yaml`.
+  - Task: CORE -> Load `system_kernel.yaml`, block `universal_design_protocols.yaml`.
+  - Task: SYNERGY -> Load `orchestrator.yaml` and `dna_synergy_intel.yaml`.
+  
+  ## ⚖️ 4. DECENTRALIZED LAWS
   1. Read `data_governance.yaml` before saving any new intelligence.
   2. If data is universal -> Update THIS folder.
   3. If data is hardware-locked (e.g., VRAM limits, specific PC folders) -> Update the Local Hook.
@@ -32,7 +40,12 @@ l: |-
   ## 🛡️ 4. SOVEREIGN SECURITY (VirusTotal Sync)
   All OpenClaw skills downloaded from external sources (ClawHub) MUST be scanned for security. OpenClaw operates on a "Trust but Verify" mandate using the VirusTotal threat intelligence partnership.
   
-  ## 🦅 5. GLOBAL INTEL (OpenClaw.ai)
+  ## 🛡️ 5. THE SNIPASTE PRIVILEGE (ZTV)
+  - MANDATE: Zero-Token Vision (ZTV) is the default visual sensory mode.
+  - RULE: AI is FORBIDDEN from using `browser_subagent` screenshots if a local Snipaste (F1) capture can achieve the task goal.
+  - TRIGGER: Always ask *"Should I use Snipaste F1?"* before visual turns.
+  
+  ## 🦅 6. GLOBAL INTEL (OpenClaw.ai)
   - Shared Docs: https://docs.openclaw.ai/
   - Privacy Core: Context and skills remain local to the Sovereign Machine.
   - Proactive AI: Authorized to handle background tasks, reminders, and cross-platform integrations (Discord, GitHub, Telegram).

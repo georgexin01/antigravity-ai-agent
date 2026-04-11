@@ -1,0 +1,27 @@
+# GSD MISSION LEDGER (V1.0) — ATOMIC STATE TRACKER
+<dna_node>
+v: 1.0
+n: gsd_mission_ledger
+status: ACTIVE
+current_mission:
+  id: FBK_GHOST_TEST_01
+  pipeline: PIPELINE_A
+  state: S1_PULSE
+atomic_stages:
+  - id: S1_PULSE
+    status: PENDING
+    data: null
+  - id: S2_IDENTIFY
+    status: PENDING
+    data: null
+  - id: S3_ANTIBOT
+    status: PENDING
+    data: null
+  - id: S4_CAPTCHA
+    status: PENDING
+    data: null
+  - id: S5_VERIFY
+    status: PENDING
+    data: null
+history: []
+</dna_node>

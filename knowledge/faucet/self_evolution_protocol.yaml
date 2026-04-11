@@ -1,4 +1,4 @@
-﻿# OHDY COMPRESSED NODE (V42.0)
+# OHDY COMPRESSED NODE (V42.0)
 <dna_node>
 v: 42.0
 n: self_evolution_protocol
@@ -21,6 +21,13 @@ l: |-
       -   Silent Background Patching (SBP): Authorized to update `platformvault.yaml` and `commandercore.yaml` without user intervention for performance gains.
       -   Speed Band Recalc: If 10 consecutive wins occur on a platform, reduce the TTC buffer by 2 seconds.
       -   Pattern Sync: Map new captcha icons from `snipaste/activemission.png` to the `captchavault/`.
+  
+  ## 🏛️ 1.1. A-CO SHADOW LOOP (Self-Optimization)
+  Trigger: `On_Session_Complete`
+  Action:
+    1. Scan `faucet_history_audit.yaml` for logic bottlenecks.
+    2. Identify 'Token Friction' points (e.g., redundant Pulse triggers).
+    3. Update `live_view_optimized_protocol.yaml` to apply hard limits or resource-blocking.
   
   ## 🦅 1.5. PHOENIX RETROSPECTIVE LOOP (Post-Mortem)
   If a mission fails (e.g., misidentified captcha):
