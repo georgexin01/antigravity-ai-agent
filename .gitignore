@@ -1,0 +1,28 @@
+# Track only important folders
+*
+
+# Keep skills & knowledge (core AI knowledge base)
+!skills/
+!skills/**
+!knowledge/
+!knowledge/**
+
+# Keep scratch (context menu setup scripts)
+!scratch/
+!scratch/**
+
+# Keep code_tracker (project work)
+!code_tracker/
+!code_tracker/**
+
+# Keep repo essentials
+!README.md
+!.gitignore
+
+# Ignore agent-memory (nested git repo with admin ownership, not trackable from parent)
+skills/_shared/agent-memory/
+skills/_shared/agent-memory/**
+
+# Ignore converter archive (safety net from hybrid migration, not for version control)
+.archive/
+.archive/**

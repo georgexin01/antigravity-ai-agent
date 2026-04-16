@@ -1,0 +1,19 @@
+---
+name: performance
+description: "Fragment: performance"
+triggers: ["performance", "fragment performance"]
+phase: reference
+model_hint: gemini-3-flash
+version: 1.0
+_ohdy_wrapper: |-
+  # OHDY NODE (V42.0)
+  <dna_node>
+  v: 1.0
+  n: performance
+  graph: {req: [], rel: []}
+  l: |-
+  </dna_node>
+---
+
+# Fragment: performance
+High-velocity Native Performance and Memory Management

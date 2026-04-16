@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI FAUCET • MISSION COMMAND V15</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --bg-deep: #0a0a0c;
+            --bg-card: #151518;
+            --accent-primary: #00f2ff;
+            --accent-secondary: #7000ff;
+            --text-main: #e2e2e7;
+            --text-dim: #8e8e93;
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --neon-glow: 0 0 30px rgba(0, 242, 255, 0.2);
+            --transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background-color: var(--bg-deep);
+            color: var(--text-main);
+            font-family: 'Outfit', sans-serif;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Clean Tactical Background */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at 50% 50%, #1a1a20 0%, #0a0a0c 100%);
+            z-index: -1;
+        }
+
+        header {
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--glass-border);
+            backdrop-filter: blur(20px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo-container { display: flex; align-items: center; gap: 15px; }
+        .logo-img { width: 40px; height: 40px; border-radius: 12px; border: 1px solid var(--accent-primary); box-shadow: var(--neon-glow); }
+        .logo { font-weight: 600; font-size: 1.2rem; letter-spacing: -0.02em; }
+        .logo span { color: var(--accent-primary); }
+
+        .baton-status {
+            padding: 0.6rem 1.2rem;
+            border-radius: 12px;
+            background: rgba(112, 0, 255, 0.1);
+            border: 1px solid var(--accent-secondary);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .baton-pulse { width: 10px; height: 10px; background: var(--accent-secondary); border-radius: 50%; box-shadow: 0 0 10px var(--accent-secondary); animation: baton-pulse 1.5s infinite; }
+
+        main {
+            padding: 2.5rem;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: minmax(180px, auto);
+            gap: 1.5rem;
+            max-width: 1500px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--glass-border);
+            border-radius: 28px;
+            padding: 1.8rem;
+            position: relative;
+            overflow: hidden;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card:hover { border-color: var(--accent-primary); transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); }
+        .card::after { content: ""; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(0, 242, 255, 0.03) 0%, transparent 70%); pointer-events: none; }
+
+        .card-large { grid-column: span 2; grid-row: span 2; }
+        .card-wide { grid-column: span 2; }
+        .card-tall { grid-row: span 2; }
+
+        .card-title { font-size: 0.75rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.15em; font-weight: 600; display: flex; align-items: center; gap: 8px; margin-bottom: 1.5rem; }
+        .card-title i { color: var(--accent-primary); }
+
+        .stat-value { font-size: 3rem; font-weight: 600; font-family: 'Outfit', sans-serif; letter-spacing: -0.03em; background: linear-gradient(180deg, #fff 30%, #666 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+        .stat-sub { font-size: 0.85rem; color: #4cd964; margin-top: 5px; font-weight: 400; }
+
+        /* Progress Rings */
+        .ring-container { position: relative; width: 120px; height: 120px; margin: 0 auto; }
+        .ring-svg { transform: rotate(-90deg); width: 100%; height: 100%; }
+        .ring-bg { fill: none; stroke: rgba(255, 255, 255, 0.05); stroke-width: 8; }
+        .ring-progress { fill: none; stroke: var(--accent-primary); stroke-width: 8; stroke-linecap: round; stroke-dasharray: 283; stroke-dashoffset: 283; transition: stroke-dashoffset 1s ease; }
+
+        .ring-text { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 1.2rem; font-weight: 600; font-family: 'JetBrains Mono'; }
+
+        /* Diagnostic Terminal Upgrade */
+        .terminal { font-family: 'JetBrains Mono', monospace; background: rgba(0, 0, 0, 0.3); border-radius: 16px; padding: 1.2rem; font-size: 0.85rem; height: 350px; overflow-y: auto; border: 1px solid var(--glass-border); scrollbar-width: thin; scrollbar-color: var(--accent-secondary) transparent; }
+        .log-entry { margin-bottom: 0.6rem; animation: slideIn 0.3s ease-out forwards; }
+        .log-time { color: var(--accent-primary); opacity: 0.6; }
+        .log-tag { color: var(--accent-secondary); font-weight: 700; margin: 0 8px; }
+
+        @keyframes baton-pulse { 0% { opacity: 1; transform: scale(1); } 50% { opacity: 0.3; transform: scale(1.5); } 100% { opacity: 1; transform: scale(1); } }
+        @keyframes slideIn { from { opacity: 0; transform: translateX(-10px); } to { opacity: 1; transform: translateX(0); } }
+
+        @media (max-width: 1024px) { main { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 640px) { main { grid-template-columns: 1fr; } .card-large, .card-wide, .card-tall { grid-column: span 1; grid-row: span 1; } }
+    </style>
+</head>
+<body>
+    <div class="background-visual"></div>
+    <header>
+        <div class="logo-container">
+            <div style="width: 40px; height: 40px; border-radius: 12px; background: var(--bg-card); border: 1px solid var(--accent-primary); display: flex; align-items: center; justify-content: center; font-weight: bold; color: var(--accent-primary); box-shadow: var(--neon-glow);">AI</div>
+            <div class="logo">AI FAUCET <span>V15 MISSION COMMAND</span></div>
+        </div>
+        <div class="baton-status">
+            <div class="baton-pulse"></div>
+            Baton Sync: Active
+        </div>
+    </header>
+
+    <main>
+        <!-- ROI Overview -->
+        <div class="card card-wide">
+            <div>
+                <div class="card-title">Token Output (ROI)</div>
+                <div class="stat-value" id="total-tokens">1,240,500</div>
+                <div class="stat-sub" id="roi-velocity">+12.5% Yield Velocity</div>
+            </div>
+            <div style="flex: 1; height: 100px; margin-left: 20px; position: relative;">
+                <canvas id="roi-chart"></canvas>
+            </div>
+            <div style="display: flex; gap: 20px; align-items: flex-end; width: 100%; margin-top: 15px;">
+                <div style="flex: 1; height: 4px; background: rgba(255,255,255,0.05); border-radius: 2px;">
+                    <div style="width: 75%; height: 100%; background: var(--accent-primary); box-shadow: 0 0 10px var(--accent-primary);"></div>
+                </div>
+                <span style="font-size: 0.7rem; color: var(--text-dim);" id="efficiency-stat">Efficiency: 94%</span>
+            </div>
+        </div>
+
+        <!-- Mission Logic -->
+        <div class="card card-tall">
+            <div class="card-title">Active Mission</div>
+            <div class="ring-container">
+                <svg class="ring-svg">
+                    <circle class="ring-bg" cx="60" cy="60" r="45"></circle>
+                    <circle class="ring-progress" id="mission-ring" cx="60" cy="60" r="45"></circle>
+                </svg>
+                <div class="ring-text" id="mission-percent">75%</div>
+            </div>
+            <div style="text-align: center; margin-top: 1.5rem;">
+                <div style="font-size: 1.1rem; font-weight: 600;" id="mission-name">PTC VIEWING</div>
+                <div style="color: var(--text-dim); font-size: 0.75rem; margin-top: 5px;" id="mission-target">Target: Window Ad #4</div>
+            </div>
+        </div>
+
+        <!-- Quota Control -->
+        <div class="card">
+            <div class="card-title">Claim Cycles</div>
+            <div class="stat-value" style="font-size: 2.2rem;">42/100</div>
+            <div class="stat-sub">Quota Reset: 03:22:11</div>
+        </div>
+
+        <!-- Stealth Triage -->
+        <div class="card">
+            <div class="card-title">Stealth Health</div>
+            <div style="font-size: 2.2rem; font-weight: 600; color: var(--accent-primary);">98%</div>
+            <div style="font-size: 0.7rem; color: var(--text-dim); margin-top: 5px;">IP Context: CLEAN</div>
+        </div>
+
+        <!-- Diagnostic Feed -->
+        <div class="card card-large">
+            <div class="card-title">Mission Earning Terminal</div>
+            <div class="terminal" id="terminal-feed">
+                <div class="log-entry"><span class="log-time">[22:15:20]</span> <span class="log-tag">SYNC</span> AI Faucet Mode V15 Ready.</div>
+                <div class="log-entry"><span class="log-time">[22:15:21]</span> <span class="log-tag">AUDIT</span> Searching for active yield sources...</div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // ROI Chart Initialization
+        const ctx = document.getElementById('roi-chart').getContext('2d');
+        const roiChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: Array(20).fill(''),
+                datasets: [{
+                    label: 'Yield',
+                    data: Array(20).fill(0),
+                    borderColor: '#00f2ff',
+                    borderWidth: 2,
+                    pointRadius: 0,
+                    fill: true,
+                    backgroundColor: (context) => {
+                        const gradient = context.chart.ctx.createLinearGradient(0, 0, 0, 100);
+                        gradient.addColorStop(0, 'rgba(0, 242, 255, 0.2)');
+                        gradient.addColorStop(1, 'transparent');
+                        return gradient;
+                    },
+                    tension: 0.4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false } },
+                scales: {
+                    x: { display: false },
+                    y: { display: false, min: 0 }
+                }
+            }
+        });
+
+        const tokenDisplay = document.getElementById('total-tokens');
+        const bc = new BroadcastChannel('faucet_stream');
+
+        function updateRing(percent) {
+            const ring = document.getElementById('mission-ring');
+            const text = document.getElementById('mission-percent');
+            const radius = 45;
+            const circumference = 2 * Math.PI * radius;
+            const offset = circumference - (percent / 100) * circumference;
+            ring.style.strokeDashoffset = offset;
+            text.textContent = `${percent}%`;
+        }
+
+        function addLog(tag, msg) {
+            const terminal = document.getElementById('terminal-feed');
+            const entry = document.createElement('div');
+            entry.className = 'log-entry';
+            const time = new Date().toLocaleTimeString([], { hour12: false });
+            entry.innerHTML = `<span class="log-time">[${time}]</span> <span class="log-tag">${tag}</span> ${msg}`;
+            terminal.appendChild(entry);
+            terminal.scrollTop = terminal.scrollHeight;
+        }
+
+        function updateROIChart(newValue) {
+            roiChart.data.datasets[0].data.push(newValue);
+            roiChart.data.datasets[0].data.shift();
+            roiChart.update('none');
+        }
+
+        bc.onmessage = (event) => {
+            const { type, tag, msg, tokens, percent, mission, target, velocity, efficiency } = event.data;
+            if (type === 'LOG') addLog(tag, msg);
+            if (type === 'TOKENS' || tokens) {
+                tokenDisplay.textContent = tokens.toLocaleString();
+                updateROIChart(tokens);
+            }
+            if (type === 'MISSION_DATA') {
+                updateRing(percent || 0);
+                if (mission) document.getElementById('mission-name').textContent = mission;
+                if (target) document.getElementById('mission-target').textContent = target;
+                if (velocity) document.getElementById('roi-velocity').textContent = velocity;
+                if (efficiency) document.getElementById('efficiency-stat').textContent = `Efficiency: ${efficiency}%`;
+            }
+        };
+
+        // Static initialization
+        updateRing(75);
+    </script>
+</body>
+</html>

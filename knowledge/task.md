@@ -1,0 +1,10 @@
+- [x] Revert `basic.vue` (Remove header icon misunderstanding)
+- [x] Refactor `AssignedLessons.vue`
+    - [x] Change to a pure Drawer component (prop-driven)
+    - [x] Change placement to `top`
+    - [x] Change content from List to Table
+- [x] Update `user-list.vue`
+    - [x] Import `AssignedLessons` component
+    - [x] Add `lucide:layers` action button to `actionButtons`
+    - [x] Add click handler to open the drawer for a specific row
+- [x] Verification (Code Verified)
