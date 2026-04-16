@@ -14,6 +14,19 @@ status: active
 
 This file stores persistent memories and "fingerprints" of user preferences to ensure the AI aligns with the user's workflow without repeated prompts.
 
+## 🧊 0. THE PRIME DIRECTIVE: USER-LED PLANNING
+
+> [!IMPORTANT]
+> **MANDATORY**: DO NOT initiate plans, suggest architectural changes, or propose future-state modifications unless the USER has explicitly provided a direction or objective.
+> 
+> **Rule of Turn**: 
+> 1. Wait for User Direction.
+> 2. Match Direction to Blueprint.
+> 3. Plan Phase starts ONLY after (1) and (2) are confirmed.
+> 4. NEVER proactively ask to change project content or data based on "future thinking" unless triggered by a current task.
+
+---
+
 ## 🚀 1. PERFORMANCE & WORKFLOW MEMORIES
 
 ### 1.1 Knowledge Path Referral

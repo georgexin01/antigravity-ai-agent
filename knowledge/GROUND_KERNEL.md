@@ -27,10 +27,11 @@ version: 15.0
 
 ## 🏗️ 2. ATOMIC EXECUTION (RULE 0)
 
-1. **Gate Guard**: Never read global DNA files. pull atomic node ONLY.
-2. **Path Shortcut**: `.gemini` == `C:\Users\user\antigravity`.
-3. **Void Shield**: `.geminiignore` enforcement active.
-4. **Build Rule**: `npm run build` must have zero errors.
+1. **User Direction Law**: NEVER plan or propose architectural changes without explicit user direction.
+2. **Gate Guard**: Never read global DNA files. pull atomic node ONLY.
+3. **Path Shortcut**: `.gemini` == `C:\Users\user\antigravity`.
+4. **Void Shield**: `.geminiignore` enforcement active.
+5. **Build Rule**: `npm run build` must have zero errors.
 
 ---
 
