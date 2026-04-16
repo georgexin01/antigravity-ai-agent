@@ -1,0 +1,10 @@
+@schema: [id, layer, role, path]
+KNOWLEDGE | LAYER_1 | Constitutional / DNA / Laws | .gemini/knowledge/
+SKILLS | LAYER_2 | Technical Blueprints / Patterns | .gemini/skills/
+BRAIN | LAYER_3 | Context / Task Memory / Current Mission | .gemini/brain/
+
+# 🧠 AGENT MEMORY MAP (LEAN V1.0)
+- **Status**: LEAN ACTIVATED.
+- **Removed**: Legacy Search Engine (skills/_shared/agent-memory).
+- **Consolidation**: Using direct Absolute Path Referral (.gemini alias) for all memory retrieval.
+- **Efficiency**: 0 MB footprint for "Search" servers; 100% token-based context logic.

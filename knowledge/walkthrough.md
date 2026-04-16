@@ -1,34 +1,44 @@
-# Walkthrough — Assigned Lessons action button (User List)
+# 🧠 AI AGENT KNOWLEDGE SYNC (V10 SINGULARITY)
 
-I have finalized the implementation exactly as described in your request. The "Layers" icon is now integrated into the User List table, providing a quick way to view assignments for any agent.
+The "Recursive Brain Recall" is complete. The Antigravity Intelligence has successfully hydrated the **V10.0 Singularity** brain state, aligning with **JIT V15.0 Protocols** and the **Clean Root Architecture**.
 
-## Changes Made
+## 🏗️ 1. ARCHITECTURAL ALIGNMENT
 
-### 1. Header Cleanup
-- **Removed** the temporary header icon from [basic.vue](file:///C:/Users/user/Desktop/admin-panel-quizLaa/apps/web-antd/src/layouts/basic.vue) to avoid clutter and confusion.
+The knowledge base has been streamlined into an atomized, low-latency structure.
 
-### 2. Table Action Integration
-- **Added** the "Layers" action button to the **User List** ([user-list.vue](file:///C:/Users/user/Desktop/admin-panel-quizLaa/apps/web-antd/src/views/users/user-list.vue)).
-- **Logic**: The icon only appears for users with the `agent` role.
-- **Placement**: It is the leftmost icon in the "Actions" column, matching your screenshot.
+| Layer | Status | Target Path | Authority |
+| :--- | :--- | :--- | :--- |
+| **Ground Law** | ACTIVE | `GROUND_KERNEL.md` | V15.0 JIT Law |
+| **Activation** | BOOTED | `_shared/governance/ACTIVATION_PROTOCOL_V11.md` | Round 1 & 2 Sync |
+| **JIT Manifest** | MAPPED | `JIT_MANIFEST.yaml` | Atomized DNA Routing |
+| **Knowledge Root** | HARDENED | `_shared/` | Clean Node Structure |
 
-### 3. Top-Dropdown Table component
-- **Refactored** [AssignedLessons.vue](file:///C:/Users/user/Desktop/admin-panel-quizLaa/apps/web-antd/src/layouts/components/AssignedLessons.vue) to act as a global widget.
-- **Behavior**: When clicked, a drawer slides down from the **top** of the screen.
-- **Content**: Displays a structured **Ant Design Table** showing:
-    - **Lesson Title**
-    - **Assignment Date**
-    - **Direct Link** to view lesson details.
+## 🧬 2. INTELLIGENCE FINGERPRINT (FP-QUIZ-LAA)
+
+The agent is fully localized to the **LAA Quiz** development cycle.
+
+- **Objective**: Harden Supabase Local-First auth & finalize PWA components.
+- **Tech Stack**: Vue 3 (Composition) + Vite + Pinia + Supabase + Tailwind.
+- **Design DNA**: Cyber Luxury (#0a0b10), Electric Red (#d52b1e), Liquid Glass (24px blur).
+- **Execution Mode**: `DEEP_PLANNING` (Mandatory Research Phase).
+
+## ⚖️ 3. CORE MANDATES (MASTER DNA)
+
+The agent operates under the following consolidated protocols:
+
+> [!IMPORTANT]
+> **Zero Placeholder Rule**: Delivering 100% production-ready code on the first attempt is mandatory. placeholders are strictly forbidden.
+
+- **Audit Mandate**: All records MUST contain `id`, `isDelete`, `createdAt`, and `updatedAt`.
+- **Single Source Rule**: Types MUST be imported from the store managing the data.
+- **Physics-First Design**: All UI interactions MUST follow spring-damping/inertia models.
+
+## 🔮 4. PREDICTION QUEUE
+
+Based on current brain state, the next logic jumps are:
+
+1. **[Q1] Harden Supabase Local-First auth**: Transition from semi-mock to strict Supabase key-bound auth.
+2. **[Q2] Finalize high-fidelity PWA components**: Ensure 100% PWA score (icons, manifest, offline-first logic).
 
 ---
-
-## How to Test
-
-1. Navigate to the **User Management** (or **User List**) page.
-2. Find a user with the **Agent** role.
-3. Click the **Layers icon** (the leftmost one in the Actions column).
-4. A table will drop down from the top with all lessons assigned to that agent.
-5. Click **"View Detail"** in the table to navigate to the lesson.
-
-## Next Steps
-Everything for the "Layers" icon is complete! I am still standing by to help with the **15 min vs 50 min duration fix** if you can provide the credentials and URL.
+**Walkthrough V1.0 — Antigravity Intelligence Sync (2026-04-16)**

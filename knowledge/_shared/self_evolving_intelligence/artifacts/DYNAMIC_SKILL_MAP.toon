@@ -1,0 +1,9 @@
+@schema: [id, category, triggers, entry_point]
+CORE_FRONTEND | vben-vue-supabase | [ui, auth, db, store, component] | skills/claude-frontend/SKILL.md
+FAUCET_ENGINE | visual-automation | [captcha, claim, timer, wave] | skills/faucet/skill.md
+SYSTEM_SCRIPTS | automation-tools | [npm, ps1, build, deploy] | skills/scripts/
+SOVEREIGN_SHARED | atomic-logic | [memory, protocol, format] | skills/_shared/
+
+# 🗺️ DYNAMIC SKILL MAP (V1.0)
+This map provides the singular entry points for all "Level 10" blueprints.
+- **Rule**: Load these paths before any complex architectural generation.

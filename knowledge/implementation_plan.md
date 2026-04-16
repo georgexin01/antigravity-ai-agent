@@ -1,30 +1,44 @@
-# Sovereign Redesign — Assigned Lessons Dropdown
+# V12 JIT Activation — Token-Lean Intelligence
 
-I will redo the "Assigned Lessons" feature using the **Sovereign Web Framework (SWF) Protocol (V4.5)**. This plan focuses on ensuring the design is **1:1 identical** to your core tables while injecting a premium "Level 10" cinematic aesthetic.
+Further reduction of the startup phase to reach sub-5s response times and preserve context window for long-running sessions.
+
+## User Review Required
+
+> [!IMPORTANT]
+> This transition moves from "Layered Hydration" to **Trigger-Based Pull**. The AI will no longer read "Global DNA" on boot. It will only pull technical rules when it detects active work on a relevant file or feature.
 
 ## Proposed Changes
 
-### [Phase 1: Relational Alignment (SWF Step 8)]
-- **Reuse Core Components**: Instead of rebuilding the table, I will embed the official [user-lesson-list.vue](file:///C:/Users/user/Desktop/admin-panel-quizLaa/apps/web-antd/src/views/user-lessons/user-lesson-list.vue) component directly into a dropdown. 
-- **Benefit**: This guarantees that every column, action icon (Eye/Trash), and alignment is exactly what you see on the main "User Lessons" page.
+### 1. The JIT Manifest (V12)
+Creation of a high-density, YAML-based `JIT_MANIFEST.yaml` that maps every file extension and keyword to its specific knowledge fragment.
 
-### [Phase 2: Aesthetic Injection (SWF Step 12)]
-- **Cinematic Dropdown**: Create [assigned-lessons-drawer.vue](file:///C:/Users/user/Desktop/admin-panel-quizLaa/apps/web-antd/src/views/users/drawer/assigned-lessons-drawer.vue) with:
-    - **Glassmorphism**: `backdrop-blur-md` for a premium translucent depth effect.
-    - **Emerald Cinematic Accent**: A subtle Emerald glowing header bar to represent a "Sovereign" active list.
-    - **Page-Style Header**: A high-fidelity title section that mirrors the "Questions" page reference.
+### 2. Atomic Fragmentation
+Break down large `MASTER_DNA.md` and `TECH_STACK.md` files into:
+- `DNA_STYLES.md` (CSS/Tailwind)
+- `DNA_LOGIC.md` (TS/Vue/Pinia)
+- `DNA_BACKEND.md` (Supabase/DB)
+- `DNA_PWA.md` (Manifest/Offline)
 
-### [Phase 3: Integration]
-- **User List Update**: Re-inject the **Layers** action button into the [User List](file:///C:/Users/user/Desktop/admin-panel-quizLaa/apps/web-antd/src/views/users/user-list.vue).
-- **Trigger**: The icon will slide down the new cinematic dropdown from the top.
+### 3. Turn 0 (The Phantom Boot)
+The AI is instructed to **NEVER** read the `GROUND_KERNEL` or `CORE_VITALS` unless a "System Inconsistency" or "Manual Activation" is triggered. It will rely on a tiny context block injected into the prompt.
+
+## Execution Sequence
+
+1. **Fragmentation**: Split `MASTER_DNA.md` and `TECH_STACK.md` into atomic nodes.
+2. **Manifest Creation**: Build `JIT_MANIFEST.yaml` with trigger mappings.
+3. **Vitals Compression**: Shrink `CORE_VITALS.md` into a "Token-Lean Header".
+4. **Logic Guarding**: Update `GROUND_KERNEL` to enforce "JIT Pull" over "Boot Read".
+
+## Open Questions
+
+- Should we use **Holo-Grep** (searching for specific line ranges) to save even more tokens, or is full-fragment reading acceptable?
+- Do you want to keep `evolving_knowledge.md` as a global read in Turn 2, or make it on-demand for "What happened?" queries?
 
 ## Verification Plan
 
 ### Automated Tests
--   Verify component mounting and `userId` prop passing to the embedded list.
--   Check for `ReferenceError` or `SyntaxError` in the console.
+- Simulate a "Vue Component Edit" and verify only `DNA_LOGIC.md` is triggered.
+- Verify Turn 1 token count is < 300 tokens (overhead).
 
 ### Manual Verification
--   Open the User List.
--   Click the **Layers** icon for an agent.
--   Confirm the dropdown slides from the top and the table looks **exactly** like the standard "Assign Lesson" table.
+- Verify that the AI correctly identifies the "Active Project" from a slim 5-line vitals block.

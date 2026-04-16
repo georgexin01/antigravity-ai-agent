@@ -1,0 +1,35 @@
+# 🧭 JIT ACTIVATION MANIFEST (V12.0)
+# Maps task context to atomic DNA nodes for zero-redundancy reading.
+
+manifest_version: 12.0
+boot_round:
+  turn_1: [GROUND_KERNEL.md, JIT_VITALS.md]
+  turn_2: [user_preference_dna.md, evolving_knowledge.md]
+
+atomic_nodes:
+  dna.core: 
+    path: _shared/atomic_dna/dna_core.md
+    triggers: [identity, mission, model, mode]
+  dna.design:
+    path: _shared/atomic_dna/dna_design.md
+    triggers: [ui, css, theme, design, fx, tailwind, animate]
+    extensions: [css, scss, tailwind.config.ts]
+  dna.arch:
+    path: _shared/atomic_dna/dna_arch.md
+    triggers: [blueprint, structure, folders, setup, init]
+  dna.logic:
+    path: _shared/atomic_dna/dna_logic.md
+    triggers: [logic, data, ts, vue, pinia, store, action, entity]
+    extensions: [ts, tsx, vue]
+  dna.specialty:
+    path: _shared/atomic_dna/dna_specialty.md
+    triggers: [pwa, i18n, manifest, sw, service-worker, translate]
+    extensions: [json, sw.ts]
+
+logic_gates:
+  - if: extension matches [vue, ts, tsx]
+    then_pull: dna.logic
+  - if: extension matches [css] OR prompt contains [design, ui]
+    then_pull: dna.design
+  - if: prompt contains [setup, init]
+    then_pull: dna.arch

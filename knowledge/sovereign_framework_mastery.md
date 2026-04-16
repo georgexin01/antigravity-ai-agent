@@ -1,3 +1,16 @@
+---
+name: sovereign-framework-mastery
+description: "Master architecture guidelines for Sovereign Web Framework (SWF) - Vben + Supabase + Vue 3."
+triggers: ["swf", "vben", "sovereign framework", "master architecture"]
+phase: constitutional
+v_score: 1.0
+k_decay: 0
+holo: "Deep architectural guide for building SWF compliant admin panels. Focuses on Vben, Vue 3, and Supabase hardened security."
+model_hint: gemini-3-flash
+version: 10.0
+status: authoritative
+---
+
 # Sovereign Web Framework (SWF) Mastery
 
 The **Sovereign Web Framework (SWF)** is an architectural pattern for building standalone, local-first industrial applications. It combines the industrial power of **Sovereign-Admin** (Vben-based) with the high-fidelity experience of **Sovereign-WebApp** (Vue 3/Vite), all bridged via **Local-Supabase-Core** (Dockerized Supabase).

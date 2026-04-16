@@ -1,10 +1,9 @@
-- [x] Revert `basic.vue` (Remove header icon misunderstanding)
-- [x] Refactor `AssignedLessons.vue`
-    - [x] Change to a pure Drawer component (prop-driven)
-    - [x] Change placement to `top`
-    - [x] Change content from List to Table
-- [x] Update `user-list.vue`
-    - [x] Import `AssignedLessons` component
-    - [x] Add `lucide:layers` action button to `actionButtons`
-    - [x] Add click handler to open the drawer for a specific row
-- [x] Verification (Code Verified)
+- `[x]` Phase 1: Atomic Fragmentation (Splitting DNA)
+- `[x]` Phase 2: Create `JIT_MANIFEST.yaml`
+- `[x]` Phase 3: Minify Vitals to `JIT_VITALS.md`
+- `[x]` Phase 4: Patch `GROUND_KERNEL.md` (V15.0 JIT Law)
+- `[x]` Phase 5: Auto-Purge Legacy DNA to `.relics`
+- `[x]` Verification: Triggered Node Test
+- `[x]` AI Agent Knowledge Sync (V10 Singularity Recall)
+- `[ ]` Step 1: Harden Supabase Local-First auth (Queue Priority 1)
+- `[ ]` Step 2: Finalize high-fidelity PWA components (Queue Priority 2)

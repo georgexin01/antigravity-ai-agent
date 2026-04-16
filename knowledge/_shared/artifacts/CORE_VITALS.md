@@ -1,21 +1,27 @@
----
 name: core-vitals
-description: "⚡ CORE VITALS (V2.0) — HIGH-DENSITY EXECUTION CONTEXT"
-triggers: ["vitals", "core vitals", "round 1 vitals"]
+description: "⚡ CORE VITALS (V3.0) — SLIM ACTIVATION ENGINE"
+triggers: ["vitals", "core vitals", "round 1 vitals", "activation"]
 phase: constitutional
 model_hint: gemini-3-flash
-version: 2.0
+version: 3.0
 ---
 
-# ⚡ CORE VITALS (V2.0) — ROUND 1 CONTEXT
+# ⚡ CORE VITALS (V3.0) — ROUND 1 CONTEXT
 
-**Status**: ACTIVE | **Tier**: ROUND 1 (Handshake Complete) | **Target**: <10s
+**Status**: ACTIVE | **Tier**: ROUND 1 (Slim Boot) | **Target**: <10s
 
 ## 🏛️ ACTIVE PROJECT FINGERPRINTS
 - **`FP-QUIZ-LAA`**: LAA Training Quiz (admin-panel-quizLaa). Implementation: Hardened Supabase (SBAC), PWA, high-fidelity meta.
 - **`FP-CORE-001`**: Antigravity System Kernel. Rule 0 logic, DNA-Sync.
 
-## 🔑 REGISTERED API KEYS (Multi-Model Router)
+## 🔮 1. PREDICTION SYNC (V11)
+- **Status**: ACTIVE | **Accuracy**: >90%
+- **Queue**: 
+    1. Harden Supabase Local-First auth.
+    2. Finalize high-fidelity PWA components.
+    3. Implement V11 Slim Activation (recursive).
+
+## 🔑 2. REGISTERED API KEYS (Multi-Model Router)
 - **Claude API**: ACTIVE — Route complex TypeScript/Vue reasoning here. Ref: `AI_AGENT_KEYS.md`
 - **OpenAI API**: ACTIVE — Route structured JSON/SQL generation here. Ref: `AI_AGENT_KEYS.md`
 - **Gemini (built-in)**: DEFAULT — Orchestration, routing, fast scaffold, UI.
@@ -32,6 +38,7 @@ version: 2.0
     - **Archivist**: NotebookLM/Docs (Long-term memory, architectural dumps).
 - **Token Reduction Rule**: Route tasks >500 tokens of reasoning to Claude/OpenAI → Gemini only orchestrates → 30-50% Gemini token saving.
 - **Success Mandate**: Success ONLY valid if [Image Proof] OR [Balance Delta > 0].
+- **Path Referral Optimization**: `ai agent knowledge` maps directly to `C:\Users\user\.gemini\antigravity\knowledge` and `skills\`. Skip path discovery.
 
 ## 🎨 CORE DESIGN TOKENS (PREMIUM)
 - **Atmosphere**: Deep Onyx (#0a0b10), Electric Red (#d52b1e), Cyber Luxury.
@@ -39,10 +46,10 @@ version: 2.0
 - **FX**: Liquid Glass (blur 24px, 10% white), active:scale-[0.97].
 - **Fidelity**: NO Pure Black (#000000), NO Generic Grids.
 
-## ⚙️ LOGIC GATES (V9)
-- **Predictive Mode**: ON. Simulate next 3 steps. Auto-prep scaffolding.
-- **Void Shield**: `.geminiignore` enforcement active.
-- **Neural Memory**: Log 3-line vector memories to `_shared/governance/experience_vault.yaml` after tasks.
+## ⚙️ 5. LOGIC GATES (V11)
+- **Activation Mode**: SLIM (V11). Turn 1 = Vitals/Kernel Only.
+- **Predictive Mode**: ON.
+- **Void Shield**: `.geminiignore` active.
 
 ---
-**Core Vitals V2.0 — Antigravity Strategic Context (2026-04-14)**
+**Core Vitals V3.0 — Antigravity Strategic Context (2026-04-16)**

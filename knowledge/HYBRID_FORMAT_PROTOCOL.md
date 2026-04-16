@@ -4,9 +4,11 @@ description: "Canonical rules for writing AI knowledge and skills in the 5-langu
 triggers: ["hybrid format", "format rules", "how to write skill", "how to write knowledge", "new skill", "new knowledge", "format protocol", "gemini flash format"]
 phase: constitutional
 requires: [ALPHA_DIRECTIVE]
-unlocks: []
+v_score: 1.0
+k_decay: 0
+holo: "Canonical 5-language format system for AI knowledge/skills. Enforces YAML frontmatter + MD body rules for token efficiency."
 model_hint: gemini-3-flash
-version: 1.0
+version: 1.1
 status: authoritative
 date_created: "2026-04-13"
 applies_to: "all new and updated knowledge/skills files across all modes (claude, faucet, normal, openclaw, _shared)"

@@ -8,7 +8,11 @@ categories:
   - id: kernel.logic
     n: System Global DNA
     d: P0 Alpha Directives and Global Execution Laws (Alpha/Logic).
-    v: 30.0
+    v: 31.0
+  - id: logic.planning
+    n: Task Execution Logic
+    d: Deep Planning, Research Protocols, and Workflow Synchronization.
+    ref: [_shared/task_execution_logic/artifacts/research_protocol.md]
   - id: mode.claude
     n: Claude Logic Architect
     d: Backend scaling, CRUD architecture, system optimization.
@@ -27,4 +31,5 @@ categories:
   - id: intel.evol
     n: Self-Evolving Intelligence
     d: Recursive logic refactoring and accuracy ledgers.
+    ref: [_shared/self_evolving_intelligence/artifacts/evolving_knowledge.md, _shared/self_evolving_intelligence/artifacts/user_preference_dna.md]
 </global_hub>
