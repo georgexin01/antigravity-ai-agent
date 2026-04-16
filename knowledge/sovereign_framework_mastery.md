@@ -66,6 +66,28 @@ Build a dedicated Review Engine that hydrates **Lean Snapshots**. It must blend 
 ### 14. SOVEREIGN SHIP: Final Deployment
 Configure PWA manifests, SSL certificates, and optimized production builds. Ensure URLs are "Clean" (no hash mode) using proper history API configuration.
 
+## 🔒 Schema Hardening & Security (Post-v4.5)
+
+The **"Fail-Closed" Security Model** is now the standard for all `quizLaa` schemas. This involves three critical layers:
+
+### A. RLS Global Rollout
+All business tables must transition from `UNRESTRICTED` (Public) to `RESTRICTED` (RLS Enabled). Use the following atomic pattern for each table:
+```sql
+ALTER TABLE "quizLaa"."table_name" ENABLE ROW LEVEL SECURITY;
+DROP POLICY IF EXISTS "authenticated_manage" ON "quizLaa"."table_name";
+CREATE POLICY "authenticated_manage" ON "quizLaa"."table_name" 
+FOR ALL TO authenticated USING (true) WITH CHECK (true);
+```
+
+### B. Atomic SQL Protocol (Windows CLI)
+Windows Shell expansion often corrupts multi-statement SQL strings or case-sensitive schema names (`"quizLaa"`).
+**Rule**: Always use `supabase db query -f file.sql` or stream content via `Get-Content file.sql | supabase db query` for atomic reliability.
+
+### C. Case-Sensitive Schema Access
+Always double-quote camelCase schemas in SQL commands to prevent Postgres from automatic lower-casing:
+- **WRONG**: `quizLaa.users` (becomes `quizlaa.users`)
+- **RIGHT**: `"quizLaa"."users"`
+
 ## 🛠️ Implementation Patterns
 
 ### Pattern A: Identity Hardening

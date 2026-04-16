@@ -18,10 +18,13 @@ _ohdy_wrapper: |-
       v: Website group + Corporate tone + Client DNA sync.
     - id: FP-006 (E-Com)
       v: App group + PWA module + Cart physics.
+    - id: FP-007 (Hardened-LAA)
+      v: Admin/WebApp + quizLaa + SWF-v4.6 + Fail-Closed RLS.
+      protocol: Forbid SQL Editor. Atomic CLI only.
   
   client_dna:
     id: CLIENT_LOCK
-    refs: [86car, japanese_food, jin_hong, zeta, golden_shop]
+    refs: [86car, japanese_food, jin_hong, zeta, golden_shop, quizLaa]
     logic: Extract Brand-Tokens + Palette before UI construction.
   
   presets:

@@ -1,0 +1,17 @@
+- `[x]` **Phase 1: Auth & Profile Hardening**
+    - `[x]` Remove hardcoded placeholders in `src/stores/auth.ts`
+    - `[x]` Implement `fetchDashboardStats` (Relational query for modules/passing scores)
+    - `[x]` Replace fallback avatar with dynamic logic
+- `[x]` **Phase 2: Data Layer Optimization**
+    - `[x]` Refine `getList` in `src/stores/lessons.ts` for real-time completion status
+    - `[x]` Update `dbToCourse` to map scores correctly
+- `[x]` **Phase 3: UI & Cinematic Aesthetics**
+    - `[x]` Update `src/index.css` with cinematic tokens (Emerald/Rose)
+    - `[x]` Refactor `App.vue` for glassmorphic transitions
+- `[x]` **Phase 4: Meta & PWA Strategy (No-SSR)**
+    - `[x]` Implement reactive `document.title` in router
+    - `[x]` Final audit of `index.html` static meta
+- `[x]` **Phase 5: Verification**
+    - `[x]` Verify dashboard stats vs DB
+    - `[x]` Verify aesthetic fidelity on dev server
+    - `[x]` Purge unused mock files and dependencies

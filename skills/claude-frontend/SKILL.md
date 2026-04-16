@@ -13,7 +13,7 @@ When triggered, the AI must evaluate the project's current state and execute the
 
 ### [Phase 1: Foundation]
 1.  **INFRA**: Audit `docker-compose.yml` for Supabase. Connect via `localhost:8000`.
-2.  **SCHEMA**: Draft SQL migrations for the `business_schema` in `Sovereign-Admin`.
+2.  **SCHEMA**: Draft SQL migrations for the `business_schema`. **Immediately apply RLS (Restricted)** to all business tables using the Global Rollout Pattern.
 3.  **PROJECT BINDING**: Create a UUID ‘Project Key’ and sync it to the `public.user` table.
 4.  **MONOREPO SYNC**: Ensure `VITE_PROJECT_ID` is identical in Admin and WebApp `.env` files.
 
@@ -38,6 +38,8 @@ When triggered, the AI must evaluate the project's current state and execute the
 - **Local-First**: Never assume the existence of an external production backend unless explicitly provided. Everything is bridged via `http://localhost:8000`.
 - **Relational Integrity**: When creating sub-items (e.g., Questions), always verify the `lessonId` binding in the store.
 - **Snapshot Purity**: Snapshots must be immutable. Once saved, they must capture the exact string order of the user session.
+- **Atomic CLI Protocol (Windows)**: Always execute SQL via `-f file.sql` to prevent shell case-folding and multi-statement corruption.
+- **CamelCase Preservation**: Double-quote all schema and table names in SQL strings (e.g., `"quizLaa"`).
 
 ## 🧩 Usage Example: Relational Store Pattern
 

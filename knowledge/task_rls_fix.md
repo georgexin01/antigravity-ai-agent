@@ -1,0 +1,7 @@
+- `[ ]` **Phase 1: Security Patch (RLS Policies)**
+    - `[ ]` Create `026_users_rls_policy.sql`
+    - `[ ]` Add `SELECT` policy for authenticated users on `quizLaa.users`
+    - `[ ]` Execute via CLI: `Get-Content supabase/migrations/026_users_rls_policy.sql | supabase db query`
+- `[ ]` **Phase 2: Final Verification**
+    - `[ ]` Confirm policy presence in DB
+    - `[ ]` Request user login verification on port 5666
