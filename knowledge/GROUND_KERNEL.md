@@ -74,4 +74,35 @@ The AI maintains its own workspace health via **V10.0 Observation Guidelines**.
 - **Memory Layers**: Prioritize `MEMORY_MAP.toon` hierarchy to resolve logic conflicts.
 
 ---
-**Ground Kernel V13.1 — JIT Activated (2026-04-16)**
+
+## 🔺 7. PYRAMID LAYER PROTOCOL (V1.0) — Universal Claude/Gemini Routing
+
+When task touches **Claude-mode** skills or knowledge, the JIT ATOMIC PULL entry point is:
+
+**`C:/Users/user/.gemini/antigravity/knowledge/claude/INDEX.md`**
+
+### Pyramid layers (lazy-load, never eager)
+
+```
+L0: INDEX.md (router)                          ← Flash reads first
+L1: Domain (shared / frontend / website / meta) ← pick ONE by trigger match
+L2: skill.md (procedural execution)             ← load ONLY matched skill
+L3+: On-demand recursive drill                  ← only if skill points deeper
+```
+
+### Enforcement rules (MUST)
+
+1. **Match trigger → load ONE path → stop.** No eager tree-walks.
+2. **NEVER auto-load all skills in a mode.** Token waste.
+3. **Plan before execute.** If matched skill is `phase: 0-orchestrator`, run it FIRST — it produces an upfront plan. User approves before any execution skill fires.
+4. **If no trigger matches** → ASK user, do NOT guess.
+5. **Identical for Claude and Gemini 3 Flash** — both AIs share the same INDEX, same routing, same lazy-load discipline.
+
+### Mode routing addendum (supersedes §3 for Claude mode)
+
+| Mode | Trigger | Entry | Active Skills |
+| :--- | :--- | :--- | :--- |
+| **Claude** | `ai claude` / any claude skill trigger | `knowledge/claude/INDEX.md` | `claude`, `claude-frontend`, `claude-website`, `claude-meta` |
+
+---
+**Ground Kernel V13.2 — Pyramid Protocol Added (2026-04-16)**

@@ -1,26 +1,7 @@
-## 🖼️ IMAGE FALLBACK PROTOCOL (MANDATORY)
-
-To prevent UI breakage and broken image icons, all images in the WebApp MUST implement a fallback mechanism.
-
-### 1. Fallback Conditions
-- **Null/Undefined**: `image === null || image === undefined`
-- **Empty String/Array**: `image === '' || (Array.isArray(image) && image.length === 0)`
-- **Loading Failure**: HTTP 404, 403, or connection timeout.
-
-### 2. Static Placeholder Design
-- **Background**: **Darker Gray** (`bg-gray-200` / `dark:bg-gray-900`).
-- **Text**: "no image available" (Centered, lowercase).
-- **Typography**: Very small (`text-[10px]` or `text-[8px]`), Uppercase tracking-widest, Medium weight.
-- **Text Color**: Higher contrast gray (`text-gray-500` / `dark:text-gray-600`).
-
-### 3. Implementation Standard
-- **Component**: Use the global `<AppImage>` component instead of raw `<img>` tags.
-- **Event Handling**: Always listen for `@error` to trip the fallback state.
-
 ---
-**UI STANDARDIZATION SKILL V1.2 — Logic Hardening (2026-04-14)**
-description: Enforces consistent UI patterns — Divider section headers, single-Card detail views, contact-field conventions.
-triggers: ["ui standardization", "detail view layout", "section divider", "ui conventions", "card layout"]
+name: ui-standardization
+description: "Enforces consistent UI patterns — Divider section headers, single-Card detail views, contact-field conventions, UPPERCASE EN section titles, and the Image Fallback Protocol for broken/missing images."
+triggers: ["ui standardization", "detail view layout", "section divider", "ui conventions", "card layout", "image fallback", "app image"]
 phase: reference
 requires: []
 unlocks: []
@@ -28,11 +9,13 @@ inputs: []
 output_format: pattern_reference
 model_hint: gemini-3-flash
 version: 2.0
+status: authoritative
+date_created: "2026-04-14"
 ---
 
 # UI Standardization Conventions (ui-standardization)
 
-Enforces consistent UI patterns across all detail views, form sections, and contact information fields in this admin panel.
+Enforces consistent UI patterns across all detail views, form sections, contact information fields, and image displays in the admin panel and webapp.
 
 ## 1. Detail View Section Headers
 
@@ -83,7 +66,7 @@ Enforces consistent UI patterns across all detail views, form sections, and cont
     ...
   </Descriptions>
 
-  <!-- TABLE SECTION (e.g. contacts, items) -->
+  <!-- TABLE SECTION -->
   <Divider orientation="left" :orientation-margin="0">
     {{ $t('page.entity.section.items') }}
   </Divider>
@@ -126,7 +109,7 @@ All English (en-US) section title translations must be **UPPERCASE**. Chinese (z
 
 - EN: Always UPPERCASE (e.g., `"COMPANY INFORMATION"`)
 - ZH: Normal Chinese text (e.g., `"公司信息"`)
-- This applies to both detail view Divider sections AND form Divider sections (`renderComponentContent`)
+- Applies to BOTH detail view Divider sections AND form Divider sections
 
 ### Form Schema Divider Sections
 
@@ -142,14 +125,13 @@ All English (en-US) section title translations must be **UPPERCASE**. Chinese (z
   hideLabel: true,
   renderComponentContent: () => ({
     default: () => $t('page.entity.section.sectionName'),
-    // EN value must be UPPERCASE in locale file
   }),
 },
 ```
 
 ## 3. Contact Information Field Standardization
 
-All modules that have contact information (dynamic contact arrays) must use the **same field labels and placeholders**.
+All modules with contact information (dynamic contact arrays) must use the **same field labels and placeholders**.
 
 ### Standard Contact Fields
 
@@ -205,6 +187,36 @@ All modules that have contact information (dynamic contact arrays) must use the 
 </Card>
 ```
 
+## 4. Image Fallback Protocol (MANDATORY)
+
+To prevent UI breakage and broken image icons, all images MUST implement a fallback mechanism.
+
+### 4.1 Fallback Conditions
+
+- **Null/Undefined**: `image === null || image === undefined`
+- **Empty String/Array**: `image === '' || (Array.isArray(image) && image.length === 0)`
+- **Loading Failure**: HTTP 404, 403, or connection timeout
+
+### 4.2 Static Placeholder Design
+
+- **Background**: Darker Gray (`bg-gray-200` / `dark:bg-gray-900`)
+- **Text**: "no image available" (centered, lowercase)
+- **Typography**: Very small (`text-[10px]` or `text-[8px]`), uppercase tracking-widest, medium weight
+- **Text Color**: Higher contrast gray (`text-gray-500` / `dark:text-gray-600`)
+
+### 4.3 Implementation Standard
+
+- **Component**: Use the global `<AppImage>` component instead of raw `<img>` tags
+- **Event Handling**: Always listen for `@error` to trip the fallback state
+
+## Guardrails
+
+- DO NOT use `<h3>` / `<h4>` for section headers — always `<Divider>`.
+- DO NOT split detail content into multiple Cards.
+- DO NOT use raw `<img>` — use `<AppImage>`.
+- STOP if EN section title is not UPPERCASE in the locale file.
+- NEVER use `AutoComplete` or `Select` for contact name/position/tel/email fields.
+
 ## Checklist
 
 When creating or modifying detail views or forms with sections:
@@ -216,3 +228,7 @@ When creating or modifying detail views or forms with sections:
 - [ ] Contact fields use standardized labels: Name, Job Position, Tel No., Email
 - [ ] Contact fields use `<Input>` (not AutoComplete or Select)
 - [ ] Contact section title is "CONTACT INFORMATION" (EN) / "联系信息" (ZH)
+- [ ] All images use `<AppImage>` with fallback styles
+
+---
+**UI STANDARDIZATION SKILL V2.0 — Frontmatter Repaired + Image Fallback Preserved (2026-04-16)**
