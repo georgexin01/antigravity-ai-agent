@@ -1,45 +1,27 @@
 ---
 name: dna-logic
-description: "⚡ DNA LOGIC — TS, PINIA & ENGINEERING STANDARDS"
+description: "⚡ DNA LOGIC — TS, PINIA & APEX ENGINEERING (V15.1)"
 triggers: ["typescript", "ts", "pinia", "store", "state", "entity", "component", "quality", "logic"]
-version: 1.1
+version: 15.1
 status: authoritative
 ---
 
-# ⚡ 1. DATA ARCHITECTURE (TS + PINIA)
+# ⚡ 1. SOVEREIGN LOGIC DNA (V15.1)
 
-### 1.1 Mandatory Entity Pattern
-Every entity (Product, User, etc.) MUST include these 4 exports:
-1. **Interface**: The database model (CamelCase).
-2. **FormValues**: User input structure (excludes ID, Audit fields).
-3. **Status Enum**: String literal union for states.
-4. **Options**: Dropdown-ready label/value pairs with color mapping.
+The engineering engine of the Antigravity System. Enforces **Rule #1 (Schema Isolation)** and **Principle 5 (Schema Logic)** with absolute technical fidelity.
 
-### 1.2 The Audit Mandate
-Every record MUST have: `id` (UUID), `isDelete` (Soft-delete), `createdAt`, `updatedAt` (ISO 8601).
+## ⚖️ ENGINEERING GUARDRAILS
+1. **Rule #1 (Absolute Isolation)**: All database access MUST use schema-isolated logic. Cross-project leaks are a Grade-A failure.
+2. **Zero-Local Policy**: AI MUST NOT read local documentation files if the library is a standard (Vue, Supabase, GSAP). Rely on internal mastery for velocity.
+3. **Atomic DNA**: Every entity MUST include: `Interface`, `FormValues`, `Status Enum`, and `Options`.
 
-### 1.3 Store & State Patterns
-- **Single Source**: Import types FROM the store that manages them.
-- **Mutation Invalidation**: Every store action MUST increment a `version: ref(0)` counter.
-- **Logic Isolation**: Keep views clean. Complex fetching in Pinia; complex UI toggles in Composables.
+## 🧬 ORCHESTRATION PATTERNS
+- **Store Versioning**: Every mutation action MUST increment a `version: ref(0)` to trigger global reactive updates.
+- **Async Safety**: Every API call MUST be wrapped in `try/catch` with Sovereign error handling.
+- **Validation**: All form inputs MUST be validated via `zod` schemas generated from the Entity Definition.
 
----
-
-# 🧱 2. ENGINEERING STANDARDS & GATES (V27+)
-
-### 2.1 Component & Build Rules
-- **Size Limit**: Components > 200 lines MUST be split.
-- **Async Safety**: Use `try/catch` on ALL API calls in stores/views.
-- **Zero Error Policy**: `npm run build` must have zero errors.
-
-### 2.2 Quantum Quality Gates
-- **Mobile Viewport**: MUST be fixed `width=412`.
-- **AOS Standard**: `{ duration: 1200, easing: 'ease-out-back', once: true }`.
-- **Archetype Classification**: 
-    - **"website"**: Multi-Page (`.html`).
-    - **"landing site"**: Single-Page.
-    - **"app"**: Vue 3 + Vite + Pinia + Tailwind.
-
-### 2.3 PWA Standards
-- **Essentials**: `standalone` mode, `black-translucent` status bar, maskable icons.
-- **Favicon**: Always provide SVG + ICO fallback.
+## 🧪 APEX VERIFICATION
+AI MUST execute a **Sovereign Comparison Table (SCP)** for every store or logic refactor to verify:
+- [ ] Schema Isolation Gap (1/10).
+- [ ] Version Reactive Parity (1/10).
+- [ ] Async Handling Rating (10/10).

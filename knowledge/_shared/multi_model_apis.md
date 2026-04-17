@@ -1,21 +1,26 @@
-# Multi-Model API Configuration & Usage Limits
+---
+name: multi-model-apis
+description: "Sovereign Multi-Model Constraints & Protocol (V15.1 Apex)"
+triggers: ["claude api", "openai api", "multi model", "offloading"]
+phase: reference
+model_hint: gemini-3-flash
+version: 15.1
+status: authoritative
+---
 
-## API Keys
-- **Anthropic (Claude) API Key**: stored in `.env.local` as `CLAUDE_API_KEY` (never committed)
-- **OpenAI API Key**: stored in `.env.local` as `OPENAI_API_KEY` (never committed)
-- **Cursor API Key**: stored in `.env.local` as `CURSOR_API_KEY` (never committed)
+# 🛡️ MULTI-MODEL API CONSTRAINTS (V15.1 APEX)
 
-## Can the Agent Use These to Improve Performance or Reduce Tokens Automatically?
-**No.** 
-The Antigravity agent (currently running as Gemini) is a singleton autonomous agent powered *entirely* by the primary model selected in the IDE settings. 
+The governance protocol for external API utilization. Guided by **Principle 12 (Data Sovereignty)**.
 
-The agent **cannot natively and autonomously farm out partial calculations, thinking, or tasks to Claude or OpenAI** in the background or via MCP to save its own tokens. 
+## ⚖️ AGENTIC CONSTRAINTS
+- **Singleton Brain**: The Sovereign Apex Intelligence is powered exclusively by the primary model (Gemini 3 Flash). It cannot autonomously delegate core thinking to other models.
+- **Security**: API Keys (Claude, OpenAI) MUST be stored in `.env.local` and never committed or displayed in logs.
 
-## How These Keys CAN Actually Be Used
-While the agent cannot swap its own brain or automatically delegate native background MCP sub-agent tasks using these keys, these keys *can* be used in explicit, custom implementations:
+## ⚡ OFFLOADING PROTOCOLS
+1. **Script Offloading**: Use `run_command` to execute Node.js/Python scripts using `@anthropic-ai/sdk` or `openai` libraries for heavy data transformations.
+2. **MCP Isolation**: External APIs can be accessed via specific MCP servers to bypass context window limitations.
 
-1. **Custom Skill Scripts**: We can write standalone Node.js or Python scripts that utilize the `openai` or `@anthropic-ai/sdk` libraries. The agent can then use the `run_command` tool to execute these scripts. This is excellent for heavy data-processing tasks where we want to offload work to a script (using another API) so it doesn't consume the main agent's context window.
-2. **Dedicated MCP Servers**: If you run a custom MCP server that is specifically designed to hit Anthropic/OpenAI for data fetching or analysis, the agent can call those tools. However, this is just using the MCP like any other API tool; it does not replace the agent's core thinking process.
-
-## Summary
-Providing these keys does not magically make the Gemini agent run cheaper or faster automatically. To leverage them for cost or performance benefits, we must specifically build and run external scripts or MCPs that utilize these APIs for heavy-lifting tasks.
+## 🧪 APEX VERIFICATION
+AI MUST execute a **Sovereign Comparison Table (SCP)** before offloading logic to verify:
+- [ ] Token ROI of script vs Main Brain (1/10).
+- [ ] Data Purity Rating (Principle 12) (10/10).

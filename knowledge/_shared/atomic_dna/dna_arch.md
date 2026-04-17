@@ -1,37 +1,31 @@
 ---
 name: dna-arch
-description: "🏗️ DNA ARCH — ARCHITECTURAL MANDATES & ROUTING"
+description: "🏗️ DNA ARCH — SOVEREIGN ARCHITECTURAL PURITY (V15.1)"
 triggers: ["structure", "folder", "app", "website", "blueprint", "routing", "isolation"]
-version: 1.1
+version: 15.1
 status: authoritative
 ---
 
-# 🏗️ 1. ARCHITECTURAL MANDATES
+# 🏗️ 1. ARCHITECTURAL PURITY (V15.1)
 
-### 1.1 Archetype Classification
-- **"website"**: Multi-Page (`.html`).
-- **"landing site"**: Single-Page (`index.html` + anchors).
-- **"app"**: Vue 3 + Vite + Tailwind + Pinia + Supabase.
+The structural blueprint of the Antigravity System. Enforces **Principle 11 (Header Loading)** and **Principle 13 (Ignore Injection)** with absolute zero-latency routing.
 
-### 1.2 Structure & Build Sequence
-- **Density**: Minimum 6 sections per page (Standard 10+). Heroes → Proof → Logic → CTAs.
-- **Build Order**: Tokens → Types/Data → Stores → Router → Layout → Views → Verify.
-- **Shell**: 540px Mobile Container (PC) | Fixed Header (56px) + Bottom Nav (60px).
+## ⚖️ STRUCTURAL GUARDRAILS
+1. **Root Parity**: AI MUST maintain a 1:1 root-level directory structure for project documentation. No deep nesting.
+2. **Autonomous Ignore (Principle 13)**: Every new project Genesis MUST automatically generate a `.geminiignore` file to filter `node_modules`, `dist`, and binary assets for 100% token efficiency.
+3. **Build Sequence**: Logic (Types/Schema) → Data (Stores/API) → UI (Views/Drawers).
 
----
+## 🧬 MODULE ARCHETYPES
+- **Sovereign App**: Vue 3 + Vben + Supabase JS.
+- **Sovereign Website**: PHP + Supabase REST / PSR-4.
+- **Sovereign Faucet**: Browser Automation + Visual Decryption.
 
-# 🧭 2. MODE ROUTING & MOMENTUM
+## 🧭 ROUTING & MOMENTUM
+- **Zero-Guess Discovery**: All skills and knowledge nodes are indexed in the `GLOBAL_ATLAS.yaml` for instant direct pathing.
+- **Momentum**: Completing a logical node (e.g. Auth) MUST autonomously trigger the next architectural dependency (e.g. RBAC).
 
-### 2.1 Task Classification
-- **APP/ADMIN**: `dna.core` + `dna.logic` targets.
-- **WEBSITE**: `dna.core` + `dna.design` targets.
-- **BUGFIX**: `GROUND_KERNEL` Triage. Read → Classify → Fix → Rebuild → Verify.
-
-### 2.2 Folder & Identity Locks
-- **Unlocked**: `_shared/` + matched `mode/` (normal/claude/faucet).
-- **Identity**: Identity sync mandatory for cross-mode logic (Director ↔ Architect).
-
-### 2.3 Predictive Momentum (V9)
-- **Login Complete** → Auto-prep Auth Chain (OTP, Signup, Guards).
-- **Products Complete** → Auto-prep Cart & Checkout.
-- **Hero Built** → Auto-prep remaining Authority Flow sections.
+## 🧪 APEX VERIFICATION
+AI MUST execute a **Sovereign Comparison Table (SCP)** for every structural change to verify:
+- [ ] Path Parity Rating (1/10).
+- [ ] Token Efficiency (Principle 13) (10/10).
+- [ ] Orchestration Velocity (1/10).

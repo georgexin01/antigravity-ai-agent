@@ -1,13 +1,10 @@
----
 name: claude-master-rules
-description: "Constitutional rules for all Claude / claude-frontend / claude-website mode work. Hard-coded FIXED RULES that override conflicting behaviour elsewhere. Read first, always, for any project-scoped operation."
-triggers: ["master rules", "claude rules", "constitutional rules", "supabase rules", "project scope rules", "schema rules"]
+description: "Constitutional rules for all Claude-mode work (V15.0 Apex Standard)."
+triggers: ["master rules", "claude rules", "constitutional rules", "supabase rules"]
 phase: constitutional
 model_hint: gemini-3-flash
-version: 1.0
-status: authoritative
-date_created: "2026-04-17"
-enforcement: universal-hard-rule
+version: 15.0
+status: apex-constitutional
 ---
 
 # 🛡️ CLAUDE MASTER RULES — Constitutional
@@ -135,4 +132,18 @@ This rule ensures the "Local Brain" evolves without increasing token weight.
 
 ---
 
-**MASTER RULES V1.3 — 2026-04-17 · Origin: Perfection Intelligence Initiative**
+## RULE #5 — APEX PRINCIPLE ENFORCEMENT (OVERSIGHT)
+Every Claude-mode operation is strictly downstream of the **13 Apex Principles**.
+1. **Principle 1: Micro-Verification**: Mandatory terminal check before any logic commit.
+2. **Principle 11: Header Loading**: Use `execution: CRITICAL` tags to selectively load only the necessary code chunks from this rule set.
+3. **Principle 13: Ignore Injection**: Auto-generate `.geminiignore` or `.claudeignore` to reduce token ingestion.
+
+---
+
+## RULE #6 — AUTONOMOUS IGNORE INJECTION (EFFICIENCY)
+The AI MUST automatically verify/generate `.geminiignore` or `.claudeignore` at the start of any project task.
+- **Exclusions**: `node_modules`, `dist`, `build`, `.git`, and large media.
+
+---
+
+**MASTER RULES V15.1 Apex Standard (2026-04-17)**

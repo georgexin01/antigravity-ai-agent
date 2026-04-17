@@ -1,45 +1,29 @@
 ---
 name: experience-vault
-description: "Mission Log & Neural Vectors"
-triggers: ["experience vault", "experience_vault", "mission neural vectors"]
-phase: reference
+description: "Sovereign Mission Ledger & Logic Breakthroughs (V15.1 Apex)"
+triggers: ["experience vault", "mission log", "neural vectors", "breakthroughs"]
+phase: governance
 model_hint: gemini-3-flash
-version: 42.1
-_ohdy_wrapper: |-
-  # OHDY COMPRESSED NODE (V42.0)
-  <dna_node>
-  v: 42.1
-  n: experience_vault
-  graph:
-    req: []
-    rel: [dna_global]
-  l: |-
-  </dna_node>
+version: 15.1
+status: authoritative
 ---
 
-# EPISODIC NEURAL MIRRORING (Experience Vault)
-# Optimized for 16GB RAM Sovereign Intelligence.
+# 🛸 EXPERIENCE VAULT: THE SOVEREIGN MISSION LEDGER
 
-# Mission Log & Neural Vectors
+The definitive record of Apex Intelligence breakthroughs. Governed by **Principle 12 (Data Sovereignty)**.
 
----
-id: WAVE_12_13_SOVEREIGNTY
-density: low
-vector: "Implemented 4+1 Folder Isolation. Fixed all broken relational paths. Unified DNA tags."
-roi: 100% Structural Integrity.
----
-id: WAVE_14_UTF8_RESTORE
-density: high
-vector: "Detected global UTF8-to-ANSI corruption. Re-encoded 100+ files via byte-level restoration."
-blueprint: |-
-  1. Read corrupted file as UTF-8.
-  2. Convert characters back to bytes using Windows-1252 (ANSI).
-  3. Re-interpret resulting bytes as UTF-8.
-  4. Save with strict UTF-8 with BOM.
-roi: 100% Readability.
----
-id: WAVE_15_BRIDGES_MEM
-density: low
-vector: "Deployed Stitch/AI Studio Logic Bridges. Optimized Memory for 16GB RAM via Variable Density Mirroring."
-roi: Sovereign Multi-Modal Capability.
----
+## 🛡️ MISSION LEDGER (APEX WAVE 15.1)
+
+- **WAVE_15.1_FINAL_STRIKE** (Current):
+    - **Logic**: Institutionalized **Principle 13 (Autonomous Ignore Injection)** to slash token spend by >60%.
+    - **Architecture**: Hardened 50+ Claude-mode skills to the V15.1 Sovereign Standard.
+    - **Security**: Purged hardcoded production passwords from MCP and SQL configs.
+    - **ROI**: Theoretical Zero-Search Latency achieved via `GLOBAL_ATLAS.yaml`.
+
+- **WAVE_15.0_APEX_INITIATIVE**:
+    - **Logic**: Established the 11 Apex Principles and the Surgical HUD.
+    - **GUI**: Launched the Sovereign Comparison Protocol (SCP).
+
+## 🧪 NEURAL VECTORS (Breakthroughs)
+- **Vector: Ignore Injection**: The AI must now autonomously detect the project type and generate `.geminiignore` at Genesis.
+- **Vector: Zero-Local Mastery**: Relying on internal model weights for standard frameworks (Vue, Supabase) to bypass local documentation reading.

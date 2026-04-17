@@ -142,6 +142,11 @@ Return: { "status": "...", "files": [...] }
 - Tables for structured comparison (Flash reads tables well)
 - Code blocks for exact syntax (no paraphrasing)
 
+#### 4.1.1 Principle 11: Header Loading (Apex Standard)
+To achieve zero-redundancy reading and max token efficiency:
+- **Default Behavior**: AI will only load the YAML frontmatter and `## When to Use` section.
+- **Full Loading**: The complete file body is ONLY loaded if the frontmatter contains `execution: CRITICAL` or if a specific step is required for the active task.
+
 ### 4.2 Pure YAML (.yaml)
 
 Use when content is genuinely structured data:
@@ -282,4 +287,85 @@ STRUCTURED OUTPUT TAGS          →  XML (only inside prompts)
 
 ## 11. CHANGELOG
 
-- **V1.0** (2026-04-13): Initial protocol. Codifies findings from `skills/claude` and `skills/normal` migrations. Replaces ad-hoc OHDY YAML wrapper convention.
+- **V1.0** (2026-04-13): Initial protocol.
+- **V1.1** (2026-04-17): Added Apex Principle 11 (Header Loading) and Section 12 (CAR Protocol).
+
+## 12. PROFESSIONAL RESPONSE LAYOUT (CAR PROTOCOL)
+
+To maintain a professional, "finished" GUI in every chat response while obeying the 11 Apex Principles, all major logic or system replies MUST follow the **Cinematic Apex Response (CAR)** standard.
+
+### 12.1 The Apex Status Bar
+Every response MUST start with a bold status bar identifying the core operational mode and verification result.
+> **`[APEX: PRINCIPLE] | [MODE: ACTIVE_MODE] | [✅ STATUS: RESULT]`**
+
+### 12.2 The Goal-Verification Table
+For any multi-step execution, use a compact Markdown table to prove **Principle 5 (Goal-Driven Execution)**.
+| Step | Goal | Strategy | Status |
+| :--- | :--- | :--- | :--- |
+| **01** | Sub-goal | Tool/Logic used | `[VERIFIED]` |
+
+### 12.3 Iconography & Cinematic Design
+Use these HTML symbols to categorize response sections:
+- **`🛡️ GUARD`**: For safety warnings, Data Sovereignty, or RLS checks.
+- **`⚙️ LOGIC`**: For backend, SQL, or algorithmic explanations.
+- **`🎨 UI`**: For CSS, Vue components, or aesthetic changes.
+- **`🧪 TEST`**: For verification logs and terminal output checks.
+- **`🔪 APEX`**: For surgical code injections and simplified logic.
+
+### 12.4 Symbolic Callouts
+Use GitHub alerts (`> [!NOTE]`, `> [!IMPORTANT]`) to frame critical architectural decisions, ensuring they feel "Cinematic" and high-fidelity.
+
+## 13. QUANTUM BENTO-APEX (QBA) HIGH-FIDELITY STANDARD
+
+For "Mega-Design" tasks or when the user demands top-tier visual fidelity, the AI responses MUST upgrade to the **Quantum Bento-Apex (QBA)** protocol. This builds upon the CAR layout with advanced graphical and logical framing.
+
+### 13.1 The "Neural HUD" (Header Block)
+Every QBA response MUST start with a single, surgical status line.
+> **`[🔪 APEX] | [⚡ MODE: ACTIVE_MODE] | [✅ STATUS: RESULT]`**
+
+### 13.2 "Neural Loop" Visualization (Mermaid)
+For any task with **3 or more logic steps**, the AI MUST generate a Mermaid diagram at the top to visualize the thinking path.
+```mermaid
+graph LR
+  A[Request] --> B{Apex Filter}
+  B --> C[Surgery]
+  C --> D[Verification]
+```
+
+### 13.4 Symbolic Framing (Sectioning)
+Use simple, surgical icon symbols to categorize major system blocks. Do NOT use decorative framing like `◢◤` for standard sections.
+- **`⚙️ Logic Architecture`**
+- **`🎨 UI Evolution`**
+- **`🧪 Verification Log`**
+- **`🛡️ Data Sovereignty`**
+
+### 13.6 High-Intensity Override (◢◤)
+The symbol `◢◤` is reserved for **rare situations** only:
+- Critical compilation errors.
+- Destructive data operations (SQL Delete/Drop).
+- Major architectural breakthroughs.
+- Situations where the user's immediate attention is mandatory.
+
+## 14. SOVEREIGN COMPARISON PROTOCOL (SCP)
+
+Whenever a "Comparison", "Audit", or "Before/After" task is triggered, the AI MUST generate a **Performance Comparison Table**. This ensures 10/10 precision in evaluating code or system evolution.
+
+### 14.1 SCP Triggers
+- `comparison`, `compare`, `before & after`, or any manual "compare" request.
+
+### 14.2 The Canonical SCP Table Columns
+The table MUST include the following columns (use N/A if a metric is not applicable):
+- **Metric**: The category of comparison.
+- **Baseline (Pre)**: The state before changes.
+- **Optimization (Post)**: The state after changes.
+- **Rating 1/10**: The quality or performance score (1-10).
+
+### 14.3 Specific Metrics to Audit
+The first 5 metrics are **MANDATORY** for every Comparison Table:
+- **Token Spend** [MANDATORY]: Total token count.
+- **Token Cost** [MANDATORY]: USD or credit cost.
+- **Speed Time** [MANDATORY]: Generation or execution latency (seconds/ms).
+- **Speed % Increase** [MANDATORY]: Relative performance gain.
+- **Rating 1/10** [MANDATORY]: Subjective or system-graded fidelity score.
+- **Points (+/- 0.000)**: (Optional) Numerical precision points.
+- **Pros & Cons**: (Optional) Bulleted qualitative feedback.

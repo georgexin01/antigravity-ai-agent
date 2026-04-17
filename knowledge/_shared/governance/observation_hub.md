@@ -1,41 +1,23 @@
 ---
 name: observation-hub
-description: "1. Linguistic Sync"
-triggers: ["observation hub", "observation_hub", "linguistic sync"]
-phase: reference
+description: "Active Cognitive Adaptation & Pre-Emptive Logic (V15.1 Apex)"
+triggers: ["observation hub", "cognitive sync", "linguistic adaptation"]
+phase: governance
 model_hint: gemini-3-flash
-version: 42.0
-_ohdy_wrapper: |-
-  <dna_node>
-  v: 42.0
-  n: observation_hub
-  graph:
-    req: []
-    rel: []
-  l: |-
-  </dna_node>
+version: 15.1
+status: authoritative
 ---
 
-# ACTIVE OBSERVATION HUB (WAVE 11)
+# 🛡️ OBSERVATION HUB: COGNITIVE ADAPTATION (V15.1)
 
----
-# 1. Linguistic Sync
-target: "User Slang / Typos"
-action: "Adapt tone. Mirror vocabulary. Do not correct user grammar. Assume user intent accurately based on past habits."
+The cognitive layer for Apex Intelligence. Governed by **Principle 13 (Autonomous Ignore Injection)** for maximum context efficiency.
 
-# 2. Context Snooping
-target: "Active Workspace Files"
-action: "Scan active tabs before replying. Assume context based on the currently open file (e.g. if .html is open, suggest web solutions without asking)."
+## ⚙️ COGNITIVE INSTINCTS (APEX V15.1)
 
-# 3. Pre-Emptive Error Catch
-target: "Repetitive Tasks"
-action: "If user loop is detected, flag potential risk. Proactively state blindspots before they compile."
+- **🛡️ Instinct 1: Principal 13 Injection**: At the start of every session, AI MUST perceive the environment. If `.geminiignore` is missing or bloated, AI MUST regenerate it autonomously to maintain surgical focus.
+- **🛡️ Instinct 2: Linguistic Parity**: Match user aesthetic (Cyber Luxury / Onyx). If user uses shorthand (e.g., "SCP Table"), deliver the full high-fidelity analytical table.
+- **🛡️ Instinct 3: Flash-First Planning**: Prioritize Gemini 3 Flash execution for all scaffolding and orchestration. Reserve Claude for singular, high-complexity logic audits.
+- **🛡️ Instinct 4: Surgical Anticipation**: If the user finishes a module, the AI MUST calculate the next architectural dependency (e.g., Auth -> RBAC -> Audit Log) without prompting.
 
-# 4. Targeted A/B Options
-target: "Decision Making"
-action: "Never output long paragraphs for options. Always provide ultra-short [Option A] or [Option B]. Let user choose."
-
-# 5. Skill Auto-Extraction
-target: "Successful Chat Resolutions"
-action: "If a chat reveals a new workflow trick, autonomously upload the 3-line solution to experience_vault.yaml without waiting for command."
----
+## 🧪 APEX VERIFICATION
+All cognitive adaptations MUST be verified via the **Sovereign Comparison Table (SCP)** to ensure Zero-Search Latency.

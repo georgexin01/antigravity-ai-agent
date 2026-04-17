@@ -1,49 +1,42 @@
 ---
-name: activation-protocol-v11
-description: "🧭 ACTIVATION PROTOCOL (V11.0) — SLIM BOOT SEQUENCE"
-triggers: ["activation", "how to boot", "slim boot", "v11 protocol"]
+name: activation-protocol-v15
+description: "🧭 ACTIVATION PROTOCOL (V15.1) — APEX BOOT HANDSHAKE"
+triggers: ["activation", "how to boot", "apex boot", "v15 protocol"]
 phase: constitutional
 model_hint: gemini-3-flash
-version: 11.0
+version: 15.1
 status: authoritative
 ---
 
-# 🧭 ACTIVATION PROTOCOL V11.0 (SLIM BOOT)
+# 🧭 ACTIVATION PROTOCOL V15.1 (APEX BOOT)
 
-This protocol governs the **Recursive Handshake** between the Antigravity AI and its local knowledge base. It is designed to achieve <10s response time while maintaining 100% architectural alignment.
+The definitive handshake for Sovereign Apex Intelligence. Governed by the **13 Apex Principles** for zero-latency hydration.
 
----
+## 🌪️ THE FOUR-ROUND HYDRATION
 
-## 🌪️ THE THREE-ROUND HYDRATION
+### ROUND 0: THE GENESIS STRIKE (Turn 1 - Priority 0)
+**Goal**: Environmental Efficiency.
+1. **Behavior**: Execute **Principle 13 (Autonomous Ignore Injection)**. Generate `.geminiignore` at project root immediately to filter context noise.
+2. **Behavior**: Use `GLOBAL_ATLAS.yaml` to hit core identities without searching.
 
-### ROUND 1: THE CORE STRIKE (Turn 1)
-**Goal**: Immediate alignment with Law, Context, and Design.
-- **Mandatory Files**:
-    1. `GROUND_KERNEL.md` (The singular source of truth).
-    2. `CORE_VITALS.md` (Current project state, predictions, and UI tokens).
-- **Behavior**: Skip all path discovery. Use absolute aliases (`.gemini`). Respond with high-fidelity aesthetics immediately.
+### ROUND 1: THE APEX KERNEL (Turn 1 - Priority 1)
+**Goal**: Immediate alignment with Sovereign Law.
+- **Resources**:
+    1. [GROUND_KERNEL.md](file:///C:/Users/User/.gemini/antigravity/knowledge/GROUND_KERNEL.md).
+    2. [dna_core.md](file:///C:/Users/User/.gemini/antigravity/knowledge/_shared/atomic_dna/dna_core.md).
+    3. [GLOBAL_ATLAS.yaml](file:///C:/Users/User/.gemini/antigravity/knowledge/GLOBAL_ATLAS.yaml).
 
-### ROUND 2: HUMAN ALIGNMENT (Turn 2)
-**Goal**: Hydrate personal tastes and long-term intelligence logs.
-- **Mandatory Files**:
-    1. `user_preference_dna.md` (User's specific technical and aesthetic tastes).
-    2. `evolving_knowledge.md` (Version ledger and breakthrough records).
-- **Behavior**: Calibrate tone and strategic queue based on user history.
+### ROUND 2: COGNITIVE SYNC (Turn 2)
+**Goal**: Hydrate user fingerprints and breakthroughs.
+- **Resources**:
+    1. [observation_hub.md](file:///C:/Users/User/.gemini/antigravity/knowledge/_shared/governance/observation_hub.md).
+    2. [experience_vault.md](file:///C:/Users/User/.gemini/antigravity/knowledge/_shared/governance/experience_vault.md).
 
 ### ROUND 3: DOMAIN SPECIALIZATION (Turn 3+)
-**Goal**: Load deep technical or specialist knowledge on-demand.
-- **Mandatory Files**:
-    - `MASTER_DNA.md` (Coding Standards).
-    - `TECH_STACK.md` (Engineering Specs).
-    - Specific Skill MDs (e.g., `faucet.md`).
-- **Behavior**: ONLY read these if the task matches the domain trigger.
-
----
+**Goal**: Load Specialist Skills (Claude, Faucet, Normal).
+- **Resources**: [claude/INDEX.md](file:///C:/Users/User/.gemini/antigravity/knowledge/claude/INDEX.md) and related Skill nodes.
 
 ## ⚖️ EXECUTION GATES
-1. **discovery_bypass**: Never search for "ai knowledge". Directly hit `.gemini/knowledge/GROUND_KERNEL.md`.
-2. **predictive_sync**: Turn 1 MUST read the `Prediction Sync` from `CORE_VITALS.md` to avoid redundant state-checks.
-3. **holographic_scaling**: If a project context exceeds 2000 tokens, use `grep` summaries before full-file reads.
-
----
-**Activation Protocol V11.0 — Antigravity Boot Efficiency (2026-04-16)**
+1. **Discovery_Bypass**: Use direct paths. Recursive `ls` is a failure.
+2. **Analysis_Protocol**: Every Turn-1 response MUST include a **Sovereign Comparison Table (SCP)** for at least one critical logic block.
+3. **Apex_Gate**: Verifying all logic commits against the 13 Principles before sending.
