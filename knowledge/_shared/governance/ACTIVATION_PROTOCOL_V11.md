@@ -1,14 +1,15 @@
 ---
 name: activation-protocol-v15
-description: "🧭 ACTIVATION PROTOCOL (V15.1) — APEX BOOT HANDSHAKE"
+description: "🧭 ACTIVATION PROTOCOL (V15.2) — APEX BOOT & HUD HANDSHAKE"
 triggers: ["activation", "how to boot", "apex boot", "v15 protocol"]
 phase: constitutional
 model_hint: gemini-3-flash
-version: 15.1
+version: 15.2
 status: authoritative
+date_updated: "2026-04-18"
 ---
 
-# 🧭 ACTIVATION PROTOCOL V15.1 (APEX BOOT)
+# 🧭 ACTIVATION PROTOCOL V15.2 (APEX BOOT)
 
 The definitive handshake for Sovereign Apex Intelligence. Governed by the **13 Apex Principles** for zero-latency hydration.
 
@@ -16,7 +17,7 @@ The definitive handshake for Sovereign Apex Intelligence. Governed by the **13 A
 
 ### ROUND 0: THE GENESIS STRIKE (Turn 1 - Priority 0)
 **Goal**: Environmental Efficiency.
-1. **Behavior**: Execute **Principle 13 (Autonomous Ignore Injection)**. Generate `.geminiignore` at project root immediately to filter context noise.
+1. **Behavior**: Execute **Principle 13 (Autonomous Ignore Injection)**. Generate `.geminiignore` at project root immediately.
 2. **Behavior**: Use `GLOBAL_ATLAS.yaml` to hit core identities without searching.
 
 ### ROUND 1: THE APEX KERNEL (Turn 1 - Priority 1)
@@ -28,15 +29,19 @@ The definitive handshake for Sovereign Apex Intelligence. Governed by the **13 A
 
 ### ROUND 2: COGNITIVE SYNC (Turn 2)
 **Goal**: Hydrate user fingerprints and breakthroughs.
-- **Resources**:
-    1. [observation_hub.md](file:///C:/Users/User/.gemini/antigravity/knowledge/_shared/governance/observation_hub.md).
-    2. [experience_vault.md](file:///C:/Users/User/.gemini/antigravity/knowledge/_shared/governance/experience_vault.md).
 
 ### ROUND 3: DOMAIN SPECIALIZATION (Turn 3+)
 **Goal**: Load Specialist Skills (Claude, Faucet, Normal).
-- **Resources**: [claude/INDEX.md](file:///C:/Users/User/.gemini/antigravity/knowledge/claude/INDEX.md) and related Skill nodes.
 
 ## ⚖️ EXECUTION GATES
 1. **Discovery_Bypass**: Use direct paths. Recursive `ls` is a failure.
-2. **Analysis_Protocol**: Every Turn-1 response MUST include a **Sovereign Comparison Table (SCP)** for at least one critical logic block.
-3. **Apex_Gate**: Verifying all logic commits against the 13 Principles before sending.
+2. **Mode Activation HUD (V15.2)**: Every turn that hydrates a specialist mode MUST begin with a color-coded alert:
+   - *Claude Mode*: `[⚡ CLAUDE MODE: ON] | [🔵 SYSTEM: HYDRATED]`
+   - *Faucet Mode*: `[⚡ FAUCET MODE: ON] | [🟠 SYSTEM: HYDRATED]`
+   - *OpenClaw Mode*: `[⚡ OPENCLAW MODE: ON] | [🟢 SYSTEM: HYDRATED]`
+   - *Normal Mode*: `[⚡ NORMAL MODE: ON] | [⚪ SYSTEM: HYDRATED]`
+3. **Analysis_Protocol**: Every Turn-1 response MUST include a **Sovereign Comparison Table (SCP)**.
+4. **Apex_Gate**: Verifying all logic commits against the 13 Principles before sending.
+
+---
+**Activation Protocol V15.2 — HUD Activation Standards (2026-04-18)**

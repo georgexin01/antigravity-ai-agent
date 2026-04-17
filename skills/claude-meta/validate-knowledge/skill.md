@@ -1,26 +1,26 @@
 ---
 name: validate-knowledge
-description: "Lints all Claude-mode skills + knowledge against HYBRID_FORMAT_PROTOCOL V1.1. Checks frontmatter compliance, broken path refs, duplicate detection, trigger collisions, and locked-file integrity. Self-healing — flags issues, proposes fixes, writes a lint report."
-triggers: ["validate knowledge", "lint skills", "check frontmatter", "audit format", "validate claude"]
+description: "Sovereign Apex Validator — Lints all skills + knowledge against HYBRID_FORMAT_PROTOCOL V1.2. Checks Apex compliance (Tier-0, Ignore Injection), broken path refs, and structural purity. (V15.2)"
+triggers: ["validate knowledge", "lint skills", "apex audit", "audit format", "validate sovereign"]
 phase: 3-testing
 requires: []
 unlocks: []
 inputs: []
 output_format: lint_report
 model_hint: gemini-3-flash
-version: 1.0
+version: 15.2
 status: authoritative
 date_created: "2026-04-16"
+date_updated: "2026-04-18"
 ---
 
-# validate-knowledge — Skill & Knowledge Linter
+# validate-knowledge — Sovereign Apex Validator (V15.2)
 
 ## When to Use
 
-- After editing any skill or knowledge file
-- Before committing changes to `.gemini/antigravity/`
-- On a schedule (weekly) to catch drift
-- When user says "lint" / "validate knowledge"
+- After any structural refactor or knowledge consolidation
+- Before final mission sign-off
+- To verify Crystal State (0-noise) integrity
 
 ## Steps
 
@@ -28,10 +28,10 @@ date_created: "2026-04-16"
 
 Walk these directories recursively:
 - `C:/Users/user/.gemini/antigravity/skills/claude/`
-- `C:/Users/user/.gemini/antigravity/skills/claude-frontend/`
-- `C:/Users/user/.gemini/antigravity/skills/claude-website/`
 - `C:/Users/user/.gemini/antigravity/skills/claude-meta/`
-- `C:/Users/user/.gemini/antigravity/knowledge/claude/`
+- `C:/Users/user/.gemini/antigravity/skills/faucet/`
+- `C:/Users/user/.gemini/antigravity/skills/normal/`
+- `C:/Users/user/.gemini/antigravity/knowledge/`
 
 Collect every `.md` and `.yaml`.
 
@@ -40,66 +40,45 @@ Collect every `.md` and `.yaml`.
 For each `.md`:
 - [ ] Opens with `---` on line 1
 - [ ] Has required fields: `name`, `description`, `triggers`, `phase`, `model_hint`, `version`
-- [ ] `phase` is in enum: `constitutional | 0-orchestrator | 1-analysis | 2-scaffold | 3-testing | reference`
 - [ ] `model_hint` is `gemini-3-flash` or `gemini-3-pro`
-- [ ] `triggers` is array of 2–5 literal strings (no semantic paraphrases)
+- [ ] `triggers` is array of 2–5 literal strings
 - [ ] No duplicate `name` across files
 
 ### Step 3 — CHECK PATH REFS
 
-Grep each file for:
-- `file:///` absolute paths
-- `C:/` / `c:/` absolute paths
-- Relative `./` / `../` paths
-
-For each hit: verify the target exists. Flag misses.
+Grep each file for `file:///` and `C:/` absolute paths.
+- [ ] Verify targets exist via `Test-Path`.
+- [ ] Flag broken links as HIGH severity.
 
 ### Step 4 — CHECK CROSS-REFS
 
-For each file's `requires:` and `unlocks:`:
-- [ ] Named skill exists in INDEX.md routing table
-- [ ] No circular dependency (A requires B, B requires A)
+Verify that all `requires:` and `unlocks:` point to valid skills reachable in `GLOBAL_ATLAS.yaml`.
 
-### Step 5 — CHECK DUPLICATES
+### Step 5 — CHECK DUPLICATES & DENSITY
 
-Hash the body (excluding frontmatter) of every skill. Report:
-- Byte-identical pairs → recommend redirect-stub
-- >80% similar pairs → recommend merge review
+- [ ] Identify files < 1KB (Potential merge targets).
+- [ ] Identify >80% body similarity (Potential redundancy).
 
-### Step 6 — CHECK LOCKED INTEGRITY
+### Step 6 — CHECK LOCKED INTEGRITY (TIER-0)
 
-For files under `skills/claude/` (LOCKED) + `_shared/unchangable/`:
-- [ ] No modifications since last validated timestamp
-- [ ] Frontmatter required fields still present
+For files under `skills/claude/`:
+- [ ] Verify no unauthorized modifications (unless handshake matched).
+- [ ] Ensure `GROUND_KERNEL` principles remain untouched.
 
-### Step 7 — WRITE REPORT
+### Step 7 — APEX PURITY AUDIT (NEW V15.2)
 
-Save to `C:/Users/user/.gemini/antigravity/knowledge/claude/LINT_REPORT_{date}.md` with:
-- Pass/fail per file
-- Specific violations per file with line numbers
-- Severity: HIGH / MED / LOW
-- Suggested fix per issue
+- [ ] **Principle 13**: Verify presence of root `.geminiignore`.
+- [ ] **Noise Liquidation**: Verify zero `metadata.json` or `timestamps.json` in scanned paths.
+- [ ] **HUD Compliance**: Verify all `walkthrough.md` files use the Clinical HUD format.
 
-## Output Contract
+### Step 8 — WRITE REPORT
 
-Lint report markdown file. No automatic edits. AI proposes, user approves.
+Save to `C:/Users/user/.gemini/antigravity/brain/tactical/LINT_REPORT_{date}.md`.
 
 ## Guardrails
 
-- DO NOT edit any file automatically. Report only.
-- DO NOT touch `skills/claude/` or `_shared/unchangable/` content — just validate.
-- STOP if scan finds >50 violations — likely protocol drift, escalate to user.
-- NEVER claim "all green" without scanning every file.
-
-## Verify
-
-- Report file written
-- Every scanned file appears in the report
-- Report has explicit PASS or FAIL per file
-
-## Rollback
-
-N/A — validator is read-only.
+- DO NOT edit files. Report only.
+- STOP if scan finds >20 violations (Critical drift).
 
 ---
-**validate-knowledge V1.0 — 2026-04-16**
+**validate-knowledge V15.2 — 2026-04-18 · Karpathy Apex Edition**

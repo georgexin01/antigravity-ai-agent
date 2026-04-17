@@ -1,158 +1,89 @@
 ---
 name: plan-first
-description: "Orchestrator. Detects task intent, maps to a Flow Recipe, builds a written execution plan with checkpoints, presents plan to user for approval BEFORE any execution skill fires. Forces upfront reasoning so Gemini 3 Flash / Claude can pre-compute the full chain instead of sleepwalking step-by-step."
-triggers: ["plan first", "build module", "new module", "start feature", "create crud", "ready to build", "full module", "new table"]
+description: "Sovereign Apex Orchestrator — Liquid-intent detection and surgical goal-mapping. Orchestrates all logic domains (Claude, Website, Frontend, Mobile, Logic) via Sovereign Logic Cascade. (V15.2)"
+triggers: ["plan first", "build module", "new module", "start feature", "create crud", "ready to build", "full module", "new table", "new website", "frontend design", "webapp genesis"]
 phase: 0-orchestrator
 requires: []
 unlocks: [analyze-schema, create-module, generate-supabase-schema, generate-store, generate-views, generate-route, generate-i18n, workflow-test, generate-e2e]
 inputs: [user_intent, target_entity, project_context]
 output_format: structured_plan_document
 model_hint: gemini-3-pro
-version: 1.0
+version: 15.2
 status: authoritative
 date_created: "2026-04-16"
+date_updated: "2026-04-18"
 ---
 
-# plan-first — Upfront Reasoning Orchestrator
+# plan-first — Sovereign Apex Orchestrator (V15.2)
 
-## When to Use
-
-Whenever the user requests a multi-step task (new module, new table, relational CRUD, migration, feature build). Run THIS skill FIRST. Produce a written plan. Get approval. Only then delegate to execution skills.
-
-## Why Upfront Reasoning
-
-Gemini 3 Flash is keyword-matched + latency-optimized. It does NOT deep-reason across 10 steps mid-execution. If you skip planning:
-- Flash jumps to step 1, loses context before step 10
-- Cross-step dependencies go undetected
-- Rollback is impossible when you don't know where you are
-
-**Fix:** Use `gemini-3-pro` ONCE to produce the plan, then delegate per-step work to Flash skills. Pro reasons — Flash executes. Token cost: +1 Pro call, save N Flash re-reasonings.
+## ⚖️ THE APEX MANDATE
+**Think, Simple, Surgical, Goal-Driven.**
+Upfront reasoning is non-negotiable. Plan first, stop for approval, then execute with terminal-verified reality.
 
 ## Steps
 
-### Step 1 — DETECT INTENT (two-stage)
+### Step 0 — NOISE REDUCTION (PRINCIPLE 13)
+Inject or verify `.geminiignore` at project root. Ensure current session is isolated from background noise (logs, metadata) before starting the logic cascade.
 
-**Stage 1a — Combinatorial Signature Scan (preferred)**
+### Step 1 — SOVEREIGN LOGIC CASCADE (RECURSIVE)
 
-Read `C:/Users/user/.gemini/antigravity/knowledge/claude/INDEX.md` → "Intent Detection — Combinatorial Signatures" section. Run the mechanical signature scan:
+Instead of linear matching, use recursive path verification:
+1. **Identify Target**: Verify exists via `Test-Path` or `GLOBAL_ATLAS.yaml`.
+2. **Domain Mapping (APEX UPDATED)**: 
+   - *Logic/Backend/Auth*: Route to `skills/claude/`
+   - *Frontend/Design/Website*: Route to `skills/normal/`
+   - *Web-Automation*: Route to `skills/faucet/` or `skills/openclaw/`
+3. **Signature Scan**: Match user tokens against `skills/claude/INDEX.md` or specialist nodes.
+4. **Reality Check**: If target logic exists, compare current state with goal. If 100% parity, STOP (Simplicity First).
 
-1. Lowercase user message, strip punctuation/glue words ("+", "with", "and", "the", "for")
-2. Extract token set
-3. Score each signature (how many of its tokens present in user's set)
-4. Pick signatures scoring ≥ their `min_match` threshold
+### Step 2 — LOAD RECIPE
+Map the winning intent to a Skill Chain from the authoritative Atlas.
 
-**Stage 1b — Resolve**
+### Step 3 — BUILD PLAN DOCUMENT (APEX HUD)
 
-- **1 winner** → proceed with that recipe, skip to Step 2
-- **2+ tied winners** → ASK user to disambiguate. Present each option with 1-line description. STOP here until user picks.
-- **0 meet threshold** → Stage 1c
-
-**Stage 1c — Literal Trigger Fallback**
-
-Match against this minimal table (only fires when signatures don't):
-
-| Literal phrase | Recipe |
-|---|---|
-| "new table", "add table", "junction table", "m2m" | `RELATIONAL_TABLE` |
-| "new module", "full crud", "create module" | `FULL_CRUD` |
-| "new webapp", "genesis", "handshake" | `WEBAPP_GENESIS` |
-| "new project", "auth setup", "rls" | `AUTH_RLS_SETUP` |
-| "image upload", "avatar" | `IMAGE_UPLOAD` |
-| "test cases", "e2e", "workflow test" | `TESTING_PIPELINE` |
-| "migrate website", "php supabase" | `WEBSITE_MIGRATION` |
-
-If still no match → ASK user to clarify. DO NOT guess.
-
-### Step 2 — LOAD RECIPE (from INDEX.md)
-
-Read `C:/Users/user/.gemini/antigravity/knowledge/claude/INDEX.md` → Flow Recipes table. Copy the skill chain for the matched recipe.
-
-### Step 3 — BUILD PLAN DOCUMENT
-
-Fill this template (structured output contract — do NOT deviate):
+Fill this template (Clinical HUD format):
 
 ```markdown
-# Execution Plan: {recipe_name} — {target_entity}
+# [🔪 APEX PLAN] | [⚡ MODE: {recipe_name}] | [🎯 GOAL: {target_entity}]
 
-## Intent
-{one sentence restating what user wants}
+## ⚖️ INTENT & SUCCESS CRITERIA
+- **Intent**: {one sentence restating goal}
+- **Success Criteria**: {verifiable terminal state}
 
-## Skill Chain
-1. {skill-name} — {one-line purpose} — estimated tokens: {N}
+## 🧬 SOVEREIGN LOGIC CASCADE
+1. {skill-name} — {surgical action}
 2. ...
 
-## Inputs Needed
-- {input 1}: {current value or UNKNOWN}
-- ...
+## 🏗️ MICRO-VERIFICATION CHECKPOINTS
+- [ ] **Check 1**: Run {command} to verify {state}
+- [ ] **Check 2**: Run {command} to verify {state}
 
-## Checkpoints (pause here)
-- After step {N}: verify {specific artifact exists}
-- After step {M}: verify {DB migration applied}
+## 🛡️ ROLLBACK PROTOCOL
+- Failure at Step {N} -> {undo action}
 
-## Risks / Unknowns
-- {thing that could fail} → {mitigation}
-
-## Rollback Plan
-- Step {N} failure → {undo action}
-
-## Estimated total: {X} steps, ~{Y} tokens, {Z} files touched
+[⚡ STATUS: PENDING_APPROVAL]
+> **Reply "go" to execute.**
 ```
 
-### Step 4 — PRESENT + WAIT
+### Step 4 — PRESENT + STOP
+Output the plan. DO NOT proceed until user handshake received.
 
-Output the plan document. End with:
-> **Reply "go" to execute, or edit the plan.**
+### Step 5 — EXECUTION & MICRO-VERIFICATION
+For each step in the cascade:
+1. Execute surgical change.
+2. **Micro-Verify**: Run terminal check (`node -l`, `php -l`, `Test-Path`).
+3. If Pass -> Log checkpoint.
+4. If Fail -> STOP immediately. Offer rollback.
 
-STOP. Do not call any other skill yet.
-
-### Step 5 — ON APPROVAL: DELEGATE
-
-For each step in the Skill Chain:
-1. Invoke the named skill (Flash-speed execution)
-2. After skill returns → run its `verify:` checks
-3. If verify fails → STOP, report, offer rollback
-4. If verify passes → checkpoint log, continue
-
-### Step 6 — FINAL REPORT
-
-After last step, emit a one-page summary:
-- Files created/modified (paths)
-- DB changes applied
-- Verify status per step
-- Known issues deferred
-- Next suggested action
+### Step 6 — FINAL HUD REPORT
+Generate a clinical summary of files touched and verification status.
 
 ## Output Contract
-
-Every `plan-first` invocation produces ONE plan document saved at:
-`C:/Users/user/.gemini/antigravity/brain/plans/plan_{timestamp}_{recipe}.md`
-
-Structured. Re-readable. Re-runnable.
+Plan saved to `C:/Users/user/.gemini/antigravity/brain/tactical/plan_{timestamp}.md`.
 
 ## Guardrails
-
-- DO NOT skip Step 4 (user approval). The whole point is upfront review.
-- DO NOT mix planning and execution in one turn. Plan → stop → approve → execute.
-- DO NOT call `create-module` or any execution skill before Step 5.
-- STOP if Intent Detection (Step 1) matches zero rows — ask user.
-- STOP if user's plan edit contradicts a LOCKED skill's preflight.
-- NEVER proceed past a failed checkpoint without explicit user "continue".
-
-## Model Hint Strategy
-
-- THIS skill: `gemini-3-pro` (heavy reasoning to build the plan once)
-- DOWNSTREAM skills: `gemini-3-flash` (fast scaffolding, consumes pre-built plan)
-
-## Verify
-
-- Plan document saved to `brain/plans/` path
-- User has replied with "go" or edit
-- All referenced skills exist in INDEX.md routing tables
-
-## Rollback
-
-- If user cancels after plan → delete plan file, reset.
-- If execution fails mid-chain → run each completed step's `rollback:` in reverse order.
+- **Zero speculation**: Solve only the immediate goal.
+- **Surgicality**: Touch ONLY the files needed for the success criteria.
 
 ---
-**plan-first V1.0 — 2026-04-16 · Author: Claude Opus 4.6**
+**plan-first V15.2 — 2026-04-18 · Karpathy Apex Edition**

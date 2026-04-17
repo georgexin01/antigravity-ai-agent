@@ -20,6 +20,8 @@ The master routing node for all Sovereign Intelligence. Optimized for **Gemini 3
 
 ### ⚡ MODES (Sovereign Subsystems)
 - **mode.claude**: [skills/claude/](file:///C:/Users/User/.gemini/antigravity/skills/claude/)
+  - *variant.frontend*: [skills/normal/](file:///C:/Users/User/.gemini/antigravity/skills/normal/)
+  - *variant.website*: [skills/normal/website-template-design/](file:///C:/Users/User/.gemini/antigravity/skills/normal/website-template-design/)
 - **mode.faucet**: [skills/faucet/skill.md](file:///C:/Users/User/.gemini/antigravity/skills/faucet/skill.md)
 - **mode.normal**: [skills/normal/](file:///C:/Users/User/.gemini/antigravity/skills/normal/)
 - **mode.openclaw**: [skills/openclaw/](file:///C:/Users/User/.gemini/antigravity/skills/openclaw/)
@@ -40,6 +42,8 @@ The master routing node for all Sovereign Intelligence. Optimized for **Gemini 3
 ## 🔌 LOGIC GATES (Trigger Vectors)
 - `extension match [vue, ts]`: Pull `dna.logic` + `mode.claude`.
 - `extension match [css, scss]`: Pull `dna.design` + `mode.normal`.
+- `prompt match [website, site, landing]`: Pull `mode.claude.variant.website`.
+- `prompt match [frontend, ui, view]`: Pull `mode.claude.variant.frontend`.
 - `prompt match [harvest, faucet]`: Pull `mode.faucet`.
 - `prompt match [openclaw, proxy]`: Pull `node.openclaw`.
 - `prompt match [mobile, swift, native]`: Pull `node.mobile`.
