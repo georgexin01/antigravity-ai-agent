@@ -10,7 +10,8 @@ status: active
 
 # 🧬 USER PREFERENCE DNA (V1.0)
 
-**Global Operation Mode**: `DEEP_PLANNING` (Mandatory Research Phase)
+**Global Operation Mode**: `DEEP_PLANNING` (V10 Singularity Burst)
+**Thinking Style**: `CONSOLIDATED_INTELLIGENCE` (Batch Reasoning)
 
 This file stores persistent memories and "fingerprints" of user preferences to ensure the AI aligns with the user's workflow without repeated prompts.
 
@@ -29,13 +30,11 @@ This file stores persistent memories and "fingerprints" of user preferences to e
 
 ## 🚀 1. PERFORMANCE & WORKFLOW MEMORIES
 
-### 1.1 Knowledge Path Referral
-- **Preference**: Zero-delay path discovery for core agent knowledge.
-- **Rule**: When discussing "ai agent knowledge" or variations, bypass searching and refer to:
-    - **Knowledge Base**: `C:\Users\user\.gemini\antigravity\knowledge`
-    - **Skills Repository**: `C:\Users\user\.gemini\antigravity\skills`
-- **Path Alias**: `.gemini` is verified as `C:\Users\user\.gemini\antigravity`.
-- **Context**: Added 2026-04-16 to optimize start-up velocity.
+### 1.1 High-Velocity Optimization
+- **Preference**: Zero-delay start-up; Consolidated thoughts.
+- **Rule**: Minimize fragmentation. Rely on Cloud-Library Intelligence for all dependencies.
+- **Noise Shielding**: `.geminiignore` is active to mask recordings and logs.
+- **Context**: 290MB bloat removed on 2026-04-17.
 
 ## 🎨 2. DESIGN & AESTHETIC DNA
 - **Theme**: Cyber Luxury / Deep Onyx.

@@ -96,4 +96,43 @@ This rule is **load-bearing** — breaking it causes cross-project data coupling
 
 ---
 
-**MASTER RULES V1.0 — 2026-04-17 · Origin: User directive**
+## RULE #2 — Consolidated Intelligence & Thinking Range (HARD)
+
+**Established by user on 2026-04-17.**
+
+The AI must optimize for **Deep Thinking Range** and **Consolidated Reasoning**. 
+
+1. **Batching**: Group related thoughts and actions into single, powerful turns.
+2. **Anti-Fragmentation**: Minimize small, piecemeal tool calls. Think holistically about the task before acting.
+3. **Speed**: Prioritize high-velocity execution bursts over granular progress reporting.
+4. **Depth**: Maintain a broad architectural "view" at all times.
+
+---
+
+## RULE #3 — Ultimate Cloud-Library Mastery (HARD/PRIORITY)
+
+**Established by user on 2026-04-17.**
+
+This is a **High-Priority Directive** for all development, architecture, and logic tasks.
+
+1. **Automatic Online Reliance**: The AI MUST automatically utilize its internal, built-in mastery of all public software libraries and frameworks (e.g. Vite, GSAP, Supabase, Vue 3, Three.js, GSAP, Element Plus).
+2. **Zero-Local Policy**: NEVER read or search local `node_modules`, `dist`, or library source files. These are considered "Ambient Noise" and are strictly ignored for conceptual or implementation logic.
+3. **Execution Mode**: When working on projects (e.g. Zeta, LAA Quiz) that require these libraries, the AI immediately activates its "Online Library" context, ensuring precision-grade code generation without local context overhead.
+4. **Efficiency Goal**: Achieve the "Purest Brain" operation by isolating local files to business logic ONLY.
+
+---
+
+## RULE #4 — Recursive Evolution (HARD/PROCESS)
+
+**Established by user on 2026-04-17.**
+
+This rule ensures the "Local Brain" evolves without increasing token weight.
+
+1. **The Pulse**: At the end of every significant task or session, the AI must run the `DNA_SYNTHESIZER.mjs` script.
+2. **Decision Recording**: Every architectural decision must be logged in the `DECISION_ENVELOPE.md` before execution.
+3. **Purity**: Once synthesized into the `DNA_NEXUS.md`, raw logs must be purged from the `raw/` folder to maintain a zero-token overhead for history.
+4. **DNA Advantage**: The AI must check the `DNA_NEXUS.md` at the start of every session to align with the user's established muscle memory.
+
+---
+
+**MASTER RULES V1.3 — 2026-04-17 · Origin: Perfection Intelligence Initiative**
