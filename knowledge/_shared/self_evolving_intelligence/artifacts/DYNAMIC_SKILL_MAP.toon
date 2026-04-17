@@ -1,5 +1,7 @@
 @schema: [id, category, triggers, entry_point]
 CORE_FRONTEND | vben-vue-supabase | [ui, auth, db, store, component] | skills/claude-frontend/SKILL.md
+FRONTEND_GENESIS | genesis-handshake | [auth, rls, env] | skills/claude-frontend/01-handshake-genesis/skill.md
+FRONTEND_API | unified-connectivity | [axios, capacitor] | skills/claude-frontend/03-api-connectivity/skill.md
 FAUCET_ENGINE | visual-automation | [captcha, claim, timer, wave] | skills/faucet/skill.md
 SYSTEM_SCRIPTS | automation-tools | [npm, ps1, build, deploy] | skills/scripts/
 SOVEREIGN_SHARED | atomic-logic | [memory, protocol, format] | skills/_shared/

@@ -111,3 +111,16 @@ if (binding.project_id !== VITE_PROJECT_ID) throw new Error('Unauthorized');
 }
 ```
 *Note: Options text order is preserved at the time of session.*
+
+## ⚠️ DATABASE FRAGILITY & SAFETY PROTOCOL (CRITICAL)
+
+All database resources in SWF projects (Vben Admin, Supabase Docker) are considered **Fragile**. To prevent corruption and maintain synchronization:
+
+1.  **Permission Gating**: The AI must NEVER edit `.sql`, `supabase/`, or `database/` folders without explicit, current-session user permission.
+2.  **Schema Impact Report**: Before any database modification, the AI must list:
+    - All affected tables and columns.
+    - All relationship/foreign key implications.
+    - Potential impact on existing RLS policies or permissions.
+3.  **Synchronous Documentation**: All database changes must be proposed in an artifact (SQL block) first, allowing the user to audit the code before any "Do it" command is run.
+4.  **Local Sync Warning**: The AI must always warn that schema changes might require a `supabase db reset` or internal data migration to stay compliant with the local Docker state.
+

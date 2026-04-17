@@ -55,7 +55,7 @@ Remote server: [your server IP]
 Docker Compose path: /opt/supabase/supabase/docker/docker-compose.yml
 PostgreSQL container name: supabase-db
 PostgreSQL internal port: 5432
-PostgreSQL password: pUHqCHUVYg+7Bl6Hgcmou7RAfbwWXIr2VKP18SaH1sw=
+PostgreSQL password: <YOUR_POSTGRES_PASSWORD>
 ```
 
 ### Local Configuration
@@ -132,7 +132,7 @@ sudo docker port supabase-db
 
 **Problem**:
 
-The PostgreSQL password `pUHqCHUVYg+7Bl6Hgcmou7RAfbwWXIr2VKP18SaH1sw=` contains:
+The PostgreSQL password `<YOUR_POSTGRES_PASSWORD>` contains:
 - `+` (plus sign)
 - `=` (equals sign)
 
@@ -144,7 +144,7 @@ URL-encode the password:
 - `+` → `%2B`
 - `=` → `%3D`
 
-Encoded password: `pUHqCHUVYg%2B7Bl6Hgcmou7RAfbwWXIr2VKP18SaH1sw%3D`
+Encoded password: `<YOUR_URL_ENCODED_PASSWORD>`
 
 ---
 
@@ -196,7 +196,7 @@ Edit `C:\Users\koo_c\.claude.json`, add or modify MCP configuration:
           "args": [
             "-y",
             "@modelcontextprotocol/server-postgres",
-            "postgresql://postgres:pUHqCHUVYg%2B7Bl6Hgcmou7RAfbwWXIr2VKP18SaH1sw%3D@127.0.0.1:5433/postgres"
+            "postgresql://postgres:<YOUR_URL_ENCODED_PASSWORD>@127.0.0.1:5433/postgres"
           ],
           "env": {}
         }
@@ -343,7 +343,7 @@ SELECT version();
 ### MCP Connection String
 
 ```
-postgresql://postgres:pUHqCHUVYg%2B7Bl6Hgcmou7RAfbwWXIr2VKP18SaH1sw%3D@127.0.0.1:5433/postgres
+postgresql://postgres:<YOUR_URL_ENCODED_PASSWORD>@127.0.0.1:5433/postgres
 ```
 
 ### URL Encoding Table

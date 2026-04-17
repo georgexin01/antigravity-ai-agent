@@ -1,3 +1,15 @@
+<!--
+⚠️ JWT CLAIM CASING NOTE (added 2026-04-17)
+This file uses camelCase JWT claim names for historical reasons: `projectId`, `role`, `roleLevel`.
+The CURRENT CANONICAL names per admin-panel-quizLaa CLAUDE.md are snake_case:
+  - `project_id`  (not `projectId`)
+  - `user_role`   (not `role` — "role" is reserved by PostgREST for PG-role switching)
+  - `role_level`  (not `roleLevel`)
+When generating NEW SQL hooks / RLS policies, use snake_case. When reading EXISTING
+running hook code, follow whatever the deployed hook actually injects (check Supabase dashboard).
+Do NOT silently rename claim keys in a running system — existing JWTs would break until users re-login.
+-->
+
 ---
 name: supabase-rls-rbac-design
 description: Multi-project RBAC and row-level security design — schemas, roles, JWT hooks, policies, edge functions.

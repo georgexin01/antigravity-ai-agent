@@ -1,94 +1,73 @@
 ---
 name: claude-website
-description: "V5.0 Sovereign orchestrator for PHP + Supabase REST websites. Covers full API re-architecture: categorized API folder, SupabaseConfig, dynamic SEO slug routing, and 10-step migration template for legacy projects."
-triggers: ["claude website", "php supabase", "api re-architecture", "dynamic routing", "10-step migration", "sovereign rest", "seo slug"]
+description: "V6.1 Sovereign orchestrator for PHP + Supabase REST. Hardens the Sovereign CRUD engine with single-record data extraction and custom header support. Mandates relational UUID binding for all persistence layers."
+triggers: ["claude website", "php supabase", "api re-architecture", "dynamic routing", "sovereign rest", "composer autoload", "psr-4", "crud-engine", "single-record-lookup"]
 phase: 0-orchestrator
-requires: []
-unlocks: []
-inputs: [project_name, legacy_database_schema]
-output_format: migration_checklist
-model_hint: gemini-3-pro
-version: 5.0
-status: authoritative
-date_created: "2026-04-16"
+version: 6.1
 ---
 
-# claude-website — Sovereign PHP + Supabase REST Protocol
+# `claude-website` — Sovereign PHP + Supabase REST Protocol V6.1
 
 ## When to Use
 
-Initializing a new PHP website OR migrating a legacy website to Supabase REST. Covers API folder structure, SEO-slug routing, config bridging, and the full 10-step migration template.
+Initializing or refactoring a Sovereign PHP backend (Agents, Profiles, Reviews). Acts as the authoritative orchestrator for industrial-grade namespaced architecture and hardened relational persistence.
 
-> For architectural concepts & "why" behind decisions, read: `file:///C:/Users/user/Desktop/admin-panel-quizLaa/.gemini/antigravity/knowledge/claude-website/architecture_wisdom.md`.
+## 🚀 The 12-Step Sovereign Migration (V6.1 Update)
 
-## Steps
+### Phase 1 — Industrial Foundation
+1. **Config Generation** (.env) using VITE_ prefixed keys for cross-project compatibility.
+2. **Env Loader** (Config.php) supporting `dotenv` parsing.
+3. **Autoloading** (Composer PSR-4 `Sovereign\`). Runs `composer dump-autoload` after any Model/Controller creation.
+4. **Relational Schema** (SQL). Binding via UUIDs (e.g. `agent_profile_id`).
 
-### 1. TRIGGER: THE API RE-ARCHITECTURE FLOW
+### Phase 2 — Sovereign Engine Layer
+5. **REST Client Construction**: `SupabaseClient.php` MUST support custom headers for PostgREST orchestration.
+6. **Query Builder Logic**: `SovereignQuery.php` MUST handle the `single()` flag by extracting and returning the record data directly instead of the full API envelope.
+7. **Model Mapping**: All Models must implement a `format()` method to alias database keys to template-friendly keys.
+8. **Security Lock**: Implementation of RLS Policies with `anon_insert_access` for public submissions.
 
-Use this flow whenever initializing a new website or migrating a legacy project.
+### Phase 3 — Orchestration & UI
+9. **Controller Orchestration**: Separation of concern between Data retrieval and UI logic.
+10. **Dynamic Routing**: Resolution of entities via both Slugs AND UUIDs.
+11. **UI Refactoring**: Implementation of high-fidelity "No Profile Image" fallbacks in all PHP templates.
+12. **Brain Hardening**: Summarize the architecture into the `.gemini` DNA.
 
-#### Step 1a — Initialize Categorized API Folder
-```bash
-mkdir -p api/core api/v1/profiles api/v1/reviews
-```
+## 🛠️ Mandatory Execution Rules
 
-#### Step 1b — Configure Sovereign Environment
-1. Populate `api/core/.env`.
-2. Link keys to `api/core/SupabaseConfig.php`.
-
-#### Step 1c — Initialize the REST Bridge
-Mount `api/core/SupabaseClient.php` at the top level of landing pages:
-```php
-require_once __DIR__ . '/api/core/SupabaseClient.php';
-$supabase = new SupabaseClient();
-```
-
-### 2. TRIGGER: DYNAMIC ROUTING & FALLBACK
-
-Always ensure the landing page can handle multiple entry points (SEO Slugs vs. Direct Queries).
-
-**Code Pattern:**
-```php
-$slug = $_GET['slug'] ?? $_GET['url'] ?? '';
-// ... extract from URI if URL is empty
-```
-
-### 3. THE 10-STEP MIGRATION TEMPLATE
-
-1. **Config Generation** (.env)
-2. **Env Loader** (Config.php)
-3. **Schema Building** (SQL Table/FK)
-4. **Security Lock** (RLS Select-Only)
-5. **Seed Generator** (PHP/SQL Parser)
-6. **Data Injection** (Seeding)
-7. **REST Client Construction** (SupabaseClient.php)
-8. **Router Integration** (index.php)
-9. **UI Refactoring** (Pulling Data)
-10. **Brain Hardening** (Update .gemini)
-
-## Guardrails
-
-- DO NOT expose service-role keys in PHP client code — anon key only.
-- DO NOT store Supabase credentials in git — use `api/core/.env` and add to `.gitignore`.
-- STOP at Step 4 (Security Lock) if RLS policies aren't written first — public writes are a data breach.
-- NEVER skip Step 10 (Brain Hardening) — undocumented projects lose institutional memory.
+- **ENVELOPE GUARD**: `SovereignQuery::get()` must surgically return the record data when `single()` is used. Never force the Page to parse `data['data']`.
+- **UUID AUTHORITATIVE**: Prioritize relational binding via UUIDs over string-based slugs for all POST/PATCH operations.
+- **AESTHETIC DEGRADATION**: All image rendering must include a `personal-image-placeholder` or icon-based fallback for missing media.
 
 ## Verify
 
-- `api/core/.env` exists and is gitignored
-- `SupabaseClient::query()` returns 200 with anon key
-- Slug routing resolves `/page/about` → correct content
-- All 10 migration steps produce named artifacts
+- `SupabaseClient` successfully passes custom `Accept` headers.
+- `AgentModel::resolve` returns a flat array of agent data, not a response object.
+- Reviews correctly `INSERT` using the `agent_profile_id` UUID.
 
-## Rollback
+## 📦 📦 Boilerplate Vault (COPY & ADAPT)
 
-- Step 3 (Schema) failure → `DROP SCHEMA CASCADE` on the attempted schema, restore prior DB dump.
-- Step 8 (Router) failure → restore previous `index.php` from git.
-- Step 9 (UI) failure → revert last commit touching `views/` or equivalent.
+### 1. `SovereignQuery.php` (The Hardened Get)
+```php
+public function get($headers = []) {
+    if ($this->single) { $headers[] = "Accept: application/vnd.pgrst.object+json"; }
+    $queryString = implode('&', $params);
+    $response = $this->client->request($this->table . ($queryString ? '?' . $queryString : ''), 'GET', null, 'return=representation', $headers);
+    if ($this->single) {
+        $status = $response['status'] ?? 500;
+        return ($status >= 200 && $status < 300) ? $response['data'] : null;
+    }
+    return $response;
+}
+```
 
-## Output Contract
-
-A checklist file `migration_checklist_{project}.md` with pass/fail per step + artifact paths.
+### 2. `SupabaseClient.php` (Header Support)
+```php
+public function request($path, $method = 'GET', $data = null, $prefer = 'return=representation', $customHeaders = []) {
+    $headers = ["apikey: {$this->anonKey}", "Content-Type: application/json", "Accept-Profile: {$this->schema}", "Content-Profile: {$this->schema}"];
+    if (!empty($customHeaders)) { $headers = array_merge($headers, $customHeaders); }
+    // ... curl execution ...
+}
+```
 
 ---
-**claude-website V5.0 — Secured Execution Protocol (PHP + Supabase REST) — 2026-04-16**
+**Protocol Status**: V6.1 Active | **Architect**: Claude-Website | **Requirement**: Relational Persistence & CRUD Hardening

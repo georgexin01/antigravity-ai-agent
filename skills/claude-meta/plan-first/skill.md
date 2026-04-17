@@ -30,11 +30,28 @@ Gemini 3 Flash is keyword-matched + latency-optimized. It does NOT deep-reason a
 
 ## Steps
 
-### Step 1 — DETECT INTENT (classify task)
+### Step 1 — DETECT INTENT (two-stage)
 
-Match user's first message against this table. ONE row wins.
+**Stage 1a — Combinatorial Signature Scan (preferred)**
 
-| Intent Signal | Recipe |
+Read `C:/Users/user/.gemini/antigravity/knowledge/claude/INDEX.md` → "Intent Detection — Combinatorial Signatures" section. Run the mechanical signature scan:
+
+1. Lowercase user message, strip punctuation/glue words ("+", "with", "and", "the", "for")
+2. Extract token set
+3. Score each signature (how many of its tokens present in user's set)
+4. Pick signatures scoring ≥ their `min_match` threshold
+
+**Stage 1b — Resolve**
+
+- **1 winner** → proceed with that recipe, skip to Step 2
+- **2+ tied winners** → ASK user to disambiguate. Present each option with 1-line description. STOP here until user picks.
+- **0 meet threshold** → Stage 1c
+
+**Stage 1c — Literal Trigger Fallback**
+
+Match against this minimal table (only fires when signatures don't):
+
+| Literal phrase | Recipe |
 |---|---|
 | "new table", "add table", "junction table", "m2m" | `RELATIONAL_TABLE` |
 | "new module", "full crud", "create module" | `FULL_CRUD` |
@@ -44,7 +61,7 @@ Match user's first message against this table. ONE row wins.
 | "test cases", "e2e", "workflow test" | `TESTING_PIPELINE` |
 | "migrate website", "php supabase" | `WEBSITE_MIGRATION` |
 
-If no match → ASK user to clarify. DO NOT guess.
+If still no match → ASK user to clarify. DO NOT guess.
 
 ### Step 2 — LOAD RECIPE (from INDEX.md)
 

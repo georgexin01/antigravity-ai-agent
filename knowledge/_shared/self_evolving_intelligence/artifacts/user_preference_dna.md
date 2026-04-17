@@ -45,6 +45,6 @@ This file stores persistent memories and "fingerprints" of user preferences to e
     - High-fidelity premium aesthetics mandatory.
 
 ## 🛠️ 3. ACTIVE PROJECTS & WORKSPACES
-- **FP-QUIZ-LAA**: LAA Quiz Platform (Supabase Local-First).
-- **FP-CORE**: Antigravity System Kernel development.
+- **FP-007 (Hardened-LAA)**: Admin/WebApp + quizLaa + SWF-v4.6 + Fail-Closed RLS.
+- **FP-CORE**: Antigravity System Kernel & Intelligence Evolution.
 - **Sovereign-Workspace**: `C:\Users\user\Desktop\workspace` (Gateway Anchor).

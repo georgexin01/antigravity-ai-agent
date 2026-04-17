@@ -75,8 +75,8 @@ Every module (e.g., "Article", "Inventory") MUST trigger this sequence:
 - **REG-002 (Money)**: Maps `price/salary` to `RM` currency formatting.
 - **REG-003 (RLS)**: Maps `new_table` to standard `authenticated` RBAC grant.
 
-- **REG-004 (Genesis)**: Maps new project creation to [webapp-genesis/skill.md](file:///C:/Users/user/.gemini/antigravity/skills/claude-frontend/webapp-genesis/skill.md) (Docker/Auth Standards — 4-pulse handshake).
-- **REG-005 (Skills)**: Authorized skill for LAA Frontend: [claude-frontend/SKILL.md](file:///C:/Users/user/.gemini/antigravity/skills/claude-frontend/SKILL.md) (14-step SWF orchestrator).
+- **REG-004 (Genesis)**: Maps new project creation to [01-handshake-genesis/skill.md](file:///C:/Users/user/.gemini/antigravity/skills/claude-frontend/01-handshake-genesis/skill.md) (Docker/Auth Standards — 4-pulse handshake).
+- **REG-005 (Skills)**: Authorized skill for LAA Frontend: [claude-frontend/SKILL.md](file:///C:/Users/user/.gemini/antigravity/skills/claude-frontend/SKILL.md) (11-step SWF industrial orchestrator).
 - **REG-006 (Index)**: All Claude-mode skill/knowledge routing goes through [INDEX.md](file:///C:/Users/user/.gemini/antigravity/knowledge/claude/INDEX.md) (pyramid L0 entry point, added 2026-04-16).
 - **REG-007 (Planning)**: Before multi-step work, invoke [plan-first](file:///C:/Users/user/.gemini/antigravity/skills/claude-meta/plan-first/skill.md) (upfront reasoning orchestrator, added 2026-04-16).
 

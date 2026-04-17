@@ -54,6 +54,66 @@ sub_layers:
 
 ---
 
+## 🧠 Intent Detection — Combinatorial Signatures (V1.0)
+
+**Problem:** Literal trigger matching misses when user phrases intent through token COMBINATIONS like *"vben admin + supabase + webApp + website + api + connection"*. No single keyword matches a recipe, but the COMBINATION clearly implies intent (often multiple intents — which = ambiguity).
+
+**Rule:** Before literal trigger matching, run this signature scan. If ≥1 signature scores ≥ its threshold → route accordingly. If multiple signatures tie → ASK user to pick one (do NOT guess).
+
+### How to evaluate (mechanical — cheap on Flash)
+
+1. Lowercase user message, strip punctuation/glue words ("+", "with", "for", "and", "the")
+2. Extract token set
+3. For each signature below, count how many of its tokens are present in the user's set
+4. Pick the signature(s) with score ≥ `min_match`
+5. **If 1 winner → route to its recipe** (plan-first loads the recipe skill)
+6. **If 2+ tied winners → ASK user** — present each option with a 1-line description
+7. **If 0 reach threshold → fall back to literal trigger matching** in routing tables below
+
+### Signatures
+
+| Canonical Recipe | Signature tokens (any subset) | min_match | Example user phrases |
+|---|---|---|---|
+| **WEBAPP_NEW_VUE_SUPABASE** | webapp, vue, supabase, connect, connection, api, new, build, student, quiz, bakery | 3+ | "new vue webapp with supabase", "connect my student app to supabase api", "bakery pattern new app" |
+| **WEBSITE_NEW_PHP_SUPABASE** | website, php, html, supabase, connect, connection, api, agent, landing, rest, slug | 3+ | "new php website supabase", "agent profile site api", "html/php supabase rest" |
+| **ADMIN_VBEN_NEW_MODULE** | admin, vben, module, crud, table, entity, new, create | 3+ | "vben admin new module", "add crud to admin", "new table in admin panel" |
+| **RELATIONAL_TABLE** | junction, m2m, many-to-many, relational, assignment, user_lessons | 2+ | "new junction table", "m2m", "relational table" |
+| **AUTH_RLS_SETUP** | auth, rls, jwt, login, project, hook, claim, refreshsession | 3+ | "auth setup", "multi project auth", "new rls + jwt hook" |
+| **IMAGE_UPLOAD** | image, upload, avatar, crop, picture | 2+ | "image upload", "avatar crop" |
+| **TESTING_PIPELINE** | test, e2e, playwright, workflow, cypress | 2+ | "e2e test", "playwright workflow" |
+| **FULL_MONOREPO_SETUP** | admin, webapp, website, supabase, connection | 4+ | "admin + webapp + website + supabase + api + connection" ← TRIPLE MATCH = ASK |
+
+### Conflict resolution (MUST)
+
+- **Triple-layer match** (admin + webapp + website all present): ALWAYS ASK — offer (A) admin, (B) webapp, (C) website, (D) all-in-sequence
+- **Dual-layer match** (any two of admin/webapp/website): ASK which to do first
+- **Tied single-layer signatures** (e.g., WEBAPP_NEW + AUTH_RLS both score 3): ASK — "Do you want the webapp scaffolding flow, or just the auth/RLS part?"
+- **No tie, single winner**: proceed to recipe without asking
+- **Nothing matches threshold**: fall back to literal triggers; if still nothing → ASK user to clarify intent
+
+### Example — user types:
+> *"vben admin + supabase + webApp + website + api + connection"*
+
+Extracted tokens: `{vben, admin, supabase, webapp, website, api, connection}`
+
+Scores:
+- ADMIN_VBEN_NEW_MODULE: `{admin, vben}` = 2 (below threshold 3) ✗
+- WEBAPP_NEW_VUE_SUPABASE: `{webapp, supabase, api, connection}` = 4 ✓
+- WEBSITE_NEW_PHP_SUPABASE: `{website, supabase, api, connection}` = 4 ✓
+- FULL_MONOREPO_SETUP: `{admin, webapp, website, supabase, connection}` = 5 ✓
+
+→ **Three winners → ASK:**
+```
+Your message mentions admin (vben), webapp, AND website — all needing Supabase.
+Which layer should I tackle first?
+  (A) Admin panel CRUD module  →  claude-frontend SWF 14-step
+  (B) Student webapp connection →  webapp-api-connection (12 steps)
+  (C) PHP website connection    →  website-api-connection (10 steps)
+  (D) All three in sequence     →  A → B → C
+```
+
+---
+
 ## 🧭 Flow Recipes — Pre-Computed Skill Chains
 
 When `plan-first` (meta) orchestrator runs, it maps user intent to ONE of these recipes. The `plan-first` skill produces an upfront written plan from the matched row. Flash then executes step-by-step without re-reasoning.
@@ -83,6 +143,17 @@ When `plan-first` (meta) orchestrator runs, it maps user intent to ONE of these 
 | **plan-first** (orchestrator) | plan first, build module, new module, start feature, ready to build, create crud, full module, new table | `C:/Users/user/.gemini/antigravity/skills/claude-meta/plan-first/skill.md` |
 | validate-knowledge | validate knowledge, lint skills, check frontmatter, audit format, validate claude | `C:/Users/user/.gemini/antigravity/skills/claude-meta/validate-knowledge/skill.md` |
 
+### 🎯 Project-Grounded Connection Flows (LAA-derived)
+
+These are THE canonical API connection flows, reverse-engineered from running LAA projects.
+
+| Skill | Trigger keywords | Path |
+|---|---|---|
+| **03-api-connectivity** (12-step Vue + Supabase) | webapp api connection, vue supabase connect, new webapp, bakery pattern, webapp 12 step, connect webapp to supabase | `C:/Users/user/.gemini/antigravity/skills/claude-frontend/03-api-connectivity/skill.md` |
+| **website-api-connection** (10-step PHP + Supabase REST) | website api connection, php supabase rest, new website, agent profile site, website 10 step, connect website to supabase | `C:/Users/user/.gemini/antigravity/skills/claude-website/website-api-connection/skill.md` |
+| security-findings (real bugs) | security findings, webapp bugs, website bugs, laa audit issues, production readiness | `C:/Users/user/.gemini/antigravity/knowledge/claude/SECURITY_FINDINGS.md` |
+| **laa-project-snapshot** (LIVING) | laa project state, quizLaa snapshot, admin-panel-quizLaa, current architecture | `C:/Users/user/.gemini/antigravity/knowledge/claude/LAA_PROJECT_SNAPSHOT.md` |
+
 ### Shared skills
 **Source:** `C:/Users/user/.gemini/antigravity/skills/claude/` (LOCKED — reference only, no content edits)
 
@@ -108,11 +179,11 @@ When `plan-first` (meta) orchestrator runs, it maps user intent to ONE of these 
 | Skill | Trigger keywords | Path |
 |---|---|---|
 | claude-frontend (orchestrator) | sovereign framework, swf, 14-step, frontend orchestrator, sovereign web | `C:/Users/user/.gemini/antigravity/skills/claude-frontend/SKILL.md` |
-| webapp-genesis | genesis, handshake, identity sync, plumbing, new webapp | `C:/Users/user/.gemini/antigravity/skills/claude-frontend/webapp-genesis/skill.md` |
-| image-upload-spec (frontend) | image upload (admin), avatar upload | `C:/Users/user/.gemini/antigravity/skills/claude-frontend/image-upload-spec/skill.md` |
-| staging (frontend) | staging mode (admin), switch env | `C:/Users/user/.gemini/antigravity/skills/claude-frontend/staging/skill.md` |
-| supabase-auth-architecture (frontend) | supabase auth (admin), jwt claims | `C:/Users/user/.gemini/antigravity/skills/claude-frontend/supabase-auth-architecture/skill.md` |
-| ui-standardization (frontend) | ui conventions (admin), detail view | `C:/Users/user/.gemini/antigravity/skills/claude-frontend/ui-standardization/skill.md` |
+| 01-handshake-genesis | genesis, handshake, identity sync, plumbing, new webapp | `C:/Users/user/.gemini/antigravity/skills/claude-frontend/01-handshake-genesis/skill.md` |
+| 06-image-spec (frontend) | image upload (admin), avatar upload | `C:/Users/user/.gemini/antigravity/skills/claude-frontend/06-image-spec/skill.md` |
+| 10-staging-deploy (frontend) | staging mode (admin), switch env | `C:/Users/user/.gemini/antigravity/skills/claude-frontend/10-staging-deploy/skill.md` |
+| 04-auth-architecture (frontend) | supabase auth (admin), jwt claims | `C:/Users/user/.gemini/antigravity/skills/claude-frontend/04-auth-architecture/skill.md` |
+| 07-ui-standardization (frontend) | ui conventions (admin), detail view | `C:/Users/user/.gemini/antigravity/skills/claude-frontend/07-ui-standardization/skill.md` |
 
 ### Website skills
 **Source:** `C:/Users/user/.gemini/antigravity/skills/claude-website/`
@@ -120,6 +191,25 @@ When `plan-first` (meta) orchestrator runs, it maps user intent to ONE of these 
 | Skill | Trigger keywords | Path |
 |---|---|---|
 | claude-website (orchestrator) | api re-architecture, dynamic routing, 10-step migration, php supabase, seo slug, sovereign rest | `C:/Users/user/.gemini/antigravity/skills/claude-website/SKILL.md` |
+| website-01-config-generation | website config, generate env, php .env, migration step 1 | `C:/Users/user/.gemini/antigravity/skills/claude-website/01-config-generation/skill.md` |
+| website-02-env-loader | config php, env loader, load dotenv, migration step 2 | `C:/Users/user/.gemini/antigravity/skills/claude-website/02-env-loader/skill.md` |
+| website-03-schema-building | website schema, sql tables website, migration step 3 | `C:/Users/user/.gemini/antigravity/skills/claude-website/03-schema-building/skill.md` |
+| website-04-security-lock | website rls, security lock, anon read only, migration step 4 | `C:/Users/user/.gemini/antigravity/skills/claude-website/04-security-lock/skill.md` |
+| website-05-seed-generator | seed generator, migrate legacy data, csv to sql, migration step 5 | `C:/Users/user/.gemini/antigravity/skills/claude-website/05-seed-generator/skill.md` |
+| website-06-data-injection | data injection, seed db, bulk insert website, migration step 6 | `C:/Users/user/.gemini/antigravity/skills/claude-website/06-data-injection/skill.md` |
+| website-07-rest-client | rest client, supabaseclient.php, php supabase wrapper, migration step 7 | `C:/Users/user/.gemini/antigravity/skills/claude-website/07-rest-client/skill.md` |
+| website-08-router-integration | router integration, index.php routing, seo slug php, migration step 8 | `C:/Users/user/.gemini/antigravity/skills/claude-website/08-router-integration/skill.md` |
+| website-09-ui-refactor | ui refactor website, pull from supabase, template data binding, migration step 9 | `C:/Users/user/.gemini/antigravity/skills/claude-website/09-ui-refactor/skill.md` |
+| website-10-brain-hardening | brain hardening, document migration, update .gemini, migration step 10 | `C:/Users/user/.gemini/antigravity/skills/claude-website/10-brain-hardening/skill.md` |
+
+### Project-level skills (admin-panel-quizLaa)
+**Source:** `c:/Users/user/Desktop/admin-panel-quizLaa/.gemini/skills/`
+
+| Skill | Trigger keywords | Path |
+|---|---|---|
+| vben-admin-supabase-creation-skills | vben admin new table, admin module checklist, admin supabase creation | `c:/Users/user/Desktop/admin-panel-quizLaa/.gemini/skills/claude/vben-admin-supabase-creation-skills.md` |
+| webapp-supabase-creation-skills | webapp new table, webapp sync admin, assignment filter checklist | `c:/Users/user/Desktop/admin-panel-quizLaa/.gemini/skills/claude-frontend/webapp-supabase-creation-skills.md` |
+| new-relational-table-playbook | new relational table, m2m playbook, admin webapp sync | `c:/Users/user/Desktop/admin-panel-quizLaa/.gemini/skills/shared/new-relational-table-playbook.md` |
 
 ---
 
@@ -161,11 +251,20 @@ When adding new claude knowledge:
 
 ---
 
+## 🛡️ MASTER RULES (read FIRST for any Supabase/project work)
+
+**`C:/Users/user/.gemini/antigravity/knowledge/claude/MASTER_RULES.md`** — constitutional rules that **override defaults when in conflict**. Currently enforces:
+
+- **RULE #1** — Supabase project schema isolation. All DB work stays in `{project_schema}` (e.g. `quizLaa`). No writing to `public.*`, `wms.*`, etc. FK targets must be same-schema or `auth.users`. Established 2026-04-17 as HARD RULE.
+
+Any Claude / claude-frontend / claude-website task touching Supabase MUST read MASTER_RULES.md first and verify compliance.
+
 ## 🔗 Upstream Authority
 
 This INDEX.md is the **routing layer**. The constitutional/cognitive authority lives upstream at:
 
 - **`C:/Users/user/.gemini/antigravity/knowledge/_shared/unchangable/claude/CLAUDE_KERNEL.md`** — the immutable Claude Kernel (V1.1, 2026-04-14). Defines hybrid G3/G4 synergy, 14-step quality pipeline, intelligence registry. **Read after INDEX.md** when task needs strategic/architectural grounding.
+- **`knowledge/claude/MASTER_RULES.md`** — user-set hard rules (see above).
 
 Pyramid:
 ```
