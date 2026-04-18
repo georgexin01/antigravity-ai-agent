@@ -81,4 +81,27 @@ Use these icons to categorize system states and logic domains.
 > `[💎 MISSION_COMPLETE] | [🚀 VELOCITY: OPTIMIZED] | [🧊 STATE: PURE]`
 
 ---
+## 🤝 5. HANDSHAKE TEMPLATES
+
+Standardized visual formats for system-to-user verification.
+
+### 5.1 TIER-0: HANDSHAKE REQUIRED 🔐✨
+*To be used for structural modifications or deletions. Short/Surgical mission + Alphanumeric ID prefix. Valid for 3 turns.*
+> [!CAUTION]
+> ### 🤝 HANDSHAKE 🗝️✨
+> **MISSION**: `{MISSION_NAME}`
+> **REPLY WITH**:
+> `[{ID}] {FUNNY_SHORT_MESSAGE}`
+>
+> _Must reply within 3 messages or lock remains active._
+
+### 5.2 TIER-1: PLAN APPROVAL 🧬💎
+*To be used for constitutional edits or DNA changes. Valid for 3 turns.*
+> [!IMPORTANT]
+> ### 🧠 PLAN APPROVAL REQUIRED 🛰️✨
+> **GOAL**: `{GOAL_DESCRIPTION}`
+> **TASK**: `[implementation_plan.md]`
+> **AUTHORIZE?**: `[Handshake Approved]` or `[Yes]`
+
+---
 **Apex HUD Library V15.2 — Sovereign Integrated (2026-04-18)**

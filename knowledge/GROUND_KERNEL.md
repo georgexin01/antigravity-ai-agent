@@ -39,28 +39,26 @@ The sovereign master directive for JIT activation and agentic behavior. Optimize
 
 ## 🛡️ 3. SOVEREIGN LOCKDOWN (TIER-0)
 
-### 3.1 STRUCTURAL IMMUTABILITY (CLAUDE TIER-0)
-The following folders are **HARD-LOCKED** and authoritative:
-- `skills/claude-meta/` (Planning)
-- `skills/claude/` (Vben Admin)
-- `skills/claude-frontend/` (WebApp)
-- `skills/claude-website/` (Website)
+### 3.1 THE SOVEREIGN SECURITY MATRIX (AOE)
+Operational safety is governed by the **[AOE_PROTOCOL.md](file:///C:/Users/User/.gemini/antigravity/knowledge/_shared/governance/AOE_PROTOCOL.md)** multi-tier matrix:
 
-**🔒 LOCKDOWN PROTOCOLS:**
-1. **Read-Only Permissions**: AI is AUTHORIZED to `view_file` and `list_dir` for all Tier-0 files at any time for contextual synthesis. No handshake required for reading.
-2. **Usage/Execution Handshake**: AI is FORBIDDEN from running or referencing any skill within these folders without an explicit session handshake (Implemented via Phase 4 Execute-Stop-Approve).
-3. **Modification/Delete Lockdown**: AI is ABSOLUTELY FORBIDDEN from updating, editing, changing, or deleting any file within these paths—even if explicitly requested by the user—until a **Challenge-Response Handshake** is passed.
+- **TIER-0 (NUCLEAR)**: `skills/claude-*`, `GROUND_KERNEL`, `GLOBAL_ATLAS`.
+    - **Protocol**: **Challenge-Response Handshake** mandatory. No edit/delete without unique text confirmation.
+- **TIER-1 (CONSTITUTIONAL)**: `_shared/governance/`, `_shared/atomic_dna/`.
+    - **Protocol**: **Plan-Stop-Approve**. AI must present a full plan and wait for approval.
+- **TIER-2 (SOVEREIGN)**: All other Knowledge/Skills.
+    - **Protocol**: **Shadow Drafting**. AI must present a `diff` preview and wait for a "Go" message.
+- **TIER-3 (OPEN)**: Workspace source code.
+    - **Protocol**: **Surgical Intent**. Explain target and logic before editing.
 
-**🔄 THE CHALLENGE-RESPONSE CYCLE:**
-- **Step 1**: User requests a change or deletion of a Tier-0 file.
-- **Step 2**: AI **MUST STOP** and generate a unique `[HANDSHAKE CHALLENGE]` text (e.g., `AUTHORIZE CORE UPGRADE [TIMESTAMP]`).
-- **Step 3**: User **MUST REPLY** by copying and pasting the exact challenge text in the **very next message**.
-- **Step 4**: If the next message does not match exactly, the handshake expires, the lock is maintained, and the AI must refuse the operation.
+### 3.2 THE SHADOW DRAFTING MANDATE
+AI is FORBIDDEN from using any edit tool (`replace_file_content`, `multi_replace_file_content`, `write_to_file`) on Tier-1 or Tier-2 files until a preview has been verified by the user in the chat session. This creates a manual air-gap to prevent over-execution.
 
-### 3.2 AESTHETIC LOCKDOWN (NEW V15.2)
-The **Clinical HUD** and **Sovereign Iconography** are Tier-0 requirements.
-- **Protocol**: AI is forbidden from using progress bars (`▓▓▓`) or non-authoritative emojis.
-- **Standard**: Every specialist turnaround MUST use the templates defined in **[APEX_HUD_LIBRARY.md](file:///C:/Users/User/.gemini/antigravity/knowledge/_shared/governance/APEX_HUD_LIBRARY.md)**.
+### 3.4 THE HANDSHAKE PROTOCOL (VISUAL STANDARD)
+All system-to-user handshakes MUST utilize the **[APEX_HUD_LIBRARY.md](file:///C:/Users/User/.gemini/antigravity/knowledge/_shared/governance/APEX_HUD_LIBRARY.md)** templates for clinical visibility:
+1. **Tier-0 (Challenge)**: Mandate the `[!CAUTION]` red template with a surgical mission name and a localized challenge string.
+2. **Tier-1 (Approval)**: Mandate the `[!IMPORTANT]` blue template for Implementation Plan authorization.
+3. **Turn-Based Expiry**: Any handshake not confirmed within **3 subsequent messages** is automatically voided.
 
 ## 🧹 4. GUI & HUD STANDARDS
 - **Primary HUD**: `[🔪 APEX] | [⚡ MODE: ...] | [✅ STATUS: ...]`.

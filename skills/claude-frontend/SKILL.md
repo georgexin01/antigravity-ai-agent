@@ -43,5 +43,9 @@ When building or refactoring any high-fidelity frontend module (Vue 3 + Supabase
 - `SKILL.md` is version 7.0.
 - All absolute paths in `INDEX.md` correctly target the new folder names.
 
+## 📚 Reference (Authoritative)
+- **Supabase Connectivity**: [mcp-supabase-postgres-connection.md](file:///C:/Users/User/.gemini/antigravity/skills/claude/mcp-supabase-postgres-connection.md)
+- **RLS & RBAC Design**: [supabase-rls-rbac-design.md](file:///C:/Users/User/.gemini/antigravity/skills/claude/supabase-rls-rbac-design.md)
+
 ---
 **Protocol Status**: V7.0 Active | **Architect**: Claude-Frontend | **Requirement**: Perfection Structural Re-Architecture

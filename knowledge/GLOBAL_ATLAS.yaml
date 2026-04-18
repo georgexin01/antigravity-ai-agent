@@ -35,6 +35,7 @@ The master routing node for all Sovereign Intelligence. Optimized for **Gemini 3
 - **node.mobile**: [skills/normal/MASTER_MOBILE_ARCHITECTURE.md](file:///C:/Users/User/.gemini/antigravity/skills/normal/MASTER_MOBILE_ARCHITECTURE.md)
 - **node.client_dna**: [skills/normal/client_dna/MASTER_CLIENT_DNA.md](file:///C:/Users/User/.gemini/antigravity/skills/normal/client_dna/MASTER_CLIENT_DNA.md)
 - **node.conversion_dna**: [knowledge/DESIGN_PSYCHOLOGY_2026.yaml](file:///C:/Users/User/.gemini/antigravity/knowledge/DESIGN_PSYCHOLOGY_2026.yaml)
+- **node.governance**: [_shared/governance/AOE_PROTOCOL.md](file:///C:/Users/User/.gemini/antigravity/knowledge/_shared/governance/AOE_PROTOCOL.md)
 
 ## 🏗️ BUILD PIPELINE (JIT)
 1. **Genesis**: `GROUND_KERNEL` + `GLOBAL_ATLAS`.
