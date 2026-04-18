@@ -39,9 +39,23 @@ The sovereign master directive for JIT activation and agentic behavior. Optimize
 
 ## 🛡️ 3. SOVEREIGN LOCKDOWN (TIER-0)
 
-### 3.1 STRUCTURAL IMMUTABILITY
-The folder `.gemini/antigravity/skills/claude/` is **HARD-LOCKED**. 
-- **Unlock Protocol**: Only via handshake: **"gui update"**.
+### 3.1 STRUCTURAL IMMUTABILITY (CLAUDE TIER-0)
+The following folders are **HARD-LOCKED** and authoritative:
+- `skills/claude-meta/` (Planning)
+- `skills/claude/` (Vben Admin)
+- `skills/claude-frontend/` (WebApp)
+- `skills/claude-website/` (Website)
+
+**🔒 LOCKDOWN PROTOCOLS:**
+1. **Read-Only Permissions**: AI is AUTHORIZED to `view_file` and `list_dir` for all Tier-0 files at any time for contextual synthesis. No handshake required for reading.
+2. **Usage/Execution Handshake**: AI is FORBIDDEN from running or referencing any skill within these folders without an explicit session handshake (Implemented via Phase 4 Execute-Stop-Approve).
+3. **Modification/Delete Lockdown**: AI is ABSOLUTELY FORBIDDEN from updating, editing, changing, or deleting any file within these paths—even if explicitly requested by the user—until a **Challenge-Response Handshake** is passed.
+
+**🔄 THE CHALLENGE-RESPONSE CYCLE:**
+- **Step 1**: User requests a change or deletion of a Tier-0 file.
+- **Step 2**: AI **MUST STOP** and generate a unique `[HANDSHAKE CHALLENGE]` text (e.g., `AUTHORIZE CORE UPGRADE [TIMESTAMP]`).
+- **Step 3**: User **MUST REPLY** by copying and pasting the exact challenge text in the **very next message**.
+- **Step 4**: If the next message does not match exactly, the handshake expires, the lock is maintained, and the AI must refuse the operation.
 
 ### 3.2 AESTHETIC LOCKDOWN (NEW V15.2)
 The **Clinical HUD** and **Sovereign Iconography** are Tier-0 requirements.

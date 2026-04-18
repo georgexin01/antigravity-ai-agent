@@ -1,11 +1,3 @@
----
-name: claude-admin
-description: "Core CRUD, Supabase, and module generation engine for Vben Admin. Acts as the primary orchestrator for industrial-grade namespaced architecture."
-triggers: ["claude", "vben admin", "admin", "module", "crud"]
-phase: orchestrator
-version: 1.0
----
-
 # Claude Skills Registry (Gemini 3 Flash Hybrid Format)
 
 Skills use hybrid YAML frontmatter + Markdown body for fast keyword routing and structured-output compatibility with Gemini 3 Flash.

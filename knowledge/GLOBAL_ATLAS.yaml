@@ -19,9 +19,10 @@ The master routing node for all Sovereign Intelligence. Optimized for **Gemini 3
 - **dna.arch**: [_shared/atomic_dna/dna_arch.md](file:///C:/Users/User/.gemini/antigravity/knowledge/_shared/atomic_dna/dna_arch.md)
 
 ### ⚡ MODES (Sovereign Subsystems)
-- **mode.claude**: [skills/claude/](file:///C:/Users/User/.gemini/antigravity/skills/claude/)
-  - *variant.frontend*: [skills/normal/](file:///C:/Users/User/.gemini/antigravity/skills/normal/)
-  - *variant.website*: [skills/normal/website-template-design/](file:///C:/Users/User/.gemini/antigravity/skills/normal/website-template-design/)
+- **mode.claude_meta**: [skills/claude-meta/](file:///C:/Users/User/.gemini/antigravity/skills/claude-meta/)
+- **mode.claude_admin**: [skills/claude/](file:///C:/Users/User/.gemini/antigravity/skills/claude/)
+- **mode.claude_frontend**: [skills/claude-frontend/](file:///C:/Users/User/.gemini/antigravity/skills/claude-frontend/)
+- **mode.claude_website**: [skills/claude-website/](file:///C:/Users/User/.gemini/antigravity/skills/claude-website/)
 - **mode.faucet**: [skills/faucet/skill.md](file:///C:/Users/User/.gemini/antigravity/skills/faucet/skill.md)
 - **mode.normal**: [skills/normal/](file:///C:/Users/User/.gemini/antigravity/skills/normal/)
 - **mode.openclaw**: [skills/openclaw/](file:///C:/Users/User/.gemini/antigravity/skills/openclaw/)
@@ -33,6 +34,7 @@ The master routing node for all Sovereign Intelligence. Optimized for **Gemini 3
 - **node.openclaw**: [skills/openclaw/MASTER_OPENCLAW.md](file:///C:/Users/User/.gemini/antigravity/skills/openclaw/MASTER_OPENCLAW.md)
 - **node.mobile**: [skills/normal/MASTER_MOBILE_ARCHITECTURE.md](file:///C:/Users/User/.gemini/antigravity/skills/normal/MASTER_MOBILE_ARCHITECTURE.md)
 - **node.client_dna**: [skills/normal/client_dna/MASTER_CLIENT_DNA.md](file:///C:/Users/User/.gemini/antigravity/skills/normal/client_dna/MASTER_CLIENT_DNA.md)
+- **node.conversion_dna**: [knowledge/DESIGN_PSYCHOLOGY_2026.yaml](file:///C:/Users/User/.gemini/antigravity/knowledge/DESIGN_PSYCHOLOGY_2026.yaml)
 
 ## 🏗️ BUILD PIPELINE (JIT)
 1. **Genesis**: `GROUND_KERNEL` + `GLOBAL_ATLAS`.
@@ -40,10 +42,14 @@ The master routing node for all Sovereign Intelligence. Optimized for **Gemini 3
 3. **Execution**: Execute targeted Sovereign protocol.
 
 ## 🔌 LOGIC GATES (Trigger Vectors)
-- `extension match [vue, ts]`: Pull `dna.logic` + `mode.claude`.
+- `extension match [vue, ts]`: Pull `dna.logic` + `mode.claude_admin`.
 - `extension match [css, scss]`: Pull `dna.design` + `mode.normal`.
-- `prompt match [website, site, landing]`: Pull `mode.claude.variant.website`.
-- `prompt match [frontend, ui, view]`: Pull `mode.claude.variant.frontend`.
+- `prompt match [claude-meta, planning, meta]`: Pull `mode.claude_meta`.
+- `prompt match [claude, vben admin, admin, module]`: Pull `mode.claude_admin`.
+- `prompt match [claude-frontend, webapp, swf]`: Pull `mode.claude_frontend`.
+- `prompt match [claude-website, php, website]`: Pull `dna.design` + `node.conversion_dna` + `mode.claude_website`.
+- `prompt match [frontend, ui, view]`: Pull `mode.claude_frontend`.
 - `prompt match [harvest, faucet]`: Pull `mode.faucet`.
 - `prompt match [openclaw, proxy]`: Pull `node.openclaw`.
 - `prompt match [mobile, swift, native]`: Pull `node.mobile`.
+- `prompt match [onboarding, conversion, ux, psychology]`: Pull `node.conversion_dna`.
