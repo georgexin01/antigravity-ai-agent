@@ -26,19 +26,20 @@ V4.0: Added Watchdog and Login Redirect patterns.
 
 | Pattern ID | Description | Resolution Strategy | Efficiency |
 |---|---|---|---|
-| CAPTCHALOICON | "Least Often" verification modal | Scan icon elements and compare frequency in DOM | High |
-| FAUCETORDER3 | 3-item identification sequence | Match text string to button IDs sequentially | High |
+| CAPTCHALOICON | 'Least Often' verification modal | Count object occurrences; click the 'Odd-One-Out' (Least Frequent). | High |
+| FAUCET_CSRF_FAIL | 'Multiple forms/Session Expired' | ACTION: Mandatory Reload + Wait 2s. Sync new token. | 🆕 NEW |
+| FAUCETORDER3 | 3-item identification sequence | Match text string to button IDs sequentially (Atomic: 1 per step). | High |
 | PTCSTAYTIMEOUT | Minimum view duration for PTC | Sync with browser network idle and local timer | Medium |
-| TIMER_STUCK | Timer stops or slows down | WATCHDOG: Refresh/Re-focus or Alert User. | 🆕 NEW |
-| OAUTH_GOOGLE | Login via Google redirection | AUTHORIZED: Click button -> Wait for Dashboard. | 🆕 NEW |
-| AUTOLOGIN_MAIL | Email field detection | INSERT: `nelesp3@gmail.com` -> Stop/Wait. | 🆕 NEW |
-| PTCTABFOCUS | Timer requires focus on ad tab | Stay on ad tab for duration + buffer. | High |
+| TIMER_STUCK | Timer stops or slows down | WATCHDOG: Refresh/Re-focus or Alert User. | High |
+| OAUTH_GOOGLE | Login via Google redirection | AUTHORIZED: Click button -> Wait for Dashboard. | High |
+| VISION_SYNCHRONY | Dynamic interaction states | RULE: 1-click-per-look. Force re-sync after every action. | 🆕 NEW |
 
-## 2. SITE STRUCTURE PATTERNS (V4.0)
+## 2. SITE STRUCTURE PATTERNS (V16.2)
 - Menu ID: Sidebar links for Dashboard, Faucet, etc.
 - Balance Element: Header balance displayed in points. Read before/after EVERY mission.
 - Mission Instance: Single Persistent Live View (Shared Tab session).
-- Turbo Gap: 30s cooldown between browser calls when Quota > 50%.
+- Turbo Gap: 5s cooldown between browser calls (Optimized for speed).
+- Pulse Heartbeat: 5s (Synchronized with Watchdog).
 
 ## 3. FAILURE LOG (AUTO-MANAGED)
 | Ad Name | Failures | Cooldown Left | Status |
