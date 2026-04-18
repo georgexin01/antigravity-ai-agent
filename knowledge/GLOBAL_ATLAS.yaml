@@ -17,15 +17,17 @@ The master routing node for all Sovereign Intelligence. Optimized for **Gemini 3
 - **dna.design**: [_shared/atomic_dna/dna_design.md](file:///C:/Users/User/.gemini/antigravity/knowledge/_shared/atomic_dna/dna_design.md)
 - **dna.logic**: [_shared/atomic_dna/dna_logic.md](file:///C:/Users/User/.gemini/antigravity/knowledge/_shared/atomic_dna/dna_logic.md)
 - **dna.arch**: [_shared/atomic_dna/dna_arch.md](file:///C:/Users/User/.gemini/antigravity/knowledge/_shared/atomic_dna/dna_arch.md)
+- **dna.faucet**: [_shared/atomic_dna/dna_faucet.md](file:///C:/Users/User/.gemini/antigravity/knowledge/_shared/atomic_dna/dna_faucet.md)
 
 ### ⚡ MODES (Sovereign Subsystems)
 - **mode.claude_meta**: [skills/claude-meta/](file:///C:/Users/User/.gemini/antigravity/skills/claude-meta/)
 - **mode.claude_admin**: [skills/claude/](file:///C:/Users/User/.gemini/antigravity/skills/claude/)
 - **mode.claude_frontend**: [skills/claude-frontend/](file:///C:/Users/User/.gemini/antigravity/skills/claude-frontend/)
 - **mode.claude_website**: [skills/claude-website/](file:///C:/Users/User/.gemini/antigravity/skills/claude-website/)
-- **mode.faucet**: [skills/faucet/skill.md](file:///C:/Users/User/.gemini/antigravity/skills/faucet/skill.md)
+- **mode.faucet**: [skills/faucet/](file:///C:/Users/User/.gemini/antigravity/skills/faucet/)
 - **mode.normal**: [skills/normal/](file:///C:/Users/User/.gemini/antigravity/skills/normal/)
 - **mode.openclaw**: [skills/openclaw/](file:///C:/Users/User/.gemini/antigravity/skills/openclaw/)
+- **mode.nanobrowser**: [C:/Users/User/OneDrive/Desktop/NanoBrowser/](file:///C:/Users/User/OneDrive/Desktop/NanoBrowser/)
 
 ### 🧪 SPECIALIST NODES (High-Density)
 - **vault.recall**: [_shared/governance/singularity_recall.md](file:///C:/Users/User/.gemini/antigravity/knowledge/_shared/governance/singularity_recall.md)
@@ -35,6 +37,7 @@ The master routing node for all Sovereign Intelligence. Optimized for **Gemini 3
 - **node.mobile**: [skills/normal/MASTER_MOBILE_ARCHITECTURE.md](file:///C:/Users/User/.gemini/antigravity/skills/normal/MASTER_MOBILE_ARCHITECTURE.md)
 - **node.client_dna**: [skills/normal/client_dna/MASTER_CLIENT_DNA.md](file:///C:/Users/User/.gemini/antigravity/skills/normal/client_dna/MASTER_CLIENT_DNA.md)
 - **node.conversion_dna**: [knowledge/DESIGN_PSYCHOLOGY_2026.yaml](file:///C:/Users/User/.gemini/antigravity/knowledge/DESIGN_PSYCHOLOGY_2026.yaml)
+- **node.nanobrowser**: [C:/Users/User/OneDrive/Desktop/NanoBrowser/](file:///C:/Users/User/OneDrive/Desktop/NanoBrowser/)
 - **node.governance**: [_shared/governance/AOE_PROTOCOL.md](file:///C:/Users/User/.gemini/antigravity/knowledge/_shared/governance/AOE_PROTOCOL.md)
 
 ## 🏗️ BUILD PIPELINE (JIT)

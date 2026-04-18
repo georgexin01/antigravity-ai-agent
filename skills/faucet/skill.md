@@ -1,69 +1,36 @@
 ---
-name: faucet
-description: "AI Faucet Skill — V5.5 (Precision Audit Protocol)"
-triggers: ["faucet", "skill", "faucet precision audit"]
-phase: reference
-model_hint: gemini-3-flash
-version: 42.0
-_ohdy_wrapper: |-
-  # OHDY COMPRESSED NODE (V42.0)
-  <dna_node>
-  v: 42.0
-  n: SKILL
-  graph:
-    req: []
-    rel: []
-  l: |-
-  </dna_node>
+name: faucet-orchestrator
+description: "V1.0 Sovereign Faucet Orchestrator. Master directive for multi-platform automated harvesting with Tier-0 security."
+triggers: ["ai faucet", "harvest", "faucet mode", "industrial faucet"]
+phase: 0-orchestrator
+version: 1.0
 ---
 
-# AI Faucet Skill — V5.5 (Precision Audit Protocol)
+# `faucet-orchestrator` — The Sovereign Protocol V1.0
 
-PURPOSE: Master multi-platform faucet earning with exact token verification.
-V5.5: Integrated "Value Match" (Expected vs. Actual) for all missions.
+## When to Use
 
----
+When executing high-velocity, automated claims across VieFaucet, 99Faucet, and future platforms. Mandates the **11-Step Industrial Faucet Lifecycle**.
 
-## 0. BOOT PROTOCOL
+## 🚀 The 11-Step Industrial Protocol
 
-Trigger: "ai faucet" → Load all platforms.
-Assets: `viefaucetprofile.yaml` | `99faucetprofile.yaml` | `faucetpatternvault.yaml`.
+### Phase 1 — Intelligence & Stealth
+1. **[01-recon](file:///C:/Users/User/.gemini/antigravity/skills/faucet/01-recon/skill.md)**: Account audit, balance detection, and delta baseline.
+2. **[02-ghosting](file:///C:/Users/User/.gemini/antigravity/skills/faucet/02-ghosting/skill.md)**: Injection of V5.0 Stealth DNA and humanoid jitter.
 
----
+### Phase 2 — Execution & Resolution
+3. **[03-solving](file:///C:/Users/User/.gemini/antigravity/skills/faucet/03-solving/skill.md)**: Multi-agent Antibot and Captcha solving.
+4. **[04-harvesting](file:///C:/Users/User/.gemini/antigravity/skills/faucet/04-harvesting/skill.md)**: Clean delta claim execution.
 
-## 1. VIEFAUCET.COM (PRECISION MISSIONS)
+### Phase 3 — Audit & Payout
+5. **[05-ledgering](file:///C:/Users/User/.gemini/antigravity/skills/faucet/05-ledgering/skill.md)**: The **Triple-Layer Audit** (Delta, Slot, Status).
+6. **[10-withdraw](file:///C:/Users/User/.gemini/antigravity/skills/faucet/10-withdraw/skill.md)**: **TIER-0 LOCKED**. Requires a [K9F2] Handshake.
 
-### `CLAIMVIEFAUCETPRECISION`
-1. Faucet-First (P0): Complete `/app/faucet` first. Solve Antibot + Captcha.
-2. Pre-Mission Sync:
-   - Record `Initial_Balance`.
-   - Record `TargetAd` (Name, ExpectedReward, Duration).
-3. Ghost Execution:
-   - Inject Stealth V4.4.
-   - Click 'View'.
-   - Stay on the VieFaucet tab for `Duration + 10s`.
-4. TRIPLE-LAYER AUDIT (V5.5):
-   - Audit A (Delta Check): `(FinalBalance - InitialBalance) == Expected_Reward`.
-   - Audit B (Removal Check): Refresh page. Verify ad slot is GONE.
-   - Audit C (Success Label): Only label as "VERIFIED SUCCESS" if both audits match 100%.
-   - Label Failure: If `Delta < Expected`, mark as "PARTIAL CREDIT / FAILED".
+## 🛠️ Mandatory Execution Rules
+
+- **PRECISION LEDGERING**: Failures in Audit A/B/C must trigger an automatic mission abort.
+- **DNA COMPLIANCE**: All stealth patterns must pull from **[dna_faucet.md](file:///C:/Users/User/.gemini/antigravity/knowledge/_shared/atomic_dna/dna_faucet.md)**.
+- **TIER-0 SECURITY**: Manual withdrawal is forbidden without a verified Challenge-Response.
 
 ---
-
-## 2. 99FAUCET.COM (SOLANA FREQUENCY)
-
-### `CLAIM99FAUCETSOL`
-- Focus: 1-minute Solana frequency.
-- Rule: Shift 100% to 99Faucet Solana if VieFaucet is on 429 or empty.
-
----
-
-## 3. MASTER RULES
-
-1. PRECISION RECORDING: All reward deltas MUST be logged in `faucetvalueledger.yaml`.
-2. ZERO TOLERANCE: If the reward is even 0.01 tokens off, the mission is flagged for review.
-3. EMAIL MASTER: Authorized email is `nelesp3@gmail.com`.
-
----
-
-V5.5 Precision Multi-Mode Faucet Brain — 2026-04-01
+**Protocol Status**: V1.0 Active | **Architect**: Faucet-Orchestrator | **Requirement**: Perfection
