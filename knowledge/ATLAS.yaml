@@ -1,0 +1,96 @@
+# THE SOVEREIGN PYRAMID ATLAS — KNOWLEDGE ROUTING HUB (V16.0)
+# Format: Pure YAML (Apex Standard)
+
+atlas_version: 16.1
+status: authoritative
+last_updated: "2026-04-19"
+sync_status: MACRO_V3_ALIGNED
+
+topology:
+  tier_0_apex:
+    path: "0_apex/"
+    nodes:
+      - name: GROUND_KERNEL
+        file: "GROUND_KERNEL.md"
+        desc: "Foundational ground-truth and startup logic."
+      - name: ATLAS
+        file: "ATLAS.yaml"
+        desc: "Current routing node."
+      - name: HYBRID_PROTOCOL
+        file: "HYBRID_FORMAT_PROTOCOL.md"
+        desc: "Canonical formatting rules for AI knowledge."
+      - name: GENESIS_BOOTSTRAP
+        file: "GENESIS_BOOTSTRAP.yaml"
+        desc: "Autonomous discovery bridge reconstruction template."
+
+  tier_1_core:
+    path: "1_core/"
+    nodes:
+      - name: dna_core
+        file: "dna_core.md"
+      - name: dna_design
+        file: "dna_design.md"
+      - name: dna_logic
+        file: "dna_logic.md"
+      - name: dna_arch
+        file: "dna_arch.md"
+      - name: dna_faucet
+        file: "dna_faucet.md"
+      - name: dna_psych
+        file: "DESIGN_PSYCHOLOGY_2026.yaml"
+
+  tier_2_governance:
+    path: "2_governance/"
+    nodes:
+      - name: AOE_PROTOCOL
+        file: "AOE_PROTOCOL.md"
+      - name: APEX_HUD_LIBRARY
+        file: "APEX_HUD_LIBRARY.md"
+      - name: experience_vault
+        file: "experience_vault.md"
+      - name: singularity_recall
+        file: "singularity_recall.md"
+      - name: sovereign_framework_mastery
+        file: "sovereign_framework_mastery.md"
+
+  tier_3_domains:
+    path: "3_domains/"
+    nodes:
+      - name: claude
+        dir: "claude/"
+      - name: faucet
+        dir: "faucet/"
+      - name: normal
+        dir: "normal/"
+
+  tier_system_daily:
+    path: "antigravity/"
+    nodes:
+      - name: vault
+        path: "vault/"
+        desc: "Master registries and encrypted credentials."
+      - name: governance
+        path: "governance/"
+        desc: "Observation hub, schemas, and workspace audits."
+      - name: scratch
+        path: "scratch/"
+        desc: "JIT utility scripts and vault verification tools."
+      - name: brain
+        path: "brain/"
+        desc: "Active task logs and implementation plans."
+
+  tier_4_archive:
+    path: "4_archive/"
+    nodes:
+      - name: relics
+        dir: "_relics/"
+      - name: openclaw
+        dir: "domains/openclaw/"
+
+triggers:
+  - atlas
+  - index
+  - pyramid
+  - routing
+  - map
+  - topology

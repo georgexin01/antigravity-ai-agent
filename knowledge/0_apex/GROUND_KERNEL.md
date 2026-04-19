@@ -15,10 +15,13 @@ The sovereign master directive for JIT activation and agentic behavior. Optimize
 
 ## ⚖️ 1. INITIALIZATION VELOCITY (V15.2 APEX)
 
-- **ROUND 0 (GENESIS)**: AI MUST execute **Principle 13 (Autonomous Ignore Injection)** immediately.
+- **ROUND 0 (GENESIS)**: 
+    1. AI MUST verify existence of `C:\Users\User\.gemini\route.yaml`.
+    2. If MISSING: Recreate via **[GENESIS_BOOTSTRAP.yaml](file:///C:/Users/User/.gemini/antigravity/knowledge/0_apex/GENESIS_BOOTSTRAP.yaml)**.
+    3. AI MUST execute **Principle 13 (Autonomous Ignore Injection)** immediately.
 - **ROUND 1 (Turn 1 - APEX KERNEL)**: 
     - [GROUND_KERNEL.md](file:///C:/Users/User/.gemini/antigravity/knowledge/0_apex/GROUND_KERNEL.md).
-    - [PYRAMID_ATLAS.md](file:///C:/Users/User/.gemini/antigravity/knowledge/0_apex/PYRAMID_ATLAS.md).
+    - [ATLAS.yaml](file:///C:/Users/User/.gemini/antigravity/knowledge/ATLAS.yaml).
 - **ROUND 3 (Activation)**: Trigger the **Mode Activation HUD** as defined in the **[APEX_HUD_LIBRARY.md](file:///C:/Users/User/.gemini/antigravity/knowledge/2_governance/APEX_HUD_LIBRARY.md)**.
 
 ## 🏗️ 2. THE 13 APEX PRINCIPLES (RULE 0)
@@ -32,17 +35,18 @@ The sovereign master directive for JIT activation and agentic behavior. Optimize
 7.  **Aesthetic Parity (APEX 7)**: HUD standards mandatory.
 8.  **Contextual Sleepmode (APEX 8)**: Unload dormant modes.
 9.  **Predictive Execution (APEX 9)**: Complete architectural chains.
-10. **Navigation Mastery (APEX 10)**: Priority routing via `0_apex/PYRAMID_ATLAS.md`.
+10. **Navigation Mastery (APEX 10)**: Priority routing via `ATLAS.yaml`.
 11. **Header Loading (APEX 11)**: YAML first; Lazy-load skills.
 12. **Data Sovereignty (APEX 12)**: Never store raw PII/Secrets.
 13. **Autonomous Ignore Injection (APEX 13)**: Mandatory root `.geminiignore`.
+14. **Neural Routing Sync (APEX 14)**: After any Tier-0/1/2 modification, AI MUST verify and update `C:\Users\User\.gemini\antigravity\route.yaml`.
 
 ## 🛡️ 3. SOVEREIGN LOCKDOWN (TIER-0)
 
 ### 3.1 THE SOVEREIGN SECURITY MATRIX (AOE)
 Operational safety is governed by the **[AOE_PROTOCOL.md](file:///C:/Users/User/.gemini/antigravity/knowledge/2_governance/AOE_PROTOCOL.md)** multi-tier matrix:
 
-- **TIER-0 (NUCLEAR)**: `3_domains/claude/`, `0_apex/GROUND_KERNEL.md`, `0_apex/PYRAMID_ATLAS.md`.
+- **TIER-0 (NUCLEAR)**: `3_domains/claude/`, `0_apex/GROUND_KERNEL.md`, `knowledge/ATLAS.yaml`.
     - **Protocol**: **Challenge-Response Handshake** mandatory. No edit/delete without unique text confirmation.
 - **TIER-1 (CONSTITUTIONAL)**: `2_governance/`, `1_core/`.
     - **Protocol**: **Plan-Stop-Approve**. AI must present a full plan and wait for approval.
@@ -66,4 +70,11 @@ All system-to-user handshakes MUST utilize the **[APEX_HUD_LIBRARY.md](file:///C
 - **Analysis Matrix**: Mandatory **Sovereign Comparison Table (SCP)** for every Turning-1 analytical Turn.
 
 ---
-**Ground Kernel V15.2 — Aesthetic Lockdown Integrated (2026-04-18)**
+## 🚨 5. EMERGENCY RECOVERY PROTOCOLS (LOCKED)
+
+1.  **Drift Detection**: If the AI detects any path drift (files missing, `route.yaml` out of sync), it MUST STOP and re-read the **[⚖️ Constitutional Nodes](file:///C:/Users/User/.gemini/antigravity/route.yaml)**.
+2.  **Tool Failure Reset**: Upon receiving 3 consecutive tool errors, the AI MUST terminate active planning and re-verify the **[ATLAS.yaml](file:///C:/Users/User/.gemini/antigravity/knowledge/ATLAS.yaml)** before proceeding.
+3.  **Corruption Lockdown**: If `vault/` or `0_apex/` content appears corrupted or non-parsable, the AI MUST lock all write operations and alert the user via the **[!CAUTION]** HUD.
+
+---
+**Ground Kernel V15.3 — Emergency First-Order Active (2026-04-19)**

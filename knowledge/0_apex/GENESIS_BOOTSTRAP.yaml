@@ -1,0 +1,37 @@
+# ⚖️ THE SOVEREIGN GENESIS NODE (V1.0 - APEX)
+# Status: AUTHORITATIVE_TEMPLATE
+# Path: knowledge/0_apex/GENESIS_BOOTSTRAP.yaml
+
+genesis_version: 1.0
+target_path: "../../route.yaml" # Relative to antigravity/ folder
+absolute_target: "C:/Users/User/.gemini/route.yaml"
+
+📜_BOOTSTRAP_TEMPLATE: |
+  # 🧭 SOVEREIGN DISCOVERY BRIDGE (V1.1 - APEX)
+  # Entry: .gemini root
+  # Priority: FIRST_ORDER_CONSTITUTIONAL
+  # Status: EMERGENCY_RECOVERY_READY
+
+  ⚖️_emergency_priority:
+    primary_route: "./antigravity/route.yaml"
+    action: "AI MUST read primary_route FIRST."
+    fallback: "antigravity/knowledge/0_apex/GROUND_KERNEL.md"
+
+  triggers:
+    - .gemini
+    - route
+    - emergency
+    - rules
+    - priority
+
+🤖_BOOTSTRAP_MANDATE:
+  condition: "If discovery bridge at absolute_target is MISSING"
+  action: "AI MUST recreate the file using 📜_BOOTSTRAP_TEMPLATE immediately."
+  check_round: 0
+
+triggers:
+  - genesis
+  - bootstrap
+  - missing route
+  - re-wire
+  - initialization
