@@ -1,0 +1,21 @@
+# Task: Sovereign Vault Implementation
+
+- [x] **Phase 1: Repository Hardening**
+    - [x] Update `.gitignore` to whitelist `.gemini/apikey/`
+    - [x] Create initial `.gemini/apikey/.gitkeep`
+- [x] **Phase 2: Pulse Server Evolution**
+    - [x] Modify `sovereign_pulse.cjs` to add `/vault` GET/POST endpoints
+    - [x] Add directory creation logic for `.gemini/apikey/`
+- [x] **Phase 3: Cryptographic Foundation**
+    - [x] Create `packages/storage/lib/vault/crypto.ts` (AES-GCM utility)
+    - [x] Sync with `chrome.identity` for automated email-as-password
+- [x] **Phase 4: Vault Management**
+    - [x] Create `packages/storage/lib/vault/index.ts` (Vault Sync Manager)
+    - [x] Integrate with `userStore` for email-based isolation
+- [x] **Phase 5: Integration & UI**
+    - [x] Add `identity` permission to `manifest.js`
+    - [x] Hook `llmProviderStore` into the Vault Sync
+    - [x] Verify sync loop (Storage -> Pulse -> Local File)
+- [x] **Phase 6: Verification**
+    - [x] Verify GitHub push compatibility
+    - [x] Manual restoration test
