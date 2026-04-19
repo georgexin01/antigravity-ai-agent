@@ -11,19 +11,26 @@ date_updated: "2026-04-18"
 
 # 🌌 THE GROUND KERNEL (V15.2 APEX)
 
+<!-- START: MISSION -->
 The sovereign master directive for JIT activation and agentic behavior. Optimized for **Gemini 3 Flash** surgical execution.
+<!-- END -->
 
+<!-- START: INITIALIZATION -->
 ## ⚖️ 1. INITIALIZATION VELOCITY (V15.2 APEX)
 
 - **ROUND 0 (GENESIS)**: 
     1. AI MUST verify existence of `C:\Users\User\.gemini\route.yaml`.
     2. If MISSING: Recreate via **[GENESIS_BOOTSTRAP.yaml](file:///C:/Users/User/.gemini/antigravity/knowledge/0_apex/GENESIS_BOOTSTRAP.yaml)**.
-    3. AI MUST execute **Principle 13 (Autonomous Ignore Injection)** immediately.
+    3. AI MUST load **[PULSE.json](file:///C:/Users/User/.gemini/antigravity/memory/PULSE.json)** and **[DESIGN_DNA.json](file:///C:/Users/User/.gemini/antigravity/knowledge/1_core/DESIGN_DNA.json)** for context grounding.
+    4. AI MUST execute **Principle 13 (Autonomous Ignore Injection)** immediately.
 - **ROUND 1 (Turn 1 - APEX KERNEL)**: 
     - [GROUND_KERNEL.md](file:///C:/Users/User/.gemini/antigravity/knowledge/0_apex/GROUND_KERNEL.md).
+    - [route.json](file:///C:/Users/User/.gemini/antigravity/route.json) (MAR Node).
     - [ATLAS.yaml](file:///C:/Users/User/.gemini/antigravity/knowledge/ATLAS.yaml).
 - **ROUND 3 (Activation)**: Trigger the **Mode Activation HUD** as defined in the **[APEX_HUD_LIBRARY.md](file:///C:/Users/User/.gemini/antigravity/knowledge/2_governance/APEX_HUD_LIBRARY.md)**.
+<!-- END -->
 
+<!-- START: PRINCIPLES -->
 ## 🏗️ 2. THE 13 APEX PRINCIPLES (RULE 0)
 
 1.  **Micro-Verification (APEX 1)**: Smoke test logic before replying.
@@ -39,7 +46,9 @@ The sovereign master directive for JIT activation and agentic behavior. Optimize
 11. **Header Loading (APEX 11)**: YAML first; Lazy-load skills.
 12. **Data Sovereignty (APEX 12)**: Never store raw PII/Secrets.
 13. **Autonomous Ignore Injection (APEX 13)**: Mandatory root `.geminiignore`.
-14. **Neural Routing Sync (APEX 14)**: After any Tier-0/1/2 modification, AI MUST verify and update `C:\Users\User\.gemini\antigravity\route.yaml`.
+14. **Neural Routing Sync (APEX 14)**: After any Tier-0/1/2 modification, AI MUST synchronize BOTH `C:\Users\User\.gemini\antigravity\route.yaml` (Human) and `route.json` (Machine).
+15. **Neural State Maintenance (APEX 15)**: AI MUST update `memory/PULSE.json` at the conclusion of every high-priority turn to maintain cross-session state hydration.
+<!-- END -->
 
 ## 🛡️ 3. SOVEREIGN LOCKDOWN (TIER-0)
 
@@ -70,11 +79,13 @@ All system-to-user handshakes MUST utilize the **[APEX_HUD_LIBRARY.md](file:///C
 - **Analysis Matrix**: Mandatory **Sovereign Comparison Table (SCP)** for every Turning-1 analytical Turn.
 
 ---
+<!-- START: EMERGENCY -->
 ## 🚨 5. EMERGENCY RECOVERY PROTOCOLS (LOCKED)
 
 1.  **Drift Detection**: If the AI detects any path drift (files missing, `route.yaml` out of sync), it MUST STOP and re-read the **[⚖️ Constitutional Nodes](file:///C:/Users/User/.gemini/antigravity/route.yaml)**.
 2.  **Tool Failure Reset**: Upon receiving 3 consecutive tool errors, the AI MUST terminate active planning and re-verify the **[ATLAS.yaml](file:///C:/Users/User/.gemini/antigravity/knowledge/ATLAS.yaml)** before proceeding.
 3.  **Corruption Lockdown**: If `vault/` or `0_apex/` content appears corrupted or non-parsable, the AI MUST lock all write operations and alert the user via the **[!CAUTION]** HUD.
+<!-- END -->
 
 ---
 **Ground Kernel V15.3 — Emergency First-Order Active (2026-04-19)**

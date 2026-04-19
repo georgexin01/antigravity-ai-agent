@@ -22,6 +22,9 @@ topology:
       - name: GENESIS_BOOTSTRAP
         file: "GENESIS_BOOTSTRAP.yaml"
         desc: "Autonomous discovery bridge reconstruction template."
+      - name: ROUTE_MAR
+        file: "route.json"
+        desc: "Minified Atomic Router (MAR) for 10/10 token velocity."
 
   tier_1_core:
     path: "1_core/"
