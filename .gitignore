@@ -20,7 +20,6 @@
 !.gitignore
 !route.yaml
 !route.json
-!mcp_config.json
 !*route*.md
 !*route*.json
 !*route*.yaml
