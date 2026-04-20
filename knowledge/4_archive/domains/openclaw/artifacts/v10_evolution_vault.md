@@ -40,6 +40,10 @@ Goal: Save breakthroughs, failures, and cross-project pattern synthesis.
 - Pattern: `SBAC Protocol` — Schema-Based Access Control + Private PostgREST Schema Exposure.
 - ROI: Eliminates mock data drift and provides production-grade local security.
 
+### 4. Precision Project Mapping (V10.1)
+- Insight: Correct mapping of `webApp` to `webApp-LAA-quiz-v2` (Port 3000) is critical for local synchronization.
+- Status: Solidified in `user_preference_dna.md`.
+
 ## 🌑 FAILURE LOG & RECOVERY
 - Path Paradox: Encountered Rule 0 pathing mismatch: `userpreferencedna.yaml` was listed in `selfevolvingintelligence/artifacts/` but found in `knowledge/normal/`.
 - Recovery: Pattern-matched directory search successfully located the file. Updated internal mission map.

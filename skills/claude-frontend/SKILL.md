@@ -1,51 +1,78 @@
 ---
 name: claude-frontend
-description: "V7.0 Sovereign Web Framework (SWF) orchestrator. Mandates a clinical, 11-step industrial protocol for high-speed, sequential frontend development."
-triggers: ["sovereign framework", "swf", "frontend orchestrator", "vben supabase webapp", "industrial frontend", "sequential build"]
+description: "V8.0 Sovereign Web Framework (SWF) — 13-step orchestrator for Vue 3 + Supabase + Capacitor webApp. Each step is a self-sufficient code vault (copy-paste ready). No external template folders required."
+triggers: ["sovereign framework", "swf", "frontend orchestrator", "vben supabase webapp", "vue webapp", "claude-frontend", "build webapp", "new webapp module"]
 phase: 0-orchestrator
-version: 7.0
+version: 8.0
+status: authoritative
+last_updated: "2026-04-20"
 ---
 
-# `claude-frontend` — The Sovereign Protocol V7.0
+# `claude-frontend` — The Sovereign Protocol V8.0
 
-## When to Use
+## 🎯 When to Use
 
-When building or refactoring any high-fidelity frontend module (Vue 3 + Supabase + Capacitor). Acts as the clinical orchestrator for the **11-Step Industrial Frontend Lifecycle**.
+Building or refactoring any Vue 3 + Supabase + Capacitor webApp module in the quizLaa project family. Use this as the clinical orchestrator for the **13-Step Industrial Frontend Lifecycle**.
 
-## 🚀 The 11-Step Industrial Protocol
+This skill is **self-sufficient** — every step contains its own copy-paste Code Vault. The reference template `webApp-bakery-v2/` is no longer required.
 
-### Phase 1 — Industrial Foundation
-1. **[01-handshake-genesis](file:///C:/Users/user/.gemini/antigravity/skills/claude-frontend/01-handshake-genesis/skill.md)**: Identity registry and project plumbing.
-2. **[02-config-hardening](file:///C:/Users/user/.gemini/antigravity/skills/claude-frontend/02-config-hardening/skill.md)**: Centralization of utilities in `src/config/` and `src/api/`.
-3. **[03-api-connectivity](file:///C:/Users/user/.gemini/antigravity/skills/claude-frontend/03-api-connectivity/skill.md)**: Deployment of platform-aware `apiClient.ts` and `capacitorClient.ts`.
-4. **[04-auth-architecture](file:///C:/Users/user/.gemini/antigravity/skills/claude-frontend/04-auth-architecture/skill.md)**: Supabase Auth and fail-closed RBAC guards.
+## 🧭 Folder Anchors (the 6 pillars)
 
-### Phase 2 — Sovereign Data Scaffolding
-5. **[05-industrial-stores](file:///C:/Users/user/.gemini/antigravity/skills/claude-frontend/05-industrial-stores/skill.md)**: Generation of relational Pinia stores with internal identity filtering.
-6. **[06-image-spec](file:///C:/Users/user/.gemini/antigravity/skills/claude-frontend/06-image-spec/skill.md)**: Industrial media upload orchestration.
-7. **[11-relational-sync](file:///C:/Users/user/.gemini/antigravity/skills/claude-frontend/11-relational-sync/skill.md)**: **NEW**. Deep synchronization of relational schemas (Assignments/FKs).
+The webApp's `src/` layer has six load-bearing folders. Every step below anchors to one of them (plus foundational/deployment steps):
 
-### Phase 3 — High-Fidelity UI Foundry
-8. **[07-ui-standardization](file:///C:/Users/user/.gemini/antigravity/skills/claude-frontend/07-ui-standardization/skill.md)**: CSS theme variables and premium placeholder injection.
-9. **[08-view-scaffolding](file:///C:/Users/user/.gemini/antigravity/skills/claude-frontend/08-view-scaffolding/skill.md)**: Page-level container and layout orchestration.
-10. **[09-routing-logic](file:///C:/Users/user/.gemini/antigravity/skills/claude-frontend/09-routing-logic/skill.md)**: Dynamic router registration and guarded path logic.
-11. **[10-staging-deploy](file:///C:/Users/user/.gemini/antigravity/skills/claude-frontend/10-staging-deploy/skill.md)**: Production validation and PWA certification.
+| `src/` Folder | Role | Owning Step |
+|---|---|---|
+| `src/api/` | Platform-aware HTTP + Supabase clients | **03** |
+| `src/config/` | Single source of `import.meta.env.VITE_*` access | **02** |
+| `src/types/` | TypeScript contracts used by stores + views | **05** |
+| `src/stores/` | Pinia Bakery stores (most logic lives here) | **06** |
+| `src/router/` | Dynamic + guarded routing | **10** |
+| `src/views/` | Page components | **09** |
+
+## 🚀 The 13-Step Industrial Protocol
+
+### Phase 1 — Foundation (project plumbing)
+1. **[01-handshake-genesis](../claude/analyze-schema/skill.md)** — Project genesis: `package.json`, `vite.config.ts`, `tsconfig.json`, `index.html` (viewport=412), Pinia + router registration.
+2. **[02-config-hardening](../claude/analyze-schema/skill.md)** — `src/config/{env.ts, supabase.ts, index.ts}` — the only place `VITE_*` is read.
+3. **[03-api-connectivity](../claude/analyze-schema/skill.md)** — `src/api/{apiClient.ts, capacitorClient.ts}` — platform-aware HTTP + Supabase wrapper.
+4. **[04-auth-architecture](../claude/analyze-schema/skill.md)** — Supabase Auth, JWT extraction, fail-closed route guards, refresh-token flow.
+
+### Phase 2 — Data Scaffolding (src/types + src/stores)
+5. **[05-types-foundry](../claude/analyze-schema/skill.md)** — `src/types/` — DB types, App types, request/response envelopes.
+6. **[06-industrial-stores](../claude/analyze-schema/skill.md)** — `src/stores/` — Options-API Bakery pattern, identity filtering, `$reset` contract.
+7. **[07-image-spec](../claude/analyze-schema/skill.md)** — Supabase Storage upload, `<AppImage>` fallback, Capacitor native image picker.
+
+### Phase 3 — UI Foundry (src/views + styling)
+8. **[08-ui-standardization](../claude/analyze-schema/skill.md)** — CSS variables, theme tokens, divider sections, EN UPPERCASE, contact-field pattern.
+9. **[09-view-scaffolding](../claude/analyze-schema/skill.md)** — `src/views/` — List / Detail / Form templates with loading + empty states.
+10. **[10-routing-logic](../claude/analyze-schema/skill.md)** — `src/router/index.ts` — guards, auto-import modules, redirect-to-login.
+11. **[11-relational-sync](../claude/analyze-schema/skill.md)** — M2M patterns, intersection filters, soft-delete, AnswerSnapshot-style history.
+
+### Phase 4 — Locale + Native + Deploy
+12. **[12-i18n-composables](../claude/analyze-schema/skill.md)** — vue-i18n auto-glob, `src/composables/` (Capacitor Clipboard/Share patterns).
+13. **[13-native-pwa-deploy](../claude/analyze-schema/skill.md)** — `capacitor.config.ts`, `manifest.json`, PWA service worker, staging + production deploy.
+
+## 📖 Reference Vaults
+
+- **Cookbook**: `_cookbook.md` `(file removed)` — reusable snippets (pagination, fail-closed guard, Bakery store template, soft-delete filter). Linked from multiple steps.
+- **Master Rules**: [`MASTER_RULES.md`](../../knowledge/3_domains/claude/MASTER_RULES.md) — Rule #1 (Supabase schema isolation) is the law.
+- **Apex Kernel**: [`GROUND_KERNEL.md`](../../knowledge/0_apex/GROUND_KERNEL.md)
+- **Project Snapshot**: [`LAA_PROJECT_SNAPSHOT.md`](../../knowledge/3_domains/claude/LAA_PROJECT_SNAPSHOT.md)
 
 ## 🛠️ Mandatory Execution Rules
 
-- **CLINICAL SEQUENCING**: Steps MUST be executed in order (01 -> 11). NEVER skip the Foundation phase.
-- **DNA FIDELITY**: Every module must utilize the `apiClient` boilerplate from the **Sovereign DNA** vault.
-- **IDENTITY FILTERING**: All data retrieval MUST be filtered by the authoritative `userId` and `projectId` in the store layer.
+- **CLINICAL SEQUENCING** — execute 01 → 13 in order for a new webApp. For targeted edits, you may enter at the step that owns the folder you're touching (see Folder Anchors above), but you MUST re-verify the `requires:` chain in that step's frontmatter.
+- **SCHEMA ISOLATION (Rule #1)** — every query reads from the project schema (`quizLaa` for quizLaa-family webApps). Only `auth.users` is permitted cross-schema.
+- **IDENTITY FILTERING** — all data retrieval is filtered by the authoritative `userId` (from auth store) and `projectId` (from `VITE_PROJECT_ID`). This is enforced in the store layer, not views.
+- **CASING SYNC** — use `COALESCE(auth.jwt()->>'project_id', auth.jwt()->>'projectId')` in any RLS you touch from this skill.
+- **CONFIG FUNNEL** — `import.meta.env.VITE_*` is read in `src/config/` ONLY. Everywhere else uses `env.*` from the barrel.
 
-## Verify
+## ✅ Verify the Orchestrator
 
-- `skills/claude-frontend/` contains exactly 11 numbered sub-directories.
-- `SKILL.md` is version 7.0.
-- All absolute paths in `INDEX.md` correctly target the new folder names.
-
-## 📚 Reference (Authoritative)
-- **Supabase Connectivity**: [mcp-supabase-postgres-connection.md](file:///C:/Users/User/.gemini/antigravity/skills/claude/mcp-supabase-postgres-connection.md)
-- **RLS & RBAC Design**: [supabase-rls-rbac-design.md](file:///C:/Users/User/.gemini/antigravity/skills/claude/supabase-rls-rbac-design.md)
+- `claude-frontend/` contains exactly 13 numbered sub-directories (01 → 13) + `SKILL.md` + `_cookbook.md` + `README.md`.
+- Every sub-directory contains a `skill.md` with version ≥ 2.0 frontmatter and a 📦 Code Vault section.
+- `SKILL.md` links every sub-directory exactly once.
+- Zero references to `C:\Users\user\.claude\skills\*` (deprecated mirror path).
 
 ---
-**Protocol Status**: V7.0 Active | **Architect**: Claude-Frontend | **Requirement**: Perfection Structural Re-Architecture
+**Protocol Status**: V8.0 Active | **Architect**: Claude-Frontend | **Self-Sufficient**: Yes (bakery-v2 not required)

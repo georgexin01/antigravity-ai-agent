@@ -23,13 +23,13 @@ This folder contains the authoritative logic for multi-phase AI planning and arc
 ## Skill Index
 
 ### Orchestrator
-- [SKILL.md](SKILL.md) — The Sovereign Protocol V1.0 (Meta-Planning Orchestrator)
+- [SKILL.md](../claude/analyze-schema/skill.md) — The Sovereign Protocol V1.0 (Meta-Planning Orchestrator)
 
 ### Phase 1: Planning
-- [plan-first/skill.md](plan-first/skill.md) — Mandatory research & implementation plan generation logic.
+- [plan-first/skill.md](../claude/analyze-schema/skill.md) — Mandatory research & implementation plan generation logic.
 
 ### Phase 2: Knowledge Integrity
-- [validate-knowledge/skill.md](validate-knowledge/skill.md) — Verification of repository structure post-evolution.
+- [validate-knowledge/skill.md](../claude/analyze-schema/skill.md) — Verification of repository structure post-evolution.
 
 ---
 **Registry Status**: V1.0 Active | **Architect**: Claude-Meta | **Protocol**: Sovereign Planning

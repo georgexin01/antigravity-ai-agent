@@ -11,7 +11,7 @@ The goal is to ensure that a lesson already assigned to a user cannot be re-sele
 
 ### Data Layer
 
-#### [MODIFY] [lessons.ts](file:///C:/Users/user/Desktop/admin-panel-quizLaa/apps/web-antd/src/stores/lessons.ts)
+#### [MODIFY] [lessons.ts](../../../../../scratch/extraction-staging/webapp-live/src/stores/lessons.ts)
 - Add `fetchAvailableOptions(userId: string)` action.
 - Logic:
     1. Fetch all lesson options (`fetchOptions`).

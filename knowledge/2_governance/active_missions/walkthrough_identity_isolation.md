@@ -12,7 +12,7 @@ The system now uses a **Surgical Fingerprinting** protocol:
 
 | Action | Status | Result |
 | :--- | :--- | :--- |
-| **Fingerprint Engine**| `[🧬 ACTIVE]` | SHA-256 hashing implemented in [Vault Index](file:///C:/Users/User/OneDrive/Desktop/NanoBrowser/packages/storage/lib/vault/index.ts). |
+| **Fingerprint Engine**| `[🧬 ACTIVE]` | SHA-256 hashing implemented in [Vault Index](../../../scratch/extraction-staging/webapp-bakery/src/i18n/index.ts). |
 | **Server Isolation** | `[📡 HARDENED]`| Pulse Server now supports `?id=` routing for specific identity files. |
 | **Identity Migration**| `[🚚 SECURE]` | Automatically migrated your master vault to your identity-bound hash. |
 | **Privacy Guard** | `[🔓 LOCKED]` | Encryption + Filename Hashing provides dual-layer isolation. |

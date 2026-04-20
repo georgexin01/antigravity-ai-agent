@@ -13,25 +13,25 @@ The user has identified that the nomenclature `assign_lessons` is expected acros
 
 ### Database Refactor
 
-#### [NEW] [029_rename_user_lessons.sql](file:///c:/Users/user/Desktop/admin-panel-quizLaa/supabase/migrations/029_rename_user_lessons.sql)
+#### NEW] [029_rename_user_lessons.sql `(file removed)`
 - Rename `quizLaa.user_lessons` to `quizLaa.assign_lessons`.
 - Update all Foreign Key constraints.
 - Re-apply RLS policies for the new table name.
 
 ### Admin Panel Update
 
-#### [MODIFY] [user-lessons.ts (Store)](file:///C:/Users/user/Desktop/admin-panel-quizLaa/apps/web-antd/src/stores/user-lessons.ts)
+#### [MODIFY] [user-lessons.ts (Store)](../../../../../scratch/extraction-staging/webapp-live/src/stores/user-lessons.ts)
 - Replace all occurrences of `user_lessons` with `assign_lessons`.
 
 ### Student WebApp Update
 
-#### [MODIFY] [user-lessons.ts (Store)](file:///C:/Users/user/Desktop/admin-panel-quizLaa/webApp-LAA-quiz-v2/src/stores/user-lessons.ts)
-#### [MODIFY] [lessons.ts (Store)](file:///C:/Users/user/Desktop/admin-panel-quizLaa/webApp-LAA-quiz-v2/src/stores/lessons.ts)
+#### [MODIFY] [user-lessons.ts (Store)](../../../../../scratch/extraction-staging/webapp-live/src/stores/user-lessons.ts)
+#### [MODIFY] [lessons.ts (Store)](../../../../../scratch/extraction-staging/webapp-live/src/stores/lessons.ts)
 - Replace all occurrences of `user_lessons` with `assign_lessons`.
 
 ### Seeding Test Data
 
-#### [NEW] [030_seed_assign_lessons.sql](file:///c:/Users/user/Desktop/admin-panel-quizLaa/supabase/migrations/030_seed_assign_lessons.sql)
+#### NEW] [030_seed_assign_lessons.sql `(file removed)`
 - Insert relationship records linking existing Agents/Admins to Lessons using the new table name.
 
 ## Verification Plan

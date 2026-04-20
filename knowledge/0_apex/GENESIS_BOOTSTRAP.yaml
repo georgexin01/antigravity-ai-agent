@@ -17,16 +17,50 @@ absolute_target: "C:/Users/User/.gemini/route.yaml"
     action: "AI MUST read primary_route FIRST."
     fallback: "antigravity/knowledge/0_apex/GROUND_KERNEL.md"
 
-  triggers:
-    - .gemini
-    - route
-    - emergency
-    - rules
-    - priority
+  ⚡_high_speed_discovery_template:
+    root: "C:/Users/user/.gemini/antigravity"
+    knowledge_map:
+      apex: "knowledge/0_apex/"
+      core: "knowledge/1_core/"
+      gov: "knowledge/2_governance/"
+      dom: "knowledge/3_domains/"
+      arch: "knowledge/4_archive/"
+    tier_0_vitals:
+      kernel: "knowledge/0_apex/GROUND_KERNEL.md"
+      master_rules: "knowledge/3_domains/claude/MASTER_RULES.md"
+      atlas: "knowledge/ATLAS.yaml"
+      snapshot: "knowledge/3_domains/claude/LAA_PROJECT_SNAPSHOT.md"
+    skills_map:
+      core: "skills/"
+      claude: "skills/claude/"
+      frontend: "skills/claude-frontend/"
+      website: "skills/claude-website/"
+      faucet: "skills/faucet/"
+      meta: "skills/claude-meta/"
+      normal: "skills/normal/"
+    triggers:
+      - .gemini
+      - route
+      - find speed
+      - knowledge map
+      - speedup
+      - skills
+      - vitals
+      - hot paths
+      - auto routing
+
+  🤖_autonomous_routing_protocol:
+    capability: "SELF_EVOLVING_MAP"
+    rules:
+      - AI MUST auto-recreate `route.yaml` from this template if missing.
+      - AI MUST auto-update `hot_paths` when creating major new knowledge/skills nodes.
+      - AI MUST maintain 1:1 parity between `route.yaml` and `route.json`.
+      - **Deep Mapping**: Target high-frequency subdirectories (src/api, src/store).
+      - **Triggers Sync**: Auto-append relevant keywords to triggers.
 
 🤖_BOOTSTRAP_MANDATE:
-  condition: "If discovery bridge at absolute_target is MISSING"
-  action: "AI MUST recreate the file using 📜_BOOTSTRAP_TEMPLATE immediately."
+  condition: "If route.yaml is MISSING or DRIFTED"
+  action: "AI MUST recreate/sync using ⚡_high_speed_discovery_template immediately."
   check_round: 0
 
 triggers:

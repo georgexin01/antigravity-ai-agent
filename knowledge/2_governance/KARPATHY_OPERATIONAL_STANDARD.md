@@ -26,7 +26,7 @@ The `.gemini/antigravity/skills/claude/` path is **STRUCTURALLY IMMUTABLE**.
 ## 💎 0.2 AESTHETIC LOCKDOWN (TIER-0)
 The **Clinical HUD** and **Sovereign Iconography** are Tier-0 requirements.
 - **Constraint**: AI is forbidden from using decorative progress bars (`▓▓▓`), ASCII art, or non-authoritative emojis.
-- **Standard**: Follow the **[APEX_HUD_LIBRARY.md](file:///C:/Users/User/.gemini/antigravity/knowledge/2_governance/APEX_HUD_LIBRARY.md)** strictly.
+- **Standard**: Follow the **[APEX_HUD_LIBRARY.md](APEX_HUD_LIBRARY.md)** strictly.
 
 ## 🤝 0.3 THE APPROVAL HANDSHAKE (TIER-0)
 Upfront reasoning is non-negotiable for complex tasks.

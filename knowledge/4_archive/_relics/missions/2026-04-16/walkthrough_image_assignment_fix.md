@@ -6,7 +6,7 @@ I have completed the hardening of the Image Storage system and implemented proac
 
 ### 🖼️ Image Restoration (Port 54321 Bridge)
 - **Database Migration**: Stripped legacy `users/` and `/users/` prefixes from the `attachment` and `lessons` tables.
-- **Resilient Bridge**: Updated [upload.ts](file:///C:/Users/user/Desktop/admin-panel-quizLaa/apps/web-antd/src/utils/upload.ts) and [supabase.ts](file:///C:/Users/user/Desktop/admin-panel-quizLaa/apps/web-antd/src/api/supabase.ts) with the `getImgUrl` helper.
+- **Resilient Bridge**: Updated [upload.ts](file:///C:/Users/user/Desktop/admin-panel-quizLaa/apps/web-antd/src/utils/upload.ts) and [supabase.ts](../../../../../scratch/extraction-staging/webapp-live/src/config/supabase.ts) with the `getImgUrl` helper.
 - **Feature**: This bridge automatically converts any relative database path into a full Supabase Storage URL, ensuring images load from port `54321` instead of the frontend port `5666`.
 
 ### 🛡️ Duplicate-Prevention (Lessons Assign)

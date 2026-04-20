@@ -13,7 +13,7 @@ The user reports a "row-level security policy" error when uploading images. My i
 
 ### Storage Security Hardening
 
-#### [NEW] [031_storage_rls_policies.sql](file:///c:/Users/user/Desktop/admin-panel-quizLaa/supabase/migrations/031_storage_rls_policies.sql)
+#### NEW] [031_storage_rls_policies.sql `(file removed)`
 - Enable RLS for `storage.objects` (already enabled, but ensuring parity).
 - Add `SELECT` policy for all users (to view images).
 - Add `INSERT`, `UPDATE`, and `DELETE` policies for `authenticated` users (to manage uploads).

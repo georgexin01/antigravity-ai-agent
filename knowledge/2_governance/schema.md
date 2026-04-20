@@ -29,5 +29,5 @@ For all analytical tasks, the AI MUST output a table with following 5 metrics:
 4. **Purge**: Execute **Principle 13** to remove any redundant legacy fragments.
 
 ## ⚙️ EVOLUTION GATES
-- **Gate 1 (Atomic DNA)**: New nodes MUST adhere to the [DNA_CORE](file:///C:/Users/User/.gemini/antigravity/knowledge/1_core/dna_core.md) standard.
-- **Gate 2 (Zero-Search)**: New nodes MUST be registered in [0_apex/PYRAMID_ATLAS.md](file:///C:/Users/User/.gemini/antigravity/knowledge/0_apex/PYRAMID_ATLAS.md) on the same turn.
+- **Gate 1 (Atomic DNA)**: New nodes MUST adhere to the [DNA_CORE](../1_core/dna_core.md) standard.
+- **Gate 2 (Zero-Search)**: New nodes MUST be registered in 0_apex/PYRAMID_ATLAS.md `(file removed)` on the same turn.

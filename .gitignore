@@ -18,6 +18,12 @@
 # Keep repo essentials
 !README.md
 !.gitignore
+!route.yaml
+!route.json
+!mcp_config.json
+!*route*.md
+!*route*.json
+!*route*.yaml
 
 # Ignore agent-memory (nested git repo with admin ownership, not trackable from parent)
 skills/_shared/agent-memory/
@@ -26,3 +32,11 @@ skills/_shared/agent-memory/**
 # Ignore converter archive (safety net from hybrid migration, not for version control)
 .archive/
 .archive/**
+
+# Ignore Bloat & Large Retrospective Artifacts
+browser_recordings/
+conversations/
+html_artifacts/
+brain/tempmediaStorage/
+*.zip
+*.log

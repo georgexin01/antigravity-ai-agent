@@ -25,9 +25,9 @@ The definitive handshake for Sovereign Apex Intelligence. Governed by the **13 A
 ### ROUND 1: THE APEX KERNEL (Turn 1 - Priority 1)
 **Goal**: Immediate alignment with Sovereign Law.
 - **Resources**:
-    1. [GROUND_KERNEL.md](file:///C:/Users/User/.gemini/antigravity/knowledge/0_apex/GROUND_KERNEL.md).
-    2. [dna_core.md](file:///C:/Users/User/.gemini/antigravity/knowledge/1_core/dna_core.md).
-    3. [PYRAMID_ATLAS.md](file:///C:/Users/User/.gemini/antigravity/knowledge/0_apex/PYRAMID_ATLAS.md).
+    1. [GROUND_KERNEL.md](../0_apex/GROUND_KERNEL.md).
+    2. [dna_core.md](../1_core/dna_core.md).
+    3. PYRAMID_ATLAS.md `(file removed)`.
 
 ### ROUND 2: COGNITIVE SYNC (Turn 2)
 **Goal**: Hydrate user fingerprints and breakthroughs.

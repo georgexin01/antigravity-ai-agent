@@ -26,7 +26,7 @@ The aesthetic DNA for all Sovereign interfaces. Enforces "God-Tier" visual fidel
 - **Icons**: Use the Apex symbol set (`🛡️`, `⚙️`, `🧪`, `🎨`, `⚡`) for categorization.
 
 ## 🧠 3. THE PSYCHOLOGICAL OVERLAY (V1.0)
-All visual components must be validated against the conversion logic in [DESIGN_PSYCHOLOGY_2026.yaml](file:///C:/Users/User/.gemini/antigravity/1_core/DESIGN_PSYCHOLOGY_2026.yaml).
+All visual components must be validated against the conversion logic in [DESIGN_PSYCHOLOGY_2026.yaml](DESIGN_PSYCHOLOGY_2026.yaml).
 
 1. **Aha-Driven Aesthetics**: Motion and Glass effects should highlight the "Value Unlock" (Bypass loop).
 2. **Humanization Styling**: Handwritten details and Founder notes must follow the high-fidelity color palette (Zinc/Onyx) to maintain premium feel.

@@ -55,6 +55,8 @@ topology:
         file: "singularity_recall.md"
       - name: sovereign_framework_mastery
         file: "sovereign_framework_mastery.md"
+      - name: SOVEREIGN_COMPARISON_PROTOCOL
+        file: "SOVEREIGN_COMPARISON_PROTOCOL.md"
 
   tier_3_domains:
     path: "3_domains/"

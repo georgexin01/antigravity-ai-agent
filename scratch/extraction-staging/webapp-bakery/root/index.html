@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Title -->
+    <title>365 Bakery Group</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="author" content="Indiancoder" />
+    <meta name="robots" content="noindex, nofollow" />
+
+    <meta name="keywords" content="365 Bakery Group" />
+    <meta name="description" content="365 Bakery Group description" />
+
+    <meta property="og:title" content="365 Bakery Group" />
+    <meta
+      property="og:description"
+      content="365 Bakery Group brings a delightful assortment of freshly baked goods to your table every day of the year. Our commitment to quality and passion for baking ensure that every bite is a memorable experience, crafted with love and the finest ingredients. Discover the taste of tradition and innovation with 365 Bakery Group."
+    />
+
+    <meta property="og:image:width" content="300" />
+    <meta property="og:image:height" content="300" />
+    <meta property="og:image" content="/logo.jpg" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- Mobile Specific -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, minimal-ui, viewport-fit=cover"
+    />
+
+    <!-- Favicons Icon -->
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="/assets/images/app-logo/favicon.png"
+    />
+
+    <!-- PWA Version -->
+    <!-- <link rel="manifest" href="manifest.json"> -->
+
+    <!-- Global CSS -->
+    <!-- <link
+      href="/assets/vendor/bootstrap-select/dist/css/bootstrap-select.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="/assets/vendor/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.css"
+    /> -->
+    <!-- <link
+      rel="stylesheet"
+      href="/assets/vendor/nouislider/nouislider.min.css"
+    /> -->
+    <!-- <link rel="stylesheet" href="/assets/vendor/swiper/swiper-bundle.min.css" /> -->
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      .bannerSwiper .swiper-pagination-bullet,
+      .itemSwiper .swiper-pagination-bullet,
+      .popupBannerSwiper .swiper-pagination-bullet,
+      .smallBannerSwiper .swiper-pagination-bullet {
+        background-color: white !important;
+      }
+
+      .bannerSwiper .swiper-pagination-bullet.swiper-pagination-bullet-active,
+      .itemSwiper .swiper-pagination-bullet.swiper-pagination-bullet-active,
+      .popupBannerSwiper
+        .swiper-pagination-bullet.swiper-pagination-bullet-active,
+      .smallBannerSwiper
+        .swiper-pagination-bullet.swiper-pagination-bullet-active {
+        background-color: #74332a !important;
+      }
+    </style>
+
+    <script>
+      if (window.location.hostname === "www.365bakerygroup.com") {
+        window.location.href =
+          "https://365bakerygroup.com" +
+          window.location.pathname +
+          window.location.search;
+      }
+    </script>
+  </head>
+
+  <body style="background-color: #fafafa">
+    <div
+      id="app"
+      class="container"
+      style="
+        padding: 0;
+        box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.05);
+        min-height: 100vh;
+        background-color: white;
+      "
+    ></div>
+
+    <script type="module" src="/src/main.ts"></script>
+
+    <!-- Scripts from template -->
+    <script src="/assets/js/jquery.js"></script>
+    <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script> -->
+    <!-- <script src="/assets/js/ic.carousel.js"></script> -->
+    <script src="/assets/js/settings.js"></script>
+    <script src="/assets/js/custom.js"></script>
+    <!-- <script src="index.js"></script> -->
+
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAD3D0d_VUYM0CHeVzbc9eLx-jV4fYYas8&libraries=places&loading=async"
+      async
+      defer
+    ></script>
+
+    <!-- <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+          .register("service-worker.js")
+          .then((registration) => {
+            console.log(
+              "Service Worker registered with scope:",
+              registration.scope
+            );
+          })
+          .catch((error) => {
+            console.log("Service Worker registration failed:", error);
+          });
+      }
+    </script> -->
+  </body>
+</html>

@@ -31,7 +31,7 @@ The definitive governance framework for preventing autonomous AI drift and accid
 2. **VERIFICATION**: AI provides an **Architectural Justification** for the change.
 3. **APPROVAL**: AI must wait for a user message containing "Apply", "Go", "Done", or a checkmark within **3 subsequent chat messages**.
 4. **EXECUTION**: Only after approval is the AI permitted to call the `replace_file_content` tool.
-5. **HUD STANDARD**: For Tier-1 assets, utilize the `TIER-1_PLAN_APPROVAL` template from the **[APEX_HUD_LIBRARY.md](file:///C:/Users/User/.gemini/antigravity/knowledge/2_governance/APEX_HUD_LIBRARY.md)**.
+5. **HUD STANDARD**: For Tier-1 assets, utilize the `TIER-1_PLAN_APPROVAL` template from the **[APEX_HUD_LIBRARY.md](APEX_HUD_LIBRARY.md)**.
 
 ## 🔍 3. PRE-EDIT AUDIT CHECKLIST
 

@@ -14,8 +14,8 @@ Use this mode for any complex architectural planning, knowledge evolution, or hi
 
 ## 🚀 The Planning Protocol
 
-1. **[plan-first](file:///C:/Users/User/.gemini/antigravity/skills/claude-meta/plan-first/skill.md)**: Mandatory research and implementation plan generation.
-2. **[validate-knowledge](file:///C:/Users/User/.gemini/antigravity/skills/claude-meta/validate-knowledge/skill.md)**: Verification of knowledge integrity post-restructure.
+1. **[plan-first](../claude/analyze-schema/skill.md)**: Mandatory research and implementation plan generation.
+2. **[validate-knowledge](../claude/analyze-schema/skill.md)**: Verification of knowledge integrity post-restructure.
 
 ## 🛡️ Mandatory Execution Rules
 

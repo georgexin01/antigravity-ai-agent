@@ -1,0 +1,19 @@
+{
+    "name": "sovereign/agent-portfolio",
+    "description": "High-fidelity agent portfolio powered by Sovereign V6.0",
+    "type": "project",
+    "require": {
+        "php": ">=8.0",
+        "vlucas/phpdotenv": "^5.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sovereign\\Core\\": "api/core/",
+            "Sovereign\\Models\\": "api/Models/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    }
+}

@@ -13,7 +13,7 @@ Refining the `.gemini` knowledge base to align with **Ground Kernel V15.0** and 
 
 ### 🧹 Janitor Protocol & Root Cleanliness
 
-#### [NEW] [_relics/missions/2026-04-16/](file:///C:/Users/user/.gemini/antigravity/knowledge/_relics/missions/2026-04-16/)
+#### NEW] [_relics/missions/2026-04-16/ `(file removed)`
 Archive directory for completed mission logs.
 
 #### [MOVE] [implementation_plan_*.md](file:///C:/Users/user/.gemini/antigravity/knowledge/)
@@ -25,10 +25,10 @@ Move all these files to the new `_relics` folder.
 
 ### 🧠 Intelligence Ledger Evolution
 
-#### [MODIFY] [evolving_knowledge.md](file:///C:/Users/user/.gemini/antigravity/knowledge/_shared/self_evolving_intelligence/artifacts/evolving_knowledge.md)
+#### [MODIFY] [evolving_knowledge.md](../../2_governance/evolution/artifacts/evolving_knowledge.md)
 Add a entry for the V10.1 Structural Optimization.
 
-#### [MODIFY] [user_preference_dna.md](file:///C:/Users/user/.gemini/antigravity/knowledge/_shared/self_evolving_intelligence/artifacts/user_preference_dna.md)
+#### [MODIFY] [user_preference_dna.md](../../2_governance/evolution/artifacts/user_preference_dna.md)
 Verify and update any project "fingerprints" if new ones were detected during research.
 
 ## Open Questions

@@ -12,11 +12,11 @@ OpenClaw has been moved from the active execution layer to **Tier 4 (Archive)**.
 | **Integration Logic**| `.../openclaw_integration.md` | `4_archive/domains/faucet/` |
 
 ## 🛡️ Atlas Hardening
-I have purged the [PYRAMID_ATLAS.md](file:///C:/Users/User/.gemini/antigravity/knowledge/0_apex/PYRAMID_ATLAS.md) of all OpenClaw triggers. 
+I have purged the PYRAMID_ATLAS.md `(file removed)` of all OpenClaw triggers. 
 
 - **Logic Gates Removed**: Proactive matching for `openclaw` or `proxy` triggers is now disabled.
 - **Topology Update**: OpenClaw is now formally categorized as `[🧊 STATUS: DORMANT]`.
-- **Nuclear List Update**: [GROUND_KERNEL.md](file:///C:/Users/User/.gemini/antigravity/knowledge/0_apex/GROUND_KERNEL.md) Tier-0 discovery is now 100% focused on active domains.
+- **Nuclear List Update**: [GROUND_KERNEL.md](../../0_apex/GROUND_KERNEL.md) Tier-0 discovery is now 100% focused on active domains.
 
 ## 🧪 Verification Log
 - [x] **Zero Triggers**: Grep search confirms no active `openclaw` triggers remain in Tier 0.

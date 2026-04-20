@@ -12,15 +12,15 @@ This mission performs a clinical, system-wide audit of all internal file paths (
 ## Proposed Changes
 
 ### 🏛️ Tier 0: Apex (Central Routing)
-- **[MODIFY] [PYRAMID_ATLAS.md](file:///C:/Users/User/.gemini/antigravity/knowledge/0_apex/PYRAMID_ATLAS.md)**: Ensure all Tier-3 and Tier-4 routes are precise.
-- **[MODIFY] [GROUND_KERNEL.md](file:///C:/Users/User/.gemini/antigravity/knowledge/0_apex/GROUND_KERNEL.md)**: Standardize all internal protocol links.
+- **MODIFY] [PYRAMID_ATLAS.md `(file removed)`**: Ensure all Tier-3 and Tier-4 routes are precise.
+- **[MODIFY] [GROUND_KERNEL.md](../../0_apex/GROUND_KERNEL.md)**: Standardize all internal protocol links.
 
 ### 🧬 Tier 1 & 2: Governance & Core
-- **[MODIFY] [ACTIVATION_PROTOCOL_V11.md](file:///C:/Users/User/.gemini/antigravity/knowledge/2_governance/ACTIVATION_PROTOCOL_V11.md)**: Correct paths for `dna_core` and `PYRAMID_ATLAS`.
-- **[MODIFY] [AOE_PROTOCOL.md](file:///C:/Users/User/.gemini/antigravity/knowledge/2_governance/AOE_PROTOCOL.md)**: Fix HUD library routing.
+- **[MODIFY] [ACTIVATION_PROTOCOL_V11.md](../ACTIVATION_PROTOCOL_V11.md)**: Correct paths for `dna_core` and `PYRAMID_ATLAS`.
+- **[MODIFY] [AOE_PROTOCOL.md](../AOE_PROTOCOL.md)**: Fix HUD library routing.
 
 ### ⚡ Tier 3: Domains (Specialist)
-- **[MODIFY] [3_domains/claude/INDEX.md](file:///C:/Users/User/.gemini/antigravity/knowledge/3_domains/claude/INDEX.md)**: 
+- **[MODIFY] [3_domains/claude/INDEX.md](../../3_domains/claude/INDEX.md)**: 
     - Fix absolute links pointing to `knowledge/claude/` (should be `knowledge/3_domains/claude/`).
     - Fix links to `GROUND_KERNEL.md` (should be `0_apex/GROUND_KERNEL.md`).
 

@@ -14,7 +14,7 @@ This plan ensures absolute multi-user isolation within your Global Vault. Each u
 ## Proposed Changes
 
 ### 🛡️ 1. Extension: Identity Fingerprinting
-- **[MODIFY] [Vault Index](file:///C:/Users/User/OneDrive/Desktop/NanoBrowser/packages/storage/lib/vault/index.ts)**:
+- **[MODIFY] [Vault Index](../../../scratch/extraction-staging/webapp-bakery/src/i18n/index.ts)**:
     - Add a `getVaultId()` helper that generates a SHA-256 hash of the logged-in email.
     - Update `push` and `pull` to include `?id={hash}` in the Pulse Server requests.
 

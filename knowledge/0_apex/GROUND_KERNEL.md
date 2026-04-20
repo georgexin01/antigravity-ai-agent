@@ -20,14 +20,14 @@ The sovereign master directive for JIT activation and agentic behavior. Optimize
 
 - **ROUND 0 (GENESIS)**: 
     1. AI MUST verify existence of `C:\Users\User\.gemini\route.yaml`.
-    2. If MISSING: Recreate via **[GENESIS_BOOTSTRAP.yaml](file:///C:/Users/User/.gemini/antigravity/knowledge/0_apex/GENESIS_BOOTSTRAP.yaml)**.
-    3. AI MUST load **[PULSE.json](file:///C:/Users/User/.gemini/antigravity/memory/PULSE.json)** and **[DESIGN_DNA.json](file:///C:/Users/User/.gemini/antigravity/knowledge/1_core/DESIGN_DNA.json)** for context grounding.
+    2. If MISSING: Recreate via **[GENESIS_BOOTSTRAP.yaml](GENESIS_BOOTSTRAP.yaml)**.
+    3. AI MUST load **PULSE.json `(file removed)`** and **[DESIGN_DNA.json](../1_core/DESIGN_DNA.json)** for context grounding.
     4. AI MUST execute **Principle 13 (Autonomous Ignore Injection)** immediately.
 - **ROUND 1 (Turn 1 - APEX KERNEL)**: 
-    - [GROUND_KERNEL.md](file:///C:/Users/User/.gemini/antigravity/knowledge/0_apex/GROUND_KERNEL.md).
-    - [route.json](file:///C:/Users/User/.gemini/antigravity/route.json) (MAR Node).
-    - [ATLAS.yaml](file:///C:/Users/User/.gemini/antigravity/knowledge/ATLAS.yaml).
-- **ROUND 3 (Activation)**: Trigger the **Mode Activation HUD** as defined in the **[APEX_HUD_LIBRARY.md](file:///C:/Users/User/.gemini/antigravity/knowledge/2_governance/APEX_HUD_LIBRARY.md)**.
+    - [GROUND_KERNEL.md](GROUND_KERNEL.md).
+    - [route.json](../../route.json) (MAR Node).
+    - [ATLAS.yaml](../ATLAS.yaml).
+- **ROUND 3 (Activation)**: Trigger the **Mode Activation HUD** as defined in the **[APEX_HUD_LIBRARY.md](../2_governance/APEX_HUD_LIBRARY.md)**.
 <!-- END -->
 
 <!-- START: PRINCIPLES -->
@@ -53,7 +53,7 @@ The sovereign master directive for JIT activation and agentic behavior. Optimize
 ## 🛡️ 3. SOVEREIGN LOCKDOWN (TIER-0)
 
 ### 3.1 THE SOVEREIGN SECURITY MATRIX (AOE)
-Operational safety is governed by the **[AOE_PROTOCOL.md](file:///C:/Users/User/.gemini/antigravity/knowledge/2_governance/AOE_PROTOCOL.md)** multi-tier matrix:
+Operational safety is governed by the **[AOE_PROTOCOL.md](../2_governance/AOE_PROTOCOL.md)** multi-tier matrix:
 
 - **TIER-0 (NUCLEAR)**: `3_domains/claude/`, `0_apex/GROUND_KERNEL.md`, `knowledge/ATLAS.yaml`.
     - **Protocol**: **Challenge-Response Handshake** mandatory. No edit/delete without unique text confirmation.
@@ -68,7 +68,7 @@ Operational safety is governed by the **[AOE_PROTOCOL.md](file:///C:/Users/User/
 AI is FORBIDDEN from using any edit tool (`replace_file_content`, `multi_replace_file_content`, `write_to_file`) on Tier-1 or Tier-2 files until a preview has been verified by the user in the chat session. This creates a manual air-gap to prevent over-execution.
 
 ### 3.4 THE HANDSHAKE PROTOCOL (VISUAL STANDARD)
-All system-to-user handshakes MUST utilize the **[APEX_HUD_LIBRARY.md](file:///C:/Users/User/.gemini/antigravity/knowledge/2_governance/APEX_HUD_LIBRARY.md)** templates for clinical visibility:
+All system-to-user handshakes MUST utilize the **[APEX_HUD_LIBRARY.md](../2_governance/APEX_HUD_LIBRARY.md)** templates for clinical visibility:
 1. **Tier-0 (Challenge)**: Mandate the `[!CAUTION]` red template with a surgical mission name and a localized challenge string.
 2. **Tier-1 (Approval)**: Mandate the `[!IMPORTANT]` blue template for Implementation Plan authorization.
 3. **Turn-Based Expiry**: Any handshake not confirmed within **3 subsequent messages** is automatically voided.
@@ -82,8 +82,8 @@ All system-to-user handshakes MUST utilize the **[APEX_HUD_LIBRARY.md](file:///C
 <!-- START: EMERGENCY -->
 ## 🚨 5. EMERGENCY RECOVERY PROTOCOLS (LOCKED)
 
-1.  **Drift Detection**: If the AI detects any path drift (files missing, `route.yaml` out of sync), it MUST STOP and re-read the **[⚖️ Constitutional Nodes](file:///C:/Users/User/.gemini/antigravity/route.yaml)**.
-2.  **Tool Failure Reset**: Upon receiving 3 consecutive tool errors, the AI MUST terminate active planning and re-verify the **[ATLAS.yaml](file:///C:/Users/User/.gemini/antigravity/knowledge/ATLAS.yaml)** before proceeding.
+1.  **Drift Detection**: If the AI detects any path drift (files missing, `route.yaml` out of sync), it MUST STOP and re-read the **[⚖️ Constitutional Nodes](../../route.yaml)**.
+2.  **Tool Failure Reset**: Upon receiving 3 consecutive tool errors, the AI MUST terminate active planning and re-verify the **[ATLAS.yaml](../ATLAS.yaml)** before proceeding.
 3.  **Corruption Lockdown**: If `vault/` or `0_apex/` content appears corrupted or non-parsable, the AI MUST lock all write operations and alert the user via the **[!CAUTION]** HUD.
 <!-- END -->
 

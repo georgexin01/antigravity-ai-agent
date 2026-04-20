@@ -14,7 +14,7 @@ The knowledge base is now organized into a surgical 5-tier hierarchy:
 | **4** | `4_archive` | **Archive** | Cold storage for liquidated relics and historical mission data. |
 
 ## 🧭 Visual Routing Hub
-The legacy `0_apex/PYRAMID_ATLAS.md` has been decommissioned and replaced by the high-fidelity [PYRAMID_ATLAS.md](file:///C:/Users/User/.gemini/antigravity/knowledge/0_apex/PYRAMID_ATLAS.md).
+The legacy `0_apex/PYRAMID_ATLAS.md` has been decommissioned and replaced by the high-fidelity PYRAMID_ATLAS.md `(file removed)`.
 
 ```mermaid
 graph TD
@@ -27,7 +27,7 @@ graph TD
 ## 🛠️ Technical & Aesthetic Wins
 - **🛡️ PNPM Restored**: Updated PowerShell Execution Policy to `RemoteSigned` for the `CurrentUser` scope, enabling the mandated `pnpm` workflow.
 - **🎨 Domain Beautification**: Upgraded all Specialist Kernels in `3_domains/` with high-fidelity Apex HUDs and surgical iconography. 
-- **🌌 Kernel Hardening**: [GROUND_KERNEL.md](file:///C:/Users/User/.gemini/antigravity/knowledge/0_apex/GROUND_KERNEL.md) has been updated with the new hierarchical paths and Tier-0 security logic.
+- **🌌 Kernel Hardening**: [GROUND_KERNEL.md](../../0_apex/GROUND_KERNEL.md) has been updated with the new hierarchical paths and Tier-0 security logic.
 
 - **🌋 Liquidated Remnants**: Purged all empty folders and "floating" root files, achieving 100% structural purity.
 

@@ -27,4 +27,4 @@ This document tracks the recursive growth and intelligence mapping of the Antigr
 - **DNA-003**: Path Referral optimization (Direct local access).
 
 ---
-*Prediction Sync has been migrated to [CORE_VITALS.md](file:///C:/Users/user/.gemini/antigravity/knowledge/_shared/artifacts/CORE_VITALS.md) for Slim Activation.*
+*Prediction Sync has been migrated to [CORE_VITALS.md](../../artifacts/CORE_VITALS.md) for Slim Activation.*

@@ -15,11 +15,11 @@ The user has confirmed that maintaining the `user_lessons` nomenclature is accep
 
 ### Database Security & Data
 
-#### [NEW] [027_user_lessons_policies.sql](file:///c:/Users/user/Desktop/admin-panel-quizLaa/supabase/migrations/027_user_lessons_policies.sql)
+#### NEW] [027_user_lessons_policies.sql `(file removed)`
 - Enable RLS for `quizLaa.user_lessons`.
 - Add `SELECT`, `INSERT`, `UPDATE`, and `DELETE` policies for `authenticated` users.
 
-#### [NEW] [028_seed_user_lessons.sql](file:///c:/Users/user/Desktop/admin-panel-quizLaa/supabase/migrations/028_seed_user_lessons.sql)
+#### NEW] [028_seed_user_lessons.sql `(file removed)`
 - Seed initial assignments linking the Admin and Agent accounts to active lessons.
 
 ## Verification Plan

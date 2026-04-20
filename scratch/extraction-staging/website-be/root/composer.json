@@ -1,0 +1,15 @@
+{
+  "require": {
+    "doctrine/dbal": "^4.2",
+    "phpmailer/phpmailer": "^6.9"
+  },
+  "autoload": {
+    "psr-4": {
+      "Website\\": "api/Website/"
+    },
+    "files": [
+      "api/Website/Helper.php",
+      "api/Website/Config.php"
+    ]
+  }
+}

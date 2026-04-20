@@ -1,73 +1,77 @@
 ---
 name: claude-website
-description: "V6.1 Sovereign orchestrator for PHP + Supabase REST. Hardens the Sovereign CRUD engine with single-record data extraction and custom header support. Mandates relational UUID binding for all persistence layers."
-triggers: ["claude website", "php supabase", "api re-architecture", "dynamic routing", "sovereign rest", "composer autoload", "psr-4", "crud-engine", "single-record-lookup"]
+description: "V7.0 Sovereign PHP + Supabase REST orchestrator — 13-step pyramid for building a Sovereign\\ namespaced backend API. Each step is a self-sufficient code vault (copy-paste ready). No external template folders required."
+triggers: ["claude website", "php supabase", "sovereign rest", "sovereign query", "psr-4", "composer autoload", "crud engine", "agent landing", "new website module", "claude-website"]
 phase: 0-orchestrator
-version: 6.1
+version: 7.0
+status: authoritative
+last_updated: "2026-04-20"
 ---
 
-# `claude-website` — Sovereign PHP + Supabase REST Protocol V6.1
+# `claude-website` — Sovereign PHP + Supabase REST Protocol V7.0
 
-## When to Use
+## 🎯 When to Use
 
-Initializing or refactoring a Sovereign PHP backend (Agents, Profiles, Reviews). Acts as the authoritative orchestrator for industrial-grade namespaced architecture and hardened relational persistence.
+Initializing or refactoring a Sovereign PHP backend (public landing pages, agent profiles, reviews, lead capture). Use this as the authoritative orchestrator for the **13-Step PHP API Lifecycle**.
 
-## 🚀 The 12-Step Sovereign Migration (V6.1 Update)
+This skill is **self-sufficient** — every step contains its own copy-paste Code Vault. The reference template `website-BE/` is no longer required.
 
-### Phase 1 — Industrial Foundation
-1. **Config Generation** (.env) using VITE_ prefixed keys for cross-project compatibility.
-2. **Env Loader** (Config.php) supporting `dotenv` parsing.
-3. **Autoloading** (Composer PSR-4 `Sovereign\`). Runs `composer dump-autoload` after any Model/Controller creation.
-4. **Relational Schema** (SQL). Binding via UUIDs (e.g. `agent_profile_id`).
+## 🧭 Folder Anchors (the 6 pillars of `api/`)
 
-### Phase 2 — Sovereign Engine Layer
-5. **REST Client Construction**: `SupabaseClient.php` MUST support custom headers for PostgREST orchestration.
-6. **Query Builder Logic**: `SovereignQuery.php` MUST handle the `single()` flag by extracting and returning the record data directly instead of the full API envelope.
-7. **Model Mapping**: All Models must implement a `format()` method to alias database keys to template-friendly keys.
-8. **Security Lock**: Implementation of RLS Policies with `anon_insert_access` for public submissions.
+The website's `api/` layer has six load-bearing folders/files. Every step below anchors to one of them:
 
-### Phase 3 — Orchestration & UI
-9. **Controller Orchestration**: Separation of concern between Data retrieval and UI logic.
-10. **Dynamic Routing**: Resolution of entities via both Slugs AND UUIDs.
-11. **UI Refactoring**: Implementation of high-fidelity "No Profile Image" fallbacks in all PHP templates.
-12. **Brain Hardening**: Summarize the architecture into the `.gemini` DNA.
+| `api/` Folder | Role | Owning Step |
+|---|---|---|
+| `api/core/` | `SupabaseClient.php`, `SovereignQuery.php`, `.env` loader | **07** + env in **01** |
+| `api/Models/` | CRUD + `format()` alias override per entity | **08** |
+| `api/Controllers/` | `processResourceRequest` / `processCollectionRequest` orchestration | **09** |
+| `api/Lib/` | `ErrorHandler.php` — global catch, CORS, JSON envelopes | **10** |
+| `api/v1/` | Endpoint adapters (one `.php` per resource) | **11** |
+| `api/vendor/` | Composer PSR-4 autoload (`Sovereign\` namespace) | **03** |
+
+## 🚀 The 13-Step Sovereign Protocol
+
+### Phase 1 — Foundation (config, env, autoload, schema)
+1. **[01-config-generation](../claude/analyze-schema/skill.md)** — `.env` + `.env.production` with VITE_-prefixed Supabase keys; folder layout genesis.
+2. **[02-env-loader](../claude/analyze-schema/skill.md)** — `api/Config.php` — `const Sovereign\Config`, dotenv parsing, env-block switching.
+3. **[03-composer-autoload](../claude/analyze-schema/skill.md)** — `composer.json` PSR-4 (`Sovereign\\`) + files autoload; `composer dump-autoload` runbook.
+4. **[04-schema-building](../claude/analyze-schema/skill.md)** — Relational SQL DDL in `quizLaa` schema; UUID PKs; soft-delete + timestamps.
+5. **[05-security-lock](../claude/analyze-schema/skill.md)** — RLS policies: `anon_insert_access`, soft-delete filter, casing-sync COALESCE.
+6. **[06-seeding](../claude/analyze-schema/skill.md)** — Seed generator + `psql` bulk injection; FK integrity verification.
+
+### Phase 2 — Sovereign Engine (REST client, Models, Controllers, errors)
+7. **[07-rest-client](../claude/analyze-schema/skill.md)** — `api/core/SupabaseClient.php` + `SovereignQuery.php` — fluent chain, `single()` envelope extraction, custom headers.
+8. **[08-models-layer](../claude/analyze-schema/skill.md)** — `api/Models/` — `BaseModel` + entity models, `format()` override for DB→template key aliasing.
+9. **[09-controllers-layer](../claude/analyze-schema/skill.md)** — `api/Controllers/` — `BaseController` + entity controllers, `processResourceRequest` / `processCollectionRequest`.
+10. **[10-error-handler](../claude/analyze-schema/skill.md)** — `api/Lib/ErrorHandler.php` — global exception catch, CORS preflight, JSON error envelope.
+
+### Phase 3 — Endpoint Adapters + UI + Brain
+11. **[11-router-v1-endpoints](../claude/analyze-schema/skill.md)** — `api/v1/*.php` adapters + root `index.php` (static passthrough) + `router.php` (get/post dispatch) + UUID-only resolution.
+12. **[12-ui-refactor](../claude/analyze-schema/skill.md)** — PHP templates, `htmlspecialchars()` discipline, "No Profile Image" fallback, server-rendered landing/review pages.
+13. **[13-brain-hardening](../claude/analyze-schema/skill.md)** — Summarize architecture into `3_domains/claude/LAA_PROJECT_SNAPSHOT.md`; save session memory.
+
+## 📖 Reference Vaults
+
+- **Cookbook**: `_cookbook.md` `(file removed)` — reusable snippets (SovereignQuery chain examples, Model.format pattern, static passthrough guard, error envelope).
+- **Master Rules**: [`MASTER_RULES.md`](../../knowledge/3_domains/claude/MASTER_RULES.md) — Rule #1 (Supabase schema isolation) is the law.
+- **Apex Kernel**: [`GROUND_KERNEL.md`](../../knowledge/0_apex/GROUND_KERNEL.md)
 
 ## 🛠️ Mandatory Execution Rules
 
-- **ENVELOPE GUARD**: `SovereignQuery::get()` must surgically return the record data when `single()` is used. Never force the Page to parse `data['data']`.
-- **UUID AUTHORITATIVE**: Prioritize relational binding via UUIDs over string-based slugs for all POST/PATCH operations.
-- **AESTHETIC DEGRADATION**: All image rendering must include a `personal-image-placeholder` or icon-based fallback for missing media.
+- **CLINICAL SEQUENCING** — execute 01 → 13 in order for a new website. For targeted edits, enter at the step owning the folder you're touching (see Folder Anchors), but re-verify the `requires:` chain in that step's frontmatter.
+- **SCHEMA ISOLATION (Rule #1)** — every query reads from the project schema (`quizLaa` for quizLaa-family sites). NEVER write to `public.*` from a project Model.
+- **ENVELOPE GUARD** — `SovereignQuery::get()` returns record data directly when `single()` is used; pages never parse `data['data']`.
+- **UUID AUTHORITATIVE** — relational binding uses UUIDs (e.g., `agent_profile_id`), not string slugs.
+- **APIKEY-ONLY CLIENTS** — `SupabaseClient::request()` sends `apikey` header only (no `Authorization: Bearer` — PostgREST rejects duplicate JWT on anon requests).
+- **STATIC PASSTHROUGH** — `index.php` must short-circuit JS/CSS/asset requests BEFORE autoload, or static files return HTML.
 
-## Verify
+## ✅ Verify the Orchestrator
 
-- `SupabaseClient` successfully passes custom `Accept` headers.
-- `AgentModel::resolve` returns a flat array of agent data, not a response object.
-- Reviews correctly `INSERT` using the `agent_profile_id` UUID.
-
-## 📦 📦 Boilerplate Vault (COPY & ADAPT)
-
-### 1. `SovereignQuery.php` (The Hardened Get)
-```php
-public function get($headers = []) {
-    if ($this->single) { $headers[] = "Accept: application/vnd.pgrst.object+json"; }
-    $queryString = implode('&', $params);
-    $response = $this->client->request($this->table . ($queryString ? '?' . $queryString : ''), 'GET', null, 'return=representation', $headers);
-    if ($this->single) {
-        $status = $response['status'] ?? 500;
-        return ($status >= 200 && $status < 300) ? $response['data'] : null;
-    }
-    return $response;
-}
-```
-
-### 2. `SupabaseClient.php` (Header Support)
-```php
-public function request($path, $method = 'GET', $data = null, $prefer = 'return=representation', $customHeaders = []) {
-    $headers = ["apikey: {$this->anonKey}", "Content-Type: application/json", "Accept-Profile: {$this->schema}", "Content-Profile: {$this->schema}"];
-    if (!empty($customHeaders)) { $headers = array_merge($headers, $customHeaders); }
-    // ... curl execution ...
-}
-```
+- `claude-website/` contains exactly 13 numbered sub-directories (01 → 13) + `SKILL.md` + `_cookbook.md`.
+- Every sub-directory contains a `skill.md` with version ≥ 2.0 frontmatter and a 📦 Code Vault section.
+- `SKILL.md` links every sub-directory exactly once.
+- Legacy `website-api-connection/` folder is either retired or replaced by a pointer to this index.
+- Zero references to `C:\Users\user\.claude\skills\*` (deprecated mirror path).
 
 ---
-**Protocol Status**: V6.1 Active | **Architect**: Claude-Website | **Requirement**: Relational Persistence & CRUD Hardening
+**Protocol Status**: V7.0 Active | **Architect**: Claude-Website | **Self-Sufficient**: Yes (website-BE not required)

@@ -12,7 +12,7 @@ This plan upgrades the Sovereign Vault into a comprehensive **System Registry**.
 ## Proposed Changes
 
 ### ⚙️ 1. Registry Architecture expansion
-- **[MODIFY] [Vault Index](file:///C:/Users/User/OneDrive/Desktop/NanoBrowser/packages/storage/lib/vault/index.ts)**:
+- **[MODIFY] [Vault Index](../../../scratch/extraction-staging/webapp-bakery/src/i18n/index.ts)**:
     - Update `VaultData` interface to include `registry`, `cloud_services`, and `workspace_assets`.
     - Implement an `exportTemplate()` method to generate the JSON boilerplate you requested.
 

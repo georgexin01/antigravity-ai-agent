@@ -1,0 +1,52 @@
+# 🧭 ANTIGRAVITY HIGH-SPEED ROUTER (V16.1 - APEX)
+# Purpose: Zero-latency directory mapping for AI knowledge/skills finding.
+# Status: ACTIVE_SOVEREIGN_NODE
+
+⚡_high_speed_discovery:
+  root: "./"
+  knowledge_map:
+    apex: "knowledge/0_apex/"
+    core: "knowledge/1_core/"
+    gov: "knowledge/2_governance/"
+    dom: "knowledge/3_domains/"
+    arch: "knowledge/4_archive/"
+  
+  tier_0_vitals:
+    kernel: "knowledge/0_apex/GROUND_KERNEL.md"
+    master_rules: "knowledge/3_domains/claude/MASTER_RULES.md"
+    atlas: "knowledge/ATLAS.yaml"
+    snapshot: "knowledge/3_domains/claude/LAA_PROJECT_SNAPSHOT.md"
+ 
+  skills_map:
+    core: "skills/"
+    claude: "skills/claude/"
+    frontend: "skills/claude-frontend/"
+    website: "skills/claude-website/"
+    faucet: "skills/faucet/"
+    meta: "skills/claude-meta/"
+    normal: "skills/normal/"
+
+  hot_paths:
+    dna: "knowledge/2_governance/evolution/artifacts/user_preference_dna.md"
+    jit: "knowledge/2_governance/artifacts/JIT_VITALS.md"
+    routing: "route.yaml"
+
+🛠️_discovery_mandate:
+  action: "AI MUST use hot_paths for immediate context initialization."
+  optimization: "BYPASS recursive folder listing; use literal paths from this file."
+
+    - AI MUST maintain 1:1 parity between `route.yaml` (Human) and `route.json` (Machine) after any auto-routing change.
+    - **Deep Mapping**: AI MUST create granular shortcuts for repeat-usage subdirectories (e.g., `src/api/`, `src/store/`) or specific high-frequency skill files to eliminate traversal latency.
+    - **Triggers Sync**: AI MUST auto-append relevant keywords to the `triggers` list whenever a new functional route (vitals, skills, or deep maps) is added.
+  optimization_threshold: "High-utility paths (accessed >2 times) must be hot-linked."
+
+triggers:
+  - .gemini
+  - route
+  - find speed
+  - knowledge
+  - agent knowledge
+  - skills
+  - vitals
+  - url path
+  - auto routing

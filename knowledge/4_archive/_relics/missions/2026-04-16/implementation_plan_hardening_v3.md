@@ -19,7 +19,7 @@ This plan outlines the final steps to transition the **LAA Quiz Platform** from 
 
 Summary: Replace hardcoded fallback values and placeholders in the authentication store with dynamic, relational counts.
 
-#### [MODIFY] [auth.ts](file:///c:/Users/user/Desktop/admin-panel-quizLaa/webApp-LAA-quiz-v2/src/stores/auth.ts)
+#### [MODIFY] [auth.ts](../../../../../scratch/extraction-staging/webapp-live/src/stores/auth.ts)
 - Remove hardcoded `totalModules: 12` and `completedModules: 0`.
 - Implement a `fetchDashboardStats` method that queries:
     1.  `lessons`: To get the total count of available training modules.
@@ -30,7 +30,7 @@ Summary: Replace hardcoded fallback values and placeholders in the authenticatio
 
 Summary: Hardening the relational logic for lesson assignments and question counts.
 
-#### [MODIFY] [lessons.ts](file:///c:/Users/user/Desktop/admin-panel-quizLaa/webApp-LAA-quiz-v2/src/stores/lessons.ts)
+#### [MODIFY] [lessons.ts](../../../../../scratch/extraction-staging/webapp-live/src/stores/lessons.ts)
 - Refine the `getList` logic to ensure that "Completed" status is retrieved from the `question_answers` table.
 - Ensure the `dbToCourse` transform correctly maps the latest score to the Course object for the UI to display.
 
@@ -38,18 +38,18 @@ Summary: Hardening the relational logic for lesson assignments and question coun
 
 Summary: Injecting cinematic design tokens into the layout.
 
-#### [MODIFY] [index.css](file:///c:/Users/user/Desktop/admin-panel-quizLaa/webApp-LAA-quiz-v2/src/index.css)
+#### MODIFY] [index.css `(file removed)`
 - Define Cinematic Utility Classes: `.bg-cinematic-emerald`, `.bg-cinematic-rose`, `.glass-liquid`.
 - Update the global background to **Deep Onyx** (#0a0b10).
 
-#### [MODIFY] [App.vue](file:///c:/Users/user/Desktop/admin-panel-quizLaa/webApp-LAA-quiz-v2/src/App.vue)
+#### [MODIFY] [App.vue](../../../../../scratch/extraction-staging/webapp-bakery/src/App.vue)
 - Apply the glassmorphic transitions and cinematic background tokens to the main container.
 
 ### [Meta & PWA Strategy (No-SSR)]
 
 Summary: Ensuring high-fidelity meta tags and PWA compatibility without server-side rendering.
 
-#### [MODIFY] [index.html](file:///c:/Users/user/Desktop/admin-panel-quizLaa/webApp-LAA-quiz-v2/index.html)
+#### [MODIFY] [index.html](../../../../../scratch/extraction-staging/webapp-bakery/root/index.html)
 - Ensure all static OG/Twitter meta tags represent the brand correctly.
 - Implement a client-side `head` hydration logic in the router to update `document.title` dynamically to bridge the gap until future SSR/SSG decisions.
 

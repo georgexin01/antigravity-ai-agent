@@ -13,19 +13,19 @@ Harden the `webApp-LAA-quiz-v2` authentication architecture to ensure a "Fail-Cl
 
 ### [Component: WebApp Auth Store]
 
-#### [MODIFY] [auth.ts](file:///C:/Users/user/Desktop/admin-panel-quizLaa/webApp-LAA-quiz-v2/src/stores/auth.ts)
+#### [MODIFY] [auth.ts](../../../../../scratch/extraction-staging/webapp-live/src/stores/auth.ts)
 - **Harden Hydration**: In `fetchUser`, if the `public.user` record is missing or `project_id` mismatches, call `logout()` immediately before throwing the error.
 - **Error Mapping**: Map specific Supabase errors to user-friendly but professional "Protocol Errors" (e.g., "Identity Link Severed").
 - **Persistence Audit**: Ensure `localStorage.accessToken` is always in sync with the Pinia state.
 
 ### [Component: WebApp API Layer]
 
-#### [MODIFY] [supabase.ts](file:///C:/Users/user/Desktop/admin-panel-quizLaa/webApp-LAA-quiz-v2/src/api/supabase.ts)
+#### [MODIFY] [supabase.ts](../../../../../scratch/extraction-staging/webapp-live/src/config/supabase.ts)
 - **Schema Selection**: Ensure the `supabase` client is strictly locked to `quizLaa` by default, while `publicClient` handles the identity registry.
 
 ### [Component: Global Guards]
 
-#### [MODIFY] [router/index.ts](file:///C:/Users/user/Desktop/admin-panel-quizLaa/webApp-LAA-quiz-v2/src/router/index.ts)
+#### [MODIFY] [router/index.ts](../../../../../scratch/extraction-staging/webapp-bakery/src/i18n/index.ts)
 - **Hydration Guard**: Ensure that every protected route transition triggers a `fetchUser` check if a session exists but the user profile is missing in the store.
 
 ## Open Questions

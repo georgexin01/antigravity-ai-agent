@@ -18,7 +18,7 @@ The user reports broken images pointing to `localhost:5666` (frontend) instead o
 
 ### Frontend Bridge
 
-#### [MODIFY] [supabase.ts](file:///C:/Users/user/Desktop/admin-panel-quizLaa/apps/web-antd/src/api/supabase.ts)
+#### [MODIFY] [supabase.ts](../../../../../scratch/extraction-staging/webapp-live/src/config/supabase.ts)
 - Add a `getImgUrl(path: string)` helper that prepends the Supabase Storage Public URL based on `.env` settings.
 
 #### [MODIFY] [lesson-detail.vue](file:///C:/Users/user/Desktop/admin-panel-quizLaa/apps/web-antd/src/views/lessons/lesson-detail.vue)

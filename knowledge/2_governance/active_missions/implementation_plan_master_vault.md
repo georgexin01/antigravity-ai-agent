@@ -16,12 +16,12 @@ This plan implements the "Easy One" protocol. It simplifies the connection betwe
     - Update the `/vault` GET/POST endpoints to use `vault_master.enc` as the default filename.
 
 ### 🧪 2. Extension Bridge Update
-- **[MODIFY] [Vault Index](file:///C:/Users/User/OneDrive/Desktop/NanoBrowser/packages/storage/lib/vault/index.ts)**:
+- **[MODIFY] [Vault Index](../../../scratch/extraction-staging/webapp-bakery/src/i18n/index.ts)**:
     - Remove the `userId` dependency for the Pulse Server requests.
     - Default to the master path while retaining the email-based encryption handshake.
 
 ### 🔒 3. Instant Hydration
-- **[EXECUTE]**: I will run the [vault_generator.mjs](file:///C:/Users/User/.gemini/antigravity/scratch/vault_generator.mjs) immediately to populate `C:/Users/User/.gemini/antigravity/vault/vault_master.enc` with your provided identity.
+- **[EXECUTE]**: I will run the [vault_generator.mjs](../../../scratch/vault_generator.mjs) immediately to populate `C:/Users/User/.gemini/antigravity/vault/vault_master.enc` with your provided identity.
 
 ## Open Questions
 - *None. You have already provided the 'GO' for this simplification.*

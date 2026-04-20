@@ -22,7 +22,7 @@ Modify [sovereign_pulse.cjs](file:///C:/Users/User/OneDrive/Desktop/NanoBrowser/
 ### 🧹 2. Workspace Cleanup
 
 #### [DELETE] `.gemini/apikey/` (Workspace)
-#### [MODIFY] [.gitignore](file:///C:/Users/User/OneDrive/Desktop/NanoBrowser/.gitignore)
+#### [MODIFY] [.gitignore](../../../.gitignore)
 - Revert the whitening of `.gemini/` as it is no longer hosted in the project.
 
 ### 🏛️ 3. Vault Genesis

@@ -44,29 +44,29 @@ Skills use hybrid YAML frontmatter + Markdown body for fast keyword routing and 
 ## Skill Index
 
 ### Orchestrator
-- [create-module](create-module/skill.md) — End-to-end CRUD module (SQL → views → tests)
+- [create-module](analyze-schema/skill.md) — End-to-end CRUD module (SQL → views → tests)
 
 ### Phase 1: Analysis
 - [analyze-schema](analyze-schema/skill.md) — Confirm entity fields + relationships
 
 ### Phase 2: Scaffold
-- [generate-store](generate-store/skill.md) — Types + Pinia + Supabase CRUD
-- [generate-supabase-schema](generate-supabase-schema/skill.md) — SQL migrations + RLS
-- [generate-views](generate-views/skill.md) — Vue list/detail/form/drawer
-- [generate-route](generate-route/skill.md) — Vue Router module
-- [generate-i18n](generate-i18n/skill.md) — zh-CN + en-US translations
-- [image-upload-spec](image-upload-spec/skill.md) — Image upload + crop modal
+- [generate-store](analyze-schema/skill.md) — Types + Pinia + Supabase CRUD
+- [generate-supabase-schema](analyze-schema/skill.md) — SQL migrations + RLS
+- [generate-views](analyze-schema/skill.md) — Vue list/detail/form/drawer
+- [generate-route](analyze-schema/skill.md) — Vue Router module
+- [generate-i18n](analyze-schema/skill.md) — zh-CN + en-US translations
+- [image-upload-spec](analyze-schema/skill.md) — Image upload + crop modal
 
 ### Phase 3: Testing
-- [generate-e2e](generate-e2e/skill.md) — E2E test scenarios
-- [workflow-test](workflow-test/skill.md) — Playwright + workflow config
+- [generate-e2e](analyze-schema/skill.md) — E2E test scenarios
+- [workflow-test](analyze-schema/skill.md) — Playwright + workflow config
 
 ### Reference (always-on context)
-- [staging](staging/skill.md) — Mock / Supabase / default mode switching
-- [ui-standardization](ui-standardization/skill.md) — Divider + Card layout conventions
-- [supabase-auth-architecture](supabase-auth-architecture/skill.md) — Multi-project auth schemas
+- [staging](analyze-schema/skill.md) — Mock / Supabase / default mode switching
+- [ui-standardization](analyze-schema/skill.md) — Divider + Card layout conventions
+- [supabase-auth-architecture](analyze-schema/skill.md) — Multi-project auth schemas
 - [supabase-rls-rbac-design](supabase-rls-rbac-design.md) — RLS + RBAC + JWT hooks
-- [mcp-supabase-postgres-connection](mcp-supabase-postgres-connection.md) — MCP PostgreSQL setup
+- [mcp-supabase-postgres-connection](../../knowledge/3_domains/claude/mcp-supabase-postgres-connection.md) — MCP PostgreSQL setup
 
 ## Router Contract
 

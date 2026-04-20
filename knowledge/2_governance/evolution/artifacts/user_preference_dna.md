@@ -44,6 +44,9 @@ This file stores persistent memories and "fingerprints" of user preferences to e
     - High-fidelity premium aesthetics mandatory.
 
 ## 🛠️ 3. ACTIVE PROJECTS & WORKSPACES
-- **FP-007 (Hardened-LAA)**: Admin/WebApp + quizLaa + SWF-v4.6 + Fail-Closed RLS.
+- **FP-007 (Hardened-LAA)**: Admin/WebApp + quizLaa + SWF-v6.1.
+    - `webApp` -> `webApp-LAA-quiz-v2` (Port: 3000)
+    - `admin` -> `apps/web-antd` (Port: 5666)
+    - `agent-website` -> `website-LAA-agent` (Port: 8000)
 - **FP-CORE**: Antigravity System Kernel & Intelligence Evolution.
 - **Sovereign-Workspace**: `C:\Users\user\Desktop\workspace` (Gateway Anchor).

@@ -1,357 +1,234 @@
 ---
-name: webapp-api-connection
-description: "12-step flow to connect a Vue 3 webapp to Docker-local Supabase. Current V2 architecture (2026-04-17) — src/config centralized, env wrapper, dual-client, Options-API Bakery, intersection filter, AnswerSnapshot persistence, fail-closed guards, sequential await. Grounded in webApp-LAA-quiz-v2 live code."
-triggers: ["webapp api connection", "vue supabase connect", "new webapp", "bakery pattern", "webapp 12 step", "connect webapp to supabase"]
-phase: 2-scaffold
-requires: [webapp-genesis]
-unlocks: []
-inputs: [project_id, target_schema, supabase_url, anon_key, business_entity_list]
-output_format: step_checklist_result
-model_hint: gemini-3-flash
+name: frontend-03-api-connectivity
+description: "Step 03 — src/api/: OPTIONAL platform-aware client layer (axios + Capacitor native bridge). Use when you need non-Supabase HTTP or native mobile apps. Not needed for simple Supabase-only webapps."
+triggers: ["api connectivity", "src/api", "apiClient", "capacitorClient", "capacitor http", "native platform detect", "axios interceptor"]
+phase: 1-foundation
+requires: [frontend-02-config-hardening]
+unlocks: [frontend-06-industrial-stores]
+output_format: typescript
 version: 2.0
 status: authoritative
-date_created: "2026-04-17"
-source: "Reverse-engineered from webApp-LAA-quiz-v2 current state (2026-04-17)"
+last_updated: "2026-04-20"
 ---
 
-# webapp-api-connection V2 — Vue 3 + Supabase (Bakery Pattern, @/config)
+# Step 03 — API Connectivity (the `src/api/` pillar — conditional)
 
-## When to Use
+## 🎯 When to Use
 
-Building a new Vue 3 webapp that talks to a local Docker Supabase. Follow this for student/quiz apps, agent dashboards, any Vben-WebApp pair.
+**Use this step when you need ANY of:**
+- Non-Supabase HTTP endpoints (custom Laravel/PHP backend, 3rd-party APIs)
+- Native mobile app with FormData upload (Capacitor's WebView has CORS + Content-Type quirks for multipart)
+- Request/response interceptors (auth header injection, error envelope transformation)
+- Mixed backends (Supabase for data + legacy REST for admin ops)
 
-**MASTER RULE #1 applies** — all business table FKs stay inside `{project_schema}` (e.g. `quizLaa`). Never write to `public.*` from stores. Use `publicClient` only for RBAC-bridge reads (`public.user.project_id` verification).
+**SKIP this step when:**
+- The webApp only talks to Supabase (data goes through `@/config/supabase.ts` directly, per Step 02).
+- This is the case for `webApp-LAA-quiz-v2` — it has no `src/api/` folder and calls `supabase.from(...)` from stores.
 
-## STEP 1 — Env Keys (`.env`)
+If you skip, create an empty `src/api/` placeholder so later steps can reference it without breaking.
 
-```
-VITE_APP_TITLE=LAA Training Quiz
-VITE_SUPABASE_URL=http://localhost:54321
-VITE_SUPABASE_ANON_KEY=<local-dev-anon-jwt>
-VITE_SUPABASE_SCHEMA=quizLaa
-VITE_PROJECT_ID=<uuid-from-public.project>
-```
+## ⚠️ Dependencies
+- **02-config-hardening** — `env` barrel for base URL config.
 
-**Gitignore:** `.env`, `.env.*.local`.
+## 📋 Procedure
 
-## STEP 2 — Centralized `src/config/` (NEW CONVENTION)
+1. **Decide the scope** (see "When to Use" above).
+2. **Create `src/api/apiClient.ts`** — axios instance + Capacitor FormData interceptor (Code Vault §1).
+3. **Create `src/api/capacitorClient.ts`** — CapacitorHttp wrapper for native-only JSON calls (Code Vault §2).
+4. **Move the base URL** to `env.API_BASE_URL` (add to `env.ts` in Step 02 if not present). Never hardcode.
+5. **Create `src/api/index.ts`** (barrel) — re-export `apiClient` default + `capacitorClient` named + `getApiBaseUrl()` helper.
+6. **Consume from stores** — if a store needs non-Supabase data: `import apiClient from '@/api'`.
 
-Do NOT scatter `import.meta.env.VITE_*` across stores. Create ONE config folder:
+## 📦 Code Vault
 
-```
-src/config/
-├── env.ts         # typed wrapper that VALIDATES required keys at boot
-├── supabase.ts    # both clients (business + public)
-└── index.ts       # barrel — import everything via `@/config`
-```
-
-`src/config/env.ts`:
+### §1. `src/api/apiClient.ts` — axios + native FormData handling
 ```ts
-interface AppEnv {
-  SUPABASE_URL: string;
-  SUPABASE_ANON_KEY: string;
-  SUPABASE_SCHEMA: string;
-  PROJECT_ID: string;
-  APP_TITLE?: string;
-}
+import { Capacitor } from '@capacitor/core';
+import axios from 'axios';
 
-function readEnv(key: string, required = true): string {
-  const val = import.meta.env[`VITE_${key}`] as string | undefined;
-  if (required && (!val || val.trim() === '')) {
-    throw new Error(`[env] Missing required VITE_${key} — check .env.*`);
-  }
-  return val ?? '';
-}
+import { env } from '@/config';
 
-export const env: AppEnv = {
-  SUPABASE_URL:      readEnv('SUPABASE_URL'),
-  SUPABASE_ANON_KEY: readEnv('SUPABASE_ANON_KEY'),
-  SUPABASE_SCHEMA:   readEnv('SUPABASE_SCHEMA'),
-  PROJECT_ID:        readEnv('PROJECT_ID'),
-  APP_TITLE:         readEnv('APP_TITLE', false) || 'App',
+const apiClient = axios.create({
+  baseURL: env.API_BASE_URL,       // add API_BASE_URL to env.ts
+});
+
+// ─── Request interceptor ─────────────────────────────────
+
+apiClient.interceptors.request.use(
+  async (config) => {
+    if (Capacitor.isNativePlatform()) {
+      // Native: Capacitor WebView has quirks with multipart/form-data.
+      // Re-route FormData through native fetch so the boundary is set correctly.
+      if (config.data instanceof FormData) {
+        config.headers['Content-Type'] = 'multipart/form-data; charset=utf-8;';
+
+        const formData = new FormData();
+        for (const [key, value] of config.data.entries()) {
+          formData.append(key, value);
+        }
+        const resp = await fetch(config.baseURL + config.url!, {
+          method: 'post',
+          headers: {
+            Authorization: config.headers['Authorization']?.toString() ?? '',
+          },
+          body: formData,
+        });
+        const json = await resp.json();
+
+        config.adapter = (request) =>
+          new Promise((resolve, reject) => {
+            if (json.success) {
+              resolve({
+                data: json,
+                status: resp.status,
+                statusText: resp.statusText,
+                headers: config.headers,
+                request,
+                config,
+              });
+            } else {
+              reject({
+                response: { data: json },
+                status: resp.status,
+                statusText: resp.statusText,
+                headers: config.headers,
+                request,
+                config,
+              });
+            }
+          });
+      }
+    } else {
+      // Web: axios handles both FormData and JSON natively
+      config.headers['Content-Type'] = config.data instanceof FormData
+        ? 'multipart/form-data; charset=utf-8;'
+        : 'application/json';
+    }
+    return config;
+  },
+  (error) => Promise.reject(error),
+);
+
+// ─── Response interceptor ────────────────────────────────
+
+apiClient.interceptors.response.use(
+  (response) => response,
+  (error) => {
+    console.error('[API]', error?.response?.data ?? error);
+    return Promise.reject(error?.response?.data?.error ?? error);
+  },
+);
+
+// ─── Helper for web-shareable links ──────────────────────
+
+import { isHashRouting } from '@/router';
+
+export const getApiBaseUrl = (path: string = ''): string => {
+  const baseURL = apiClient.defaults.baseURL || '';
+  const base = baseURL.replace(/\/api\/?$/, '');
+  const hashPrefix = isHashRouting() ? '/#' : '';
+  return `${base}${hashPrefix}${path}`;
 };
+
+export default apiClient;
 ```
 
-`src/config/supabase.ts`:
+### §2. `src/api/capacitorClient.ts` — CapacitorHttp wrapper
 ```ts
-import { createClient } from '@supabase/supabase-js';
-import { env } from './env';
+import { CapacitorHttp } from '@capacitor/core';
 
-// Business schema — default for all data stores
-export const supabase = createClient(env.SUPABASE_URL, env.SUPABASE_ANON_KEY, {
-  auth: { autoRefreshToken: true, persistSession: true },
-  db:   { schema: env.SUPABASE_SCHEMA },
-});
+import { env } from '@/config';
 
-// Public schema — auth/RBAC bridge lookups ONLY
-export const publicClient = createClient(env.SUPABASE_URL, env.SUPABASE_ANON_KEY, {
-  db: { schema: 'public' },
-});
-```
-
-`src/config/index.ts`:
-```ts
-export { env } from './env';
-export { supabase, publicClient } from './supabase';
-```
-
-All stores then do `import { supabase, publicClient, env } from '@/config'`. **Never** `import from '@/api/supabase'` — that pattern is deprecated.
-
-## STEP 3 — Auth Store (Options API + Project Binding)
-
-File: `src/stores/auth.ts`. Options API only (never setup/composition for stores — cross-store ref unwrapping fails).
-
-```ts
-export const useAuthStore = defineStore('auth', {
-  state: () => ({ user: null as UserProfile | null }),
-  actions: {
-    async login({ email, password }) {
-      const { data, error } = await supabase.auth.signInWithPassword({ email, password });
-      if (error) throw error;
-
-      // Project context switch — MANDATORY when JWT project_id != env.PROJECT_ID
-      const jwtProjectId = getJwtClaim(data.session.access_token, 'project_id');
-      if (jwtProjectId !== env.PROJECT_ID) {
-        await supabase.auth.updateUser({ data: { active_project_id: env.PROJECT_ID } });
-        await supabase.auth.refreshSession();   // ← MUST refresh, else JWT stays stale
-      }
-
-      await this.fetchUser(data.user.id, email);
-      localStorage.setItem('accessToken', data.session.access_token);
-      router.push('/courses');
-    },
-
-    async fetchUser(authId?, email?) {
-      // 1. Verify project binding via publicClient (NOT supabase client)
-      const { data: pub } = await publicClient
-        .from('user').select('project_id')
-        .eq('auth_id', authId).eq('is_delete', false).single();
-      if (pub?.project_id !== env.PROJECT_ID) throw new Error('Project binding mismatch');
-
-      // 2. Business profile via supabase client (quizLaa schema)
-      const { data: biz } = await supabase
-        .from('users').select('*')
-        .eq('email', email).eq('isDelete', false).single();
-      this.user = mapToProfile(biz);
-    },
-
-    async logout() {
-      await supabase.auth.signOut();
-      localStorage.removeItem('accessToken');
-      this.user = null;
-      resetAllStores();                          // ← MUST reset sibling stores (see Step 11)
-      router.push('/login');
-    },
-
-    $reset() { this.user = null; },
+/**
+ * Use when you need a pure-native HTTP path (bypasses axios entirely).
+ * Useful for: iOS/Android behind picky enterprise proxies, endpoints
+ * that require mobile-plugin cookies, or apps with Firebase bridge.
+ */
+export const capacitorClient = {
+  async get(url: string, options: any = {}) {
+    return httpRequest('GET', url, options);
   },
-});
-```
-
-**Rules:**
-- DO refresh session after `updateUser` — stale JWT breaks all subsequent RLS
-- DO use `publicClient` for `public.user` lookups, `supabase` for business tables
-- DO NOT use `import.meta.env.VITE_*` here — use `env.PROJECT_ID` (MASTER RULE)
-
-## STEP 4 — Options-API Data Stores
-
-```ts
-export const use<Entity>Store = defineStore('<entity>', {
-  state: () => ({ items: [] as <Entity>[], current: null as <Entity> | null }),
-  actions: {
-    async getList(userId?: string): Promise<<Entity>[]> {
-      if (!userId) { this.items = []; return []; }    // FAIL-CLOSED
-      try {
-        const { data, error } = await supabase
-          .from('<table>')
-          .select('*')
-          .eq('userId', userId)
-          .eq('isDelete', false);
-        if (error) throw error;
-        this.items = (data || []).map(dbToApp);
-        return this.items;
-      } catch (err) {
-        console.error('[<Entity>] getList failed:', err);
-        this.items = [];
-        return [];
-      }
-    },
-    $reset() { this.items = []; this.current = null; },
+  async post(url: string, data: any, options: any = {}) {
+    return httpRequest('POST', url, { ...options, data });
   },
-});
-```
+  async put(url: string, data: any, options: any = {}) {
+    return httpRequest('PUT', url, { ...options, data });
+  },
+  async delete(url: string, options: any = {}) {
+    return httpRequest('DELETE', url, options);
+  },
+};
 
-**Rules:**
-- DO: Options API (not setup)
-- DO: `.eq('isDelete', false)` on every fetch
-- DO: try/catch → empty state, never re-throw from list queries
-- DO: `$reset()` on every store
-- DO NOT call `supabase` from views — stores only
-
-## STEP 5 — Manual 2-Query Joins (NOT PostgREST Embedded)
-
-Local Docker Supabase has an unreliable FK schema cache. Embedded selects `.select('*, parent(name)')` → PGRST200. Always use manual two-query joins:
-
-```ts
-const { data: children } = await supabase.from('child')
-  .select('id, parentId, name').eq('isDelete', false);
-
-const parentIds = [...new Set(children.map(c => c.parentId))];
-const { data: parents } = await supabase.from('parent')
-  .select('id, title').in('id', parentIds);
-
-const parentMap = new Map(parents.map(p => [p.id, p.title]));
-return children.map(c => ({ ...c, parentTitle: parentMap.get(c.parentId) ?? '' }));
-```
-
-## STEP 6 — Intersection Filter (Zero-Child + Assignment)
-
-A parent (e.g. `lessons`) should only show if:
-1. It has ≥1 child (e.g. questions exist)
-2. It's assigned to the current user (via junction like `user_lessons`)
-
-```ts
-// A — parents with ≥1 child
-const { data: cr } = await supabase.from('questions')
-  .select('lessonId').eq('isDelete', false);
-const withChildren = new Set(cr.map(r => r.lessonId));
-
-// B — parents assigned to this user
-const { data: ar } = await supabase.from('user_lessons')
-  .select('lessonId').eq('userId', userId).eq('isDelete', false);
-const assigned = new Set(ar.map(r => r.lessonId));
-
-// Intersect → only show lessons that pass both gates
-const allowedIds = [...assigned].filter(id => withChildren.has(id));
-if (!allowedIds.length) { this.items = []; return []; }
-
-const { data } = await supabase.from('lessons')
-  .select('*').in('id', allowedIds).eq('isDelete', false);
-```
-
-## STEP 7 — Snapshot Persistence (Mutable Semantics)
-
-For quiz attempts, orders, anything where source rows may mutate: **store a JSONB snapshot, don't rehydrate from live tables**.
-
-```ts
-interface AnswerSnapshot {
-  questionId: string;
-  options: string[];    // post-shuffle order the user saw
-  correctKey: string;   // 'A' | 'B' | 'C' | 'D'
-  selectedKey: string;
-}
-
-await this.create({
-  userId, lessonId,
-  answers: attempt.snapshots,    // JSONB column holds AnswerSnapshot[]
-  score: attempt.score,
-  submittedAt: new Date().toISOString(),
-  isDelete: false,
-});
-```
-
-Review engine hydrates snapshots directly — no live DB JOIN needed.
-
-## STEP 8 — Fail-Closed Detail Guards
-
-Every detail route MUST verify assignment before returning the entity:
-
-```ts
-async getDetail(id: string, userId?: string): Promise<<Entity> | null> {
-  if (!userId) return null;
-  const { data: assign } = await supabase.from('user_lessons')
-    .select('id').eq('userId', userId).eq('lessonId', id).eq('isDelete', false).limit(1);
-  if (!assign?.length) return null;
-  // ... fetch + return entity
+async function httpRequest(method: string, url: string, options: any) {
+  try {
+    const headers = {
+      'Content-Type': 'application/json',
+      ...options.headers,
+    };
+    const response = await CapacitorHttp.request({
+      method,
+      url: env.API_BASE_URL + url,
+      headers,
+      data: options.data || null,
+      params: options.params || {},
+    });
+    return response.data;
+  } catch (error) {
+    console.error('[CapacitorHttp]', error);
+    throw error;
+  }
 }
 ```
 
-View: `if (!item) router.replace('/courses')`. Direct-URL poke → redirect.
-
-## STEP 9 — DB Type vs App Type (Transform Bridge)
-
-Two layers, one transform function per store:
-
-- `src/types/<entity>.ts` exports `<DBEntity>` (mirrors DB 1:1) + `<Entity>` (UI-friendly)
-- `src/stores/<entity>.ts` has `function dbToApp(row: DBEntity): Entity { ... }`
-- Views ONLY consume `<Entity>` types. Never `<DBEntity>` outside stores.
-
-Barrel: `src/types/index.ts` re-exports all types. Barrel: `src/stores/index.ts` re-exports all stores.
-
-## STEP 10 — Sequential Await in Views
-
-**NEVER** `Promise.all([authStore.fetchUser(), store.getList()])` — race.
-
+### §3. `src/api/index.ts` — barrel
 ```ts
-await authStore.fetchUser();
-if (!authStore.user?.id) { store.items = []; return; }
-await store.getList(authStore.user.id);
+export { default as apiClient, getApiBaseUrl } from './apiClient';
+export { capacitorClient } from './capacitorClient';
 ```
 
-Pattern for every view's `onMounted`. Use `Promise.all` only for INDEPENDENT queries (already-resolved deps).
-
-## STEP 11 — Logout Hygiene (Global Reset)
-
-`src/utils/pinia-reset.ts`:
+### §4. Add to `src/config/env.ts` (if using this step)
 ```ts
-import { getActivePinia } from 'pinia';
-export function resetAllStores() {
-  const pinia: any = getActivePinia();
-  pinia?._s?.forEach((store: any) => store.$reset?.());
-}
+// Inside AppEnv interface:
+API_BASE_URL: string;
+
+// Inside readEnv calls:
+API_BASE_URL: readEnv('API_BASE_URL'),
 ```
 
-Call `resetAllStores()` inside `authStore.logout()`. Without it, stale user data leaks to next login (known bug in webApp-LAA-quiz-v2 as of 2026-04-17).
+## 🛡️ Guardrails
 
-Every store MUST implement `$reset()` — Options API doesn't provide it automatically for all cases.
+- **Rule #1 (schema isolation)** — `src/api/` is for NON-Supabase work. All Supabase reads stay in stores (Step 06) via `@/config`. Do not wrap `supabase` calls through `apiClient`.
+- **Base URL from env** — never hardcode `https://mybackend.com/api`. Read from `env.API_BASE_URL`. The bakery template had hardcoded URLs; that's a tech-debt mistake.
+- **Native-only FormData path** — the multipart interceptor exists because Capacitor's WebView injects boundaries incorrectly. Do not remove it unless you've tested all file uploads on both iOS and Android.
+- **Don't swallow errors** — the response interceptor re-rejects with `response.data.error`. If your backend uses a different error envelope, adjust there, not at callsites.
+- **One adapter per interceptor** — don't chain `config.adapter = ...` more than once. The current implementation runs once in the native FormData branch; keep it that way.
+- **`capacitorClient` is JSON-only** — no multipart. For file uploads on native, use `apiClient` (it routes through native fetch under the hood).
 
-## STEP 12 — Package scripts + Dev
+## ✅ Verify
 
-`package.json`:
-```json
-"scripts": {
-  "dev": "vite",
-  "build": "vue-tsc --noEmit && vite build",
-  "type-check": "vue-tsc --noEmit"
-}
+```bash
+# 1. Type-check
+pnpm type-check                                 # expect: 0
+
+# 2. Sanity test — in a store:
+#    import apiClient from '@/api';
+#    const { data } = await apiClient.get('/health');
+#    console.log(data);                           # expect: backend JSON
+
+# 3. Native test (if Capacitor present):
+#    Build + deploy to device → trigger a FormData upload → verify backend
+#    receives correct multipart with boundary. Axios-only path will FAIL on
+#    Capacitor; native fetch path must handle it.
 ```
 
-`pnpm dev` → http://localhost:3000. Login with seeded account (`agent1@quizlaa.com` / `123456`).
+## ♻️ Rollback
+```bash
+rm -rf src/api/
+# Remove API_BASE_URL from env.ts + .env if no longer needed.
+```
 
-## Guardrails
+Stores that consumed `apiClient` will break loudly at import — rewrite them to use Supabase directly (via `@/config`) or a different transport.
 
-- DO NOT import from `@/api/supabase` — that path is deprecated. Use `@/config`
-- DO NOT skip `refreshSession()` after `updateUser`
-- DO NOT use PostgREST embedded selects on local Docker Supabase
-- DO NOT use `Promise.all` for auth-then-data sequencing
-- DO NOT skip fail-closed guards — direct-URL poke bypasses list filters
-- DO NOT forget `$reset()` on every store + call `resetAllStores()` on logout
-- DO NOT hardcode table names in snake_case if schema uses camelCase (e.g. `questionAnswers` NOT `question_answers`)
-- STOP if `env.PROJECT_ID` is empty — all auth flows fail silently otherwise
-
-## Verify
-
-- [ ] `pnpm build` passes with zero TS errors
-- [ ] Login as seeded user → JWT has correct `project_id` claim + `user_role` claim
-- [ ] Courses list shows only assigned + non-empty lessons
-- [ ] Direct URL to unassigned lesson detail → redirects to /courses
-- [ ] Complete quiz → snapshot persists → reload /history → review renders with frozen options
-- [ ] Logout → re-login as different user → zero stale data visible
-
-## Rollback
-
-- Env misconfig → restore `.env` from backup, hard-refresh browser
-- Auth store break → `git restore src/stores/auth.ts src/config/`
-- Data store break → empty state falls back gracefully (no crash)
-
-## Known Gotchas (2026-04-17 state)
-
-1. **Table name casing varies by schema**: `quizLaa.questionAnswers` (camel), `quizLaa.user_lessons` (snake). Respect the actual schema — don't normalize.
-2. **`public.user` column is `is_delete`** (snake), `quizLaa.users` is `isDelete` (camel). Use the right one per client.
-3. **Router guard checks token PRESENCE only** — not JWT expiry. Real auth validation happens when a store query returns 401.
-4. **`logout()` in webApp-LAA-quiz-v2 does NOT call `resetAllStores()`** — known bug. Fix in new projects from day 1.
-5. **`authStore.user.rawId` assignment exists but `UserProfile` type doesn't declare it** — pre-existing TS issue.
-6. **`fetchHistory()` uses `questionsStore.getAll()` for side effect only** — return value discarded; questionPool accessed directly.
-
----
-**webapp-api-connection V2.0 — 2026-04-17 · Current state snapshot**
+## → Next Step
+**[04-auth-architecture](../04-auth-architecture/skill.md)** (if not already done) — even apps that skip this step still need auth.
+Then **[06-industrial-stores](../06-industrial-stores/skill.md)** for data logic.

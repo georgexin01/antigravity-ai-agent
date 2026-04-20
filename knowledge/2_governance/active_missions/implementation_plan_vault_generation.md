@@ -14,7 +14,7 @@ This plan enables the AI to surgically generate your encrypted `vault_{hash}.enc
 ### 🛠️ 1. Cryptographic Engine Replication
 - **[NEW] `C:/Users/User/.gemini/antigravity/scratch/vault_generator.mjs`**:
     - Create a Node.js script using `crypto.webcrypto` to replicate the PBKDF2 (100k iterations) and AES-GCM (256-bit) logic from the extension.
-    - This script will take the [master_registry_template.json](file:///C:/Users/User/.gemini/antigravity/vault/master_registry_template.json) as input.
+    - This script will take the master_registry_template.json `(file removed)` as input.
 
 ### 🛡️ 2. Vault Generation
 - **Execution**: Run the generator script to produce the encrypted Base64 blob.

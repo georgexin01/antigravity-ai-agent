@@ -19,10 +19,10 @@ The system now supports a multi-tier JSON schema:
 
 ## ⛲ The Master Template
 I have prepared the following surgical template for your input:
-**[master_registry_template.json](file:///C:/Users/User/.gemini/antigravity/vault/master_registry_template.json)**
+**master_registry_template.json `(file removed)`**
 
 ### 🚀 Instructions for Input:
-1. Open the [master_registry_template.json](file:///C:/Users/User/.gemini/antigravity/vault/master_registry_template.json).
+1. Open the master_registry_template.json `(file removed)`.
 2. Input your secrets into the `"apiKey": ""` fields.
 3. Save the file.
 4. **Encryption Pulse**: The next time you change any API key in the Nanobrowser UI, it will automatically pull your registry, merge the updates, and push a single encrypted blob to your private vault.

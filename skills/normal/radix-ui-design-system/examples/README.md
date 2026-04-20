@@ -77,6 +77,6 @@ These examples use CSS classes. You can:
 
 ## Learn More
 
-- [Main SKILL.yaml](../SKILL.yaml) - Complete guide
+- Main SKILL.yaml `(file removed)` - Complete guide
 - [Component Template](../templates/component-template.tsx) - Boilerplate
 - [Radix UI Docs](https://www.radix-ui.com/primitives)
