@@ -39,3 +39,9 @@ html_artifacts/
 brain/tempmediaStorage/
 *.zip
 *.log
+
+# Ignore secrets / local config
+mcp_config.json
+*.env
+.env
+.env.*
