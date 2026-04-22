@@ -42,6 +42,11 @@ This file stores persistent memories and "fingerprints" of user preferences to e
     - NO Pure Black (#000000).
     - Liquid Glass FX preferred.
     - High-fidelity premium aesthetics mandatory.
+- **Sovereign Theme Protocol [V9.2]**:
+    - **Step 1**: Identify base `--theme-color`.
+    - **Step 2**: Generate Tonal Scale (100-900) via 5%, 10%, 15%, 20% shifts.
+    - **Step 3**: Assign variables: `--theme-100` (lightest) to `--theme-900` (darkest).
+    - **Step 4**: Application: Use `--theme-50` for surfaces, `--theme-200/800` for borders, `--theme-500` base, `--theme-600` hover.
 
 ## 🛠️ 3. ACTIVE PROJECTS & WORKSPACES
 - **FP-007 (Hardened-LAA)**: Admin/WebApp + quizLaa + SWF-v6.1.

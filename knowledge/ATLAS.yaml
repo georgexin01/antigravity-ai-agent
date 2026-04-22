@@ -1,9 +1,9 @@
-# THE SOVEREIGN PYRAMID ATLAS — KNOWLEDGE ROUTING HUB (V16.0)
+# THE SOVEREIGN PYRAMID ATLAS — KNOWLEDGE ROUTING HUB (V16.3)
 # Format: Pure YAML (Apex Standard)
 
-atlas_version: 16.1
+atlas_version: 16.3
 status: authoritative
-last_updated: "2026-04-19"
+last_updated: "2026-04-21"
 sync_status: MACRO_V3_ALIGNED
 
 topology:
@@ -12,90 +12,83 @@ topology:
     nodes:
       - name: GROUND_KERNEL
         file: "GROUND_KERNEL.md"
-        desc: "Foundational ground-truth and startup logic."
+        desc: "Foundational ground-truth and startup logic (APEX Principles)."
       - name: ATLAS
         file: "ATLAS.yaml"
         desc: "Current routing node."
-      - name: HYBRID_PROTOCOL
-        file: "HYBRID_FORMAT_PROTOCOL.md"
-        desc: "Canonical formatting rules for AI knowledge."
+      - name: MODE_ACTIVATION
+        file: "MODE_ACTIVATION_PROTOCOL.md"
+        desc: "JIT detection logic for domain-specific mode switching."
       - name: GENESIS_BOOTSTRAP
         file: "GENESIS_BOOTSTRAP.yaml"
-        desc: "Autonomous discovery bridge reconstruction template."
-      - name: ROUTE_MAR
-        file: "route.json"
-        desc: "Minified Atomic Router (MAR) for 10/10 token velocity."
 
   tier_1_core:
     path: "1_core/"
     nodes:
       - name: dna_core
         file: "dna_core.md"
+        triggers: ["core", "dna", "standard", "claude", "faucet", "normal", "shared", "openclaw"]
+        desc: "Universal technical foundations and project standards."
       - name: dna_design
         file: "dna_design.md"
+        triggers: ["design", "ui", "ux", "aesthetic", "claude", "normal", "shared"]
+        desc: "High-density UI and UX design architecture."
       - name: dna_logic
         file: "dna_logic.md"
+        triggers: ["logic", "habit", "behavior", "claude", "faucet", "normal", "shared", "openclaw"]
+        desc: "Baseline behavioral habits and logic patterns."
       - name: dna_arch
         file: "dna_arch.md"
+        triggers: ["architect", "structure", "folder", "claude", "faucet", "shared"]
+        desc: "Sovereign directory structure and file lifecycle."
       - name: dna_faucet
         file: "dna_faucet.md"
-      - name: dna_psych
-        file: "DESIGN_PSYCHOLOGY_2026.yaml"
+        triggers: ["faucet", "harvest", "automation", "solana", "evm", "claimer"]
 
   tier_2_governance:
     path: "2_governance/"
     nodes:
       - name: AOE_PROTOCOL
         file: "AOE_PROTOCOL.md"
-      - name: APEX_HUD_LIBRARY
-        file: "APEX_HUD_LIBRARY.md"
-      - name: experience_vault
-        file: "experience_vault.md"
-      - name: singularity_recall
-        file: "singularity_recall.md"
+        triggers: ["security", "tier", "handshake", "aoe", "shared", "claude", "faucet", "openclaw"]
       - name: sovereign_framework_mastery
         file: "sovereign_framework_mastery.md"
-      - name: SOVEREIGN_COMPARISON_PROTOCOL
-        file: "SOVEREIGN_COMPARISON_PROTOCOL.md"
+        triggers: ["claude", "swf", "sovereign", "industrial", "relationship drawer", "tray", "layers"]
 
   tier_3_domains:
     path: "3_domains/"
     nodes:
       - name: claude
         dir: "claude/"
+        triggers: ["claude", "swf", "sovereign", "industrialize", "layericon", "tray", "relationship", "drawer"]
+        desc: "Industrial SWF patterns and 13-step protocols."
       - name: faucet
         dir: "faucet/"
+        triggers: ["harvest", "claimer", "multi-platform", "solana", "evm"]
+        desc: "Archived harvesting logic and platform adapters."
       - name: normal
         dir: "normal/"
-
-  tier_system_daily:
-    path: "antigravity/"
-    nodes:
-      - name: vault
-        path: "vault/"
-        desc: "Master registries and encrypted credentials."
-      - name: governance
-        path: "governance/"
-        desc: "Observation hub, schemas, and workspace audits."
-      - name: scratch
-        path: "scratch/"
-        desc: "JIT utility scripts and vault verification tools."
-      - name: brain
-        path: "brain/"
-        desc: "Active task logs and implementation plans."
+        triggers: ["normal", "default", "standard", "habit"]
+        desc: "Generic project habits and baseline rules."
+      - name: shared
+        dir: "shared/"
+        triggers: ["shared", "common", "universal", "claude", "faucet", "normal", "openclaw"]
+        desc: "Global patterns shared across all Sovereign domains."
 
   tier_4_archive:
     path: "4_archive/"
     nodes:
-      - name: relics
-        dir: "_relics/"
       - name: openclaw
         dir: "domains/openclaw/"
+        triggers: ["openclaw", "claw", "legacy", "history"]
 
 triggers:
   - atlas
   - index
   - pyramid
   - routing
-  - map
-  - topology
+  - mode
+  - activation
+  - intersection
+  - resonance
+  - shared
