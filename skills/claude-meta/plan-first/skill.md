@@ -1,17 +1,17 @@
 ---
 name: plan-first
-description: "Sovereign Apex Orchestrator — Liquid-intent detection and surgical goal-mapping. Orchestrates all logic domains (Claude, Website, Frontend, Mobile, Logic) via Sovereign Logic Cascade. (V15.2)"
-triggers: ["plan first", "build module", "new module", "start feature", "create crud", "ready to build", "full module", "new table", "new website", "frontend design", "webapp genesis"]
+description: "Sovereign Apex Orchestrator — Liquid-intent detection and surgical goal-mapping. Orchestrates all active logic domains (claude, claude-frontend, claude-website, normal) via Sovereign Logic Cascade. Phase 1 of the claude-meta loop. (V15.3)"
+triggers: ["plan first", "build module", "new module", "start feature", "create crud", "ready to build", "full module", "new table", "new website", "frontend design", "webapp genesis", "before code", "plan stop approve"]
 phase: 0-orchestrator
 requires: []
 unlocks: [analyze-schema, create-module, generate-supabase-schema, generate-store, generate-views, generate-route, generate-i18n, workflow-test, generate-e2e]
 inputs: [user_intent, target_entity, project_context]
 output_format: structured_plan_document
 model_hint: gemini-3-pro
-version: 15.2
+version: 15.3
 status: authoritative
 date_created: "2026-04-16"
-date_updated: "2026-04-18"
+date_updated: "2026-04-23"
 ---
 
 # plan-first — Sovereign Apex Orchestrator (V15.2)
@@ -29,12 +29,25 @@ Inject or verify `.geminiignore` at project root. Ensure current session is isol
 
 Instead of linear matching, use recursive path verification:
 1. **Identify Target**: Verify exists via `Test-Path` or `GLOBAL_ATLAS.yaml`.
-2. **Domain Mapping (APEX UPDATED)**: 
-   - *Logic/Backend/Auth*: Route to `skills/claude/`
-   - *Frontend/Design/Website*: Route to `skills/normal/`
-   - *Web-Automation*: Route to `skills/faucet/` or `skills/openclaw/`
-3. **Signature Scan**: Match user tokens against `skills/claude/INDEX.md` or specialist nodes.
+2. **Domain Mapping (APEX V15.3)**:
+   - *Logic / Backend / Auth / Supabase schemas*: Route to `skills/claude/`
+   - *Vue 3 + Vben admin panels (13-step)*: Route to `skills/claude-frontend/`
+   - *PHP + Supabase REST websites (13-step)*: Route to `skills/claude-website/`
+   - *General design / research / testing*: Route to `skills/normal/`
+   - *Web-Automation*: `skills/faucet/` **[deprecated — archived, user-confirmation required]**; `skills/openclaw/` **[archived]**
+3. **Signature Scan**: Match user tokens against [ATLAS.yaml](../../../knowledge/ATLAS.yaml) trigger keywords (Principle 10 — Navigation Mastery).
 4. **Reality Check**: If target logic exists, compare current state with goal. If 100% parity, STOP (Simplicity First).
+
+### Step 1.5 — SOVEREIGN COMPARISON (when ≥2 paths exist)
+
+If the Logic Cascade surfaces **more than one viable recipe**, emit the mandatory SCP table before picking a winner (per [SOVEREIGN_COMPARISON_PROTOCOL.md](../../../knowledge/2_governance/SOVEREIGN_COMPARISON_PROTOCOL.md)):
+
+| Option | Token Spend | Token Cost | Speed Time | Speed % | Rating /10 |
+|---|---|---|---|---|---|
+| A | … | … | … | … | … |
+| B | … | … | … | … | … |
+
+Pick the highest Rating. Justify selection in one sentence. Proceed to Step 2.
 
 ### Step 2 — LOAD RECIPE
 Map the winning intent to a Skill Chain from the authoritative Atlas.
@@ -75,6 +88,19 @@ For each step in the cascade:
 3. If Pass -> Log checkpoint.
 4. If Fail -> STOP immediately. Offer rollback.
 
+### Step 5.5 — SCREENSHOT PURGE (if browser_subagent invoked)
+
+If any step invoked `browser_subagent`, vision tool, or screenshot capture:
+
+1. Extract textual findings (OCR / coords / DOM state) into the step log.
+2. Purge the screenshot immediately — do NOT wait for session close:
+   ```powershell
+   Remove-Item "C:\Users\user\.gemini\antigravity\brain\{session-uuid}\.tempmediaStorage" -Recurse -Force -ErrorAction SilentlyContinue
+   ```
+3. Verify the folder is gone before moving to the next step.
+
+Full rule: [SCREENSHOT_HYGIENE.md](../../../knowledge/2_governance/SCREENSHOT_HYGIENE.md).
+
 ### Step 6 — FINAL HUD REPORT
 Generate a clinical summary of files touched and verification status.
 
@@ -86,4 +112,4 @@ Plan saved to `C:/Users/user/.gemini/antigravity/brain/tactical/plan_{timestamp}
 - **Surgicality**: Touch ONLY the files needed for the success criteria.
 
 ---
-**plan-first V15.2 — 2026-04-18 · Karpathy Apex Edition**
+**plan-first V15.3 — 2026-04-23 · Karpathy Apex Edition (SCP + Screenshot-Hygiene integrated)**

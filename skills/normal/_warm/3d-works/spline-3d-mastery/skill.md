@@ -1,10 +1,12 @@
 ---
 name: spline-3d-mastery
 description: "SPLINE 3D MASTERY — LEVEL 7 / V16 SKILL"
-triggers: ["spline 3d mastery", "spline-3d-mastery", "skill", "spline mastery"]
+triggers: ["spline", "spline 3d", "3d", "3d works", "spline mastery", "spline 3d mastery"]
 phase: reference
 model_hint: gemini-3-flash
-version: 42.0
+version: 42.1
+status: warm
+auto_load: false
 _ohdy_wrapper: |-
   # OHDY COMPRESSED NODE (V42.0)
   <dna_node>

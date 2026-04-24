@@ -22,7 +22,8 @@ risk: high
 |---|---|---|---|
 | **Anthropic (Claude)** | `CLAUDE_API_KEY` | Complex reasoning, long-context code review, TypeScript architecture | ~$0.003/1K tokens (Sonnet) |
 | **OpenAI (GPT-4o)** | `OPENAI_API_KEY` | Code completion, JSON generation, structured output | ~$0.005/1K tokens (4o) |
-| **Google Gemini** | Built-in (Antigravity) | Fast scaffold, UI, orchestration, routing | Flash: cheapest |
+| **Google Gemini** | `GOOGLE_AISTUDIO_KEY` | Built-in (Antigravity) & AI Studio usage | Flash: cheapest |
+| **Stitch (Google)** | `STITCH_API_KEY_1`, `STITCH_API_KEY_2` | High-fidelity design recommendations, premium UI/UX patterns | Multi-key redundancy |
 
 ### 1.1 Key Storage (Environment Variables)
 
@@ -31,6 +32,9 @@ Store keys in `.env.local` or Windows System Environment — NEVER in source cod
 ```env
 CLAUDE_API_KEY=<your-anthropic-api-key>
 OPENAI_API_KEY=<your-openai-api-key>
+GOOGLE_AISTUDIO_KEY=<your-google-aistudio-key>
+STITCH_API_KEY_1=<your-stitch-api-key-1>
+STITCH_API_KEY_2=<your-stitch-api-key-2>
 ```
 
 ---

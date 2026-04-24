@@ -1,10 +1,12 @@
 ---
 name: openclaw-integration
 description: "Integration protocol for working with OpenClaw AI to improve website and app generation."
-triggers: ["openclaw integration", "openclaw-integration"]
+triggers: ["openclaw", "openclaw integration"]
 phase: reference
 model_hint: gemini-3-flash
-version: 42.0
+version: 42.1
+status: archived
+auto_load: false
 _inner_frontmatter: |-
   name: openclaw-integration
   description: Integration protocol for working with OpenClaw AI to improve website and app generation.

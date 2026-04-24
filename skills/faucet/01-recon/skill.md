@@ -1,9 +1,12 @@
----
+﻿---
 name: faucet-recon-audit
 description: "V1.0 Faucet Recon & Audit logic. Establishes the surgical baseline for delta-ledgering."
 triggers: ["recon", "balance check", "faucet audit"]
 phase: reference
 version: 1.0
+status: archived
+auto_load: false
+archived_date: "2026-04-24"
 ---
 
 # `01-recon` — Faucet Recon & Audit V1.0

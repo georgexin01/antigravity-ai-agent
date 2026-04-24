@@ -1,4 +1,4 @@
----
+﻿---
 name: faucet-session-ledger
 description: "Faucet Session Ledger — V2.0 (Balance Inspector)"
 triggers: ["faucet session ledger", "faucet_session_ledger"]
@@ -15,6 +15,9 @@ _ohdy_wrapper: |-
     rel: []
   l: |-
   </dna_node>
+status: archived
+auto_load: false
+archived_date: "2026-04-24"
 ---
 
 # Faucet Session Ledger — V2.0 (Balance Inspector)

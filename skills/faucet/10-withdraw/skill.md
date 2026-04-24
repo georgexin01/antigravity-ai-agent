@@ -1,9 +1,12 @@
----
+﻿---
 name: faucet-withdrawal-locked
 description: "V1.0 Faucet Withdrawal logic. TIER-0 HARD-LOCKED payout orchestration."
 triggers: ["withdraw", "payout", "send to wallet"]
 phase: reference
 version: 1.0
+status: archived
+auto_load: false
+archived_date: "2026-04-24"
 ---
 
 # `10-withdraw` — Faucet Withdrawal (Tier-0) V1.0

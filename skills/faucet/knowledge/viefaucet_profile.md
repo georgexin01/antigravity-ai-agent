@@ -1,4 +1,4 @@
----
+﻿---
 name: viefaucet-profile
 description: "Viefaucet Profile — V4.0 (Universal Optimizer)"
 triggers: ["viefaucet profile", "viefaucet_profile", "viefaucet profile universal"]
@@ -15,6 +15,9 @@ _ohdy_wrapper: |-
     rel: []
   l: |-
   </dna_node>
+status: archived
+auto_load: false
+archived_date: "2026-04-24"
 ---
 
 # Viefaucet Profile — V4.0 (Universal Optimizer)

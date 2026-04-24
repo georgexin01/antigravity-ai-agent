@@ -1,9 +1,12 @@
----
+﻿---
 name: faucet-orchestrator
 description: "V1.0 Sovereign Faucet Orchestrator. Master directive for multi-platform automated harvesting with Tier-0 security."
 triggers: ["ai faucet", "harvest", "faucet mode", "industrial faucet"]
 phase: 0-orchestrator
 version: 16.2
+status: archived
+auto_load: false
+archived_date: "2026-04-24"
 ---
 
 # `faucet-orchestrator` — The Sovereign Protocol V16.2

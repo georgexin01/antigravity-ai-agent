@@ -1,4 +1,4 @@
----
+﻿---
 name: viefaucet-strategy-v2
 description: "Viefaucet Strategy — V4.3 (Manual Faucet Priority)"
 triggers: ["viefaucet strategy v2", "viefaucet_strategy_v2", "viefaucet strategy manual"]
@@ -15,6 +15,9 @@ _ohdy_wrapper: |-
     rel: []
   l: |-
   </dna_node>
+status: archived
+auto_load: false
+archived_date: "2026-04-24"
 ---
 
 # Viefaucet Strategy — V4.3 (Manual Faucet Priority)

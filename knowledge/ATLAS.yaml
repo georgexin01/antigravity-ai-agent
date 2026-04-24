@@ -1,9 +1,9 @@
 # THE SOVEREIGN PYRAMID ATLAS — KNOWLEDGE ROUTING HUB (V16.3)
 # Format: Pure YAML (Apex Standard)
 
-atlas_version: 16.3
+atlas_version: 16.4
 status: authoritative
-last_updated: "2026-04-21"
+last_updated: "2026-04-24"
 sync_status: MACRO_V3_ALIGNED
 
 topology:
@@ -21,6 +21,14 @@ topology:
         desc: "JIT detection logic for domain-specific mode switching."
       - name: GENESIS_BOOTSTRAP
         file: "GENESIS_BOOTSTRAP.yaml"
+      - name: SOVEREIGN_BLUEPRINT_PROTOCOL
+        file: "SOVEREIGN_BLUEPRINT_PROTOCOL.md"
+        triggers: ["blueprint", "app_blueprint", "sovereign blueprint", "blueprint first", "project root"]
+        desc: "Apex laws (V1.1) — every Website/WebApp MUST have APP_BLUEPRINT.md at root. Keyword 'blueprint' is the global anchor."
+      - name: MASTER_APP_BLUEPRINT_TEMPLATE
+        file: "templates/MASTER_APP_BLUEPRINT.md"
+        triggers: ["master blueprint", "blueprint template", "new blueprint", "generate blueprint"]
+        desc: "Master template (V9.5 Industrial SBLF Grade) — reference copy used when generating a new APP_BLUEPRINT.md."
 
   tier_1_core:
     path: "1_core/"
@@ -44,6 +52,10 @@ topology:
       - name: dna_faucet
         file: "dna_faucet.md"
         triggers: ["faucet", "harvest", "automation", "solana", "evm", "claimer"]
+      - name: SBLF_MASTER_BLUEPRINT
+        file: "blueprints/SBLF_MASTER_BLUEPRINT.md"
+        triggers: ["sblf", "trash container", "垃圾桶", "blueprint example", "example blueprint"]
+        desc: "Reference filled-in blueprint (V1.1) — dual webApp SBLF trash-container management system. Concrete example of the master template applied."
 
   tier_2_governance:
     path: "2_governance/"
@@ -54,6 +66,14 @@ topology:
       - name: sovereign_framework_mastery
         file: "sovereign_framework_mastery.md"
         triggers: ["claude", "swf", "sovereign", "industrial", "relationship drawer", "tray", "layers"]
+      - name: sovereign_blueprint_procedure
+        file: "SOVEREIGN_BLUEPRINT_PROCEDURE.md"
+        triggers: ["blueprint", "planning", "initialization", "procedure", "new project", "start app", "planning phase", "guided questioning", "mock first"]
+        desc: "Operational procedure (V1.0) — 13-section blueprint standard, guided questioning, drift handling, Mock-First principle. Renamed 2026-04-24 from SOVEREIGN_BLUEPRINT_PROTOCOL.md to resolve filename collision with Tier-0 apex version."
+      - name: sovereign_auto_repair_protocol
+        file: "SOVEREIGN_AUTO_REPAIR_PROTOCOL.md"
+        triggers: ["error", "bug", "repair", "auto-fix", "tailwind v4", "build fail", "postcss", "safe init", "supabase init"]
+        desc: "Auto-repair protocol (V1.0) — known drifts (Tailwind v4 scoped styles fix, Supabase Safe-Init via Proxy). Executed during blueprint init without user prompt."
 
   tier_3_domains:
     path: "3_domains/"

@@ -1,4 +1,4 @@
----
+﻿---
 name: 99faucet-profile
 description: "99Faucet Profile — V1.0 (Solana Specialization)"
 triggers: ["99faucet profile", "99faucet_profile", "99faucet profile solana"]
@@ -15,6 +15,9 @@ _ohdy_wrapper: |-
     rel: []
   l: |-
   </dna_node>
+status: archived
+auto_load: false
+archived_date: "2026-04-24"
 ---
 
 # 99Faucet Profile — V1.0 (Solana Specialization)

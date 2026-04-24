@@ -1,10 +1,13 @@
----
+﻿---
 name: dna-faucet
 description: "👑 DNA FAUCET — STEALTH & PRECISION AUTOMATION (V1.0)"
 triggers: ["faucet dna", "stealth", "ghosting", "captcha logic", "antibot"]
 phase: constitutional
 version: 1.2
 status: authoritative
+status: archived
+auto_load: false
+archived_date: "2026-04-24"
 ---
 
 # 👑 DNA FAUCET (V1.2 SOVEREIGN)

@@ -1,14 +1,15 @@
 ---
 name: gsap-animation
 description: "Professional animation patterns using GSAP, ScrollTrigger, and Flip plugins."
-triggers: ["gsap animation", "gsap-animation"]
+triggers: ["gsap", "animation", "motion", "motion works", "scrolltrigger", "flip plugin", "gsap animation"]
 phase: reference
 v_score: 1.0
 k_decay: 0
 holo: "Mastery guide for GSAP animations. Defines timing curves, stagger logic, and advanced Flip/ScrollTrigger patterns for premium web design."
 model_hint: gemini-3-flash
-version: 10.0
-status: active
+version: 10.1
+status: warm
+auto_load: false
 ---
 
 # SKILL: GSAP ANIMATION MASTERY

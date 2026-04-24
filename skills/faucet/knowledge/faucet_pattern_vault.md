@@ -1,4 +1,4 @@
----
+﻿---
 name: faucet-pattern-vault
 description: "Faucet Pattern Vault — V4.0 (Universal Optimizer)"
 triggers: ["faucet pattern vault", "faucet_pattern_vault"]
@@ -15,6 +15,9 @@ _ohdy_wrapper: |-
     rel: []
   l: |-
   </dna_node>
+status: archived
+auto_load: false
+archived_date: "2026-04-24"
 ---
 
 # Faucet Pattern Vault — V4.0 (Universal Optimizer)

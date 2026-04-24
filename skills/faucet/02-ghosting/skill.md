@@ -1,9 +1,12 @@
----
+﻿---
 name: faucet-ghost-stealth
 description: "V1.0 Faucet Ghosting & Stealth logic. Deploys anti-detection and humanoid behavior patterns."
 triggers: ["ghosting", "stealth", "bypass blocks"]
 phase: reference
 version: 1.0
+status: archived
+auto_load: false
+archived_date: "2026-04-24"
 ---
 
 # `02-ghosting` — Faucet Ghost & Stealth V1.0

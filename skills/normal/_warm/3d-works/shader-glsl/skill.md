@@ -1,10 +1,12 @@
 ---
 name: shader-glsl
 description: "SHADER GLSL — LEVEL 7 CORE SKILL"
-triggers: ["shader glsl", "shader-glsl", "skill"]
+triggers: ["shader", "glsl", "shader glsl", "3d", "3d works", "webgl shader"]
 phase: reference
 model_hint: gemini-3-flash
-version: 42.0
+version: 42.1
+status: warm
+auto_load: false
 _ohdy_wrapper: |-
   # OHDY COMPRESSED NODE (V42.0)
   <dna_node>

@@ -1,9 +1,12 @@
----
+﻿---
 name: faucet-harvest-claim
 description: "V1.0 Faucet Harvest & Claim logic. The execution layer for token acquisition."
 triggers: ["harvest", "claim", "collect"]
 phase: reference
 version: 1.0
+status: archived
+auto_load: false
+archived_date: "2026-04-24"
 ---
 
 # `04-harvesting` — Faucet Harvest & Claim V1.0

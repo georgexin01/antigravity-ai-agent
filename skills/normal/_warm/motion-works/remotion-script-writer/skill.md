@@ -1,10 +1,12 @@
 ---
 name: remotion-script-writer
 description: "Remotion Script Writer Skill (Kit 2.0)"
-triggers: ["remotion script writer", "remotion-script-writer", "skill"]
+triggers: ["remotion", "video script", "motion works", "video writing", "remotion script writer"]
 phase: reference
 model_hint: gemini-3-flash
-version: 42.0
+version: 42.1
+status: warm
+auto_load: false
 _ohdy_wrapper: |-
   # OHDY COMPRESSED NODE (V42.0)
   <dna_node>

@@ -1,10 +1,12 @@
 ---
 name: three-js-mastery
 description: "three js mastery"
-triggers: ["three js mastery", "three-js-mastery"]
+triggers: ["three js", "threejs", "three.js", "webgl", "3d", "3d works", "three js mastery"]
 phase: reference
 model_hint: gemini-3-flash
-version: 30.0
+version: 30.1
+status: warm
+auto_load: false
 _ohdy_wrapper: |-
   <dna_node>
   v: 30.0

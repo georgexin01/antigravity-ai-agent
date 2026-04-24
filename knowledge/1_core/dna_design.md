@@ -13,7 +13,8 @@ The aesthetic DNA for all Sovereign interfaces. Enforces "God-Tier" visual fidel
 ## ⚖️ DESIGN GUARDRAILS
 1. **Volumetric UI**: Depth, shadows, and light refraction are mandatory. No flat MVPs.
 2. **HUD Purity**: AI responses MUST use the High-Fidelity HUD: `[🔪 APEX] | [⚡ MODE: ...] | [✅ STATUS: ...]`.
-3. **Legacy Purge**: ABSOLUTELY NO legacy progress bars (`▓▓▓`) or decorative borders (`◢◤`). Keep it clinical and premium.
+3. **StitchMCP Orchestration**: AI MUST leverage `StitchMCP` for all visual component generation. Use it to pull premium design tokens, high-fidelity shadows, and complex glassmorphism values.
+4. **Legacy Purge**: ABSOLUTELY NO legacy progress bars (`▓▓▓`) or decorative borders (`◢◤`). Keep it clinical and premium.
 
 ## 🧪 ATOMIC DESIGN SYSTEM
 - **Glass Formula**: `backdrop-filter: blur(24px) saturate(180%)`, border `1px solid rgba(255,255,255,0.1)`, bg `rgba(0,0,0,0.45)`.

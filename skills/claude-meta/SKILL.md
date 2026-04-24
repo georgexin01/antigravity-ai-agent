@@ -1,23 +1,111 @@
 ---
 name: claude-meta
-description: "Multi-Phase AI Planning & Meta-Logic Orchestrator. Mandatory 'Plan-Stop-Approve' protocol enforcer for all Sovereign modifications."
-triggers: ["claude-meta", "planning", "meta", "plan-first", "handshake"]
+description: "Sovereign Meta-Orchestrator. Enforces the Plan → Execute → Validate loop for any non-trivial change. Mandatory handshake before touching Tier-0/1 assets."
+triggers: ["claude-meta", "meta", "planning", "plan-first", "plan stop approve", "handshake", "validate knowledge", "audit", "post-mortem", "before code", "agentic loop"]
 phase: 0-orchestrator
-version: 1.0
+requires: []
+unlocks: [plan-first, validate-knowledge]
+inputs: [user_intent, target_tier, scope]
+output_format: structured_plan_then_execute_then_audit
+model_hint: gemini-3-pro
+version: 2.1
+status: authoritative
+date_created: "2026-04-16"
+date_updated: "2026-04-24"
 ---
 
-# `claude-meta` — Sovereign Planning & Meta-Logic V1.0
+# `claude-meta` — Sovereign Meta-Orchestrator (V2.1)
 
-## When to Use
+**Plan → Execute → Validate**. Wraps every non-trivial Sovereign action. Aligns with [GROUND_KERNEL.md](../../knowledge/0_apex/GROUND_KERNEL.md) Principle 9 and [KARPATHY_OPERATIONAL_STANDARD.md](../../knowledge/2_governance/KARPATHY_OPERATIONAL_STANDARD.md).
 
-Use this mode for any complex architectural planning, knowledge evolution, or high-priority structural modifications. It enforces the **Plan-Stop-Approve Handshake** for all Tier-0 assets.
+---
 
-## 🚀 The Planning Protocol
+## ⚖️ WHEN TO INVOKE
 
-1. **[plan-first](../claude/analyze-schema/skill.md)**: Mandatory research and implementation plan generation.
-2. **[validate-knowledge](../claude/analyze-schema/skill.md)**: Verification of knowledge integrity post-restructure.
+Mandatory if ANY:
+- Touching ≥2 files in one change
+- Touching Tier-0 (Apex / ATLAS / Claude skills) or Tier-1 (`1_core/`, `2_governance/`)
+- Schema / RLS / auth-flow change
+- New module / route / entity
 
-## 🛡️ Mandatory Execution Rules
+Skip if: single-file Tier-2/3 edit ≤ 20 lines — use [AOE_PROTOCOL](../../knowledge/2_governance/AOE_PROTOCOL.md) surgical intent.
 
-- **HANDSHAKE FIRST**: Never execute a structural change without a Turn-1 plan.
-- **AUTHORITATIVE LOCK**: Protect the 4-mode Claude architecture.
+---
+
+## 🚀 THE 3-PHASE LOOP
+
+### Phase 1 — PLAN (gemini-3-pro)
+Invoke **[plan-first/skill.md](./plan-first/skill.md)**. Output: HUD Implementation Plan (intent · success criteria · skill chain · micro-verifications · rollback · tier per file). Persisted to `brain/tactical/plan_{timestamp}.md`.
+
+### Phase 2 — STOP & HANDSHAKE
+No execution until handshake. Gate by tier:
+
+| Tier | Gate | User must say |
+|---|---|---|
+| **0** (Apex / ATLAS / `claude/`) | Challenge-Response | exact challenge string |
+| **1** (`1_core/`, `2_governance/`) | Plan-Stop-Approve | "go" / "approve" / "apply" |
+| **2** (other knowledge/skills) | Shadow Drafting | "go" after diff preview |
+| **3** (project source) | Surgical Intent | implicit; stated upfront |
+
+Handshake expires after 3 turns of silence ([AOE_PROTOCOL](../../knowledge/2_governance/AOE_PROTOCOL.md)).
+
+### Phase 3 — EXECUTE (gemini-3-flash)
+Per skill-chain step:
+1. **ACT** — surgical change on named lines only
+2. **MICRO-VERIFY** — run the plan's checkpoint command
+3. **OBSERVE** — print PASS/FAIL with actual exit code
+4. On FAIL → **STOP**, offer rollback, re-enter Phase 1
+
+### Phase 4 — VALIDATE (gemini-3-flash)
+Invoke **[validate-knowledge/skill.md](./validate-knowledge/skill.md)**. Runs: frontmatter check · path-ref integrity · cross-ref resolution · secret scanner · screenshot hygiene ([SCREENSHOT_HYGIENE.md](../../knowledge/2_governance/SCREENSHOT_HYGIENE.md)). `>20` violations → HALT + escalate as Critical Drift.
+
+---
+
+## 🤝 HANDSHAKE TEMPLATE
+
+```markdown
+[🔪 APEX PLAN] | [⚡ MODE: {recipe}] | [🎯 TIER: {0|1|2|3}]
+
+## INTENT
+{one sentence}
+
+## FILES & TIERS
+| File | Tier | Action |
+
+## MICRO-VERIFICATION
+- [ ] `{command}` → expect {state}
+
+## ROLLBACK
+- {undo per failure point}
+
+[⚡ STATUS: PENDING_APPROVAL] · Reply "go" (Tier-0 requires challenge above)
+```
+
+---
+
+## 🔁 SCP MANDATE
+
+Every Phase-1 plan comparing ≥2 paths MUST include the [SCP](../../knowledge/2_governance/SOVEREIGN_COMPARISON_PROTOCOL.md) table:
+
+| Option | Token Spend | Token Cost | Speed Time | Speed % | Rating /10 |
+
+Pick highest Rating, justify in one sentence, proceed.
+
+---
+
+## 🛡️ GUARDRAILS
+
+- **Zero speculation** — solve only the immediate goal
+- **Surgicality** — touch only files the plan named; adding files mid-execute → STOP, re-plan
+- **Reality-bound** — PASS/FAIL must be a real exit code, not a vibe
+- **No silent escalation** — if a Tier-1 file surfaces mid-execute, halt and re-handshake
+- **Lossless re-entry** — plan + step pointer must survive user interrupts in `brain/tactical/`
+
+---
+
+## 🔗 RELATED
+
+[plan-first](./plan-first/skill.md) · [validate-knowledge](./validate-knowledge/skill.md) · [AOE_PROTOCOL](../../knowledge/2_governance/AOE_PROTOCOL.md) · [KARPATHY](../../knowledge/2_governance/KARPATHY_OPERATIONAL_STANDARD.md) · [SCREENSHOT_HYGIENE](../../knowledge/2_governance/SCREENSHOT_HYGIENE.md)
+
+---
+**V2.1 trimmed 2026-04-24** — removed verbose HUD examples and redundant prose; protocol logic intact.

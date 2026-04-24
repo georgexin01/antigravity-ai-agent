@@ -1,9 +1,12 @@
----
+﻿---
 name: faucet-solving-mastery
 description: "V1.0 Faucet Antibot & Captcha Solving logic. Multi-agent orchestration for complex platform bypass."
 triggers: ["solve", "captcha", "antibot", "bypass"]
 phase: reference
 version: 1.0
+status: archived
+auto_load: false
+archived_date: "2026-04-24"
 ---
 
 # `03-solving` — Faucet Solving Mastery V1.0
