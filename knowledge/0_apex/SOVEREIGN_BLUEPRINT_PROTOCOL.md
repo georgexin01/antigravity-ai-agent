@@ -3,7 +3,7 @@ name: sovereign-blueprint-protocol
 tier: 0
 priority: CRITICAL
 scope: ["website", "webapp"]
-version: 1.2
+version: 1.3
 ---
 
 # 🛡️ 主权蓝图协议 (SOVEREIGN BLUEPRINT PROTOCOL)
@@ -35,5 +35,9 @@ version: 1.2
 3.  **漂移校正 (Drift Correction)**: 当用户提及 "blueprint" 并伴随修改意图时，AI 必须将当前的设置实时更新回蓝图。
 4.  **Mock-First 安全化 (Safe-Init)**: 协议强制要求后端客户端（如 Supabase）在初始化时必须包含针对缺失配置的 `Proxy` 处理逻辑，优先保障 UI 原型的可用性。
 
+## 🔄 5. 知识库反哺蓝图 (Knowledge Retro-Feeding)
+1.  **动态同步**: 项目的 `APP_BLUEPRINT.md` 不是静态文档。当全局知识库（如 `1_core/`、`2_governance/`）更新了更优的工程或交互规范时，AI **必须** 在下次修改项目时，将新规范反哺并写入项目蓝图。
+2.  **漂移预防**: 知识库作为全局锚点，防止单个项目在长期演进中野蛮生长、偏离最佳架构。
+
 ---
-*Apex Governance Node // Antigravity V9*
+*Apex Governance Node // Antigravity V9.1 (V1.3 Protocol)*
