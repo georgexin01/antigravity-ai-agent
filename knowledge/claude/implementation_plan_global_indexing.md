@@ -13,7 +13,7 @@ The user reports that while "Lessons" successfully index images in the Album, "A
 
 ## Proposed Changes
 
-### [MODIFY] [upload.ts](file:///c:/Users/user/Desktop/admin-panel-quizLaa/apps/web-antd/src/utils/upload.ts)
+### [MODIFY] [upload.ts](file:///c:/Users/user/Desktop/quizLAA/admin-panel-quizLaa/apps/web-antd/src/utils/upload.ts)
 - **Harden Indexer**: Update `insertAttachmentRecord` to be more resilient and explicitly handle schema targeting via the client.
 - **Error Visibility**: Ensure that `uploadPhoto` returns the database insertion status so forms can react to it.
 

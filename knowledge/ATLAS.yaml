@@ -23,8 +23,8 @@ topology:
         file: "GENESIS_BOOTSTRAP.yaml"
       - name: SOVEREIGN_BLUEPRINT_PROTOCOL
         file: "SOVEREIGN_BLUEPRINT_PROTOCOL.md"
-        triggers: ["blueprint", "app_blueprint", "sovereign blueprint", "blueprint first", "project root"]
-        desc: "Apex laws (V1.1) — every Website/WebApp MUST have APP_BLUEPRINT.md at root. Keyword 'blueprint' is the global anchor."
+        triggers: ["blueprint", "app_blueprint", "BLUEPRINT.md", "APP_BLUEPRINT.md", "sovereign blueprint", "blueprint first", "project root", "per-turn check", "auto-check blueprint"]
+        desc: "Apex laws (V1.4) — every Website/WebApp/Monorepo MUST have BLUEPRINT.md or APP_BLUEPRINT.md at root. AI in Claude/Gemini-Flash mode MUST auto-read it on every chat turn (§6 Per-Turn Auto-Check)."
       - name: MASTER_BLUEPRINT
         file: "templates/MASTER_BLUEPRINT.md"
         triggers: ["master blueprint", "blueprint template", "new blueprint", "generate blueprint", "sample blueprint"]

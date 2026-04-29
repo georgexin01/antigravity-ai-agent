@@ -8,7 +8,7 @@ The user reports that uploading images to 'Agent Info' (Achievements) is failing
 
 ## Proposed Changes
 
-### [MODIFY] [agent-form.vue](file:///c:/Users/user/Desktop/admin-panel-quizLaa/apps/web-antd/src/views/agents/agent-form.vue)
+### [MODIFY] [agent-form.vue](file:///c:/Users/user/Desktop/quizLAA/admin-panel-quizLaa/apps/web-antd/src/views/agents/agent-form.vue)
 - **Transform Achievements Logic**:
     - Replace `achievementsJson` (string) with `achievements` (Array of objects).
     - **New Structure**: `[{ title: '', value: '', icon: '', photo: '' }]`.
@@ -19,7 +19,7 @@ The user reports that uploading images to 'Agent Info' (Achievements) is failing
 - **Harden Submission**:
     - Map the reactive achievement list back to the `achievements` JSONB object for database persistence.
 
-### [MODIFY] [agent-list.vue](file:///c:/Users/user/Desktop/admin-panel-quizLaa/apps/web-antd/src/views/agents/agent-list.vue)
+### [MODIFY] [agent-list.vue](file:///c:/Users/user/Desktop/quizLAA/admin-panel-quizLaa/apps/web-antd/src/views/agents/agent-list.vue)
 - **Relational Sync**: Update the achievement display in the main table to handle the new object-based structure if needed.
 
 ## Verification Plan

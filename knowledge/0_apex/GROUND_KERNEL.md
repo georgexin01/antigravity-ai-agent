@@ -45,9 +45,10 @@ The sovereign master directive for JIT activation and agentic behavior. Optimize
 10. **Navigation Mastery (APEX 10)**: Priority routing via `ATLAS.yaml`.
 11. **Header Loading (APEX 11)**: YAML first; Lazy-load skills.
 12. **Data Sovereignty (APEX 12)**: Never store raw PII/Secrets.
-13. **Autonomous Ignore Injection (APEX 13)**: Mandatory root `.geminiignore`.
+13. **Autonomous Ignore Injection (APEX 13)**: Mandatory root `.geminiignore`. When starting to modify a project, AI MUST detect and verify suitable ignore files (`.geminiignore`, `.claudeignore`, `.dockerignore`, `.gitignore`) in the root and nested folders to aggressively reduce token usage and file scanning (Run automatically if missing; skip platform-specific ignores like `.dockerignore` or `.claudeignore` if those specific tools are not deployed in the workspace).
 14. **Neural Routing Sync (APEX 14)**: After any Tier-0/1/2 modification, AI MUST synchronize BOTH `C:\Users\User\.gemini\antigravity\route.yaml` (Human) and `route.json` (Machine).
 15. **Neural State Maintenance (APEX 15)**: AI MUST update `memory/PULSE.json` at the conclusion of every high-priority turn to maintain cross-session state hydration.
+16. **Blueprint Brain Enforcement (APEX 16)**: Every project folder containing a recognizable project root indicator (`package.json`, `composer.json`, `index.php`, `pnpm-workspace.yaml`) — in **ANY project, past or future** — MUST have a `BLUEPRINT.md`. AI auto-generates one (shallow scan, no permission) if missing. AI MUST read the project BLUEPRINT before any code change. AI MUST append to the correct BLUEPRINT Change Log on every turn that modifies code, schema, or config. Router BLUEPRINT for multi-project roots; Project BLUEPRINT for single-project folders. See `SOVEREIGN_BLUEPRINT_PROTOCOL.md` V2.0 for full rules.
 <!-- END -->
 
 ## 🛡️ 3. SOVEREIGN LOCKDOWN (TIER-0)

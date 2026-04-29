@@ -2,42 +2,137 @@
 name: sovereign-blueprint-protocol
 tier: 0
 priority: CRITICAL
-scope: ["website", "webapp"]
-version: 1.3
+scope: ["website", "webapp", "monorepo", "any-project"]
+version: 2.0
+last_updated: "2026-04-29"
+applies_to: ["claude", "claude-code", "gemini-3-flash", "gemini", "antigravity"]
+accepted_filenames: ["BLUEPRINT.md", "APP_BLUEPRINT.md"]
 ---
 
-# 🛡️ 主权蓝图协议 (SOVEREIGN BLUEPRINT PROTOCOL)
+# 🛡️ SOVEREIGN BLUEPRINT PROTOCOL (V2.0)
 
-## ⚖️ 1. 强制性准则 (MANDATORY RULES)
-1.  **蓝图先行**: 任何 Website 或 WebApp 项目的根目录 **必须** 包含 `APP_BLUEPRINT.md`。
-2.  **自动检索/生成**: 
-    *   若蓝图缺失，AI **必须** 在执行任何代码前，扫描项目目录并根据现有结构反向生成 `APP_BLUEPRINT.md`。
-    *   若蓝图存在，AI **必须** 以其为最高指令来源。
-3.  **Tier-0 参照 (MASTER)**: AI 在创建蓝图时，必须参考 `0_apex/templates/MASTER_BLUEPRINT.md` 的最新版本。
-
-## 🧬 2. 进化与完整性准则 (EVOLUTION & INTEGRITY RULES)
-1.  **结构不可移除性 (Structural Purity)**: 蓝图的核心结构（如核心原则、技术栈、UI 规范）是不可移除的。在更新时，必须保留原有框架，仅允许在框架内进行内容叠加和优化。
-2.  **自进化循环 (Evolutionary Loop)**: 
-    *   **项目提炼**: AI 在项目中发现更优的架构模式、UI 方案或性能准则时，**必须** 主动提炼并同步更新回 `0_apex/templates/MASTER_BLUEPRINT.md`。
-    *   **对话合成 (Chat Synthesis)**: 用户在对话中提出的所有纠正、偏好和性能优化建议（即使是细微的 CSS 调整），AI **必须** 识别其潜在的通用价值，并将其提炼为 Master Blueprint 的新标准。
-    *   **反馈响应**: 任何经过用户确认的 "Fix" 或 "Update" 均应视为潜在的进化节点，AI 必须在当前 Turn 结束前评估其是否需要同步至 Master。
-3.  **审慎修改权 (Deliberate Reasoning)**: 仅当 AI 经过深度分析并确认旧有内容已过时或存在缺陷时，方可进行删除操作。删除前必须在蓝图更新记录中简述理由。
-4.  **版本追溯**: 蓝图更新必须保留版本号，确保设计语言和工程准则的连续性。
-
-## ☣️ 3. 项目隔离防火墙 (ISOLATION FIREWALL)
-1.  **禁止业务合并**: 禁止将不同项目的业务逻辑带入新蓝图。
-2.  **逻辑清零**: 在使用 Master 模板时，必须删除所有上一项目的遗留信息。
-3.  **继承准则**: 仅允许继承设计咒语、配色方案、技术栈和推理准则。
-
-## 🔑 4. 语义关键词：blueprint (KEYWORD: blueprint)
-1.  **全局锚点**: "blueprint" 是主权架构的唯一核心关键词。
-2.  **读取触发**: 当用户提及 "blueprint" 时，AI 必须优先检索当前项目根目录的 `APP_BLUEPRINT.md` 以获取最新上下文。
-3.  **漂移校正 (Drift Correction)**: 当用户提及 "blueprint" 并伴随修改意图时，AI 必须将当前的设置实时更新回蓝图。
-4.  **Mock-First 安全化 (Safe-Init)**: 协议强制要求后端客户端（如 Supabase）在初始化时必须包含针对缺失配置的 `Proxy` 处理逻辑，优先保障 UI 原型的可用性。
-
-## 🔄 5. 知识库反哺蓝图 (Knowledge Retro-Feeding)
-1.  **动态同步**: 项目的 `APP_BLUEPRINT.md` 不是静态文档。当全局知识库（如 `1_core/`、`2_governance/`）更新了更优的工程或交互规范时，AI **必须** 在下次修改项目时，将新规范反哺并写入项目蓝图。
-2.  **漂移预防**: 知识库作为全局锚点，防止单个项目在长期演进中野蛮生长、偏离最佳架构。
+> **Universal applicability**: These rules activate for **ANY project**, past or future, regardless of technology stack, company, or location. The BLUEPRINT system is not specific to any one project or client.
 
 ---
-*Apex Governance Node // Antigravity V9.1 (V1.3 Protocol)*
+
+## ⚖️ 1. MANDATORY RULES
+
+1. **Blueprint First**: Every project folder containing a recognizable project root indicator (`package.json`, `composer.json`, `index.php`, `pnpm-workspace.yaml`, `requirements.txt`, etc.) **MUST** have a `BLUEPRINT.md`.
+2. **Auto-Generate if Missing**: If the BLUEPRINT is missing and the folder is a valid project root, AI **MUST** auto-generate one using the `MASTER_BLUEPRINT.md` template (`0_apex/templates/MASTER_BLUEPRINT.md`) by scanning the folder shallowly. No user permission required for shallow scan.
+3. **Tier-0 Reference**: When creating any BLUEPRINT, AI must clone from the latest `0_apex/templates/MASTER_BLUEPRINT.md` (project type) or `0_apex/templates/MASTER_ROUTER_BLUEPRINT.md` (multi-project root type).
+4. **BLUEPRINT Wins**: When `BLUEPRINT.md` and `CLAUDE.md` conflict, `BLUEPRINT.md` is the cross-AI consensus document. User's live message always overrides both.
+
+---
+
+## 🔎 2. BLUEPRINT TYPE DETECTION (UNIVERSAL RULE)
+
+AI MUST detect which BLUEPRINT type applies to the current working directory:
+
+| Condition | BLUEPRINT Type | Template to Use |
+|---|---|---|
+| Folder contains ONE project (single `package.json` / `composer.json` / `index.php`) | **Project BLUEPRINT** | `MASTER_BLUEPRINT.md` |
+| Folder contains MULTIPLE sub-project folders, each with their own project files | **Router BLUEPRINT** | `MASTER_ROUTER_BLUEPRINT.md` |
+| Folder is a documentation, temp, or script-only directory | **Exempt** | None needed |
+
+---
+
+## 🧬 3. EVOLUTION & INTEGRITY RULES
+
+1. **Structural Purity**: Core sections of a BLUEPRINT (Company, Design System, Function Registry, etc.) are non-removable. Updates add/refine content; they do not strip existing structure.
+2. **Evolutionary Loop**: When AI discovers a better pattern or design in any project, it MUST:
+   - Update the project's BLUEPRINT.md Function Registry.
+   - Evaluate if the pattern is universal → if yes, propagate to `MASTER_BLUEPRINT.md`.
+3. **Deliberate Removal**: AI may only delete BLUEPRINT content if it is provably obsolete — must log the reason in the Change Log.
+4. **Version Tracking**: BLUEPRINT YAML frontmatter `version` must increment on significant structural changes.
+
+---
+
+## 🔥 4. ISOLATION FIREWALL
+
+1. **No Business Bleed**: When cloning MASTER template for a new project, ALL previous project's business data (company name, agents, DB schema, contact info, URLs) MUST be cleared — replaced with `[placeholder]` or the new project's data.
+2. **Inherit Only**: May inherit: design principles, tech stack patterns, function patterns, reasoning guidelines.
+3. **Never Inherit**: Company data, DB table names, routes, credentials, specific business logic.
+
+---
+
+## 🔑 5. KEYWORD TRIGGERS
+
+- `"blueprint"` → AI must immediately read current project's `BLUEPRINT.md` and treat it as top-context.
+- `"update blueprint"` → AI appends current session's changes to the BLUEPRINT Change Log.
+- `"new project"` / `"start project"` → AI clones nearest archived BLUEPRINT + runs isolation firewall + triggers shallow scan to fill new project data.
+
+---
+
+## 🔄 6. PER-TURN AUTO-CHECK PROTOCOL (V1.4 Carried Forward)
+
+### 6.1 Mandatory Check
+- Every new user chat message → AI MUST scan root for `BLUEPRINT.md` or `APP_BLUEPRINT.md` before first tool call.
+- Both exist → `BLUEPRINT.md` wins (newer standard).
+- Read entire file on first turn; subsequent turns in same session: re-read only Change Log section.
+
+### 6.2 Write Obligation
+- Any turn modifying code, schema, or config → AI MUST append to Change Log of the **closest-scope BLUEPRINT** (project BLUEPRINT if in a sub-project; router BLUEPRINT if ecosystem-wide change).
+- Format: `### YYYY-MM-DD · [AI Name] · [Project] (brief title)` → Goal → Files changed → Outcome → Open for next AI.
+
+### 6.3 Missing File Handling
+- Valid project root + no BLUEPRINT → AI auto-generates (shallow scan, no permission needed).
+- User wants deep recursive scan → AI MUST ask permission first. If no response or refusal → skip deep scan, proceed with shallow.
+- Non-project directory → exempt.
+
+---
+
+## 📦 7. AUTO-BOOTSTRAP RULE (NEW V2.0)
+
+When AI enters any project folder for the first time (or BLUEPRINT is absent):
+
+1. Detect project type (project vs router vs exempt).
+2. Clone appropriate master template.
+3. Run **shallow scan** — detect: stack, key folders, entry files, package names, existing ignores.
+4. Fill in all auto-detectable BLUEPRINT sections (Tools Used, Structure Map, type).
+5. Leave `[placeholder]` for sections that need human input (Company info, Target Audience, Ideas).
+6. Offer to run deep scan for more detail — wait for user approval.
+7. Save the generated BLUEPRINT to project root.
+
+---
+
+## 🗄️ 8. PROJECT SCOPE ROUTING (NEW V2.0)
+
+- **Project BLUEPRINT** = records everything about that ONE folder: design, functions, changes, open tasks, ideas.
+- **Router BLUEPRINT** = records only: project list, cross-project data relationships, shared infrastructure, ecosystem-wide decisions.
+- AI MUST route Change Log entries to the correct BLUEPRINT — never duplicate logs between router and project.
+
+---
+
+## 💾 9. KNOWLEDGE ARCHIVE (NEW V2.0)
+
+When a project reaches a stable/mature state, AI saves a BLUEPRINT snapshot:
+
+- **Archive path**: `C:\Users\user\.gemini\antigravity\knowledge\4_archive\blueprints\`
+- **Filename**: `[YYYY-MM-DD]_[project-type]_[stack]_BLUEPRINT.md`
+- **Purpose**: Clone seeds for new projects of similar type.
+- **Trigger**: User says "project is done" / "archive this" / "stable now".
+
+---
+
+## 🔁 10. CLONE PROTOCOL (NEW V2.0)
+
+When user starts a new project:
+
+1. AI checks archive: `4_archive/blueprints/` for nearest match by project type + stack.
+2. If match found → clone it, run Isolation Firewall (strip all business data).
+3. Run shallow scan on new project folder → fill in detected values.
+4. Ask user if deep scan is desired.
+5. Present filled BLUEPRINT for review before saving.
+
+---
+
+## 🔗 11. IGNORE SYSTEM INTEGRATION
+
+The BLUEPRINT system and Ignore system are coupled. When generating/updating a BLUEPRINT:
+
+- AI MUST verify ignore files exist (per **APEX 13** rules).
+- If missing, auto-generate suitable ignore files (`.geminiignore` mandatory; platform-specific ones only if tool is deployed).
+- Record ignore file status in BLUEPRINT `## TOOLS USED` section.
+
+---
+*Sovereign Blueprint Protocol V2.0 — Universal across all AI models and all projects // Antigravity Tier-0 Governance // 2026-04-29*
