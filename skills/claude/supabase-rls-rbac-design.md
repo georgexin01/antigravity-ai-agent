@@ -25,615 +25,68 @@ version: 2.0
 
 # Supabase RLS and RBAC Architecture Design
 
-> Multi-project, role-based access control system with row-level security
-
----
-
-## Table of Contents
-
-1. [Overview](#overview)
-2. [Database Naming Convention](#database-naming-convention)
-3. [Architecture Diagram](#architecture-diagram)
-4. [Schema Design](#schema-design)
-5. [Roles and Permission System](#roles-and-permission-system)
-6. [Auth Hook Design](#auth-hook-design)
-7. [RLS Policies](#rls-policies)
-8. [Edge Functions](#edge-functions)
-9. [Sensitive Field Handling (View Approach)](#sensitive-field-handling-view-approach)
-10. [Security Considerations](#security-considerations)
-11. [Reference Documentation](#reference-documentation)
-
----
-
-## Overview
-
-### Project Requirements
-
-- **Multi-project isolation**: A single Supabase instance hosts multiple projects, separated by schema
-- **Centralized user management**: All users managed in the `public` schema
-- **Role-based access**: Users have roles, roles have permissions
-- **One user, one project**: Each user belongs to only one project
-- **One user, one role**: Each user has only one role
-
-### Key Technologies
-
-- Supabase Auth (authentication)
-- PostgreSQL RLS (row-level security)
-- Auth Hook (JWT custom claims injection)
-- Edge Functions (secure backend operations)
-
----
-
-## Database Naming Convention
-
-### Two-Tier Naming Convention
-
-The database uses a **two-tier** naming approach:
-
-| Schema | Convention | Reason |
-| --- | --- | --- |
-| `auth` schema | snake_case | Supabase system — cannot change |
-| `public` schema | snake_case | Fixed infrastructure shared across all projects — don't touch |
-| `{project_schema}` (e.g., `wms`, `test_school`) | **snake_case** table names, **camelCase** column names | Per-project business tables — full control |
-
-### Public Schema Tables (snake_case — fixed)
-
-Tables in the `public` schema (`project`, `role`, `user`, `otp_verification`) use **standard PostgreSQL snake_case**. These are shared infrastructure created once and used by all projects. No double-quoting needed (except for `"user"` which is a reserved word).
-
-```sql
--- public schema: snake_case, no double-quoting needed
-SELECT schema_name, is_delete, created_at FROM public.project;
-SELECT auth_id, project_id, role_id FROM public."user";  -- "user" is a reserved word
-SELECT is_system, is_delete FROM public.role;
-```
-
-### Project Schema Tables (snake_case tables, camelCase columns)
-
-Table names in project schemas use **snake_case plural** (PostgreSQL standard). Column names use **camelCase** (matching frontend TypeScript interface keys). Since column names are camelCase, they require **double-quoting** in SQL.
+> Multi-project, role-based access control system with row-level security## 1. NAMING CONVENTIONS (MANDATORY)
 
 | Object | Convention | Example |
-| --- | --- | --- |
-| Table name | snake_case **plural** | `order_details`, `stock_outs`, `vendors` |
-| Column name | camelCase (double-quoted) | `"companyName"`, `"regNo"`, `"officeTel"` |
-| FK column | camelCase singular + `Id` | `"vendorId"`, `"homeroomTeacherId"` |
-| FK display column | camelCase singular + name | `"vendorName"`, `"homeroomTeacherName"` |
-| Junction table (M2M) | snake_case | `student_teachers`, `student_subjects` |
-| Timestamp columns | camelCase (double-quoted) | `"createdAt"`, `"updatedAt"` |
-| Boolean columns | camelCase (double-quoted) | `"isDelete"`, `"isActive"` |
-| Primary key | `id` | `id UUID PRIMARY KEY` |
-| Permission table | snake_case | `{schema}.permissions` with `"roleId"`, `"isDelete"`, etc. |
+| :--- | :--- | :--- |
+| **Schema** | snake_case | `project_alpha` |
+| **Table** | snake_case plural | `order_items` |
+| **Column** | camelCase (quoted) | `"firstName"` |
+| **JWT Claim** | snake_case | `project_id` |
 
-### PostgreSQL Double-Quoting Rule
+## 2. ARCHITECTURE DIAGRAM
 
-PostgreSQL folds unquoted identifiers to lowercase. Table names are snake_case so they don't need quoting. Column names are camelCase so they **must be double-quoted**:
-
-```sql
--- Table name: snake_case (no quoting needed)
--- Column names: camelCase (must be double-quoted)
-CREATE TABLE {project_schema}.vendors (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  "companyName" TEXT NOT NULL,
-  "regNo" TEXT,
-  "officeTel" TEXT,
-  "isDelete" BOOLEAN NOT NULL DEFAULT false,
-  "createdAt" TIMESTAMPTZ NOT NULL DEFAULT now(),
-  "updatedAt" TIMESTAMPTZ NOT NULL DEFAULT now()
-);
-
--- Querying: table name unquoted, column names double-quoted
-SELECT "companyName", "regNo" FROM {project_schema}.vendors
-WHERE "isDelete" = false;
-
--- No module prefix on table names (no tms_, wms_ etc.)
--- Good: vendors, orders, order_details
--- Bad: tms_vendors, wms_orders
+```
+┌─────────────────┐       ┌──────────────────────────────┐
+│     project     │       │            user               │
+│  ─────────────  │       │  ────────────────────────     │
+│  id (uuid) PK ◄─┼───────┤  auth_id (uuid) FK ──────────► auth.users
+│  schema_name    │       │  project_id (uuid) FK          │
+└─────────────────┘       └──────────────────────────────┘
 ```
 
-### Index Naming
-
-Indexes use snake_case in all schemas:
+## 3. CORE SQL HOOKS (JWT CUSTOM CLAIMS)
 
 ```sql
--- Project schema: snake_case indexes (column names still double-quoted)
-CREATE INDEX idx_vendors_company_name ON {project_schema}.vendors("companyName");
-CREATE INDEX idx_students_homeroom_teacher_id ON {project_schema}.students("homeroomTeacherId");
-
--- Public schema: snake_case indexes
-CREATE INDEX idx_user_auth_id ON public."user"(auth_id);
-CREATE INDEX idx_project_schema_name ON public.project(schema_name);
+CREATE OR REPLACE FUNCTION public.custom_access_token_hook(event jsonb)
+RETURNS jsonb SECURITY DEFINER AS $$
+BEGIN
+  -- Inject project_id, user_role, role_level
+  claims := jsonb_set(claims, '{project_id}', to_jsonb(v_project_id));
+  claims := jsonb_set(claims, '{user_role}', to_jsonb(v_role));
+  RETURN jsonb_set(event, '{claims}', claims);
+END;
+$$;
 ```
 
-### JSONB Columns
-
-JSONB columns use camelCase for the column name (double-quoted), and keys inside the JSON also use camelCase:
+## 4. PER-PROJECT PERMISSIONS
 
 ```sql
-"contacts" JSONB DEFAULT '[]'::jsonb,
--- JSON content: [{"name": "John", "phone": "012-345", "emailAddress": "john@example.com"}]
-```
-
-### JWT Claim Keys (camelCase)
-
-JWT claim keys injected by the Auth Hook are always **camelCase**, even though the Auth Hook function lives in the public schema. This is because JWT claims are consumed by the frontend and RLS helper functions:
-
-```sql
--- JWT claims (camelCase)
-auth.jwt() ->> 'projectId'    -- project ID
-auth.jwt() ->> 'role'         -- role name
-auth.jwt() ->> 'roleLevel'    -- role permission level
-```
-
-### Why This Convention?
-
-- **public schema** is fixed infrastructure (created once, shared by all projects). Its structure follows standard PostgreSQL conventions (snake_case). We don't touch it.
-- **Project schema table names** use snake_case plural — this follows PostgreSQL standard and avoids double-quoting table names in SQL.
-- **Project schema column names** use camelCase — so column names match frontend TypeScript interface keys exactly — **zero translation needed** between database, API, and frontend. Only column names need double-quoting in SQL.
-- **No module prefix** on table names — no `tms_`, `wms_` etc. Table names are clean: `vendors`, `orders`, `order_details`.
-- **auth schema** is Supabase's system — we have no control over its naming.
-
----
-
-## Migration Script Reuse Guide
-
-### Overview
-
-Database migration scripts are divided into **fixed parts** (created only once) and **custom parts** (need to be written for each project).
-
-### Fixed Parts (Created Once)
-
-The following content only needs to be created once across the entire Supabase instance, shared by all projects:
-
-#### Part 1: public schema Tables
-
-| Table/Object | Description |
-|---------|------|
-| `public.project` | Project table - stores all project information |
-| `public.role` | Role table - global role definitions |
-| `public.user` | User table - linked to auth.users |
-| Default role data | root_admin, super_admin, admin, user, etc. |
-
-#### Part 4: public Helper Functions
-
-| Function | Description |
-|------|------|
-| `public.get_current_project_id()` | Get current project ID from JWT |
-| `public.get_current_role()` | Get current role name from JWT |
-| `public.get_current_role_level()` | Get role level from JWT |
-
-#### Part 5: public Table RLS Policies
-
-| Policy | Description |
-|------|------|
-| `public.user` policies | Users can only see/modify themselves |
-| `public.project` policies | Can only see own project |
-| `public.role` policies | All authenticated users can read |
-
-#### Part 6: Auth Hook
-
-| Function | Description |
-|------|------|
-| `public.custom_access_token_hook()` | Injects JWT claims on login (projectId, role, roleLevel) |
-
----
-
-### Custom Parts (Per Project)
-
-The following content needs to be created separately for each new project:
-
-#### Part 2: Project Schema and Business Tables
-
-```sql
--- 1. Create project schema
-CREATE SCHEMA IF NOT EXISTS {project_schema};
-
--- 2. Insert record in public.project
-INSERT INTO public.project (name, schema_name, description) VALUES
-  ('Project Name', '{project_schema}', 'Project description');
-
--- 3. Create business roles (if needed)
-INSERT INTO public.role (name, description, level, is_system) VALUES
-  ('custom_role', 'Custom role', 50, false);
-
--- 4. Create permissions table (structure is fixed, but in each project's schema)
 CREATE TABLE {project_schema}.permissions (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  "roleId" UUID NOT NULL REFERENCES public.role(id),
-  resource TEXT NOT NULL,
-  action TEXT NOT NULL,
-  scope TEXT NOT NULL DEFAULT 'none',
-  "isDelete" BOOLEAN NOT NULL DEFAULT false,
-  "createdAt" TIMESTAMPTZ NOT NULL DEFAULT now(),
-  "updatedAt" TIMESTAMPTZ NOT NULL DEFAULT now(),
-  UNIQUE("roleId", resource, action)
-);
-
--- 5. Create business tables (snake_case plural, based on project requirements)
-CREATE TABLE {project_schema}.your_entities (
-  -- field definitions
+  id UUID PRIMARY KEY,
+  "roleId" UUID REFERENCES public.role(id),
+  resource TEXT,
+  action TEXT,
+  scope TEXT DEFAULT 'none'
 );
 ```
 
-#### Part 3: Permission Data
-
-Each project needs to insert permission records based on business requirements:
+## 5. RLS POLICY PATTERN
 
 ```sql
-INSERT INTO {project_schema}.permissions ("roleId", resource, action, scope) VALUES
-  -- Define based on business requirements
-  ((SELECT id FROM public.role WHERE name = 'admin'), 'entities', 'read', 'all'),
-  ((SELECT id FROM public.role WHERE name = 'user'), 'entities', 'read', 'own');
-```
-
-#### Part 4: Project Schema Helper Functions
-
-Need to be created in each project schema (just replace the schema name):
-
-```sql
--- Check permission and return scope
-CREATE OR REPLACE FUNCTION {project_schema}.get_permission_scope(
-  p_resource text,
-  p_action text
-)
-RETURNS text
-LANGUAGE sql
-STABLE
-SECURITY DEFINER
-AS $$
-  SELECT COALESCE(
-    (
-      SELECT scope
-      FROM {project_schema}.permissions p
-      JOIN public.role r ON p."roleId" = r.id
-      WHERE r.name = public.get_current_role()
-        AND p.resource = p_resource
-        AND p.action = p_action
-        AND p."isDelete" = false
-    ),
-    'none'
-  );
-$$;
-
--- RLS authorization function
-CREATE OR REPLACE FUNCTION {project_schema}.authorize(
-  p_resource text,
-  p_action text
-)
-RETURNS boolean
-LANGUAGE sql
-STABLE
-SECURITY DEFINER
-AS $$
-  SELECT {project_schema}.get_permission_scope(p_resource, p_action) != 'none';
-$$;
-```
-
-#### Part 5: Project Schema RLS Policies
-
-Need to write RLS policies for each business table based on business logic:
-
-```sql
--- Enable RLS
-ALTER TABLE {project_schema}.your_entities ENABLE ROW LEVEL SECURITY;
-
--- Write policies based on business logic
-CREATE POLICY "entities_select" ON {project_schema}.your_entities
-FOR SELECT TO authenticated
-USING (
+CREATE POLICY "dynamic_access" ON {project_schema}.entities
+FOR SELECT USING (
   CASE
-    WHEN {project_schema}.get_permission_scope('entities', 'read') = 'all' THEN
-      "isDelete" = false
-    WHEN {project_schema}.get_permission_scope('entities', 'read') = 'own' THEN
-      "isDelete" = false AND "userId" = (SELECT id FROM public."user" WHERE auth_id = auth.uid())
+    WHEN {project_schema}.authorize('entities', 'read') THEN
+      "project_id" = (auth.jwt() ->> 'project_id')::uuid
     ELSE false
   END
 );
 ```
 
 ---
-
-### New Project Checklist
-
-```
-□ 1. Create schema: CREATE SCHEMA IF NOT EXISTS {schema_name}
-□ 2. Insert project record into public.project
-□ 3. Create business roles (if new roles are needed)
-□ 4. Create {schema_name}.permissions table
-□ 5. Create business tables (teachers, students, etc.) — snake_case plural
-□ 6. Insert permission data into {schema_name}.permissions
-□ 7. Create {schema_name}.get_permission_scope() function
-□ 8. Create {schema_name}.authorize() function
-□ 9. Enable RLS and create policies for each business table
-□ 10. Test data access for each role
-```
-
----
-
-## Architecture Diagram
-
-### Overall Structure
-
-```
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                              auth schema                                    │
-│                           (Managed by Supabase)                             │
-├─────────────────────────────────────────────────────────────────────────────┤
-│                                                                             │
-│  ┌─────────────────────────────────────────┐                                │
-│  │             auth.users                  │                                │
-│  │  ───────────────────────────────────    │                                │
-│  │  id (uuid) ◄────────────────────────────┼──────────┐                     │
-│  │  email                                  │          │                     │
-│  │  encrypted_password                     │          │                     │
-│  │  raw_app_metadata (jsonb) ──────────────┼───┐      │                     │
-│  │    {                                    │   │      │                     │
-│  │      "projectId": "xxx",                │   │      │                     │
-│  │      "role": "teacher"                  │   │ JWT  │                     │
-│  │    }                                    │   │ injection                  │
-│  │  created_at, updated_at                 │   │      │                     │
-│  └─────────────────────────────────────────┘   │      │                     │
-│                                                │      │                     │
-└────────────────────────────────────────────────┼──────┼─────────────────────┘
-                                                 │      │
-                    Auth Hook dynamic injection ─┘      │ auth_id
-                                                        │
-┌───────────────────────────────────────────────────────┼─────────────────────┐
-│                           public schema               │                     │
-│                        (Management layer -            │                     │
-│                         protected by RLS)             │                     │
-├───────────────────────────────────────────────────────┼─────────────────────┤
-│                                                       │                     │
-│  ┌─────────────────┐       ┌──────────────────────────┴────┐                │
-│  │     project     │       │            user               │                │
-│  │  ─────────────  │       │  ────────────────────────     │                │
-│  │  id (uuid) PK ◄─┼───────┤  id (uuid) PK                 │                │
-│  │  name           │       │  auth_id (uuid) FK ────────────┼─► auth.users   │
-│  │  schema_name    │       │  project_id (uuid) FK          │                │
-│  │  status         │       │  role_id (uuid) FK ────────────┼───┐            │
-│  │  created_at     │       │  name                         │   │            │
-│  │  updated_at     │       │  email                        │   │            │
-│  └─────────────────┘       │  status                       │   │            │
-│                            │  created_at, updated_at       │   │            │
-│                            └───────────────────────────────┘   │            │
-│                                                                │            │
-│  ┌─────────────────────────────────────────────────────────────┴──┐         │
-│  │                          role                                  │         │
-│  │  ────────────────────────────────────────────────────────────  │         │
-│  │  id (uuid) PK                                                  │         │
-│  │  name (root_admin, super_admin, admin, user, teacher, student) │         │
-│  │  description                                                   │         │
-│  │  level (permission level: 0=highest, 100=lowest)               │         │
-│  │  created_at, updated_at                                        │         │
-│  └────────────────────────────────────────────────────────────────┘         │
-│                                                                             │
-│  RLS Policies:                                                              │
-│  ├── user: can only see self (auth.uid() = auth_id)                        │
-│  ├── project: can only see own project                                     │
-│  └── role: all authenticated users can read (public role list)             │
-│                                                                             │
-└─────────────────────────────────────────────────────────────────────────────┘
-                                     │
-                                     │ projectId + role determine access
-                                     ▼
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                         test_school schema                                  │
-│                        (Project business layer -                            │
-│                         protected by RLS)                                   │
-├─────────────────────────────────────────────────────────────────────────────┤
-│                                                                             │
-│  ┌──────────────────────────────────────────────────────────────┐           │
-│  │                      permissions                             │           │
-│  │  ──────────────────────────────────────────────────────────  │           │
-│  │  id (uuid) PK                                                │           │
-│  │  roleId (uuid) FK ──────────────────────────► public.role    │           │
-│  │  resource (student, teacher, subject)                        │           │
-│  │  action (create, read, update, delete)                       │           │
-│  │  scope (all, own, none)                                      │           │
-│  │  UNIQUE(roleId, resource, action)                            │           │
-│  └──────────────────────────────────────────────────────────────┘           │
-│                                                                             │
-│  ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐          │
-│  │    teachers     │    │    students     │    │    subjects     │          │
-│  │  ─────────────  │    │  ─────────────  │    │  ─────────────  │          │
-│  │  id (uuid) PK ◄─┼────┤  homeroom       │    │  id (uuid) PK   │          │
-│  │  userId FK ─────┼─┐  │  TeacherId FK   │    │  name           │          │
-│  │  name           │ │  │  id (uuid) PK   │    │  description    │          │
-│  │  email          │ │  │  userId FK ─────┼─┐  │  status         │          │
-│  │  phone          │ │  │  name           │ │  └─────────────────┘          │
-│  │  salary         │ │  │  email          │ │           ▲                   │
-│  │  status         │ │  │  phone          │ │           │                   │
-│  └─────────────────┘ │  │  status         │ │           │                   │
-│          ▲           │  └─────────────────┘ │           │                   │
-│          │           │          ▲           │           │                   │
-│          │           └──────────┼───────────┘           │                   │
-│          │                      │ public.user           │                   │
-│          │                      │                       │                   │
-│  ┌───────┴──────────────────────┴───────────────────────┴───────┐           │
-│  │                    M:N Junction Tables                        │           │
-│  ├──────────────────────────────────────────────────────────────┤           │
-│  │  ┌─────────────────────┐      ┌─────────────────────┐        │           │
-│  │  │ student_teachers    │      │ student_subjects    │        │           │
-│  │  │  ─────────────────  │      │  ─────────────────  │        │           │
-│  │  │  id (uuid) PK       │      │  id (uuid) PK       │        │           │
-│  │  │  studentId FK       │      │  studentId FK       │        │           │
-│  │  │  teacherId FK       │      │  subjectId FK       │        │           │
-│  │  │  createdAt          │      │  createdAt          │        │           │
-│  │  └─────────────────────┘      └─────────────────────┘        │           │
-│  └──────────────────────────────────────────────────────────────┘           │
-│                                                                             │
-└─────────────────────────────────────────────────────────────────────────────┘
-```
-
-### Access Flow
-
-```
-User request GET /rest/v1/students
-           │
-           ▼
-┌─────────────────────────┐
-│ 1. Supabase Auth verify  │
-│    Check JWT Token       │
-│    Get auth.uid()        │
-└───────────┬─────────────┘
-            │
-            ▼
-┌─────────────────────────┐
-│ 2. Get info from JWT     │
-│    projectId = ?         │
-│    role = ?              │
-└───────────┬─────────────┘
-            │
-            ▼
-┌─────────────────────────┐
-│ 3. RLS Policy check      │
-│    ├─ Project isolation  │
-│    │  projectId match?   │
-│    │                     │
-│    ├─ Permission check   │
-│    │  authorize(         │
-│    │    'students',      │
-│    │    'read'           │
-│    │  ) = true?          │
-│    │                     │
-│    └─ Scope check        │
-│       scope = 'own'?     │
-│       → return own data  │
-│       scope = 'all'?     │
-│       → return all data  │
-└───────────┬─────────────┘
-            │
-            ▼
-┌─────────────────────────┐
-│ 4. Return data           │
-│    Only rows passing     │
-│    all checks            │
-└─────────────────────────┘
-```
-
----
-
-## Schema Design
-
-### public.project
-
-```sql
-CREATE TABLE public.project (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  name TEXT NOT NULL,
-  schema_name TEXT NOT NULL UNIQUE,  -- e.g., 'test_school'
-  description TEXT,
-  status TEXT NOT NULL DEFAULT 'active',  -- active, inactive
-  is_delete BOOLEAN NOT NULL DEFAULT false,
-  created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
-  updated_at TIMESTAMPTZ NOT NULL DEFAULT now()
-);
-
-CREATE INDEX idx_project_schema_name ON public.project(schema_name);
-```
-
-### public.role
-
-```sql
-CREATE TABLE public.role (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  name TEXT NOT NULL UNIQUE,
-  description TEXT,
-  level INT NOT NULL DEFAULT 100,  -- 0=highest permission, 100=lowest
-  is_system BOOLEAN NOT NULL DEFAULT false,  -- system roles cannot be deleted
-  is_delete BOOLEAN NOT NULL DEFAULT false,
-  created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
-  updated_at TIMESTAMPTZ NOT NULL DEFAULT now()
-);
-
-CREATE INDEX idx_role_name ON public.role(name);
-CREATE INDEX idx_role_level ON public.role(level);
-
--- Insert default roles
-INSERT INTO public.role (name, description, level, is_system) VALUES
-  ('root_admin', 'Super administrator - full system access', 0, true),
-  ('super_admin', 'Project super admin - full project access', 10, true),
-  ('admin', 'Administrator - project management', 20, true),
-  ('user', 'Regular user - minimum access', 100, true),
-  ('teacher', 'Teacher - manage own students', 50, false),
-  ('student', 'Student - view own data', 60, false);
-```
-
-### public.user
-
-```sql
-CREATE TABLE public."user" (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  auth_id UUID UNIQUE REFERENCES auth.users(id) ON DELETE CASCADE,
-  project_id UUID REFERENCES public.project(id),
-  role_id UUID NOT NULL REFERENCES public.role(id),
-  name TEXT NOT NULL,
-  email TEXT,  -- optional, at least one of email/phone required
-  phone TEXT,  -- optional, at least one of email/phone required
-  avatar_url TEXT,
-  status TEXT NOT NULL DEFAULT 'active',  -- active, inactive, banned
-  is_delete BOOLEAN NOT NULL DEFAULT false,
-  created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
-  updated_at TIMESTAMPTZ NOT NULL DEFAULT now(),
-
-  -- Ensure at least email or phone
-  CONSTRAINT user_email_or_phone CHECK (email IS NOT NULL OR phone IS NOT NULL)
-);
-
--- Indexes
-CREATE INDEX idx_user_auth_id ON public."user"(auth_id);
-CREATE INDEX idx_user_project_id ON public."user"(project_id);
-CREATE INDEX idx_user_role_id ON public."user"(role_id);
-CREATE INDEX idx_user_email ON public."user"(email);
-CREATE INDEX idx_user_phone ON public."user"(phone);
-
--- Partial unique index: email cannot duplicate within same project (allows NULL)
-CREATE UNIQUE INDEX idx_user_email_project_id
-ON public."user"(email, project_id)
-WHERE email IS NOT NULL;
-
--- Partial unique index: phone cannot duplicate within same project (allows NULL)
-CREATE UNIQUE INDEX idx_user_phone_project_id
-ON public."user"(phone, project_id)
-WHERE phone IS NOT NULL;
-```
-
-### {project_schema}.permissions
-
-```sql
--- Example: test_school.permissions
-CREATE TABLE test_school.permissions (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  "roleId" UUID NOT NULL REFERENCES public.role(id),
-  resource TEXT NOT NULL,  -- 'students', 'teachers', 'subjects'
-  action TEXT NOT NULL,    -- 'create', 'read', 'update', 'delete'
-  scope TEXT NOT NULL DEFAULT 'none',  -- 'all', 'own', 'none'
-  "isDelete" BOOLEAN NOT NULL DEFAULT false,
-  "createdAt" TIMESTAMPTZ NOT NULL DEFAULT now(),
-  "updatedAt" TIMESTAMPTZ NOT NULL DEFAULT now(),
-
-  UNIQUE("roleId", resource, action)
-);
-
-CREATE INDEX idx_permissions_role_id ON test_school.permissions("roleId");
-CREATE INDEX idx_permissions_resource ON test_school.permissions(resource);
-```
-
----
-
-## Roles and Permission System
-
-### Role Hierarchy
-
-```
-┌─────────────────────────────────────────────────────────────┐
-│                       Role Hierarchy                         │
-├─────────────────────────────────────────────────────────────┤
-│                                                             │
-│  System roles (fixed)                                       │
-│  ├── root_admin   (level=0)   → Highest permission,        │
-│  │                              cross-project               │
-│  ├── super_admin  (level=10)  → Project owner               │
-│  ├── admin        (level=20)  → Project administrator       │
-│  └── user         (level=100) → Basic access, lowest        │
+**Supabase RLS/RBAC Protocol V2.1 (Mini-Pulse) — 2026-05-01**
+ user         (level=100) → Basic access, lowest        │
 │                                                             │
 │  Business roles (per project)                               │
 │  ├── teacher      (level=50)  → test_school project         │

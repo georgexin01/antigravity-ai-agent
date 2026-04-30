@@ -1,47 +1,67 @@
-# Track only important folders
+# ==========================================
+# ANTIGRAVITY SOVEREIGN DISTRIBUTION FILTER
+# ==========================================
+
+# Default: Ignore Everything
 *
 
-# Keep skills & knowledge (core AI knowledge base)
-!skills/
-!skills/**
+# WHITELIST: Core Logic & AI Assets (SHAREABLE)
+!README.md
+!.gitignore
+!.geminiignore
+!route.yaml
+!route.json
+!skills.txt
+!Sovereign_PatchDNA.ps1
+
+# WHITELIST: Knowledge Base & Skills
 !knowledge/
 !knowledge/**
+!skills/
+!skills/**
 
-# Keep scratch (context menu setup scripts)
+# WHITELIST: Governance & Tools
+!governance/
+!governance/**
+!prompting/
+!prompting/**
+!motion_design_dna/
+!motion_design_dna/**
 !scratch/
 !scratch/**
 
-# Keep code_tracker (project work)
-!code_tracker/
-!code_tracker/**
-
-# Keep repo essentials
-!README.md
-!.gitignore
-!route.yaml
-!route.json
-!*route*.md
-!*route*.json
-!*route*.yaml
-
-# Ignore agent-memory (nested git repo with admin ownership, not trackable from parent)
-skills/_shared/agent-memory/
-skills/_shared/agent-memory/**
-
-# Ignore converter archive (safety net from hybrid migration, not for version control)
-.archive/
-.archive/**
-
-# Ignore Bloat & Large Retrospective Artifacts
-browser_recordings/
+# ------------------------------------------
+# BLACKLIST: Private Intelligence & Session Data (DO NOT SHARE)
+# ------------------------------------------
+brain/
+brain/**
+vault/
+vault/**
+memory/
+memory/**
 conversations/
+conversations/**
+browser_recordings/
+browser_recordings/**
 html_artifacts/
-brain/tempmediaStorage/
-*.zip
-*.log
+html_artifacts/**
+implicit/
+implicit/**
 
-# Ignore secrets / local config
+# Logs, Binaries & Bloat
+*.log
+*.pb
+audit_errors.log
+timestamps.json
+knowledge.lock
+tempmediaStorage/
+node_modules/
+.DS_Store
+Thumbs.db
+
+# Secrets & Local Config
 mcp_config.json
 *.env
 .env
 .env.*
+installation_id

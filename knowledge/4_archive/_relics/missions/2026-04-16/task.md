@@ -1,9 +1,0 @@
-- `[x]` Phase 1: Atomic Fragmentation (Splitting DNA)
-- `[x]` Phase 2: Create `JIT_MANIFEST.yaml`
-- `[x]` Phase 3: Minify Vitals to `JIT_VITALS.md`
-- `[x]` Phase 4: Patch `GROUND_KERNEL.md` (V15.0 JIT Law)
-- `[x]` Phase 5: Auto-Purge Legacy DNA to `.relics`
-- `[x]` Verification: Triggered Node Test
-- `[x]` AI Agent Knowledge Sync (V10 Singularity Recall)
-- `[ ]` Step 1: Harden Supabase Local-First auth (Queue Priority 1)
-- `[ ]` Step 2: Finalize high-fidelity PWA components (Queue Priority 2)

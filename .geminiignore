@@ -1,0 +1,21 @@
+﻿# Sovereign Apex Ignore List (V15.2)
+# Slashing token noise for Gemini 3 Flash / Claude
+
+# Brain Noise
+brain/logs/
+brain/scratch/
+
+# Conversations
+conversations/*.pb
+conversations/*.json
+
+# Legacy noise
+*.metadata.json
+*.resolved
+*.resolved.*
+timestamps.json
+
+# Local Dev Noise
+node_modules/
+dist/
+.env

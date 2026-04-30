@@ -1,0 +1,26 @@
+# SOVEREIGN DNA SCHEMA (V1.0)
+# -----------------------------------------------------
+# Use this schema to validate all AI-generated YAML.
+# Missing required keys or invalid priorities will result in rejection.
+
+dna_structure:
+  required: [v, n, rules]
+  optional: [mandate, logic, agency, _t, c]
+
+priority_rules:
+  min: 0.0
+  max: 15.0
+  step: 0.01
+
+metadata_rules:
+  _t: "Thought Trace - Mandatory for rules with c < 0.8"
+  c: "Confidence score (0.01 to 1.00)"
+
+categories:
+  - kernel.logic
+  - mode.claude
+  - mode.faucet
+  - mode.openclaw
+  - mode.normal
+  - tech.nexus
+  - intel.evol

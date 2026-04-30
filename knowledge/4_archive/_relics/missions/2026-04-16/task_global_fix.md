@@ -1,9 +1,0 @@
-- `[ ]` **Phase 1: Global Security Rollout**
-    - `[ ]` Create `027_global_rls_policies.sql` (Unlocking lessons, questions, etc.)
-    - `[ ]` Execute Sequential Policy Injection via CLI
-- `[ ]` **Phase 2: Relational Seeding**
-    - `[ ]` Create `028_seed_lessons_data.sql`
-    - `[ ]` Seed `user_lessons` (Agent <-> Lesson links)
-- `[ ]` **Phase 3: Verification**
-    - `[ ]` Verify Admin Panel visibility (Lessons/Questions)
-    - `[ ]` Verify Student WebApp visibility (`/courses`)

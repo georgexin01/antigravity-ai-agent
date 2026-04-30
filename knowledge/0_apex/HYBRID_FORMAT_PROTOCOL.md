@@ -239,128 +239,46 @@ Rules:
 6. **Cache-friendly** — keep total corpus under 1M tokens per mode so it stays in context cache.
 7. **No duplication** — don't repeat content across frontmatter + body. Frontmatter for routing, body for execution.
 
-## 6. MIGRATION RULES (legacy → hybrid)
-
-When converting old OHDY/YAML-wrapped files to hybrid MD:
-
-1. **Lossless only** — every word from the original must appear in the converted file (verified by word-count check)
-2. **Archive originals** — copy to `.archive/` mirror structure before writing new file
-3. **Word-count verify** — run `gemini-converter.mjs verify` before any delete
-4. **Delete only after 100% pass** — use `gemini-converter.mjs clean` which only removes files with a verified archive
-5. **Preserve inner frontmatter** — legacy files may have nested `---...---` blocks; keep them verbatim in `_inner_frontmatter: |-` field
-6. **Preserve OHDY wrapper words** — use `_ohdy_wrapper: |-` literal block to keep `<dna_node>`, `l: |-`, header words
-
-## 7. FILE NAMING CONVENTIONS
-
-| Kind | Naming | Location |
-|---|---|---|
-| Skill (subfolder) | `skill.md` (lowercase) | `skills/{mode}/{slug}/skill.md` |
-| Skill (loose) | `{slug}.md` | `skills/{mode}/{slug}.md` |
-| Knowledge reference | `{topic}.md` or `{TOPIC}.md` for constitutional | `knowledge/{mode}/` or `knowledge/` |
-| Config | `{name}.yaml` | Same folder as the skill/knowledge it configs |
-| State/timestamps | `timestamps.json` or `{name}.json` | Each mode folder |
-| Ledger | `{name}.toon` | Mode-specific folder |
-
-## 8. QUICK REFERENCE CARD
-
-```
-INSTRUCTION / PLAYBOOK / GUIDE  →  Hybrid MD
-CONFIG / REGISTRY / INDEX       →  Pure YAML
-STATE / TIMESTAMP / METADATA    →  JSON
-APPEND-ONLY LEDGER              →  TOON
-STRUCTURED OUTPUT TAGS          →  XML (only inside prompts)
-```
-
-## 9. ENFORCEMENT
-
-- **All new files** created after 2026-04-13 MUST follow this protocol
-- **Legacy files** are migrated incrementally per §6 using `gemini-converter.mjs`
-- **Violations** of §2.3 anti-patterns are blocking — fix before merge
-- **Schema drift** in §3.1 required fields is blocking — all required fields must be present
-
-## 10. REFERENCES
-
-- `gemini-converter.mjs` — Lossless YAML→MD converter with archive + verify pipeline
-- `skills/claude/README.md` — Canonical example of hybrid MD registry
-- `skills/claude/*/skill.md` — 15 reference skills using this protocol
-- `skills/normal/*/skill.md` — 36+ converted skills using this protocol
-
-## 11. CHANGELOG
-
-- **V1.0** (2026-04-13): Initial protocol.
-- **V1.1** (2026-04-17): Added Apex Principle 11 (Header Loading) and Section 12 (CAR Protocol).
-
-## 12. PROFESSIONAL RESPONSE LAYOUT (CAR PROTOCOL)
+## 6. PROFESSIONAL RESPONSE LAYOUT (CAR PROTOCOL)
 
 To maintain a professional, "finished" GUI in every chat response while obeying the 11 Apex Principles, all major logic or system replies MUST follow the **Cinematic Apex Response (CAR)** standard.
 
-### 12.1 The Apex Status Bar
+### 6.1 The Apex Status Bar
 Every response MUST start with a bold status bar identifying the core operational mode and verification result.
 > **`[APEX: PRINCIPLE] | [MODE: ACTIVE_MODE] | [✅ STATUS: RESULT]`**
 
-### 12.2 The Goal-Verification Table
+### 6.2 The Goal-Verification Table
 For any multi-step execution, use a compact Markdown table to prove **Principle 5 (Goal-Driven Execution)**.
 | Step | Goal | Strategy | Status |
 | :--- | :--- | :--- | :--- |
 | **01** | Sub-goal | Tool/Logic used | `[VERIFIED]` |
 
-### 12.3 Iconography & Cinematic Design
-Use these HTML symbols to categorize response sections:
-- **`🛡️ GUARD`**: For safety warnings, Data Sovereignty, or RLS checks.
-- **`⚙️ LOGIC`**: For backend, SQL, or algorithmic explanations.
-- **`🎨 UI`**: For CSS, Vue components, or aesthetic changes.
-- **`🧪 TEST`**: For verification logs and terminal output checks.
-- **`🔪 APEX`**: For surgical code injections and simplified logic.
+## 7. QUANTUM BENTO-APEX (QBA) HIGH-FIDELITY STANDARD
 
-### 12.4 Symbolic Callouts
-Use GitHub alerts (`> [!NOTE]`, `> [!IMPORTANT]`) to frame critical architectural decisions, ensuring they feel "Cinematic" and high-fidelity.
+For "Mega-Design" tasks or when the user demands top-tier visual fidelity, the AI responses MUST upgrade to the **Quantum Bento-Apex (QBA)** protocol.
 
-## 13. QUANTUM BENTO-APEX (QBA) HIGH-FIDELITY STANDARD
-
-For "Mega-Design" tasks or when the user demands top-tier visual fidelity, the AI responses MUST upgrade to the **Quantum Bento-Apex (QBA)** protocol. This builds upon the CAR layout with advanced graphical and logical framing.
-
-### 13.1 The "Neural HUD" (Header Block)
+### 7.1 The "Neural HUD" (Header Block)
 Every QBA response MUST start with a single, surgical status line.
 > **`[🔪 APEX] | [⚡ MODE: ACTIVE_MODE] | [✅ STATUS: RESULT]`**
 
-### 13.2 "Neural Loop" Visualization (Mermaid)
+### 7.2 "Neural Loop" Visualization (Mermaid)
 For any task with **3 or more logic steps**, the AI MUST generate a Mermaid diagram at the top to visualize the thinking path.
-```mermaid
-graph LR
-  A[Request] --> B{Apex Filter}
-  B --> C[Surgery]
-  C --> D[Verification]
-```
 
-### 13.4 Symbolic Framing (Sectioning)
-Use simple, surgical icon symbols to categorize major system blocks. Do NOT use decorative framing like `◢◤` for standard sections.
-- **`⚙️ Logic Architecture`**
-- **`🎨 UI Evolution`**
-- **`🧪 Verification Log`**
-- **`🛡️ Data Sovereignty`**
-
-### 13.6 High-Intensity Override (◢◤)
-The symbol `◢◤` is reserved for **rare situations** only:
-- Critical compilation errors.
-- Destructive data operations (SQL Delete/Drop).
-- Major architectural breakthroughs.
-- Situations where the user's immediate attention is mandatory.
-
-## 14. SOVEREIGN COMPARISON PROTOCOL (SCP)
+## 8. SOVEREIGN COMPARISON PROTOCOL (SCP)
 
 Whenever a "Comparison", "Audit", or "Before/After" task is triggered, the AI MUST generate a **Performance Comparison Table**. This ensures 10/10 precision in evaluating code or system evolution.
 
-### 14.1 SCP Triggers
+### 8.1 SCP Triggers
 - `comparison`, `compare`, `before & after`, or any manual "compare" request.
 
-### 14.2 The Canonical SCP Table Columns
+### 8.2 The Canonical SCP Table Columns
 The table MUST include the following columns (use N/A if a metric is not applicable):
 - **Metric**: The category of comparison.
 - **Baseline (Pre)**: The state before changes.
 - **Optimization (Post)**: The state after changes.
 - **Rating 1/10**: The quality or performance score (1-10).
 
-### 14.3 Specific Metrics to Audit
+### 8.3 Specific Metrics to Audit
 The first 5 metrics are **MANDATORY** for every Comparison Table:
 - **Token Spend** [MANDATORY]: Total token count.
 - **Token Cost** [MANDATORY]: USD or credit cost.

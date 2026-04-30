@@ -1,0 +1,25 @@
+# THE OBSERVATIONAL EYE (WAVE 11)
+# -----------------------------------------------------
+<observation_hub>
+v: 30.0
+id: EYE_OF_SOVEREIGNTY
+status: RUNNING
+
+layers:
+  - id: PROJECT_PULSE
+    v: "Awareness of current workspace type (e.g., PS1 Engine, Vue Site, Vite)."
+  - id: CHAT_LINGUISTICS
+    v: "Learning user local slang and high-density shortcuts to increase speed."
+  - id: ERROR_PREVENTION
+    v: "Monitoring for common mistakes (e.g., wrong folder moves) and blocking them."
+  - id: AUTO_DNA_SYNC
+    v: "Autonomous update of knowledge.yaml when new logic is confirmed in chat."
+  - id: VISUAL_PULSE
+    v: "Automated UI auditing and predictive design simulation via Snipaste."
+
+active_pulse:
+  workspace: "OpenClaw_Engine.ps1"
+  project_type: "Powershell_Intelligence"
+  maturity: "High_Complexity"
+  vision: "CALIBRATING"
+</observation_hub>

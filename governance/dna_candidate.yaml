@@ -1,0 +1,12 @@
+# DNA CANDIDATE SANDBOX (V1.0)
+# -----------------------------------------------------
+# New rules are tested here for 1 session before being merged into the Hub.
+# If a rule fails, its confidence (c:) score is docked.
+# If c: drops below 0.3, it is auto-deleted from the sandbox.
+
+candidates:
+  - id: CAND-SYNC-01
+    n: Global_Search_Optimization
+    v: Use SearXNG instead of Google for all tech-heavy tech_stack queries.
+    c: 0.7
+    _t: Search depth is higher on SearXNG for documentation.

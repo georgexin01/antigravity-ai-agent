@@ -1,9 +1,0 @@
-- `[x]` **Phase 1: Environment Synchronization** (Completed in previous turn)
-- `[x]` **Phase 2: Auth Provider Stabilization**
-    - `[x]` Update `fetchUserInfoByAuthId` to use `maybeSingle()`
-    - `[x]` Add explicit "Profile Missing" diagnostic error
-- `[x]` **Phase 3: Database Seeding**
-    - `[x]` Create `025_seed_admin_profile.sql`
-    - `[ ]` Instruct user to execute seeding SQL in Supabase Dashboard
-- `[/]` **Phase 4: Verification**
-    - `[ ]` Verify login at http://localhost:5666
