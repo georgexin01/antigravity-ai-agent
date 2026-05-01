@@ -29,6 +29,10 @@ topology:
         file: "templates/MASTER_BLUEPRINT.md"
         triggers: ["master blueprint", "blueprint template", "new blueprint", "generate blueprint", "sample blueprint"]
         desc: "Tier-0 Master Blueprint (V1.8 Industrial) — Authoritative global reference template for website and webApp design. Supports continuous evolution."
+      - name: MASTER_DESIGN
+        file: "templates/MASTER_DESIGN.md"
+        triggers: ["master design", "design template", "new design", "generate design", "sample design"]
+        desc: "Tier-0 Master Design (V1.0 Industrial) — Authoritative visual identity template based on Google DESIGN.md."
 
   tier_1_core:
     path: "1_core/"
@@ -56,6 +60,10 @@ topology:
         file: "blueprints/SBLF_MASTER_BLUEPRINT.md"
         triggers: ["sblf", "trash container", "垃圾桶", "blueprint example", "example blueprint"]
         desc: "Reference filled-in blueprint (V1.1) — dual webApp SBLF trash-container management system. Concrete example of the master template applied."
+      - name: multi_agent_patterns
+        file: "MULTI_AGENT_PATTERNS.md"
+        triggers: ["multi-agent", "agentic", "gv-loop", "cost-routing", "context-hygiene", "notebooklm"]
+        desc: "Tier-1 Core (V1.0) — Authoritative multi-agent coordination modes, context engineering, and NotebookLM integration."
 
   tier_2_governance:
     path: "2_governance/"
@@ -63,6 +71,14 @@ topology:
       - name: AOE_PROTOCOL
         file: "AOE_PROTOCOL.md"
         triggers: ["security", "tier", "handshake", "aoe", "shared", "claude", "faucet", "openclaw"]
+      - name: design_protocol
+        file: "DESIGN_PROTOCOL.md"
+        triggers: ["design.md", "tokens", "aesthetics", "visual identity", "anti-slop"]
+        desc: "Tier-2 Governance (V1.0) — Authoritative rulebook for Google DESIGN.md integration."
+      - name: library_intelligence_protocol
+        file: "LIBRARY_INTELLIGENCE_PROTOCOL.md"
+        triggers: ["library", "wiki", "knowledge-layering", "flywheel", "dna-sandbox"]
+        desc: "Tier-2 Governance (V1.0) — Authoritative standard for the 3-layer Library Intelligence (LI) architecture."
       - name: sovereign_framework_mastery
         file: "sovereign_framework_mastery.md"
         triggers: ["claude", "swf", "sovereign", "industrial", "relationship drawer", "tray", "layers"]

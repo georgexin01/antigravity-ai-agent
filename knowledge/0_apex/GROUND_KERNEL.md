@@ -49,6 +49,7 @@ The sovereign master directive for JIT activation and agentic behavior. Optimize
 14. **Neural Routing Sync (APEX 14)**: After any Tier-0/1/2 modification, AI MUST synchronize BOTH `C:\Users\User\.gemini\antigravity\route.yaml` (Human) and `route.json` (Machine).
 15. **Neural State Maintenance (APEX 15)**: AI MUST update `memory/PULSE.json` at the conclusion of every high-priority turn to maintain cross-session state hydration.
 16. **Blueprint Brain Enforcement (APEX 16)**: Every project folder containing a recognizable project root indicator (`package.json`, `composer.json`, `index.php`, `pnpm-workspace.yaml`) — in **ANY project, past or future** — MUST have a `BLUEPRINT.md`. AI auto-generates one (shallow scan, no permission) if missing. AI MUST read the project BLUEPRINT before any code change. AI MUST append to the correct BLUEPRINT Change Log on every turn that modifies code, schema, or config. Router BLUEPRINT for multi-project roots; Project BLUEPRINT for single-project folders. See `SOVEREIGN_BLUEPRINT_PROTOCOL.md` V2.0 for full rules.
+17. **Grounded Research Mandate (APEX 17)**: AI MUST utilize **NotebookLM** for all research operations (Small, Medium, or Large). This is a mandatory standard for ensuring grounded accuracy and eliminating context bloat. AI MUST prioritize local research cache first, followed by silent NotebookLM harvesting. All new intelligence MUST be staged in the **DNA Sandbox** for "Consensus Verification" before Tier-1 promotion.
 <!-- END -->
 
 ## 🛡️ 3. SOVEREIGN LOCKDOWN (TIER-0)

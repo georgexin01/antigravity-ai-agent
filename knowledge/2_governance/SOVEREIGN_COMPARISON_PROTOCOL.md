@@ -32,10 +32,15 @@ Use this as the "High Fidelity" reference for data-heavy missions.
 | **Path Integrity** | 181+ Broken Links | **0 Broken Links** | 10/10 |
 | **Portability** | Machine-Bound | **Universal (Relative)** | 10/10 |
 
-## 🛠️ 3. MANDATORY USAGE
-- **Trigger**: Any request for "comparison", "compare", [before], or [after].
-- **Formatting**: Use Markdown tables only. No prose summaries for data comparisons.
-- **Rating**: Provide a subjective but engineering-grounded score (1-10) for every metric.
+## 📈 4. MULTI-AGENT BETTERMENT BENCHMARKS (V1.1)
+When evaluating "Agentic Upgrades" or system evolutions, AI MUST include these 4 core pillars:
+
+| Betterment Pillar | Before (Monolithic AI) | After (Agentic Stack) | Efficiency Impact |
+| :--- | :--- | :--- | :--- |
+| **Context Engineering** | Bulk Reading (Context Bloat) | Surgical Retrieval (Hygiene) | **Thousands of Tokens Saved** |
+| **GV-Loop Fidelity** | High Error Rate (Retry Loops) | Internal Verifier (Audit) | **9.5/10 1st Draft Success** |
+| **Cost Routing** | Fixed High-Cost (Expensive) | Dynamic Triage (Flash/Pro) | **~85% Financial Savings** |
+| **Skill Evolution** | Monolithic Skills (Rigid) | Orchestrated Nodes (Liquid) | **Multi-Agent Coordination** |
 
 ---
-**SCP V1.0 — Sovereign Comparison Standard (2026-04-20)**
+**SCP V1.1 — Sovereign Comparison Standard (2026-05-01)**

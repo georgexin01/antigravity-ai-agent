@@ -17,10 +17,10 @@ accepted_filenames: ["BLUEPRINT.md", "APP_BLUEPRINT.md"]
 
 ## ⚖️ 1. MANDATORY RULES
 
-1. **Blueprint First**: Every project folder containing a recognizable project root indicator (`package.json`, `composer.json`, `index.php`, `pnpm-workspace.yaml`, `requirements.txt`, etc.) **MUST** have a `BLUEPRINT.md`.
-2. **Auto-Generate if Missing**: If the BLUEPRINT is missing and the folder is a valid project root, AI **MUST** auto-generate one using the `MASTER_BLUEPRINT.md` template (`0_apex/templates/MASTER_BLUEPRINT.md`) by scanning the folder shallowly. No user permission required for shallow scan.
-3. **Tier-0 Reference**: When creating any BLUEPRINT, AI must clone from the latest `0_apex/templates/MASTER_BLUEPRINT.md` (project type) or `0_apex/templates/MASTER_ROUTER_BLUEPRINT.md` (multi-project root type).
-4. **BLUEPRINT Wins**: When `BLUEPRINT.md` and `CLAUDE.md` conflict, `BLUEPRINT.md` is the cross-AI consensus document. User's live message always overrides both.
+1. **Blueprint First**: Every project folder containing a recognizable project root indicator (`package.json`, `composer.json`, `index.php`, `pnpm-workspace.yaml`, `requirements.txt`, etc.) **MUST** have a `BLUEPRINT.md` and a `DESIGN.md`.
+2. **Auto-Generate if Missing**: If the BLUEPRINT or DESIGN files are missing and the folder is a valid project root, AI **MUST** auto-generate them using the appropriate master templates (`0_apex/templates/MASTER_BLUEPRINT.md` and `0_apex/templates/MASTER_DESIGN.md`).
+3. **Tier-0 Reference**: When creating any BLUEPRINT or DESIGN file, AI must clone from the latest `0_apex/templates/` versions.
+4. **DESIGN Wins**: In the domain of aesthetics, visual identity, and tokens, `DESIGN.md` is the authoritative source of truth.
 
 ---
 
@@ -66,9 +66,8 @@ AI MUST detect which BLUEPRINT type applies to the current working directory:
 ## 🔄 6. PER-TURN AUTO-CHECK PROTOCOL (V1.4 Carried Forward)
 
 ### 6.1 Mandatory Check
-- Every new user chat message → AI MUST scan root for `BLUEPRINT.md` or `APP_BLUEPRINT.md` before first tool call.
-- Both exist → `BLUEPRINT.md` wins (newer standard).
-- Read entire file on first turn; subsequent turns in same session: re-read only Change Log section.
+- Every new user chat message → AI MUST scan root for `BLUEPRINT.md` or `APP_BLUEPRINT.md` AND `DESIGN.md` before first tool call.
+- Read entire files on first turn; subsequent turns in same session: re-read only Change Log sections.
 
 ### 6.2 Write Obligation
 - Any turn modifying code, schema, or config → AI MUST append to Change Log of the **closest-scope BLUEPRINT** (project BLUEPRINT if in a sub-project; router BLUEPRINT if ecosystem-wide change).
