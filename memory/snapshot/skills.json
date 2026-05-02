@@ -1,0 +1,17 @@
+{
+  "node": "skills",
+  "version": "1.0",
+  "map": {
+    "sc-m": "Meta/Plan",
+    "sc": "Claude/Logic",
+    "sc-f": "Vue/Capacitor/SWF",
+    "sc-w": "PHP/REST/Backend",
+    "sn": "Normal/Standard",
+    "sf": "Faucet/Harvest"
+  },
+  "hot_paths": {
+    "meta": "skills/claude-meta/SKILL.md",
+    "frontend": "skills/claude-frontend/SKILL.md",
+    "website": "skills/claude-website/SKILL.md"
+  }
+}

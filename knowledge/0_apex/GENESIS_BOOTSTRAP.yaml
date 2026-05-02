@@ -1,19 +1,19 @@
-# ⚖️ THE SOVEREIGN GENESIS NODE (V1.0 - APEX)
+# ⚖️ THE SOVEREIGN GENESIS NODE (V1.1 - APEX)
 # Status: AUTHORITATIVE_TEMPLATE
 # Path: knowledge/0_apex/GENESIS_BOOTSTRAP.yaml
 
-genesis_version: 1.0
-target_path: "../../route.yaml" # Relative to antigravity/ folder
-absolute_target: "C:/Users/User/.gemini/route.yaml"
+genesis_version: 1.1
+target_path: "../../route.idx" # Relative to antigravity/ folder
+absolute_target: "C:/Users/User/.gemini/route.idx"
 
 📜_BOOTSTRAP_TEMPLATE: |
-  # 🧭 SOVEREIGN DISCOVERY BRIDGE (V1.1 - APEX)
+  # 🧭 SOVEREIGN DISCOVERY BRIDGE (V1.2 - APEX)
   # Entry: .gemini root
   # Priority: FIRST_ORDER_CONSTITUTIONAL
   # Status: EMERGENCY_RECOVERY_READY
 
   ⚖️_emergency_priority:
-    primary_route: "./antigravity/route.yaml"
+    primary_route: "./antigravity/route.idx"
     action: "AI MUST read primary_route FIRST."
     fallback: "antigravity/knowledge/0_apex/GROUND_KERNEL.md"
 
@@ -23,13 +23,15 @@ absolute_target: "C:/Users/User/.gemini/route.yaml"
       apex: "knowledge/0_apex/"
       core: "knowledge/1_core/"
       gov: "knowledge/2_governance/"
-      dom: "knowledge/3_domains/"
-      arch: "knowledge/4_archive/"
     tier_0_vitals:
       kernel: "knowledge/0_apex/GROUND_KERNEL.md"
-      master_rules: "knowledge/3_domains/claude/MASTER_RULES.md"
-      atlas: "knowledge/ATLAS.yaml"
-      snapshot: "knowledge/3_domains/claude/LAA_PROJECT_SNAPSHOT.md"
+      atlas: "knowledge/ATLAS.idx"
+    external_dependencies:
+      route_idx: "C:/Users/User/.gemini/route.idx"
+      projects_json: "C:/Users/User/.gemini/projects.json"
+    local_vitals:
+      pulse: "memory/PULSE.idx"
+      ledger: "memory/master_ledger.idx"
     skills_map:
       core: "skills/"
       claude: "skills/claude/"
@@ -52,14 +54,16 @@ absolute_target: "C:/Users/User/.gemini/route.yaml"
   🤖_autonomous_routing_protocol:
     capability: "SELF_EVOLVING_MAP"
     rules:
-      - AI MUST auto-recreate `route.yaml` from this template if missing.
+      - AI MUST auto-recreate `route.idx` and `projects.json` from this template if missing.
+      - AI MUST initialize `memory/PULSE.idx` if a cold start is detected.
+      - AI MUST warn user that `vault/` is excluded from Git and needs manual hydration.
       - AI MUST auto-update `hot_paths` when creating major new knowledge/skills nodes.
-      - AI MUST maintain 1:1 parity between `route.yaml` and `route.json`.
+      - AI MUST maintain 1:1 parity between `route.idx` and `ROUTER.idx`.
       - **Deep Mapping**: Target high-frequency subdirectories (src/api, src/store).
       - **Triggers Sync**: Auto-append relevant keywords to triggers.
 
 🤖_BOOTSTRAP_MANDATE:
-  condition: "If route.yaml is MISSING or DRIFTED"
+  condition: "If route.idx is MISSING or DRIFTED"
   action: "AI MUST recreate/sync using ⚡_high_speed_discovery_template immediately."
   check_round: 0
 
@@ -69,3 +73,4 @@ triggers:
   - missing route
   - re-wire
   - initialization
+  - cold start

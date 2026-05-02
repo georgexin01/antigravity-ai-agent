@@ -34,7 +34,7 @@ Instead of linear matching, use recursive path verification:
    - *Vue 3 + Vben admin panels (13-step)*: Route to `skills/claude-frontend/`
    - *PHP + Supabase REST websites (13-step)*: Route to `skills/claude-website/`
    - *General design / research / testing*: Route to `skills/normal/`
-   - *Web-Automation*: `skills/faucet/` **[deprecated — archived, user-confirmation required]**; `skills/openclaw/` **[archived]**
+   - *Web-Automation*: `skills/faucet/` **[deprecated — archived, user-confirmation required]**
 3. **Signature Scan**: Match user tokens against [ATLAS.yaml](../../../knowledge/ATLAS.yaml) trigger keywords (Principle 10 — Navigation Mastery).
 4. **Reality Check**: If target logic exists, compare current state with goal. If 100% parity, STOP (Simplicity First).
 

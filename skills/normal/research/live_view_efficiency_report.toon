@@ -1,7 +1,7 @@
 # TOON EXPORT: live_view_efficiency_report
 SCHEMA: [line, content]
 1|# Token Efficiency Comparison: The Live View Mission
-2|This report analyzes the impact of the **Zero-Token Vision (ZTV)** and **Live View Optimization** upgrades on the OpenClaw system.
+2|This report analyzes the impact of the **Zero-Token Vision (ZTV)** and **Live View Optimization** upgrades on the system.
 3|---
 4|## ðŸ›ï¸ BEFORE: Legacy Browser Subagent
 5|The legacy method relied on the built-in browser subagent's automatic visual captures for every reasoning turn.

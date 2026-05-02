@@ -1,0 +1,45 @@
+# PILLAR 0: APEX (SYSTEM KERNEL)
+k0/GROUND_KERNEL.md=ground_kernel,startup,apex,kernel
+k0/SOVEREIGN_ENGINE_ORCHESTRATOR.md=orchestrator,loop,v5,singularity
+k0/INTERNAL_SWARM_PROTOCOL.md=swarm,mas,peer-review
+k0/SOVEREIGN_CONTEXT_LIQUIDATOR.md=liquidator,pruning,garbage collection,tokens
+k0/SOVEREIGN_BLUEPRINT_PROTOCOL.md=blueprint,protocol,sovereign,simulation
+k0/FLASH_HARDENING_PROTOCOL.md=flash,hardening,cove,optimization,context
+k0/RESEARCH_FLYWHEEL.md=flywheel,library,intelligence,evolution
+
+# PILLAR 1: CORE (IDENTITY & DESIGN)
+k1/IDENTITY_REGISTRY.yaml=identity,registry,lpm,persona,voice,behavior
+k1/AOE_PROTOCOL.md=security,tier,handshake,aoe,lockdown
+k1/KARPATHY_OPERATIONAL_STANDARD.md=karpathy,thinking,surgical,standard,habit
+k1/TIER_1_CORE_MASTER.md=core,dna,standard,architect,structure
+k1/DESIGN_PROTOCOL.md=design,tokens,aesthetics,anti-slop
+k1/SOVEREIGN_AESTHETIC_SPELLS.md=spells,magic,css,ui,premium
+k1/APEX_HUD_LIBRARY.md=hud,library,visual,components,ui
+k1/STITCH_UI_PROTOCOL.md=stitch,ui,pattern,component
+k1/SOVEREIGN_COMPARISON_PROTOCOL.md=comparison,scp,analysis,matrix
+k1/DESIGN_PSYCHOLOGY_2026.yaml=psychology,ux,onboarding,conversion
+
+# PILLAR 2: GOVERNANCE & PROCEDURES
+k2/SOVEREIGN_BLUEPRINT_PROCEDURE.md=blueprint,planning,procedure,guided questioning
+k2/SOVEREIGN_AUTO_REPAIR_PROTOCOL.md=error,bug,repair,auto-fix,tailwind
+k2/LAA_ECOSYSTEM_API_PROTOCOL.md=supabase,api,connection,cors,deployment
+k2/LIBRARY_INTELLIGENCE_PROTOCOL.md=wiki,notebooklm,flywheel
+k2/sovereign_framework_mastery.md=claude,swf,sovereign,industrial
+
+# PILLAR 3: SKILLS & TOOLS
+ss/SKILL.md=shared,common,universal
+sc/SKILL.md=claude,swf,sovereign,industrialize
+sn/SKILL.md=normal,default,standard
+sf/SKILL.md=harvest,claimer,multi-platform
+sn/performance/identity_sync.md=identity,sync,performance,persona
+
+# MEMORY & VITALS
+memory/SYNTHESIS_LOG.json=synthesis,log,feedback,dna
+memory/SESSION_SHADOW.json=shadow,memory,v4
+memory/PULSE.idx=pulse,vitals,status
+
+# TEMPLATES & ASSETS
+t/MASTER_BLUEPRINT.md=template,blueprint,generate
+t/MASTER_DESIGN.md=template,design,generate
+a/FEEDBACK_SYNTHESIS_PROTOCOL.md=feedback,extract,synthesis,evolve
+b/SBLF_MASTER_BLUEPRINT.md=example,blueprint,sblf

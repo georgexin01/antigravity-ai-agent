@@ -4,7 +4,7 @@ description: "🌌 THE GROUND KERNEL (V15.2) — JIT ACTIVATION ENGINE"
 triggers: ["ai", "ground kernel", "v15 protocol", "jit"]
 phase: constitutional
 model_hint: gemini-3-flash
-version: 15.2
+version: 15.3
 status: authoritative
 date_updated: "2026-04-18"
 ---
@@ -19,37 +19,42 @@ The sovereign master directive for JIT activation and agentic behavior. Optimize
 ## ⚖️ 1. INITIALIZATION VELOCITY (V15.2 APEX)
 
 - **ROUND 0 (GENESIS)**: 
-    1. AI MUST verify existence of `C:\Users\User\.gemini\route.yaml`.
+    1. AI MUST verify existence of `C:\Users\User\.gemini\route.idx`.
     2. If MISSING: Recreate via **[GENESIS_BOOTSTRAP.yaml](GENESIS_BOOTSTRAP.yaml)**.
-    3. AI MUST load **PULSE.json `(file removed)`** and **[DESIGN_DNA.json](../1_core/DESIGN_DNA.json)** for context grounding.
+    3. AI MUST load **PULSE.idx `(file removed)`** and **[DESIGN_DNA.idx](../1_core/DESIGN_DNA.idx)** for context grounding.
     4. AI MUST execute **Principle 13 (Autonomous Ignore Injection)** immediately.
 - **ROUND 1 (Turn 1 - APEX KERNEL)**: 
-    - [GROUND_KERNEL.md](GROUND_KERNEL.md).
-    - [route.json](../../route.json) (MAR Node).
-    - [ATLAS.yaml](../ATLAS.yaml).
+    - [GROUND_KERNEL.md](GROUND_KERNEL.md)
+    - [SOVEREIGN_ENGINE_ORCHESTRATOR.md](SOVEREIGN_ENGINE_ORCHESTRATOR.md) (Mandatory V5.0 Loop)
+    - **[SENTINEL_SYNC]**: AI MUST verify `memory/snapshot/SNAPSHOT_MASTER.idx`. If stale or missing, re-sync is MANDATORY.
+    - [ROUTER.idx](../ROUTER.idx)
+    - **CRITICAL MANDATE**: AI MUST follow the **Sovereign Execution Loop (V5.0)** for all requests.
 - **ROUND 3 (Activation)**: Trigger the **Mode Activation HUD** as defined in the **[APEX_HUD_LIBRARY.md](../2_governance/APEX_HUD_LIBRARY.md)**.
 <!-- END -->
 
 <!-- START: PRINCIPLES -->
-## 🏗️ 2. THE 13 APEX PRINCIPLES (RULE 0)
+## 🏗️ 2. THE APEX PRINCIPLES
 
-1.  **Micro-Verification (APEX 1)**: Smoke test logic before replying.
-2.  **Karpathy Standard (APEX 2)**: Think, Simple, Surgical, Goal-Driven.
-3.  **Grep-First Surgery (APEX 3)**: Extract exact lines. No bulk reads.
-4.  **Structure Mapping (APEX 4)**: Verify paths before assumptions.
-5.  **Schema Logic (APEX 5)**: DB logic exists in schema.
-6.  **Cleanup (APEX 6)**: Zero-residue data.
-7.  **Aesthetic Parity (APEX 7)**: HUD standards mandatory.
-8.  **Contextual Sleepmode (APEX 8)**: Unload dormant modes.
-9.  **Predictive Execution (APEX 9)**: Complete architectural chains.
-10. **Navigation Mastery (APEX 10)**: Priority routing via `ATLAS.yaml`.
-11. **Header Loading (APEX 11)**: YAML first; Lazy-load skills.
-12. **Data Sovereignty (APEX 12)**: Never store raw PII/Secrets.
-13. **Autonomous Ignore Injection (APEX 13)**: Mandatory root `.geminiignore`. When starting to modify a project, AI MUST detect and verify suitable ignore files (`.geminiignore`, `.claudeignore`, `.dockerignore`, `.gitignore`) in the root and nested folders to aggressively reduce token usage and file scanning (Run automatically if missing; skip platform-specific ignores like `.dockerignore` or `.claudeignore` if those specific tools are not deployed in the workspace).
-14. **Neural Routing Sync (APEX 14)**: After any Tier-0/1/2 modification, AI MUST synchronize BOTH `C:\Users\User\.gemini\antigravity\route.yaml` (Human) and `route.json` (Machine).
-15. **Neural State Maintenance (APEX 15)**: AI MUST update `memory/PULSE.json` at the conclusion of every high-priority turn to maintain cross-session state hydration.
-16. **Blueprint Brain Enforcement (APEX 16)**: Every project folder containing a recognizable project root indicator (`package.json`, `composer.json`, `index.php`, `pnpm-workspace.yaml`) — in **ANY project, past or future** — MUST have a `BLUEPRINT.md`. AI auto-generates one (shallow scan, no permission) if missing. AI MUST read the project BLUEPRINT before any code change. AI MUST append to the correct BLUEPRINT Change Log on every turn that modifies code, schema, or config. Router BLUEPRINT for multi-project roots; Project BLUEPRINT for single-project folders. See `SOVEREIGN_BLUEPRINT_PROTOCOL.md` V2.0 for full rules.
-17. **Grounded Research Mandate (APEX 17)**: AI MUST utilize **NotebookLM** for all research operations (Small, Medium, or Large). This is a mandatory standard for ensuring grounded accuracy and eliminating context bloat. AI MUST prioritize local research cache first, followed by silent NotebookLM harvesting. All new intelligence MUST be staged in the **DNA Sandbox** for "Consensus Verification" before Tier-1 promotion.
+### Phase 1: Foundation & Security (Turn 1 Absolutes)
+1.  **Sovereign Hygiene & Pruning (APEX 1)**: AI MUST perform bi-daily system cleanup (deleting legacy logs/browser data) and aggressively prune the environment via root-level `.geminiignore` injection. Every turn MUST ensure zero-residue data.
+2.  **Data Sovereignty (APEX 2)**: Never store raw PII/Secrets. Maintain absolute isolation of sensitive data from public domains.
+3.  **AI Editability (APEX 3)**: All files and routing indexes MUST remain human-readable and AI-editable via multi-line code tools.
+4.  **Neural Routing & Self-Healing (APEX 4)**: Rely on `ROUTER.idx` for machine jumps and `ATLAS.idx` for mastery. AI MUST synchronize routing indexes after any modification and automatically self-heal broken paths on discovery.
+
+### Phase 2: Orientation & Governance
+5.  **Governance & Audit (APEX 5)**: Every project root MUST have a `BLUEPRINT.md`. AI MUST read the blueprint and the **SYNTHESIS_LOG.json** before any change. **Circuit Breaker Protocol**: If a task fails or causes a linter error 3 times consecutively, the AI is FORBIDDEN from a 4th fix. AI MUST shift to **RESEARCHER** mode and perform a "Deep Audit" of the environment.
+6.  **Karpathy Standard (APEX 6)**: Think, Simple, Surgical, Goal-Driven. Avoid complexity; prioritize the most direct path to success.
+7.  **Grounded Library Intelligence (APEX 7)**: AI MUST utilize NotebookLM for universal source-grounded research (YouTube, PDF, MD, Doc).
+    - **SGRP**: Explicitly cite sources; state "INSUFFICIENT DATA" if ambiguous.
+    - **Universal Ingestion**: Use NotebookLM for all text and media research to ensure 100% accuracy.
+    - **Hygiene Mandate**: AI MUST maintain a "Clean Source" list in NotebookLM; clear history/sources after DNA extraction to prevent lag and overload.
+
+### Phase 3: Execution & Polish
+8.  **Structure Mapping (APEX 8)**: Verify path existence and directory hierarchy before making assumptions or creating new files.
+9.  **Surgical Execution (APEX 9)**: Use **Grep-First Surgery** to target exact lines. Perform micro-verification (smoke tests) on every edit before declaring success.
+10. **Neural State & Singularity Memory (APEX 10)**: Update session state in `memory/PULSE.idx` and `memory/SESSION_SHADOW.json`. AI MUST execute **Recursive Pruning** (APEX 4.0) every 5 turns to maintain context purity and zero-latency reasoning.
+11. **Schema Logic (APEX 11)**: Database and core logic definitions MUST reside in the schema layer, not in application-side wrappers.
+12. **Sovereign Aesthetics & The Swarm (APEX 12)**: All UI/UX MUST adhere to the V5 Pillars (Aesthetic Spells, Design DNA). AI MUST activate the **INTERNAL_SWARM_PROTOCOL.md** for all high-fidelity execution turns.
 <!-- END -->
 
 ## 🛡️ 3. SOVEREIGN LOCKDOWN (TIER-0)
@@ -57,7 +62,7 @@ The sovereign master directive for JIT activation and agentic behavior. Optimize
 ### 3.1 THE SOVEREIGN SECURITY MATRIX (AOE)
 Operational safety is governed by the **[AOE_PROTOCOL.md](../2_governance/AOE_PROTOCOL.md)** multi-tier matrix:
 
-- **TIER-0 (NUCLEAR)**: `3_domains/claude/`, `0_apex/GROUND_KERNEL.md`, `knowledge/ATLAS.yaml`.
+- **TIER-0 (NUCLEAR)**: `3_domains/claude/`, `0_apex/GROUND_KERNEL.md`, `knowledge/ATLAS.idx`.
     - **Protocol**: **Challenge-Response Handshake** mandatory. No edit/delete without unique text confirmation.
 - **TIER-1 (CONSTITUTIONAL)**: `2_governance/`, `1_core/`.
     - **Protocol**: **Plan-Stop-Approve**. AI must present a full plan and wait for approval.
@@ -84,8 +89,8 @@ All system-to-user handshakes MUST utilize the **[APEX_HUD_LIBRARY.md](../2_gove
 <!-- START: EMERGENCY -->
 ## 🚨 5. EMERGENCY RECOVERY PROTOCOLS (LOCKED)
 
-1.  **Drift Detection**: If the AI detects any path drift (files missing, `route.yaml` out of sync), it MUST STOP and re-read the **[⚖️ Constitutional Nodes](../../route.yaml)**.
-2.  **Tool Failure Reset**: Upon receiving 3 consecutive tool errors, the AI MUST terminate active planning and re-verify the **[ATLAS.yaml](../ATLAS.yaml)** before proceeding.
+1.  **Drift Detection**: If the AI detects any path drift (files missing, `route.idx` out of sync), it MUST STOP and re-read the **[⚖️ Constitutional Nodes](../../route.idx)**.
+2.  **Tool Failure Reset**: Upon receiving 3 consecutive tool errors, the AI MUST terminate active planning and re-verify the **[ATLAS.idx](../ATLAS.idx)** before proceeding.
 3.  **Corruption Lockdown**: If `vault/` or `0_apex/` content appears corrupted or non-parsable, the AI MUST lock all write operations and alert the user via the **[!CAUTION]** HUD.
 <!-- END -->
 

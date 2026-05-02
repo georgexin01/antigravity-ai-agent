@@ -1,6 +1,6 @@
 # JIT Mode Activation Protocol (V1.0)
 
-This protocol governs the autonomous "Waking" and "Sleeping" of domain-specific knowledge nodes as defined in the **[ATLAS.yaml](../ATLAS.yaml)**.
+This protocol governs the autonomous "Waking" and "Sleeping" of domain-specific knowledge nodes as defined in the **[ATLAS.idx](../ATLAS.idx)**.
 
 ## ⚖️ The Activation Logic (APEX 8)
 
@@ -27,7 +27,7 @@ Gemini MUST scan the User Prompt for **Trigger Keywords** mapped to Tier-1, Tier
 | **CLAUDE** | `claude`, `swf`, `sovereign` | `industrial`, `layericon`, `tray`, `relationship drawer` |
 | **FAUCET** | `faucet`, `harvest`, `claimer` | `solana`, `evm`, `automation` |
 | **NORMAL** | `normal`, `standard`, `default` | `generic`, `baseline` |
-| **OPENCLAW** | `openclaw`, `claw` | `legacy`, `history` |
+
 
 ## 🛡️ Rule Persistence (Non-Negotiable)
 - No Mode-Switch is permitted to bypass **Rule #1 (Supabase Isolation)** or the **13 APEX Principles**. 

@@ -1,0 +1,16 @@
+# 🛰️ SOVEREIGN SNAPSHOT MASTER (V1.0 - SENTINEL)
+# Status: ACTIVE
+# Path: memory/snapshot/SNAPSHOT_MASTER.idx
+
+[✅ CACHE: SYNCED]
+
+## 🧠 PARTITIONS
+apex=memory/snapshot/apex.json
+core=memory/snapshot/core.json
+gov=memory/snapshot/gov.json
+skills=memory/snapshot/skills.json
+
+## 🛰️ SENTINEL METRICS
+last_sync=2026-05-02T12:58:00Z
+integrity=100%
+fallback=knowledge/0_apex/GROUND_KERNEL.md

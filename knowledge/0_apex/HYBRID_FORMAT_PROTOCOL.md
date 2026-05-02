@@ -11,7 +11,7 @@ model_hint: gemini-3-flash
 version: 1.1
 status: authoritative
 date_created: "2026-04-13"
-applies_to: "all new and updated knowledge/skills files across all modes (claude, faucet, normal, openclaw, _shared)"
+applies_to: "all new and updated knowledge/skills files across all modes (claude, faucet, normal, _shared)"
 ---
 
 # HYBRID FORMAT PROTOCOL (V1.0)

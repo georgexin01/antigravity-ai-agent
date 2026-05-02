@@ -1,0 +1,23 @@
+{
+  "shadow_v4": {
+    "session_id": "7640a12d-fda1-4e92-a912-415e7cef8e5b",
+    "status": "HYDRATED",
+    "snapshots": [
+      {
+        "turn": 1,
+        "dna_locked": ["V15_CONSOLIDATION", "LEGACY_PURGE", "GENESIS_BOOTSTRAP_V1.1"],
+        "context_liquidated": true
+      },
+      {
+        "turn": 2,
+        "dna_locked": ["SYNTHESIS_LOG_V2", "ENGINE_V3_IMPLANT"],
+        "context_liquidated": true
+      }
+    ],
+    "active_vectors": {
+      "routing": "ROUTER.idx",
+      "synthesis": "SYNTHESIS_LOG.json",
+      "vitals": "PULSE.idx"
+    }
+  }
+}
