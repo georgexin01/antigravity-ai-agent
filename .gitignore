@@ -1,44 +1,40 @@
 # ==========================================
-# ANTIGRAVITY SOVEREIGN DISTRIBUTION FILTER
+# ANTIGRAVITY TOTAL RESURRECTION WHITELIST (V2.0)
 # ==========================================
 
-# Default: Ignore Everything
+# 1. DEFAULT: IGNORE EVERYTHING
 *
 
-# WHITELIST: Core Logic & AI Assets (SHAREABLE)
+# 2. WHITELIST: CORE SYSTEM FILES
 !README.md
 !.gitignore
 !.geminiignore
-!route.yaml
-!route.json
-!skills.txt
-!Sovereign_PatchDNA.ps1
+!*.idx
+!*.json
+!*.yaml
+!*.ps1
 
-# WHITELIST: Knowledge Base & Skills
+# 3. WHITELIST: VITAL DIRECTORIES (DNA & MEMORY)
 !knowledge/
 !knowledge/**
 !skills/
 !skills/**
-
-# WHITELIST: Governance & Tools
 !governance/
 !governance/**
-!prompting/
-!prompting/**
-!scratch/
-!scratch/**
-
-# ------------------------------------------
-# BLACKLIST: Private Intelligence & Session Data (DO NOT SHARE)
-# ------------------------------------------
-brain/
-brain/**
-vault/
-vault/*.enc
-!vault/master_registry_template.json
-# Whitelisted: Persistent AI Memory
 !memory/
 !memory/**
+!prompting/
+!prompting/**
+
+# 4. WHITELIST: STRUCTURES (NO SECRETS)
+!vault/
+vault/*
+!vault/master_registry_template.json
+
+# 5. BLACKLIST: NUCLEAR SECRETS & BLOAT
+vault/*.enc
+brain/
+brain/**
 conversations/
 conversations/**
 browser_recordings/
@@ -47,21 +43,11 @@ html_artifacts/
 html_artifacts/**
 implicit/
 implicit/**
-
-# Logs, Binaries & Bloat
-*.log
-*.pb
-audit_errors.log
-timestamps.json
-knowledge.lock
 tempmediaStorage/
 node_modules/
 .DS_Store
 Thumbs.db
-
-# Secrets & Local Config
-mcp_config.json
-*.env
-.env
-.env.*
+*.log
+audit_errors.log
+knowledge.lock
 installation_id

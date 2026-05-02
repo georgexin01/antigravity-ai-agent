@@ -4,13 +4,15 @@
 
 [✅ CACHE: SYNCED]
 
-## 🧠 PARTITIONS
-apex=memory/snapshot/apex.json
-core=memory/snapshot/core.json
-gov=memory/snapshot/gov.json
-skills=memory/snapshot/skills.json
+## 🧠 TIERED DNA (10-10-10 STANDARD)
+kernel_dna=memory/snapshot/DNA_KERNEL.json (Hydration Cache)
+extended_dna=memory/snapshot/DNA_EXTENDED.json (Lazy-Loaded)
+response_protocol=ULTRA_SHORT
 
 ## 🛰️ SENTINEL METRICS
-last_sync=2026-05-02T12:58:00Z
+last_sync=2026-05-02T13:25:00Z
+last_evolution=2026-05-02T13:25:00Z
+dna_density=HIGH (TOP_30)
 integrity=100%
-fallback=knowledge/0_apex/GROUND_KERNEL.md
+fallback_policy=DIRECT_SOURCE_SEARCH
+search_priority=[./knowledge, ./skills]

@@ -1,0 +1,20 @@
+# 🛰️ GSD MISSION LEDGER (V1.0)
+# Path: gsd_mission_ledger.yaml
+
+missions:
+  - id: M-20260502-01
+    timestamp: "2026-05-02T13:42:00Z"
+    type: RECON
+    platforms:
+      viefaucet:
+        status: HYDRATED
+        balance: 1596.94
+        level: 304
+        xp: "1290 / 1620"
+        ready_in: "34:00"
+        limit: "999/1000"
+      99faucet:
+        status: CAPTCHA_BLOCKED
+        reason: hCaptcha required for login
+      acryptominer:
+        status: PENDING

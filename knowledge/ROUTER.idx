@@ -1,3 +1,4 @@
+memory/snapshot/DNA_KERNEL.json=ai read .gemini knowledge,ai read .gemini,.gemini knowledge,read .gemini knowledge,read .gemini,sentinel,sync
 k0/GROUND_KERNEL.md=apex,kernel,rules
 k0/SOVEREIGN_ENGINE_ORCHESTRATOR.md=orchestrator,loop,v5
 k0/INTERNAL_SWARM_PROTOCOL.md=swarm,mas,peer-review
@@ -18,7 +19,8 @@ k2/SOVEREIGN_AUTO_REPAIR_PROTOCOL.md=drift,repair,bug
 k2/LAA_ECOSYSTEM_API_PROTOCOL.md=network,cors,supabase,deploy
 k2/LIBRARY_INTELLIGENCE_PROTOCOL.md=wiki,notebooklm,flywheel
 sc-m/SKILL.md=meta,plan
-sc/SKILL.md=claude,logic
+knowledge/claude/SNAPSHOT_CLAUDE.idx=ai claude,claude,logic
+sc/SKILL.md=claude-skill,swf,sovereign
 sc-f/SKILL.md=vue,capacitor,swf
 sc-w/SKILL.md=php,rest,backend
 sn/SKILL.md=normal,standard
@@ -26,4 +28,4 @@ sf/SKILL.md=faucet,harvest,automate
 sn/performance/identity_sync.md=identity,sync,performance
 memory/SYNTHESIS_LOG.json=synthesis,log,feedback,dna
 memory/SESSION_SHADOW.json=shadow,memory,v4
-memory/snapshot/SNAPSHOT_MASTER.idx=ai read .gemini knowledge,ai read .gemini,.gemini knowledge,read .gemini knowledge,read .gemini,sentinel,sync
+

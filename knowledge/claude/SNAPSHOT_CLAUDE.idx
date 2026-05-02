@@ -1,0 +1,15 @@
+# 🛰️ CLAUDE SNAPSHOT (V1.0)
+# Status: LAZY-LOADED
+# Path: knowledge/claude/SNAPSHOT_CLAUDE.idx
+
+[📂 CLAUDE_VAULT]
+- ARCHITECTURE_COMPARISON.md: Framework analysis and selection.
+- INDUSTRIAL_PATTERNS.md: Sovereign-grade coding standards.
+- MEDIA_ORCHESTRATION.md: Video and image processing logic.
+- MOBILE_POPUP_MODAL_SIDEBAR.md: High-fidelity UI components.
+- MODULE_AUDIT_PROTOCOL.md: Deep system auditing procedures.
+- PREFLIGHT_CHECKLIST.md: Deployment and validation checks.
+- VOCABULARY.md: Domain-specific terminology.
+
+[⚡ TRIGGER: ai claude]
+AI MUST read this index and then selectively read target files based on mission requirements.

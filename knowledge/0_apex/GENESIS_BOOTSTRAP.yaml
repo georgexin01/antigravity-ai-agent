@@ -1,20 +1,20 @@
-# ⚖️ THE SOVEREIGN GENESIS NODE (V1.1 - APEX)
+# ⚖️ THE SOVEREIGN GENESIS NODE (V2.0 - TOTAL RESURRECTION)
 # Status: AUTHORITATIVE_TEMPLATE
 # Path: knowledge/0_apex/GENESIS_BOOTSTRAP.yaml
 
-genesis_version: 1.1
+genesis_version: 2.0
 target_path: "../../route.idx" # Relative to antigravity/ folder
 absolute_target: "C:/Users/User/.gemini/route.idx"
 
 📜_BOOTSTRAP_TEMPLATE: |
-  # 🧭 SOVEREIGN DISCOVERY BRIDGE (V1.2 - APEX)
+  # 🧭 SOVEREIGN DISCOVERY BRIDGE (V2.0 - TOTAL RESURRECTION)
   # Entry: .gemini root
   # Priority: FIRST_ORDER_CONSTITUTIONAL
   # Status: EMERGENCY_RECOVERY_READY
 
   ⚖️_emergency_priority:
     primary_route: "./antigravity/route.idx"
-    action: "AI MUST read primary_route FIRST."
+    action: "AI MUST execute TRP (Total Resurrection Protocol) FIRST."
     fallback: "antigravity/knowledge/0_apex/GROUND_KERNEL.md"
 
   ⚡_high_speed_discovery_template:
@@ -52,25 +52,24 @@ absolute_target: "C:/Users/User/.gemini/route.idx"
       - auto routing
 
   🤖_autonomous_routing_protocol:
-    capability: "SELF_EVOLVING_MAP"
+    capability: "TOTAL_RESURRECTION_V2.0"
     rules:
+      - AI MUST use `GENESIS_SEED.yaml` for 0-to-100% system reconstruction.
+      - AI MUST verify Git whitelist status for all vital nodes.
       - AI MUST auto-recreate `route.idx` and `projects.json` from this template if missing.
       - AI MUST initialize `memory/PULSE.idx` if a cold start is detected.
-      - AI MUST warn user that `vault/` is excluded from Git and needs manual hydration.
-      - AI MUST auto-update `hot_paths` when creating major new knowledge/skills nodes.
-      - AI MUST maintain 1:1 parity between `route.idx` and `ROUTER.idx`.
-      - **Deep Mapping**: Target high-frequency subdirectories (src/api, src/store).
-      - **Triggers Sync**: Auto-append relevant keywords to triggers.
+      - AI MUST warn user that `vault/` secrets (*.enc) are excluded from Git.
 
-🤖_BOOTSTRAP_MANDATE:
-  condition: "If route.idx is MISSING or DRIFTED"
-  action: "AI MUST recreate/sync using ⚡_high_speed_discovery_template immediately."
-  check_round: 0
+  🤖_BOOTSTRAP_MANDATE:
+    condition: "If route.idx is MISSING or DRIFTED"
+    action: "AI MUST execute TRP (Total Resurrection Protocol) immediately."
+    check_round: 0
 
 triggers:
   - genesis
   - bootstrap
-  - missing route
-  - re-wire
-  - initialization
-  - cold start
+  - resurrect
+  - switch pc
+  - rebuild all
+  - cold start 100
+  - genesis seed

@@ -1,0 +1,38 @@
+# 🌌 THE SOVEREIGN GENESIS SEED (V1.0)
+# Status: AUTHORITATIVE
+# Path: GENESIS_SEED.yaml
+
+seed_version: 1.0
+identity: "nelesp3@gmail.com"
+archetype: "Sovereign Architect"
+
+📦_SKELETON_MAP:
+  - knowledge/0_apex
+  - knowledge/1_core
+  - knowledge/2_governance
+  - skills/claude
+  - skills/normal
+  - skills/faucet
+  - vault
+  - memory/snapshot
+
+🧬_RESURRECTION_MANDATE:
+  1: "Recreate SKELETON_MAP directories."
+  2: "Verify existence of knowledge/0_apex/GROUND_KERNEL.md."
+  3: "Run Sovereign_Genesis.ps1 to re-index all .idx files."
+  4: "Execute 'ai read .gemini' to hydrate the Sentinel Cache."
+  5: "Manual Step: Hydrate vault/ secrets from private backup."
+
+🛰️_CORE_NODES:
+  kernel: "knowledge/0_apex/GROUND_KERNEL.md"
+  registry: "knowledge/1_core/IDENTITY_REGISTRY.yaml"
+  router: "knowledge/ROUTER.idx"
+  atlas: "knowledge/ATLAS.idx"
+  sentinel: "memory/snapshot/SNAPSHOT_MASTER.idx"
+
+🤖_BOOTSTRAP_TRIGGERS:
+  - genesis
+  - resurrect
+  - switch pc
+  - rebuild all
+  - cold start 100

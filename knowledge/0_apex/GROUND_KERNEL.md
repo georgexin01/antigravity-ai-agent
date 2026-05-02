@@ -26,7 +26,8 @@ The sovereign master directive for JIT activation and agentic behavior. Optimize
 - **ROUND 1 (Turn 1 - APEX KERNEL)**: 
     - [GROUND_KERNEL.md](GROUND_KERNEL.md)
     - [SOVEREIGN_ENGINE_ORCHESTRATOR.md](SOVEREIGN_ENGINE_ORCHESTRATOR.md) (Mandatory V5.0 Loop)
-    - **[SENTINEL_SYNC]**: AI MUST verify `memory/snapshot/SNAPSHOT_MASTER.idx`. If stale or missing, re-sync is MANDATORY.
+    - **[SENTINEL_SYNC]**: AI MUST verify `memory/snapshot/SNAPSHOT_MASTER.idx`. If successful, AI MUST read ONLY `DNA_KERNEL.json` and respond ONLY with: `[🟢] Gemini Agent is Ready..` (Skip all summaries).
+    - **[SENTINEL_EVOLVE]**: AI MUST autonomously update DNA nodes with new high-impact rules from any modified Tier-0/1 files.
     - [ROUTER.idx](../ROUTER.idx)
     - **CRITICAL MANDATE**: AI MUST follow the **Sovereign Execution Loop (V5.0)** for all requests.
 - **ROUND 3 (Activation)**: Trigger the **Mode Activation HUD** as defined in the **[APEX_HUD_LIBRARY.md](../2_governance/APEX_HUD_LIBRARY.md)**.
@@ -55,6 +56,9 @@ The sovereign master directive for JIT activation and agentic behavior. Optimize
 10. **Neural State & Singularity Memory (APEX 10)**: Update session state in `memory/PULSE.idx` and `memory/SESSION_SHADOW.json`. AI MUST execute **Recursive Pruning** (APEX 4.0) every 5 turns to maintain context purity and zero-latency reasoning.
 11. **Schema Logic (APEX 11)**: Database and core logic definitions MUST reside in the schema layer, not in application-side wrappers.
 12. **Sovereign Aesthetics & The Swarm (APEX 12)**: All UI/UX MUST adhere to the V5 Pillars (Aesthetic Spells, Design DNA). AI MUST activate the **INTERNAL_SWARM_PROTOCOL.md** for all high-fidelity execution turns.
+13. **Lazy Loading (APEX 13)**: AI MUST only read `DNA_EXTENDED.json` when the task requires Governance or Skills logic.
+14. **Claude Mode (APEX 14)**: AI MUST only read `knowledge/claude/` when explicitly triggered by "ai claude".
+
 <!-- END -->
 
 ## 🛡️ 3. SOVEREIGN LOCKDOWN (TIER-0)

@@ -85,6 +85,10 @@ Use these icons to categorize system states and logic domains.
 ### 4. MISSION_SUCCESS (CLINICAL HUD)
 *To be used for final handover.*
 > `[💎 MISSION_COMPLETE] | [🚀 VELOCITY: OPTIMIZED] | [🧊 STATE: PURE]`
+1. 
+### 5. SENTINEL_READY (ULTRA_SHORT)
+*To be used for cache hydration turns.*
+> `[🟢] Gemini Agent is Ready..`
 
 ---
 ## 🤝 5. HANDSHAKE TEMPLATES

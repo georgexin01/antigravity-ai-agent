@@ -2,18 +2,19 @@
 
 Authoritative URLs and Mission Paths for Sovereign Harvesting.
 
-## 🟢 PRIMARY (Tier-0 Ready)
-- **Free-Bonk**: `https://free-bonk.com/faucet` (Priority 12.0)
-- **OnlyFaucet**: `https://onlyfaucet.com/` (Priority 11.0)
+## 🟢 ACTIVE SOVEREIGN MISSION [FOCUS-LOCK]
+- **Free-Bonk (PTC)**: `https://free-bonk.com/ptc/` (Priority: 100.0)
+
+## 🟠 LEGACY / INACTIVE (Focus-Lock Override Required)
 - **VieFaucet**: `https://viefaucet.com/app/dashboard`
 - **99Faucet**: `https://99faucet.com/dashboard`
-
-## 🟠 SECONDARY (Audit Pending)
+- **OnlyFaucet**: `https://onlyfaucet.com/`
 - **DutchyCorp**: `https://dutchycorp.space/`
-- **FireFaucet**: `https://firefaucet.win/ptc` -> `https://firefaucet.win/autofaucet`
+- **FireFaucet**: `https://firefaucet.win/ptc`
 - **FaucetCrypto**: `https://faucetcrypto.com/dashboard`
 - **Cointiply**: `https://cointiply.com/faucet`
 - **Free-Solana**: `https://free-solana.com`
+
 
 ## 🛠️ SURGICAL NAVIGATION GATE
 AI must always use these direct URLs to avoid "Ad-Traps" and redirect loops.
