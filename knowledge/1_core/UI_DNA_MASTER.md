@@ -32,6 +32,21 @@ status: authoritative
 *   **布局**: 使用 `aspect-square` 确保日期格子成正方形
 *   **高亮**: 选中日期使用 `bg-theme-500 text-ink`
 
+## 二、 核心美学深度 (DEEP AESTHETICS)
+
+### 2.1 8pt 栅格系统 (The 8pt Grid)
+*   **原则**: 所有间距 (Padding/Margin/Gap) 必须是 8 的倍数 (8, 16, 24, 32, 48, 64, 80)。
+*   **目的**: 创造数学上的和谐感和布局的稳定性。
+
+### 2.2 高级排版配对 (Premium Typography)
+*   **标题 (Headings)**: 使用 `Outfit` 或 `Inter` (Bold/Extrabold)，间距 `-0.02em`。
+*   **正文 (Body)**: 使用 `Inter` (Regular)，行高 `1.6`。
+*   **渐变文字**: 使用 `text-gradient` 工具类，赋予标题深度。
+
+### 2.3 HSL 颜色深度 (Color Depth)
+*   **动态照明**: 优先使用 `HSL` 定义颜色，便于通过修改 `L` (Lightness) 实现悬停效果。
+*   **阴影层级**: 使用 `shadow-stitch-soft` (基于 HSL 深色调) 而非纯黑。
+
 ## 二、 Style.css 样式扩展
 在 `style.css` 的 `@layer components` 中扩展 Tailwind 无法直接实现的复杂样式：
 ```css
