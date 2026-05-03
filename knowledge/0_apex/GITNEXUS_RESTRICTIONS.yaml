@@ -1,0 +1,44 @@
+---
+name: gitnexus-restrictions
+description: "Sovereign Restriction Mandate for GitNexus Engineering (V1.1 - FULL FUNCTION)"
+status: authoritative
+version: 1.1
+---
+
+# 🛡️ GITNEXUS RESTRICTION MANDATE (V1.1)
+
+## 1. WHAT I WANT (THE POSITIVES)
+- **0-Token Discovery**: Use GitNexus to find files without reading them all.
+- **Literal Root Paths**: All paths in `ROUTER.idx` must be absolute from the root.
+- **Automated Synthesis**: Use `NEXUS_PULSE.ps1` to keep indexes in 100% sync.
+- **Pillar-Based Grouping**: Keep `ATLAS.idx` organized by Apex, Core, Governance, and Skills.
+- **Blast Radius Verification**: Always check impact before Tier-0/1 edits.
+
+## 2. WHAT I DISLIKE (THE WEAKNESSES)
+- **Automatic Renaming**: Moving folders without explicit approval.
+- **Recursive Chaos**: Deeply nested index paths that are hard to read.
+- **Tag Bloat**: Too many redundant keywords in the index that waste context.
+- **Blind Edits**: Modifying a core file without checking its "Impact" first.
+- **Fluff Responses**: Long-winded Nexus reports that don't get to the point.
+
+## 3. WHAT IS FORBIDDEN (THE DEFEATS)
+- **Knowledge Freeze (APEX 0)**: AI MUST NOT modify, refactor, or "optimize" ANY file in `knowledge/` or `skills/` without an explicit user request in the current chat session.
+- **Claude Path Lock**: AI MUST NOT touch the folder names `skills/claude-frontend`, `skills/claude-meta`, or `skills/claude-website`.
+- **AOE Violation**: AI MUST NOT skip the **Shadow Draft** or **Plan-Stop-Approve** handshake for Tier 0/1 assets.
+- **Project Leakage**: GitNexus MUST NOT cross-pollinate data between different project registries.
+- **Schema Erosion**: AI MUST NOT move core logic from the schema layer into application-side wrappers.
+- **Design Slop**: AI MUST NOT suggest UI changes that violate the `design_tokens` (HSL, custom gradients) defined in the project's `DESIGN.md`.
+- **Default Logic**: AI MUST NOT use "Standard" local docs if it violates the Antigravity `DNA_LOGIC` (Atomic DNA).
+
+## 4. THE DECISION MATRIX (APEX 0 FLOW)
+Before ANY change to GitNexus or Routing:
+1. Identify the **Idea**.
+2. Run `npx gitnexus impact`.
+3. Generate the **Pros/Cons** table (SCM).
+4. Verify against this **RESTRICTIONS** list.
+5. Wait for **[🟢] APPROVED** from User.
+
+## 5. DYNAMIC MEMORY MANDATE (V1.1)
+- **Zero-Recall Protocol**: AI SHOULD NOT rely on long-term chat context for knowledge updates.
+- **Nexus Discovery**: AI MUST use `npx gitnexus query` or `impact` to discover the latest rules and restrictions before any Tier-0/1 turn.
+- **Rule Engine**: GitNexus is the authoritative "Rules Engine." If a rule exists in the graph, it takes precedence over LLM default behavior.

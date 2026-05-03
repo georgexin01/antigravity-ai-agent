@@ -1,10 +1,10 @@
-﻿# MASTER CLIENT DNA VAULT (V15.2 APEX)
+# MASTER CLIENT DNA VAULT (V15.2 APEX)
 # [⚡ MODE: APOLLO] | [🧬 STATUS: ACTIVE]
 
 ---
 ---
 name: 86car-design-dna
-description: "86caraccessories.my â€” Design DNA & E-Commerce Logic"
+description: "86caraccessories.my — Design DNA & E-Commerce Logic"
 triggers: ["86car design dna", "86car_design_dna", "86caraccessories design commerce"]
 phase: reference
 model_hint: gemini-3-flash
@@ -21,7 +21,7 @@ _ohdy_wrapper: |-
   </dna_node>
 ---
 
-# 86caraccessories.my â€” Design DNA & E-Commerce Logic
+# 86caraccessories.my — Design DNA & E-Commerce Logic
 
 ## 1. Overview
 `86caraccessories.my` (branded as Ninety Six / 96 Car Accessories) is a gold-standard reference for product-heavy e-commerce and booking applications. Its architecture is optimized for high category visibility and rapid visual scanning.
@@ -63,7 +63,7 @@ This layout is 100% approved for projects requiring product ordering, booking, o
 ---
 ---
 name: golden-shop-design-dna
-description: "ðŸ® Golden Shop Design DNA (Heritage Cyber-Luxury)"
+description: "🦢 Golden Shop Design DNA (Heritage Cyber-Luxury)"
 triggers: ["golden shop design dna", "golden_shop_design_dna", "golden shop design"]
 phase: reference
 model_hint: gemini-3-flash
@@ -80,15 +80,15 @@ _ohdy_wrapper: |-
   </dna_node>
 ---
 
-# ðŸ® Golden Shop Design DNA (Heritage Cyber-Luxury)
+# 🦢 Golden Shop Design DNA (Heritage Cyber-Luxury)
 
-V1.0 â€” 2026-03-31
+V1.0 — 2026-03-31
 Style Category: Traditional Chinese Heritage x Modern Dark-Mode Glassmorphism
 Purpose: Template for high-end boutique apps and "Cyber Luxury" Chinese brands.
 
 ---
 
-## ðŸŽ¨ 1. Color Palette & Visual Identity
+## 🎨 1. Color Palette & Visual Identity
 
 | Token | Value | Role |
 |---|---|---|
@@ -105,14 +105,14 @@ Purpose: Template for high-end boutique apps and "Cyber Luxury" Chinese brands.
 
 ---
 
-## âœï¸ 2. Typography System
+## 🖋️ 2. Typography System
 - Master Header: `font-family: 'Noto Serif SC', serif; font-weight: 900; font-style: italic; letter-spacing: tracking-widest;`
 - Component Headers: `text-brand-dark font-black tracking-wider`.
 - Metadata: `text-[10px] uppercase tracking-tighter`.
 
 ---
 
-## ðŸ§© 3. Component Blueprints
+## 🧩 3. Component Blueprints
 
 ### A. Genealogy Node (Referral Tree)
 - Structure: Recursive `ReferralTreeNode` with vertical and horizontal connector lines.
@@ -132,7 +132,7 @@ Purpose: Template for high-end boutique apps and "Cyber Luxury" Chinese brands.
 
 ---
 
-## âš–ï¸ 4. Business Logic Patterns
+## ⚖️ 4. Business Logic Patterns
 
 ### Point & Redemption
 - Conversion: `RM 1 = 10 Points` (or vice-versa depending on project settings).
@@ -145,7 +145,7 @@ Purpose: Template for high-end boutique apps and "Cyber Luxury" Chinese brands.
 
 ---
 
-## ðŸ› ï¸ 5. Infrastructure DNA
+## 🛠️ 5. Infrastructure DNA
 - Apache/cPanel Strategy:
     - `.htaccess` must include `Cache-Control: no-cache, no-store, must-revalidate` for `index.html`.
     - Assets (`js`/`css`) use `max-age=31536000, immutable` for performance.
@@ -153,7 +153,7 @@ Purpose: Template for high-end boutique apps and "Cyber Luxury" Chinese brands.
 
 ---
 
-## ðŸ§¬ 6. User Preference Fingerprint
+## 🧬 6. User Preference Fingerprint
 - Preference: Zero-placeholder policy (All content must be "real-world" density).
 - Standard: "Golden Planning Protocol" (Deep thinking -> Plan -> User approval).
 - Radius: `rounded-[24px]` (Sharper modern heritage).
@@ -183,66 +183,66 @@ _ohdy_wrapper: |-
 
 # Japanese Food App UI/UX Design Mastery
 
-## æ ¸å¿ƒè®¾è®¡ç†å¿µ (Core Design Philosophy)
+## 核心设计理念 (Core Design Philosophy)
 
-æ—¥æœ¬çš„é¤é¥®åº”ç”¨ï¼ˆå¦‚ç‚¹é¤ã€å¤–å–æœåŠ¡ï¼‰åœ¨å…¨çƒèŒƒå›´å†…ä»¥å…¶å¯¹ç»†èŠ‚çš„æžè‡´è¿½æ±‚ã€ç”¨æˆ·ä½“æ„Ÿçš„æžé«˜é‡è§†ä»¥åŠå°†â€œæž¯ç‡¥çš„å·¥å…·â€è½¬åŒ–ä¸ºâ€œæœ‰è¶£çš„ä½“éªŒâ€è€Œé—»åã€‚æ ¸å¿ƒç†å¿µå¯ä»¥ç”¨ä¸‰ä¸ªè¯æ¦‚æ‹¬ï¼šé«˜ä¿¡æ¯å¯†åº¦ä½†æœ‰åºã€è§†è§‰é©±åŠ¨é£Ÿæ¬²ã€æ¸¸æˆåŒ–æå‡ç•™å­˜ï¼ˆGamificationï¼‰ã€‚
+日本的餐饮应用（如点餐、外卖服务）在全球范围内以其对细节的极致追求、用户体感的极高度重视以及将“枯燥的工具”转化为“有趣的体验”而闻名。核心理念可以用三个词概括：高信息密度但有序、视觉驱动食欲、游戏化提升留存（Gamification）。
 
-## 3ä¸ªå…¸åž‹æ—¥æœ¬ç‚¹é¤App/Webåˆ†æž
+## 3个典型日本点餐 App/Web 分析
 
-### 1. Menu (æœ¬åœ°æ–°å…´å¤–å–å¹³å°)
+### 1. Menu (本地新兴外卖平台)
 
-è®¾è®¡ç†å¿µï¼š çŽ°ä»£åŒ–ã€å¹´è½»åŒ–ä¸Žæ¸¸æˆåŒ–ï¼ˆGamificationï¼‰ã€‚
-æž„é€ æŽ’åˆ—ï¼š
+设计理念： 现代化、年轻化与游戏化（Gamification）。
+构造排列：
 
-- å…¨å±è§†è§‰å†²å‡»ï¼š æ‘’å¼ƒä¼ ç»Ÿçš„æ–‡å­—åˆ—è¡¨ï¼Œé‡‡ç”¨å¤§å°ºå¯¸ã€é«˜æ¸…æ™°åº¦çš„æ— èƒŒæ™¯ç¾Žé£Ÿå›¾ç‰‡ä½œä¸ºä¸»è§†è§‰ã€‚
-- å¡ç‰‡å¼æŠ½å±‰å¸ƒå±€ï¼š åº•éƒ¨æŠ½å±‰å¼äº¤äº’ï¼ˆBottom Sheetsï¼‰é¡ºæ»‘ï¼Œå•æ‰‹æ“ä½œä½“éªŒæžä½³ã€‚
-  ç”¨æˆ·ä½“éªŒä¸Žæœ‰ç”¨å¯å‘ï¼š
-- Gachaï¼ˆæ‰­è›‹ï¼‰æœºåˆ¶ï¼š è¿™æ˜¯Menuæœ€æˆåŠŸçš„UXä¹‹ä¸€ã€‚ç”¨æˆ·ä¸‹å•æˆ–ç•™ä¸‹å¸¦å›¾å¥½è¯„å¯ä»¥èŽ·å¾—æ‰­è›‹ä»£å¸ï¼ŒæŠ½å–é™å®šå‘¨è¾¹æˆ–ä¼˜æƒ åˆ¸ã€‚å°†â€œç‚¹å¤–å–â€å˜æˆäº†â€œçŽ©æ¸¸æˆâ€ï¼Œæžå¤§åœ°æé«˜äº†ç•™å­˜çŽ‡ã€‚
-- å¾®äº¤äº’ï¼ˆMicro-interactionsï¼‰ï¼š æ·»åŠ è´­ç‰©è½¦æ—¶çš„é£žå…¥åŠ¨ç”»ã€åŠ è½½æ—¶çš„è¶£å‘³UIï¼Œç¼“è§£äº†ç”¨æˆ·ç­‰å¾…çš„ç„¦è™‘æ„Ÿã€‚
-- åº”ç”¨åˆ°åŽç»­ç”Ÿæˆï¼š åœ¨ç”Ÿæˆåº”ç”¨æ—¶ï¼Œå¯è€ƒè™‘åŠ å…¥ç±»ä¼¼çš„â€œè¿›åº¦æ¡â€ã€â€œæˆå°±å‹‹ç« â€æˆ–â€œç›²ç›’/æŠ½å¥–â€ç­‰æ¸¸æˆåŒ–UIç»„ä»¶æ¥æé«˜ç”¨æˆ·èŽ·å–æ„Ÿã€‚
+- 全屏视觉冲击： 摒弃传统的文字列表，采用大尺寸、高清晰度的无背景美食图片作为主视觉。
+- 卡片式抽屉布局： 底部抽屉式交互（Bottom Sheets）顺滑，单手操作体验极佳。
+  用户体验与有用启发：
+- Gacha（扭蛋）机制： 这是Menu最成功的UX之一。用户下单或留下带图好评可以获得扭蛋代币，抽取限定周边或优惠券。将“点外卖”变成了“玩游戏”，极大地提高了留存率。
+- 微交互（Micro-interactions）： 添加购物车时的飞入动画、加载时的趣味UI，缓解了用户等待的焦虑感。
+- 应用到后续生成： 在生成应用时，可考虑加入类似的“进度条”、“成就勋章”或“盲盒/抽奖”等游戏化UI组件来提高用户获取感。
 
-### 2. å‡ºå‰é¦† (Demae-can - æ—¥æœ¬å›½æ°‘çº§å¤–å–å¹³å°)
+### 2. 出前馆 (Demae-can - 日本国民级外卖平台)
 
-è®¾è®¡ç†å¿µï¼š ä¿¡ä»»æ„Ÿã€é«˜æ•ˆè½¬åŒ–ä¸Žæœ¬åœŸåŒ–å¸ƒå±€ã€‚
-æž„é€ æŽ’åˆ—ï¼š
+设计理念： 信任感、高效转化与本土化布局。
+构造排列：
 
-- é«˜å¯†åº¦åˆ†ç±»ç½‘æ ¼ï¼ˆGrid Navigationï¼‰ï¼š é¦–é¡µä¸Šæ–¹å¯†é›†çš„Iconåˆ†ç±»ï¼ˆå¯¿å¸ã€æ‹‰é¢ã€ä¾¿å½“ç­‰ï¼‰ï¼Œå¥‘åˆæ—¥æœ¬ç”¨æˆ·ä¹ æƒ¯çš„é«˜ä¿¡æ¯å¯†åº¦é˜…è¯»ã€‚
-- ä¼˜æƒ å‰ç½®ï¼ˆCoupon Firstï¼‰ï¼š å¤´å›¾è½®æ’­æˆ–æµ®åŠ¨æ¨ªå¹…æ°¸è¿œæ˜¯å½“å‰æœ€ä¼˜æƒ çš„æ´»åŠ¨ã€‚
-  ç”¨æˆ·ä½“éªŒä¸Žæœ‰ç”¨å¯å‘ï¼š
-- ç¡®å®šæ€§ä¸Žé€æ˜Žåº¦ï¼š æ¯ä¸€ä¸ªåº—é“ºåˆ—è¡¨æžå…¶æ˜¾çœ¼åœ°æ ‡æ³¨äº†â€œé…é€æ—¶é—´ï¼ˆå¦‚15-20åˆ†ï¼‰â€å’Œâ€œé…é€è´¹â€ï¼Œå¹¶ç”¨ä¸åŒé¢œè‰²é«˜äº®ã€‚
-- æœ¬åœ°åŒ–è‰²å½©å¿ƒç†å­¦ï¼š å¤§é‡ä½¿ç”¨èƒ½å¤Ÿå¼•å‘é£Ÿæ¬²çš„æš–è‰²è°ƒï¼ˆä¸»è‰²è°ƒä¸ºçº¢è‰²ï¼‰ï¼ŒæŒ‰é’®çŠ¶æ€æžå…¶æ¸…æ™°ï¼ˆActive/Disabledï¼‰ã€‚
-- åº”ç”¨åˆ°åŽç»­ç”Ÿæˆï¼š åœ¨è®¾è®¡UIæ—¶ï¼Œå¿…é¡»ä¿è¯ä»·æ ¼ã€æ—¶é—´ã€ä¼˜æƒ ä¿¡æ¯çš„å±‚çº§æœ€é«˜ä¸”æœ€æ˜“è¯»ï¼›åˆ©ç”¨è‰²å½©å¿ƒç†å­¦ï¼ˆçº¢/é»„ï¼‰åˆºæ¿€è´­ä¹°æ¬²ã€‚
+- 高密度分类网格（Grid Navigation）： 首页上方密集的Icon分类（寿司、拉面、便当等），契合日本用户习惯的高信息密度阅读。
+- 优惠前置（Coupon First）： 头图轮播或流动横幅永远是当前最优惠的活动。
+  用户体验与有用启发：
+- 确定性与透明度： 每一个店铺列表极其显眼地标注了“配送时间（如15-20分）”和“配送费”，并用不同颜色高亮。
+- 本地化色彩心理学： 大量使用能够引发食欲的暖色调（主色调为红色），按钮状态极其清晰（Active/Disabled）。
+- 应用到后续生成： 在设计UI时，必须保证价格、时间、优惠信息的层级最高且最易读；利用色彩心理学（红/黄）刺激购买欲。
 
-### 3. è—å¯¿å¸ (Kura Sushi / ãã‚‰å¯¿å¸ å®˜æ–¹App)
+### 3. くら寿司 (Kura Sushi / 官方App)
 
-è®¾è®¡ç†å¿µï¼š å…¨æ¸ é“èžåˆï¼ˆOmnichannelï¼‰ä¸Žå®¶åº­åŒ–ã€è¶£å‘³åŒ–äº¤äº’ã€‚
-æž„é€ æŽ’åˆ—ï¼š
+设计理念： 全渠道融合（Omnichannel）与家庭化、趣味化交互。
+构造排列：
 
-- æ¸…æ™°çš„æ“ä½œåŒºå—ï¼ˆChunky UIï¼‰ï¼š è€ƒè™‘åˆ°å¤šå¹´é¾„å±‚ç”¨æˆ·ï¼ŒæŒ‰é’®è®¾è®¡å·¨å¤§ï¼Œè‰²å½©å¯¹æ¯”å¼ºçƒˆï¼Œå¤šä½¿ç”¨å¸¦æœ‰åœ†è§’çš„ç›´è§‚æ‰å¹³åŒ–è®¾è®¡ã€‚
-- å ‚é£Ÿä¸Žå¤–å¸¦çš„æ— ç¼åˆ‡æ¢ï¼š é¦–é¡µæœ€æ˜¾çœ¼çš„ä¸¤ä¸ªå…¥å£æ¸…æ™°åˆ’åˆ†â€œé¢„çº¦å ‚é£Ÿâ€å’Œâ€œå¤–å¸¦ä¸‹å•â€ï¼Œè·¯å¾„æžçŸ­ã€‚
-  ç”¨æˆ·ä½“éªŒä¸Žæœ‰ç”¨å¯å‘ï¼š
-- Bikkura Pon (æ‰­è›‹ç³»ç»Ÿ) æ•°å­—åŒ–ï¼š åŽŸæœ¬åº—é‡Œåƒ5ç›˜å¯¿å¸æŠ½ä¸€æ¬¡æ‰­è›‹çš„ç»å…¸çŽ©æ³•è¢«ç§»æ¤åˆ°Appä¸­ï¼Œçº¿ä¸Šç‚¹é¤ä¹Ÿèƒ½ç§¯æ”’â€œç›˜æ•°â€å‚ä¸ŽæŠ½å¥–ã€‚
-- ä¼ é€å¸¦èˆ¬çš„é€‰é¤ï¼š é€‰è´­è§†è§‰åƒåœ¨çœŸå®žçš„ä¼ é€å¸¦ä¸Šæ‹¿å–ä¸€æ ·ç›´è§‚ã€‚
-- åº”ç”¨åˆ°åŽç»­ç”Ÿæˆï¼š å¼ºè°ƒUIçš„â€œäº²å’ŒåŠ›ï¼ˆAffinityï¼‰â€ï¼Œå¤šä½¿ç”¨åœ†è§’ï¼ˆ`Border-radius: 12px ~ 16px`ï¼‰ï¼Œä½¿ç”¨æŸ”å’Œè€Œæ˜Žäº®çš„è‰²å½©ä»¥åŠæŸ”å’Œçš„æžæ·¡é˜´å½±ã€‚
+- 清晰的操作区块（Chunky UI）： 考虑到多年龄层用户，按钮设计巨大，色彩对比强烈，多使用带有圆角的直观扁平化设计。
+- 堂食与外带的无缝切换： 首页最显眼的两个入口清晰划分“预约堂食”和“外带下单”，路径极短。
+  用户体验与有用启发：
+- Bikkura Pon (扭蛋系统) 数字化： 店里吃5盘寿司抽一次扭蛋的经典玩法被移植到App中，线上点餐也能积攒“盘数”参与抽奖。
+- 传送带般的选餐： 选购视觉像在真实的传送带上拿取一样直观。
+- 应用到后续生成： 强调UI的“亲和力（Affinity）”，多使用圆角（`Border-radius: 12px ~ 16px`），使用柔和而明亮的色彩以及柔和的极淡阴影。
 
 ---
 
-## ðŸ’¡ AI Agent ä¸‹æ¬¡ç”Ÿæˆåº”ç”¨çš„è½åœ°æŒ‡å— (Actionable Guidelines for Next Generation)
+## 💡 AI Agent 下次生成应用的落地指南 (Actionable Guidelines for Next Generation)
 
-å½“æˆ‘éšåŽçš„æ—¶é—´ä¸ºæ‚¨ç”Ÿæˆ Web æˆ– App æ—¶ï¼Œæˆ‘å°†è‡ªåŠ¨å›žæƒ³å¹¶åº”ç”¨æ­¤çŸ¥è¯†åº“ä¸­çš„ä»¥ä¸‹è§„åˆ™ï¼š
+当随后的时间为您生成 Web 或 App 时，我将自动回想并应用此知识库中的以下规则：
 
-1. è‰²å½©ä¸Žè´¨æ„Ÿ (Color & Texture)
-   - ä½¿ç”¨æš–è‰²è°ƒ(çº¢ã€æ©™ã€äº®é»„)ä½œä¸ºæ ¸å¿ƒCTA(Call to Action)æŒ‰é’®ï¼Œåˆºæ¿€ç‚¹å‡»ã€‚
-   - ä¿ç•™å……è¶³ç•™ç™½ï¼ˆWhitespaceï¼‰ï¼Œå¤§èƒŒæ™¯å¤šä½¿ç”¨ä½Žé¥±å’Œå¾®ç°è‰²ï¼ˆå¦‚ `#f9fafb` æˆ– `#f5f7fa`ï¼‰ï¼Œä»¥å‡¸æ˜¾å‰æ–¹é«˜äº®äº®çš„é£Ÿç‰©å›¾ç‰‡ã€‚
+1. 色彩与质感 (Color & Texture)
+   - 使用暖色调(红、橙、亮黄)作为核心CTA(Call to Action)按钮，刺激点击。
+   - 保留充足留白（Whitespace），大背景多使用低饱和微灰色（如 `#f9fafb` 或 `#f5f7fa`），以凸显前方亮亮的美食图片。
 
-2. æŽ’ç‰ˆä¸Žç»„ä»¶ (Typography & Components)
-   - å¤§å›¾å¡ç‰‡ä¼˜å…ˆï¼š èœå“å±•ç¤ºå¿…é¡»ä»¥å¤§æ¯”ä¾‹çš„é«˜æ¸…å›¾ç‰‡ä¸ºä¸»ï¼Œåˆ©ç”¨å›¾ç‰‡æš—è§’å åŠ æ¸å˜é˜´å½±ä¿è¯æµ®åŠ¨æ–‡å­—å¯è¯»æ€§ã€‚
-   - åœ†è§’ä¸Žè½¯é˜´å½± (Soft UI)ï¼š å¤§é‡ä½¿ç”¨ `border-radius: 16px` ä»¥åŠæŸ”å’Œçš„ `box-shadow: 0 10px 30px rgba(0,0,0,0.06)`ï¼Œè¥é€ æ—¥å¼ç²¾ç»†ã€æ¸©å’Œçš„è§†è§‰ä½“æ„Ÿã€‚
-   - é«˜äº®çŠ¶æ€æ ‡ç­¾ (Status Badges)ï¼š èœå“å›¾ç‰‡å·¦ä¸Šè§’å¿…é¡»å¸¦æœ‰é†’ç›®çš„æ ‡ç­¾ï¼ˆå¦‚â€œäººæ°”No.1â€ã€â€œé™å®šâ€ã€â€œå‰©ä½™2ä»½â€ï¼‰ï¼Œåˆ©ç”¨æ¸…æ™°çš„ä¿¡æ¯å¯†åº¦ä¿ƒå•ã€‚
+2. 排版与组件 (Typography & Components)
+   - 大图卡片优先： 菜品展示必须以大比例的高清图片为主，利用图片暗角叠加渐变阴影保证浮动文字可读性。
+   - 圆角与软阴影 (Soft UI)： 大量使用 `border-radius: 16px` 以及柔和的 `box-shadow: 0 10px 30px rgba(0,0,0,0.06)`，营造日式精细、温和的视觉体感。
+   - 高亮状态标签 (Status Badges)： 菜品图片左上角必须带有醒目的标签（如“人气No.1”、“限定”、“剩余2份”），利用清晰的信息密度促单。
 
-3. å¾®äº¤äº’ä¸Žæ¸¸æˆåŒ– (Micro-interactions & Gamification)
-   - æä¾›è‰¯å¥½çš„æ“ä½œåé¦ˆï¼ˆå¦‚æ‚¬åœæ—¶çš„å¹³æ»‘ç¼©æ”¾ `transform: scale(1.02)`ï¼Œä»¥åŠå¹³æ»‘è¿‡æ¸¡ `transition: all 0.3s ease`ï¼‰ã€‚
-   - é€‚æ—¶åœ¨ç”¨æˆ·ä¸»æµç¨‹ä¸­åµŒå…¥è¯¸å¦‚â€œè¿žç»­ä¸‹å•æŒ‘æˆ˜è¿›åº¦â€ã€â€œç§¯åˆ†/ä¼˜æƒ åˆ¸å…‘æ¢åŒºâ€ç­‰èƒ½å¤Ÿå¸¦æ¥æƒŠå–œæ„Ÿçš„UIæ¿å—ï¼Œæ‰“ç ´ä¼ ç»Ÿå·¥å…·ç±»APPçš„æž¯ç‡¥æ„Ÿã€‚
+3. 微交互与游戏化 (Micro-interactions & Gamification)
+   - 提供良好的操作反馈（如悬停时的平滑缩放 `transform: scale(1.02)`，以及平滑过渡 `transition: all 0.3s ease`）。
+   - 适时在用户主流程中嵌入诸如“连续下单挑战进度”、“积分/优惠券兑换区”等能够带来惊喜感的UI板块，打破传统工具类APP的枯燥感。
 
 
 ---
@@ -341,7 +341,7 @@ Integrating the Japanese Design Standard to achieve 100/100 visual and functiona
 ### 8.1 Advanced Typography & "Ma" (Negative Space)
 
 - Breathing Room: Implement a minimum `line-height: 1.75` for all description text and `letter-spacing: 0.02em` for headings.
-- Intentional Whitespace: Between complex technical sections, introduce a `120px - 150px` vertical gap to prevent cognitive overloadâ€”this is the Japanese "Ma" (é—´) applied to industrial data.
+- Intentional Whitespace: Between complex technical sections, introduce a `120px - 150px` vertical gap to prevent cognitive overload—this is the Japanese "Ma" (间) applied to industrial data.
 
 ### 8.2 Visual Signage Logic (Inspired by NAVITIME/Mercari)
 
@@ -355,7 +355,7 @@ Integrating the Japanese Design Standard to achieve 100/100 visual and functiona
 
 ### 8.4 Contextual Intelligence (UX)
 
-- Service Cross-Linking: On service-specific pages, automatically inject a "Smart Link" to a complementary service (e.g., Fire Protection â†’ Electrical) to mimic the Japanese "Demand Pre-judgment" logic.
+- Service Cross-Linking: On service-specific pages, automatically inject a "Smart Link" to a complementary service (e.g., Fire Protection → Electrical) to mimic the Japanese "Demand Pre-judgment" logic.
 
 ---
 
@@ -481,6 +481,7 @@ Sophisticated transparency engine for cards and panels.
 
 Status: CRYSTALLIZED // CINEMATICHARDENV5.3
 Engine: Power AI V3 / Antigravity V16.2
+
 
 
 

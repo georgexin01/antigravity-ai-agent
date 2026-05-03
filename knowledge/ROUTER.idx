@@ -1,31 +1,46 @@
-memory/snapshot/DNA_KERNEL.json=ai read .gemini knowledge,ai read .gemini,.gemini knowledge,read .gemini knowledge,read .gemini,sentinel,sync
-k0/GROUND_KERNEL.md=apex,kernel,rules
-k0/SOVEREIGN_ENGINE_ORCHESTRATOR.md=orchestrator,loop,v5
-k0/INTERNAL_SWARM_PROTOCOL.md=swarm,mas,peer-review
-k0/SOVEREIGN_CONTEXT_LIQUIDATOR.md=liquidator,prune
-k0/SOVEREIGN_BLUEPRINT_PROTOCOL.md=blueprint,plan,check,simulation
-k0/FLASH_HARDENING_PROTOCOL.md=flash,hardening,cove
-k0/RESEARCH_FLYWHEEL.md=flywheel,library,intel
-k1/IDENTITY_REGISTRY.yaml=identity,registry,lpm
-k1/AOE_PROTOCOL.md=security,tier,handshake,aoe
-k1/KARPATHY_OPERATIONAL_STANDARD.md=karpathy,thinking,surgical
-k1/TIER_1_CORE_MASTER.md=core,dna,standard,architect,pattern
-k1/DESIGN_PROTOCOL.md=design,tokens,aesthetics,anti-slop
-k1/SOVEREIGN_AESTHETIC_SPELLS.md=spells,magic,css,ui,premium
-k1/APEX_HUD_LIBRARY.md=hud,library,visual
-k1/STITCH_UI_PROTOCOL.md=stitch,ui,pattern
-k1/SOVEREIGN_COMPARISON_PROTOCOL.md=comparison,scp,matrix
-k2/SOVEREIGN_AUTO_REPAIR_PROTOCOL.md=drift,repair,bug
-k2/LAA_ECOSYSTEM_API_PROTOCOL.md=network,cors,supabase,deploy
-k2/LIBRARY_INTELLIGENCE_PROTOCOL.md=wiki,notebooklm,flywheel
-sc-m/SKILL.md=meta,plan
-knowledge/claude/SNAPSHOT_CLAUDE.idx=ai claude,claude,logic
-sc/SKILL.md=claude-skill,swf,sovereign
-sc-f/SKILL.md=vue,capacitor,swf
-sc-w/SKILL.md=php,rest,backend
-sn/SKILL.md=normal,standard
-sf/SKILL.md=faucet,harvest,automate
-sn/performance/identity_sync.md=identity,sync,performance
-memory/SYNTHESIS_LOG.json=synthesis,log,feedback,dna
-memory/SESSION_SHADOW.json=shadow,memory,v4
+# === HOT PATH (EXECUTION KERNELS) ===
+knowledge/0_apex/GROUND_KERNEL.md=GROUND_KERNEL
+knowledge/0_apex/EXECUTION_KERNEL.md=EXECUTION_KERNEL
+knowledge/0_apex/ENGINEERING_PROTOCOLS.md=ENGINEERING_PROTOCOLS
+knowledge/0_apex/HYBRID_FORMAT_PROTOCOL.md=HYBRID_FORMAT_PROTOCOL
 
+# === APEX TEMPLATES ===
+knowledge/0_apex/templates/MASTER_APP_BLUEPRINT.md=MASTER_APP_BLUEPRINT
+knowledge/0_apex/templates/MASTER_BLUEPRINT.md=MASTER_BLUEPRINT
+knowledge/0_apex/templates/MASTER_DESIGN.md=MASTER_DESIGN
+knowledge/0_apex/templates/MASTER_ROUTER_BLUEPRINT.md=MASTER_ROUTER_BLUEPRINT
+
+# === CORE DNA MASTER ===
+knowledge/1_core/UI_DNA_MASTER.md=UI_DNA_MASTER
+knowledge/1_core/INDUSTRIAL_INTERACTION_LIBRARY.md=INDUSTRIAL_INTERACTION_LIBRARY
+knowledge/1_core/SOVEREIGN_UTILITIES.md=SOVEREIGN_UTILITIES
+knowledge/1_core/DESIGN_TOKENS.yaml=DESIGN_TOKENS
+knowledge/1_core/VOCABULARY.md=VOCABULARY
+knowledge/1_core/KARPATHY_OPERATIONAL_STANDARD.md=KARPATHY_OPERATIONAL_STANDARD
+knowledge/1_core/MULTI_AGENT_PATTERNS.md=MULTI_AGENT_PATTERNS
+knowledge/1_core/DNA_LOGIC.md=DNA_LOGIC
+knowledge/1_core/DNA_SPECIALTY.md=DNA_SPECIALTY
+
+# === GOVERNANCE & AUDIT ===
+knowledge/2_governance/MODULE_AUDIT_PROTOCOL.md=MODULE_AUDIT_PROTOCOL
+knowledge/2_governance/ARCHITECTURE_COMPARISON.md=ARCHITECTURE_COMPARISON
+knowledge/2_governance/PREFLIGHT_CHECKLIST.md=PREFLIGHT_CHECKLIST
+knowledge/2_governance/GITNEXUS_PROTOCOL.md=GITNEXUS_PROTOCOL
+knowledge/2_governance/GITNEXUS_DEEP_REASONING.md=GITNEXUS_DEEP_REASONING
+knowledge/2_governance/KNOWLEDGE_ROT_PROTOCOL.md=KNOWLEDGE_ROT_PROTOCOL
+knowledge/2_governance/SOVEREIGN_AUTO_REPAIR_PROTOCOL.md=SOVEREIGN_AUTO_REPAIR_PROTOCOL
+
+# === SKILLS ROUTING ===
+skills/claude/analyze-schema/skill.md=skill
+skills/claude/create-module/skill.md=skill
+skills/claude/generate-e2e/skill.md=skill
+skills/claude/generate-i18n/skill.md=skill
+skills/claude/generate-route/skill.md=skill
+skills/claude/generate-store/skill.md=skill
+skills/claude/generate-supabase-schema/skill.md=skill
+skills/claude/generate-views/skill.md=skill
+skills/claude-frontend/SKILL.md=SKILL
+skills/claude-meta/SKILL.md=SKILL
+skills/claude-website/SKILL.md=SKILL
+skills/faucet/skill.md=skill
+skills/normal/brainstorming/skill.md=skill

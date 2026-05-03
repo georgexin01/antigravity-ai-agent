@@ -25,6 +25,8 @@
 !memory/**
 !prompting/
 !prompting/**
+!.gitnexus/
+!.gitnexus/**
 
 # 4. WHITELIST: STRUCTURES (NO SECRETS)
 !vault/

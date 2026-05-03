@@ -1,0 +1,42 @@
+{
+  "version": "1.0",
+  "system": "Antigravity Sovereign Engine",
+  "last_optimized": "2026-05-02T17:49:00Z",
+  "hydration_target": "< 10s",
+  "nodes": {
+    "APEX": {
+      "path": "0_apex/GROUND_KERNEL.md",
+      "essence": "Master directive for JIT activation, security tiers (AOE), and the Sovereign Execution Loop (V5.0).",
+      "critical_rules": [1, 4, 7, 12, 13, 15]
+    },
+    "DNA": {
+      "path": "memory/snapshot/DNA_KERNEL.json",
+      "essence": "Active ruleset and hot-paths for current session hydration.",
+      "critical_rules": "All"
+    },
+    "NEXUS": {
+      "path": "2_governance/GITNEXUS_PROTOCOL.md",
+      "essence": "Primary Navigation Engine. Governs global project routing, library management, and skill clustering.",
+      "triggers": ["analyze", "serve", "query", "nexus-route"]
+    },
+    "DEEP_DIVE": {
+      "path": "0_apex/DEEP_DIVE_PROTOCOL.md",
+      "essence": "Exhaustive line-by-line research mode for high-fidelity missions.",
+      "triggers": ["deeper", "exhaustive"]
+    },
+    "VERBOSITY": {
+      "path": "0_apex/VERBOSITY_PROTOCOL.md",
+      "essence": "Strict word limits for token stewardship (Hydration < 15w, Summary < 100w).",
+      "limits": "Standardized"
+    },
+    "CORE": {
+      "path": "1_core/TIER_1_CORE_MASTER.md",
+      "essence": "Multi-agent patterns, Context Hygiene, and Design-Verifier loops.",
+      "patterns": ["GV-Loop", "LI-Layering"]
+    }
+  },
+  "index_sync": {
+    "atlas": "knowledge/ATLAS.idx",
+    "router": "knowledge/ROUTER.idx"
+  }
+}

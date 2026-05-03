@@ -1,3 +1,52 @@
+# === SOVEREIGN_UI_DESIGN_SPEC.md ===
+---
+name: sovereign-ui-design-spec
+description: "Sovereign UI 规范 (V1.0) — Tailwind + 自定义 CSS 规范"
+triggers: ["ui", "design", "tailwind", "vue", "button", "input", "checkbox", "premium"]
+version: 1.0
+status: authoritative
+---
+
+# 第一部分 UI 规范 (SOVEREIGN UI SPEC)
+
+## 零、 哲学 (PHILOSOPHY)
+所有 UI 组件必须遵循 **触感 (Tactile)**、**层级 (Elevation)** 和 **色调和谐 (Tonal Harmony)** 的核心原则。
+
+## 一、 Tailwind 基础规范
+
+### 1.1 触感按钮 (Tactile Buttons)
+*   **圆角**: `rounded-stitch-btn` (12px)
+*   **交互**: 点击缩放 `active:scale-95 transition-all duration-300`
+*   **投影**: 使用自定义 `shadow-stitch-soft` 阴影
+*   **边框**: 极细边框，使用 `after:` 或 `before:` 伪元素实现微发光效果
+
+### 1.2 高级输入框 (Premium Inputs)
+*   **样式**: 玻璃拟态 `bg-white/50 backdrop-blur-sm`，搭配底部边框 `border-b-2 border-theme-200`
+*   **聚焦状态**: `focus:ring-offset-2 focus:ring-theme-500`
+
+### 1.3 自定义复选框 (Custom Checkboxes)
+*   **结构**: `appearance-none` 隐藏原生样式，使用 `w-6 h-6` 的自定义 `div` 容器
+*   **状态切换**: 选中时背景色变为 `bg-theme-900` 并伴有弹出动画 (`animate-pop`)
+
+### 1.4 日历与日期 (Calendar & Dates)
+*   **布局**: 使用 `aspect-square` 确保日期格子成正方形
+*   **高亮**: 选中日期使用 `bg-theme-500 text-ink`
+
+## 二、 Style.css 样式扩展
+在 `style.css` 的 `@layer components` 中扩展 Tailwind 无法直接实现的复杂样式：
+```css
+.stitch-input-field {
+  @apply w-full px-4 py-3 rounded-stitch-btn border-none bg-theme-50/50 focus:bg-white focus:ring-2 focus:ring-theme-200 transition-all outline-none;
+}
+```
+
+---
+*Sovereign Design Node — V1.0*
+
+
+---
+
+# === APEX_HUD_LIBRARY.md ===
 # [🔱 APEX_HUD] | [⚡ MODE: GOVERNANCE] | [✅ STATUS: CRYSTAL]
 
 ## 🪐 1. APEX HUD LIBRARY (V15.2 SOVEREIGN)
