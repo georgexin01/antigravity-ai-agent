@@ -23,12 +23,20 @@ The blueprint is now a **Live DNA Document**.
 - **Handshake Mandate**: Any change to the project must be "Legislated" in the blueprint first before "Executed" in the code.
 - **Purity Audit**: Every blueprint section must be checked against **KARPATHY_OPERATIONAL_STANDARD.md**.
 
-## 🤖 3. GUIDED QUESTIONING 2.0
+## 🌊 3. THE DEEP DIVE STUDY FLOW (V3.1)
+For complex transitions or new projects referencing legacy code:
+1.  **Phase 1: Environment Scan**: Map the root folder and identify "Reference Folders" (e.g. `website-LAA-official`).
+2.  **Phase 2: Logic Extraction**: Read `router.php`, `index.php`, and `lib/` to understand the architectural pulse.
+3.  **Phase 3: Domain Benchmarking**: Study reference sites (e.g. Carlist, Carsome) to extract domain-specific requirements (Filters, User Flow).
+4.  **Phase 4: DNA Synthesis**: Clone `MASTER_BLUEPRINT.md` and customize it with the findings from Phase 1-3.
+5.  **Phase 5: Knowledge Archiving**: Save the project-specific patterns back to the global `knowledge/` base if they are reusable.
+
+## 🤖 4. GUIDED QUESTIONING 2.0
 AI MUST ask the "Deep 4" questions:
 - **Architecture**: Monolithic or Modular?
-- **State**: Client-side or Supabase-heavy?
+- **State**: Client-side or Supabase-heavy? (If No DB: Use PHP Variable Arrays).
 - **Visuals**: Which **[Aesthetic Spells]** are active?
 - **Security**: AOE-Tier requirements?
 
 ---
-**Sovereign Blueprint Protocol V3.0 — Master Architect Active // 2026-05-02**
+**Sovereign Blueprint Protocol V3.1 — Master Architect Active // 2026-05-03**

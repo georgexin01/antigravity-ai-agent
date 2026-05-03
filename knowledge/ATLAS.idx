@@ -14,6 +14,7 @@ knowledge/0_apex/templates/MASTER_APP_BLUEPRINT.md=MASTER_APP_BLUEPRINT
 knowledge/0_apex/templates/MASTER_BLUEPRINT.md=MASTER_BLUEPRINT
 knowledge/0_apex/templates/MASTER_DESIGN.md=MASTER_DESIGN
 knowledge/0_apex/templates/MASTER_ROUTER_BLUEPRINT.md=MASTER_ROUTER_BLUEPRINT
+knowledge/0_apex/templates/BLUEPRINT_SAMPLES.md=BLUEPRINT_SAMPLES
 
 # PILLAR 1: CORE (DNA)
 knowledge/1_core/UI_DNA_MASTER.md=UI_DNA_MASTER
@@ -31,6 +32,8 @@ knowledge/1_core/SOVEREIGN_UI_DESIGN_SPEC.md=SOVEREIGN_UI_DESIGN_SPEC
 knowledge/1_core/SOVEREIGN_UTILITIES.md=SOVEREIGN_UTILITIES
 knowledge/1_core/VOCABULARY.md=VOCABULARY
 knowledge/1_core/MEDIA_ORCHESTRATION.md=MEDIA_ORCHESTRATION
+knowledge/1_core/SOFTWARE_3_0_DNA.md=SOFTWARE_3_0_DNA
+knowledge/1_core/INFERENCE_EFFICIENCY_DNA.md=INFERENCE_EFFICIENCY_DNA
 knowledge/1_core/timestamps.json=timestamps
 
 # PILLAR 2: GOVERNANCE
@@ -46,6 +49,7 @@ knowledge/2_governance/LAA_ECOSYSTEM_API_PROTOCOL.md=LAA_ECOSYSTEM_API_PROTOCOL
 knowledge/2_governance/LIBRARY_INTELLIGENCE_PROTOCOL.md=LIBRARY_INTELLIGENCE_PROTOCOL
 knowledge/2_governance/SOVEREIGN_AUTO_REPAIR_PROTOCOL.md=SOVEREIGN_AUTO_REPAIR_PROTOCOL
 knowledge/2_governance/SOVEREIGN_BLUEPRINT_PROCEDURE.md=SOVEREIGN_BLUEPRINT_PROCEDURE
+knowledge/2_governance/ADVERSARIAL_VERIFICATION_PROTOCOL.md=ADVERSARIAL_VERIFICATION_PROTOCOL
 knowledge/2_governance/sovereign_framework_mastery.md=sovereign_framework_mastery
 knowledge/2_governance/timestamps.json=timestamps
 knowledge/2_governance/artifacts/AI_AGENT_KEYS.md=AI_AGENT_KEYS

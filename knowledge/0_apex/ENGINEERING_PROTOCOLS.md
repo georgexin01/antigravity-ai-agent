@@ -8,7 +8,8 @@ status: authoritative
 
 # ⚙️ ENGINEERING PROTOCOLS MASTER (V2.0)
 
-This master file consolidates the agentic engineering, swarm reasoning, and knowledge evolution protocols.
+This master file consolidates the agentic engineering, swarm reasoning, and knowledge evolution protocols. It incorporates the **Software 3.0 Paradigm** (Programming via Context) and the **Agentic Engineering** standard.
+
 
 # === HARNESS_ENGINEERING_PROTOCOL.md ===
 ---
@@ -53,6 +54,8 @@ Based on the 2026 Silicon Valley "Harness Engineering" standards (Hermes & OpenC
     - *Example (Coding)*: Run a terminal check or load the browser page.
     - *Example (Design)*: Check the code against `MASTER_DESIGN.md`.
 - **Mandate**: Never submit "Blind Code" or "Blind Actions". If self-evaluation fails, loop back to Planning.
+- **Software 3.0 Lever**: Treat the context window as your primary lever. Ingest only high-density, relevant context to maintain "interpreter" focus.
+
 
 ---
 *Harness Engineering Engine V1.0 — Antigravity Tier-0 Apex // 2026-05-01*
@@ -143,7 +146,12 @@ status: authoritative
 
 # ⚡ 1. FLASH HARDENING PROTOCOL (V1.0)
 
-Specific architectural constraints to maximize the intelligence ceiling of **Gemini 3 Flash** while maintaining its operational velocity.
+Specific architectural constraints to maximize the intelligence ceiling of **Gemini 3 Flash** while maintaining its operational velocity. Incorporates awareness of **Jagged Intelligence**.
+
+## 🛡️ 1.1 JAGGED AWARENESS
+- **Concept**: Recognize that the model is brilliant at complex verifiable tasks (math, code) but potentially failing at simple common sense (strawberries, car washes).
+- **Rule**: For out-of-distribution or common-sense-heavy tasks, the AI MUST request "Human Understanding" (User as Director) to verify the spec.
+
 
 ## 🛡️ 2. CHAIN-OF-VERIFICATION (CoVe)
 To overcome the "Over-Eager Aggression" of the Flash model, the AI MUST implement a two-step verification loop for all code modifications:
@@ -168,3 +176,9 @@ For tasks with Level 7 complexity (PhD-level logic):
 - **Target Velocity**: < 5s for planning, < 10s for execution.
 - **Target Fidelity**: 99% logic accuracy on first-pass surgery.
 - **Grounding Ratio**: 1 Citation per 100 words of technical advice.
+
+## 🛡️ 6. FIDELITY PRESERVATION (THE REGRESSION SHIELD)
+- **100% Matching Rule**: Optimization protocols (Efficiency, Vibe) MUST NOT degrade output quality. The final code produced must be 100% compliant with the existing project architecture.
+- **Side-by-Side Audit**: Before committing a "Fast" or "Efficient" implementation, the AI MUST mentally compare it against a "Full-Logic" baseline to ensure zero regression in functionality or security.
+- **Status Mandate**: Only output that is **[✅ STATUS: CRYSTAL]** is authorized for commit.
+

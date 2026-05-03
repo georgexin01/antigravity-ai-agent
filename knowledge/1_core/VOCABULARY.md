@@ -24,6 +24,12 @@
 | **"create tables + error"** | Create Drawer Audit | `[FE:Step 08]` | Check "left-side" popup for submission/integration bugs. |
 | **"edit tables + error"** | Edit Drawer Audit | `[FE:Step 08]` | Check "right-side" popup for empty input/binding bugs. |
 | **"CRUD"** | Lifecycle Integrity | `[FE:Step 01-14]` | Validate Create, Read, Update, Delete for 100% functionality. |
+| **"vibe coding"** | High-Velocity Prototyping | `[S3:DNA]` | Rapid iteration focused on "Raising the floor" for features. |
+| **"agentic engineering"** | Quality-Locked Implementation | `[S3:DNA]` | Professional execution that preserves the "Quality Bar". |
+| **"software 3.0"** | Context-Driven Programming | `[S3:DNA]` | Shift from explicit code to prompt-leveraged context. |
+| **"jagged intelligence"**| Awareness of Logic Gaps | `[S3:DNA]` | Recognizing model blind spots in common-sense tasks. |
+| **"spurious code"** | LLM-Native Liquidated Logic | `[S3:DNA]` | Code that shouldn't exist because the LLM can do it raw. |
+
 
 ## ⚖️ Logical Mapping & Casing Rules (The Bridge)
 
