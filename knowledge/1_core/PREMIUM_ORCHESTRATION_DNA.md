@@ -23,6 +23,13 @@ The "Liquid Glass" look is achieved through high-vibrancy translucency.
   - `border: 1px solid rgba(255, 255, 255, 0.08);`
 - **Effect**: Elements should feel like they are floating in a fluid, high-end environment.
 
+### 📐 1.2 Tilt-Stage Orchestration (V2.1)
+- **Concept**: A 3D-like depth created through deliberate rotation and scaling of core containers.
+- **Rules**:
+  - Root board MUST use `transform: rotate(-8deg) scale(0.78);`.
+  - Cards inside the board should have a "Glassy" feel to contrast the dark background.
+  - Media queries MUST adjust the scale (e.g., `.56` for mobile) to maintain readability.
+
 ### 🖋️ 1.2 Kinetic Typography (The "Viral" Rule)
 - **Scale**: Headlines MUST be massive (`fs-100` to `fs-150`).
 - **Length**: Keep it short. 1-3 words max for the Hero.

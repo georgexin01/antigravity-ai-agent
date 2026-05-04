@@ -47,6 +47,19 @@ status: authoritative
 *   **动态照明**: 优先使用 `HSL` 定义颜色，便于通过修改 `L` (Lightness) 实现悬停效果。
 *   **阴影层级**: 使用 `shadow-stitch-soft` (基于 HSL 深色调) 而非纯黑。
 
+### 2.4 Trusta Mobile Overlay (Absolute Layout)
+*   **核心参数**: 
+    - 移动端优先 `.phone` 容器限制宽度并应用投影 `box-shadow: 0 28px 80px rgba(6, 11, 12, .18)`。
+    - 顶部紫色渐变 `.hero`，叠加圆形白色切边 (`border-radius: 50% 50% 0 0 / 32% 32% 0 0`)。
+    - 主体内容 `.content` 使用绝对定位 (`inset: 102px 14px 0`) 覆盖在 hero 之上。
+*   **色盘 (Strict Mode)**: 
+    - Violet (Hero): `#8c3df4` / `#17113d`
+    - Paper (Bg): `#fbfbfb`
+    - Teal (Accent): `#098178`
+    - Orange (Accent): `#cb450b`
+    - Gold (Accent): `#e8af24`
+*   **悬浮卡片 (Floating Cards)**: `.balance-card` 必须使用 `padding: 20px 18px 14px; border-radius: 18px; box-shadow: 0 14px 36px rgba(6,11,12,.12)`.
+
 ## 二、 Style.css 样式扩展
 在 `style.css` 的 `@layer components` 中扩展 Tailwind 无法直接实现的复杂样式：
 ```css
