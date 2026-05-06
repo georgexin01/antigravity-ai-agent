@@ -20,8 +20,10 @@ To eliminate static placeholders and transition into **Motion-Driven Visuals**. 
 3.  **Video Hosting & Delivery**:
     - AI should advise the user to host `.mp4` files on high-speed CDN/platforms to ensure zero-latency background playback.
     - Always request a `poster` image (static still) for the initial load.
-4.  **Token Extraction**:
+4.  **Token Extraction & Texture Strategy**:
     - Sync CSS HSL tokens with the dominant "Light Source" in the video.
+    - **Sovereign Gold Gradient**: Use `linear-gradient(135deg, #c08c50 0%, #91602b 30%, #5a3d1a 65%, #2a1d0c 100%)`.
+    - **Industrial Tactile Rule**: Always use a linen or canvas texture (`bg-1.jpg`) on warm-toned pages to add physical depth. No plain flat #fff sections.
 
 ## 📦 Code Vault: V2.0 Motion Sourcing Prompts
 

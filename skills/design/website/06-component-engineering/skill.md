@@ -7,10 +7,13 @@ version: 1.0
 
 # 💎 [06] Component Engineering — The Tactile Engine
 
-## 🎯 Objective
-To build UI components that feel "Solid" and "High-End". Every card, button, and input must follow the 3D-depth and tactile rules of the Sovereign Design System.
+> [!NOTE]
+> **TIER-0 COMPLIANCE**: Follow the 8pt Grid, 6px Precision, and `active:scale-95` feedback rules defined in the **[Sovereign Website Introduction](../SKILL.md)**.
 
-## 📖 The Protocol
+## 🎯 Objective
+To build UI components that feel "Solid" and "High-End".
+
+## 📖 Execution Guide
 1.  **The "Premium Glass" Standard**:
     - Background: `rgba(255, 255, 255, 0.05)`.
     - Blur: `20px`.
@@ -19,10 +22,7 @@ To build UI components that feel "Solid" and "High-End". Every card, button, and
 2.  **3D Depth & Elevation**:
     - Use `:hover` states to elevate components (`transform: translateY(-5px)`).
     - Increase shadow intensity on hover for a "lifting" effect.
-3.  **Tactile Buttons & Inputs**:
-    - Add `active:scale-95` to all buttons for immediate tactile feedback.
-    - Style inputs with `bg-white-05` and a "Glow" on focus.
-4.  **Grid Systems**:
+3.  **Grid Systems**:
     - Use `display: grid` or `flex` with consistent gaps (e.g., `gap: 30px`).
     - Ensure cards in a grid have uniform height and spacing.
 
@@ -46,6 +46,42 @@ To build UI components that feel "Solid" and "High-End". Every card, button, and
         </div>
     </div>
 </article>
+```
+
+### 📦 Code Vault: The Industrial Award Row
+
+```html
+<div class="award-item-row" style="display: flex; align-items: flex-start; border-bottom: 1px solid rgba(0,0,0,0.06); padding: 50px 0;">
+    <div class="award-year-col" style="flex: 0 0 180px; font-size: 18px; font-weight: 500; color: #666;">2024</div>
+    <div class="award-info-col" style="flex: 1; display: flex; flex-direction: column;">
+        <p class="award-org-text" style="font-size: 16px; font-weight: 700; color: #111;">Toronto Design Community</p>
+        <h4 class="award-name-text" style="font-size: 68px; font-weight: 800; background: linear-gradient(135deg, #c08c50 0%, #91602b 100%); -webkit-background-clip: text; color: transparent;">3D Building Material Workflow</h4>
+    </div>
+    <div class="award-image-col" style="flex: 0 0 260px;">
+        <div class="award-thumb-frame" style="border-left: 6px solid #91602b; overflow: hidden;">
+            <img src="/uploads/award.png" style="width: 100%; height: 160px; object-fit: cover;">
+        </div>
+    </div>
+</div>
+```
+
+### 📦 Code Vault: The High-Fidelity Studio Card
+
+```html
+<a class="blog-card" href="/blogs/slug" style="display: flex; flex-direction: column; background: #fff; border-radius: 4px; overflow: hidden; text-decoration: none;">
+    <div class="blog-card-image" style="position: relative; aspect-ratio: 16 / 10;">
+        <img src="/hero.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+        <span class="blog-card-cat" style="position: absolute; top: 16px; left: 16px; background: #111; color: #fff; font-size: 0.7rem; font-weight: 700; padding: 6px 12px; text-transform: uppercase;">WORKFLOW</span>
+    </div>
+    <div class="blog-card-body" style="padding: 28px;">
+        <div class="blog-card-meta" style="font-size: 0.78rem; color: #777;">
+            <span>MAY 2026</span> <span class="dot">·</span> <span>5 MIN READ</span>
+        </div>
+        <h3 class="blog-card-title" style="font-size: 1.4rem; font-weight: 800; color: #111;">Building the Design-Build Bridge</h3>
+        <p class="blog-card-excerpt" style="font-size: 0.95rem; line-height: 1.6; color: #555;">Detailed field notes on SketchUp, D5 Render, and material specification.</p>
+        <span class="blog-card-link" style="color: #098178; font-weight: 700; text-transform: uppercase; font-size: 0.85rem;">Read article &rarr;</span>
+    </div>
+</a>
 ```
 
 ## 🛠️ Validation Checklist

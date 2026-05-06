@@ -7,20 +7,20 @@ version: 2.0
 
 # 🎬 [05] Hero Cinematics — V2.0 Video-First Protocol
 
-## 🎯 Objective
-To create a "High-End" entry experience that utilizes **Cinematic Video Loops** as the primary visual driver. We eliminate traditional gray overlays to preserve the visual purity and vibrancy of the background.
+> [!NOTE]
+> **TIER-0 COMPLIANCE**: Ensure you have read the **[Sovereign Website Introduction](../SKILL.md)** before proceeding.
 
-## 📖 The V2.0 Video Protocol
-1.  **The "No-Overlay" Law**:
-    - **Never** apply a global dark/tinted overlay on the video.
-    - Preserving the video's original color and brightness is essential for the "Premium" feel.
-2.  **Readability through Composition (Safe Zones)**:
+## 🎯 Objective
+To create a "High-End" entry experience that utilizes **Cinematic Video Loops** as the primary visual driver.
+
+## 📖 Execution Guide
+1.  **Readability through Composition (Safe Zones)**:
     - Identify the **"Safe Zone"** in the video (areas with low activity or blurred details).
     - Anchor your **Kinetic Typography** specifically in these zones using `flex` or `grid`.
-3.  **Surgical Readability (Backdrop Blur)**:
-    - If the video occasionally clashes with text, apply `backdrop-filter: blur(10px)` **only** to the container immediately behind the text, not the whole video.
-    - Use a soft `text-shadow` (e.g., `text-shadow: 0 4px 15px rgba(0,0,0,0.4);`) to lift letters off the motion.
-4.  **Kinetic Typography Execution**:
+2.  **Surgical Readability (Backdrop Blur)**:
+    - If the video occasionally clashes with text, apply `backdrop-filter: blur(10px)` **only** to the container immediately behind the text.
+    - Use a soft `text-shadow` to lift letters off the motion.
+3.  **Kinetic Typography Execution**:
     - Headline: `fs-120` to `fs-150`, `letter-spacing: -0.04em`, `line-height: 0.9`.
     - Content: 1-2 words max. Use a premium Serif for a "Viral" agency look.
 
