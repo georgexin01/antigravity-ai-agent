@@ -14,7 +14,7 @@ These rules apply to EVERY project, regardless of whether it is a Website or a M
 | **Precision** | **6px Height** | All progress bars, status lines, and linear accents MUST be exactly 6px. Thicker is "Consumer," 6px is "Industrial." |
 | **Weight** | **700 (Bold)** | The primary weight for communication and hierarchy. 900 is for numerical spectacle only. |
 | **Materiality** | **Glassmorphism** | Use `backdrop-filter: blur(12px)` and translucent surfaces for all overlays and focused cards. |
-| **Contrast** | **Tier-0 Contrast** | No gray-on-gray. Use absolute blacks, paper whites, and vibrant brand accents (Violet/Teal). |
+| **Contrast** | **Tier-0 Contrast** | **MANDATORY**: No gray-on-gray (e.g., light-gray buttons on gray background). Use absolute blacks/whites and high-contrast brand tokens for readability. |
 
 ---
 

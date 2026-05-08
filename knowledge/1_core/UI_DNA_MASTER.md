@@ -10,7 +10,8 @@ status: authoritative
 # 第一部分 UI 规范 (SOVEREIGN UI SPEC)
 
 ## 零、 哲学 (PHILOSOPHY)
-所有 UI 组件必须遵循 **触感 (Tactile)**、**层级 (Elevation)** 和 **色调和谐 (Tonal Harmony)** 的核心原则。
+所有 UI 组件必须遵循 **触感 (Tactile)**、**层级 (Elevation)**、**高对比度 (High Contrast)** 和 **色调和谐 (Tonal Harmony)** 的核心原则。
+*   **高对比度**: 严禁“灰上灰” (Gray-on-Gray)。例如，在灰色背景的页脚中，绝不能使用浅灰色按钮。必须确保人类肉眼清晰可见。
 
 ## 一、 Tailwind 基础规范
 
@@ -45,6 +46,7 @@ status: authoritative
 
 ### 2.3 HSL 颜色深度 (Color Depth)
 *   **动态照明**: 优先使用 `HSL` 定义颜色，便于通过修改 `L` (Lightness) 实现悬停效果。
+*   **高对比度校验**: 必须手动验证背景色与前景色（文字/按钮）的 `L` 值差异。差异过小（如 Gray 500 on Gray 400）是严重的设计违规。
 *   **阴影层级**: 使用 `shadow-stitch-soft` (基于 HSL 深色调) 而非纯黑。
 
 ### 2.4 Trusta Mobile Overlay (Absolute Layout)

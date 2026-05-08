@@ -26,6 +26,7 @@ To transform logistical requirements into "Premium & Tactile" mobile application
 | **Absolute Overlay** | Curved Hero Skirt. | `.content` MUST be absolutely positioned (`inset: 102px 14px 0`) over curved `.hero`. |
 | **Precision Scaling** | 6px Sleekness. | All progress bars and status lines MUST be exactly 6px height. |
 | **Glass Overlays** | Materiality. | Use `backdrop-filter: blur(16px)` for bottom nav, modals, and toasts. |
+| **Contrast Mandate** | Human Readability. | **MANDATORY**: No gray-on-gray. (e.g., Avoid light-gray buttons on gray footers). Use high-contrast tokens only. |
 | **Weight Authority** | 700 is the Law. | Use 700 (Bold) for titles and labels. 900 is for KPI numbers ONLY. |
 | **Safety Viewport** | Adapts to Real Hardware. | MUST use `width=device-width` in `index.html`. `width=412` is FORBIDDEN. |
 
@@ -63,7 +64,7 @@ Every build MUST include a fallback to `index.html` in the `public/` folder.
 
 ## 🛡️ Sovereign Guardrails
 - **DESIGN-FIRST**: Currently configured for Design-First (No API/Supabase). Use reactive `ref` variables.
-- **TIER-0 CONTRAST**: Absolute mandate for high-contrast. No gray-on-gray text.
+- **TIER-0 CONTRAST**: Absolute mandate for high-contrast. No gray-on-gray text or buttons (e.g., light-gray on gray background).
 - **SPA SAFETY**: Every build MUST include the `.htaccess` fallback in `public/`.
 
 ---
